@@ -1,0 +1,579 @@
+{
+  "version": 1,
+  "kind": "shard",
+  "characterId": "1610",
+  "characterName": "秧秧·玄翎",
+  "templates": [
+    {
+      "characterId": "1610",
+      "characterName": "秧秧·玄翎",
+      "revision": 2,
+      "author": "",
+      "notes": "秧秧·玄翎：全队【秧秧·延奏】湮灭伤害加深+20%（固定；对秧秧·玄翎本人不生效）。6链加入技能【玄翎之影·止如槁木】（重击 337.98%，入轴时暴击率固定100%）。",
+      "personalBuffs": [
+        {
+          "category": "composite",
+          "name": "羽誓",
+          "mode": "stack",
+          "value": 0,
+          "perStack": 0,
+          "maxStacks": 6,
+          "damageType": "",
+          "element": "",
+          "defenseKind": "",
+          "convergenceVuln": "",
+          "effects": [
+            {
+              "zone": "generalCritDmg",
+              "valueMode": "stack",
+              "value": 0,
+              "segments": [
+                {
+                  "upTo": 6,
+                  "perStack": 25
+                }
+              ],
+              "skillScope": "names",
+              "skillNames": [
+                "万声浮道·重击·苍剑式",
+                "重击·苍剑式",
+                "万声浮道·重击·羽剑式",
+                "重击·羽剑式",
+                "万声浮道·空中攻击·释羽风落",
+                "空中攻击·释羽风落",
+                "万声浮道·普攻·湮象风华第一段",
+                "普攻·湮象风华第一段",
+                "万声浮道·普攻·湮象风华第二段",
+                "普攻·湮象风华第二段",
+                "万声浮道·普攻·湮象风华第三段",
+                "普攻·湮象风华第三段",
+                "万声浮道·闪避反击·湮象风华第一段",
+                "闪避反击·湮象风华第一段",
+                "万声浮道·闪避反击·湮象风华第二段",
+                "闪避反击·湮象风华第二段",
+                "万声浮道·闪避反击·湮象风华第三段",
+                "闪避反击·湮象风华第三段"
+              ],
+              "librarySkillNames": [
+                "万声浮道·重击·苍剑式",
+                "万声浮道·重击·羽剑式",
+                "万声浮道·空中攻击·释羽风落",
+                "万声浮道·普攻·湮象风华第一段",
+                "万声浮道·普攻·湮象风华第二段",
+                "万声浮道·普攻·湮象风华第三段",
+                "万声浮道·闪避反击·湮象风华第一段",
+                "万声浮道·闪避反击·湮象风华第二段",
+                "万声浮道·闪避反击·湮象风华第三段"
+              ],
+              "catalogIds": [],
+              "damageType": "重击",
+              "effectType": "",
+              "element": "湮灭",
+              "defenseKind": "",
+              "minStacks": 0,
+              "minResonance": 0,
+              "onlyCharacterIds": [],
+              "onlyCombatModes": [],
+              "effectKey": ""
+            }
+          ],
+          "sourceTag": "characterTemplate",
+          "templateKey": "tpl_ms0ccoao_t3nu7",
+          "gameText": "羽誓\n附近队伍中的角色对目标附加【虚湮效应】时，秧秧·玄翎获得1层羽誓，持续4秒，羽誓获得间隔1秒，最多叠加6层，秧秧·玄翎为队伍中登场角色时，每层使重击·苍剑式、重击·羽剑式、空中攻击·释羽风落、普攻·湮象风华、闪避反击·湮象风华的暴击伤害提升25%，至多提升150%。",
+          "clampStacks": true
+        },
+        {
+          "category": "composite",
+          "name": "虚湮效应/固有1",
+          "mode": "stack",
+          "value": 0,
+          "perStack": 0,
+          "maxStacks": 9,
+          "damageType": "",
+          "element": "",
+          "defenseKind": "",
+          "convergenceVuln": "",
+          "effects": [
+            {
+              "zone": "generalDefense",
+              "valueMode": "stack",
+              "value": 0,
+              "segments": [
+                {
+                  "upTo": 9,
+                  "perStack": 2
+                }
+              ],
+              "skillScope": "all",
+              "skillNames": [],
+              "librarySkillNames": [],
+              "catalogIds": [],
+              "damageType": "",
+              "effectType": "",
+              "element": "",
+              "defenseKind": "pen",
+              "minStacks": 0,
+              "minResonance": 0,
+              "onlyCharacterIds": [],
+              "onlyCombatModes": [],
+              "effectKey": ""
+            },
+            {
+              "zone": "generalDeep",
+              "valueMode": "stack",
+              "value": 0,
+              "segments": [
+                {
+                  "upTo": 3,
+                  "perStack": 10
+                },
+                {
+                  "upTo": 6,
+                  "perStack": 12
+                }
+              ],
+              "skillScope": "all",
+              "skillNames": [
+                "谱曲终末"
+              ],
+              "librarySkillNames": [],
+              "catalogIds": [],
+              "damageType": "",
+              "effectType": "",
+              "element": "",
+              "defenseKind": "",
+              "minStacks": 0,
+              "minResonance": 0,
+              "onlyCharacterIds": [],
+              "onlyCombatModes": [],
+              "effectKey": ""
+            }
+          ],
+          "sourceTag": "characterTemplate",
+          "templateKey": "tpl_ms0cez6r_ihie0",
+          "gameText": "当目标拥有1到3层【虚湮效应】后，每层【虚湮效应】使秧秧·玄翎对其造成的伤害加深10%，最多30%。\n\n当目标拥有4到6层【虚湮效应】后，4到6层【虚湮效应】每层【虚湮效应】使秧秧·玄翎对其造成的伤害加深12%，最多36%。",
+          "clampStacks": true
+        },
+        {
+          "category": "composite",
+          "name": "流岚",
+          "mode": "fixed",
+          "value": 0,
+          "perStack": 0,
+          "maxStacks": 99,
+          "damageType": "",
+          "element": "",
+          "defenseKind": "",
+          "convergenceVuln": "",
+          "effects": [
+            {
+              "zone": "generalCritDmg",
+              "valueMode": "fixed",
+              "value": 160,
+              "segments": [
+                {
+                  "upTo": null,
+                  "perStack": 0
+                }
+              ],
+              "skillScope": "names",
+              "skillNames": [
+                "万声浮道·重击·羽剑式",
+                "重击·羽剑式",
+                "万声浮道·空中攻击·释羽风落",
+                "空中攻击·释羽风落",
+                "万声浮道·普攻·湮象风华第一段",
+                "普攻·湮象风华第一段",
+                "万声浮道·普攻·湮象风华第二段",
+                "普攻·湮象风华第二段",
+                "万声浮道·普攻·湮象风华第三段",
+                "普攻·湮象风华第三段",
+                "万声浮道·闪避反击·湮象风华第一段",
+                "闪避反击·湮象风华第一段",
+                "万声浮道·闪避反击·湮象风华第二段",
+                "闪避反击·湮象风华第二段",
+                "万声浮道·闪避反击·湮象风华第三段",
+                "闪避反击·湮象风华第三段"
+              ],
+              "librarySkillNames": [
+                "万声浮道·重击·羽剑式",
+                "万声浮道·空中攻击·释羽风落",
+                "万声浮道·普攻·湮象风华第一段",
+                "万声浮道·普攻·湮象风华第二段",
+                "万声浮道·普攻·湮象风华第三段",
+                "万声浮道·闪避反击·湮象风华第一段",
+                "万声浮道·闪避反击·湮象风华第二段",
+                "万声浮道·闪避反击·湮象风华第三段"
+              ],
+              "catalogIds": [],
+              "damageType": "重击",
+              "effectType": "",
+              "element": "湮灭",
+              "defenseKind": "",
+              "minStacks": 0,
+              "minResonance": 0,
+              "onlyCharacterIds": [],
+              "onlyCombatModes": [],
+              "effectKey": ""
+            }
+          ],
+          "sourceTag": "characterTemplate",
+          "templateKey": "tpl_ms0ckeha_aq0mi",
+          "gameText": "施放重击·羽剑式时，获得【流岚】，【流岚】持续15秒，秧秧·玄翎为队伍中登场角色时，此次重击·羽剑式、空中攻击·释羽风落、普攻·湮象风华、闪避反击·湮象风华暴击伤害提升160%；普攻·湮象风华第3段或闪避反击·湮象风华第3段结束时移除【流岚】，每25秒仅可获得1次【流岚】。"
+        },
+        {
+          "category": "composite",
+          "name": "绝息",
+          "mode": "fixed",
+          "value": 0,
+          "perStack": 0,
+          "maxStacks": 99,
+          "damageType": "",
+          "element": "",
+          "defenseKind": "",
+          "convergenceVuln": "",
+          "effects": [
+            {
+              "zone": "generalCritDmg",
+              "valueMode": "fixed",
+              "value": 160,
+              "segments": [
+                {
+                  "upTo": null,
+                  "perStack": 0
+                }
+              ],
+              "skillScope": "names",
+              "skillNames": [
+                "万声浮道·重击·苍剑式",
+                "重击·苍剑式"
+              ],
+              "librarySkillNames": [
+                "万声浮道·重击·苍剑式"
+              ],
+              "catalogIds": [],
+              "damageType": "重击",
+              "effectType": "",
+              "element": "湮灭",
+              "defenseKind": "",
+              "minStacks": 0,
+              "minResonance": 0,
+              "onlyCharacterIds": [],
+              "onlyCombatModes": [],
+              "effectKey": ""
+            }
+          ],
+          "sourceTag": "characterTemplate",
+          "templateKey": "tpl_ms0cm04r_81lpf",
+          "gameText": "施放重击·苍剑式时，获得【绝息】，秧秧·玄翎为队伍中登场角色时，此次重击·苍剑式暴击伤害提升160%；重击·苍剑式结束时移除【绝息】，每25秒仅可获得1次【绝息】。"
+        }
+      ],
+      "teamBuffs": [
+        {
+          "templateKey": "yangyang_xuanling_outro_element_deep",
+          "category": "elementDeep",
+          "name": "秧秧·延奏",
+          "mode": "fixed",
+          "value": 20,
+          "element": "湮灭",
+          "damageType": "",
+          "defenseKind": "",
+          "excludeSource": true,
+          "sourceTag": "characterTemplate",
+          "perStack": 0,
+          "maxStacks": 5,
+          "gameText": "队伍中除秧秧·玄翎以外的角色，获得移宫换羽状态，持续20秒，移宫换羽持续期间为目标附加【虚湮效应】后，该角色湮灭伤害加深20%。"
+        }
+      ],
+      "extraSkills": [],
+      "resonanceChains": {
+        "1": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [],
+          "teamBuffs": [],
+          "extraSkills": [
+            {
+              "templateKey": "extra_ms0dgzhj_7dr3y",
+              "name": "玄翎之影·抗坠",
+              "damageType": "重击",
+              "effectType": "聚爆",
+              "effectLayers": 13,
+              "effectBurstLayers": 0,
+              "effectCount": 1,
+              "baseMult": 337.98,
+              "fixedDamage": false,
+              "effectMultMode": "custom"
+            }
+          ],
+          "combatModes": {},
+          "gameText": "施放共鸣技能·剑式流转·苍、共鸣技能·剑式流转·羽时，召唤玄翎之影·抗坠，造成秧秧·玄翎攻击337.98%的湮灭伤害，此次伤害为重击伤害。\n施放共鸣技能·剑式流转·苍、共鸣技能·剑式流转·羽期间，停滞周围目标。\n\n重击·苍剑式、普攻·湮象风华、闪避反击·湮象风华免疫打断。"
+        },
+        "2": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [
+            {
+              "category": "composite",
+              "name": "2链",
+              "mode": "fixed",
+              "value": 0,
+              "perStack": 0,
+              "maxStacks": 99,
+              "damageType": "",
+              "element": "",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "effects": [
+                {
+                  "zone": "generalBonus",
+                  "valueMode": "fixed",
+                  "value": 100,
+                  "segments": [
+                    {
+                      "upTo": null,
+                      "perStack": 0
+                    }
+                  ],
+                  "skillScope": "names",
+                  "skillNames": [
+                    "万声浮道·重击·苍剑式",
+                    "重击·苍剑式",
+                    "万声浮道·重击·羽剑式",
+                    "重击·羽剑式",
+                    "万声浮道·空中攻击·释羽风落",
+                    "空中攻击·释羽风落",
+                    "万声浮道·普攻·湮象风华第一段",
+                    "普攻·湮象风华第一段",
+                    "万声浮道·普攻·湮象风华第二段",
+                    "普攻·湮象风华第二段",
+                    "万声浮道·普攻·湮象风华第三段",
+                    "普攻·湮象风华第三段",
+                    "万声浮道·闪避反击·湮象风华第一段",
+                    "闪避反击·湮象风华第一段",
+                    "万声浮道·闪避反击·湮象风华第二段",
+                    "闪避反击·湮象风华第二段",
+                    "万声浮道·闪避反击·湮象风华第三段",
+                    "闪避反击·湮象风华第三段"
+                  ],
+                  "librarySkillNames": [
+                    "万声浮道·重击·苍剑式",
+                    "万声浮道·重击·羽剑式",
+                    "万声浮道·空中攻击·释羽风落",
+                    "万声浮道·普攻·湮象风华第一段",
+                    "万声浮道·普攻·湮象风华第二段",
+                    "万声浮道·普攻·湮象风华第三段",
+                    "万声浮道·闪避反击·湮象风华第一段",
+                    "万声浮道·闪避反击·湮象风华第二段",
+                    "万声浮道·闪避反击·湮象风华第三段"
+                  ],
+                  "catalogIds": [],
+                  "damageType": "重击",
+                  "effectType": "",
+                  "element": "湮灭",
+                  "defenseKind": "",
+                  "minStacks": 0,
+                  "minResonance": 0,
+                  "onlyCharacterIds": [],
+                  "onlyCombatModes": [],
+                  "effectKey": ""
+                }
+              ],
+              "sourceTag": "characterTemplate",
+              "templateKey": "tpl_ms0dje19_18rng",
+              "gameText": "重击·苍剑式、重击·羽剑式、空中攻击·释羽风落、普攻·湮象风华、闪避反击·湮象风华造成的伤害提升100%。\n\n秧秧·玄翎每次脱离战斗状态或恢复意识后，处于非战斗状态达到4秒时，触发一次以下效果：\n·获得贯珠，上限1层，施放普攻·苍剑式、普攻·羽剑式时，召唤玄翎之影·贯珠攻击目标，造成秧秧·玄翎攻击337.98%的湮灭伤害，此次伤害为重击伤害。召唤玄翎之影·贯珠后移除贯珠。\n·回复2点【苍翎】。\n·重置【绝息】、【流岚】的获取冷却时间。"
+            }
+          ],
+          "teamBuffs": [],
+          "extraSkills": [
+            {
+              "templateKey": "extra_ms0dl8yu_888hc",
+              "name": "玄翎之影·贯珠",
+              "damageType": "重击",
+              "effectType": "聚爆",
+              "effectLayers": 13,
+              "effectBurstLayers": 0,
+              "effectCount": 1,
+              "baseMult": 337.98,
+              "fixedDamage": false,
+              "effectMultMode": "custom"
+            }
+          ],
+          "combatModes": {},
+          "gameText": "重击·苍剑式、重击·羽剑式、空中攻击·释羽风落、普攻·湮象风华、闪避反击·湮象风华造成的伤害提升100%。\n\n秧秧·玄翎每次脱离战斗状态或恢复意识后，处于非战斗状态达到4秒时，触发一次以下效果：\n·获得贯珠，上限1层，施放普攻·苍剑式、普攻·羽剑式时，召唤玄翎之影·贯珠攻击目标，造成秧秧·玄翎攻击337.98%的湮灭伤害，此次伤害为重击伤害。召唤玄翎之影·贯珠后移除贯珠。\n·回复2点【苍翎】。\n·重置【绝息】、【流岚】的获取冷却时间。"
+        },
+        "3": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [
+            {
+              "category": "composite",
+              "name": "3链",
+              "mode": "fixed",
+              "value": 0,
+              "perStack": 0,
+              "maxStacks": 99,
+              "damageType": "",
+              "element": "",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "effects": [
+                {
+                  "zone": "generalDeep",
+                  "valueMode": "fixed",
+                  "value": 175,
+                  "segments": [
+                    {
+                      "upTo": null,
+                      "perStack": 0
+                    }
+                  ],
+                  "skillScope": "names",
+                  "skillNames": [
+                    "裁羽寂万音"
+                  ],
+                  "librarySkillNames": [
+                    "裁羽寂万音"
+                  ],
+                  "catalogIds": [],
+                  "damageType": "重击",
+                  "effectType": "",
+                  "element": "湮灭",
+                  "defenseKind": "",
+                  "minStacks": 0,
+                  "minResonance": 0,
+                  "onlyCharacterIds": [],
+                  "onlyCombatModes": [],
+                  "effectKey": ""
+                }
+              ],
+              "sourceTag": "characterTemplate",
+              "templateKey": "tpl_ms0dlxce_4z7s9",
+              "gameText": "共鸣解放裁羽寂万音造成的伤害加深175%。\n\n施放变奏技能·羽挟苍空、共鸣技能·剑式流转·苍、共鸣技能·剑式流转·羽时，使自身一定范围内的目标【虚湮效应】层数上限增加3层，持续20秒，该效果无法叠加。\n\n普攻·苍剑式第4段、普攻·羽剑式第4段、重击·苍剑式、重击·羽剑式额外为目标附加1层【虚湮效应】。"
+            }
+          ],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {},
+          "gameText": "共鸣解放裁羽寂万音造成的伤害加深175%。\n\n施放变奏技能·羽挟苍空、共鸣技能·剑式流转·苍、共鸣技能·剑式流转·羽时，使自身一定范围内的目标【虚湮效应】层数上限增加3层，持续20秒，该效果无法叠加。\n\n普攻·苍剑式第4段、普攻·羽剑式第4段、重击·苍剑式、重击·羽剑式额外为目标附加1层【虚湮效应】。"
+        },
+        "4": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [],
+          "teamBuffs": [
+            {
+              "category": "generalAttack",
+              "name": "秧秧·4链",
+              "mode": "fixed",
+              "value": 20,
+              "perStack": 0,
+              "maxStacks": 5,
+              "damageType": "",
+              "element": "",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "sourceTag": "characterTemplate",
+              "templateKey": "tpl_ms0dmytn_chpuk",
+              "gameText": "施放变奏技能·羽挟苍空、共鸣技能·剑式切换·苍、共鸣技能·剑式切换·羽、共鸣技能·剑式流转·苍、共鸣技能·剑式流转·羽时，队伍中的角色攻击提升20%，持续20秒。"
+            }
+          ],
+          "extraSkills": [],
+          "combatModes": {},
+          "gameText": "施放变奏技能·羽挟苍空、共鸣技能·剑式切换·苍、共鸣技能·剑式切换·羽、共鸣技能·剑式流转·苍、共鸣技能·剑式流转·羽时，队伍中的角色攻击提升20%，持续20秒。"
+        },
+        "5": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {},
+          "gameText": "秧秧·玄翎受到致命伤害时，此次伤害不会使秧秧·玄翎倒下，并回复秧秧·玄翎50%生命上限的生命值，同时免疫伤害和打断，持续3秒。该效果每10分钟可触发1次。"
+        },
+        "6": {
+          "enabledByDefault": false,
+          "notes": "内置：技能库加入【玄翎之影·止如槁木】（重击 337.98%）；该技能暴击率固定为100%",
+          "personalBuffs": [
+            {
+              "templateKey": "yangyang_xuanling_c6_zhi_crit_set",
+              "category": "composite",
+              "name": "秧秧·玄翎·6链·止如槁木暴击固定",
+              "mode": "fixed",
+              "value": 0,
+              "effects": [
+                {
+                  "zone": "critRateSet",
+                  "valueMode": "fixed",
+                  "value": 100,
+                  "segments": [
+                    {
+                      "upTo": null,
+                      "perStack": 0
+                    }
+                  ],
+                  "skillScope": "names",
+                  "skillNames": [
+                    "止如槁木",
+                    "玄翎之影·止如槁木",
+                    "玄翎之影·止如槁木"
+                  ],
+                  "librarySkillNames": [
+                    "玄翎之影·止如槁木"
+                  ],
+                  "catalogIds": [],
+                  "damageType": "",
+                  "effectType": "",
+                  "element": "",
+                  "defenseKind": "",
+                  "minStacks": 0,
+                  "minResonance": 0,
+                  "onlyCharacterIds": [],
+                  "onlyCombatModes": [],
+                  "effectKey": ""
+                }
+              ],
+              "sourceTag": "characterTemplate",
+              "perStack": 0,
+              "maxStacks": 1,
+              "gameText": "秧秧·玄翎为目标附加【虚湮效应】后，获得万声皆流，持续30秒。万声皆流持续期间，目标受到秧秧·玄翎的重击伤害提升40%。\n\n施放共鸣技能·剑式流转·苍、共鸣技能·剑式流转·羽时，获得止如槁木，持续30秒。止如槁木持续期间，若秧秧·玄翎为队伍中登场角色，则附近队伍中的角色为目标附加【霜渐效应】、【聚爆效应】、【电磁效应】、【风蚀效应】、【光噪效应】、【虚湮效应】后，秧秧·玄翎召唤玄翎之影·止如槁木攻击目标，造成秧秧·玄翎攻击337.98%的湮灭伤害。玄翎之影·止如槁木的伤害为重击伤害，且必定暴击。\n\n玄翎之影·止如槁木召唤间隔1秒，召唤5次后移除止如槁木，止如槁木持续时间结束或被移除后，重置玄翎之影·止如槁木的召唤次数，止如槁木的获取冷却时间25秒。"
+            },
+            {
+              "category": "typeVulnerability",
+              "name": "6链",
+              "mode": "fixed",
+              "value": 40,
+              "perStack": 0,
+              "maxStacks": 5,
+              "damageType": "重击",
+              "element": "",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "sourceTag": "characterTemplate",
+              "templateKey": "tpl_ms0dngto_p8yxg",
+              "gameText": "秧秧·玄翎为目标附加【虚湮效应】后，获得万声皆流，持续30秒。万声皆流持续期间，目标受到秧秧·玄翎的重击伤害提升40%。\n\n施放共鸣技能·剑式流转·苍、共鸣技能·剑式流转·羽时，获得止如槁木，持续30秒。止如槁木持续期间，若秧秧·玄翎为队伍中登场角色，则附近队伍中的角色为目标附加【霜渐效应】、【聚爆效应】、【电磁效应】、【风蚀效应】、【光噪效应】、【虚湮效应】后，秧秧·玄翎召唤玄翎之影·止如槁木攻击目标，造成秧秧·玄翎攻击337.98%的湮灭伤害。玄翎之影·止如槁木的伤害为重击伤害，且必定暴击。\n\n玄翎之影·止如槁木召唤间隔1秒，召唤5次后移除止如槁木，止如槁木持续时间结束或被移除后，重置玄翎之影·止如槁木的召唤次数，止如槁木的获取冷却时间25秒。"
+            }
+          ],
+          "teamBuffs": [],
+          "extraSkills": [
+            {
+              "templateKey": "yangyang_xuanling_c6_zhi_skill",
+              "name": "玄翎之影·止如槁木",
+              "damageType": "重击",
+              "effectType": "聚爆",
+              "effectLayers": 13,
+              "effectBurstLayers": 0,
+              "effectCount": 1,
+              "baseMult": 337.98,
+              "fixedDamage": false,
+              "effectMultMode": "custom"
+            }
+          ],
+          "combatModes": {},
+          "gameText": "秧秧·玄翎为目标附加【虚湮效应】后，获得万声皆流，持续30秒。万声皆流持续期间，目标受到秧秧·玄翎的重击伤害提升40%。\n\n施放共鸣技能·剑式流转·苍、共鸣技能·剑式流转·羽时，获得止如槁木，持续30秒。止如槁木持续期间，若秧秧·玄翎为队伍中登场角色，则附近队伍中的角色为目标附加【霜渐效应】、【聚爆效应】、【电磁效应】、【风蚀效应】、【光噪效应】、【虚湮效应】后，秧秧·玄翎召唤玄翎之影·止如槁木攻击目标，造成秧秧·玄翎攻击337.98%的湮灭伤害。玄翎之影·止如槁木的伤害为重击伤害，且必定暴击。\n\n玄翎之影·止如槁木召唤间隔1秒，召唤5次后移除止如槁木，止如槁木持续时间结束或被移除后，重置玄翎之影·止如槁木的召唤次数，止如槁木的获取冷却时间25秒。"
+        }
+      },
+      "combatModes": {}
+    }
+  ]
+}

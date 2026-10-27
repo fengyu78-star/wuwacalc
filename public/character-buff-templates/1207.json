@@ -1,0 +1,526 @@
+{
+  "version": 1,
+  "kind": "shard",
+  "characterId": "1207",
+  "characterName": "露帕",
+  "templates": [
+    {
+      "characterId": "1207",
+      "characterName": "露帕",
+      "revision": 2,
+      "author": "",
+      "notes": "露帕：0链分支攻击比12%、暴击率8%；全队复合【荣光】【追猎】（层数=热熔人数；≥3链时固定满层、额外效果直接全额）；全队复合【延奏·露帕】热熔加深+20% + 普攻加深+25%（对露帕本人不生效）。",
+      "personalBuffs": [
+        {
+          "category": "composite",
+          "name": "凶噬·倍率提升",
+          "mode": "fixed",
+          "value": 0,
+          "perStack": 0,
+          "maxStacks": 99,
+          "damageType": "",
+          "element": "",
+          "defenseKind": "",
+          "convergenceVuln": "",
+          "effects": [
+            {
+              "zone": "multBoost",
+              "valueMode": "fixed",
+              "value": 50,
+              "segments": [
+                {
+                  "upTo": null,
+                  "perStack": 0
+                }
+              ],
+              "skillScope": "names",
+              "skillNames": [
+                "围猎·凶噬",
+                "凶噬"
+              ],
+              "librarySkillNames": [
+                "围猎·凶噬"
+              ],
+              "catalogIds": [],
+              "damageType": "共鸣技能",
+              "effectType": "",
+              "element": "热熔",
+              "defenseKind": "",
+              "minStacks": 0,
+              "minResonance": 0,
+              "onlyCharacterIds": [],
+              "onlyCombatModes": [],
+              "effectKey": ""
+            }
+          ],
+          "sourceTag": "characterTemplate",
+          "templateKey": "tpl_mryvcbav_0ncqr",
+          "gameText": "共鸣技能·凶噬\n露帕追击目标，施放期间回复15点【狼焰】，造成热熔伤害，并对标记的目标伤害倍率提升50%。"
+        }
+      ],
+      "teamBuffs": [
+        {
+          "templateKey": "lupa_outro",
+          "category": "composite",
+          "name": "延奏·露帕",
+          "mode": "fixed",
+          "excludeSource": true,
+          "effects": [
+            {
+              "zone": "elementDeep",
+              "valueMode": "fixed",
+              "value": 20,
+              "segments": [
+                {
+                  "upTo": null,
+                  "perStack": 0
+                }
+              ],
+              "skillScope": "all",
+              "skillNames": [],
+              "librarySkillNames": [],
+              "catalogIds": [],
+              "damageType": "",
+              "effectType": "",
+              "element": "热熔",
+              "defenseKind": "",
+              "minStacks": 0,
+              "minResonance": 0,
+              "onlyCharacterIds": [],
+              "onlyCombatModes": [],
+              "effectKey": ""
+            },
+            {
+              "zone": "typeDeep",
+              "valueMode": "fixed",
+              "value": 25,
+              "segments": [
+                {
+                  "upTo": null,
+                  "perStack": 0
+                }
+              ],
+              "skillScope": "all",
+              "skillNames": [],
+              "librarySkillNames": [],
+              "catalogIds": [],
+              "damageType": "普攻",
+              "effectType": "",
+              "element": "",
+              "defenseKind": "",
+              "minStacks": 0,
+              "minResonance": 0,
+              "onlyCharacterIds": [],
+              "onlyCombatModes": [],
+              "effectKey": ""
+            }
+          ],
+          "sourceTag": "characterTemplate",
+          "value": 0,
+          "perStack": 0,
+          "maxStacks": 1,
+          "gameText": "下一位登场角色热熔伤害加深20%，普攻伤害加深25%，效果持续14秒，若切换至其他角色则该效果提前结束。"
+        },
+        {
+          "templateKey": "lupa_zhuilie",
+          "category": "composite",
+          "name": "追猎",
+          "mode": "stack",
+          "maxStacks": 3,
+          "effects": [
+            {
+              "zone": "generalAttack",
+              "valueMode": "fixed",
+              "value": 6,
+              "segments": [
+                {
+                  "upTo": null,
+                  "perStack": 0
+                }
+              ],
+              "skillScope": "all",
+              "skillNames": [],
+              "librarySkillNames": [],
+              "catalogIds": [],
+              "damageType": "",
+              "effectType": "",
+              "element": "",
+              "defenseKind": "",
+              "minStacks": 0,
+              "minResonance": 0,
+              "onlyCharacterIds": [],
+              "onlyCombatModes": [],
+              "effectKey": ""
+            },
+            {
+              "zone": "elementBonus",
+              "valueMode": "fixed",
+              "value": 10,
+              "segments": [
+                {
+                  "upTo": null,
+                  "perStack": 0
+                }
+              ],
+              "skillScope": "all",
+              "skillNames": [],
+              "librarySkillNames": [],
+              "catalogIds": [],
+              "damageType": "",
+              "effectType": "",
+              "element": "热熔",
+              "defenseKind": "",
+              "minStacks": 0,
+              "minResonance": 0,
+              "onlyCharacterIds": [],
+              "onlyCombatModes": [],
+              "effectKey": ""
+            },
+            {
+              "zone": "generalAttack",
+              "valueMode": "stack",
+              "value": 0,
+              "segments": [
+                {
+                  "upTo": null,
+                  "perStack": 6
+                }
+              ],
+              "skillScope": "all",
+              "skillNames": [],
+              "librarySkillNames": [],
+              "catalogIds": [],
+              "damageType": "",
+              "effectType": "",
+              "element": "",
+              "defenseKind": "",
+              "minStacks": 0,
+              "minResonance": 0,
+              "onlyCharacterIds": [],
+              "onlyCombatModes": [],
+              "effectKey": ""
+            }
+          ],
+          "sourceTag": "characterTemplate",
+          "value": 0,
+          "perStack": 0,
+          "gameText": "追猎\n持有追猎的角色攻击提升6%，且攻击怒涛级或海啸级目标时热熔伤害加成提升10%，无法叠加。若队伍中的热熔属性角色达到3名时，攻击怒涛级或海啸级目标时的热熔伤害加成效果额外增加10%。队伍中登场角色施放变奏技能时，会强化追猎效果，队伍中的角色追猎的攻击提升效果额外增加6%，上限为18%。\n露帕追猎效果达到上限后，在追猎持续时间内，进入追杀状态，可施放变奏技能你无法逃离！。同一个追猎仅可进入一次追杀状态。"
+        },
+        {
+          "templateKey": "lupa_rongguang",
+          "category": "composite",
+          "name": "荣光",
+          "mode": "stack",
+          "maxStacks": 3,
+          "effects": [
+            {
+              "zone": "elementResReduce",
+              "valueMode": "stack",
+              "value": 0,
+              "segments": [
+                {
+                  "upTo": null,
+                  "perStack": 3
+                }
+              ],
+              "skillScope": "all",
+              "skillNames": [],
+              "librarySkillNames": [],
+              "catalogIds": [],
+              "damageType": "",
+              "effectType": "",
+              "element": "热熔",
+              "defenseKind": "",
+              "minStacks": 0,
+              "minResonance": 0,
+              "onlyCharacterIds": [],
+              "onlyCombatModes": [],
+              "effectKey": ""
+            },
+            {
+              "zone": "elementResReduce",
+              "valueMode": "fixed",
+              "value": 6,
+              "segments": [
+                {
+                  "upTo": null,
+                  "perStack": 0
+                }
+              ],
+              "skillScope": "all",
+              "skillNames": [],
+              "librarySkillNames": [],
+              "catalogIds": [],
+              "damageType": "",
+              "effectType": "",
+              "element": "热熔",
+              "defenseKind": "",
+              "minStacks": 3,
+              "minResonance": 0,
+              "onlyCharacterIds": [],
+              "onlyCombatModes": [],
+              "effectKey": ""
+            }
+          ],
+          "sourceTag": "characterTemplate",
+          "value": 0,
+          "perStack": 0,
+          "gameText": "共鸣解放·荣光\n施放共鸣解放荣光欢酣于火时，额外获得荣光效果，35秒内：\n队伍中的角色攻击时无视3%热熔抗性，并且队伍中每有一名除露帕外的热熔属性角色，无视热熔抗性效果增加3%，上限为9%，当队伍中的热熔属性角色达到3名时，无视热熔抗性的效果额外增加6%。",
+          "stackSync": "teamFusionCount"
+        }
+      ],
+      "extraSkills": [],
+      "resonanceChains": {
+        "1": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [
+            {
+              "category": "generalCritRate",
+              "name": "1链·开大后",
+              "mode": "fixed",
+              "value": 20,
+              "perStack": 0,
+              "maxStacks": 5,
+              "damageType": "",
+              "element": "",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "sourceTag": "characterTemplate",
+              "templateKey": "tpl_mryvcw40_7aztj",
+              "gameText": "施放共鸣解放荣光欢酣于火时，露帕额外回复10点协奏能量，暴击提升20%，持续10秒。\n狼舞的决意·极免疫打断。"
+            }
+          ],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {},
+          "gameText": "施放共鸣解放荣光欢酣于火时，露帕额外回复10点协奏能量，暴击提升20%，持续10秒。\n狼舞的决意·极免疫打断。"
+        },
+        "2": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [],
+          "teamBuffs": [
+            {
+              "category": "elementBonus",
+              "name": "2链·露帕",
+              "mode": "stack",
+              "value": 20,
+              "perStack": 20,
+              "maxStacks": 2,
+              "damageType": "",
+              "element": "热熔",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "sourceTag": "characterTemplate",
+              "templateKey": "tpl_mryvdl1l_7aogu",
+              "gameText": "施放共鸣解放荣光欢酣于火、重击·狼咬、重击·锐爪、空中攻击·焰袭时，队伍中的角色热熔伤害加成提升20%，持续30秒，可叠加2层。"
+            }
+          ],
+          "extraSkills": [],
+          "combatModes": {},
+          "gameText": "施放共鸣解放荣光欢酣于火、重击·狼咬、重击·锐爪、空中攻击·焰袭时，队伍中的角色热熔伤害加成提升20%，持续30秒，可叠加2层。"
+        },
+        "3": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [
+            {
+              "category": "composite",
+              "name": "3链",
+              "mode": "fixed",
+              "value": 0,
+              "perStack": 0,
+              "maxStacks": 99,
+              "damageType": "",
+              "element": "",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "effects": [
+                {
+                  "zone": "multBoost",
+                  "valueMode": "fixed",
+                  "value": 100,
+                  "segments": [
+                    {
+                      "upTo": null,
+                      "perStack": 0
+                    }
+                  ],
+                  "skillScope": "names",
+                  "skillNames": [
+                    "你在看哪里？·你无法逃离！",
+                    "你无法逃离！"
+                  ],
+                  "librarySkillNames": [
+                    "你在看哪里？·你无法逃离！"
+                  ],
+                  "catalogIds": [],
+                  "damageType": "共鸣解放",
+                  "effectType": "",
+                  "element": "热熔",
+                  "defenseKind": "",
+                  "minStacks": 0,
+                  "minResonance": 0,
+                  "onlyCharacterIds": [],
+                  "onlyCombatModes": [],
+                  "effectKey": ""
+                }
+              ],
+              "sourceTag": "characterTemplate",
+              "templateKey": "tpl_mryveb0n_izbou",
+              "gameText": "·变奏技能你无法逃离！的伤害倍率提升100%。\n·共鸣解放追猎额外效果不再需要队伍中的热熔属性角色达到3名。\n·共鸣解放荣光效果替换为：\n施放共鸣解放荣光欢酣于火时，额外获得荣光效果，35秒内：队伍中的角色攻击时无视15%热熔抗性。"
+            }
+          ],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {},
+          "gameText": "·变奏技能你无法逃离！的伤害倍率提升100%。\n·共鸣解放追猎额外效果不再需要队伍中的热熔属性角色达到3名。\n·共鸣解放荣光效果替换为：\n施放共鸣解放荣光欢酣于火时，额外获得荣光效果，35秒内：队伍中的角色攻击时无视15%热熔抗性。"
+        },
+        "4": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [
+            {
+              "category": "composite",
+              "name": "4链",
+              "mode": "fixed",
+              "value": 0,
+              "perStack": 0,
+              "maxStacks": 99,
+              "damageType": "",
+              "element": "",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "effects": [
+                {
+                  "zone": "multBoost",
+                  "valueMode": "fixed",
+                  "value": 125,
+                  "segments": [
+                    {
+                      "upTo": null,
+                      "perStack": 0
+                    }
+                  ],
+                  "skillScope": "names",
+                  "skillNames": [
+                    "焰狼宣告·狼舞的决意·极",
+                    "狼舞的决意·极"
+                  ],
+                  "librarySkillNames": [
+                    "焰狼宣告·狼舞的决意·极"
+                  ],
+                  "catalogIds": [],
+                  "damageType": "共鸣解放",
+                  "effectType": "",
+                  "element": "热熔",
+                  "defenseKind": "",
+                  "minStacks": 0,
+                  "minResonance": 0,
+                  "onlyCharacterIds": [],
+                  "onlyCombatModes": [],
+                  "effectKey": ""
+                }
+              ],
+              "sourceTag": "characterTemplate",
+              "templateKey": "tpl_mryveuqa_64kl5",
+              "gameText": "狼舞的决意·极的伤害倍率提升125%。"
+            }
+          ],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {},
+          "gameText": "狼舞的决意·极的伤害倍率提升125%。"
+        },
+        "5": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [
+            {
+              "category": "typeBonus",
+              "name": "5链·释放变奏",
+              "mode": "fixed",
+              "value": 15,
+              "perStack": 0,
+              "maxStacks": 5,
+              "damageType": "共鸣解放",
+              "element": "",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "sourceTag": "characterTemplate",
+              "templateKey": "tpl_mryvfnvi_p8eyw",
+              "gameText": "施放变奏技能你在看哪里？或你无法逃离！时，共鸣解放伤害加成提升15%，持续10秒。"
+            }
+          ],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {},
+          "gameText": "施放变奏技能你在看哪里？或你无法逃离！时，共鸣解放伤害加成提升15%，持续10秒。"
+        },
+        "6": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [
+            {
+              "category": "composite",
+              "name": "6链",
+              "mode": "fixed",
+              "value": 0,
+              "perStack": 0,
+              "maxStacks": 99,
+              "damageType": "",
+              "element": "",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "effects": [
+                {
+                  "zone": "generalDefense",
+                  "valueMode": "fixed",
+                  "value": 30,
+                  "segments": [
+                    {
+                      "upTo": null,
+                      "perStack": 0
+                    }
+                  ],
+                  "skillScope": "names",
+                  "skillNames": [
+                    "荣光欢酣于火·技能",
+                    "你在看哪里？·你无法逃离！",
+                    "你无法逃离！",
+                    "焰狼宣告·狼舞的决意·极",
+                    "狼舞的决意·极"
+                  ],
+                  "librarySkillNames": [
+                    "荣光欢酣于火·技能",
+                    "你在看哪里？·你无法逃离！",
+                    "焰狼宣告·狼舞的决意·极"
+                  ],
+                  "catalogIds": [],
+                  "damageType": "共鸣解放",
+                  "effectType": "",
+                  "element": "热熔",
+                  "defenseKind": "pen",
+                  "minStacks": 0,
+                  "minResonance": 0,
+                  "onlyCharacterIds": [],
+                  "onlyCombatModes": [],
+                  "effectKey": ""
+                }
+              ],
+              "sourceTag": "characterTemplate",
+              "templateKey": "lupa_c6_general_defense",
+              "gameText": "·共鸣回路狼舞的决意·极、共鸣解放荣光欢酣于火、变奏技能你无法逃离！攻击造成伤害时忽视目标30%防御。\n·施放共鸣技能凶噬命中目标时，回复100点【狼焰】，每20秒可触发一次。\n·共鸣回路狼舞的决意替换为狼舞的决意·极，施放狼舞的决意·极不需要处于赛点沸腾状态。\n·施放变奏技能你无法逃离！不再结束追猎和荣光效果。"
+            }
+          ],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {},
+          "gameText": "·共鸣回路狼舞的决意·极、共鸣解放荣光欢酣于火、变奏技能你无法逃离！攻击造成伤害时忽视目标30%防御。\n·施放共鸣技能凶噬命中目标时，回复100点【狼焰】，每20秒可触发一次。\n·共鸣回路狼舞的决意替换为狼舞的决意·极，施放狼舞的决意·极不需要处于赛点沸腾状态。\n·施放变奏技能你无法逃离！不再结束追猎和荣光效果。"
+        }
+      },
+      "combatModes": {}
+    }
+  ]
+}

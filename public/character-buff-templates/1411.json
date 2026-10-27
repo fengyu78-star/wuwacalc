@@ -1,0 +1,425 @@
+{
+  "version": 1,
+  "kind": "shard",
+  "characterId": "1411",
+  "characterName": "仇远",
+  "templates": [
+    {
+      "characterId": "1411",
+      "characterName": "仇远",
+      "revision": 4,
+      "author": "",
+      "notes": "仇远：全队【仇远·延奏】声骸加深+38%（固定；对仇远本人不生效）。全队【仇远·万钧一断】：暴击>50%时每多出1%暴击→全队暴伤+2%，上限30%（按仇远面板暴击只读同步）。1链角色面板暴击+20%（取消1链自动扣除）。6链施放荷蓑出林后自身暴伤+100%，持续6秒，切人结束。",
+      "personalBuffs": [
+        {
+          "category": "composite",
+          "name": "固有1·且从容",
+          "mode": "fixed",
+          "value": 0,
+          "perStack": 0,
+          "maxStacks": 99,
+          "damageType": "",
+          "element": "",
+          "defenseKind": "",
+          "convergenceVuln": "",
+          "effects": [
+            {
+              "zone": "generalVulnerability",
+              "valueMode": "fixed",
+              "value": 50,
+              "segments": [
+                {
+                  "upTo": null,
+                  "perStack": 0
+                }
+              ],
+              "skillScope": "names",
+              "skillNames": [
+                "裁竹为锋·答剑·弦歌不辍",
+                "答剑·弦歌不辍",
+                "裁竹为锋·答剑·割股之心",
+                "答剑·割股之心",
+                "裁竹为锋·答剑·忠烈死节",
+                "答剑·忠烈死节"
+              ],
+              "librarySkillNames": [
+                "裁竹为锋·答剑·弦歌不辍",
+                "裁竹为锋·答剑·割股之心",
+                "裁竹为锋·答剑·忠烈死节"
+              ],
+              "catalogIds": [],
+              "damageType": "重击",
+              "effectType": "",
+              "element": "气动",
+              "defenseKind": "",
+              "minStacks": 0,
+              "minResonance": 0,
+              "onlyCharacterIds": [],
+              "onlyCombatModes": [],
+              "effectKey": ""
+            }
+          ],
+          "sourceTag": "characterTemplate",
+          "templateKey": "tpl_ms0r84dq_rfwmf",
+          "gameText": "进入【淋漓醉墨】状态时，仇远获得且从容效果，持续10秒，该效果每22秒可触发1次。\n目标受到重击答剑·弦歌不辍、答剑·割股之心、答剑·忠烈死节的伤害提升50%。答剑·忠烈死节在命中目标时，额外回复30点协奏能量。"
+        },
+        {
+          "category": "generalAttack",
+          "name": "固有2",
+          "mode": "fixed",
+          "value": 10,
+          "perStack": 0,
+          "maxStacks": 5,
+          "damageType": "",
+          "element": "",
+          "defenseKind": "",
+          "convergenceVuln": "",
+          "sourceTag": "characterTemplate",
+          "templateKey": "tpl_ms0r9hm9_3h5i9",
+          "gameText": "仇远施放声骸技能时，仇远的竹壶会吸收溢散的能量转化为【金药玉馔】。\n下次获得【挑灯问剑】时，消耗【金药玉馔】，仇远攻击提升10%，持续20秒。"
+        }
+      ],
+      "teamBuffs": [
+        {
+          "templateKey": "chouyuan_liberation_crit_dmg",
+          "category": "generalCritDmg",
+          "name": "仇远·万钧一断",
+          "mode": "fixed",
+          "value": 0,
+          "damageType": "",
+          "element": "",
+          "defenseKind": "",
+          "sourceTag": "characterTemplate",
+          "perStack": 0,
+          "maxStacks": 5,
+          "gameText": "仇远暴击高于50%时，每多出1%暴击，施放该技能时，附近队伍中的登场角色提升2%暴击伤害，持续30秒。最高可提升30%暴击伤害。"
+        },
+        {
+          "templateKey": "chouyuan_outro_echo_deep",
+          "category": "typeDeep",
+          "name": "仇远·延奏",
+          "mode": "fixed",
+          "value": 50,
+          "damageType": "声骸",
+          "element": "",
+          "defenseKind": "",
+          "excludeSource": true,
+          "sourceTag": "characterTemplate",
+          "perStack": 0,
+          "maxStacks": 5,
+          "gameText": "下一个登场角色声骸技能伤害加深50%，持续14秒，若切换至其他角色则该效果提前结束。"
+        },
+        {
+          "category": "typeBonus",
+          "name": "回路·竹照",
+          "mode": "fixed",
+          "value": 30,
+          "perStack": 0,
+          "maxStacks": 5,
+          "damageType": "声骸",
+          "element": "",
+          "defenseKind": "",
+          "convergenceVuln": "",
+          "sourceTag": "characterTemplate",
+          "templateKey": "tpl_ms0rbukc_7w7s8",
+          "gameText": "【挑灯问剑】达到400点时，获得【竹照】效果，附近队伍中的登场角色声骸技能伤害加成提升30%，持续30秒。"
+        }
+      ],
+      "extraSkills": [],
+      "resonanceChains": {
+        "1": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [
+            {
+              "category": "generalCritRate",
+              "name": "1链",
+              "mode": "fixed",
+              "value": 20,
+              "perStack": 0,
+              "maxStacks": 5,
+              "damageType": "",
+              "element": "",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "sourceTag": "characterTemplate",
+              "templateKey": "chouyuan_c1_crit_rate",
+              "gameText": "答剑·弦歌不辍、答剑·割股之心、答剑·忠烈死节免疫打断。仇远暴击提升20%。"
+            }
+          ],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {}
+        },
+        "2": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [],
+          "teamBuffs": [
+            {
+              "category": "typeDeep",
+              "name": "2链",
+              "mode": "fixed",
+              "value": 30,
+              "perStack": 0,
+              "maxStacks": 5,
+              "damageType": "声骸",
+              "element": "",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "sourceTag": "characterTemplate",
+              "templateKey": "tpl_ms0rdqyd_x9etg",
+              "gameText": "【竹照】获得时增加额外效果：附近队伍中的角色声骸技能伤害加深30%。"
+            }
+          ],
+          "extraSkills": [],
+          "combatModes": {}
+        },
+        "3": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [
+            {
+              "category": "composite",
+              "name": "3链·大招倍率增加",
+              "mode": "fixed",
+              "value": 0,
+              "perStack": 0,
+              "maxStacks": 99,
+              "damageType": "",
+              "element": "",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "effects": [
+                {
+                  "zone": "multAdd",
+                  "valueMode": "fixed",
+                  "value": 500,
+                  "segments": [
+                    {
+                      "upTo": null,
+                      "perStack": 0
+                    }
+                  ],
+                  "skillScope": "names",
+                  "skillNames": [
+                    "万钧一断·技能"
+                  ],
+                  "librarySkillNames": [
+                    "万钧一断·技能"
+                  ],
+                  "catalogIds": [],
+                  "damageType": "声骸",
+                  "effectType": "",
+                  "element": "气动",
+                  "defenseKind": "",
+                  "minStacks": 0,
+                  "minResonance": 0,
+                  "onlyCharacterIds": [],
+                  "onlyCombatModes": [],
+                  "effectKey": ""
+                }
+              ],
+              "sourceTag": "characterTemplate",
+              "templateKey": "tpl_ms0re3pa_moess",
+              "gameText": "共鸣解放万钧一断伤害倍率增加500%。\n协奏能量充满且不处于【淋漓醉墨】状态下时，仇远的共鸣技能替换为共鸣技能荷蓑出林，每20秒可施放1次。\n施放荷蓑出林时，提前结束且从容效果，消耗60点协奏能量并回复【挑灯问剑】400点，对目标造成仇远自身500%攻击的气动伤害，此次伤害视为声骸技能伤害，下一次常态攻击普攻替换为答剑·质黑相青第三段。\n施放荷蓑出林后，下次仇远进入【淋漓醉墨】状态时无法获得且从容效果，答剑·弦歌不辍、答剑·割股之心、答剑·忠烈死节伤害倍率增加600%，答剑·忠烈死节命中时额外获得协奏能量30点。\n施放荷蓑出林后，非联机状态下下次延奏技能替换为延奏技能新筠坠箨，造成仇远自身500%攻击的气动伤害，此次伤害视为声骸技能伤害。"
+            },
+            {
+              "category": "composite",
+              "name": "3链·第二套倍率增加",
+              "mode": "fixed",
+              "value": 0,
+              "perStack": 0,
+              "maxStacks": 99,
+              "damageType": "",
+              "element": "",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "effects": [
+                {
+                  "zone": "multAdd",
+                  "valueMode": "fixed",
+                  "value": 600,
+                  "segments": [
+                    {
+                      "upTo": null,
+                      "perStack": 0
+                    }
+                  ],
+                  "skillScope": "names",
+                  "skillNames": [
+                    "裁竹为锋·答剑·弦歌不辍",
+                    "答剑·弦歌不辍",
+                    "裁竹为锋·答剑·割股之心",
+                    "答剑·割股之心",
+                    "裁竹为锋·答剑·忠烈死节",
+                    "答剑·忠烈死节"
+                  ],
+                  "librarySkillNames": [
+                    "裁竹为锋·答剑·弦歌不辍",
+                    "裁竹为锋·答剑·割股之心",
+                    "裁竹为锋·答剑·忠烈死节"
+                  ],
+                  "catalogIds": [],
+                  "damageType": "重击",
+                  "effectType": "",
+                  "element": "气动",
+                  "defenseKind": "",
+                  "minStacks": 0,
+                  "minResonance": 0,
+                  "onlyCharacterIds": [],
+                  "onlyCombatModes": [],
+                  "effectKey": ""
+                }
+              ],
+              "sourceTag": "characterTemplate",
+              "templateKey": "tpl_ms0rfmxd_sat42",
+              "gameText": "共鸣解放万钧一断伤害倍率增加500%。\n协奏能量充满且不处于【淋漓醉墨】状态下时，仇远的共鸣技能替换为共鸣技能荷蓑出林，每20秒可施放1次。\n施放荷蓑出林时，提前结束且从容效果，消耗60点协奏能量并回复【挑灯问剑】400点，对目标造成仇远自身500%攻击的气动伤害，此次伤害视为声骸技能伤害，下一次常态攻击普攻替换为答剑·质黑相青第三段。\n施放荷蓑出林后，下次仇远进入【淋漓醉墨】状态时无法获得且从容效果，答剑·弦歌不辍、答剑·割股之心、答剑·忠烈死节伤害倍率增加600%，答剑·忠烈死节命中时额外获得协奏能量30点。\n施放荷蓑出林后，非联机状态下下次延奏技能替换为延奏技能新筠坠箨，造成仇远自身500%攻击的气动伤害，此次伤害视为声骸技能伤害。"
+            }
+          ],
+          "teamBuffs": [],
+          "extraSkills": [
+            {
+              "templateKey": "extra_ms0ren0e_jsna4",
+              "name": "3链·荷蓑出林",
+              "damageType": "声骸",
+              "effectType": "聚爆",
+              "effectLayers": 13,
+              "effectBurstLayers": 0,
+              "effectCount": 1,
+              "baseMult": 500,
+              "fixedDamage": false,
+              "effectMultMode": "custom"
+            },
+            {
+              "templateKey": "extra_ms0rhn38_ofink",
+              "name": "3链·延奏",
+              "damageType": "声骸",
+              "effectType": "聚爆",
+              "effectLayers": 13,
+              "effectBurstLayers": 0,
+              "effectCount": 1,
+              "baseMult": 500,
+              "fixedDamage": false,
+              "effectMultMode": "custom"
+            }
+          ],
+          "combatModes": {}
+        },
+        "4": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [
+            {
+              "category": "generalAttack",
+              "name": "4链",
+              "mode": "fixed",
+              "value": 20,
+              "perStack": 0,
+              "maxStacks": 5,
+              "damageType": "",
+              "element": "",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "sourceTag": "characterTemplate",
+              "templateKey": "tpl_ms0ri9es_m3a2d",
+              "gameText": "仇远攻击提升20%。"
+            }
+          ],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {}
+        },
+        "5": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [
+            {
+              "category": "generalDefense",
+              "name": "5链",
+              "mode": "fixed",
+              "value": 15,
+              "perStack": 0,
+              "maxStacks": 5,
+              "damageType": "",
+              "element": "",
+              "defenseKind": "ignore",
+              "convergenceVuln": "",
+              "sourceTag": "characterTemplate",
+              "templateKey": "tpl_ms0rinz2_dscp6",
+              "gameText": "仇远无视目标15%的防御。"
+            }
+          ],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {}
+        },
+        "6": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [
+            {
+              "templateKey": "chouyuan_c6_hesuo_crit_dmg",
+              "category": "composite",
+              "name": "仇远·6链·荷蓑出林后暴伤",
+              "mode": "fixed",
+              "value": 0,
+              "effects": [
+                {
+                  "zone": "generalCritDmg",
+                  "valueMode": "fixed",
+                  "value": 100,
+                  "segments": [
+                    {
+                      "upTo": null,
+                      "perStack": 0
+                    }
+                  ],
+                  "skillScope": "all",
+                  "skillNames": [],
+                  "librarySkillNames": [],
+                  "catalogIds": [],
+                  "damageType": "",
+                  "effectType": "",
+                  "element": "",
+                  "defenseKind": "",
+                  "minStacks": 0,
+                  "minResonance": 0,
+                  "onlyCharacterIds": [
+                    "1411"
+                  ],
+                  "onlyCombatModes": [],
+                  "effectKey": ""
+                }
+              ],
+              "sourceTag": "characterTemplate",
+              "perStack": 0,
+              "maxStacks": 1,
+              "gameText": "施放重击答剑·忠烈死节时，停滞周围的敌人，持续5秒，该效果联机状态下不会生效。切换至其他角色或目标受到伤害时提前清除停滞效果。\n退出【淋漓醉墨】状态且为队伍中登场角色时，对范围内敌人造成自身600%攻击的气动伤害，该伤害视为声骸技能伤害。\n施放共鸣技能荷蓑出林时，仇远暴击伤害增加100%，持续6秒。切换至其他角色时，效果提前结束。",
+              "onlyCharacterIds": [
+                "1411"
+              ]
+            }
+          ],
+          "teamBuffs": [],
+          "extraSkills": [
+            {
+              "templateKey": "extra_ms0rrqhn_85djt",
+              "name": "6链·退出状态",
+              "damageType": "声骸",
+              "effectType": "聚爆",
+              "effectLayers": 13,
+              "effectBurstLayers": 0,
+              "effectCount": 1,
+              "baseMult": 600,
+              "fixedDamage": false,
+              "effectMultMode": "custom"
+            }
+          ],
+          "combatModes": {}
+        }
+      },
+      "combatModes": {}
+    }
+  ]
+}

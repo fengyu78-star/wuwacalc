@@ -1,0 +1,565 @@
+{
+  "version": 1,
+  "kind": "shard",
+  "characterId": "1308",
+  "characterName": "丽贝卡",
+  "templates": [
+    {
+      "characterId": "1308",
+      "characterName": "丽贝卡",
+      "revision": 6,
+      "author": "",
+      "notes": "丽贝卡：【猎手模式】泛用暴伤+30%（≥4链×1.6→48%）；【铁胆模式】无视防御+15%（≥4链×1.6→24%）。【固有1】攻击叠层+10%/层；【固有2】全队攻击+20%；【露西强化】指定【好搭档】延奏倍率提升+250%。≥6链：普攻伤害加成数值×1.4（面板/声骸/Buff 全来源，结算乘区）。全队复合【丽贝卡·延奏】重击加深+0.5%/层（上限35%/70层）+ 泛用加深+15%（固定；对丽贝卡本人不生效）。1/2/3/5链与6链额外技能见共鸣链。",
+      "personalBuffs": [
+        {
+          "templateKey": "rebecca_hunter_mode",
+          "category": "composite",
+          "name": "猎手模式",
+          "mode": "fixed",
+          "value": 0,
+          "perStack": 0,
+          "maxStacks": 99,
+          "damageType": "",
+          "element": "",
+          "defenseKind": "",
+          "sourceTag": "characterTemplate",
+          "effects": [
+            {
+              "id": "id_6920",
+              "zone": "generalCritDmg",
+              "valueMode": "fixed",
+              "value": 30,
+              "segments": [
+                {
+                  "upTo": null,
+                  "perStack": 0
+                }
+              ],
+              "skillScope": "all",
+              "skillNames": [],
+              "librarySkillNames": [],
+              "catalogIds": [],
+              "damageType": "",
+              "effectType": "",
+              "element": "",
+              "defenseKind": "",
+              "minStacks": 0,
+              "minResonance": 0,
+              "onlyCharacterIds": [],
+              "onlyCombatModes": [],
+              "effectKey": "rebecca_hunter_crit_base"
+            },
+            {
+              "id": "id_6921",
+              "zone": "generalCritDmg",
+              "valueMode": "fixed",
+              "value": 18,
+              "segments": [
+                {
+                  "upTo": null,
+                  "perStack": 0
+                }
+              ],
+              "skillScope": "all",
+              "skillNames": [],
+              "librarySkillNames": [],
+              "catalogIds": [],
+              "damageType": "",
+              "effectType": "",
+              "element": "",
+              "defenseKind": "",
+              "minStacks": 0,
+              "minResonance": 4,
+              "onlyCharacterIds": [],
+              "onlyCombatModes": [],
+              "effectKey": "rebecca_hunter_crit_c4"
+            }
+          ],
+          "gameText": "处于猎手模式，丽贝卡暴击伤害提升30%"
+        },
+        {
+          "templateKey": "rebecca_iron_mode",
+          "category": "composite",
+          "name": "铁胆模式",
+          "mode": "fixed",
+          "value": 0,
+          "perStack": 0,
+          "maxStacks": 99,
+          "damageType": "",
+          "element": "",
+          "defenseKind": "ignore",
+          "sourceTag": "characterTemplate",
+          "effects": [
+            {
+              "id": "id_6922",
+              "zone": "generalDefense",
+              "valueMode": "fixed",
+              "value": 15,
+              "segments": [
+                {
+                  "upTo": null,
+                  "perStack": 0
+                }
+              ],
+              "skillScope": "all",
+              "skillNames": [],
+              "librarySkillNames": [],
+              "catalogIds": [],
+              "damageType": "",
+              "effectType": "",
+              "element": "",
+              "defenseKind": "ignore",
+              "minStacks": 0,
+              "minResonance": 0,
+              "onlyCharacterIds": [],
+              "onlyCombatModes": [],
+              "effectKey": "rebecca_iron_def_base"
+            },
+            {
+              "id": "id_6923",
+              "zone": "generalDefense",
+              "valueMode": "fixed",
+              "value": 9,
+              "segments": [
+                {
+                  "upTo": null,
+                  "perStack": 0
+                }
+              ],
+              "skillScope": "all",
+              "skillNames": [],
+              "librarySkillNames": [],
+              "catalogIds": [],
+              "damageType": "",
+              "effectType": "",
+              "element": "",
+              "defenseKind": "ignore",
+              "minStacks": 0,
+              "minResonance": 4,
+              "onlyCharacterIds": [],
+              "onlyCombatModes": [],
+              "effectKey": "rebecca_iron_def_c4"
+            }
+          ],
+          "gameText": "处于铁胆模式时，丽贝卡造成的伤害无视目标15%防御。"
+        },
+        {
+          "category": "generalAttack",
+          "name": "固有1",
+          "mode": "stack",
+          "value": 0,
+          "perStack": 10,
+          "maxStacks": 2,
+          "damageType": "",
+          "element": "",
+          "defenseKind": "",
+          "convergenceVuln": "",
+          "sourceTag": "characterTemplate",
+          "templateKey": "tpl_ms285jhg_2ct91",
+          "gameText": "每次获得小孩子才做选择！效果或者施放重击·哒哒哒！·猎手和重击·砰砰砰！·铁胆时，攻击提升10%，持续12秒，可叠加2层。\n队伍中的角色附加【骇破·偏移】时，谐度破坏增幅提升30点，持续30秒。\n\n小孩子才做选择！\n【手感火热】达到120点时，施放变奏技能·呜呼，来发大的！、变奏技能·蠢货，有本事来抓我！、共鸣技能·来发大的！或共鸣技能·有本事来抓我！时，获得额外效果，12秒内：\n无论处于哪种模式，丽贝卡同时获得【猎手】和【铁胆】模式的属性加成效果。\n此期间无法回复【手感火热】，并且每秒消耗10点【手感火热】。"
+        },
+        {
+          "category": "composite",
+          "name": "露西强化",
+          "mode": "fixed",
+          "value": 0,
+          "perStack": 0,
+          "maxStacks": 99,
+          "damageType": "",
+          "element": "",
+          "defenseKind": "",
+          "convergenceVuln": "",
+          "effects": [
+            {
+              "zone": "multBoost",
+              "valueMode": "fixed",
+              "value": 250,
+              "segments": [
+                {
+                  "upTo": null,
+                  "perStack": 0
+                }
+              ],
+              "skillScope": "names",
+              "skillNames": [
+                "好搭档"
+              ],
+              "librarySkillNames": [
+                "好搭档"
+              ],
+              "catalogIds": [],
+              "damageType": "延奏",
+              "effectType": "",
+              "element": "导电",
+              "defenseKind": "",
+              "minStacks": 0,
+              "minResonance": 0,
+              "onlyCharacterIds": [],
+              "onlyCombatModes": [],
+              "effectKey": ""
+            }
+          ],
+          "sourceTag": "characterTemplate",
+          "templateKey": "tpl_ms287paj_bcfe6",
+          "gameText": "机枪塔可被露西强化，伤害倍率提升250%，但持续时间变为4秒。"
+        }
+      ],
+      "teamBuffs": [
+        {
+          "templateKey": "rebecca_outro",
+          "category": "composite",
+          "name": "丽贝卡·延奏",
+          "mode": "stack",
+          "value": 0,
+          "perStack": 0,
+          "maxStacks": 70,
+          "clampStacks": true,
+          "damageType": "",
+          "element": "",
+          "defenseKind": "",
+          "excludeSource": true,
+          "sourceTag": "characterTemplate",
+          "effects": [
+            {
+              "zone": "typeDeep",
+              "valueMode": "stack",
+              "value": 0,
+              "segments": [
+                {
+                  "upTo": null,
+                  "perStack": 0.5
+                }
+              ],
+              "skillScope": "all",
+              "skillNames": [],
+              "librarySkillNames": [],
+              "catalogIds": [],
+              "damageType": "重击",
+              "effectType": "",
+              "element": "",
+              "defenseKind": "",
+              "minStacks": 0,
+              "minResonance": 0,
+              "onlyCharacterIds": [],
+              "onlyCombatModes": [],
+              "effectKey": ""
+            },
+            {
+              "zone": "generalDeep",
+              "valueMode": "fixed",
+              "value": 15,
+              "segments": [
+                {
+                  "upTo": null,
+                  "perStack": 0
+                }
+              ],
+              "skillScope": "all",
+              "skillNames": [],
+              "librarySkillNames": [],
+              "catalogIds": [],
+              "damageType": "",
+              "effectType": "",
+              "element": "",
+              "defenseKind": "",
+              "minStacks": 0,
+              "minResonance": 0,
+              "onlyCharacterIds": [],
+              "onlyCombatModes": [],
+              "effectKey": ""
+            }
+          ],
+          "gameText": "召唤机枪塔持续攻击敌人，持续14秒，每次攻击造成2.5%的导电伤害。\n下一位登场角色获得浪客羁绊，全伤害加深15%，持续14秒。持有浪客羁绊的角色每0.2秒会获得1层超限，造成重击伤害加深0.5%（若是露西持有浪客羁绊，则直接获得满层），上限为35%。若切换至其他角色则提前结束浪客羁绊和超限。\n机枪塔可被露西强化，伤害倍率提升250%，但持续时间变为4秒。"
+        },
+        {
+          "category": "harmonyBreakAmp",
+          "name": "丽贝卡·固有1",
+          "mode": "fixed",
+          "value": 30,
+          "perStack": 0,
+          "maxStacks": 5,
+          "damageType": "",
+          "element": "",
+          "defenseKind": "",
+          "convergenceVuln": "",
+          "sourceTag": "characterTemplate",
+          "templateKey": "rebecca_innate1_harmony_amp",
+          "gameText": "队伍中的角色附加【骇破·偏移】时，谐度破坏增幅提升30点，持续30秒。",
+          "defaultActive": false
+        },
+        {
+          "category": "generalAttack",
+          "name": "固有2",
+          "mode": "fixed",
+          "value": 20,
+          "perStack": 0,
+          "maxStacks": 5,
+          "damageType": "",
+          "element": "",
+          "defenseKind": "",
+          "convergenceVuln": "",
+          "sourceTag": "characterTemplate",
+          "templateKey": "tpl_ms286nhl_gue13",
+          "gameText": "丽贝卡施放共鸣解放·狂欢时间！时，附近队伍中所有角色攻击提升20%，持续30秒。"
+        }
+      ],
+      "extraSkills": [],
+      "resonanceChains": {
+        "1": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [
+            {
+              "category": "composite",
+              "name": "1链",
+              "mode": "fixed",
+              "value": 0,
+              "perStack": 0,
+              "maxStacks": 99,
+              "damageType": "",
+              "element": "",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "effects": [
+                {
+                  "zone": "multBoost",
+                  "valueMode": "fixed",
+                  "value": 50,
+                  "segments": [
+                    {
+                      "upTo": null,
+                      "perStack": 0
+                    }
+                  ],
+                  "skillScope": "names",
+                  "skillNames": [
+                    "混搭战术·普攻·猎手第一段",
+                    "普攻·猎手第一段",
+                    "混搭战术·普攻·猎手第二段",
+                    "普攻·猎手第二段",
+                    "混搭战术·普攻·猎手第三段",
+                    "普攻·猎手第三段",
+                    "混搭战术·重击·猎手",
+                    "重击·猎手",
+                    "混搭战术·闪避反击·猎手",
+                    "闪避反击·猎手",
+                    "混搭战术·战术闪避·猎手",
+                    "战术闪避·猎手",
+                    "混搭战术·战术闪避·猎手闪避成功",
+                    "战术闪避·猎手闪避成功",
+                    "混搭战术·普攻·铁胆第一段",
+                    "普攻·铁胆第一段",
+                    "混搭战术·普攻·铁胆第二段",
+                    "普攻·铁胆第二段",
+                    "混搭战术·普攻·铁胆第三段",
+                    "普攻·铁胆第三段",
+                    "混搭战术·闪避反击·铁胆",
+                    "闪避反击·铁胆",
+                    "混搭战术·战术闪避·铁胆",
+                    "战术闪避·铁胆",
+                    "混搭战术·战术闪避·铁胆闪避成功",
+                    "战术闪避·铁胆闪避成功"
+                  ],
+                  "librarySkillNames": [
+                    "混搭战术·普攻·猎手第一段",
+                    "混搭战术·普攻·猎手第二段",
+                    "混搭战术·普攻·猎手第三段",
+                    "混搭战术·重击·猎手",
+                    "混搭战术·闪避反击·猎手",
+                    "混搭战术·战术闪避·猎手",
+                    "混搭战术·战术闪避·猎手闪避成功",
+                    "混搭战术·普攻·铁胆第一段",
+                    "混搭战术·普攻·铁胆第二段",
+                    "混搭战术·普攻·铁胆第三段",
+                    "混搭战术·闪避反击·铁胆",
+                    "混搭战术·战术闪避·铁胆",
+                    "混搭战术·战术闪避·铁胆闪避成功"
+                  ],
+                  "catalogIds": [],
+                  "damageType": "普攻",
+                  "effectType": "",
+                  "element": "导电",
+                  "defenseKind": "",
+                  "minStacks": 0,
+                  "minResonance": 0,
+                  "onlyCharacterIds": [],
+                  "onlyCombatModes": [],
+                  "effectKey": ""
+                }
+              ],
+              "sourceTag": "characterTemplate",
+              "templateKey": "tpl_ms28bf0z_b09kk",
+              "gameText": "丽贝卡以下技能伤害倍率提升50%：\n·普攻·猎手、重击·猎手、战术闪避·猎手、闪避反击·猎手。\n·普攻·铁胆、战术闪避·铁胆、闪避反击·铁胆。\n丽贝卡获得小孩子才做选择！效果时，额外获得3层街头直觉，持续12秒。施放战术闪避·猎手、战术闪避·铁胆时，若拥有街头直觉则消耗1层街头直觉，回复20点耐力。\n共鸣解放大烟花！免疫打断。"
+            }
+          ],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {},
+          "gameText": "丽贝卡以下技能伤害倍率提升50%：\n·普攻·猎手、重击·猎手、战术闪避·猎手、闪避反击·猎手。\n·普攻·铁胆、战术闪避·铁胆、闪避反击·铁胆。\n丽贝卡获得小孩子才做选择！效果时，额外获得3层街头直觉，持续12秒。施放战术闪避·猎手、战术闪避·铁胆时，若拥有街头直觉则消耗1层街头直觉，回复20点耐力。\n共鸣解放大烟花！免疫打断。"
+        },
+        "2": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [],
+          "teamBuffs": [
+            {
+              "category": "generalBonus",
+              "name": "丽贝卡·2链",
+              "mode": "fixed",
+              "value": 20,
+              "perStack": 0,
+              "maxStacks": 5,
+              "damageType": "",
+              "element": "",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "sourceTag": "characterTemplate",
+              "templateKey": "tpl_ms28eewr_l7ar6",
+              "gameText": "施放变奏技能呜呼，来发大的！、变奏技能蠢货，有本事来抓我！或共鸣解放狂欢时间！时，队伍中的角色全属性伤害加成提升20%，持续30秒。\n队伍中的角色附加【骇破·偏移】时，全伤害加深15%，持续30秒。\n处于非战斗状态时，【手感火热】回复速度翻倍。"
+            },
+            {
+              "category": "generalDeep",
+              "name": "丽贝卡·2链",
+              "mode": "fixed",
+              "value": 15,
+              "perStack": 0,
+              "maxStacks": 5,
+              "damageType": "",
+              "element": "",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "sourceTag": "characterTemplate",
+              "templateKey": "tpl_ms28eqwf_1xgrm",
+              "gameText": "施放变奏技能呜呼，来发大的！、变奏技能蠢货，有本事来抓我！或共鸣解放狂欢时间！时，队伍中的角色全属性伤害加成提升20%，持续30秒。\n队伍中的角色附加【骇破·偏移】时，全伤害加深15%，持续30秒。\n处于非战斗状态时，【手感火热】回复速度翻倍。"
+            }
+          ],
+          "extraSkills": [],
+          "combatModes": {},
+          "gameText": "施放变奏技能呜呼，来发大的！、变奏技能蠢货，有本事来抓我！或共鸣解放狂欢时间！时，队伍中的角色全属性伤害加成提升20%，持续30秒。\n队伍中的角色附加【骇破·偏移】时，全伤害加深15%，持续30秒。\n处于非战斗状态时，【手感火热】回复速度翻倍。"
+        },
+        "3": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [
+            {
+              "category": "composite",
+              "name": "3链",
+              "mode": "fixed",
+              "value": 0,
+              "perStack": 0,
+              "maxStacks": 99,
+              "damageType": "",
+              "element": "",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "effects": [
+                {
+                  "zone": "multBoost",
+                  "valueMode": "fixed",
+                  "value": 60,
+                  "segments": [
+                    {
+                      "upTo": null,
+                      "perStack": 0
+                    }
+                  ],
+                  "skillScope": "names",
+                  "skillNames": [
+                    "狂欢时间！·大烟花！",
+                    "大烟花！",
+                    "狂欢时间！·【31型重机枪】",
+                    "【31型重机枪】",
+                    "狂欢时间！·【31型重机枪】威力提升1次",
+                    "【31型重机枪】威力提升1次",
+                    "狂欢时间！·【31型重机枪】威力提升2次",
+                    "【31型重机枪】威力提升2次"
+                  ],
+                  "librarySkillNames": [
+                    "狂欢时间！·大烟花！",
+                    "狂欢时间！·【31型重机枪】",
+                    "狂欢时间！·【31型重机枪】威力提升1次",
+                    "狂欢时间！·【31型重机枪】威力提升2次"
+                  ],
+                  "catalogIds": [],
+                  "damageType": "普攻",
+                  "effectType": "",
+                  "element": "导电",
+                  "defenseKind": "",
+                  "minStacks": 0,
+                  "minResonance": 0,
+                  "onlyCharacterIds": [],
+                  "onlyCombatModes": [],
+                  "effectKey": ""
+                }
+              ],
+              "sourceTag": "characterTemplate",
+              "templateKey": "tpl_ms28fpck_87imn",
+              "gameText": "丽贝卡共鸣解放狂欢时间！、共鸣解放大烟花！伤害倍率提升60%。\n丽贝卡共鸣解放狂欢时间！爆炸范围增加30%。\n施放变奏技能呜呼，来发大的！、变奏技能蠢货，有本事来抓我！时，获得120点【手感火热】。"
+            }
+          ],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {},
+          "gameText": "丽贝卡共鸣解放狂欢时间！、共鸣解放大烟花！伤害倍率提升60%。\n丽贝卡共鸣解放狂欢时间！爆炸范围增加30%。\n施放变奏技能呜呼，来发大的！、变奏技能蠢货，有本事来抓我！时，获得120点【手感火热】。"
+        },
+        "4": {
+          "enabledByDefault": false,
+          "notes": "猎手/铁胆数值 ×1.6 已写入本体同名 Buff（≥4链追加）",
+          "personalBuffs": [],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {},
+          "gameText": "丽贝卡小孩子才做选择！属性加成效果额外提升60%。"
+        },
+        "5": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [
+            {
+              "category": "typeBonus",
+              "name": "5链",
+              "mode": "fixed",
+              "value": 20,
+              "perStack": 0,
+              "maxStacks": 5,
+              "damageType": "普攻",
+              "element": "",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "sourceTag": "characterTemplate",
+              "templateKey": "tpl_ms28jqtj_kegna",
+              "gameText": "丽贝卡附加【骇破·偏移】时，自身普攻伤害加成提升20%，持续8秒。"
+            }
+          ],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {},
+          "gameText": "丽贝卡附加【骇破·偏移】时，自身普攻伤害加成提升20%，持续8秒。"
+        },
+        "6": {
+          "enabledByDefault": false,
+          "notes": "内置：≥6链时，所有来源普攻伤害加成数值×1.4（结算乘区，覆盖面板/声骸/Buff）。",
+          "personalBuffs": [],
+          "teamBuffs": [],
+          "extraSkills": [
+            {
+              "templateKey": "extra_ms28nckh_62yd8",
+              "name": "6链·额外伤害",
+              "damageType": "普攻",
+              "effectType": "聚爆",
+              "effectLayers": 13,
+              "effectBurstLayers": 0,
+              "effectCount": 1,
+              "baseMult": 900,
+              "fixedDamage": false,
+              "effectMultMode": "custom"
+            }
+          ],
+          "combatModes": {},
+          "gameText": "丽贝卡从所有来源中获得的普攻伤害加成数值提升40%。\n丽贝卡施放重击·哒哒哒！·猎手、重击·砰砰砰！·铁胆期间，额外造成一次900%的导电伤害，此次伤害为普攻伤害。\n丽贝卡施放重击·哒哒哒！·猎手、重击·砰砰砰！·铁胆时，额外回复20点【手感火热】。\n受到致死伤害时，此次伤害不会使丽贝卡倒下，并且立即回复5次2077点固定生命值，该效果每10分钟可触发1次。\n处于非战斗状态大于4秒时，丽贝卡回复120点【狂热】，每4秒只生效1次。"
+        }
+      },
+      "combatModes": {}
+    }
+  ]
+}

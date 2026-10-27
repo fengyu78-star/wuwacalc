@@ -1,0 +1,320 @@
+{
+  "version": 1,
+  "kind": "shard",
+  "characterId": "1310",
+  "characterName": "漂泊者·导电",
+  "templates": [
+    {
+      "characterId": "1310",
+      "characterName": "漂泊者·导电",
+      "revision": 2,
+      "author": "",
+      "notes": "漂泊者·导电：全队【雷主·延奏】泛用加深+25%（固定；对漂泊者·导电本人不生效）。",
+      "personalBuffs": [
+        {
+          "category": "typeBonus",
+          "name": "固有2·归枢",
+          "mode": "fixed",
+          "value": 20,
+          "perStack": 0,
+          "maxStacks": 5,
+          "damageType": "共鸣技能",
+          "element": "",
+          "defenseKind": "",
+          "convergenceVuln": "",
+          "sourceTag": "characterTemplate",
+          "templateKey": "tpl_ms27ugny_0uwu5",
+          "gameText": "长按施放共鸣技能超负荷后，自身共鸣技能伤害加成提升20%，持续20秒，若切换至其他角色则该效果提前结束。"
+        }
+      ],
+      "teamBuffs": [
+        {
+          "category": "generalAttack",
+          "name": "雷主·回路",
+          "mode": "fixed",
+          "value": 10,
+          "perStack": 0,
+          "maxStacks": 5,
+          "damageType": "",
+          "element": "",
+          "defenseKind": "",
+          "convergenceVuln": "",
+          "sourceTag": "characterTemplate",
+          "templateKey": "tpl_ms27tdu6_7mqyf",
+          "gameText": "超负荷\n【电涌】达到上限时，共鸣技能替换为共鸣技能超负荷。\n施放该技能后一定时间内短按普攻，将会施放普攻第4段。\n可在空中施放。\n短按施放共鸣技能超负荷，造成导电伤害，随后清空【电涌】并使队伍中的角色获得10%攻击加成，持续20秒。"
+        },
+        {
+          "templateKey": "rover_electro_outro_general_deep",
+          "category": "generalDeep",
+          "name": "雷主·延奏",
+          "mode": "fixed",
+          "value": 25,
+          "damageType": "",
+          "element": "",
+          "defenseKind": "",
+          "excludeSource": true,
+          "sourceTag": "characterTemplate",
+          "perStack": 0,
+          "maxStacks": 5,
+          "gameText": "下一位登场角色获得电髓，持续20秒，切换至其他角色时，移除电髓；持有电髓的角色附加异常效应后，消耗电髓并获得全伤害加深25%，持续14秒，切换至其他角色时，该效果提前结束。"
+        }
+      ],
+      "extraSkills": [],
+      "resonanceChains": {
+        "1": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {},
+          "gameText": "施放常态攻击和共鸣技能千声翻涌时，获得抗打断提升效果，持续0.5秒。"
+        },
+        "2": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {},
+          "gameText": "共鸣解放最终战略造成伤害后给目标附加5层【电磁效应】。"
+        },
+        "3": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [
+            {
+              "category": "composite",
+              "name": "3链",
+              "mode": "fixed",
+              "value": 0,
+              "perStack": 0,
+              "maxStacks": 99,
+              "damageType": "",
+              "element": "",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "effects": [
+                {
+                  "zone": "multBoost",
+                  "valueMode": "fixed",
+                  "value": 20,
+                  "segments": [
+                    {
+                      "upTo": null,
+                      "perStack": 0
+                    }
+                  ],
+                  "skillScope": "names",
+                  "skillNames": [
+                    "天机万象·超负荷",
+                    "超负荷"
+                  ],
+                  "librarySkillNames": [
+                    "天机万象·超负荷"
+                  ],
+                  "catalogIds": [],
+                  "damageType": "共鸣技能",
+                  "effectType": "",
+                  "element": "导电",
+                  "defenseKind": "",
+                  "minStacks": 0,
+                  "minResonance": 0,
+                  "onlyCharacterIds": [],
+                  "onlyCombatModes": [],
+                  "effectKey": ""
+                }
+              ],
+              "sourceTag": "characterTemplate",
+              "templateKey": "tpl_ms27xw45_rryzh",
+              "gameText": "共鸣技能超负荷伤害倍率提升20%。"
+            }
+          ],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {},
+          "gameText": "共鸣技能超负荷伤害倍率提升20%。"
+        },
+        "4": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [
+            {
+              "category": "composite",
+              "name": "4链",
+              "mode": "fixed",
+              "value": 0,
+              "perStack": 0,
+              "maxStacks": 99,
+              "damageType": "",
+              "element": "",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "effects": [
+                {
+                  "zone": "multBoost",
+                  "valueMode": "fixed",
+                  "value": 20,
+                  "segments": [
+                    {
+                      "upTo": null,
+                      "perStack": 0
+                    }
+                  ],
+                  "skillScope": "names",
+                  "skillNames": [
+                    "最终战略·技能"
+                  ],
+                  "librarySkillNames": [
+                    "最终战略·技能"
+                  ],
+                  "catalogIds": [],
+                  "damageType": "共鸣解放",
+                  "effectType": "",
+                  "element": "导电",
+                  "defenseKind": "",
+                  "minStacks": 0,
+                  "minResonance": 0,
+                  "onlyCharacterIds": [],
+                  "onlyCombatModes": [],
+                  "effectKey": ""
+                }
+              ],
+              "sourceTag": "characterTemplate",
+              "templateKey": "tpl_ms27yqr1_iqns9",
+              "gameText": "共鸣解放最终战略伤害倍率提升20%。"
+            }
+          ],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {},
+          "gameText": "共鸣解放最终战略伤害倍率提升20%。"
+        },
+        "5": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [
+            {
+              "category": "generalCritDmg",
+              "name": "5链·临界共鸣状态",
+              "mode": "fixed",
+              "value": 20,
+              "perStack": 0,
+              "maxStacks": 5,
+              "damageType": "",
+              "element": "",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "sourceTag": "characterTemplate",
+              "templateKey": "tpl_ms27zfwy_rnib8",
+              "gameText": "临界共鸣状态期间暴击伤害提升20%。"
+            }
+          ],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {},
+          "gameText": "临界共鸣状态期间暴击伤害提升20%。"
+        },
+        "6": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [
+            {
+              "category": "composite",
+              "name": "6链",
+              "mode": "fixed",
+              "value": 0,
+              "perStack": 0,
+              "maxStacks": 99,
+              "damageType": "",
+              "element": "",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "effects": [
+                {
+                  "zone": "multBoost",
+                  "valueMode": "fixed",
+                  "value": 20,
+                  "segments": [
+                    {
+                      "upTo": null,
+                      "perStack": 0
+                    }
+                  ],
+                  "skillScope": "names",
+                  "skillNames": [
+                    "天机万象·雷陨",
+                    "雷陨",
+                    "天机万象·千声翻涌·衍射第一段",
+                    "千声翻涌·衍射第一段",
+                    "天机万象·千声翻涌·衍射第二段",
+                    "千声翻涌·衍射第二段",
+                    "天机万象·千声翻涌·衍射第三段",
+                    "千声翻涌·衍射第三段",
+                    "天机万象·千声翻涌·湮灭第一段",
+                    "千声翻涌·湮灭第一段",
+                    "天机万象·千声翻涌·湮灭第二段",
+                    "千声翻涌·湮灭第二段",
+                    "天机万象·千声翻涌·湮灭第三段",
+                    "千声翻涌·湮灭第三段",
+                    "天机万象·千声翻涌·剑止万律",
+                    "千声翻涌·剑止万律",
+                    "天机万象·千声翻涌·气动",
+                    "千声翻涌·气动",
+                    "天机万象·千声翻涌·湮灭空中攻击第一段",
+                    "千声翻涌·湮灭空中攻击第一段",
+                    "天机万象·千声翻涌·湮灭空中攻击第二段",
+                    "千声翻涌·湮灭空中攻击第二段",
+                    "天机万象·千声翻涌·湮灭空中攻击第三段",
+                    "千声翻涌·湮灭空中攻击第三段",
+                    "天机万象·千声翻涌·气动空中攻击第一段",
+                    "千声翻涌·气动空中攻击第一段",
+                    "天机万象·千声翻涌·气动空中攻击第二段",
+                    "千声翻涌·气动空中攻击第二段",
+                    "天机万象·千声翻涌·气动下落攻击",
+                    "千声翻涌·气动下落攻击"
+                  ],
+                  "librarySkillNames": [
+                    "天机万象·雷陨",
+                    "天机万象·千声翻涌·衍射第一段",
+                    "天机万象·千声翻涌·衍射第二段",
+                    "天机万象·千声翻涌·衍射第三段",
+                    "天机万象·千声翻涌·湮灭第一段",
+                    "天机万象·千声翻涌·湮灭第二段",
+                    "天机万象·千声翻涌·湮灭第三段",
+                    "天机万象·千声翻涌·剑止万律",
+                    "天机万象·千声翻涌·气动",
+                    "天机万象·千声翻涌·湮灭空中攻击第一段",
+                    "天机万象·千声翻涌·湮灭空中攻击第二段",
+                    "天机万象·千声翻涌·湮灭空中攻击第三段",
+                    "天机万象·千声翻涌·气动空中攻击第一段",
+                    "天机万象·千声翻涌·气动空中攻击第二段",
+                    "天机万象·千声翻涌·气动下落攻击"
+                  ],
+                  "catalogIds": [],
+                  "damageType": "共鸣技能",
+                  "effectType": "",
+                  "element": "衍射",
+                  "defenseKind": "",
+                  "minStacks": 0,
+                  "minResonance": 0,
+                  "onlyCharacterIds": [],
+                  "onlyCombatModes": [],
+                  "effectKey": ""
+                }
+              ],
+              "sourceTag": "characterTemplate",
+              "templateKey": "tpl_ms27zsia_vn95l",
+              "gameText": "共鸣技能千声翻涌和雷陨伤害倍率提升20%。"
+            }
+          ],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {},
+          "gameText": "共鸣技能千声翻涌和雷陨伤害倍率提升20%。"
+        }
+      },
+      "combatModes": {}
+    }
+  ]
+}

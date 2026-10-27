@@ -1,0 +1,365 @@
+{
+  "version": 1,
+  "kind": "shard",
+  "characterId": "1104",
+  "characterName": "凌阳",
+  "templates": [
+    {
+      "characterId": "1104",
+      "characterName": "凌阳",
+      "revision": 2,
+      "author": "",
+      "notes": "",
+      "personalBuffs": [
+        {
+          "category": "elementBonus",
+          "name": "大招【狮子奋迅】状态",
+          "mode": "fixed",
+          "value": 50,
+          "perStack": 0,
+          "maxStacks": 5,
+          "damageType": "",
+          "element": "冷凝",
+          "defenseKind": "",
+          "convergenceVuln": "",
+          "sourceTag": "characterTemplate",
+          "templateKey": "tpl_mrz0kz35_4y5hb",
+          "gameText": "奋进·狮子奋迅，俱足万行\n共鸣解放\n攻击目标，造成冷凝伤害，并受到狮子奋迅祝福。\n\n狮子奋迅\n凌阳的冷凝伤害加成提升50%。"
+        },
+        {
+          "category": "composite",
+          "name": "固有1",
+          "mode": "fixed",
+          "value": 0,
+          "perStack": 0,
+          "maxStacks": 99,
+          "damageType": "",
+          "element": "",
+          "defenseKind": "",
+          "convergenceVuln": "",
+          "effects": [
+            {
+              "zone": "generalBonus",
+              "valueMode": "fixed",
+              "value": 50,
+              "segments": [
+                {
+                  "upTo": null,
+                  "perStack": 0
+                }
+              ],
+              "skillScope": "names",
+              "skillNames": [
+                "出洞·睡狮蛰醒·技能",
+                "睡狮蛰醒·技能"
+              ],
+              "librarySkillNames": [
+                "出洞·睡狮蛰醒·技能"
+              ],
+              "catalogIds": [],
+              "damageType": "变奏",
+              "effectType": "",
+              "element": "冷凝",
+              "defenseKind": "",
+              "minStacks": 0,
+              "minResonance": 0,
+              "onlyCharacterIds": [],
+              "onlyCombatModes": [],
+              "effectKey": ""
+            }
+          ],
+          "sourceTag": "characterTemplate",
+          "templateKey": "tpl_mrz0mcpt_5m3gb",
+          "gameText": "变奏技能出洞·睡狮蛰醒的伤害提升50%。"
+        },
+        {
+          "category": "composite",
+          "name": "固有2",
+          "mode": "fixed",
+          "value": 0,
+          "perStack": 0,
+          "maxStacks": 99,
+          "damageType": "",
+          "element": "",
+          "defenseKind": "",
+          "convergenceVuln": "",
+          "effects": [
+            {
+              "zone": "multAdd",
+              "valueMode": "fixed",
+              "value": 248.64,
+              "segments": [
+                {
+                  "upTo": null,
+                  "perStack": 0
+                }
+              ],
+              "skillScope": "names",
+              "skillNames": [
+                "形神合一·飞身式·翻山越涧",
+                "飞身式·翻山越涧"
+              ],
+              "librarySkillNames": [
+                "形神合一·飞身式·翻山越涧"
+              ],
+              "catalogIds": [],
+              "damageType": "共鸣技能",
+              "effectType": "",
+              "element": "冷凝",
+              "defenseKind": "",
+              "minStacks": 0,
+              "minResonance": 0,
+              "onlyCharacterIds": [],
+              "onlyCombatModes": [],
+              "effectKey": ""
+            }
+          ],
+          "sourceTag": "characterTemplate",
+          "templateKey": "tpl_mrz0murd_oyrc4",
+          "gameText": "勤修苦练，锯牙磨砺\n固有技能\n在共鸣回路行狮状态下，每次施放普攻后3秒内，下次共鸣回路飞身式·翻山越涧将额外造成1次冷凝伤害，伤害为共鸣回路飞身式·翻山越涧的150%，此次伤害为共鸣技能伤害。"
+        }
+      ],
+      "teamBuffs": [],
+      "extraSkills": [],
+      "resonanceChains": {
+        "1": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {},
+          "gameText": "共鸣解放狮子奋迅持续期间提升凌阳的抗打断能力。"
+        },
+        "2": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {},
+          "gameText": "施放变奏技能出洞·睡狮蛰醒时，凌阳额外回复10点共鸣能量，每20秒可触发1次。"
+        },
+        "3": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [
+            {
+              "category": "composite",
+              "name": "3链",
+              "mode": "fixed",
+              "value": 0,
+              "perStack": 0,
+              "maxStacks": 99,
+              "damageType": "",
+              "element": "",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "effects": [
+                {
+                  "zone": "typeBonus",
+                  "valueMode": "fixed",
+                  "value": 20,
+                  "segments": [
+                    {
+                      "upTo": null,
+                      "perStack": 0
+                    }
+                  ],
+                  "skillScope": "all",
+                  "skillNames": [],
+                  "librarySkillNames": [],
+                  "catalogIds": [],
+                  "damageType": "普攻",
+                  "effectType": "",
+                  "element": "",
+                  "defenseKind": "",
+                  "minStacks": 0,
+                  "minResonance": 0,
+                  "onlyCharacterIds": [],
+                  "onlyCombatModes": [],
+                  "effectKey": ""
+                },
+                {
+                  "zone": "typeBonus",
+                  "valueMode": "fixed",
+                  "value": 10,
+                  "segments": [
+                    {
+                      "upTo": null,
+                      "perStack": 0
+                    }
+                  ],
+                  "skillScope": "all",
+                  "skillNames": [],
+                  "librarySkillNames": [],
+                  "catalogIds": [],
+                  "damageType": "共鸣技能",
+                  "effectType": "",
+                  "element": "",
+                  "defenseKind": "",
+                  "minStacks": 0,
+                  "minResonance": 0,
+                  "onlyCharacterIds": [],
+                  "onlyCombatModes": [],
+                  "effectKey": ""
+                }
+              ],
+              "sourceTag": "characterTemplate",
+              "templateKey": "tpl_mrz0pozj_rdqfb",
+              "gameText": "共鸣解放狮子奋迅持续期间，凌阳的普攻伤害加成提升20%，共鸣技能伤害加成提升10%。"
+            }
+          ],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {},
+          "gameText": "共鸣解放狮子奋迅持续期间，凌阳的普攻伤害加成提升20%，共鸣技能伤害加成提升10%。"
+        },
+        "4": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [],
+          "teamBuffs": [
+            {
+              "category": "elementBonus",
+              "name": "4链·凌阳",
+              "mode": "fixed",
+              "value": 20,
+              "perStack": 0,
+              "maxStacks": 5,
+              "damageType": "",
+              "element": "冷凝",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "sourceTag": "characterTemplate",
+              "templateKey": "tpl_mrz0qma8_4krpq",
+              "gameText": "凌阳施放延奏技能留痕·踏雪点星时，队伍中的角色冷凝伤害加成提升20%，持续30秒。"
+            }
+          ],
+          "extraSkills": [],
+          "combatModes": {},
+          "gameText": "凌阳施放延奏技能留痕·踏雪点星时，队伍中的角色冷凝伤害加成提升20%，持续30秒。"
+        },
+        "5": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [
+            {
+              "category": "composite",
+              "name": "【5链】",
+              "mode": "fixed",
+              "value": 0,
+              "perStack": 0,
+              "maxStacks": 99,
+              "damageType": "",
+              "element": "",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "effects": [
+                {
+                  "zone": "multAdd",
+                  "valueMode": "fixed",
+                  "value": 200,
+                  "segments": [
+                    {
+                      "upTo": null,
+                      "perStack": 0
+                    }
+                  ],
+                  "skillScope": "names",
+                  "skillNames": [
+                    "奋进·狮子奋迅，俱足万行·技能",
+                    "狮子奋迅，俱足万行·技能"
+                  ],
+                  "librarySkillNames": [
+                    "奋进·狮子奋迅，俱足万行·技能"
+                  ],
+                  "catalogIds": [],
+                  "damageType": "共鸣解放",
+                  "effectType": "",
+                  "element": "冷凝",
+                  "defenseKind": "",
+                  "minStacks": 0,
+                  "minResonance": 0,
+                  "onlyCharacterIds": [],
+                  "onlyCombatModes": [],
+                  "effectKey": ""
+                }
+              ],
+              "sourceTag": "characterTemplate",
+              "templateKey": "tpl_mrz0r11o_4urdl",
+              "gameText": "施放共鸣解放奋进·狮子奋迅，俱足万行时，将额外造成凌阳200%攻击的冷凝伤害。"
+            }
+          ],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {},
+          "gameText": "施放共鸣解放奋进·狮子奋迅，俱足万行时，将额外造成凌阳200%攻击的冷凝伤害。"
+        },
+        "6": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [
+            {
+              "category": "composite",
+              "name": "6链·额外普攻加成",
+              "mode": "fixed",
+              "value": 0,
+              "perStack": 0,
+              "maxStacks": 99,
+              "damageType": "",
+              "element": "",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "effects": [
+                {
+                  "zone": "typeBonus",
+                  "valueMode": "fixed",
+                  "value": 100,
+                  "segments": [
+                    {
+                      "upTo": null,
+                      "perStack": 0
+                    }
+                  ],
+                  "skillScope": "names",
+                  "skillNames": [
+                    "形神合一·狂态·摇光金狮舞第一段",
+                    "狂态·摇光金狮舞第一段",
+                    "形神合一·狂态·摇光金狮舞第二段",
+                    "狂态·摇光金狮舞第二段",
+                    "形神合一·凌云式·腿打连环",
+                    "凌云式·腿打连环"
+                  ],
+                  "librarySkillNames": [
+                    "形神合一·狂态·摇光金狮舞第一段",
+                    "形神合一·狂态·摇光金狮舞第二段",
+                    "形神合一·凌云式·腿打连环"
+                  ],
+                  "catalogIds": [],
+                  "damageType": "普攻",
+                  "effectType": "",
+                  "element": "冷凝",
+                  "defenseKind": "",
+                  "minStacks": 0,
+                  "minResonance": 0,
+                  "onlyCharacterIds": [],
+                  "onlyCombatModes": [],
+                  "effectKey": ""
+                }
+              ],
+              "sourceTag": "characterTemplate",
+              "templateKey": "tpl_mrz0s0x1_jp482",
+              "gameText": "处于共鸣回路行狮状态时，凌阳每次施放共鸣技能飞身式·翻山越涧后3秒内，下1次普攻的普攻伤害加成提升100%。"
+            }
+          ],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {},
+          "gameText": "处于共鸣回路行狮状态时，凌阳每次施放共鸣技能飞身式·翻山越涧后3秒内，下1次普攻的普攻伤害加成提升100%。"
+        }
+      },
+      "combatModes": {}
+    }
+  ]
+}

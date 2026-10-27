@@ -1,0 +1,304 @@
+{
+  "version": 1,
+  "kind": "shard",
+  "characterId": "1306",
+  "characterName": "奥古斯塔",
+  "templates": [
+    {
+      "characterId": "1306",
+      "characterName": "奥古斯塔",
+      "revision": 3,
+      "author": "",
+      "notes": "奥古斯塔：全队【奥古斯塔·延奏】泛用加深+15%（固定；对奥古斯塔本人不生效）。本体【以众愿为冕】叠层：导电+15%/层；≥1链暴伤+15%/层；≥2链暴击（专属面板）+ 溢出暴击→暴伤转化。3链指定倍率+25%；4链全队攻击+20%；6链【怒霆】+层数/转化上限。",
+      "personalBuffs": [
+        {
+          "templateKey": "augusta_special_stacks",
+          "category": "composite",
+          "name": "以众愿为冕",
+          "mode": "stack",
+          "value": 0,
+          "perStack": 0,
+          "maxStacks": 1,
+          "damageType": "",
+          "element": "",
+          "defenseKind": "",
+          "clampStacks": true,
+          "gameText": "每层使导电伤害加成提升15%，上限为1层。共鸣解放·赫日威临·不朽者之肃结束时，清除自身全部的【以众愿为冕】。1链时，【以众愿为冕】每层使暴击伤害额外提升15%。【以众愿为冕】上限提高至2层。2链时，【以众愿为冕】获得额外效果：每层使暴击提升20%。6链时【以众愿为冕】的上限提升至4层。",
+          "effects": [
+            {
+              "zone": "elementBonus",
+              "valueMode": "stack",
+              "value": 0,
+              "segments": [
+                {
+                  "upTo": null,
+                  "perStack": 15
+                }
+              ],
+              "skillScope": "all",
+              "skillNames": [],
+              "librarySkillNames": [],
+              "catalogIds": [],
+              "damageType": "",
+              "effectType": "",
+              "element": "导电",
+              "defenseKind": "",
+              "minStacks": 0,
+              "minResonance": 0,
+              "onlyCharacterIds": [],
+              "onlyCombatModes": [],
+              "effectKey": "augusta_crown_electro"
+            },
+            {
+              "zone": "generalCritDmg",
+              "valueMode": "stack",
+              "value": 0,
+              "segments": [
+                {
+                  "upTo": null,
+                  "perStack": 15
+                }
+              ],
+              "skillScope": "all",
+              "skillNames": [],
+              "librarySkillNames": [],
+              "catalogIds": [],
+              "damageType": "",
+              "effectType": "",
+              "element": "",
+              "defenseKind": "",
+              "minStacks": 0,
+              "minResonance": 1,
+              "onlyCharacterIds": [],
+              "onlyCombatModes": [],
+              "effectKey": "augusta_crown_crit_dmg"
+            },
+            {
+              "zone": "generalCritRate",
+              "valueMode": "stack",
+              "value": 0,
+              "segments": [
+                {
+                  "upTo": null,
+                  "perStack": 20
+                }
+              ],
+              "skillScope": "all",
+              "skillNames": [],
+              "librarySkillNames": [],
+              "catalogIds": [],
+              "damageType": "",
+              "effectType": "",
+              "element": "",
+              "defenseKind": "",
+              "minStacks": 0,
+              "minResonance": 2,
+              "onlyCharacterIds": [],
+              "onlyCombatModes": [],
+              "effectKey": "augusta_crown_crit_rate"
+            }
+          ],
+          "sourceTag": "characterTemplate"
+        }
+      ],
+      "teamBuffs": [
+        {
+          "templateKey": "augusta_outro_general_deep",
+          "category": "generalDeep",
+          "name": "奥古斯塔·延奏",
+          "mode": "fixed",
+          "value": 15,
+          "damageType": "",
+          "element": "",
+          "defenseKind": "",
+          "excludeSource": true,
+          "sourceTag": "characterTemplate",
+          "perStack": 0,
+          "maxStacks": 5,
+          "gameText": "下一位登场角色获得如下效果，持续14秒，若切换至其他角色则如下效果提前结束：\n·全伤害加深15%。\n·施放延奏技能时，让队伍中的奥古斯塔获得1层【威慑】与1层【以众愿为冕】。"
+        }
+      ],
+      "extraSkills": [],
+      "resonanceChains": {
+        "1": {
+          "enabledByDefault": false,
+          "notes": "内置：【以众愿为冕】上限→2，每层额外暴伤+15%（已写入本体同名 Buff，≥1链生效）；变奏可叠层 / 共鸣技能免疫打断不计入伤害。",
+          "personalBuffs": [],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {},
+          "gameText": "·【以众愿为冕】每层使暴击伤害额外提升15%。\n·【以众愿为冕】上限提高至2层。\n·奥古斯塔施放变奏技能·灼金的巡行时，也可以获得1层【以众愿为冕】。\n·共鸣技能·不败恒阳·迅击、共鸣技能·不败恒阳·跃空、共鸣技能·不败恒阳·落袭免疫打断。"
+        },
+        "2": {
+          "enabledByDefault": false,
+          "notes": "内置：【以众愿为冕】每层暴击+20%（本体同名 Buff，≥2链）+ 暴击超100%溢出转化暴伤（专属机制）。",
+          "personalBuffs": [],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {},
+          "gameText": "·【以众愿为冕】获得额外效果：每层使暴击提升20%。 \n·奥古斯塔暴击高于100%时，每多出1%暴击，奥古斯塔暴击伤害提升2%，最高可提升100%暴击伤害。"
+        },
+        "3": {
+          "enabledByDefault": false,
+          "notes": "内置：指定技能倍率提升+25%（烁雷后撤/旋切/升拳、落袭、赫日威临·烈阳/不朽者之肃）",
+          "personalBuffs": [
+            {
+              "templateKey": "augusta_c3_mult_boost",
+              "category": "composite",
+              "name": "奥古斯塔·3链",
+              "mode": "fixed",
+              "value": 0,
+              "perStack": 0,
+              "maxStacks": 99,
+              "damageType": "",
+              "element": "",
+              "defenseKind": "",
+              "sourceTag": "characterTemplate",
+              "effects": [
+                {
+                  "zone": "multBoost",
+                  "valueMode": "fixed",
+                  "value": 25,
+                  "segments": [
+                    {
+                      "upTo": null,
+                      "perStack": 0
+                    }
+                  ],
+                  "skillScope": "names",
+                  "skillNames": [
+                    "逐狩·重击·烁雷·后撤",
+                    "逐狩·闪避反击·烁雷·后撤",
+                    "逐狩·重击·烁雷·旋切",
+                    "逐狩·重击·烁雷·升拳",
+                    "曜阳如我·共鸣技能·不败恒阳·落袭",
+                    "至日的征伐·赫日威临·烈阳",
+                    "至日的征伐·赫日威临·不朽者之肃",
+                    "重击·烁雷·后撤",
+                    "闪避反击·烁雷·后撤",
+                    "重击·烁雷·旋切",
+                    "重击·烁雷·升拳",
+                    "共鸣技能·不败恒阳·落袭",
+                    "赫日威临·烈阳",
+                    "赫日威临·不朽者之肃"
+                  ],
+                  "librarySkillNames": [
+                    "逐狩·重击·烁雷·后撤",
+                    "逐狩·闪避反击·烁雷·后撤",
+                    "逐狩·重击·烁雷·旋切",
+                    "逐狩·重击·烁雷·升拳",
+                    "曜阳如我·共鸣技能·不败恒阳·落袭",
+                    "至日的征伐·赫日威临·烈阳",
+                    "至日的征伐·赫日威临·不朽者之肃",
+                    "重击·烁雷·后撤",
+                    "闪避反击·烁雷·后撤",
+                    "重击·烁雷·旋切",
+                    "重击·烁雷·升拳",
+                    "共鸣技能·不败恒阳·落袭",
+                    "赫日威临·烈阳",
+                    "赫日威临·不朽者之肃"
+                  ],
+                  "catalogIds": [],
+                  "damageType": "",
+                  "effectType": "",
+                  "element": "",
+                  "defenseKind": "",
+                  "minStacks": 0,
+                  "minResonance": 0,
+                  "onlyCharacterIds": [],
+                  "onlyCombatModes": [],
+                  "effectKey": "augusta_c3_mult_boost"
+                }
+              ],
+              "gameText": "以下技能的伤害倍率提升25%：\n·重击·烁雷·后撤、闪避反击·烁雷·后撤、重击·烁雷·旋切、重击·烁雷·升拳。\n·共鸣技能·不败恒阳·落袭。\n·共鸣解放·赫日威临·烈阳、共鸣解放·赫日威临·不朽者之肃。"
+            }
+          ],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {},
+          "gameText": "以下技能的伤害倍率提升25%：\n·重击·烁雷·后撤、闪避反击·烁雷·后撤、重击·烁雷·旋切、重击·烁雷·升拳。\n·共鸣技能·不败恒阳·落袭。\n·共鸣解放·赫日威临·烈阳、共鸣解放·赫日威临·不朽者之肃。"
+        },
+        "4": {
+          "enabledByDefault": false,
+          "notes": "内置：变奏后全队攻击+20%",
+          "personalBuffs": [],
+          "teamBuffs": [
+            {
+              "templateKey": "augusta_c4_team_atk",
+              "category": "generalAttack",
+              "name": "奥古斯塔·4链",
+              "mode": "fixed",
+              "value": 20,
+              "perStack": 0,
+              "maxStacks": 5,
+              "damageType": "",
+              "element": "",
+              "defenseKind": "",
+              "sourceTag": "characterTemplate",
+              "gameText": "施放变奏技能·灼金的巡行时，队伍中的角色的攻击提升20%，持续30秒。"
+            }
+          ],
+          "extraSkills": [],
+          "combatModes": {},
+          "gameText": "施放变奏技能·灼金的巡行时，队伍中的角色的攻击提升20%，持续30秒。"
+        },
+        "5": {
+          "enabledByDefault": false,
+          "notes": "固有·荣誉的加护护盾量+50%（非伤害 Buff，不计入计算器）。",
+          "personalBuffs": [],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {},
+          "gameText": "固有技能·荣誉的加护获得护盾量提升50%。"
+        },
+        "6": {
+          "enabledByDefault": false,
+          "notes": "内置：【以众愿为冕】上限→4 + 暴击超150%额外溢出转化暴伤（专属机制）；额外技能【怒霆】重击 200%（两次各100%合计）。",
+          "personalBuffs": [],
+          "teamBuffs": [],
+          "extraSkills": [
+            {
+              "templateKey": "augusta_c6_nuting",
+              "name": "怒霆",
+              "damageType": "重击",
+              "effectType": "聚爆",
+              "effectLayers": 13,
+              "effectBurstLayers": 0,
+              "effectCount": 1,
+              "baseMult": 200,
+              "fixedDamage": false,
+              "effectMultMode": "custom"
+            }
+          ],
+          "combatModes": {},
+          "gameText": "·【以众愿为冕】的上限提升至4层。\n·奥古斯塔暴击高于150%时，每多出1%暴击，奥古斯塔暴击伤害提升2%，最高可提升50%暴击伤害。\n·奥古斯塔施放重击·烁雷·旋切、重击·烁雷·升拳时，可以获得2层【以众愿为冕】，每1秒仅可通过于耀光中刻名的效果获得2层【以众愿为冕】。\n·施放重击·烁雷·旋切、重击·烁雷·升拳过程中，会在原地额外引发【怒霆】，造成两次奥古斯塔攻击100%的导电伤害，此次伤害为重击伤害。"
+        }
+      },
+      "combatModes": {},
+      "specialMechanics": {
+        "kind": "augustaCritConvert",
+        "stackTemplateKey": "augusta_special_stacks",
+        "stackPerCritRate": 20,
+        "stackCapAtBase": 1,
+        "stackCapAtChain2": 2,
+        "stackCapAtChain6": 4,
+        "convertRules": [
+          {
+            "minChain": 2,
+            "threshold": 100,
+            "ratio": 2,
+            "maxCritDmg": 100,
+            "label": "2链·超100%暴击"
+          },
+          {
+            "minChain": 6,
+            "threshold": 150,
+            "ratio": 2,
+            "maxCritDmg": 50,
+            "label": "6链·超150%暴击"
+          }
+        ]
+      }
+    }
+  ]
+}

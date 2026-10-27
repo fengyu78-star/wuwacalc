@@ -1,0 +1,677 @@
+{
+  "version": 1,
+  "kind": "shard",
+  "characterId": "1412",
+  "characterName": "西格莉卡",
+  "templates": [
+    {
+      "characterId": "1412",
+      "characterName": "西格莉卡",
+      "revision": 4,
+      "author": "",
+      "notes": "西格莉卡：固有2—自身共鸣效率大于125%时，每超过1%共鸣效率使声骸技能伤害加成+2%，上限50%；数值随共鸣效率面板实时同步。；固有2—共鸣效率>125%时每超过1%→声骸技能伤害加成+2%（上限50%，随面板同步）。【天赋】默认层数2，≥3链改为4；≥6链指定技能加深+15%/层、无视防御+7.5%/层。",
+      "personalBuffs": [
+        {
+          "templateKey": "sigrika_innate2_echo_bonus",
+          "category": "composite",
+          "name": "固有2",
+          "mode": "fixed",
+          "value": 0,
+          "perStack": 0,
+          "maxStacks": 99,
+          "damageType": "",
+          "element": "",
+          "defenseKind": "",
+          "effects": [
+            {
+              "zone": "generalDeep",
+              "valueMode": "fixed",
+              "value": 15,
+              "segments": [
+                {
+                  "upTo": null,
+                  "perStack": 0
+                }
+              ],
+              "skillScope": "names",
+              "skillNames": [
+                "在那浩瀚中·符语爆破",
+                "符语爆破"
+              ],
+              "librarySkillNames": [
+                "在那浩瀚中·符语爆破"
+              ],
+              "catalogIds": [],
+              "damageType": "声骸",
+              "effectType": "",
+              "element": "气动",
+              "defenseKind": "",
+              "minStacks": 0,
+              "minResonance": 0,
+              "onlyCharacterIds": [],
+              "onlyCombatModes": [],
+              "effectKey": ""
+            },
+            {
+              "zone": "generalDeep",
+              "valueMode": "fixed",
+              "value": 15,
+              "segments": [
+                {
+                  "upTo": null,
+                  "perStack": 0
+                }
+              ],
+              "skillScope": "names",
+              "skillNames": [
+                "在那浩瀚中·符语链刃",
+                "符语链刃"
+              ],
+              "librarySkillNames": [
+                "在那浩瀚中·符语链刃"
+              ],
+              "catalogIds": [],
+              "damageType": "声骸",
+              "effectType": "",
+              "element": "气动",
+              "defenseKind": "",
+              "minStacks": 0,
+              "minResonance": 0,
+              "onlyCharacterIds": [],
+              "onlyCombatModes": [],
+              "effectKey": ""
+            },
+            {
+              "zone": "generalDeep",
+              "valueMode": "fixed",
+              "value": 15,
+              "segments": [
+                {
+                  "upTo": null,
+                  "perStack": 0
+                }
+              ],
+              "skillScope": "names",
+              "skillNames": [
+                "在那浩瀚中·符语日灵",
+                "符语日灵"
+              ],
+              "librarySkillNames": [
+                "在那浩瀚中·符语日灵"
+              ],
+              "catalogIds": [],
+              "damageType": "声骸",
+              "effectType": "",
+              "element": "气动",
+              "defenseKind": "",
+              "minStacks": 0,
+              "minResonance": 0,
+              "onlyCharacterIds": [],
+              "onlyCombatModes": [],
+              "effectKey": ""
+            },
+            {
+              "zone": "typeBonus",
+              "valueMode": "fixed",
+              "value": 0,
+              "segments": [
+                {
+                  "upTo": null,
+                  "perStack": 0
+                }
+              ],
+              "skillScope": "all",
+              "skillNames": [],
+              "librarySkillNames": [],
+              "catalogIds": [],
+              "damageType": "声骸",
+              "effectType": "",
+              "element": "",
+              "defenseKind": "",
+              "minStacks": 0,
+              "minResonance": 0,
+              "onlyCharacterIds": [],
+              "onlyCombatModes": [],
+              "effectKey": "sigrika_innate2_er_echo_bonus"
+            }
+          ],
+          "sourceTag": "characterTemplate",
+          "gameText": "消耗【符文】时，若【日灵能量】少于30点，消耗全部【日灵能量】，每消耗10点【日灵能量】，使得本次符语爆破、符语链刃和符语日灵造成的伤害加深15%。\n自身共鸣效率大于125%时，每超过1%共鸣效率使声骸技能伤害加成+2%，上限50%（数值随共鸣效率面板实时同步）。"
+        },
+        {
+          "category": "composite",
+          "name": "日灵消耗",
+          "mode": "fixed",
+          "value": 0,
+          "perStack": 0,
+          "maxStacks": 99,
+          "damageType": "",
+          "element": "",
+          "defenseKind": "",
+          "convergenceVuln": "",
+          "effects": [
+            {
+              "zone": "multBoost",
+              "valueMode": "fixed",
+              "value": 50,
+              "segments": [
+                {
+                  "upTo": null,
+                  "perStack": 0
+                }
+              ],
+              "skillScope": "names",
+              "skillNames": [
+                "在那浩瀚中·符语爆破",
+                "符语爆破",
+                "在那浩瀚中·符语链刃",
+                "符语链刃",
+                "在那浩瀚中·符语日灵",
+                "符语日灵"
+              ],
+              "librarySkillNames": [
+                "在那浩瀚中·符语爆破",
+                "在那浩瀚中·符语链刃",
+                "在那浩瀚中·符语日灵"
+              ],
+              "catalogIds": [],
+              "damageType": "声骸",
+              "effectType": "",
+              "element": "气动",
+              "defenseKind": "",
+              "minStacks": 0,
+              "minResonance": 0,
+              "onlyCharacterIds": [],
+              "onlyCombatModes": [],
+              "effectKey": ""
+            }
+          ],
+          "sourceTag": "characterTemplate",
+          "templateKey": "tpl_ms0mzbp5_u3m0x",
+          "gameText": "消耗【符文】时，若【日灵能量】不少于30点，消耗30点【日灵能量】，本次符语爆破、符语链刃和符语日灵伤害倍率提升50%，并为自身叠加一层「天赋？」。\n消耗【符文】时，若【日灵能量】少于30点，消耗全部【日灵能量】，每消耗10点【日灵能量】，使得本次符语爆破、符语链刃和符语日灵造成的伤害加深15%。"
+        },
+        {
+          "category": "composite",
+          "name": "天赋？",
+          "mode": "stack",
+          "value": 0,
+          "perStack": 0,
+          "maxStacks": 99,
+          "damageType": "",
+          "element": "",
+          "defenseKind": "",
+          "convergenceVuln": "",
+          "effects": [
+            {
+              "zone": "generalDeep",
+              "valueMode": "stack",
+              "value": 0,
+              "segments": [
+                {
+                  "upTo": 4,
+                  "perStack": 30
+                }
+              ],
+              "skillScope": "names",
+              "skillNames": [
+                "在那浩瀚中·符语爆破",
+                "符语爆破",
+                "在那浩瀚中·符语链刃",
+                "符语链刃",
+                "在那浩瀚中·符语日灵",
+                "符语日灵",
+                "在那浩瀚中·共鸣回路·我即语义",
+                "共鸣回路·我即语义"
+              ],
+              "librarySkillNames": [
+                "在那浩瀚中·符语爆破",
+                "在那浩瀚中·符语链刃",
+                "在那浩瀚中·符语日灵",
+                "在那浩瀚中·共鸣回路·我即语义"
+              ],
+              "catalogIds": [],
+              "damageType": "声骸",
+              "effectType": "",
+              "element": "气动",
+              "defenseKind": "",
+              "minStacks": 0,
+              "minResonance": 0,
+              "onlyCharacterIds": [],
+              "onlyCombatModes": [],
+              "effectKey": ""
+            },
+            {
+              "id": "id_13044",
+              "zone": "generalDeep",
+              "valueMode": "stack",
+              "value": 0,
+              "segments": [
+                {
+                  "upTo": null,
+                  "perStack": 15
+                }
+              ],
+              "skillScope": "names",
+              "skillNames": [
+                "在那浩瀚中·符语爆破",
+                "符语爆破",
+                "在那浩瀚中·符语链刃",
+                "符语链刃",
+                "在那浩瀚中·符语日灵",
+                "符语日灵",
+                "在那浩瀚中·共鸣回路·我即语义",
+                "共鸣回路·我即语义"
+              ],
+              "librarySkillNames": [
+                "在那浩瀚中·符语爆破",
+                "在那浩瀚中·符语链刃",
+                "在那浩瀚中·符语日灵",
+                "在那浩瀚中·共鸣回路·我即语义"
+              ],
+              "catalogIds": [],
+              "damageType": "",
+              "effectType": "",
+              "element": "",
+              "defenseKind": "",
+              "minStacks": 0,
+              "minResonance": 6,
+              "onlyCharacterIds": [],
+              "onlyCombatModes": [],
+              "effectKey": "sigrika_talent_c6_deep"
+            },
+            {
+              "id": "id_13045",
+              "zone": "generalDefense",
+              "valueMode": "stack",
+              "value": 0,
+              "segments": [
+                {
+                  "upTo": null,
+                  "perStack": 7.5
+                }
+              ],
+              "skillScope": "names",
+              "skillNames": [
+                "在那浩瀚中·符语爆破",
+                "符语爆破",
+                "在那浩瀚中·符语链刃",
+                "符语链刃",
+                "在那浩瀚中·符语日灵",
+                "符语日灵",
+                "在那浩瀚中·共鸣回路·我即语义",
+                "共鸣回路·我即语义"
+              ],
+              "librarySkillNames": [
+                "在那浩瀚中·符语爆破",
+                "在那浩瀚中·符语链刃",
+                "在那浩瀚中·符语日灵",
+                "在那浩瀚中·共鸣回路·我即语义"
+              ],
+              "catalogIds": [],
+              "damageType": "",
+              "effectType": "",
+              "element": "",
+              "defenseKind": "ignore",
+              "minStacks": 0,
+              "minResonance": 6,
+              "onlyCharacterIds": [],
+              "onlyCombatModes": [],
+              "effectKey": "sigrika_talent_c6_def_ignore"
+            }
+          ],
+          "sourceTag": "characterTemplate",
+          "templateKey": "sigrika_talent",
+          "gameText": "0链\n「天赋？」可叠加的层数上限为2层，每层可以使得西格莉卡符语爆破、符语链刃、符语日灵和共鸣回路·我即语义伤害加深30%。\n\n3链\n「天赋？」层数上限改为4层且西格莉卡施放共鸣回路·我即语义后或切换至其他角色时不再结束该效果。\n西格莉卡处于非战斗状态时，每30秒会清除全部「天赋？」层数。\n\n6链\n「天赋？」获得下述额外效果：\n·每层使得西格莉卡符语爆破、符语链刃、符语日灵和共鸣回路·我即语义造成的伤害加深15%，至多使造成的伤害加深60%。\n·每层使得西格莉卡符语爆破、符语链刃、符语日灵和共鸣回路·我即语义造成的伤害无视目标7.5%防御，至多使造成的伤害无视目标30%防御。"
+        }
+      ],
+      "teamBuffs": [
+        {
+          "category": "composite",
+          "name": "回路1·语义的祝福",
+          "mode": "stack",
+          "value": 0,
+          "perStack": 0,
+          "maxStacks": 99,
+          "damageType": "",
+          "element": "",
+          "defenseKind": "",
+          "convergenceVuln": "",
+          "effects": [
+            {
+              "zone": "elementBonus",
+              "valueMode": "stack",
+              "value": 0,
+              "segments": [
+                {
+                  "upTo": 6,
+                  "perStack": 3
+                }
+              ],
+              "skillScope": "all",
+              "skillNames": [],
+              "librarySkillNames": [],
+              "catalogIds": [],
+              "damageType": "",
+              "effectType": "",
+              "element": "气动",
+              "defenseKind": "",
+              "minStacks": 0,
+              "minResonance": 0,
+              "onlyCharacterIds": [],
+              "onlyCombatModes": [],
+              "effectKey": ""
+            },
+            {
+              "zone": "typeBonus",
+              "valueMode": "stack",
+              "value": 0,
+              "segments": [
+                {
+                  "upTo": 6,
+                  "perStack": 3
+                }
+              ],
+              "skillScope": "all",
+              "skillNames": [],
+              "librarySkillNames": [],
+              "catalogIds": [],
+              "damageType": "声骸",
+              "effectType": "",
+              "element": "泛用",
+              "defenseKind": "",
+              "minStacks": 0,
+              "minResonance": 0,
+              "onlyCharacterIds": [],
+              "onlyCombatModes": [],
+              "effectKey": ""
+            },
+            {
+              "zone": "elementBonus",
+              "valueMode": "fixed",
+              "value": 30,
+              "segments": [
+                {
+                  "upTo": null,
+                  "perStack": 0
+                }
+              ],
+              "skillScope": "all",
+              "skillNames": [],
+              "librarySkillNames": [],
+              "catalogIds": [],
+              "damageType": "",
+              "effectType": "",
+              "element": "气动",
+              "defenseKind": "",
+              "minStacks": 6,
+              "minResonance": 0,
+              "onlyCharacterIds": ["1412"],
+              "onlyCombatModes": [],
+              "effectKey": ""
+            },
+            {
+              "zone": "typeBonus",
+              "valueMode": "fixed",
+              "value": 30,
+              "segments": [
+                {
+                  "upTo": null,
+                  "perStack": 0
+                }
+              ],
+              "skillScope": "all",
+              "skillNames": [],
+              "librarySkillNames": [],
+              "catalogIds": [],
+              "damageType": "声骸",
+              "effectType": "",
+              "element": "",
+              "defenseKind": "",
+              "minStacks": 6,
+              "minResonance": 0,
+              "onlyCharacterIds": ["1412"],
+              "onlyCombatModes": [],
+              "effectKey": ""
+            }
+          ],
+          "sourceTag": "characterTemplate",
+          "templateKey": "tpl_ms0mfe8f_rpndl",
+          "gameText": "队伍中的角色施放声骸技能时，西格莉卡为自身叠加一层语义的祝福，最多叠加6层，同名声骸仅可触发一次该效果。\n每层语义的祝福使队伍中登场角色气动伤害加成提升3%，声骸技能伤害加成提升3%。\n语义的祝福达到6层时，西格莉卡的气动伤害加成和声骸技能伤害加成额外提升30%。"
+        }
+      ],
+      "extraSkills": [],
+      "resonanceChains": {
+        "1": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [
+            {
+              "category": "composite",
+              "name": "1链",
+              "mode": "fixed",
+              "value": 0,
+              "perStack": 0,
+              "maxStacks": 99,
+              "damageType": "",
+              "element": "",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "effects": [
+                {
+                  "zone": "multBoost",
+                  "valueMode": "fixed",
+                  "value": 70,
+                  "segments": [
+                    {
+                      "upTo": null,
+                      "perStack": 0
+                    }
+                  ],
+                  "skillScope": "names",
+                  "skillNames": [
+                    "一、二、三……·普攻·明悟",
+                    "普攻·明悟",
+                    "一、二、三……·闪避反击·解读",
+                    "闪避反击·解读",
+                    "罗伊近身格斗技·大嘭嘭！",
+                    "大嘭嘭！",
+                    "罗伊近身格斗技·日灵帮帮忙",
+                    "日灵帮帮忙"
+                  ],
+                  "librarySkillNames": [
+                    "一、二、三……·普攻·明悟",
+                    "一、二、三……·闪避反击·解读",
+                    "罗伊近身格斗技·大嘭嘭！",
+                    "罗伊近身格斗技·日灵帮帮忙"
+                  ],
+                  "catalogIds": [],
+                  "damageType": "声骸",
+                  "effectType": "",
+                  "element": "气动",
+                  "defenseKind": "",
+                  "minStacks": 0,
+                  "minResonance": 0,
+                  "onlyCharacterIds": [],
+                  "onlyCombatModes": [],
+                  "effectKey": ""
+                }
+              ],
+              "sourceTag": "characterTemplate",
+              "templateKey": "tpl_ms0n1huw_ose5g",
+              "gameText": "普攻·明悟、闪避反击·解读、共鸣技能·大嘭嘭！和共鸣技能·日灵帮帮忙伤害倍率提升70%。\n西格莉卡施放普攻·明悟、共鸣技能·大嘭嘭！和共鸣技能·日灵帮帮忙期间，免疫打断。\n凝语层数上限改为3层，西格莉卡施放延奏技能在这一瞬间，可额外获得1层凝语。"
+            }
+          ],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {}
+        },
+        "2": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [
+            {
+              "category": "composite",
+              "name": "2链",
+              "mode": "fixed",
+              "value": 0,
+              "perStack": 0,
+              "maxStacks": 99,
+              "damageType": "",
+              "element": "",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "effects": [
+                {
+                  "zone": "multBoost",
+                  "valueMode": "fixed",
+                  "value": 120,
+                  "segments": [
+                    {
+                      "upTo": null,
+                      "perStack": 0
+                    }
+                  ],
+                  "skillScope": "names",
+                  "skillNames": [
+                    "在那浩瀚中·共鸣回路·我即语义",
+                    "共鸣回路·我即语义"
+                  ],
+                  "librarySkillNames": [
+                    "在那浩瀚中·共鸣回路·我即语义"
+                  ],
+                  "catalogIds": [],
+                  "damageType": "声骸",
+                  "effectType": "",
+                  "element": "气动",
+                  "defenseKind": "",
+                  "minStacks": 0,
+                  "minResonance": 0,
+                  "onlyCharacterIds": [],
+                  "onlyCombatModes": [],
+                  "effectKey": ""
+                }
+              ],
+              "sourceTag": "characterTemplate",
+              "templateKey": "tpl_ms0n22f9_u1ie8",
+              "gameText": "共鸣回路·我即语义伤害倍率提升120%。\n西格莉卡处于非战斗状态大于4秒时，获得专注，每4秒只生效1次。"
+            }
+          ],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {}
+        },
+        "3": {
+          "enabledByDefault": false,
+          "notes": "内置：【天赋】默认层数 2→4（选≥3链时自动切换）",
+          "personalBuffs": [],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {}
+        },
+        "4": {
+          "enabledByDefault": false,
+          "notes": "内置：全队【4链】泛用攻击+20%（固定）",
+          "personalBuffs": [],
+          "teamBuffs": [
+            {
+              "category": "generalAttack",
+              "name": "4链",
+              "mode": "fixed",
+              "value": 20,
+              "perStack": 0,
+              "maxStacks": 5,
+              "damageType": "",
+              "element": "",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "sourceTag": "characterTemplate",
+              "templateKey": "sigrika_c4_team_attack",
+              "gameText": "队伍中的角色施放声骸技能时，使队伍中的角色攻击提升20%，持续20秒。"
+            }
+          ],
+          "extraSkills": [],
+          "combatModes": {}
+        },
+        "5": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [
+            {
+              "category": "composite",
+              "name": "5链",
+              "mode": "fixed",
+              "value": 0,
+              "perStack": 0,
+              "maxStacks": 99,
+              "damageType": "",
+              "element": "",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "effects": [
+                {
+                  "zone": "multBoost",
+                  "valueMode": "fixed",
+                  "value": 30,
+                  "segments": [
+                    {
+                      "upTo": null,
+                      "perStack": 0
+                    }
+                  ],
+                  "skillScope": "names",
+                  "skillNames": [
+                    "如那期望般！·技能"
+                  ],
+                  "librarySkillNames": [
+                    "如那期望般！·技能"
+                  ],
+                  "catalogIds": [],
+                  "damageType": "声骸",
+                  "effectType": "",
+                  "element": "气动",
+                  "defenseKind": "",
+                  "minStacks": 0,
+                  "minResonance": 0,
+                  "onlyCharacterIds": [],
+                  "onlyCombatModes": [],
+                  "effectKey": ""
+                }
+              ],
+              "sourceTag": "characterTemplate",
+              "templateKey": "tpl_ms0n4op2_eil1i",
+              "gameText": "共鸣解放如那期望般！伤害倍率提升30%。"
+            }
+          ],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {}
+        },
+        "6": {
+          "enabledByDefault": false,
+          "notes": "内置：【天赋】指定技能每层伤害加深+15%、无视防御+7.5%（与本体同一Buff，需≥6链；技能范围跟随其它指定技能）",
+          "personalBuffs": [
+            {
+              "category": "generalVulnerability",
+              "name": "6链",
+              "mode": "fixed",
+              "value": 30,
+              "perStack": 0,
+              "maxStacks": 5,
+              "damageType": "",
+              "element": "",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "sourceTag": "characterTemplate",
+              "templateKey": "tpl_ms0n5wqs_mz9td",
+              "gameText": "目标受到西格莉卡的伤害提升30%。"
+            }
+          ],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {}
+        }
+      },
+      "combatModes": {}
+    }
+  ]
+}

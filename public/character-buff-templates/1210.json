@@ -1,0 +1,545 @@
+{
+  "version": 1,
+  "kind": "shard",
+  "characterId": "1210",
+  "characterName": "爱弥斯",
+  "templates": [
+    {
+      "characterId": "1210",
+      "characterName": "爱弥斯",
+      "revision": 2,
+      "author": "",
+      "notes": "爱弥斯：0链分支攻击12%/暴击率8%；固有指定二段蓄力加深+200%；固有2随震谐/聚爆切换；全队【爱弥斯·延奏】泛用加深+10%、达妮娅/琳奈再+10%；1/2/3/4/6链见共鸣链。",
+      "personalBuffs": [
+        {
+          "templateKey": "amis_innate2_crit_dmg",
+          "category": "generalCritDmg",
+          "name": "固有2",
+          "mode": "stack",
+          "value": 0,
+          "perStack": 20,
+          "maxStacks": 3,
+          "damageType": "",
+          "element": "",
+          "defenseKind": "",
+          "sourceTag": "characterTemplate",
+          "gameText": "处于共鸣模态·震谐时，队伍中的角色附加【震谐·偏移】或造成震谐伤害时，爱弥斯暴击伤害提升20%，最多可叠加3层。该效果每名角色仅可触发1次。\n达到3层时，共鸣解放星辉破界而来·终结伤害加深25%。\n角色编入队伍或切换模态时，重置该效果。\n\n处于共鸣模态·聚爆时，队伍中的角色附加【聚爆效应】时，爱弥斯暴击伤害提升30%，最多可叠加2层。该效果每名角色仅可触发1次。\n达到2层时，共鸣解放星辉破界而来·终结伤害加深25%。\n角色编入队伍或切换模态时，重置该效果。",
+          "clampStacks": true
+        },
+        {
+          "templateKey": "amis_innate2_finale_deep",
+          "category": "composite",
+          "name": "固有2",
+          "mode": "fixed",
+          "value": 0,
+          "perStack": 0,
+          "maxStacks": 99,
+          "damageType": "",
+          "element": "",
+          "defenseKind": "",
+          "sourceTag": "characterTemplate",
+          "effects": [
+            {
+              "zone": "generalDeep",
+              "valueMode": "fixed",
+              "value": 25,
+              "segments": [
+                {
+                  "upTo": null,
+                  "perStack": 0
+                }
+              ],
+              "skillScope": "names",
+              "skillNames": [
+                "星辉破界而来·终结",
+                "飞至启明之时·星辉破界而来·终结"
+              ],
+              "librarySkillNames": [
+                "飞至启明之时·星辉破界而来·终结"
+              ],
+              "catalogIds": [],
+              "damageType": "",
+              "effectType": "",
+              "element": "",
+              "defenseKind": "",
+              "minStacks": 0,
+              "minResonance": 0,
+              "onlyCharacterIds": [],
+              "onlyCombatModes": [],
+              "effectKey": ""
+            }
+          ],
+          "gameText": "处于共鸣模态·震谐时，队伍中的角色附加【震谐·偏移】或造成震谐伤害时，爱弥斯暴击伤害提升20%，最多可叠加3层。该效果每名角色仅可触发1次。\n达到3层时，共鸣解放星辉破界而来·终结伤害加深25%。\n角色编入队伍或切换模态时，重置该效果。\n\n处于共鸣模态·聚爆时，队伍中的角色附加【聚爆效应】时，爱弥斯暴击伤害提升30%，最多可叠加2层。该效果每名角色仅可触发1次。\n达到2层时，共鸣解放星辉破界而来·终结伤害加深25%。\n角色编入队伍或切换模态时，重置该效果。"
+        },
+        {
+          "templateKey": "amis_innate_heavy_deep",
+          "category": "composite",
+          "name": "爱弥斯·固有·二段蓄力加深",
+          "mode": "fixed",
+          "value": 0,
+          "perStack": 0,
+          "maxStacks": 99,
+          "damageType": "",
+          "element": "",
+          "defenseKind": "",
+          "sourceTag": "characterTemplate",
+          "effects": [
+            {
+              "zone": "generalDeep",
+              "valueMode": "fixed",
+              "value": 200,
+              "segments": [
+                {
+                  "upTo": null,
+                  "perStack": 0
+                }
+              ],
+              "skillScope": "names",
+              "skillNames": [
+                "重击·爱弥斯·二段蓄力",
+                "重击·机兵·二段蓄力",
+                "校准无垠·重击·爱弥斯·二段蓄力",
+                "共赴长航·重击·机兵·二段蓄力"
+              ],
+              "librarySkillNames": [
+                "校准无垠·重击·爱弥斯·二段蓄力",
+                "共赴长航·重击·机兵·二段蓄力"
+              ],
+              "catalogIds": [],
+              "damageType": "",
+              "effectType": "",
+              "element": "",
+              "defenseKind": "",
+              "minStacks": 0,
+              "minResonance": 0,
+              "onlyCharacterIds": [],
+              "onlyCombatModes": [],
+              "effectKey": ""
+            }
+          ],
+          "gameText": "处于即刻响应状态时，重击·爱弥斯、重击·机兵造成的伤害加深200%。"
+        }
+      ],
+      "teamBuffs": [
+        {
+          "templateKey": "amis_outro_general_deep",
+          "category": "composite",
+          "name": "爱弥斯·延奏",
+          "mode": "fixed",
+          "excludeSource": true,
+          "effects": [
+            {
+              "id": "id_2941",
+              "zone": "generalDeep",
+              "valueMode": "fixed",
+              "value": 10,
+              "segments": [
+                {
+                  "upTo": null,
+                  "perStack": 0
+                }
+              ],
+              "skillScope": "all",
+              "skillNames": [],
+              "librarySkillNames": [],
+              "catalogIds": [],
+              "damageType": "",
+              "effectType": "",
+              "element": "",
+              "defenseKind": "",
+              "minStacks": 0,
+              "minResonance": 0,
+              "onlyCharacterIds": [],
+              "onlyCombatModes": [],
+              "effectKey": ""
+            },
+            {
+              "id": "id_2942",
+              "zone": "generalDeep",
+              "valueMode": "fixed",
+              "value": 10,
+              "segments": [
+                {
+                  "upTo": null,
+                  "perStack": 0
+                }
+              ],
+              "skillScope": "all",
+              "skillNames": [],
+              "librarySkillNames": [],
+              "catalogIds": [],
+              "damageType": "",
+              "effectType": "",
+              "element": "",
+              "defenseKind": "",
+              "minStacks": 0,
+              "minResonance": 0,
+              "onlyCharacterIds": [
+                "1211",
+                "1509"
+              ],
+              "onlyCombatModes": [],
+              "effectKey": "amis_outro_dania_linnei_extra"
+            }
+          ],
+          "sourceTag": "characterTemplate",
+          "value": 0,
+          "perStack": 0,
+          "maxStacks": 1,
+          "gameText": "施放该技能时，根据爱弥斯所处的共鸣模态触发不同的效果：\n·处于共鸣模态·震谐时，队伍中除爱弥斯以外的角色全伤害加深10%，持续20秒。角色附加【震谐·偏移】时，该角色的该全伤害加深效果提升至20%。\n·处于共鸣模态·聚爆时，队伍中除爱弥斯以外的角色全伤害加深10%，持续20秒。角色附加【聚爆效应】时，该角色的该全伤害加深效果提升至20%。\n施放该技能时，重置该技能效果。"
+        }
+      ],
+      "extraSkills": [],
+      "resonanceChains": {
+        "1": {
+          "enabledByDefault": false,
+          "notes": "内置：指定二段蓄力暴伤+300%",
+          "personalBuffs": [
+            {
+              "templateKey": "amis_c1_heavy_crit_dmg",
+              "category": "composite",
+              "name": "爱弥斯·1链·二段蓄力暴伤",
+              "mode": "fixed",
+              "value": 0,
+              "perStack": 0,
+              "maxStacks": 99,
+              "damageType": "",
+              "element": "",
+              "defenseKind": "",
+              "sourceTag": "characterTemplate",
+              "gameText": "重击·爱弥斯/机兵·二段蓄力的暴击伤害提升300%。",
+              "effects": [
+                {
+                  "zone": "generalCritDmg",
+                  "valueMode": "fixed",
+                  "value": 300,
+                  "segments": [
+                    {
+                      "upTo": null,
+                      "perStack": 0
+                    }
+                  ],
+                  "skillScope": "names",
+                  "skillNames": [
+                    "重击·爱弥斯·二段蓄力",
+                    "重击·机兵·二段蓄力",
+                    "校准无垠·重击·爱弥斯·二段蓄力",
+                    "共赴长航·重击·机兵·二段蓄力"
+                  ],
+                  "librarySkillNames": [
+                    "校准无垠·重击·爱弥斯·二段蓄力",
+                    "共赴长航·重击·机兵·二段蓄力"
+                  ],
+                  "catalogIds": [],
+                  "damageType": "",
+                  "effectType": "",
+                  "element": "",
+                  "defenseKind": "",
+                  "minStacks": 0,
+                  "minResonance": 0,
+                  "onlyCharacterIds": [],
+                  "onlyCombatModes": [],
+                  "effectKey": ""
+                }
+              ]
+            }
+          ],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {
+            "shock": {
+              "notes": "",
+              "personalBuffs": [],
+              "teamBuffs": [],
+              "extraSkills": []
+            },
+            "burst": {
+              "notes": "",
+              "personalBuffs": [],
+              "teamBuffs": [],
+              "extraSkills": []
+            }
+          },
+          "gameText": "重击·爱弥斯/机兵·二段蓄力的暴击伤害提升300%。"
+        },
+        "2": {
+          "enabledByDefault": false,
+          "notes": "内置：光翼共奏倍率+100%",
+          "personalBuffs": [
+            {
+              "templateKey": "amis_c2_wing_mult_boost",
+              "category": "composite",
+              "name": "爱弥斯·2链·光翼共奏倍率提升",
+              "mode": "fixed",
+              "value": 0,
+              "perStack": 0,
+              "maxStacks": 99,
+              "damageType": "",
+              "element": "",
+              "defenseKind": "",
+              "sourceTag": "characterTemplate",
+              "gameText": "光翼共奏·降临/登台的伤害倍率提升100%。",
+              "effects": [
+                {
+                  "zone": "multBoost",
+                  "valueMode": "fixed",
+                  "value": 100,
+                  "segments": [
+                    {
+                      "upTo": null,
+                      "perStack": 0
+                    }
+                  ],
+                  "skillScope": "names",
+                  "skillNames": [
+                    "光翼共奏·降临",
+                    "光翼共奏·登台",
+                    "为寂静赋形·光翼共奏·降临",
+                    "为寂静赋形·光翼共奏·登台"
+                  ],
+                  "librarySkillNames": [
+                    "为寂静赋形·光翼共奏·降临",
+                    "为寂静赋形·光翼共奏·登台"
+                  ],
+                  "catalogIds": [],
+                  "damageType": "",
+                  "effectType": "",
+                  "element": "",
+                  "defenseKind": "",
+                  "minStacks": 0,
+                  "minResonance": 0,
+                  "onlyCharacterIds": [],
+                  "onlyCombatModes": [],
+                  "effectKey": ""
+                }
+              ]
+            }
+          ],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {
+            "shock": {
+              "notes": "",
+              "personalBuffs": [],
+              "teamBuffs": [],
+              "extraSkills": []
+            },
+            "burst": {
+              "notes": "",
+              "personalBuffs": [],
+              "teamBuffs": [],
+              "extraSkills": []
+            }
+          },
+          "gameText": "光翼共奏·降临/登台的伤害倍率提升100%。"
+        },
+        "3": {
+          "enabledByDefault": false,
+          "notes": "内置：终结+100%/过载+40%",
+          "personalBuffs": [
+            {
+              "templateKey": "amis_c3_star_mult_boost",
+              "category": "composite",
+              "name": "爱弥斯·3链·星辉破界而来倍率提升",
+              "mode": "fixed",
+              "value": 0,
+              "perStack": 0,
+              "maxStacks": 99,
+              "damageType": "",
+              "element": "",
+              "defenseKind": "",
+              "sourceTag": "characterTemplate",
+              "gameText": "星辉破界而来·终结的伤害倍率提升100%；星辉破界而来·过载的伤害倍率提升40%。",
+              "effects": [
+                {
+                  "zone": "multBoost",
+                  "valueMode": "fixed",
+                  "value": 100,
+                  "segments": [
+                    {
+                      "upTo": null,
+                      "perStack": 0
+                    }
+                  ],
+                  "skillScope": "names",
+                  "skillNames": [
+                    "星辉破界而来·终结",
+                    "飞至启明之时·星辉破界而来·终结"
+                  ],
+                  "librarySkillNames": [
+                    "飞至启明之时·星辉破界而来·终结"
+                  ],
+                  "catalogIds": [],
+                  "damageType": "",
+                  "effectType": "",
+                  "element": "",
+                  "defenseKind": "",
+                  "minStacks": 0,
+                  "minResonance": 0,
+                  "onlyCharacterIds": [],
+                  "onlyCombatModes": [],
+                  "effectKey": ""
+                },
+                {
+                  "zone": "multBoost",
+                  "valueMode": "fixed",
+                  "value": 40,
+                  "segments": [
+                    {
+                      "upTo": null,
+                      "perStack": 0
+                    }
+                  ],
+                  "skillScope": "names",
+                  "skillNames": [
+                    "星辉破界而来·过载",
+                    "飞至启明之时·星辉破界而来·过载"
+                  ],
+                  "librarySkillNames": [
+                    "飞至启明之时·星辉破界而来·过载"
+                  ],
+                  "catalogIds": [],
+                  "damageType": "",
+                  "effectType": "",
+                  "element": "",
+                  "defenseKind": "",
+                  "minStacks": 0,
+                  "minResonance": 0,
+                  "onlyCharacterIds": [],
+                  "onlyCombatModes": [],
+                  "effectKey": ""
+                }
+              ]
+            }
+          ],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {
+            "shock": {
+              "notes": "",
+              "personalBuffs": [],
+              "teamBuffs": [],
+              "extraSkills": []
+            },
+            "burst": {
+              "notes": "",
+              "personalBuffs": [],
+              "teamBuffs": [],
+              "extraSkills": []
+            }
+          },
+          "gameText": "星辉破界而来·终结的伤害倍率提升100%；星辉破界而来·过载的伤害倍率提升40%。"
+        },
+        "4": {
+          "enabledByDefault": false,
+          "notes": "内置：全队泛用增伤+20%",
+          "personalBuffs": [],
+          "teamBuffs": [
+            {
+              "templateKey": "amis_c4_team_general_bonus",
+              "category": "generalBonus",
+              "name": "爱弥斯·4链·全队泛用增伤",
+              "mode": "fixed",
+              "value": 20,
+              "perStack": 0,
+              "maxStacks": 99,
+              "damageType": "",
+              "element": "",
+              "defenseKind": "",
+              "sourceTag": "characterTemplate",
+              "gameText": "队伍中的角色伤害加成提升20%。"
+            }
+          ],
+          "extraSkills": [],
+          "combatModes": {
+            "shock": {
+              "notes": "",
+              "personalBuffs": [],
+              "teamBuffs": [],
+              "extraSkills": []
+            },
+            "burst": {
+              "notes": "",
+              "personalBuffs": [],
+              "teamBuffs": [],
+              "extraSkills": []
+            }
+          },
+          "gameText": "队伍中的角色伤害加成提升20%。"
+        },
+        "5": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {
+            "shock": {
+              "notes": "",
+              "personalBuffs": [],
+              "teamBuffs": [],
+              "extraSkills": []
+            },
+            "burst": {
+              "notes": "",
+              "personalBuffs": [],
+              "teamBuffs": [],
+              "extraSkills": []
+            }
+          }
+        },
+        "6": {
+          "enabledByDefault": false,
+          "notes": "内置：共鸣解放易伤+40%",
+          "personalBuffs": [
+            {
+              "templateKey": "amis_c6_lib_type_vuln",
+              "category": "typeVulnerability",
+              "name": "爱弥斯·6链·共鸣解放易伤",
+              "mode": "fixed",
+              "value": 40,
+              "perStack": 0,
+              "maxStacks": 99,
+              "damageType": "共鸣解放",
+              "element": "",
+              "defenseKind": "",
+              "sourceTag": "characterTemplate",
+              "gameText": "共鸣解放伤害易伤提升40%。"
+            }
+          ],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {
+            "shock": {
+              "notes": "",
+              "personalBuffs": [],
+              "teamBuffs": [],
+              "extraSkills": []
+            },
+            "burst": {
+              "notes": "",
+              "personalBuffs": [],
+              "teamBuffs": [],
+              "extraSkills": []
+            }
+          },
+          "gameText": "共鸣解放伤害易伤提升40%。"
+        }
+      },
+      "combatModes": {
+        "shock": {
+          "notes": "",
+          "personalBuffs": [],
+          "teamBuffs": [],
+          "extraSkills": []
+        },
+        "burst": {
+          "notes": "",
+          "personalBuffs": [],
+          "teamBuffs": [],
+          "extraSkills": []
+        }
+      }
+    }
+  ]
+}

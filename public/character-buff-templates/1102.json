@@ -1,0 +1,307 @@
+{
+  "version": 1,
+  "kind": "shard",
+  "characterId": "1102",
+  "characterName": "散华",
+  "templates": [
+    {
+      "characterId": "1102",
+      "characterName": "散华",
+      "revision": 2,
+      "author": "",
+      "notes": "散华：全队【散华·延奏】普攻加深+38%（固定；对散华本人不生效）。",
+      "personalBuffs": [
+        {
+          "category": "typeBonus",
+          "name": "固有1",
+          "mode": "fixed",
+          "value": 20,
+          "perStack": 0,
+          "maxStacks": 5,
+          "damageType": "共鸣技能",
+          "element": "",
+          "defenseKind": "",
+          "convergenceVuln": "",
+          "sourceTag": "characterTemplate",
+          "templateKey": "tpl_mryxhwmm_jlumw",
+          "gameText": "施放变奏技能时，散华的共鸣技能伤害提升20%，持续8秒。"
+        },
+        {
+          "category": "composite",
+          "name": "固有2·冰绽",
+          "mode": "fixed",
+          "value": 0,
+          "perStack": 0,
+          "maxStacks": 99,
+          "damageType": "",
+          "element": "",
+          "defenseKind": "",
+          "convergenceVuln": "",
+          "effects": [
+            {
+              "zone": "generalBonus",
+              "valueMode": "fixed",
+              "value": 20,
+              "segments": [
+                {
+                  "upTo": null,
+                  "perStack": 0
+                }
+              ],
+              "skillScope": "names",
+              "skillNames": [
+                "无明心音·冰川爆炸",
+                "冰川爆炸",
+                "无明心音·冰棱爆炸",
+                "冰棱爆炸",
+                "无明心音·冰棘爆炸",
+                "冰棘爆炸"
+              ],
+              "librarySkillNames": [
+                "无明心音·冰川爆炸",
+                "无明心音·冰棱爆炸",
+                "无明心音·冰棘爆炸"
+              ],
+              "catalogIds": [],
+              "damageType": "共鸣技能",
+              "effectType": "",
+              "element": "冷凝",
+              "defenseKind": "",
+              "minStacks": 0,
+              "minResonance": 0,
+              "onlyCharacterIds": [],
+              "onlyCombatModes": [],
+              "effectKey": ""
+            }
+          ],
+          "sourceTag": "characterTemplate",
+          "templateKey": "tpl_mryxib5b_8jb7t",
+          "gameText": "施放第5段普攻后，散华共鸣回路冰绽造成的伤害提升20%，持续8秒。"
+        }
+      ],
+      "teamBuffs": [
+        {
+          "templateKey": "sanhua_outro_normal_deep",
+          "category": "typeDeep",
+          "name": "散华·延奏",
+          "mode": "fixed",
+          "value": 38,
+          "damageType": "普攻",
+          "element": "",
+          "defenseKind": "",
+          "excludeSource": true,
+          "sourceTag": "characterTemplate",
+          "perStack": 0,
+          "maxStacks": 5,
+          "gameText": "下一位登场角色普攻伤害加深38%，效果持续14秒，若切换至其他角色则该效果提前结束。"
+        }
+      ],
+      "extraSkills": [],
+      "resonanceChains": {
+        "1": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [
+            {
+              "category": "generalCritRate",
+              "name": "1链",
+              "mode": "fixed",
+              "value": 15,
+              "perStack": 0,
+              "maxStacks": 5,
+              "damageType": "",
+              "element": "",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "sourceTag": "characterTemplate",
+              "templateKey": "tpl_mryxmolq_v2wps",
+              "gameText": "施放第5段普攻时，散华自身暴击提升15%，持续10秒。"
+            }
+          ],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {},
+          "gameText": "施放第5段普攻时，散华自身暴击提升15%，持续10秒。"
+        },
+        "2": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {},
+          "gameText": "重击爆裂消耗的耐力降低10点，施放共鸣技能朔雪永冻时散华抗打断能力提升，持续5秒。"
+        },
+        "3": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [
+            {
+              "category": "generalBonus",
+              "name": "3链·对低于70%的目标",
+              "mode": "fixed",
+              "value": 35,
+              "perStack": 0,
+              "maxStacks": 5,
+              "damageType": "",
+              "element": "",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "sourceTag": "characterTemplate",
+              "templateKey": "tpl_mryxncjd_qbiki",
+              "gameText": "散华攻击生命低于70%的目标时，造成的伤害提升35%。"
+            }
+          ],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {},
+          "gameText": "散华攻击生命低于70%的目标时，造成的伤害提升35%。"
+        },
+        "4": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [
+            {
+              "category": "composite",
+              "name": "4链·大招后5s内",
+              "mode": "fixed",
+              "value": 0,
+              "perStack": 0,
+              "maxStacks": 99,
+              "damageType": "",
+              "element": "",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "effects": [
+                {
+                  "zone": "generalBonus",
+                  "valueMode": "fixed",
+                  "value": 120,
+                  "segments": [
+                    {
+                      "upTo": null,
+                      "perStack": 0
+                    }
+                  ],
+                  "skillScope": "names",
+                  "skillNames": [
+                    "无明心音·爆裂",
+                    "爆裂"
+                  ],
+                  "librarySkillNames": [
+                    "无明心音·爆裂"
+                  ],
+                  "catalogIds": [],
+                  "damageType": "重击",
+                  "effectType": "",
+                  "element": "冷凝",
+                  "defenseKind": "",
+                  "minStacks": 0,
+                  "minResonance": 0,
+                  "onlyCharacterIds": [],
+                  "onlyCombatModes": [],
+                  "effectKey": ""
+                }
+              ],
+              "sourceTag": "characterTemplate",
+              "templateKey": "tpl_mryxnxm5_3ou0v",
+              "gameText": "施放共鸣解放焦瞑冻土时，回复10点共鸣能量。\n并且5秒内的下次重击爆裂伤害提升120%。"
+            }
+          ],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {},
+          "gameText": "施放共鸣解放焦瞑冻土时，回复10点共鸣能量。\n并且5秒内的下次重击爆裂伤害提升120%。"
+        },
+        "5": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [
+            {
+              "category": "composite",
+              "name": "5链",
+              "mode": "fixed",
+              "value": 0,
+              "perStack": 0,
+              "maxStacks": 99,
+              "damageType": "",
+              "element": "",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "effects": [
+                {
+                  "zone": "generalCritDmg",
+                  "valueMode": "fixed",
+                  "value": 100,
+                  "segments": [
+                    {
+                      "upTo": null,
+                      "perStack": 0
+                    }
+                  ],
+                  "skillScope": "names",
+                  "skillNames": [
+                    "无明心音·冰川爆炸",
+                    "冰川爆炸",
+                    "无明心音·冰棱爆炸",
+                    "冰棱爆炸",
+                    "无明心音·冰棘爆炸",
+                    "冰棘爆炸"
+                  ],
+                  "librarySkillNames": [
+                    "无明心音·冰川爆炸",
+                    "无明心音·冰棱爆炸",
+                    "无明心音·冰棘爆炸"
+                  ],
+                  "catalogIds": [],
+                  "damageType": "共鸣技能",
+                  "effectType": "",
+                  "element": "冷凝",
+                  "defenseKind": "",
+                  "minStacks": 0,
+                  "minResonance": 0,
+                  "onlyCharacterIds": [],
+                  "onlyCombatModes": [],
+                  "effectKey": ""
+                }
+              ],
+              "sourceTag": "characterTemplate",
+              "templateKey": "tpl_mryxoxk7_virz6",
+              "gameText": "共鸣回路冰绽的暴击伤害提升100%。\n即使没有成功引爆，【冰棘】、【冰棱】、【冰川】也会在消失时直接爆炸。"
+            }
+          ],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {},
+          "gameText": "共鸣回路冰绽的暴击伤害提升100%。\n即使没有成功引爆，【冰棘】、【冰棱】、【冰川】也会在消失时直接爆炸。"
+        },
+        "6": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [],
+          "teamBuffs": [
+            {
+              "category": "generalAttack",
+              "name": "6链·散华",
+              "mode": "stack",
+              "value": 0,
+              "perStack": 10,
+              "maxStacks": 2,
+              "damageType": "",
+              "element": "",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "sourceTag": "characterTemplate",
+              "templateKey": "tpl_mryxpr58_buu2s",
+              "gameText": "引爆【冰棱】或【冰川】后，队伍中的角色攻击提升10%，持续20秒，可叠加2层。"
+            }
+          ],
+          "extraSkills": [],
+          "combatModes": {},
+          "gameText": "引爆【冰棱】或【冰川】后，队伍中的角色攻击提升10%，持续20秒，可叠加2层。"
+        }
+      },
+      "combatModes": {}
+    }
+  ]
+}

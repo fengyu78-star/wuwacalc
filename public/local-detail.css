@@ -1,0 +1,150 @@
+/* Detail workspace: shared configuration material, two functional views. */
+#workspaceLayout.phase-calc .calc-page{--calc-editor-right-gap:0px;gap:16px;color:#cfdae7;padding-right:132px;box-sizing:border-box}
+.phase-calc .calc-main-col{gap:16px}
+.phase-calc .calc-summary-bar.summary-bar,.phase-calc .calc-timeline-panel,.phase-calc .calc-buff-panel,.phase-calc .local-calc-editor,.phase-calc .calc-cycle-config,.phase-calc .calc-member-dock-panel{
+ border:1px solid transparent!important;background:radial-gradient(ellipse at 12% 35%,#a4bded18,transparent 42%),linear-gradient(115deg,#172334,#101824) padding-box,linear-gradient(125deg,#6ea9ef88,#9f8ee833 40%,#b79deca6) border-box!important;box-shadow:inset 0 1px #edf4ff12,0 8px 24px #07102022!important;border-radius:11px
+}
+.phase-calc .calc-summary-bar.summary-bar{flex-wrap:wrap;overflow:visible;min-height:76px}
+.phase-calc .summary-group-switch{display:none!important}
+.phase-calc .summary-group-stats{flex:1;flex-wrap:wrap}
+.phase-calc .summary-group-monster{margin-left:auto}
+.phase-calc .summary-item.total{background:transparent!important;border-left:3px solid #d2b878;border-radius:10px 0 0 10px;min-width:160px}
+.phase-calc .summary-item-value{font-variant-numeric:tabular-nums}
+.phase-calc .summary-item.total .summary-item-value{font-size:26px;color:#ead392}
+.phase-calc .summary-item.dps .summary-item-value{font-size:20px;color:#a3d5e7}
+.phase-calc .local-calc-members{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;order:-1}
+.phase-calc .local-calc-members .local-team-card{position:relative;isolation:isolate;overflow:hidden;display:flex;align-items:center;gap:10px;width:100%;height:82px;padding:14px 18px;text-align:left;background:#142030;border:1px solid #9ab3cd35;border-radius:7px;color:#d7e2ed;cursor:pointer}
+.phase-calc .local-calc-members .local-team-card.active{background:linear-gradient(115deg,#31362f,#182535);border-color:#d2bb7880;box-shadow:inset 3px 0 #d2bb78}
+.phase-calc .local-team-avatar{width:48px;height:48px;border-radius:6px;border-color:#c7dceb36}
+.phase-calc .local-team-avatar .char-avatar-card{width:100%;height:100%;border:0;background:none}
+.phase-calc .local-team-avatar .char-avatar-card img{width:100%;height:100%;object-fit:cover}
+.phase-calc .local-calc-tabs button{font-family:inherit;font-size:14px;font-weight:600}
+.phase-calc .local-team-copy{gap:7px}
+.phase-calc .local-team-copy strong{font-size:15px;letter-spacing:.03em}
+.phase-calc .local-team-copy small{font-size:11px;color:#9caabc}
+.phase-calc .local-calc-tabs{display:flex;gap:8px;border-bottom:1px solid #a5bedd25;padding-bottom:10px}
+.phase-calc .local-calc-tabs button{padding:11px 22px;border-radius:7px;border:1px solid #9bb5d32e;background:#142030;color:#aabbd0;font:600 14px inherit;cursor:pointer}
+.phase-calc .local-calc-tabs button[aria-selected=true]{background:linear-gradient(120deg,#d9c386,#bca265);color:#151c28;border-color:#dcc78b;box-shadow:0 3px 12px #0003}
+.phase-calc .local-calc-tabs button:focus-visible,.phase-calc .local-calc-members button:focus-visible{outline:2px solid #a6ccff;outline-offset:3px}
+.phase-calc .local-calc-editor{overflow:hidden}
+.phase-calc .local-calc-editor>summary{display:flex;align-items:center;gap:12px;padding:15px 20px;cursor:pointer;color:#d5e1ee;font-weight:600;list-style:none}
+.phase-calc .local-calc-editor>summary::before{content:'›';font-size:20px;color:#d3bd83;transition:transform .15s}
+.phase-calc .local-calc-editor[open]>summary::before{transform:rotate(90deg)}
+.phase-calc .local-calc-editor>summary small{font-size:12px;font-weight:400;color:#92a6bd}
+.phase-calc .local-calc-editor-count{margin-left:auto;font:12px ui-monospace,monospace;color:#9ab5ce}
+.phase-calc .local-calc-editor .calc-rotation-panel{padding:0 20px 20px;border:0;background:transparent;box-shadow:none;width:100%;max-width:100%}
+.phase-calc .local-calc-editor .calc-main-title-row{display:none}
+.phase-calc .local-calc-editor #rotationBody{display:block!important}
+.phase-calc .local-calc-editor .calc-main-hint{font-size:12px;line-height:1.7;color:#9aacc2;margin:0 0 12px}
+.phase-calc .calc-axis-meta-block{padding:0;background:transparent;border:0;box-shadow:none;margin-bottom:12px}
+.phase-calc .catalog-section-header,.phase-calc .rotation-list{width:100%!important;max-width:100%!important}
+.phase-calc .calc-timeline-panel,.phase-calc .calc-buff-panel{padding:20px;width:100%;max-width:100%;box-sizing:border-box}
+.phase-calc .calc-main-title{font-size:18px;color:#edf2f9;letter-spacing:.02em}
+.phase-calc .calc-main-title{margin:0!important;padding:0!important;border:0!important;line-height:1.4}
+.phase-calc .calc-timeline-panel .phase-layer-overview{padding:10px 14px}
+.phase-calc .calc-buff-panel .matrix-toolbar{display:flex;flex-direction:row;justify-content:space-between;align-items:center;gap:12px;padding:12px 14px;background:#1b2a3c;border:0;border-bottom:1px solid #a3bfda22;border-radius:0;min-height:0}
+.phase-calc .calc-buff-panel .matrix-toolbar-left{display:flex;align-items:center;gap:12px}
+.phase-calc .calc-buff-panel .phase-batch-buff-panel{background:transparent;border:0;padding:0}
+.phase-calc .calc-buff-panel .buff-matrix-hint{padding:0 14px;font-size:12px;color:#96acc3}
+.phase-calc .calc-buff-panel .matrix-header-group,.phase-calc .calc-buff-panel .matrix-header-buff,.phase-calc .calc-buff-panel .matrix-fixed-corner{background:#213347!important;color:#bcd0e3;border-color:#8eacc630}
+.phase-calc .calc-buff-panel .matrix-skill-row{background:#172638!important;color:#cbdbe9}
+.phase-calc .calc-buff-panel .phase-batch-matrix td{background:#122131;border-color:#8eacc627}
+.phase-calc .calc-main-title-row{margin-bottom:8px}
+.phase-calc .calc-main-title .hint{font-size:13px;color:#9cafc4}
+.phase-calc .calc-timeline-panel>.hint,.phase-calc .calc-buff-panel>.hint{font-size:12px;line-height:1.7;color:#9cafc4}
+.phase-calc .timeline{margin-top:18px}
+.phase-calc .calc-timeline-panel .phase-card,.phase-calc .phase-buff-section{border:1px solid #9bb9d52f;background:#111d2c;border-radius:9px;overflow:hidden;margin-bottom:16px;box-shadow:0 4px 14px #0002}
+.phase-calc .phase-head,.phase-calc .phase-buff-section-head{background:linear-gradient(105deg,#25374a,#192536)!important;border-bottom:1px solid #acc8e325;padding:12px 14px}
+.phase-calc .phase-name{font-weight:600;color:#e1eaf5}
+.phase-calc .phase-body-inner{padding:0}
+.phase-calc .phase-buff-summary-bar{background:#1a293b!important;border-color:#a5c1db19}
+.phase-calc .phase-layer-overview{background:#142232!important;border-color:#90b3d42a!important}
+.phase-calc .phase-skill-list{background:#111d2c!important;border:0!important;box-shadow:none!important}
+.phase-calc .phase-skill-list-head{padding:12px 14px;border-bottom:1px solid #abc5df20}
+.phase-calc .timeline-head{background:#1c2c3e!important;color:#9fb5cb;font-size:12px}
+.phase-calc .phase-skill-row{background:#142131!important;border-color:#abc5df17!important;min-height:54px}
+.phase-calc .phase-skill-list>.skill-group:nth-of-type(even) .phase-skill-row{background:#182738!important}
+.phase-calc .phase-skill-list>.skill-group .phase-skill-row:hover{background:#23364a!important}
+.phase-calc .phase-footer{background:#19293b!important;border-color:#a6bed524}
+.phase-calc .phase-subtotal-value{color:#e3ca8d;font:600 20px ui-monospace,monospace}
+.phase-calc .calc-page input:not([type=checkbox]),.phase-calc .calc-page select{background:#101b29;border:1px solid #91b0cc38;border-radius:5px;color:#d5e1ef}
+.phase-calc .calc-page input:focus,.phase-calc .calc-page select:focus{outline:1px solid #9cc8ee;border-color:#9cc8ee}
+.phase-calc .calc-page .btn,.phase-calc .calc-page .toolbar-btn{background:#203044;border-color:#91b0cc38;color:#cbd8e8}
+.phase-calc .calc-page .btn:hover,.phase-calc .calc-page .toolbar-btn:hover{background:#2b4159;border-color:#9cc8ee80}
+.phase-calc .calc-page .row-damage{font-variant-numeric:tabular-nums;color:#e7cb88}
+.phase-calc .calc-member-dock{right:18px}
+.phase-calc .calc-member-dock-panel{width:108px}
+.phase-calc .calc-buff-panel .phase-buff-sections{margin-top:18px}
+.phase-calc .calc-buff-panel .phase-buff-section{padding:0}
+.phase-calc .calc-buff-panel .buff-matrix-fixed{background:#172638!important}
+.phase-calc .calc-buff-panel .buff-matrix-scroll{background:#111d2c!important}
+@media(max-width:1000px){#workspaceLayout.phase-calc .calc-page{padding-right:0}.phase-calc .local-team-card{padding:10px!important}.phase-calc .local-team-avatar{width:38px;height:38px}.phase-calc .local-team-copy small b{margin-left:0}.phase-calc .local-team-index{display:none}.phase-calc .calc-member-dock-panel{width:94px}.phase-calc .summary-group-monster{margin-left:0}}
+@media(prefers-reduced-motion:reduce){.phase-calc .local-calc-editor>summary::before{transition:none}}
+
+/* Compact two-step workflow; settings and rounds stay together. */
+.phase-calc .local-calc-members{grid-template-columns:repeat(3,minmax(0,1fr)) minmax(140px,.65fr);gap:10px}
+.phase-calc .local-calc-members .local-team-card{padding:10px 12px;height:76px}
+.phase-calc .local-special-card .local-team-avatar{font-size:25px;color:#b9a4ef;background:linear-gradient(145deg,#393453,#172335);border-color:#aa91e54d}
+.phase-calc .local-calc-tabs{display:grid;grid-template-columns:minmax(180px,1fr) 36px minmax(180px,1fr);align-items:center;gap:10px;padding:0;border:0;max-width:680px;width:100%;margin:0}
+.phase-calc .local-calc-tabs button{font-size:16px;padding:14px 18px;border:1px solid #9fbada55;box-shadow:inset 0 1px #e1eeff12;background:#192a3e;color:#c7daed}
+.phase-calc .local-calc-tabs button[aria-selected=true]{background:linear-gradient(110deg,#dac58d,#bfa36a);border-color:#e6d39d;color:#18202a;box-shadow:0 3px 14px #0004}
+.phase-calc .local-step-arrow{font-size:25px;text-align:center;color:#d5bd82}
+.phase-calc .calc-summary-bar.summary-bar{min-height:52px;border-radius:8px;box-shadow:none!important}
+.phase-calc .summary-item.total{min-width:140px;padding:10px 14px}
+.phase-calc .summary-item.total .summary-item-value{font-size:22px}
+.phase-calc .summary-item.dps .summary-item-value{font-size:17px}
+.phase-calc .calc-cycle-config{margin:0;padding:8px 12px;border-radius:7px;box-shadow:none!important}
+.phase-calc .cycle-config-body{display:flex;align-items:center;gap:12px;flex-wrap:wrap;padding:0!important}
+.phase-calc .cycle-editing-hint,.phase-calc .cycle-hint{display:none!important}
+.phase-calc .calc-cycle-config .cycle-tabs{margin:0;flex:1}
+.phase-calc .calc-cycle-config .cycle-round-tab{min-height:38px;padding:7px 12px}
+.phase-calc .calc-timeline-panel,.phase-calc .calc-buff-panel{padding:16px;border-radius:10px}
+.phase-calc .calc-main-title-row{margin:0 0 12px!important}
+.phase-calc .local-phase-tools{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:12px}
+.phase-calc .local-phase-tools label{display:flex;align-items:center;gap:8px;font-size:12px;color:#a9bfd5}
+.phase-calc .local-phase-tools input{max-width:170px;padding:8px 10px}
+.phase-calc .local-phase-tools .primary{background:#cdb77e!important;color:#18212d!important}
+.phase-calc .local-phase-tools.is-selecting{padding:12px;background:#253449;border:1px solid #bbcff13d;border-radius:7px}
+.phase-calc .local-phase-meta{margin-left:auto;display:flex;align-items:center;gap:16px;font-size:12px;color:#98afc7}
+.phase-calc .local-phase-meta b{font:600 17px ui-monospace,monospace;color:#e4cc8e}
+.phase-calc .local-pick-row{display:grid;grid-template-columns:28px minmax(0,1fr);align-items:center;background:#1a2b3f}
+.phase-calc .local-pick-row>input{margin:0 auto;accent-color:#d4bd7f;width:17px;height:17px;cursor:pointer}
+.phase-calc .local-pick-row:has(>input:checked){box-shadow:inset 3px 0 #d4bd7f;background:#35392f}
+.phase-calc .local-pick-row>.skill-group{min-width:0}
+.phase-calc .phase-buff-summary-bar,.phase-calc .phase-skill-list-hint,.phase-calc .buff-matrix-hint,.phase-calc .phase-hint{display:none!important}
+.phase-calc .timeline{margin-top:8px}
+.phase-calc .phase-head{padding:9px 12px}
+.phase-calc .phase-footer-subtotal{display:none}
+.phase-calc .phase-footer{padding:6px 12px}
+.phase-calc .calc-timeline-panel>.add-phase-btn,.phase-calc .calc-buff-panel>.add-phase-btn{display:none}
+.phase-calc .calc-timeline-panel .phase-card:only-child{border-color:#a3bfd51c;box-shadow:none}
+.phase-calc .calc-timeline-panel .phase-card:only-child>.phase-head{background:#172638!important;border-color:#a3bfd51c}
+.phase-calc .calc-timeline-panel .phase-card:only-child .phase-lock{display:none}
+.phase-calc .calc-buff-panel .phase-buff-sections{margin-top:8px}
+.phase-calc .calc-buff-panel .matrix-toolbar{padding:9px 12px}
+@media(max-width:1050px){.phase-calc .local-calc-members{grid-template-columns:repeat(3,minmax(0,1fr)) 140px}.phase-calc .local-calc-members .local-team-index{display:none}.phase-calc .local-team-avatar{width:34px;height:34px}.phase-calc .local-calc-members .local-team-card{gap:7px}.phase-calc .local-team-copy strong{font-size:13px}.phase-calc .local-team-copy small b{font-size:11px}}
+
+/* Keep skill identity, multiplier and damage type together. */
+.phase-calc .phase-skill-row .name-cell{flex:0 1 230px;min-width:150px}
+.phase-calc .phase-skill-row .mult-count-cell{flex:0 0 132px;width:132px}
+.phase-calc .timeline-head>span:first-child{flex:0 1 calc(230px + 1.6rem + var(--ui-space-2));min-width:calc(150px + 1.6rem + var(--ui-space-2))}
+.phase-calc .phase-skill-row .dmg-type-select{width:96px}
+.phase-calc .local-phase-destination{display:flex;align-items:center;gap:10px;flex-wrap:wrap;flex-basis:100%;padding-top:10px;border-top:1px solid #bbcff12b}
+.phase-calc .local-phase-destination select{min-width:140px;padding:7px 10px}
+.phase-calc .matrix-cell.stack.matrix-batch-selected{background:#365c72!important;box-shadow:inset 0 0 0 2px #8cd6ec;color:#e9fbff!important}
+@media(max-width:850px){.phase-calc .phase-skill-row .name-cell{flex-basis:160px}.phase-calc .timeline-head>span:first-child{flex-basis:calc(160px + 1.6rem + var(--ui-space-2))}}
+.phase-calc .local-phase-actions{display:flex;gap:6px;margin-left:auto;flex-shrink:0}
+.phase-calc .local-phase-actions .toolbar-btn{padding:5px 9px;font-size:12px}
+.phase-calc .local-phase-actions+.local-phase-meta{margin-left:12px}
+.phase-calc .phase-body>.local-phase-tools{margin:10px 12px}
+/* Connected numbered steps; original buttons retain their tab behavior. */
+.phase-calc .local-calc-tabs{gap:18px!important;align-items:center;border:0!important;padding:8px 0 16px!important}
+.phase-calc .local-calc-tabs button{display:flex!important;align-items:center;flex:1;min-width:0;padding:0!important;background:none!important;border:0!important;box-shadow:none!important;overflow:visible!important;border-radius:0!important;gap:0!important}
+.phase-calc .local-step-number{position:relative;z-index:1;display:grid;place-items:center;width:58px;height:58px;flex:0 0 58px;border-radius:50%;border:1px solid #84adc46b;background:linear-gradient(145deg,#30475c,#172637);color:#bad7e9;font:600 25px ui-monospace,monospace;box-shadow:inset 0 2px #dcefff18,0 5px 14px #02081060}
+.phase-calc .local-step-label{position:relative;flex:1;display:flex;align-items:center;justify-content:center;min-height:48px;margin-left:12px;padding:8px 15px;box-sizing:border-box;border:1px solid #809fb54d;border-radius:6px;background:linear-gradient(110deg,#203247,#142232);font-size:16px;letter-spacing:.025em;color:#c9dcea}
+.phase-calc .local-step-label:before{content:'';position:absolute;left:-13px;top:50%;width:12px;height:2px;background:#85adc47a}
+.phase-calc .local-calc-tabs button[aria-selected=true] .local-step-number{background:linear-gradient(135deg,#ead89b,#b89b58);border-color:#f1dc98;color:#17212c;box-shadow:0 0 0 4px #d9c18510,0 5px 16px #0005}
+.phase-calc .local-calc-tabs button[aria-selected=true] .local-step-label{background:linear-gradient(105deg,#3c3b2c,#222e37);border-color:#d4bd7877;color:#f1dfa9;box-shadow:inset 0 1px #ecdaa324}
+.phase-calc .local-calc-tabs button[aria-selected=true] .local-step-label:before{background:#d4bd78}
+.phase-calc .local-step-arrow{font-size:21px!important;color:#879eb2!important;margin:0!important}
+@media(max-width:650px){.phase-calc .local-calc-tabs{gap:8px!important}.phase-calc .local-step-number{width:38px;height:38px;flex-basis:38px;font-size:19px}.phase-calc .local-step-label{font-size:12px;padding:6px;min-height:42px;margin-left:7px}.phase-calc .local-step-label:before{left:-8px;width:7px}.phase-calc .local-step-arrow{display:none}}

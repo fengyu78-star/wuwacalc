@@ -1,0 +1,591 @@
+/**
+ * 鳴算屋 · 融合式底纹（styles-decor.css）
+ *
+ * ① 全页背景纹理（光斑 + 噪点，唯一 fixed 层）
+ * ②③ 卡片浮雕边框 + 四角 L 角标（随卡片滚动，纯 CSS，无 SVG 花纹）
+ * ④ 标题环绕点缀（小符号，无线段硬线）
+ * ⑤ 导航底光带（极薄渐变）
+ */
+
+/* —— 主题 token —— */
+:root,
+[data-theme='classic'] {
+  --decor-noise-opacity: 0.14;
+  --decor-glow-a: rgba(232, 197, 71, 0.1);
+  --decor-glow-b: rgba(232, 197, 71, 0.07);
+  --decor-glow-c: rgba(201, 169, 110, 0.08);
+  --decor-glow-d: rgba(180, 140, 60, 0.06);
+  --decor-color: var(--accent-primary, var(--accent));
+  --decor-emboss-line: rgba(232, 197, 71, 0.08);
+  --decor-emboss-outline: rgba(232, 197, 71, 0.05);
+  --decor-emboss-inset-hi: rgba(232, 197, 71, 0.015);
+  --decor-emboss-inset-lo: rgba(0, 0, 0, 0.18);
+  --decor-emboss-outer: rgba(0, 0, 0, 0.22);
+  --decor-corner: rgba(232, 197, 71, 0.12);
+  --decor-corner-size: 14px;
+  --decor-title-opacity: 0.28;
+}
+
+[data-theme='deep-blue'] {
+  --decor-noise-opacity: 0.12;
+  --decor-glow-a: rgba(0, 160, 220, 0.12);
+  --decor-glow-b: rgba(0, 180, 220, 0.08);
+  --decor-glow-c: rgba(126, 184, 212, 0.1);
+  --decor-glow-d: rgba(80, 140, 180, 0.07);
+  --decor-color: var(--accent-primary, var(--accent));
+  --decor-emboss-line: rgba(0, 180, 220, 0.08);
+  --decor-emboss-outline: rgba(0, 180, 220, 0.05);
+  --decor-emboss-inset-hi: rgba(0, 180, 220, 0.015);
+  --decor-emboss-inset-lo: rgba(0, 0, 0, 0.22);
+  --decor-emboss-outer: rgba(0, 0, 0, 0.28);
+  --decor-corner: rgba(0, 180, 220, 0.12);
+  --decor-title-opacity: 0.26;
+}
+
+[data-theme='ink-wash'] {
+  --decor-noise-opacity: 0.28;
+  --decor-glow-a: rgba(194, 58, 43, 0.1);
+  --decor-glow-b: rgba(26, 26, 26, 0.12);
+  --decor-glow-c: rgba(90, 70, 50, 0.09);
+  --decor-glow-d: rgba(194, 58, 43, 0.07);
+  --decor-color: var(--accent-primary, var(--accent));
+  --decor-emboss-line: rgba(185, 68, 50, 0.08);
+  --decor-emboss-outline: rgba(185, 68, 50, 0.06);
+  --decor-emboss-inset-hi: rgba(255, 255, 255, 0.35);
+  --decor-emboss-inset-lo: rgba(0, 0, 0, 0.05);
+  --decor-emboss-outer: rgba(20, 20, 20, 0.1);
+  --decor-corner: rgba(185, 68, 50, 0.12);
+  --decor-title-opacity: 0.3;
+}
+
+[data-theme='peach-blaze'] {
+  --decor-noise-opacity: 0.13;
+  --decor-glow-a: rgba(242, 139, 181, 0.1);
+  --decor-glow-b: rgba(251, 191, 36, 0.08);
+  --decor-glow-c: rgba(242, 139, 181, 0.07);
+  --decor-glow-d: rgba(255, 180, 200, 0.06);
+  --decor-color: var(--accent-primary, var(--accent));
+  --decor-emboss-line: rgba(242, 139, 181, 0.08);
+  --decor-emboss-outline: rgba(242, 139, 181, 0.05);
+  --decor-emboss-inset-hi: rgba(242, 139, 181, 0.015);
+  --decor-emboss-inset-lo: rgba(0, 0, 0, 0.2);
+  --decor-emboss-outer: rgba(0, 0, 0, 0.25);
+  --decor-corner: rgba(242, 139, 181, 0.12);
+  --decor-title-opacity: 0.26;
+}
+
+/* ================================================================== */
+/* ① 全页背景纹理（固定叠层）                                          */
+/* ================================================================== */
+
+.site-decor {
+  position: absolute;
+  inset: 0;
+  min-height: 100vh;
+  z-index: 40;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.site-decor-glow {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 62vh 46vh at 14% 6%, var(--decor-glow-a), transparent 72%),
+    radial-gradient(ellipse 55vh 42vh at 82% 20%, var(--decor-glow-c), transparent 70%),
+    radial-gradient(ellipse 58vh 44vh at 24% 38%, var(--decor-glow-d), transparent 72%),
+    radial-gradient(ellipse 56vh 42vh at 78% 56%, var(--decor-glow-b), transparent 70%),
+    radial-gradient(ellipse 60vh 44vh at 30% 76%, var(--decor-glow-c), transparent 72%),
+    radial-gradient(ellipse 55vh 42vh at 86% 92%, var(--decor-glow-b), transparent 70%);
+}
+
+.site-decor-noise {
+  position: absolute;
+  inset: 0;
+  opacity: var(--decor-noise-opacity);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 256'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 180px 180px;
+  mix-blend-mode: overlay;
+}
+
+[data-theme='ink-wash'] .site-decor-glow {
+  background:
+    radial-gradient(ellipse 62vh 46vh at 10% 5%, var(--decor-glow-a), transparent 70%),
+    radial-gradient(ellipse 55vh 42vh at 72% 22%, var(--decor-glow-c), transparent 66%),
+    radial-gradient(ellipse 58vh 44vh at 28% 42%, var(--decor-glow-d), transparent 70%),
+    radial-gradient(ellipse 54vh 42vh at 80% 62%, var(--decor-glow-b), transparent 68%),
+    radial-gradient(ellipse 58vh 42vh at 24% 82%, var(--decor-glow-c), transparent 70%),
+    radial-gradient(ellipse 55vh 44vh at 90% 95%, var(--decor-glow-b), transparent 66%),
+    linear-gradient(
+      165deg,
+      rgba(90, 70, 45, 0.035) 0%,
+      transparent 42%,
+      rgba(20, 20, 20, 0.03) 100%
+    );
+}
+
+[data-theme='ink-wash'] .site-decor-noise {
+  mix-blend-mode: soft-light;
+  background-size: 140px 140px;
+  filter: contrast(1.35) brightness(0.92);
+}
+
+[data-theme='ink-wash'] .site-decor-noise::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  opacity: 0.45;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 128 128'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='1.6' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 96px 96px;
+  mix-blend-mode: multiply;
+  pointer-events: none;
+}
+
+[data-theme='deep-blue'] .site-decor-noise {
+  mix-blend-mode: soft-light;
+  background-size: 200px 200px;
+}
+
+[data-theme='peach-blaze'] .site-decor-noise {
+  mix-blend-mode: soft-light;
+  background-size: 170px 170px;
+}
+
+.theme-switcher {
+  z-index: 10050;
+}
+
+body.intro-open .site-decor,
+body.wc-auth-open .site-decor {
+  opacity: 0 !important;
+}
+
+/* ================================================================== */
+/* ②③ 浮雕边框装饰系统（无 SVG 花纹）                                   */
+/* ================================================================== */
+
+.embossed {
+  position: relative;
+  box-shadow:
+    0 0 0 1px var(--decor-emboss-line),
+    inset 1px 1px 0 var(--decor-emboss-inset-hi),
+    inset -1px -1px 0 var(--decor-emboss-inset-lo),
+    var(--card-shadow);
+  transition:
+    box-shadow 0.3s ease,
+    outline-color 0.3s ease,
+    outline-offset 0.3s ease,
+    transform 0.3s ease;
+}
+
+/* 大卡：额外外框 outline */
+.embossed.large {
+  outline: 1px solid var(--decor-emboss-outline);
+  outline-offset: 3px;
+}
+
+/* 中卡及以上：四角 L 角标（::before 多层短线，无额外 DOM） */
+.embossed:not(.plain)::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  z-index: 2;
+  background:
+    /* TL */
+    linear-gradient(var(--decor-corner), var(--decor-corner)) top left / var(--decor-corner-size) 1.5px no-repeat,
+    linear-gradient(var(--decor-corner), var(--decor-corner)) top left / 1.5px var(--decor-corner-size) no-repeat,
+    /* TR */
+    linear-gradient(var(--decor-corner), var(--decor-corner)) top right / var(--decor-corner-size) 1.5px no-repeat,
+    linear-gradient(var(--decor-corner), var(--decor-corner)) top right / 1.5px var(--decor-corner-size) no-repeat,
+    /* BL */
+    linear-gradient(var(--decor-corner), var(--decor-corner)) bottom left / var(--decor-corner-size) 1.5px no-repeat,
+    linear-gradient(var(--decor-corner), var(--decor-corner)) bottom left / 1.5px var(--decor-corner-size) no-repeat,
+    /* BR */
+    linear-gradient(var(--decor-corner), var(--decor-corner)) bottom right / var(--decor-corner-size) 1.5px no-repeat,
+    linear-gradient(var(--decor-corner), var(--decor-corner)) bottom right / 1.5px var(--decor-corner-size) no-repeat;
+}
+
+/* 小卡：仅浮雕阴影，无角标 */
+.embossed.plain::before {
+  content: none;
+  display: none;
+}
+
+.embossed:hover {
+  box-shadow:
+    0 0 0 1px color-mix(in srgb, var(--decor-color) 12%, transparent),
+    inset 1px 1px 0 color-mix(in srgb, var(--decor-emboss-inset-hi) 140%, transparent),
+    inset -1px -1px 0 color-mix(in srgb, var(--decor-emboss-inset-lo) 120%, transparent),
+    var(--card-shadow-hover);
+  transform: translateY(-1px);
+}
+
+.embossed.large:hover {
+  outline-color: color-mix(in srgb, var(--decor-color) 12%, transparent);
+  outline-offset: 4px;
+}
+
+/* 默认给常见卡片挂浮雕（可用类名覆盖） */
+.up-card,
+.export-page .export-section,
+.export-page .export-card-preview,
+.export-page .export-cfg-compare {
+  /* 保证伪元素定位基准 */
+  position: relative;
+}
+
+.pdb-card {
+  position: relative;
+}
+
+/* 公开库列表卡默认浮雕（无角标） */
+.pdb-list .pdb-card,
+.pdb-list .data-card {
+  box-shadow:
+    0 0 0 1px var(--decor-emboss-line),
+    inset 1px 1px 0 var(--decor-emboss-inset-hi),
+    inset -1px -1px 0 var(--decor-emboss-inset-lo),
+    var(--card-shadow);
+  transition: box-shadow 0.3s ease, transform 0.3s ease, border-color 0.25s ease, background 0.25s ease;
+}
+
+.pdb-list .pdb-card:hover,
+.pdb-list .data-card:hover {
+  box-shadow:
+    0 0 0 1px color-mix(in srgb, var(--decor-color) 12%, transparent),
+    inset 1px 1px 0 color-mix(in srgb, var(--decor-emboss-inset-hi) 140%, transparent),
+    inset -1px -1px 0 color-mix(in srgb, var(--decor-emboss-inset-lo) 120%, transparent),
+    var(--card-shadow-hover);
+  transform: translateY(-1px);
+}
+
+.up-layout,
+.up-col-main,
+.up-col-side {
+  gap: 26px;
+}
+
+/* 表头底光带（替代硬线感） */
+.export-page .export-cfg-table thead th,
+.export-page .echo-sub-sim-colhead {
+  box-shadow: inset 0 -1px 0 transparent;
+  background-image: linear-gradient(
+    180deg,
+    color-mix(in srgb, var(--decor-color) 3%, transparent),
+    transparent
+  );
+  background-size: 100% 1px;
+  background-position: bottom;
+  background-repeat: no-repeat;
+}
+
+/* ================================================================== */
+/* ④ 标题环绕点缀（小符号 + 极短淡出短线，无线段硬线）                  */
+/* ================================================================== */
+
+.up-page-title,
+.pdb-title,
+.export-page .export-page-title,
+.export-page .export-section-title,
+.export-page h3.export-section-title,
+.export-page .export-region-title,
+.export-page .export-cfg-compare > h4,
+.up-card-title {
+  position: relative;
+}
+
+/* 左侧装饰符号 */
+.up-page-title::before,
+.pdb-title::before,
+.export-page .export-page-title::before,
+.export-page .export-section-title::before,
+.export-page h3.export-section-title::before,
+.export-page .export-region-title::before,
+.export-page .export-cfg-compare > h4::before,
+.up-card-title::before {
+  content: '◈';
+  display: inline-block;
+  margin-right: 0.42em;
+  font-size: 0.55em;
+  font-weight: 400;
+  vertical-align: 0.18em;
+  color: var(--decor-color);
+  opacity: var(--decor-title-opacity);
+  letter-spacing: 0;
+}
+
+/* 页面级大标题：符号旁跟一段极短渐变淡出线 */
+.up-page-title::after,
+.pdb-title::after,
+.export-page .export-page-title::after {
+  content: '';
+  display: inline-block;
+  width: 18px;
+  height: 1px;
+  margin-left: 0.35em;
+  vertical-align: middle;
+  background: linear-gradient(
+    90deg,
+    color-mix(in srgb, var(--decor-color) 45%, transparent),
+    transparent
+  );
+  opacity: 0.55;
+}
+
+/* 导出页四大区标题角标：加粗符号 + 更清晰的标题色 + 更实的底部分隔 */
+.export-page .export-region-title {
+  display: inline-flex;
+  align-items: center;
+  gap: 0;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--text-primary, var(--export-text, var(--text)));
+}
+
+.export-page .export-region-title::before {
+  content: '';
+  display: inline-block;
+  width: 9px;
+  height: 9px;
+  margin-right: 0.55em;
+  flex: 0 0 auto;
+  transform: rotate(45deg);
+  vertical-align: middle;
+  font-size: 0;
+  font-weight: 400;
+  letter-spacing: 0;
+  opacity: 1;
+  color: transparent;
+  background: var(--decor-color);
+  box-shadow:
+    0 0 0 2px color-mix(in srgb, var(--decor-color) 28%, transparent),
+    0 0 10px color-mix(in srgb, var(--decor-color) 35%, transparent);
+}
+
+.export-page .export-region-head {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-bottom: 10px;
+  margin-bottom: 14px;
+  border-bottom-color: transparent;
+  background-image: linear-gradient(
+    90deg,
+    color-mix(in srgb, var(--decor-color) 70%, transparent) 0%,
+    color-mix(in srgb, var(--decor-color) 28%, transparent) 22%,
+    color-mix(in srgb, var(--decor-color) 8%, transparent) 48%,
+    transparent 78%
+  );
+  background-size: 100% 2px;
+  background-position: bottom left;
+  background-repeat: no-repeat;
+}
+
+[data-theme='ink-wash'] .export-page .export-region-title::before {
+  background: var(--accent);
+  box-shadow:
+    0 0 0 2px color-mix(in srgb, var(--accent) 22%, transparent),
+    0 1px 0 color-mix(in srgb, #fff 55%, transparent);
+}
+
+[data-theme='ink-wash'] .export-page .export-region-head {
+  background-image: linear-gradient(
+    90deg,
+    color-mix(in srgb, var(--accent) 75%, transparent) 0%,
+    color-mix(in srgb, var(--accent) 28%, transparent) 24%,
+    color-mix(in srgb, var(--accent) 8%, transparent) 52%,
+    transparent 80%
+  );
+}
+
+/* ================================================================== */
+/* ⑤ 导航底通透光带（替代硬分隔线：向下晕开的柔光）                    */
+/* ================================================================== */
+
+/* 允许光带向下溢出；motif 自身已有 mask，不依赖 topbar overflow 裁切 */
+.app-topbar {
+  overflow: visible;
+  border-bottom: 0;
+}
+
+.app-topbar::after {
+  content: '';
+  position: absolute;
+  left: 8%;
+  right: 8%;
+  top: 100%;
+  bottom: auto;
+  z-index: 2;
+  height: 72px;
+  margin-top: -1px;
+  pointer-events: none;
+  /* 横向收束 + 纵向向下淡出 */
+  background: radial-gradient(
+    ellipse 55% 90% at 50% 0%,
+    color-mix(in srgb, var(--decor-color) 14%, transparent) 0%,
+    color-mix(in srgb, var(--decor-color) 5%, transparent) 42%,
+    transparent 72%
+  );
+  opacity: 0.55;
+  filter: blur(10px);
+  transform: translateZ(0);
+}
+
+/* 顶缘极淡发丝光，避免与内容硬切 */
+.app-topbar {
+  box-shadow:
+    0 1px 0 color-mix(in srgb, var(--decor-color) 10%, transparent),
+    0 18px 40px -24px color-mix(in srgb, var(--decor-color) 22%, transparent);
+}
+
+[data-theme='ink-wash'] .app-topbar {
+  box-shadow:
+    0 1px 0 color-mix(in srgb, var(--decor-color) 12%, transparent),
+    0 16px 36px -22px rgba(20, 20, 20, 0.08);
+}
+
+[data-theme='ink-wash'] .app-topbar::after {
+  background: radial-gradient(
+    ellipse 55% 90% at 50% 0%,
+    rgba(185, 68, 50, 0.1) 0%,
+    rgba(185, 68, 50, 0.035) 40%,
+    transparent 72%
+  );
+  opacity: 0.65;
+}
+
+[data-theme='peach-blaze'] .app-topbar {
+  border-bottom-color: transparent;
+}
+
+[data-theme='peach-blaze'] .app-topbar::after {
+  background: radial-gradient(
+    ellipse 55% 90% at 50% 0%,
+    rgba(242, 139, 181, 0.12) 0%,
+    rgba(242, 139, 181, 0.04) 42%,
+    transparent 72%
+  );
+}
+
+/* 水墨顶栏海水江崖纹：浅底上改用深墨/朱砂描边，提高可见度 */
+[data-theme='ink-wash'] .app-topbar-motif {
+  opacity: 1;
+  filter: none;
+}
+
+[data-theme='ink-wash'] .app-topbar-motif .motif-layer--cliff {
+  stroke: #2c2824 !important;
+  opacity: 0.5 !important;
+}
+
+[data-theme='ink-wash'] .app-topbar-motif .motif-layer--cliff .cliff-far {
+  opacity: 0.55 !important;
+}
+
+[data-theme='ink-wash'] .app-topbar-motif .motif-layer--cliff .cliff-outline {
+  opacity: 0.95 !important;
+  stroke-width: 1.9;
+}
+
+[data-theme='ink-wash'] .app-topbar-motif .motif-layer--cliff .cliff-base {
+  opacity: 0.8 !important;
+}
+
+[data-theme='ink-wash'] .app-topbar-motif .motif-layer--cliff .cliff-texture,
+[data-theme='ink-wash'] .app-topbar-motif .motif-layer--cliff .cliff-terrace {
+  opacity: 0.65 !important;
+  stroke: #4a4038 !important;
+}
+
+[data-theme='ink-wash'] .app-topbar-motif .motif-layer--foam {
+  opacity: 0.48 !important;
+}
+
+[data-theme='ink-wash'] .app-topbar-motif .foam-lishui {
+  stroke: #6b3a32 !important;
+  opacity: 0.7 !important;
+}
+
+/* defs 中的浪/云单元：改墨色与朱红，浅底可辨 */
+[data-theme='ink-wash'] .app-topbar-motif #motifWaveA,
+[data-theme='ink-wash'] .app-topbar-motif #motifWaveB {
+  stroke: #8f3d32 !important;
+}
+
+[data-theme='ink-wash'] .app-topbar-motif #motifCloudA,
+[data-theme='ink-wash'] .app-topbar-motif #motifCloudB,
+[data-theme='ink-wash'] .app-topbar-motif #motifCloudC {
+  stroke: #5a5248 !important;
+}
+
+[data-theme='ink-wash'] .app-topbar-motif .motif-layer--cloud {
+  opacity: 0.42 !important;
+}
+
+[data-theme='ink-wash'] .app-topbar-motif use {
+  opacity: 0.9;
+}
+
+/* 水墨角花：金色改朱墨，提高对比 */
+[data-theme='ink-wash'] .app-corner {
+  opacity: 0.55;
+}
+
+[data-theme='ink-wash'] .app-corner path[stroke='#d4b96e'] {
+  stroke: #8f3d32;
+}
+
+[data-theme='ink-wash'] .app-corner path[stroke='#7eb8c9'] {
+  stroke: #4a4038;
+}
+
+[data-theme='ink-wash'] .app-corner circle {
+  fill: #8f3d32;
+}
+
+@media (max-width: 720px) {
+  :root {
+    --decor-corner-size: 11px;
+  }
+
+  .embossed.large {
+    outline-offset: 2px;
+  }
+
+  .up-page-title::before,
+  .pdb-title::before,
+  .export-page .export-page-title::before,
+  .export-page .export-section-title::before,
+  .up-card-title::before {
+    font-size: 0.5em;
+    margin-right: 0.32em;
+  }
+
+  .up-page-title::after,
+  .pdb-title::after,
+  .export-page .export-page-title::after {
+    width: 12px;
+  }
+
+  .app-topbar::after {
+    height: 48px;
+    filter: blur(8px);
+    left: 4%;
+    right: 4%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .embossed {
+    transition: none;
+  }
+
+  .embossed:hover {
+    transform: none;
+  }
+}

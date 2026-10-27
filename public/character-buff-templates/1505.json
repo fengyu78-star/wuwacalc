@@ -1,0 +1,267 @@
+{
+  "version": 1,
+  "kind": "shard",
+  "characterId": "1505",
+  "characterName": "守岸人",
+  "templates": [
+    {
+      "characterId": "1505",
+      "characterName": "守岸人",
+      "revision": 5,
+      "author": "OrangeSun",
+      "notes": "守岸人：全队【深潜星域(紫)】每满0.2%共鸣效率→暴击+0.01%（不足不转化，上限12.5%，随面板同步）。全队【解限星域(金)】每满0.1%共鸣效率→暴伤+0.01%（不足不转化，上限25%，随面板同步）。",
+      "personalBuffs": [
+        {
+          "category": "composite",
+          "name": "洞悉必定暴击",
+          "mode": "fixed",
+          "value": 0,
+          "perStack": 0,
+          "maxStacks": 99,
+          "damageType": "",
+          "element": "",
+          "defenseKind": "",
+          "convergenceVuln": "",
+          "effects": [
+            {
+              "zone": "generalCritRate",
+              "valueMode": "fixed",
+              "value": 100,
+              "segments": [
+                {
+                  "upTo": null,
+                  "perStack": 0
+                }
+              ],
+              "skillScope": "names",
+              "skillNames": [
+                "故此证明·洞悉",
+                "洞悉"
+              ],
+              "librarySkillNames": [
+                "故此证明·洞悉"
+              ],
+              "catalogIds": [],
+              "damageType": "变奏",
+              "effectType": "",
+              "element": "衍射",
+              "defenseKind": "",
+              "minStacks": 0,
+              "minResonance": 0,
+              "onlyCharacterIds": [],
+              "onlyCombatModes": [],
+              "effectKey": ""
+            }
+          ],
+          "sourceTag": "characterTemplate",
+          "templateKey": "tpl_mrzz5i62_2i112",
+          "gameText": "解限星域持续期间，守岸人的变奏技能启迪替换为变奏技能洞悉。施放时对应星域状态结束，回复附近队伍中所有角色的生命值，并攻击目标造成衍射伤害。此次伤害为共鸣解放伤害，并且必定暴击。"
+        },
+        {
+          "templateKey": "shorekeeper_innate2_er",
+          "category": "energyRegenPct",
+          "name": "固有2",
+          "mode": "fixed",
+          "value": 10,
+          "perStack": 0,
+          "maxStacks": 1,
+          "damageType": "",
+          "element": "",
+          "defenseKind": "",
+          "defaultActive": true,
+          "sourceTag": "characterTemplate",
+          "gameText": "队伍中登场角色处于【星域】生效范围内时，守岸人共鸣效率提升10%；若漂泊者处于同一编队中，漂泊者共鸣效率提升10%。"
+        }
+      ],
+      "teamBuffs": [
+        {
+          "templateKey": "shorekeeper_star_purple_er_crit",
+          "category": "generalCritRate",
+          "name": "深潜星域(紫）",
+          "mode": "fixed",
+          "value": 0,
+          "damageType": "",
+          "element": "",
+          "defenseKind": "",
+          "sourceTag": "characterTemplate",
+          "perStack": 0,
+          "maxStacks": 5,
+          "gameText": "深潜星域\n浅析星域持续期间，当附近队伍中的角色使用变奏技能时，将进入深潜星域。深潜星域生效范围内附近队伍中所有角色暴击提升：守岸人自身每0.2%共鸣效率计算为0.01%暴击提升，上限12.5%。\n深潜星域继承浅析星域的所有效果。"
+        },
+        {
+          "templateKey": "shorekeeper_star_gold_er_crit_dmg",
+          "category": "generalCritDmg",
+          "name": "解限星域(金)",
+          "mode": "fixed",
+          "value": 0,
+          "damageType": "",
+          "element": "",
+          "defenseKind": "",
+          "sourceTag": "characterTemplate",
+          "perStack": 0,
+          "maxStacks": 5,
+          "gameText": "解限星域\n深潜星域持续期间，当附近队伍中的角色使用变奏技能时，将进入解限星域。解限星域生效范围内附近队伍中所有角色暴击伤害提升：守岸人自身每0.1%共鸣效率计算为0.01%暴击伤害提升，上限25%。\n解限星域继承浅析星域和深潜星域的所有效果。"
+        },
+        {
+          "category": "generalDeep",
+          "name": "延奏·守岸人",
+          "mode": "fixed",
+          "value": 15,
+          "perStack": 0,
+          "maxStacks": 5,
+          "damageType": "",
+          "element": "",
+          "defenseKind": "",
+          "convergenceVuln": "",
+          "sourceTag": "characterTemplate",
+          "templateKey": "tpl_mrzzb968_t6uyq",
+          "gameText": "·队伍中的角色全伤害加深15%。"
+        }
+      ],
+      "extraSkills": [],
+      "resonanceChains": {
+        "1": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {}
+        },
+        "2": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [],
+          "teamBuffs": [
+            {
+              "category": "generalAttack",
+              "name": "守岸人·2链",
+              "mode": "fixed",
+              "value": 40,
+              "perStack": 0,
+              "maxStacks": 5,
+              "damageType": "",
+              "element": "",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "sourceTag": "characterTemplate",
+              "templateKey": "tpl_mrzze5fh_oypqy",
+              "gameText": "浅析星域新增额外效果：附近队伍中的角色攻击提升40%。"
+            }
+          ],
+          "extraSkills": [],
+          "combatModes": {}
+        },
+        "3": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {}
+        },
+        "4": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {}
+        },
+        "5": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {}
+        },
+        "6": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [
+            {
+              "category": "composite",
+              "name": "6链·洞悉",
+              "mode": "fixed",
+              "value": 0,
+              "perStack": 0,
+              "maxStacks": 99,
+              "damageType": "",
+              "element": "",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "effects": [
+                {
+                  "zone": "generalCritDmg",
+                  "valueMode": "fixed",
+                  "value": 500,
+                  "segments": [
+                    {
+                      "upTo": null,
+                      "perStack": 0
+                    }
+                  ],
+                  "skillScope": "names",
+                  "skillNames": [
+                    "故此证明·洞悉",
+                    "洞悉"
+                  ],
+                  "librarySkillNames": [
+                    "故此证明·洞悉"
+                  ],
+                  "catalogIds": [],
+                  "damageType": "变奏",
+                  "effectType": "",
+                  "element": "衍射",
+                  "defenseKind": "",
+                  "minStacks": 0,
+                  "minResonance": 6,
+                  "onlyCharacterIds": [],
+                  "onlyCombatModes": [],
+                  "effectKey": ""
+                },
+                {
+                  "zone": "multBoost",
+                  "valueMode": "fixed",
+                  "value": 42,
+                  "segments": [
+                    {
+                      "upTo": null,
+                      "perStack": 0
+                    }
+                  ],
+                  "skillScope": "names",
+                  "skillNames": [
+                    "故此证明·洞悉",
+                    "洞悉"
+                  ],
+                  "librarySkillNames": [
+                    "故此证明·洞悉"
+                  ],
+                  "catalogIds": [],
+                  "damageType": "变奏",
+                  "effectType": "",
+                  "element": "衍射",
+                  "defenseKind": "",
+                  "minStacks": 0,
+                  "minResonance": 6,
+                  "onlyCharacterIds": [],
+                  "onlyCombatModes": [],
+                  "effectKey": ""
+                }
+              ],
+              "sourceTag": "characterTemplate",
+              "templateKey": "tpl_mrzzhe3e_c882e",
+              "gameText": "变奏技能洞悉伤害倍率提升42%。施放变奏技能洞悉时，守岸人的暴击伤害提升500%。"
+            }
+          ],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {}
+        }
+      },
+      "combatModes": {}
+    }
+  ]
+}

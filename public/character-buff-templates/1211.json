@@ -1,0 +1,686 @@
+{
+  "version": 1,
+  "kind": "shard",
+  "characterId": "1211",
+  "characterName": "达妮娅",
+  "templates": [
+    {
+      "characterId": "1211",
+      "characterName": "达妮娅",
+      "revision": 6,
+      "author": "",
+      "notes": "达妮娅：0链分支攻击12%/暴伤16%；技能指定【放逐·幻灭之形第二段】倍率提升叠层+150%/层；带【普攻/闪避反击·幻灭之形】伤害倍率提升+50%（固定）；2链指定【放逐·幻灭之形第一段/第二段】倍率提升+40%（固定，与其它倍率提升加算叠加）；集谐模态全队【达妮娅·延奏】泛用加深+15%、陆·赫斯/集谐模态琳奈/清宵再+25%（合计40%；本人不生效）；集谐模态全队【达妮娅·固有】谐幅基础10点，另按覆盖角色偏谐值累积效率转化（超过100%时每满10%+8点，转化上限40，只读同步）；聚爆模态全队【达妮娅·聚爆加深】效应·聚爆加深+60%；6链+聚爆模态自动加入特殊技能【达妮娅·6链·强化聚爆】（聚爆查表10/13/16，默认10，再×(1+200%)）。",
+      "personalBuffs": [
+        {
+          "templateKey": "dania_skill_illusion_form_mult_boost",
+          "category": "composite",
+          "name": "达妮娅·技能·幻灭之形倍率提升",
+          "mode": "fixed",
+          "value": 0,
+          "effects": [
+            {
+              "zone": "multBoost",
+              "valueMode": "fixed",
+              "value": 50,
+              "segments": [
+                {
+                  "upTo": null,
+                  "perStack": 0
+                }
+              ],
+              "skillScope": "names",
+              "skillNames": [
+                "普攻·幻灭之形",
+                "闪避反击·幻灭之形",
+                "织梦的飨宴·普攻·幻灭之形第一段",
+                "织梦的飨宴·普攻·幻灭之形第二段",
+                "织梦的飨宴·普攻·幻灭之形第三段",
+                "织梦的飨宴·普攻·幻灭之形第四段",
+                "织梦的飨宴·闪避反击·幻灭之形",
+                "织梦的飨宴·普攻·幻灭之形第一段·共鸣解放",
+                "织梦的飨宴·普攻·幻灭之形第二段·共鸣解放",
+                "织梦的飨宴·普攻·幻灭之形第三段·共鸣解放",
+                "织梦的飨宴·普攻·幻灭之形第四段·共鸣解放",
+                "织梦的飨宴·闪避反击·幻灭之形·共鸣解放"
+              ],
+              "librarySkillNames": [
+                "织梦的飨宴·普攻·幻灭之形第一段",
+                "织梦的飨宴·普攻·幻灭之形第二段",
+                "织梦的飨宴·普攻·幻灭之形第三段",
+                "织梦的飨宴·普攻·幻灭之形第四段",
+                "织梦的飨宴·闪避反击·幻灭之形",
+                "织梦的飨宴·普攻·幻灭之形第一段·共鸣解放",
+                "织梦的飨宴·普攻·幻灭之形第二段·共鸣解放",
+                "织梦的飨宴·普攻·幻灭之形第三段·共鸣解放",
+                "织梦的飨宴·普攻·幻灭之形第四段·共鸣解放",
+                "织梦的飨宴·闪避反击·幻灭之形·共鸣解放"
+              ],
+              "catalogIds": [],
+              "damageType": "",
+              "effectType": "",
+              "element": "",
+              "defenseKind": "",
+              "minStacks": 0,
+              "minResonance": 0,
+              "onlyCharacterIds": [],
+              "onlyCombatModes": [],
+              "effectKey": ""
+            }
+          ],
+          "sourceTag": "characterTemplate",
+          "perStack": 0,
+          "maxStacks": 1,
+          "gameText": "【虚质粒子】\n处于幻灭之形且【虚质粒子】大于0时，常态攻击命中目标，消耗【虚质粒子】，使本次技能获得以下效果：\n·伤害为共鸣解放伤害，且伤害倍率提升50%。"
+        },
+        {
+          "templateKey": "dania_skill_exile_s2_mult_boost",
+          "category": "composite",
+          "name": "达妮娅·技能·放逐第二段倍率提升",
+          "mode": "stack",
+          "value": 0,
+          "maxStacks": 5,
+          "effects": [
+            {
+              "zone": "multBoost",
+              "valueMode": "stack",
+              "value": 0,
+              "segments": [
+                {
+                  "upTo": null,
+                  "perStack": 150
+                }
+              ],
+              "skillScope": "names",
+              "skillNames": [
+                "放逐·幻灭之形第二段",
+                "泡沫蜜饵·放逐·幻灭之形第二段"
+              ],
+              "librarySkillNames": [
+                "泡沫蜜饵·放逐·幻灭之形第二段"
+              ],
+              "catalogIds": [],
+              "damageType": "",
+              "effectType": "",
+              "element": "",
+              "defenseKind": "",
+              "minStacks": 0,
+              "minResonance": 0,
+              "onlyCharacterIds": [],
+              "onlyCombatModes": [],
+              "effectKey": ""
+            }
+          ],
+          "sourceTag": "characterTemplate",
+          "perStack": 0,
+          "gameText": "放逐·幻灭之形\n拥有【黯核】时，轻唤·幻灭之形替换为放逐·幻灭之形。\n施放放逐·幻灭之形第1段，牵引周围目标，造成热熔伤害，施放后一定时间内短按普攻或共鸣技能，可施放放逐·幻灭之形第2段。\n放逐·幻灭之形第2段将消耗所有【黯核】，造成热熔伤害，本次攻击每消耗1枚【黯核】，伤害倍率提升150%。\n0链上限3层，3链上限5层。",
+          "clampStacks": true
+        },
+        {
+          "category": "generalAttack",
+          "name": "熵变强化",
+          "mode": "fixed",
+          "value": 30,
+          "perStack": 0,
+          "maxStacks": 5,
+          "damageType": "",
+          "element": "",
+          "defenseKind": "",
+          "convergenceVuln": "",
+          "sourceTag": "characterTemplate",
+          "templateKey": "tpl_mrywsf4x_lr9hy",
+          "gameText": "熵变强化·幻灭之形\n攻击提升30%。\n获得该效果时，移除熵变强化·布景之形。"
+        }
+      ],
+      "teamBuffs": [],
+      "extraSkills": [],
+      "resonanceChains": {
+        "1": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [
+            {
+              "category": "generalCritDmg",
+              "name": "1链",
+              "mode": "fixed",
+              "value": 30,
+              "perStack": 0,
+              "maxStacks": 5,
+              "damageType": "",
+              "element": "",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "sourceTag": "characterTemplate",
+              "templateKey": "tpl_mrywkvgs_0lef3",
+              "gameText": "暴击伤害提升30%。"
+            }
+          ],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {
+            "convergence": {
+              "notes": "",
+              "personalBuffs": [],
+              "teamBuffs": [],
+              "extraSkills": []
+            },
+            "burst": {
+              "notes": "",
+              "personalBuffs": [],
+              "teamBuffs": [],
+              "extraSkills": []
+            }
+          }
+        },
+        "2": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [
+            {
+              "templateKey": "dania_c2_exile_mult_boost",
+              "category": "composite",
+              "name": "达妮娅·2链·放逐倍率提升",
+              "mode": "fixed",
+              "value": 0,
+              "effects": [
+                {
+                  "zone": "multBoostExtra",
+                  "valueMode": "fixed",
+                  "value": 40,
+                  "segments": [
+                    {
+                      "upTo": null,
+                      "perStack": 0
+                    }
+                  ],
+                  "skillScope": "names",
+                  "skillNames": [
+                    "放逐·幻灭之形第一段",
+                    "放逐·幻灭之形第二段",
+                    "泡沫蜜饵·放逐·幻灭之形第一段",
+                    "泡沫蜜饵·放逐·幻灭之形第二段"
+                  ],
+                  "librarySkillNames": [
+                    "泡沫蜜饵·放逐·幻灭之形第一段",
+                    "泡沫蜜饵·放逐·幻灭之形第二段"
+                  ],
+                  "catalogIds": [],
+                  "damageType": "",
+                  "effectType": "",
+                  "element": "",
+                  "defenseKind": "",
+                  "minStacks": 0,
+                  "minResonance": 0,
+                  "onlyCharacterIds": [],
+                  "onlyCombatModes": [],
+                  "effectKey": ""
+                }
+              ],
+              "sourceTag": "characterTemplate",
+              "perStack": 0,
+              "maxStacks": 1,
+              "gameText": "处于共鸣模态·聚爆，队伍中的角色施加【聚爆效应】后，该角色热熔伤害加成提升50%，持续15秒。登场角色附近的敌人触发【聚爆效应】引爆后，达妮娅获得1层简并虚质，持续15秒，上限10层。每层简并虚质使达妮娅造成伤害无视目标1%热熔伤害抗性。\n达妮娅切换模态时，该效果提前结束。\n\n处于共鸣模态·集谐，共鸣回路效果提升：队伍中的角色施加【集谐·偏移】后，该角色谐度破坏增幅提升20点，持续15秒，目标将积累偏谐值上限100%的【偏谐值】，积累【偏谐值】效果对同一目标300秒内只能触发1次。\n达妮娅切换模态时，该效果提前结束。\n\n共鸣技能放逐·幻灭之形伤害倍率提升40%。"
+            }
+          ],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {
+            "convergence": {
+              "notes": "",
+              "personalBuffs": [],
+              "teamBuffs": [
+                {
+                  "category": "harmonyBreakAmp",
+                  "name": "2链·达妮娅",
+                  "mode": "fixed",
+                  "value": 20,
+                  "perStack": 0,
+                  "maxStacks": 5,
+                  "damageType": "",
+                  "element": "",
+                  "defenseKind": "",
+                  "convergenceVuln": "",
+                  "sourceTag": "characterTemplate",
+                  "templateKey": "tpl_mrywmn6f_2mv1b",
+                  "gameText": "处于共鸣模态·聚爆，队伍中的角色施加【聚爆效应】后，该角色热熔伤害加成提升50%，持续15秒。登场角色附近的敌人触发【聚爆效应】引爆后，达妮娅获得1层简并虚质，持续15秒，上限10层。每层简并虚质使达妮娅造成伤害无视目标1%热熔伤害抗性。\n达妮娅切换模态时，该效果提前结束。\n\n处于共鸣模态·集谐，共鸣回路效果提升：队伍中的角色施加【集谐·偏移】后，该角色谐度破坏增幅提升20点，持续15秒，目标将积累偏谐值上限100%的【偏谐值】，积累【偏谐值】效果对同一目标300秒内只能触发1次。\n达妮娅切换模态时，该效果提前结束。\n\n共鸣技能放逐·幻灭之形伤害倍率提升40%。"
+                }
+              ],
+              "extraSkills": []
+            },
+            "burst": {
+              "notes": "",
+              "personalBuffs": [
+                {
+                  "category": "elementResReduce",
+                  "name": "2链·达妮娅",
+                  "mode": "stack",
+                  "value": 1,
+                  "perStack": 1,
+                  "maxStacks": 5,
+                  "damageType": "",
+                  "element": "热熔",
+                  "defenseKind": "",
+                  "convergenceVuln": "",
+                  "sourceTag": "characterTemplate",
+                  "templateKey": "tpl_mrywm7a8_z5uas",
+                  "gameText": "处于共鸣模态·聚爆，队伍中的角色施加【聚爆效应】后，该角色热熔伤害加成提升50%，持续15秒。登场角色附近的敌人触发【聚爆效应】引爆后，达妮娅获得1层简并虚质，持续15秒，上限10层。每层简并虚质使达妮娅造成伤害无视目标1%热熔伤害抗性。\n达妮娅切换模态时，该效果提前结束。\n\n处于共鸣模态·集谐，共鸣回路效果提升：队伍中的角色施加【集谐·偏移】后，该角色谐度破坏增幅提升20点，持续15秒，目标将积累偏谐值上限100%的【偏谐值】，积累【偏谐值】效果对同一目标300秒内只能触发1次。\n达妮娅切换模态时，该效果提前结束。\n\n共鸣技能放逐·幻灭之形伤害倍率提升40%。"
+                }
+              ],
+              "teamBuffs": [
+                {
+                  "category": "elementBonus",
+                  "name": "2链·达妮娅",
+                  "mode": "fixed",
+                  "value": 50,
+                  "perStack": 0,
+                  "maxStacks": 5,
+                  "damageType": "",
+                  "element": "热熔",
+                  "defenseKind": "",
+                  "convergenceVuln": "",
+                  "sourceTag": "characterTemplate",
+                  "templateKey": "tpl_mrywld9v_zb1m4",
+                  "gameText": "处于共鸣模态·聚爆，队伍中的角色施加【聚爆效应】后，该角色热熔伤害加成提升50%，持续15秒。登场角色附近的敌人触发【聚爆效应】引爆后，达妮娅获得1层简并虚质，持续15秒，上限10层。每层简并虚质使达妮娅造成伤害无视目标1%热熔伤害抗性。\n达妮娅切换模态时，该效果提前结束。\n\n处于共鸣模态·集谐，共鸣回路效果提升：队伍中的角色施加【集谐·偏移】后，该角色谐度破坏增幅提升20点，持续15秒，目标将积累偏谐值上限100%的【偏谐值】，积累【偏谐值】效果对同一目标300秒内只能触发1次。\n达妮娅切换模态时，该效果提前结束。\n\n共鸣技能放逐·幻灭之形伤害倍率提升40%。"
+                }
+              ],
+              "extraSkills": []
+            }
+          }
+        },
+        "3": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [
+            {
+              "category": "composite",
+              "name": "3链",
+              "mode": "fixed",
+              "value": 0,
+              "perStack": 0,
+              "maxStacks": 99,
+              "damageType": "",
+              "element": "",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "effects": [
+                {
+                  "zone": "multBoost",
+                  "valueMode": "fixed",
+                  "value": 80,
+                  "segments": [
+                    {
+                      "upTo": null,
+                      "perStack": 0
+                    }
+                  ],
+                  "skillScope": "names",
+                  "skillNames": [
+                    "帷幕终景·幻灭之形"
+                  ],
+                  "librarySkillNames": [
+                    "帷幕终景·幻灭之形"
+                  ],
+                  "catalogIds": [],
+                  "damageType": "共鸣解放",
+                  "effectType": "",
+                  "element": "热熔",
+                  "defenseKind": "",
+                  "minStacks": 0,
+                  "minResonance": 0,
+                  "onlyCharacterIds": [],
+                  "onlyCombatModes": [],
+                  "effectKey": ""
+                }
+              ],
+              "sourceTag": "characterTemplate",
+              "templateKey": "tpl_mrywpr2n_566j3",
+              "gameText": "共鸣解放帷幕终景·幻灭之形伤害倍率提升80%。\n\n【黯核】上限提升至5枚，处于熵变强化时，【黯核】的获取间隔缩短至6秒。\n熵变强化·布景之形效果获得强化：每秒获得【虚质粒子】提升至4点。\n熵变强化·幻灭之形效果获得强化：施放共鸣解放帷幕终景·幻灭之形时，额外回复30点协奏能量。\n\n固有技能伪物弥留效果强化：\n进入战斗时，【黯核】与【虚质粒子】回复至上限。该效果每12秒可触发1次。\n\n【黯核】数量达到上限时，施放普攻·布景之形第4段、共鸣技能拟态泡泡·布景之形消耗所有【黯核】，使本次技能伤害倍率增加1200%，本次伤害为共鸣解放伤害。"
+            }
+          ],
+          "teamBuffs": [],
+          "extraSkills": [
+            {
+              "templateKey": "extra_mrywrgz3_0ua3z",
+              "name": "3链·额外",
+              "damageType": "共鸣解放",
+              "effectType": "聚爆",
+              "effectLayers": 13,
+              "effectBurstLayers": 0,
+              "effectCount": 1,
+              "baseMult": 1200,
+              "fixedDamage": false,
+              "effectMultMode": "custom"
+            }
+          ],
+          "combatModes": {
+            "convergence": {
+              "notes": "",
+              "personalBuffs": [],
+              "teamBuffs": [],
+              "extraSkills": []
+            },
+            "burst": {
+              "notes": "",
+              "personalBuffs": [],
+              "teamBuffs": [],
+              "extraSkills": []
+            }
+          }
+        },
+        "4": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {
+            "convergence": {
+              "notes": "",
+              "personalBuffs": [],
+              "teamBuffs": [],
+              "extraSkills": []
+            },
+            "burst": {
+              "notes": "",
+              "personalBuffs": [],
+              "teamBuffs": [],
+              "extraSkills": []
+            }
+          }
+        },
+        "5": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [
+            {
+              "category": "composite",
+              "name": "5链",
+              "mode": "fixed",
+              "value": 0,
+              "perStack": 0,
+              "maxStacks": 99,
+              "damageType": "",
+              "element": "",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "effects": [
+                {
+                  "zone": "generalBonus",
+                  "valueMode": "fixed",
+                  "value": 100,
+                  "segments": [
+                    {
+                      "upTo": null,
+                      "perStack": 0
+                    }
+                  ],
+                  "skillScope": "names",
+                  "skillNames": [
+                    "帷幕终景·布景之形",
+                    "布景之形"
+                  ],
+                  "librarySkillNames": [
+                    "帷幕终景·布景之形"
+                  ],
+                  "catalogIds": [],
+                  "damageType": "共鸣解放",
+                  "effectType": "",
+                  "element": "热熔",
+                  "defenseKind": "",
+                  "minStacks": 0,
+                  "minResonance": 0,
+                  "onlyCharacterIds": [],
+                  "onlyCombatModes": [],
+                  "effectKey": ""
+                }
+              ],
+              "sourceTag": "characterTemplate",
+              "templateKey": "tpl_mryww3od_q39kj",
+              "gameText": "共鸣解放帷幕终景·布景之形造成的伤害提升100%。"
+            }
+          ],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {
+            "convergence": {
+              "notes": "",
+              "personalBuffs": [],
+              "teamBuffs": [],
+              "extraSkills": []
+            },
+            "burst": {
+              "notes": "",
+              "personalBuffs": [],
+              "teamBuffs": [],
+              "extraSkills": []
+            }
+          }
+        },
+        "6": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [
+            {
+              "category": "composite",
+              "name": "6链·熵变强化",
+              "mode": "fixed",
+              "value": 0,
+              "perStack": 0,
+              "maxStacks": 99,
+              "damageType": "",
+              "element": "",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "effects": [
+                {
+                  "zone": "generalAttack",
+                  "valueMode": "fixed",
+                  "value": 60,
+                  "segments": [
+                    {
+                      "upTo": null,
+                      "perStack": 0
+                    }
+                  ],
+                  "skillScope": "all",
+                  "skillNames": [],
+                  "librarySkillNames": [],
+                  "catalogIds": [],
+                  "damageType": "",
+                  "effectType": "",
+                  "element": "",
+                  "defenseKind": "",
+                  "minStacks": 0,
+                  "minResonance": 0,
+                  "onlyCharacterIds": [],
+                  "onlyCombatModes": [],
+                  "effectKey": ""
+                },
+                {
+                  "zone": "elementBonus",
+                  "valueMode": "fixed",
+                  "value": 60,
+                  "segments": [
+                    {
+                      "upTo": null,
+                      "perStack": 0
+                    }
+                  ],
+                  "skillScope": "all",
+                  "skillNames": [
+                    "谱曲终末"
+                  ],
+                  "librarySkillNames": [],
+                  "catalogIds": [],
+                  "damageType": "",
+                  "effectType": "",
+                  "element": "热熔",
+                  "defenseKind": "",
+                  "minStacks": 0,
+                  "minResonance": 0,
+                  "onlyCharacterIds": [],
+                  "onlyCombatModes": [],
+                  "effectKey": ""
+                }
+              ],
+              "sourceTag": "characterTemplate",
+              "templateKey": "tpl_mrywwyco_vd5a0",
+              "gameText": "处于熵变强化时，攻击提升60%，热熔伤害加成提升60%。\n\n处于共鸣模态·聚爆时，蚀域对目标造成伤害后，根据【聚爆效应】层数上限引爆【聚爆效应】，本次引爆对【聚爆效应】主目标的伤害倍率提升200%，且不移除【聚爆效应】层数。同一目标最多可受到1次该效果，目标受到共鸣解放帷幕终景·幻灭之形的伤害后，重置该次数，重置效果对同一目标2秒内只能触发1次。\n\n处于共鸣模态·集谐时，队伍中的角色对拥有【集谐·偏移】的【失谐】目标造成谐度破坏伤害时，将额外附加1层【集谐·干涉】，该效果对同一目标3秒内只能触发1次。"
+            }
+          ],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {
+            "convergence": {
+              "notes": "",
+              "personalBuffs": [],
+              "teamBuffs": [],
+              "extraSkills": []
+            },
+            "burst": {
+              "notes": "",
+              "personalBuffs": [],
+              "teamBuffs": [],
+              "extraSkills": []
+            }
+          }
+        }
+      },
+      "combatModes": {
+        "convergence": {
+          "notes": "",
+          "personalBuffs": [],
+          "teamBuffs": [
+            {
+              "templateKey": "dania_innate_offset_harmony_amp",
+              "category": "harmonyBreakAmp",
+              "name": "达妮娅·固有",
+              "mode": "fixed",
+              "value": 10,
+              "perStack": 0,
+              "maxStacks": 5,
+              "damageType": "",
+              "element": "",
+              "defenseKind": "",
+              "gameText": "若处于共鸣模态·集谐，队伍中的角色谐度破坏增幅提升10点。队伍中的角色偏谐值累积效率超过100%时，每超过10%的偏谐值累积效率使对应角色谐度破坏增幅提升8点，上限40点。",
+              "sourceTag": "characterTemplate"
+            },
+            {
+              "templateKey": "dania_outro_general_deep",
+              "category": "composite",
+              "name": "达妮娅·延奏",
+              "mode": "fixed",
+              "value": 0,
+              "perStack": 0,
+              "maxStacks": 99,
+              "damageType": "",
+              "element": "",
+              "defenseKind": "",
+              "excludeSource": true,
+              "sourceTag": "characterTemplate",
+              "effects": [
+                {
+                  "id": "id_3373",
+                  "zone": "generalDeep",
+                  "valueMode": "fixed",
+                  "value": 15,
+                  "segments": [
+                    {
+                      "upTo": null,
+                      "perStack": 0
+                    }
+                  ],
+                  "skillScope": "all",
+                  "skillNames": [],
+                  "librarySkillNames": [],
+                  "catalogIds": [],
+                  "damageType": "",
+                  "effectType": "",
+                  "element": "",
+                  "defenseKind": "",
+                  "minStacks": 0,
+                  "minResonance": 0,
+                  "onlyCharacterIds": [],
+                  "onlyCombatModes": [],
+                  "effectKey": ""
+                },
+                {
+                  "id": "id_3374",
+                  "zone": "generalDeep",
+                  "valueMode": "fixed",
+                  "value": 25,
+                  "segments": [
+                    {
+                      "upTo": null,
+                      "perStack": 0
+                    }
+                  ],
+                  "skillScope": "all",
+                  "skillNames": [],
+                  "librarySkillNames": [],
+                  "catalogIds": [],
+                  "damageType": "",
+                  "effectType": "",
+                  "element": "",
+                  "defenseKind": "",
+                  "minStacks": 0,
+                  "minResonance": 0,
+                  "onlyCharacterIds": [
+                    "1510",
+                    "1509",
+                    "1413"
+                  ],
+                  "onlyCombatModes": [
+                    "convergence"
+                  ],
+                  "effectKey": "dania_outro_privileged_extra"
+                }
+              ],
+              "gameText": "处于共鸣模态·集谐时，下一个登场的角色全伤害加深15%，持续16秒。\n效果持续期间，该角色附加【集谐·偏移】后，该全伤害加深效果提升至40%。\n切换至其他角色或达妮娅切换模态时，该效果提前结束。",
+              "combatModeKey": "convergence",
+              "_daniaOutroHint": "集谐模态 · 泛用加深 15%；陆·赫斯/集谐琳奈/清宵 40%（本人不生效）"
+            }
+          ],
+          "extraSkills": []
+        },
+        "burst": {
+          "notes": "",
+          "personalBuffs": [],
+          "teamBuffs": [
+            {
+              "category": "elementBonus",
+              "name": "达妮娅·固有",
+              "mode": "fixed",
+              "value": 30,
+              "perStack": 0,
+              "maxStacks": 5,
+              "damageType": "",
+              "element": "热熔",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "sourceTag": "characterTemplate",
+              "templateKey": "tpl_mrywa5h4_rezbo",
+              "gameText": "处于熵变强化时，根据共鸣模态获得以下效果：\n·若处于共鸣模态·聚爆，队伍中的角色热熔伤害加成提升30%。"
+            },
+            {
+              "templateKey": "dania_burst_effect_deep",
+              "category": "typeDeep",
+              "name": "达妮娅·聚爆加深",
+              "mode": "fixed",
+              "value": 60,
+              "perStack": 0,
+              "maxStacks": 99,
+              "damageType": "效应",
+              "effectType": "聚爆",
+              "element": "",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "sourceTag": "characterTemplate",
+              "gameText": "处于共鸣模态·聚爆时，队伍中登场角色周围的目标受到聚爆效应伤害加深60%，持续30秒。\n达妮娅切换模态时，该效果提前结束。"
+            }
+          ],
+          "extraSkills": []
+        }
+      }
+    }
+  ]
+}

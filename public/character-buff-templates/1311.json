@@ -1,0 +1,581 @@
+{
+  "version": 1,
+  "kind": "shard",
+  "characterId": "1311",
+  "characterName": "心",
+  "templates": [
+    {
+      "characterId": "1311",
+      "characterName": "心",
+      "revision": 4,
+      "author": "Codex(2026-09-30)",
+      "notes": "心：双共鸣模态局外选择（同奏/电磁）。同奏层数由玩家按实战手动填写，输入上限保留为6；电磁特殊技能由角色专属代码接入。",
+      "personalBuffs": [],
+      "teamBuffs": [],
+      "extraSkills": [],
+      "resonanceChains": {
+        "1": {
+          "enabledByDefault": false,
+          "notes": "敛华障为生存层（2层，60%减伤/免打断）写备注；同奏段诸相同奏倍率+15%、每层同奏增益+10%(≤4)；电磁段特殊技能系数 35%→42% 由代码批覆盖。",
+          "personalBuffs": [
+            {
+              "category": "composite",
+              "name": "1链·诸相同奏倍率",
+              "mode": "fixed",
+              "value": 0,
+              "perStack": 0,
+              "maxStacks": 99,
+              "damageType": "",
+              "element": "",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "sourceTag": "characterTemplate",
+              "templateKey": "xin_c1_tongzou_mult",
+              "effects": [
+                {
+                  "zone": "multBoost",
+                  "valueMode": "fixed",
+                  "value": 15,
+                  "segments": [
+                    {
+                      "upTo": null,
+                      "perStack": 0
+                    }
+                  ],
+                  "skillScope": "names",
+                  "skillNames": [
+                    "乘兴一顾·变奏技能·应世相·诸相同奏",
+                    "乘兴一顾·变奏技能·照世相·诸相同奏"
+                  ],
+                  "librarySkillNames": [
+                    "乘兴一顾·变奏技能·应世相·诸相同奏",
+                    "乘兴一顾·变奏技能·照世相·诸相同奏"
+                  ],
+                  "catalogIds": [],
+                  "damageType": "",
+                  "effectType": "",
+                  "element": "",
+                  "defenseKind": "",
+                  "minStacks": 0,
+                  "minResonance": 0,
+                  "effectKey": "",
+                  "onlyCombatModes": [
+                    "tongzou"
+                  ]
+                }
+              ],
+              "gameText": "同奏模态：变奏技能·应世相/照世相·诸相同奏伤害倍率提升15%。"
+            },
+            {
+              "templateKey": "xin_c1_tongzou_stack_mult",
+              "category": "composite",
+              "name": "1链·诸相同奏·同奏层数倍率",
+              "mode": "stack",
+              "value": 0,
+              "perStack": 0,
+              "maxStacks": 4,
+              "clampStacks": true,
+              "effects": [
+                {
+                  "zone": "multBoost",
+                  "valueMode": "stack",
+                  "value": 0,
+                  "segments": [
+                    {
+                      "upTo": null,
+                      "perStack": 10
+                    }
+                  ],
+                  "skillScope": "names",
+                  "skillNames": [
+                    "乘兴一顾·变奏技能·应世相·诸相同奏",
+                    "乘兴一顾·变奏技能·照世相·诸相同奏"
+                  ],
+                  "librarySkillNames": [
+                    "乘兴一顾·变奏技能·应世相·诸相同奏",
+                    "乘兴一顾·变奏技能·照世相·诸相同奏"
+                  ],
+                  "catalogIds": [],
+                  "damageType": "",
+                  "effectType": "",
+                  "element": "",
+                  "defenseKind": "",
+                  "minStacks": 0,
+                  "minResonance": 0,
+                  "effectKey": "",
+                  "onlyCombatModes": [
+                    "tongzou"
+                  ]
+                }
+              ],
+              "sourceTag": "characterTemplate",
+              "gameText": "心 1 链：每层自身同奏增益使诸相同奏伤害倍率额外提升10%，最多计入4层；层数自动读取心的同奏增益。",
+              "tongzouLinkedStack": true,
+              "tongzouStackOwner": "1311"
+            }
+          ],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {}
+        },
+        "2": {
+          "enabledByDefault": false,
+          "notes": "了尘愿/承天则冷却重置与应世心回复写备注。",
+          "personalBuffs": [
+            {
+              "category": "composite",
+              "name": "2链·步红尘/临寰宇倍率",
+              "mode": "fixed",
+              "value": 0,
+              "perStack": 0,
+              "maxStacks": 99,
+              "damageType": "",
+              "element": "",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "sourceTag": "characterTemplate",
+              "templateKey": "xin_c2_heavy_mult",
+              "effects": [
+                {
+                  "zone": "multBoost",
+                  "valueMode": "fixed",
+                  "value": 60,
+                  "segments": [
+                    {
+                      "upTo": null,
+                      "perStack": 0
+                    }
+                  ],
+                  "skillScope": "names",
+                  "skillNames": [
+                    "万相流转，此心自明·应世相·步红尘",
+                    "万相流转，此心自明·应世相·镇红尘"
+                  ],
+                  "librarySkillNames": [
+                    "万相流转，此心自明·应世相·步红尘",
+                    "万相流转，此心自明·应世相·镇红尘"
+                  ],
+                  "catalogIds": [],
+                  "damageType": "",
+                  "effectType": "",
+                  "element": "",
+                  "defenseKind": "",
+                  "minStacks": 0,
+                  "minResonance": 0,
+                  "effectKey": ""
+                },
+                {
+                  "zone": "multBoost",
+                  "valueMode": "fixed",
+                  "value": 60,
+                  "segments": [
+                    {
+                      "upTo": null,
+                      "perStack": 0
+                    }
+                  ],
+                  "skillScope": "names",
+                  "skillNames": [
+                    "万相流转，此心自明·照世相·临寰宇",
+                    "万相流转，此心自明·照世相·镇寰宇"
+                  ],
+                  "librarySkillNames": [
+                    "万相流转，此心自明·照世相·临寰宇",
+                    "万相流转，此心自明·照世相·镇寰宇"
+                  ],
+                  "catalogIds": [],
+                  "damageType": "",
+                  "effectType": "",
+                  "element": "",
+                  "defenseKind": "",
+                  "minStacks": 0,
+                  "minResonance": 0,
+                  "effectKey": ""
+                }
+              ],
+              "gameText": "步红尘/镇红尘、临寰宇/镇寰宇伤害倍率提升60%。"
+            }
+          ],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {}
+        },
+        "3": {
+          "enabledByDefault": false,
+          "notes": "万阙垂天倍率+70%（双模态）；同奏模态暴伤+20%、每层同奏增益+15%(≤4)；电磁特殊技能「万阙垂天·电磁」1500%×层数倍率由代码批自动入算（链3+轴含万阙垂天）。",
+          "personalBuffs": [
+            {
+              "category": "composite",
+              "name": "3链·万阙垂天倍率",
+              "mode": "fixed",
+              "value": 0,
+              "perStack": 0,
+              "maxStacks": 99,
+              "damageType": "",
+              "element": "",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "sourceTag": "characterTemplate",
+              "templateKey": "xin_c3_lib_mult",
+              "effects": [
+                {
+                  "zone": "multBoost",
+                  "valueMode": "fixed",
+                  "value": 70,
+                  "segments": [
+                    {
+                      "upTo": null,
+                      "perStack": 0
+                    }
+                  ],
+                  "skillScope": "names",
+                  "skillNames": [
+                    "引枢作清辉·万阙垂天"
+                  ],
+                  "librarySkillNames": [
+                    "引枢作清辉·万阙垂天"
+                  ],
+                  "catalogIds": [],
+                  "damageType": "",
+                  "effectType": "",
+                  "element": "",
+                  "defenseKind": "",
+                  "minStacks": 0,
+                  "minResonance": 0,
+                  "effectKey": ""
+                }
+              ],
+              "gameText": "万阙垂天伤害倍率提升70%。"
+            },
+            {
+              "templateKey": "xin_c3_tongzou_crit",
+              "name": "3链·万阙垂天暴伤",
+              "category": "composite",
+              "mode": "fixed",
+              "value": 0,
+              "perStack": 0,
+              "maxStacks": 1,
+              "sourceTag": "characterTemplate",
+              "effects": [
+                {
+                  "zone": "generalCritDmg",
+                  "valueMode": "fixed",
+                  "value": 20,
+                  "segments": [
+                    {
+                      "upTo": null,
+                      "perStack": 0
+                    }
+                  ],
+                  "skillScope": "names",
+                  "skillNames": [
+                    "引枢作清辉·万阙垂天"
+                  ],
+                  "librarySkillNames": [
+                    "引枢作清辉·万阙垂天"
+                  ],
+                  "catalogIds": [],
+                  "damageType": "",
+                  "effectType": "",
+                  "element": "",
+                  "defenseKind": "",
+                  "minStacks": 0,
+                  "minResonance": 0,
+                  "effectKey": "",
+                  "onlyCombatModes": [
+                    "tongzou"
+                  ]
+                }
+              ],
+              "gameText": "同奏模态：万阙垂天暴击伤害提升20%。"
+            },
+            {
+              "templateKey": "xin_c3_tongzou_stack_crit",
+              "name": "3链·万阙垂天·同奏层数暴伤",
+              "category": "composite",
+              "mode": "stack",
+              "value": 0,
+              "perStack": 0,
+              "maxStacks": 4,
+              "sourceTag": "characterTemplate",
+              "effects": [
+                {
+                  "zone": "generalCritDmg",
+                  "valueMode": "stack",
+                  "value": 0,
+                  "segments": [
+                    {
+                      "upTo": null,
+                      "perStack": 15
+                    }
+                  ],
+                  "skillScope": "names",
+                  "skillNames": [
+                    "引枢作清辉·万阙垂天"
+                  ],
+                  "librarySkillNames": [
+                    "引枢作清辉·万阙垂天"
+                  ],
+                  "catalogIds": [],
+                  "damageType": "",
+                  "effectType": "",
+                  "element": "",
+                  "defenseKind": "",
+                  "minStacks": 0,
+                  "minResonance": 0,
+                  "effectKey": "",
+                  "onlyCombatModes": [
+                    "tongzou"
+                  ]
+                }
+              ],
+              "gameText": "同奏模态：每层自身同奏增益使万阙垂天暴击伤害额外提升15%，最多4层。",
+              "clampStacks": true,
+              "tongzouLinkedStack": true,
+              "tongzouStackOwner": "1311"
+            }
+          ],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {}
+        },
+        "4": {
+          "enabledByDefault": false,
+          "notes": "全队增伤20%/30s，覆盖率由玩家勾选（默认关）。",
+          "personalBuffs": [],
+          "teamBuffs": [
+            {
+              "category": "generalBonus",
+              "name": "4链·全队全属性增伤",
+              "mode": "fixed",
+              "value": 20,
+              "perStack": 0,
+              "maxStacks": 5,
+              "damageType": "",
+              "element": "全属性",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "sourceTag": "characterTemplate",
+              "templateKey": "xin_c4_team_general_bonus",
+              "gameText": "队伍角色附加电磁效应/电磁爆发或获得同奏/响应同奏后：队伍全角色全属性伤害加成提升20%，持续30秒。"
+            }
+          ],
+          "extraSkills": [],
+          "combatModes": {}
+        },
+        "5": {
+          "enabledByDefault": false,
+          "notes": "照世相减伤20%与致死免伤为生存效果，不建模。",
+          "personalBuffs": [],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {}
+        },
+        "6": {
+          "enabledByDefault": false,
+          "notes": "共鸣技能承伤+40%（主易伤区）；共鸣技能无视防御20%；同奏增益上限+1/响应同奏给1层；电磁效应伤害固定暴击80/230由代码批挂到电磁特殊技能。",
+          "personalBuffs": [
+            {
+              "category": "composite",
+              "name": "6链·共鸣技能承伤提升",
+              "mode": "fixed",
+              "value": 0,
+              "perStack": 0,
+              "maxStacks": 99,
+              "damageType": "",
+              "element": "",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "sourceTag": "characterTemplate",
+              "templateKey": "xin_c6_skill_vuln",
+              "effects": [
+                {
+                  "zone": "generalVulnerability",
+                  "valueMode": "fixed",
+                  "value": 40,
+                  "segments": [
+                    {
+                      "upTo": null,
+                      "perStack": 0
+                    }
+                  ],
+                  "skillScope": "names",
+                  "skillNames": [
+                    "踏月归心·共鸣技能·应世相",
+                    "踏月归心·共鸣技能·照世相",
+                    "引枢作清辉·万阙垂天",
+                    "万相流转，此心自明·应世相·步红尘",
+                    "万相流转，此心自明·应世相·镇红尘",
+                    "万相流转，此心自明·照世相·临寰宇",
+                    "万相流转，此心自明·照世相·镇寰宇",
+                    "万相流转，此心自明·照世相·万阙连衡",
+                    "乘兴一顾·变奏技能·应世相·诸相同奏",
+                    "乘兴一顾·变奏技能·照世相·诸相同奏"
+                  ],
+                  "librarySkillNames": [
+                    "踏月归心·共鸣技能·应世相",
+                    "踏月归心·共鸣技能·照世相",
+                    "引枢作清辉·万阙垂天",
+                    "万相流转，此心自明·应世相·步红尘",
+                    "万相流转，此心自明·应世相·镇红尘",
+                    "万相流转，此心自明·照世相·临寰宇",
+                    "万相流转，此心自明·照世相·镇寰宇",
+                    "万相流转，此心自明·照世相·万阙连衡",
+                    "乘兴一顾·变奏技能·应世相·诸相同奏",
+                    "乘兴一顾·变奏技能·照世相·诸相同奏"
+                  ],
+                  "catalogIds": [],
+                  "damageType": "共鸣技能",
+                  "effectType": "",
+                  "element": "",
+                  "defenseKind": "",
+                  "minStacks": 0,
+                  "minResonance": 0,
+                  "effectKey": ""
+                }
+              ],
+              "gameText": "目标受到心的共鸣技能伤害提升40%。"
+            },
+            {
+              "templateKey": "xin_c6_skill_def_ignore",
+              "name": "6链·共鸣技能无视防御",
+              "category": "typeDefense",
+              "mode": "fixed",
+              "value": 20,
+              "perStack": 0,
+              "maxStacks": 1,
+              "sourceTag": "characterTemplate",
+              "damageType": "共鸣技能",
+              "defenseKind": "ignore",
+              "gameText": "心造成的共鸣技能伤害无视目标20%防御。"
+            }
+          ],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {}
+        }
+      },
+      "combatModes": {
+        "tongzou": {
+          "notes": "同奏模态：协奏/切人/响应同奏规则写备注；主要 buff 见本块。",
+          "personalBuffs": [
+            {
+              "category": "generalAttack",
+              "name": "固有1·变奏后攻击提升",
+              "mode": "fixed",
+              "value": 50,
+              "perStack": 0,
+              "maxStacks": 5,
+              "damageType": "",
+              "element": "",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "sourceTag": "characterTemplate",
+              "templateKey": "xin_tz_innate1_bonus",
+              "gameText": "同奏模态：施放变奏·应世相/照世相·诸相同奏后，自身攻击提升50%，持续8秒，切人提前结束。"
+            }
+          ],
+          "teamBuffs": [
+            {
+              "category": "extraVulnerability",
+              "name": "同奏增益·最终伤害提升",
+              "mode": "stack",
+              "value": 0,
+              "perStack": 3,
+              "maxStacks": 6,
+              "damageType": "",
+              "element": "",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "sourceTag": "characterTemplate",
+              "templateKey": "tongzou_shared_gain_final_vuln",
+              "gameText": "同奏增益全队只有一条定义；心和锁暝分别填写自身层数，每层使该角色造成的最终伤害提升3%，最多6层。",
+              "onlyCharacterIds": [
+                "1311",
+                "1312"
+              ],
+              "tongzouSharedKey": "tongzou_shared_gain_final_vuln",
+              "tongzouStackScope": "member",
+              "clampStacks": true
+            },
+            {
+              "category": "generalDeep",
+              "name": "延奏·灯同辉全伤害加深",
+              "mode": "fixed",
+              "value": 20,
+              "perStack": 0,
+              "maxStacks": 5,
+              "damageType": "",
+              "element": "",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "sourceTag": "characterTemplate",
+              "templateKey": "xin_tz_outro_deep",
+              "gameText": "同奏模态：施放延奏后，拥有灯同辉的角色全伤害加深20%，持续30秒。",
+              "excludeSource": true
+            }
+          ],
+          "extraSkills": []
+        },
+        "dianci": {
+          "notes": "电磁模态：霆心域/霆霓/疾霆/电磁效应伤害等机制写备注；特殊技能「共鸣技能·照世相·电磁」（0链35%/1链42%）与链6固定暴击由代码批接入。",
+          "personalBuffs": [
+            {
+              "category": "elementBonus",
+              "name": "固有1·队友附加电磁效应增伤",
+              "mode": "stack",
+              "value": 0,
+              "perStack": 25,
+              "maxStacks": 2,
+              "damageType": "",
+              "element": "导电",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "sourceTag": "characterTemplate",
+              "templateKey": "xin_dc_innate1_stack_bonus",
+              "gameText": "电磁模态：队伍角色附加电磁效应后自身导电伤害加成提升25%，最多2层（每名角色1次）。",
+              "clampStacks": true
+            }
+          ],
+          "teamBuffs": [
+            {
+              "category": "elementBonus",
+              "name": "固有1·漂泊者·导电协同增伤",
+              "mode": "fixed",
+              "value": 20,
+              "perStack": 0,
+              "maxStacks": 5,
+              "damageType": "",
+              "element": "导电",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "sourceTag": "characterTemplate",
+              "templateKey": "xin_dc_rover_teammate_bonus",
+              "gameText": "若漂泊者·导电处于同一编队中，则漂泊者·导电施放变奏技能·不啻惊雷时，心和漂泊者·导电的导电伤害加成提升20%，持续30秒。",
+              "onlyCharacterIds": [
+                "1311",
+                "1309",
+                "1310"
+              ],
+              "defaultActive": false
+            },
+            {
+              "templateKey": "xin_dc_outro_deep",
+              "name": "延奏·队友导电伤害加深",
+              "category": "elementDeep",
+              "mode": "fixed",
+              "value": 20,
+              "perStack": 0,
+              "maxStacks": 1,
+              "sourceTag": "characterTemplate",
+              "element": "导电",
+              "excludeSource": true,
+              "gameText": "电磁模态：施放延奏消耗照夜明后，队伍中除心之外的角色导电伤害加深20%，持续20秒。"
+            }
+          ],
+          "extraSkills": []
+        }
+      }
+    }
+  ]
+}

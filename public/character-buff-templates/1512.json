@@ -1,0 +1,461 @@
+{
+  "version": 1,
+  "kind": "shard",
+  "characterId": "1512",
+  "characterName": "莉莉",
+  "templates": [
+    {
+      "characterId": "1512",
+      "characterName": "莉莉",
+      "revision": 1,
+      "author": "Codex(2026-10-23)",
+      "notes": "nanoka 3.8.1。条件窗口沿用手动覆盖；6链按维护者确认填指定技能增伤500%。治疗、资源、生存与动作合法性不参与伤害建模。",
+      "personalBuffs": [
+        {
+          "templateKey": "lily_er_crit",
+          "sourceTag": "characterTemplate",
+          "name": "共鸣效率·终结与永绽双暴",
+          "category": "composite",
+          "mode": "fixed",
+          "value": 0,
+          "perStack": 0,
+          "maxStacks": 1,
+          "defaultActive": true,
+          "effects": [
+            {
+              "zone": "generalCritRate",
+              "valueMode": "fixed",
+              "value": 0,
+              "segments": [
+                {
+                  "upTo": null,
+                  "perStack": 0
+                }
+              ],
+              "skillScope": "names",
+              "skillNames": [
+                "花满梦土·重击·梦之童话的落幕",
+                "花满梦土·重击·梦之魇影的终结",
+                "绮梦绽香·变奏技能·永绽"
+              ],
+              "librarySkillNames": [
+                "花满梦土·重击·梦之童话的落幕",
+                "花满梦土·重击·梦之魇影的终结",
+                "绮梦绽香·变奏技能·永绽"
+              ],
+              "catalogIds": [],
+              "damageType": "",
+              "effectType": "",
+              "element": "",
+              "defenseKind": "",
+              "minStacks": 0,
+              "minResonance": 0,
+              "effectKey": "lily_er_rate"
+            },
+            {
+              "zone": "generalCritDmg",
+              "valueMode": "fixed",
+              "value": 0,
+              "segments": [
+                {
+                  "upTo": null,
+                  "perStack": 0
+                }
+              ],
+              "skillScope": "names",
+              "skillNames": [
+                "花满梦土·重击·梦之童话的落幕",
+                "花满梦土·重击·梦之魇影的终结",
+                "绮梦绽香·变奏技能·永绽"
+              ],
+              "librarySkillNames": [
+                "花满梦土·重击·梦之童话的落幕",
+                "花满梦土·重击·梦之魇影的终结",
+                "绮梦绽香·变奏技能·永绽"
+              ],
+              "catalogIds": [],
+              "damageType": "",
+              "effectType": "",
+              "element": "",
+              "defenseKind": "",
+              "minStacks": 0,
+              "minResonance": 0,
+              "effectKey": "lily_er_dmg"
+            }
+          ],
+          "gameText": "莉莉自身共鸣效率大于100%时，每超过1%的共鸣效率使重击·梦之童话的落幕、重击·梦之魇影的终结和变奏技能·永绽造成伤害的暴击提升0.5%，上限80%，暴击伤害提升1%，上限160%。"
+        }
+      ],
+      "teamBuffs": [
+        {
+          "templateKey": "lily_outro_deep",
+          "sourceTag": "characterTemplate",
+          "name": "延奏·熏香绽放",
+          "category": "composite",
+          "mode": "fixed",
+          "value": 0,
+          "perStack": 0,
+          "maxStacks": 1,
+          "defaultActive": true,
+          "effects": [
+            {
+              "zone": "generalDeep",
+              "valueMode": "fixed",
+              "value": 25,
+              "segments": [
+                {
+                  "upTo": null,
+                  "perStack": 0
+                }
+              ],
+              "skillScope": "all",
+              "skillNames": [],
+              "librarySkillNames": [],
+              "catalogIds": [],
+              "damageType": "",
+              "effectType": "",
+              "element": "",
+              "defenseKind": "",
+              "minStacks": 0,
+              "minResonance": 0,
+              "effectKey": "generalDeep"
+            }
+          ],
+          "gameText": "队伍中的角色全伤害加深25%，持续30秒。"
+        },
+        {
+          "templateKey": "lily_dreamfang",
+          "sourceTag": "characterTemplate",
+          "name": "梦芳·攻击与2链双暴",
+          "category": "composite",
+          "mode": "stack",
+          "value": 0,
+          "perStack": 0,
+          "maxStacks": 4,
+          "defaultActive": true,
+          "effects": [
+            {
+              "zone": "generalAttack",
+              "valueMode": "stack",
+              "value": 0,
+              "segments": [
+                {
+                  "upTo": 4,
+                  "perStack": 7
+                }
+              ],
+              "skillScope": "all",
+              "skillNames": [],
+              "librarySkillNames": [],
+              "catalogIds": [],
+              "damageType": "",
+              "effectType": "",
+              "element": "",
+              "defenseKind": "",
+              "minStacks": 0,
+              "minResonance": 0,
+              "effectKey": "generalAttack"
+            },
+            {
+              "zone": "generalCritRate",
+              "valueMode": "stack",
+              "value": 0,
+              "segments": [
+                {
+                  "upTo": 4,
+                  "perStack": 2
+                }
+              ],
+              "skillScope": "all",
+              "skillNames": [],
+              "librarySkillNames": [],
+              "catalogIds": [],
+              "damageType": "",
+              "effectType": "",
+              "element": "",
+              "defenseKind": "",
+              "minStacks": 0,
+              "minResonance": 2,
+              "effectKey": "generalCritRate"
+            },
+            {
+              "zone": "generalCritDmg",
+              "valueMode": "stack",
+              "value": 0,
+              "segments": [
+                {
+                  "upTo": 4,
+                  "perStack": 6
+                }
+              ],
+              "skillScope": "all",
+              "skillNames": [],
+              "librarySkillNames": [],
+              "catalogIds": [],
+              "damageType": "",
+              "effectType": "",
+              "element": "",
+              "defenseKind": "",
+              "minStacks": 0,
+              "minResonance": 2,
+              "effectKey": "generalCritDmg"
+            }
+          ],
+          "clampStacks": true,
+          "defaultStacks": 0,
+          "gameText": "【摇篮的安魂语】持续25秒，队伍中的角色施放变奏技能时获得1层【梦芳】，每层全队攻击提升7%，上限4层；莉莉登场时移除。1链每次获取提升至2层；2链每层额外提升2%暴击率和6%暴击伤害。手动填写梦芳层数，不与同奏共享。"
+        },
+        {
+          "templateKey": "lily_slumber_tongzou_atk",
+          "sourceTag": "characterTemplate",
+          "name": "斑白眠梦·同奏攻击",
+          "category": "composite",
+          "mode": "stack",
+          "value": 0,
+          "perStack": 0,
+          "maxStacks": 4,
+          "defaultActive": true,
+          "effects": [
+            {
+              "zone": "generalAttack",
+              "valueMode": "stack",
+              "value": 0,
+              "segments": [
+                {
+                  "upTo": 4,
+                  "perStack": 7
+                }
+              ],
+              "skillScope": "all",
+              "skillNames": [],
+              "librarySkillNames": [],
+              "catalogIds": [],
+              "damageType": "",
+              "effectType": "",
+              "element": "",
+              "defenseKind": "",
+              "minStacks": 0,
+              "minResonance": 0,
+              "effectKey": "generalAttack",
+              "onlyCharacterIds": [
+                "1311",
+                "1312"
+              ]
+            }
+          ],
+          "clampStacks": true,
+          "tongzouLinkedStack": true,
+          "tongzouStackScope": "member",
+          "defaultStacks": 0,
+          "gameText": "重击终结获得香尘，6秒内延奏赋予【斑白眠梦】，持续30秒，每25秒可触发1次。受益角色须为登场且可响应同奏，按其自身同奏层数每层攻击提升7%，最多取4层；开关独立，不生成第二条同奏本体。"
+        },
+        {
+          "templateKey": "lily_slumber_echo_crit",
+          "sourceTag": "characterTemplate",
+          "name": "斑白眠梦·声骸双暴",
+          "category": "composite",
+          "mode": "fixed",
+          "value": 0,
+          "perStack": 0,
+          "maxStacks": 1,
+          "defaultActive": true,
+          "effects": [
+            {
+              "zone": "typeCritRate",
+              "valueMode": "fixed",
+              "value": 10,
+              "segments": [
+                {
+                  "upTo": null,
+                  "perStack": 0
+                }
+              ],
+              "skillScope": "all",
+              "skillNames": [],
+              "librarySkillNames": [],
+              "catalogIds": [],
+              "damageType": "声骸",
+              "effectType": "",
+              "element": "",
+              "defenseKind": "",
+              "minStacks": 0,
+              "minResonance": 0,
+              "effectKey": "typeCritRate"
+            },
+            {
+              "zone": "typeCritDmg",
+              "valueMode": "fixed",
+              "value": 20,
+              "segments": [
+                {
+                  "upTo": null,
+                  "perStack": 0
+                }
+              ],
+              "skillScope": "all",
+              "skillNames": [],
+              "librarySkillNames": [],
+              "catalogIds": [],
+              "damageType": "声骸",
+              "effectType": "",
+              "element": "",
+              "defenseKind": "",
+              "minStacks": 0,
+              "minResonance": 0,
+              "effectKey": "typeCritDmg"
+            }
+          ],
+          "gameText": "【斑白眠梦】持续30秒，队伍中的登场角色提升10%声骸技能暴击和20%声骸技能暴击伤害，并提升附近队伍所有角色抗打断。声骸双暴不要求同奏，与条件攻击分别覆盖。"
+        }
+      ],
+      "extraSkills": [],
+      "combatModes": {},
+      "resonanceChains": {
+        "1": {
+          "enabledByDefault": false,
+          "notes": "重击·编织的梦之童话和重击·编织的梦之魇影持续施放期间，以及施放重击·梦之童话的落幕和重击·梦之魇影的终结时免疫打断；\n【摇篮的安魂语】持续期间，当队伍中的角色施放变奏技能时，获取【梦芳】的层数提升至2层。",
+          "gameText": "重击·编织的梦之童话和重击·编织的梦之魇影持续施放期间，以及施放重击·梦之童话的落幕和重击·梦之魇影的终结时免疫打断；\n【摇篮的安魂语】持续期间，当队伍中的角色施放变奏技能时，获取【梦芳】的层数提升至2层。",
+          "personalBuffs": [],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {}
+        },
+        "2": {
+          "enabledByDefault": false,
+          "notes": "【摇篮的安魂语】持续期间，当队伍中的角色施放变奏技能时，每层【梦芳】额外提升2%暴击率和6%暴击伤害。",
+          "gameText": "【摇篮的安魂语】持续期间，当队伍中的角色施放变奏技能时，每层【梦芳】额外提升2%暴击率和6%暴击伤害。",
+          "personalBuffs": [],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {}
+        },
+        "3": {
+          "enabledByDefault": false,
+          "notes": "莉莉施放变奏技能·永绽时，额外获得25点协奏能量和170点【绮梦香息】。\n重击·编织的梦之童话和重击·编织的梦之魇影持续施放期间的梦铃的祷声获取效率提升，治疗量提升50%。",
+          "gameText": "莉莉施放变奏技能·永绽时，额外获得25点协奏能量和170点【绮梦香息】。\n重击·编织的梦之童话和重击·编织的梦之魇影持续施放期间的梦铃的祷声获取效率提升，治疗量提升50%。",
+          "personalBuffs": [],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {}
+        },
+        "4": {
+          "enabledByDefault": false,
+          "notes": "重击·编织的梦之童话和重击·编织的梦之魇影持续施放期间，以及梦乡持续期间提供的治疗量提升30%。",
+          "gameText": "重击·编织的梦之童话和重击·编织的梦之魇影持续施放期间，以及梦乡持续期间提供的治疗量提升30%。",
+          "personalBuffs": [],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {}
+        },
+        "5": {
+          "enabledByDefault": false,
+          "notes": "重击·梦之童话的落幕、重击·梦之魇影的终结和变奏技能·永绽的伤害倍率提升40%。",
+          "gameText": "重击·梦之童话的落幕、重击·梦之魇影的终结和变奏技能·永绽的伤害倍率提升40%。",
+          "personalBuffs": [
+            {
+              "templateKey": "lily_c5_mult",
+              "sourceTag": "characterTemplate",
+              "name": "5链·终结与永绽倍率",
+              "category": "composite",
+              "mode": "fixed",
+              "value": 0,
+              "perStack": 0,
+              "maxStacks": 1,
+              "defaultActive": true,
+              "effects": [
+                {
+                  "zone": "multBoost",
+                  "valueMode": "fixed",
+                  "value": 40,
+                  "segments": [
+                    {
+                      "upTo": null,
+                      "perStack": 0
+                    }
+                  ],
+                  "skillScope": "names",
+                  "skillNames": [
+                    "花满梦土·重击·梦之童话的落幕",
+                    "花满梦土·重击·梦之魇影的终结",
+                    "绮梦绽香·变奏技能·永绽"
+                  ],
+                  "librarySkillNames": [
+                    "花满梦土·重击·梦之童话的落幕",
+                    "花满梦土·重击·梦之魇影的终结",
+                    "绮梦绽香·变奏技能·永绽"
+                  ],
+                  "catalogIds": [],
+                  "damageType": "",
+                  "effectType": "",
+                  "element": "",
+                  "defenseKind": "",
+                  "minStacks": 0,
+                  "minResonance": 0,
+                  "effectKey": "multBoost"
+                }
+              ],
+              "gameText": "重击·梦之童话的落幕、重击·梦之魇影的终结和变奏技能·永绽的伤害倍率提升40%。"
+            }
+          ],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {}
+        },
+        "6": {
+          "enabledByDefault": false,
+          "notes": "重击·梦之童话的落幕、重击·梦之魇影的终结和变奏技能·永绽造成的衍射伤害额外提升500%。",
+          "gameText": "重击·梦之童话的落幕、重击·梦之魇影的终结和变奏技能·永绽造成的衍射伤害额外提升500%。",
+          "personalBuffs": [
+            {
+              "templateKey": "lily_c6_bonus",
+              "sourceTag": "characterTemplate",
+              "name": "6链·终结与永绽增伤",
+              "category": "composite",
+              "mode": "fixed",
+              "value": 0,
+              "perStack": 0,
+              "maxStacks": 1,
+              "defaultActive": true,
+              "effects": [
+                {
+                  "zone": "elementBonus",
+                  "valueMode": "fixed",
+                  "value": 500,
+                  "segments": [
+                    {
+                      "upTo": null,
+                      "perStack": 0
+                    }
+                  ],
+                  "skillScope": "names",
+                  "skillNames": [
+                    "花满梦土·重击·梦之童话的落幕",
+                    "花满梦土·重击·梦之魇影的终结",
+                    "绮梦绽香·变奏技能·永绽"
+                  ],
+                  "librarySkillNames": [
+                    "花满梦土·重击·梦之童话的落幕",
+                    "花满梦土·重击·梦之魇影的终结",
+                    "绮梦绽香·变奏技能·永绽"
+                  ],
+                  "catalogIds": [],
+                  "damageType": "",
+                  "effectType": "",
+                  "element": "衍射",
+                  "defenseKind": "",
+                  "minStacks": 0,
+                  "minResonance": 0,
+                  "effectKey": "elementBonus"
+                }
+              ],
+              "gameText": "重击·梦之童话的落幕、重击·梦之魇影的终结和变奏技能·永绽造成的衍射伤害额外提升500%。（数据说明：按增伤区建模。）"
+            }
+          ],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {}
+        }
+      }
+    }
+  ]
+}

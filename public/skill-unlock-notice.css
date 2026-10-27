@@ -1,0 +1,20 @@
+/* Chain-unlocked skills: display only, scoped to the axis library. */
+.axis-skill-library .skill-chain-unlock-badge {
+  display:inline-flex; align-items:center; flex:0 0 auto; gap:3px;
+  padding:2px 6px; border-radius:5px; background:#f4d479; color:#292319;
+  font-size:12px; font-weight:700; line-height:1.5; white-space:nowrap;
+}
+.axis-skill-library .skill-type-tab.has-chain-unlock {
+  border-color:#b99a49; box-shadow:inset 3px 0 0 #f4d479;
+}
+.axis-skill-library .skill-type-tab.has-chain-unlock:not(.active) {
+  background:color-mix(in srgb, #f4d479 12%, var(--panel, #1c222b));
+}
+.axis-skill-library .skill-type-tab .skill-chain-unlock-badge { margin-left:6px; }
+.axis-skill-library .skill-card.has-chain-unlock {
+  outline:1px solid #b99a49; outline-offset:1px;
+}
+.axis-skill-library .skill-card > .skill-chain-unlock-badge { margin-right:8px; }
+@media (max-width:600px) {
+  .axis-skill-library .skill-card.has-chain-unlock { flex-wrap:wrap; row-gap:5px; }
+}

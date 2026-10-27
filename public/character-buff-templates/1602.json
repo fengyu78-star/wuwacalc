@@ -1,0 +1,282 @@
+{
+  "version": 1,
+  "kind": "shard",
+  "characterId": "1602",
+  "characterName": "丹瑾",
+  "templates": [
+    {
+      "characterId": "1602",
+      "characterName": "丹瑾",
+      "revision": 3,
+      "author": "OrangeSun",
+      "notes": "",
+      "personalBuffs": [
+        {
+          "category": "generalBonus",
+          "name": "朱蚀之刻",
+          "mode": "fixed",
+          "value": 20,
+          "perStack": 0,
+          "maxStacks": 5,
+          "damageType": "",
+          "element": "",
+          "defenseKind": "",
+          "convergenceVuln": "",
+          "sourceTag": "characterTemplate",
+          "templateKey": "tpl_mrzy93kb_1n42l",
+          "gameText": "朱蚀之刻\n丹瑾攻击携带朱蚀之刻的目标时，造成的伤害提升20%。\n\n朱蚀\n在第2段普攻、闪避反击或变奏技能击雠施放后，短按共鸣技能，可进行最多2段的连续攻击，造成湮灭伤害。\n第2段朱蚀命中时目标时，对目标附加朱蚀之刻。"
+        },
+        {
+          "category": "typeBonus",
+          "name": "固有·盈溢（烬灭增幅重击）",
+          "mode": "fixed",
+          "value": 30,
+          "perStack": 0,
+          "maxStacks": 5,
+          "damageType": "重击",
+          "element": "",
+          "defenseKind": "",
+          "convergenceVuln": "",
+          "sourceTag": "characterTemplate",
+          "templateKey": "tpl_mrzyd69v_ti9up",
+          "gameText": "施放共鸣技能烬灭后，丹瑾的重击伤害提升30%，效果持续5秒。"
+        },
+        {
+          "category": "composite",
+          "name": "固有·绯光（闪避反击增幅朱蚀）",
+          "mode": "fixed",
+          "value": 0,
+          "perStack": 0,
+          "maxStacks": 99,
+          "damageType": "",
+          "element": "",
+          "defenseKind": "",
+          "convergenceVuln": "",
+          "effects": [
+            {
+              "zone": "generalBonus",
+              "valueMode": "fixed",
+              "value": 20,
+              "segments": [
+                {
+                  "upTo": null,
+                  "perStack": 0
+                }
+              ],
+              "skillScope": "names",
+              "skillNames": [
+                "朱华残章·朱蚀一段",
+                "朱蚀一段",
+                "朱华残章·朱蚀二段",
+                "朱蚀二段"
+              ],
+              "librarySkillNames": [
+                "朱华残章·朱蚀一段",
+                "朱华残章·朱蚀二段"
+              ],
+              "catalogIds": [],
+              "damageType": "共鸣技能",
+              "effectType": "",
+              "element": "湮灭",
+              "defenseKind": "",
+              "minStacks": 0,
+              "minResonance": 0,
+              "onlyCharacterIds": [],
+              "onlyCombatModes": [],
+              "effectKey": ""
+            }
+          ],
+          "sourceTag": "characterTemplate",
+          "templateKey": "tpl_mrzyeffk_yd0gb",
+          "gameText": "以闪避反击·逐影触发的共鸣技能朱蚀伤害提升20%，且其消耗的生命值和回复的【彤华】翻倍。"
+        }
+      ],
+      "teamBuffs": [
+        {
+          "category": "elementDeep",
+          "name": "延奏·丹瑾",
+          "mode": "fixed",
+          "value": 23,
+          "perStack": 0,
+          "maxStacks": 5,
+          "damageType": "",
+          "element": "湮灭",
+          "defenseKind": "",
+          "convergenceVuln": "",
+          "sourceTag": "characterTemplate",
+          "templateKey": "tpl_mrzyjh4v_bz5bf",
+          "gameText": "下一位登场角色湮灭伤害加深23%，效果持续14秒，若切换至其他角色则该效果提前结束。"
+        }
+      ],
+      "extraSkills": [],
+      "resonanceChains": {
+        "1": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [
+            {
+              "category": "generalAttack",
+              "name": "1链（上限6层）",
+              "mode": "stack",
+              "value": 0,
+              "perStack": 5,
+              "maxStacks": 6,
+              "damageType": "",
+              "element": "",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "sourceTag": "characterTemplate",
+              "templateKey": "tpl_mrzyw4fn_sp7uw",
+              "gameText": "丹瑾攻击携带共鸣技能朱蚀之刻的目标时，自身的攻击提升5%，持续6秒，可叠加6层，每次受到伤害时减少1层。"
+            }
+          ],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {},
+          "gameText": "丹瑾攻击携带共鸣技能朱蚀之刻的目标时，自身的攻击提升5%，持续6秒，可叠加6层，每次受到伤害时减少1层。"
+        },
+        "2": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [
+            {
+              "category": "generalBonus",
+              "name": "2链（朱蚀之刻）",
+              "mode": "fixed",
+              "value": 20,
+              "perStack": 0,
+              "maxStacks": 5,
+              "damageType": "",
+              "element": "",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "sourceTag": "characterTemplate",
+              "templateKey": "tpl_mrzynsii_hzgrv",
+              "gameText": "丹瑾攻击携带共鸣技能朱蚀之刻的目标时，造成的伤害额外提升20%。"
+            }
+          ],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {},
+          "gameText": "丹瑾攻击携带共鸣技能朱蚀之刻的目标时，造成的伤害额外提升20%。"
+        },
+        "3": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [
+            {
+              "category": "typeBonus",
+              "name": "3链",
+              "mode": "fixed",
+              "value": 30,
+              "perStack": 0,
+              "maxStacks": 5,
+              "damageType": "共鸣解放",
+              "element": "",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "sourceTag": "characterTemplate",
+              "templateKey": "tpl_mrzyp3rj_uugc2",
+              "gameText": "共鸣解放伤害加成提升30%。"
+            }
+          ],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {},
+          "gameText": "共鸣解放伤害加成提升30%。"
+        },
+        "4": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [
+            {
+              "category": "generalCritRate",
+              "name": "4链（半回路以上）",
+              "mode": "fixed",
+              "value": 15,
+              "perStack": 0,
+              "maxStacks": 5,
+              "damageType": "",
+              "element": "",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "sourceTag": "characterTemplate",
+              "templateKey": "tpl_mrzyqwbk_4whr9",
+              "gameText": "【彤华】积攒60点以上时，丹瑾的暴击提升15%。\n施放重击·缭乱消耗所有【彤华】后，此效果会被延续至重击·纷落结束。"
+            }
+          ],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {},
+          "gameText": "【彤华】积攒60点以上时，丹瑾的暴击提升15%。\n施放重击·缭乱消耗所有【彤华】后，此效果会被延续至重击·纷落结束。"
+        },
+        "5": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [
+            {
+              "category": "elementBonus",
+              "name": "5链（全局）",
+              "mode": "fixed",
+              "value": 15,
+              "perStack": 0,
+              "maxStacks": 5,
+              "damageType": "",
+              "element": "湮灭",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "sourceTag": "characterTemplate",
+              "templateKey": "tpl_mrzys20p_pwlkm",
+              "gameText": "丹瑾的湮灭伤害加成提升15%，生命低于60%时湮灭伤害加成额外提升15%。"
+            },
+            {
+              "category": "elementBonus",
+              "name": "5链（60%生命以下额外）",
+              "mode": "fixed",
+              "value": 15,
+              "perStack": 0,
+              "maxStacks": 5,
+              "damageType": "",
+              "element": "湮灭",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "sourceTag": "characterTemplate",
+              "templateKey": "tpl_mrzysho3_4xku7",
+              "gameText": "丹瑾的湮灭伤害加成提升15%，生命低于60%时湮灭伤害加成额外提升15%。"
+            }
+          ],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {},
+          "gameText": "丹瑾的湮灭伤害加成提升15%，生命低于60%时湮灭伤害加成额外提升15%。"
+        },
+        "6": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [],
+          "teamBuffs": [
+            {
+              "category": "generalAttack",
+              "name": "丹瑾·6链（回路重击）",
+              "mode": "fixed",
+              "value": 20,
+              "perStack": 0,
+              "maxStacks": 5,
+              "damageType": "",
+              "element": "",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "sourceTag": "characterTemplate",
+              "templateKey": "tpl_mrzyuoqw_2eody",
+              "gameText": "施放重击缭乱时，队伍中的角色的攻击提升20%，持续20秒。"
+            }
+          ],
+          "extraSkills": [],
+          "combatModes": {},
+          "gameText": "施放重击缭乱时，队伍中的角色的攻击提升20%，持续20秒。"
+        }
+      },
+      "combatModes": {}
+    }
+  ]
+}

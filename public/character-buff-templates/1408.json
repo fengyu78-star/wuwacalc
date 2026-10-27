@@ -1,0 +1,219 @@
+{
+  "version": 1,
+  "kind": "shard",
+  "characterId": "1408",
+  "characterName": "漂泊者·气动",
+  "templates": [
+    {
+      "characterId": "1408",
+      "characterName": "漂泊者·气动",
+      "revision": 2,
+      "author": "",
+      "notes": "",
+      "personalBuffs": [
+        {
+          "category": "generalAttack",
+          "name": "固有1·释放变奏后",
+          "mode": "fixed",
+          "value": 20,
+          "perStack": 0,
+          "maxStacks": 5,
+          "damageType": "",
+          "element": "",
+          "defenseKind": "",
+          "convergenceVuln": "",
+          "sourceTag": "characterTemplate",
+          "templateKey": "tpl_ms1auz01_c2fye",
+          "gameText": "施放变奏技能狂岚未尽时，攻击提升20%，持续10秒。"
+        }
+      ],
+      "teamBuffs": [],
+      "extraSkills": [],
+      "resonanceChains": {
+        "1": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {},
+          "gameText": "施放空中攻击抃风儛润时，获得抗打断提升效果，持续3秒。"
+        },
+        "2": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {},
+          "gameText": "施放共鸣技能缥缈无相时，队伍中登场角色获得持续回复生命效果，每3秒回复漂泊者20%攻击的生命值，持续30秒。期间登场角色生命值低于35%时，立即回复登场角色已损失生命值10%的生命值，该效果每10秒可触发1次，且不受治疗效果加成影响。"
+        },
+        "3": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [
+            {
+              "category": "elementBonus",
+              "name": "3链",
+              "mode": "fixed",
+              "value": 15,
+              "perStack": 0,
+              "maxStacks": 5,
+              "damageType": "",
+              "element": "气动",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "sourceTag": "characterTemplate",
+              "templateKey": "tpl_ms1auhir_ibd43",
+              "gameText": "气动伤害加成提升15%。"
+            }
+          ],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {},
+          "gameText": "气动伤害加成提升15%。"
+        },
+        "4": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [
+            {
+              "category": "typeBonus",
+              "name": "4链·释放抃风儛润后",
+              "mode": "fixed",
+              "value": 15,
+              "perStack": 0,
+              "maxStacks": 5,
+              "damageType": "共鸣技能",
+              "element": "",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "sourceTag": "characterTemplate",
+              "templateKey": "tpl_ms1au5iu_0syky",
+              "gameText": "施放空中攻击抃风儛润时，共鸣技能伤害加成提升15%，持续5秒。"
+            }
+          ],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {},
+          "gameText": "施放空中攻击抃风儛润时，共鸣技能伤害加成提升15%，持续5秒。"
+        },
+        "5": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [
+            {
+              "category": "composite",
+              "name": "5链",
+              "mode": "fixed",
+              "value": 0,
+              "perStack": 0,
+              "maxStacks": 99,
+              "damageType": "",
+              "element": "",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "effects": [
+                {
+                  "zone": "multBoost",
+                  "valueMode": "fixed",
+                  "value": 20,
+                  "segments": [
+                    {
+                      "upTo": null,
+                      "perStack": 0
+                    }
+                  ],
+                  "skillScope": "names",
+                  "skillNames": [
+                    "万象归墟·技能"
+                  ],
+                  "librarySkillNames": [
+                    "万象归墟·技能"
+                  ],
+                  "catalogIds": [],
+                  "damageType": "共鸣解放",
+                  "effectType": "",
+                  "element": "气动",
+                  "defenseKind": "",
+                  "minStacks": 0,
+                  "minResonance": 0,
+                  "onlyCharacterIds": [],
+                  "onlyCombatModes": [],
+                  "effectKey": ""
+                }
+              ],
+              "sourceTag": "characterTemplate",
+              "templateKey": "tpl_ms1asyjy_bbzxw",
+              "gameText": "共鸣解放万象归墟伤害倍率提升20%。"
+            }
+          ],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {},
+          "gameText": "共鸣解放万象归墟伤害倍率提升20%。"
+        },
+        "6": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [
+            {
+              "category": "composite",
+              "name": "6链",
+              "mode": "fixed",
+              "value": 0,
+              "perStack": 0,
+              "maxStacks": 99,
+              "damageType": "",
+              "element": "",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "effects": [
+                {
+                  "zone": "multBoost",
+                  "valueMode": "fixed",
+                  "value": 30,
+                  "segments": [
+                    {
+                      "upTo": null,
+                      "perStack": 0
+                    }
+                  ],
+                  "skillScope": "names",
+                  "skillNames": [
+                    "风息流转·缥缈无相第一段",
+                    "缥缈无相第一段",
+                    "风息流转·缥缈无相第二段",
+                    "缥缈无相第二段"
+                  ],
+                  "librarySkillNames": [
+                    "风息流转·缥缈无相第一段",
+                    "风息流转·缥缈无相第二段"
+                  ],
+                  "catalogIds": [],
+                  "damageType": "共鸣技能",
+                  "effectType": "",
+                  "element": "气动",
+                  "defenseKind": "",
+                  "minStacks": 0,
+                  "minResonance": 0,
+                  "onlyCharacterIds": [],
+                  "onlyCombatModes": [],
+                  "effectKey": ""
+                }
+              ],
+              "sourceTag": "characterTemplate",
+              "templateKey": "tpl_ms1atimj_y08yt",
+              "gameText": "共鸣技能缥缈无相伤害倍率提升30%。"
+            }
+          ],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {},
+          "gameText": "共鸣技能缥缈无相伤害倍率提升30%。"
+        }
+      },
+      "combatModes": {}
+    }
+  ]
+}

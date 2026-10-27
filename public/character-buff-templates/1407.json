@@ -1,0 +1,268 @@
+{
+  "version": 1,
+  "kind": "shard",
+  "characterId": "1407",
+  "characterName": "夏空",
+  "templates": [
+    {
+      "characterId": "1407",
+      "characterName": "夏空",
+      "revision": 3,
+      "author": "",
+      "notes": "夏空：全队【夏空·延奏】风蚀效应加深+100%（适用于所有角色的风蚀效应伤害，含同时视为风蚀）。",
+      "personalBuffs": [
+        {
+          "category": "composite",
+          "name": "固有2",
+          "mode": "fixed",
+          "value": 0,
+          "perStack": 0,
+          "maxStacks": 99,
+          "damageType": "",
+          "element": "",
+          "defenseKind": "",
+          "convergenceVuln": "",
+          "effects": [
+            {
+              "zone": "generalBonus",
+              "valueMode": "fixed",
+              "value": 30,
+              "segments": [
+                {
+                  "upTo": null,
+                  "perStack": 0
+                }
+              ],
+              "skillScope": "names",
+              "skillNames": [
+                "风与诗乐的交响·四拍重奏",
+                "四拍重奏"
+              ],
+              "librarySkillNames": [
+                "风与诗乐的交响·四拍重奏"
+              ],
+              "catalogIds": [],
+              "damageType": "重击",
+              "effectType": "",
+              "element": "气动",
+              "defenseKind": "",
+              "minStacks": 0,
+              "minResonance": 0,
+              "onlyCharacterIds": [],
+              "onlyCombatModes": [],
+              "effectKey": ""
+            }
+          ],
+          "sourceTag": "characterTemplate",
+          "templateKey": "tpl_ms0ee3ma_s2l8f",
+          "gameText": "重击·四拍重奏造成的伤害提升30%。"
+        }
+      ],
+      "teamBuffs": [
+        {
+          "templateKey": "xiakong_outro_wind_erosion_deep",
+          "category": "typeDeep",
+          "name": "夏空·延奏",
+          "mode": "fixed",
+          "value": 100,
+          "damageType": "效应",
+          "effectType": "风蚀",
+          "element": "",
+          "defenseKind": "",
+          "onlyCharacterIds": [],
+          "sourceTag": "characterTemplate",
+          "perStack": 0,
+          "maxStacks": 5,
+          "gameText": "队伍中登场角色周围的目标受到【风蚀效应】的伤害加深100%，持续30秒。"
+        },
+        {
+          "category": "elementBonus",
+          "name": "音律独奏",
+          "mode": "fixed",
+          "value": 24,
+          "perStack": 0,
+          "maxStacks": 5,
+          "damageType": "",
+          "element": "气动",
+          "defenseKind": "",
+          "convergenceVuln": "",
+          "sourceTag": "characterTemplate",
+          "templateKey": "tpl_ms0efxj6_ocqq2",
+          "gameText": "夏空或合奏音影在进入音律独奏状态时能够以自身为中心，使附近队伍中所有角色的气动伤害加成提升24%，该效果不可叠加。"
+        }
+      ],
+      "extraSkills": [],
+      "resonanceChains": {
+        "1": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [
+            {
+              "category": "generalAttack",
+              "name": "1链",
+              "mode": "fixed",
+              "value": 35,
+              "perStack": 0,
+              "maxStacks": 5,
+              "damageType": "",
+              "element": "",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "sourceTag": "characterTemplate",
+              "templateKey": "tpl_ms0ej9v4_yk6u5",
+              "gameText": "施放共鸣技能谐律速奏时，夏空获得免疫打断的效果，持续3秒；施放普攻时，夏空的攻击提升35%，持续10秒。"
+            }
+          ],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {},
+          "gameText": "施放共鸣技能谐律速奏时，夏空获得免疫打断的效果，持续3秒；施放普攻时，夏空的攻击提升35%，持续10秒。"
+        },
+        "2": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [],
+          "teamBuffs": [
+            {
+              "category": "elementBonus",
+              "name": "夏空·2链",
+              "mode": "fixed",
+              "value": 40,
+              "perStack": 0,
+              "maxStacks": 5,
+              "damageType": "",
+              "element": "气动",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "sourceTag": "characterTemplate",
+              "templateKey": "tpl_ms0ejm68_qhq3d",
+              "gameText": "共鸣解放歌者的三重华彩持续期间队伍中的角色气动伤害加成提升40%。"
+            }
+          ],
+          "extraSkills": [],
+          "combatModes": {},
+          "gameText": "共鸣解放歌者的三重华彩持续期间队伍中的角色气动伤害加成提升40%。"
+        },
+        "3": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {},
+          "gameText": "施放普攻第4段时可额外获得1格【音律】；共鸣技能谐律速奏可使用次数增加1次。"
+        },
+        "4": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [
+            {
+              "category": "composite",
+              "name": "4链",
+              "mode": "fixed",
+              "value": 0,
+              "perStack": 0,
+              "maxStacks": 99,
+              "damageType": "",
+              "element": "",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "effects": [
+                {
+                  "zone": "generalDefense",
+                  "valueMode": "fixed",
+                  "value": 45,
+                  "segments": [
+                    {
+                      "upTo": null,
+                      "perStack": 0
+                    }
+                  ],
+                  "skillScope": "names",
+                  "skillNames": [
+                    "风与诗乐的交响·四拍重奏",
+                    "四拍重奏",
+                    "歌者的三重华彩·即兴的交响诗",
+                    "即兴的交响诗",
+                    "歌者的三重华彩·交响诗·主音",
+                    "交响诗·主音"
+                  ],
+                  "librarySkillNames": [
+                    "风与诗乐的交响·四拍重奏",
+                    "歌者的三重华彩·即兴的交响诗",
+                    "歌者的三重华彩·交响诗·主音"
+                  ],
+                  "catalogIds": [],
+                  "damageType": "重击",
+                  "effectType": "",
+                  "element": "气动",
+                  "defenseKind": "ignore",
+                  "minStacks": 0,
+                  "minResonance": 0,
+                  "onlyCharacterIds": [],
+                  "onlyCombatModes": [],
+                  "effectKey": ""
+                }
+              ],
+              "sourceTag": "characterTemplate",
+              "templateKey": "tpl_ms0ek9nx_wzep5",
+              "gameText": "夏空重击四拍重奏造成伤害时无视敌人45%的防御；\n夏空造成共鸣解放伤害时无视敌人45%的防御。"
+            }
+          ],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {},
+          "gameText": "夏空重击四拍重奏造成伤害时无视敌人45%的防御；\n夏空造成共鸣解放伤害时无视敌人45%的防御。"
+        },
+        "5": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [
+            {
+              "category": "typeBonus",
+              "name": "5链",
+              "mode": "fixed",
+              "value": 40,
+              "perStack": 0,
+              "maxStacks": 5,
+              "damageType": "共鸣解放",
+              "element": "",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "sourceTag": "characterTemplate",
+              "templateKey": "tpl_ms0emk91_o3go2",
+              "gameText": "夏空共鸣解放伤害加成提升40%；\n夏空共鸣解放歌者的三重华彩附近范围内的角色受到的伤害降低30%。"
+            }
+          ],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {},
+          "gameText": "夏空共鸣解放伤害加成提升40%；\n夏空共鸣解放歌者的三重华彩附近范围内的角色受到的伤害降低30%。"
+        },
+        "6": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [],
+          "teamBuffs": [],
+          "extraSkills": [
+            {
+              "templateKey": "extra_ms0ene94_8hsar",
+              "name": "6链·额外",
+              "damageType": "共鸣解放",
+              "effectType": "聚爆",
+              "effectLayers": 13,
+              "effectBurstLayers": 0,
+              "effectCount": 1,
+              "baseMult": 220,
+              "fixedDamage": false,
+              "effectMultMode": "custom"
+            }
+          ],
+          "combatModes": {},
+          "gameText": "夏空或合奏音影在进入音律独奏状态时可以对周围目标造成220%的气动伤害，该伤害视为共鸣解放伤害。"
+        }
+      },
+      "combatModes": {}
+    }
+  ]
+}

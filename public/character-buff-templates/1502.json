@@ -1,0 +1,214 @@
+{
+  "version": 1,
+  "kind": "shard",
+  "characterId": "1502",
+  "characterName": "漂泊者·衍射",
+  "templates": [
+    {
+      "characterId": "1502",
+      "characterName": "漂泊者·衍射",
+      "revision": 3,
+      "author": "",
+      "notes": "",
+      "personalBuffs": [
+        {
+          "category": "composite",
+          "name": "固有一",
+          "mode": "fixed",
+          "value": 0,
+          "perStack": 0,
+          "maxStacks": 99,
+          "damageType": "",
+          "element": "",
+          "defenseKind": "",
+          "convergenceVuln": "",
+          "effects": [
+            {
+              "zone": "elementBonus",
+              "valueMode": "fixed",
+              "value": 60,
+              "segments": [
+                {
+                  "upTo": null,
+                  "perStack": 0
+                }
+              ],
+              "skillScope": "names",
+              "skillNames": [
+                "万物微尘·浮声千斩·回声一段",
+                "浮声千斩·回声一段",
+                "万物微尘·浮声千斩·回声二段",
+                "浮声千斩·回声二段"
+              ],
+              "librarySkillNames": [
+                "万物微尘·浮声千斩·回声一段",
+                "万物微尘·浮声千斩·回声二段"
+              ],
+              "catalogIds": [],
+              "damageType": "共鸣技能",
+              "effectType": "",
+              "element": "衍射",
+              "defenseKind": "",
+              "minStacks": 0,
+              "minResonance": 0,
+              "onlyCharacterIds": [],
+              "onlyCombatModes": [],
+              "effectKey": ""
+            }
+          ],
+          "sourceTag": "characterTemplate",
+          "templateKey": "tpl_ms0b52nh_nog9p",
+          "gameText": "普攻浮声千斩·回声的伤害提升60%。"
+        },
+        {
+          "category": "generalAttack",
+          "name": "固有二",
+          "mode": "fixed",
+          "value": 15,
+          "perStack": 0,
+          "maxStacks": 5,
+          "damageType": "",
+          "element": "",
+          "defenseKind": "",
+          "convergenceVuln": "",
+          "sourceTag": "characterTemplate",
+          "templateKey": "tpl_ms0bcx47_pki47",
+          "gameText": "施放重击鸣奏后，漂泊者的攻击提升15%，持续5秒。"
+        }
+      ],
+      "teamBuffs": [],
+      "extraSkills": [],
+      "resonanceChains": {
+        "1": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [
+            {
+              "category": "generalCritRate",
+              "name": "一链",
+              "mode": "fixed",
+              "value": 15,
+              "perStack": 0,
+              "maxStacks": 5,
+              "damageType": "",
+              "element": "",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "sourceTag": "characterTemplate",
+              "templateKey": "tpl_ms0bdi51_kaa22",
+              "gameText": "施放共鸣技能浮声千斩或共鸣技能浮声千斩·旋音时，漂泊者的暴击提升15%，持续7秒。"
+            }
+          ],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {}
+        },
+        "2": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [
+            {
+              "category": "elementBonus",
+              "name": "二链",
+              "mode": "fixed",
+              "value": 20,
+              "perStack": 0,
+              "maxStacks": 5,
+              "damageType": "",
+              "element": "衍射",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "sourceTag": "characterTemplate",
+              "templateKey": "tpl_ms0bfjig_bhws3",
+              "gameText": "漂泊者的衍射伤害加成提升20%。"
+            }
+          ],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {}
+        },
+        "3": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [
+            {
+              "category": "energyRegenPct",
+              "name": "三链",
+              "mode": "fixed",
+              "value": 20,
+              "perStack": 0,
+              "maxStacks": 5,
+              "damageType": "",
+              "element": "",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "sourceTag": "characterTemplate",
+              "templateKey": "piaobozhe_yan_c3_energy_regen",
+              "gameText": "漂泊者的共鸣效率提升20%。"
+            }
+          ],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {}
+        },
+        "4": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {}
+        },
+        "5": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [
+            {
+              "category": "typeBonus",
+              "name": "五链",
+              "mode": "fixed",
+              "value": 40,
+              "perStack": 0,
+              "maxStacks": 5,
+              "damageType": "共鸣解放",
+              "element": "",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "sourceTag": "characterTemplate",
+              "templateKey": "tpl_ms0bj0a5_3bkla",
+              "gameText": "共鸣解放伤害加成提升40%。"
+            }
+          ],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {}
+        },
+        "6": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [],
+          "teamBuffs": [
+            {
+              "category": "elementResReduce",
+              "name": "六链",
+              "mode": "fixed",
+              "value": 10,
+              "perStack": 0,
+              "maxStacks": 5,
+              "damageType": "",
+              "element": "衍射",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "sourceTag": "characterTemplate",
+              "templateKey": "tpl_ms0bjbyu_ooozn",
+              "gameText": "共鸣技能浮声千斩或共鸣技能浮声千斩·旋音命中目标时，目标衍射伤害抗性降低10%，持续20秒。"
+            }
+          ],
+          "extraSkills": [],
+          "combatModes": {}
+        }
+      },
+      "combatModes": {}
+    }
+  ]
+}

@@ -1,0 +1,232 @@
+{
+  "version": 1,
+  "kind": "shard",
+  "characterId": "1402",
+  "characterName": "秧秧",
+  "templates": [
+    {
+      "characterId": "1402",
+      "characterName": "秧秧",
+      "revision": 2,
+      "author": "",
+      "notes": "",
+      "personalBuffs": [
+        {
+          "category": "elementBonus",
+          "name": "变奏后",
+          "mode": "fixed",
+          "value": 8,
+          "perStack": 0,
+          "maxStacks": 5,
+          "damageType": "",
+          "element": "气动",
+          "defenseKind": "",
+          "convergenceVuln": "",
+          "sourceTag": "characterTemplate",
+          "templateKey": "tpl_ms08x7vo_uzt1d",
+          "gameText": "施放变奏技能湛蓝礼赞后，秧秧的气动伤害加成提升8%，效果持续8秒。"
+        }
+      ],
+      "teamBuffs": [],
+      "extraSkills": [],
+      "resonanceChains": {
+        "1": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [
+            {
+              "category": "elementBonus",
+              "name": "一链",
+              "mode": "fixed",
+              "value": 15,
+              "perStack": 0,
+              "maxStacks": 5,
+              "damageType": "",
+              "element": "气动",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "sourceTag": "characterTemplate",
+              "templateKey": "tpl_ms093mfs_pbw90",
+              "gameText": "施放变奏技能湛蓝礼赞后，秧秧的气动伤害加成额外提升15%，效果持续8秒。"
+            }
+          ],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {},
+          "gameText": "施放变奏技能湛蓝礼赞后，秧秧的气动伤害加成额外提升15%，效果持续8秒。"
+        },
+        "2": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {},
+          "gameText": "重击命中目标时，秧秧额外回复10点共鸣能量，每20秒可触发1次。"
+        },
+        "3": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [
+            {
+              "category": "typeBonus",
+              "name": "三链",
+              "mode": "fixed",
+              "value": 40,
+              "perStack": 0,
+              "maxStacks": 5,
+              "damageType": "共鸣技能",
+              "element": "",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "sourceTag": "characterTemplate",
+              "templateKey": "tpl_ms0949k2_6y4w0",
+              "gameText": "共鸣技能伤害加成提升40%，风场对周围目标的牵引效果增强，牵引范围增加33%。"
+            }
+          ],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {},
+          "gameText": "共鸣技能伤害加成提升40%，风场对周围目标的牵引效果增强，牵引范围增加33%。"
+        },
+        "4": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [
+            {
+              "category": "composite",
+              "name": "四链",
+              "mode": "fixed",
+              "value": 0,
+              "perStack": 0,
+              "maxStacks": 99,
+              "damageType": "",
+              "element": "",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "effects": [
+                {
+                  "zone": "elementBonus",
+                  "valueMode": "fixed",
+                  "value": 95,
+                  "segments": [
+                    {
+                      "upTo": null,
+                      "perStack": 0
+                    }
+                  ],
+                  "skillScope": "names",
+                  "skillNames": [
+                    "覆声裁羽·释羽",
+                    "释羽"
+                  ],
+                  "librarySkillNames": [
+                    "覆声裁羽·释羽"
+                  ],
+                  "catalogIds": [],
+                  "damageType": "普攻",
+                  "effectType": "",
+                  "element": "气动",
+                  "defenseKind": "",
+                  "minStacks": 0,
+                  "minResonance": 0,
+                  "onlyCharacterIds": [],
+                  "onlyCombatModes": [],
+                  "effectKey": ""
+                }
+              ],
+              "sourceTag": "characterTemplate",
+              "templateKey": "tpl_ms094nmh_dfztv",
+              "gameText": "空中攻击释羽的伤害提升95%。"
+            }
+          ],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {},
+          "gameText": "空中攻击释羽的伤害提升95%。"
+        },
+        "5": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [
+            {
+              "category": "composite",
+              "name": "五链",
+              "mode": "fixed",
+              "value": 0,
+              "perStack": 0,
+              "maxStacks": 99,
+              "damageType": "",
+              "element": "",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "effects": [
+                {
+                  "zone": "elementBonus",
+                  "valueMode": "fixed",
+                  "value": 85,
+                  "segments": [
+                    {
+                      "upTo": null,
+                      "perStack": 0
+                    }
+                  ],
+                  "skillScope": "names",
+                  "skillNames": [
+                    "朔风旋涌·技能"
+                  ],
+                  "librarySkillNames": [
+                    "朔风旋涌·技能"
+                  ],
+                  "catalogIds": [],
+                  "damageType": "共鸣解放",
+                  "effectType": "",
+                  "element": "气动",
+                  "defenseKind": "",
+                  "minStacks": 0,
+                  "minResonance": 0,
+                  "onlyCharacterIds": [],
+                  "onlyCombatModes": [],
+                  "effectKey": ""
+                }
+              ],
+              "sourceTag": "characterTemplate",
+              "templateKey": "tpl_ms095esf_8tr7l",
+              "gameText": "共鸣解放朔风旋涌的伤害提升85%。"
+            }
+          ],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {},
+          "gameText": "共鸣解放朔风旋涌的伤害提升85%。"
+        },
+        "6": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [],
+          "teamBuffs": [
+            {
+              "category": "generalAttack",
+              "name": "六链",
+              "mode": "fixed",
+              "value": 20,
+              "perStack": 0,
+              "maxStacks": 5,
+              "damageType": "",
+              "element": "",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "sourceTag": "characterTemplate",
+              "templateKey": "tpl_ms096e0m_w8z3b",
+              "gameText": "施放空中攻击释羽后，队伍中的角色的攻击提升20%，效果持续20秒。"
+            }
+          ],
+          "extraSkills": [],
+          "combatModes": {},
+          "gameText": "施放空中攻击释羽后，队伍中的角色的攻击提升20%，效果持续20秒。"
+        }
+      },
+      "combatModes": {}
+    }
+  ]
+}

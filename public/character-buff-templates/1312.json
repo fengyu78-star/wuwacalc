@@ -1,0 +1,541 @@
+{
+  "version": 1,
+  "kind": "shard",
+  "characterId": "1312",
+  "characterName": "锁暝",
+  "templates": [
+    {
+      "characterId": "1312",
+      "characterName": "锁暝",
+      "revision": 5,
+      "author": "Codex(2026-09-30)",
+      "notes": "锁暝：技能库采用新版键名；同奏层数仍由玩家手动填写，输入上限保留6。协契、禁锁契主倍率与暴伤分别勾选，共鸣链条件窗口由玩家勾选；雷痕自动触发与禁锁契主逐段额外协奏回能留待角色专属批次。",
+      "personalBuffs": [
+        {
+          "templateKey": "suoming_innate1_yujin_bonus",
+          "category": "elementBonus",
+          "name": "固有1·施放变奏后导电增伤",
+          "mode": "fixed",
+          "value": 50,
+          "perStack": 0,
+          "maxStacks": 5,
+          "damageType": "",
+          "element": "导电",
+          "defenseKind": "",
+          "convergenceVuln": "",
+          "sourceTag": "characterTemplate",
+          "gameText": "施放四种变奏技能时，自身导电伤害加成提升50%，持续15秒，切换至其他角色提前结束。"
+        },
+        {
+          "templateKey": "suoming_innate2_jinsuo",
+          "category": "composite",
+          "name": "固有2·禁锁契主·解伞形倍率",
+          "mode": "fixed",
+          "value": 0,
+          "perStack": 0,
+          "maxStacks": 99,
+          "damageType": "",
+          "element": "",
+          "defenseKind": "",
+          "convergenceVuln": "",
+          "sourceTag": "characterTemplate",
+          "effects": [
+            {
+              "zone": "multBoost",
+              "valueMode": "fixed",
+              "value": 100,
+              "segments": [
+                {
+                  "upTo": null,
+                  "perStack": 0
+                }
+              ],
+              "skillScope": "names",
+              "skillNames": [
+                "拢伞形·普攻·解伞形第一段",
+                "拢伞形·普攻·解伞形第二段",
+                "拢伞形·普攻·解伞形第三段",
+                "拢伞形·普攻·解伞形第四段",
+                "拢伞形·普攻·解伞形·旋雷破第一段",
+                "拢伞形·普攻·解伞形·旋雷破第二段"
+              ],
+              "librarySkillNames": [
+                "拢伞形·普攻·解伞形第一段",
+                "拢伞形·普攻·解伞形第二段",
+                "拢伞形·普攻·解伞形第三段",
+                "拢伞形·普攻·解伞形第四段",
+                "拢伞形·普攻·解伞形·旋雷破第一段",
+                "拢伞形·普攻·解伞形·旋雷破第二段"
+              ],
+              "catalogIds": [],
+              "damageType": "",
+              "effectType": "",
+              "element": "",
+              "defenseKind": "",
+              "minStacks": 0,
+              "minResonance": 0,
+              "effectKey": ""
+            }
+          ],
+          "gameText": "禁锁契主期间，普攻·解伞形和普攻·解伞形·旋雷破的伤害倍率提升100%，持续12秒；切换角色、获得同奏或协契时提前结束。"
+        },
+        {
+          "templateKey": "suoming_innate2_jinsuo_critdmg",
+          "category": "composite",
+          "name": "固有2·禁锁契主·暴击伤害",
+          "mode": "fixed",
+          "value": 0,
+          "perStack": 0,
+          "maxStacks": 99,
+          "damageType": "",
+          "element": "",
+          "defenseKind": "",
+          "convergenceVuln": "",
+          "sourceTag": "characterTemplate",
+          "effects": [
+            {
+              "zone": "generalCritDmg",
+              "valueMode": "fixed",
+              "value": 100,
+              "segments": [
+                {
+                  "upTo": null,
+                  "perStack": 0
+                }
+              ],
+              "skillScope": "all",
+              "skillNames": [],
+              "librarySkillNames": [],
+              "catalogIds": [],
+              "damageType": "",
+              "effectType": "",
+              "element": "",
+              "defenseKind": "",
+              "minStacks": 0,
+              "minResonance": 0,
+              "effectKey": ""
+            },
+            {
+              "zone": "generalCritDmg",
+              "valueMode": "fixed",
+              "value": 200,
+              "segments": [
+                {
+                  "upTo": null,
+                  "perStack": 0
+                }
+              ],
+              "skillScope": "all",
+              "skillNames": [],
+              "librarySkillNames": [],
+              "catalogIds": [],
+              "damageType": "",
+              "effectType": "",
+              "element": "",
+              "defenseKind": "",
+              "minStacks": 0,
+              "minResonance": 6,
+              "effectKey": ""
+            }
+          ],
+          "gameText": "禁锁契主期间，自身暴击伤害提升100%，持续12秒；6链时额外提升200%。切换角色、获得同奏或协契时提前结束。"
+        }
+      ],
+      "teamBuffs": [
+        {
+          "templateKey": "tongzou_shared_gain_final_vuln",
+          "category": "extraVulnerability",
+          "name": "同奏增益·最终伤害提升",
+          "mode": "stack",
+          "value": 0,
+          "perStack": 3,
+          "maxStacks": 6,
+          "damageType": "",
+          "element": "",
+          "defenseKind": "",
+          "convergenceVuln": "",
+          "sourceTag": "characterTemplate",
+          "gameText": "同奏增益全队只有一条定义；心和锁暝分别填写自身层数，每层使该角色造成的最终伤害提升3%，最多6层。",
+          "onlyCharacterIds": [
+            "1311",
+            "1312"
+          ],
+          "tongzouSharedKey": "tongzou_shared_gain_final_vuln",
+          "tongzouStackScope": "member",
+          "clampStacks": true
+        },
+        {
+          "templateKey": "suoming_innate2_xieqi_base",
+          "category": "elementBonus",
+          "name": "固有2·协契延奏·下一位登场导电增伤（基础）",
+          "mode": "fixed",
+          "value": 30,
+          "perStack": 0,
+          "maxStacks": 5,
+          "damageType": "",
+          "element": "导电",
+          "defenseKind": "",
+          "convergenceVuln": "",
+          "sourceTag": "characterTemplate",
+          "gameText": "锁暝拥有同奏并切换角色时获得协契。施放共鸣解放或刻心念后8秒内施放延奏，且刚获得或正处于协契时，下一位登场角色导电伤害加成提升30%，持续8秒，切换角色提前结束。",
+          "excludeSource": true
+        },
+        {
+          "templateKey": "suoming_innate2_xieqi_stack",
+          "category": "elementBonus",
+          "name": "固有2·协契延奏·同奏增益层数额外增伤",
+          "mode": "stack",
+          "value": 0,
+          "perStack": 20,
+          "maxStacks": 2,
+          "damageType": "",
+          "element": "导电",
+          "defenseKind": "",
+          "convergenceVuln": "",
+          "sourceTag": "characterTemplate",
+          "gameText": "协契延奏期间，每拥有1层【同奏增益】，下一位登场角色导电伤害加成额外提升20%，最多计入2层（上限40%），持续8秒。",
+          "tongzouLinkedStack": true,
+          "tongzouStackOwner": "1312",
+          "clampStacks": true,
+          "excludeSource": true
+        },
+        {
+          "templateKey": "suoming_outro_elec_deep",
+          "category": "elementDeep",
+          "name": "延奏·下一位登场导电伤害加深",
+          "mode": "fixed",
+          "value": 20,
+          "perStack": 0,
+          "maxStacks": 5,
+          "damageType": "",
+          "element": "导电",
+          "defenseKind": "",
+          "convergenceVuln": "",
+          "sourceTag": "characterTemplate",
+          "gameText": "施放延奏后，下一位登场角色受到的导电伤害加深20%，持续8秒，切换角色提前结束。",
+          "excludeSource": true
+        },
+        {
+          "templateKey": "suoming_outro_reso_deep",
+          "category": "composite",
+          "name": "延奏·拥有同奏增益时共鸣技能加深",
+          "mode": "fixed",
+          "value": 0,
+          "perStack": 0,
+          "maxStacks": 1,
+          "damageType": "共鸣技能",
+          "element": "",
+          "defenseKind": "",
+          "convergenceVuln": "",
+          "sourceTag": "characterTemplate",
+          "gameText": "拥有【同奏增益】时，共鸣技能伤害加深25%，效果持续8秒。若切换至其他角色则该效果提前结束。",
+          "onlyCharacterIds": [
+            "1311",
+            "1312"
+          ],
+          "effects": [
+            {
+              "zone": "typeDeep",
+              "valueMode": "fixed",
+              "value": 25,
+              "segments": [
+                {
+                  "upTo": null,
+                  "perStack": 0
+                }
+              ],
+              "skillScope": "all",
+              "damageType": "共鸣技能",
+              "minStacks": 0
+            }
+          ],
+          "excludeSource": true
+        }
+      ],
+      "extraSkills": [],
+      "resonanceChains": {
+        "1": {
+          "enabledByDefault": false,
+          "notes": "变奏倍率+60%；无舍念免打断不建模。",
+          "personalBuffs": [
+            {
+              "category": "composite",
+              "name": "1链·四种变奏倍率提升",
+              "mode": "fixed",
+              "value": 0,
+              "perStack": 0,
+              "maxStacks": 99,
+              "damageType": "",
+              "element": "",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "sourceTag": "characterTemplate",
+              "templateKey": "suoming_c1_intro_mult",
+              "effects": [
+                {
+                  "zone": "multBoost",
+                  "valueMode": "fixed",
+                  "value": 60,
+                  "segments": [
+                    {
+                      "upTo": null,
+                      "perStack": 0
+                    }
+                  ],
+                  "skillScope": "names",
+                  "skillNames": [
+                    "拢伞形·闪裂·变奏技能·拢伞形·闪裂",
+                    "拢伞形·闪裂·变奏技能·解伞形·碎霆",
+                    "拢伞形·闪裂·变奏技能·拢伞形·锁妄念·同奏",
+                    "拢伞形·闪裂·变奏技能·解伞形·旋雷破·同奏"
+                  ],
+                  "librarySkillNames": [
+                    "拢伞形·闪裂·变奏技能·拢伞形·闪裂",
+                    "拢伞形·闪裂·变奏技能·解伞形·碎霆",
+                    "拢伞形·闪裂·变奏技能·拢伞形·锁妄念·同奏",
+                    "拢伞形·闪裂·变奏技能·解伞形·旋雷破·同奏"
+                  ],
+                  "catalogIds": [],
+                  "damageType": "",
+                  "effectType": "",
+                  "element": "",
+                  "defenseKind": "",
+                  "minStacks": 0,
+                  "minResonance": 0,
+                  "effectKey": ""
+                }
+              ],
+              "gameText": "四种变奏技能伤害倍率提升60%；无舍念免疫打断为生存效果，不计入伤害。"
+            }
+          ],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {}
+        },
+        "2": {
+          "enabledByDefault": false,
+          "notes": "自身暴伤+40%；延奏后下一位暴伤10%+6%/层，最多额外24%。",
+          "personalBuffs": [
+            {
+              "category": "generalCritDmg",
+              "name": "2链·自身暴击伤害",
+              "mode": "fixed",
+              "value": 40,
+              "perStack": 0,
+              "maxStacks": 5,
+              "damageType": "",
+              "element": "",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "sourceTag": "characterTemplate",
+              "templateKey": "suoming_c2_self_critdmg",
+              "gameText": "锁暝自身暴击伤害提升40%。"
+            }
+          ],
+          "teamBuffs": [
+            {
+              "category": "composite",
+              "name": "2链·延奏后下一位暴伤",
+              "mode": "stack",
+              "value": 0,
+              "perStack": 0,
+              "maxStacks": 4,
+              "damageType": "",
+              "element": "",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "sourceTag": "characterTemplate",
+              "templateKey": "suoming_c2_outro_critdmg_stack",
+              "gameText": "施放延奏技能时，下一位登场的角色暴击伤害提升10%；每拥有一层同奏增益，暴击伤害额外提升6%，最多额外提升24%，持续30秒。若切换至其他角色则该效果提前结束。",
+              "tongzouLinkedStack": true,
+              "tongzouStackScope": "member",
+              "clampStacks": true,
+              "excludeSource": true,
+              "effects": [
+                {
+                  "effectKey": "suoming_c2_outro_base",
+                  "zone": "generalCritDmg",
+                  "valueMode": "fixed",
+                  "value": 10,
+                  "skillScope": "all",
+                  "minStacks": 0
+                },
+                {
+                  "effectKey": "suoming_c2_outro_stack",
+                  "zone": "generalCritDmg",
+                  "valueMode": "stack",
+                  "value": 0,
+                  "segments": [
+                    {
+                      "upTo": 4,
+                      "perStack": 6
+                    }
+                  ],
+                  "skillScope": "all",
+                  "minStacks": 0
+                }
+              ]
+            }
+          ],
+          "extraSkills": [],
+          "combatModes": {}
+        },
+        "3": {
+          "enabledByDefault": false,
+          "notes": "普通变奏提供1层同奏增益/25秒，同奏已存在时仅刷新；层数由玩家手动填写。",
+          "personalBuffs": [
+            {
+              "category": "typeDeep",
+              "name": "3链·解放后普攻加深",
+              "mode": "fixed",
+              "value": 30,
+              "perStack": 0,
+              "maxStacks": 5,
+              "damageType": "普攻",
+              "element": "",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "sourceTag": "characterTemplate",
+              "templateKey": "suoming_c3_basic_deep",
+              "gameText": "施放共鸣解放后，锁暝自身普攻伤害加深30%，持续25秒。普通变奏获得1层同奏增益的规则由玩家手动调整层数。"
+            }
+          ],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {}
+        },
+        "4": {
+          "enabledByDefault": false,
+          "notes": "攻击提升20%。",
+          "personalBuffs": [
+            {
+              "category": "generalAttack",
+              "name": "4链·攻击提升",
+              "mode": "fixed",
+              "value": 20,
+              "perStack": 0,
+              "maxStacks": 5,
+              "damageType": "",
+              "element": "",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "sourceTag": "characterTemplate",
+              "templateKey": "suoming_c4_attack",
+              "gameText": "锁暝攻击提升20%。"
+            }
+          ],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {}
+        },
+        "5": {
+          "enabledByDefault": false,
+          "notes": "重锁狱瘴倍率+40%。",
+          "personalBuffs": [
+            {
+              "category": "composite",
+              "name": "5链·重锁狱瘴倍率",
+              "mode": "fixed",
+              "value": 0,
+              "perStack": 0,
+              "maxStacks": 99,
+              "damageType": "",
+              "element": "",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "sourceTag": "characterTemplate",
+              "templateKey": "suoming_c5_ult_mult",
+              "effects": [
+                {
+                  "zone": "multBoost",
+                  "valueMode": "fixed",
+                  "value": 40,
+                  "segments": [
+                    {
+                      "upTo": null,
+                      "perStack": 0
+                    }
+                  ],
+                  "skillScope": "names",
+                  "skillNames": [
+                    "暝伞形·重锁狱瘴·共鸣解放·暝伞形·重锁狱瘴"
+                  ],
+                  "librarySkillNames": [
+                    "暝伞形·重锁狱瘴·共鸣解放·暝伞形·重锁狱瘴"
+                  ],
+                  "catalogIds": [],
+                  "damageType": "",
+                  "effectType": "",
+                  "element": "",
+                  "defenseKind": "",
+                  "minStacks": 0,
+                  "minResonance": 0,
+                  "effectKey": ""
+                }
+              ],
+              "gameText": "共鸣解放·暝伞形·重锁狱瘴伤害倍率提升40%。"
+            }
+          ],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {}
+        },
+        "6": {
+          "enabledByDefault": false,
+          "notes": "同奏增益前4层效果+50%；刻心念倍率+50%；禁锁契主暴伤额外+200%已并入固有2复合Buff。",
+          "personalBuffs": [
+            {
+              "category": "composite",
+              "name": "6链·刻心念倍率",
+              "mode": "fixed",
+              "value": 0,
+              "perStack": 0,
+              "maxStacks": 99,
+              "damageType": "",
+              "element": "",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "sourceTag": "characterTemplate",
+              "templateKey": "suoming_c6_kexinnian_mult",
+              "effects": [
+                {
+                  "zone": "multBoost",
+                  "valueMode": "fixed",
+                  "value": 50,
+                  "segments": [
+                    {
+                      "upTo": null,
+                      "perStack": 0
+                    }
+                  ],
+                  "skillScope": "names",
+                  "skillNames": [
+                    "囚执化念·普攻·暝伞形·刻心念",
+                    "囚执化念·普攻·暝伞形·刻心念长按"
+                  ],
+                  "librarySkillNames": [
+                    "囚执化念·普攻·暝伞形·刻心念",
+                    "囚执化念·普攻·暝伞形·刻心念长按"
+                  ],
+                  "catalogIds": [],
+                  "damageType": "",
+                  "effectType": "",
+                  "element": "",
+                  "defenseKind": "",
+                  "minStacks": 0,
+                  "minResonance": 0,
+                  "effectKey": ""
+                }
+              ],
+              "gameText": "普攻·暝伞形·刻心念及其长按段伤害倍率提升50%。"
+            }
+          ],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {}
+        }
+      },
+      "combatModes": {}
+    }
+  ]
+}

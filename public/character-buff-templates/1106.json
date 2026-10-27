@@ -1,0 +1,230 @@
+{
+  "version": 1,
+  "kind": "shard",
+  "characterId": "1106",
+  "characterName": "釉瑚",
+  "templates": [
+    {
+      "characterId": "1106",
+      "characterName": "釉瑚",
+      "revision": 2,
+      "author": "",
+      "notes": "釉瑚：全队【延奏·釉瑚】协同攻击加深+100%（固定；对釉瑚本人不生效）。",
+      "personalBuffs": [
+        {
+          "category": "composite",
+          "name": "诗中物·对偶",
+          "mode": "fixed",
+          "value": 0,
+          "perStack": 0,
+          "maxStacks": 99,
+          "damageType": "",
+          "element": "",
+          "defenseKind": "",
+          "convergenceVuln": "",
+          "effects": [
+            {
+              "zone": "generalBonus",
+              "valueMode": "fixed",
+              "value": 70,
+              "segments": [
+                {
+                  "upTo": null,
+                  "perStack": 0
+                }
+              ],
+              "skillScope": "names",
+              "skillNames": [
+                "诗中物技能"
+              ],
+              "librarySkillNames": [
+                "诗中物技能"
+              ],
+              "catalogIds": [],
+              "damageType": "共鸣技能",
+              "effectType": "",
+              "element": "冷凝",
+              "defenseKind": "",
+              "minStacks": 0,
+              "minResonance": 0,
+              "onlyCharacterIds": [],
+              "onlyCombatModes": [],
+              "effectKey": ""
+            }
+          ],
+          "sourceTag": "characterTemplate",
+          "templateKey": "tpl_mrz1n0oh_cnzm1",
+          "gameText": "诗中物\n对范围敌人造成冷凝伤害，并且根据【吉兆】组合的不同获得以下的一种额外效果：\n·飞白：每种【吉兆】都拥有时。对命中的敌人造成额外共振值伤害。\n·对偶：拥有一对相同的【吉兆】时。诗中物造成的伤害提升70%。\n·双关：拥有两对相同的【吉兆】时。额外回复附近队伍中所有角色的生命值。\n·联珠：拥有三个相同的【吉兆】时。诗中物造成的伤害提升175%。\n·合说：拥有四个相同的【吉兆】时。同时触发飞白、双关、联珠的效果。\n施放诗中物后，清除所有【吉兆】。"
+        },
+        {
+          "category": "composite",
+          "name": "诗中物·联珠",
+          "mode": "fixed",
+          "value": 0,
+          "perStack": 0,
+          "maxStacks": 99,
+          "damageType": "",
+          "element": "",
+          "defenseKind": "",
+          "convergenceVuln": "",
+          "effects": [
+            {
+              "zone": "generalBonus",
+              "valueMode": "fixed",
+              "value": 175,
+              "segments": [
+                {
+                  "upTo": null,
+                  "perStack": 0
+                }
+              ],
+              "skillScope": "names",
+              "skillNames": [
+                "诗中物技能"
+              ],
+              "librarySkillNames": [
+                "诗中物技能"
+              ],
+              "catalogIds": [],
+              "damageType": "共鸣技能",
+              "effectType": "",
+              "element": "冷凝",
+              "defenseKind": "",
+              "minStacks": 0,
+              "minResonance": 0,
+              "onlyCharacterIds": [],
+              "onlyCombatModes": [],
+              "effectKey": ""
+            }
+          ],
+          "sourceTag": "characterTemplate",
+          "templateKey": "tpl_mrz1n5tz_td65i",
+          "gameText": "诗中物\n对范围敌人造成冷凝伤害，并且根据【吉兆】组合的不同获得以下的一种额外效果：\n·飞白：每种【吉兆】都拥有时。对命中的敌人造成额外共振值伤害。\n·对偶：拥有一对相同的【吉兆】时。诗中物造成的伤害提升70%。\n·双关：拥有两对相同的【吉兆】时。额外回复附近队伍中所有角色的生命值。\n·联珠：拥有三个相同的【吉兆】时。诗中物造成的伤害提升175%。\n·合说：拥有四个相同的【吉兆】时。同时触发飞白、双关、联珠的效果。\n施放诗中物后，清除所有【吉兆】。"
+        }
+      ],
+      "teamBuffs": [
+        {
+          "templateKey": "youhu_outro_coord_deep",
+          "category": "typeDeep",
+          "name": "延奏·釉瑚",
+          "mode": "fixed",
+          "value": 100,
+          "damageType": "协同攻击",
+          "element": "",
+          "defenseKind": "",
+          "excludeSource": true,
+          "sourceTag": "characterTemplate",
+          "perStack": 0,
+          "maxStacks": 5,
+          "gameText": "下一位登场角色的协同攻击伤害加深100%，效果持续28秒。"
+        }
+      ],
+      "extraSkills": [],
+      "resonanceChains": {
+        "1": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {},
+          "gameText": "施放问祯时，釉瑚有10%概率免疫伤害和受击，持续5秒，若切换至其他角色则该效果提前结束。"
+        },
+        "2": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {},
+          "gameText": "对偶、联珠、合说对共鸣回路诗中物的伤害提升效果额外生效一次。"
+        },
+        "3": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [
+            {
+              "category": "generalAttack",
+              "name": "3链",
+              "mode": "fixed",
+              "value": 20,
+              "perStack": 0,
+              "maxStacks": 5,
+              "damageType": "",
+              "element": "",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "sourceTag": "characterTemplate",
+              "templateKey": "tpl_mrz1mpdn_bkios",
+              "gameText": "釉瑚的攻击提升20%。"
+            }
+          ],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {},
+          "gameText": "釉瑚的攻击提升20%。"
+        },
+        "4": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {},
+          "gameText": "每次施放共鸣技能匣中问祯时，有20%概率不进入冷却状态。"
+        },
+        "5": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [
+            {
+              "category": "generalCritRate",
+              "name": "5链",
+              "mode": "fixed",
+              "value": 15,
+              "perStack": 0,
+              "maxStacks": 5,
+              "damageType": "",
+              "element": "",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "sourceTag": "characterTemplate",
+              "templateKey": "tpl_mrz1mgnn_1d1eh",
+              "gameText": "施放变奏技能遂心匣时，釉瑚的暴击提升15%，持续14秒。"
+            }
+          ],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {},
+          "gameText": "施放变奏技能遂心匣时，釉瑚的暴击提升15%，持续14秒。"
+        },
+        "6": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [
+            {
+              "category": "generalCritDmg",
+              "name": "6链·霁青",
+              "mode": "fixed",
+              "value": 15,
+              "perStack": 0,
+              "maxStacks": 5,
+              "damageType": "",
+              "element": "",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "sourceTag": "characterTemplate",
+              "templateKey": "tpl_mrz1m5ly_gcne3",
+              "gameText": "施放共鸣技能奇珍赏时，获得1层霁青效果，最多可叠加4层，持续7秒，每层霁青使釉瑚的暴击伤害提升15%。"
+            }
+          ],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {},
+          "gameText": "施放共鸣技能奇珍赏时，获得1层霁青效果，最多可叠加4层，持续7秒，每层霁青使釉瑚的暴击伤害提升15%。"
+        }
+      },
+      "combatModes": {}
+    }
+  ]
+}

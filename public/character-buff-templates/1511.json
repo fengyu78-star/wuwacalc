@@ -1,0 +1,536 @@
+{
+  "version": 1,
+  "kind": "shard",
+  "characterId": "1511",
+  "characterName": "露西",
+  "templates": [
+    {
+      "characterId": "1511",
+      "characterName": "露西",
+      "revision": 12,
+      "author": "",
+      "notes": "露西：【后门0/1/2】叠层指定【欺骗程式·运动失能】【骇破响应·数据崩解】【骇破响应·熔融】倍率提升（每层+10%，满2层额外+5%，合计25%；全阶段与特殊技能同步）。【多线程·SQL】倍率提升+270%（≥2链变为+560%）。特殊技能【骇破响应·数据崩解】【欺骗程式·运动失能】：≥3链基础倍率提升+65%（与后门乘算）；≥6链指定易伤+60%。全队易伤/穿防等乘区 Buff 默认同步特殊技能（选露西来源=全队+个人）。全队复合【露西·延奏】普攻加深+25%（对露西本人不生效）+ 泛用加深+20%（仅丽贝卡生效，其他角色该效果不计）。",
+      "personalBuffs": [
+        {
+          "templateKey": "lucy_c6_exec_vuln",
+          "category": "composite",
+          "name": "6链·处决易伤",
+          "mode": "fixed",
+          "value": 0,
+          "effects": [
+            {
+              "id": "id_21372",
+              "zone": "generalVulnerability",
+              "valueMode": "fixed",
+              "value": 60,
+              "segments": [
+                {
+                  "upTo": null,
+                  "perStack": 0
+                }
+              ],
+              "skillScope": "names",
+              "skillNames": [
+                "骇破响应·数据崩解",
+                "黑墙深度·骇破响应·数据崩解",
+                "欺骗程式·运动失能",
+                "网络行者·欺骗程式·运动失能"
+              ],
+              "librarySkillNames": [
+                "骇破响应·数据崩解",
+                "黑墙深度·骇破响应·数据崩解",
+                "欺骗程式·运动失能",
+                "网络行者·欺骗程式·运动失能"
+              ],
+              "catalogIds": [],
+              "damageType": "",
+              "effectType": "",
+              "element": "",
+              "defenseKind": "",
+              "minStacks": 0,
+              "minResonance": 6,
+              "onlyCharacterIds": [],
+              "onlyCombatModes": [],
+              "effectKey": "lucy_c6_exec_general_vuln"
+            }
+          ],
+          "sourceTag": "characterTemplate",
+          "perStack": 0,
+          "maxStacks": 1,
+          "gameText": "拥有【骇破·偏移】效果或处于【骇破·干涉】状态的目标受到露西的重击伤害提升40%。\n拥有【骇破·偏移】效果或处于【骇破·干涉】状态的目标受到露西的骇破伤害提升60%。\n骇破响应·数据崩解触发的停滞效果延长至1.5秒。"
+        },
+        {
+          "templateKey": "lucy_multithread_sql",
+          "category": "composite",
+          "name": "多线程·SQL",
+          "mode": "fixed",
+          "value": 0,
+          "effects": [
+            {
+              "id": "id_21367",
+              "zone": "multBoost",
+              "valueMode": "fixed",
+              "value": 270,
+              "segments": [
+                {
+                  "upTo": null,
+                  "perStack": 0
+                }
+              ],
+              "skillScope": "names",
+              "skillNames": [
+                "靶定线程·重击·多线程"
+              ],
+              "librarySkillNames": [
+                "靶定线程·重击·多线程"
+              ],
+              "catalogIds": [],
+              "damageType": "",
+              "effectType": "",
+              "element": "",
+              "defenseKind": "",
+              "minStacks": 0,
+              "minResonance": 0,
+              "onlyCharacterIds": [],
+              "onlyCombatModes": [],
+              "effectKey": "lucy_multithread_sql_base_mult_boost"
+            },
+            {
+              "id": "id_21368",
+              "zone": "multBoost",
+              "valueMode": "fixed",
+              "value": 290,
+              "segments": [
+                {
+                  "upTo": null,
+                  "perStack": 0
+                }
+              ],
+              "skillScope": "names",
+              "skillNames": [
+                "靶定线程·重击·多线程"
+              ],
+              "librarySkillNames": [
+                "靶定线程·重击·多线程"
+              ],
+              "catalogIds": [],
+              "damageType": "",
+              "effectType": "",
+              "element": "",
+              "defenseKind": "",
+              "minStacks": 0,
+              "minResonance": 2,
+              "onlyCharacterIds": [],
+              "onlyCombatModes": [],
+              "effectKey": "lucy_multithread_sql_c2_mult_boost"
+            }
+          ],
+          "sourceTag": "characterTemplate",
+          "perStack": 0,
+          "maxStacks": 1,
+          "gameText": "施放重击·多线程时若自身持有SQL，则使本次伤害倍率提升270%并移除SQL"
+        },
+        {
+          "category": "elementBonus",
+          "name": "算法压缩状态",
+          "mode": "fixed",
+          "value": 65,
+          "perStack": 0,
+          "maxStacks": 5,
+          "damageType": "",
+          "element": "衍射",
+          "defenseKind": "",
+          "convergenceVuln": "",
+          "sourceTag": "characterTemplate",
+          "templateKey": "tpl_ms1q3p49_fs7fx",
+          "gameText": "算法压缩\n施放共鸣技能·死锁后露西进入算法压缩状态，并获得1层SQL。普攻替换为普攻·线程撕裂，重击替换为重击·单线程。自身衍射伤害加成提升65%，持续8秒。"
+        }
+      ],
+      "teamBuffs": [
+        {
+          "templateKey": "lucy_outro",
+          "category": "composite",
+          "name": "露西·延奏",
+          "mode": "fixed",
+          "excludeSource": true,
+          "effects": [
+            {
+              "zone": "typeDeep",
+              "valueMode": "fixed",
+              "value": 25,
+              "segments": [
+                {
+                  "upTo": null,
+                  "perStack": 0
+                }
+              ],
+              "skillScope": "all",
+              "skillNames": [],
+              "librarySkillNames": [],
+              "catalogIds": [],
+              "damageType": "普攻",
+              "effectType": "",
+              "element": "",
+              "defenseKind": "",
+              "minStacks": 0,
+              "minResonance": 0,
+              "onlyCharacterIds": [],
+              "onlyCombatModes": [],
+              "effectKey": ""
+            },
+            {
+              "id": "id_21377",
+              "zone": "generalDeep",
+              "valueMode": "fixed",
+              "value": 20,
+              "segments": [
+                {
+                  "upTo": null,
+                  "perStack": 0
+                }
+              ],
+              "skillScope": "all",
+              "skillNames": [],
+              "librarySkillNames": [],
+              "catalogIds": [],
+              "damageType": "",
+              "effectType": "",
+              "element": "",
+              "defenseKind": "",
+              "minStacks": 0,
+              "minResonance": 0,
+              "onlyCharacterIds": [
+                "1308"
+              ],
+              "onlyCombatModes": [],
+              "effectKey": "lucy_outro_rebecca_general_deep"
+            }
+          ],
+          "sourceTag": "characterTemplate",
+          "value": 0,
+          "perStack": 0,
+          "maxStacks": 1,
+          "gameText": "下一名登场角色普攻伤害加深25%，持续14秒，若切换至其他角色则该效果提前结束。\n队伍中的角色获得反制程序效果，持续25秒。\n效果持续期间，队伍中除露西以外的登场角色附加【骇破·偏移】时，该角色全伤害加深20%。\n效果持续期间，队伍中除露西以外的角色受到伤害后，为其附加受到伤害降低30%的效果，持续3秒，并为攻击方附加短暂的停滞效果，持续1秒。该效果在反制程序持续时间内仅生效1次。重复获取反制程序效果时重置生效次数。\n全伤害加深效果激活后，若切换至其他角色则反制程序效果提前结束。"
+        },
+        {
+          "category": "generalVulnerability",
+          "name": "露西·义体故障",
+          "mode": "fixed",
+          "value": 5,
+          "perStack": 0,
+          "maxStacks": 5,
+          "damageType": "",
+          "element": "",
+          "defenseKind": "",
+          "convergenceVuln": "",
+          "sourceTag": "characterTemplate",
+          "templateKey": "tpl_ms1qm29t_o9bv9",
+          "gameText": "欺骗程式·义体故障\n消耗4点Ram。使所有标记目标受到伤害提升5%，持续30秒。"
+        },
+        {
+          "category": "generalDefense",
+          "name": "露西·突破协议",
+          "mode": "fixed",
+          "value": 5,
+          "perStack": 0,
+          "maxStacks": 5,
+          "damageType": "",
+          "element": "",
+          "defenseKind": "pen",
+          "convergenceVuln": "",
+          "sourceTag": "characterTemplate",
+          "templateKey": "tpl_ms1qnv6w_63foc",
+          "gameText": "欺骗程式·突破协议\n消耗4点Ram。使所有标记目标降低5%的防御，持续30秒。"
+        },
+        {
+          "templateKey": "lucy_houmen",
+          "category": "composite",
+          "name": "后门0/1/2",
+          "mode": "stack",
+          "maxStacks": 2,
+          "value": 0,
+          "onlyCharacterIds": [
+            "1511",
+            "1308"
+          ],
+          "perStack": 0,
+          "sourceTag": "characterTemplate",
+          "gameText": "使用共鸣技能·有效载荷、共鸣技能·脉冲干扰或共鸣技能·死锁对怒涛级或海啸级敌人造成伤害时，露西为其附加【傀儡标记】，持续2分钟。【傀儡标记】持续时间内，队伍中的角色直接造成的伤害击败该目标时，露西获得【网络后门】效果，若丽贝卡在队伍中则也能获得同等效果。\n\n【网络后门】\n全伤害加深10%，骇破伤害倍率提升10%。效果持续2分钟，最多叠加2层。当叠加至2层时，额外获得全伤害加深5%，骇破伤害倍率提升5%。露西失去意识时，不会继续获得【网络后门】效果，同时已有的【网络后门】效果失效。",
+          "effects": [
+            {
+              "id": "id_21360",
+              "zone": "multBoost",
+              "valueMode": "stack",
+              "value": 0,
+              "segments": [
+                {
+                  "upTo": 1,
+                  "perStack": 10
+                },
+                {
+                  "upTo": 2,
+                  "perStack": 15
+                }
+              ],
+              "skillScope": "names",
+              "skillNames": [
+                "骇破响应·数据崩解",
+                "黑墙深度·骇破响应·数据崩解",
+                "欺骗程式·运动失能",
+                "网络行者·欺骗程式·运动失能",
+                "骇破响应·熔融"
+              ],
+              "librarySkillNames": [
+                "骇破响应·数据崩解",
+                "黑墙深度·骇破响应·数据崩解",
+                "欺骗程式·运动失能",
+                "网络行者·欺骗程式·运动失能",
+                "骇破响应·熔融"
+              ],
+              "catalogIds": [],
+              "damageType": "",
+              "effectType": "",
+              "element": "",
+              "defenseKind": "",
+              "minStacks": 0,
+              "minResonance": 0,
+              "onlyCharacterIds": [],
+              "onlyCombatModes": [],
+              "effectKey": "lucy_houmen_data_collapse_mult_boost"
+            },
+            {
+              "id": "id_21361",
+              "zone": "generalDeep",
+              "valueMode": "stack",
+              "value": 0,
+              "segments": [
+                {
+                  "upTo": 1,
+                  "perStack": 10
+                },
+                {
+                  "upTo": 2,
+                  "perStack": 15
+                }
+              ],
+              "skillScope": "all",
+              "skillNames": [],
+              "librarySkillNames": [],
+              "catalogIds": [],
+              "damageType": "",
+              "effectType": "",
+              "element": "",
+              "defenseKind": "",
+              "minStacks": 0,
+              "minResonance": 0,
+              "onlyCharacterIds": [],
+              "onlyCombatModes": [],
+              "effectKey": "lucy_houmen_general_deep"
+            }
+          ]
+        }
+      ],
+      "extraSkills": [],
+      "resonanceChains": {
+        "1": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [
+            {
+              "category": "generalAttack",
+              "name": "释放变奏时",
+              "mode": "fixed",
+              "value": 20,
+              "perStack": 0,
+              "maxStacks": 5,
+              "damageType": "",
+              "element": "",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "sourceTag": "characterTemplate",
+              "templateKey": "tpl_ms1qldgv_mpi9n",
+              "gameText": "共鸣技能·有效载荷、共鸣技能·脉冲干扰、重击·双线程和重击·多线程免疫打断。\n施放变奏技能·过时幻觉时攻击提升20%，持续14秒。\n队伍中的角色直接造成的伤害击败带有欺骗程式效果的目标时，露西记录该效果并激活对应的快捷响应，持续6秒。露西失去意识时，记录效果失效。\n快捷响应：生效期间，对队伍中登场角色周围一定范围内的所有目标附加记录的欺骗程式效果，对范围内每名目标仅生效一次。\n可被记录的欺骗程式效果：欺骗程式·义体故障、欺骗程式·突破协议、欺骗程式·运动失能、欺骗程式·武装故障、欺骗程式·赛博精神病。通过快捷响应附加欺骗程式效果时，仅附加可持续生效的状态效果。"
+            }
+          ],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {},
+          "gameText": "共鸣技能·有效载荷、共鸣技能·脉冲干扰、重击·双线程和重击·多线程免疫打断。\n施放变奏技能·过时幻觉时攻击提升20%，持续14秒。\n队伍中的角色直接造成的伤害击败带有欺骗程式效果的目标时，露西记录该效果并激活对应的快捷响应，持续6秒。露西失去意识时，记录效果失效。\n快捷响应：生效期间，对队伍中登场角色周围一定范围内的所有目标附加记录的欺骗程式效果，对范围内每名目标仅生效一次。\n可被记录的欺骗程式效果：欺骗程式·义体故障、欺骗程式·突破协议、欺骗程式·运动失能、欺骗程式·武装故障、欺骗程式·赛博精神病。通过快捷响应附加欺骗程式效果时，仅附加可持续生效的状态效果。"
+        },
+        "2": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [],
+          "teamBuffs": [],
+          "extraSkills": [
+            {
+              "templateKey": "extra_ms1qtnom_jdk63",
+              "name": "2链·额外伤害",
+              "damageType": "重击",
+              "effectType": "聚爆",
+              "effectLayers": 13,
+              "effectBurstLayers": 0,
+              "effectCount": 1,
+              "baseMult": 450,
+              "fixedDamage": false,
+              "effectMultMode": "custom"
+            }
+          ],
+          "combatModes": {},
+          "gameText": "施放共鸣解放·网络行者和共鸣解放·暗网深潜时，初始的Ram点数提升至32点。\n施放共鸣技能·脉冲干扰后额外造成1次450%的衍射伤害，该次伤害为重击伤害。\n该次伤害命中目标时，为目标额外附加以下欺骗程式效果：欺骗程式·义体故障、欺骗程式·突破协议、欺骗程式·运动失能、欺骗程式·武装故障、欺骗程式·赛博精神病。通过该方式附加欺骗程式效果时，仅附加可持续生效的状态效果。\n共鸣回路·黑墙深度效果中：施放重击·多线程时，若自身持有SQL，伤害倍率提升效果由270%提升至560%。"
+        },
+        "3": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [
+            {
+              "category": "composite",
+              "name": "3链",
+              "mode": "fixed",
+              "value": 0,
+              "perStack": 0,
+              "maxStacks": 99,
+              "damageType": "",
+              "element": "",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "effects": [
+                {
+                  "zone": "multBoost",
+                  "valueMode": "fixed",
+                  "value": 50,
+                  "segments": [
+                    {
+                      "upTo": null,
+                      "perStack": 0
+                    }
+                  ],
+                  "skillScope": "names",
+                  "skillNames": [
+                    "网络行者·共鸣解放·暗网深潜·覆写篡改",
+                    "共鸣解放·暗网深潜·覆写篡改",
+                    "网络行者·共鸣解放·网络行者·覆写篡改",
+                    "共鸣解放·网络行者·覆写篡改"
+                  ],
+                  "librarySkillNames": [
+                    "网络行者·共鸣解放·暗网深潜·覆写篡改",
+                    "网络行者·共鸣解放·网络行者·覆写篡改"
+                  ],
+                  "catalogIds": [],
+                  "damageType": "重击",
+                  "effectType": "",
+                  "element": "衍射",
+                  "defenseKind": "",
+                  "minStacks": 0,
+                  "minResonance": 0,
+                  "onlyCharacterIds": [],
+                  "onlyCombatModes": [],
+                  "effectKey": ""
+                },
+                {
+                  "zone": "generalCritDmg",
+                  "valueMode": "fixed",
+                  "value": 100,
+                  "segments": [
+                    {
+                      "upTo": null,
+                      "perStack": 0
+                    }
+                  ],
+                  "skillScope": "names",
+                  "skillNames": [
+                    "网络行者·共鸣解放·网络行者·覆写篡改",
+                    "共鸣解放·网络行者·覆写篡改",
+                    "网络行者·共鸣解放·暗网深潜·覆写篡改",
+                    "共鸣解放·暗网深潜·覆写篡改"
+                  ],
+                  "librarySkillNames": [
+                    "网络行者·共鸣解放·网络行者·覆写篡改",
+                    "网络行者·共鸣解放·暗网深潜·覆写篡改"
+                  ],
+                  "catalogIds": [],
+                  "damageType": "重击",
+                  "effectType": "",
+                  "element": "衍射",
+                  "defenseKind": "",
+                  "minStacks": 0,
+                  "minResonance": 0,
+                  "onlyCharacterIds": [],
+                  "onlyCombatModes": [],
+                  "effectKey": ""
+                }
+              ],
+              "sourceTag": "characterTemplate",
+              "templateKey": "tpl_ms1qwcwh_vh2ta",
+              "gameText": "共鸣解放·网络行者和共鸣解放·暗网深潜的覆写篡改的伤害倍率提升50%、暴击伤害提升100%。\n欺骗程式·运动失能的伤害倍率提升65%。\n骇破响应·数据崩解的伤害倍率提升65%。"
+            }
+          ],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {},
+          "gameText": "共鸣解放·网络行者和共鸣解放·暗网深潜的覆写篡改的伤害倍率提升50%、暴击伤害提升100%。\n欺骗程式·运动失能的伤害倍率提升65%。\n骇破响应·数据崩解的伤害倍率提升65%。"
+        },
+        "4": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [],
+          "teamBuffs": [
+            {
+              "category": "generalBonus",
+              "name": "露西·4链",
+              "mode": "fixed",
+              "value": 20,
+              "perStack": 0,
+              "maxStacks": 5,
+              "damageType": "",
+              "element": "",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "sourceTag": "characterTemplate",
+              "templateKey": "tpl_ms1r31aw_0bru7",
+              "gameText": "队伍中的角色附加【骇破·偏移】后，使队伍中的角色全属性伤害加成提升20%，持续20秒。"
+            }
+          ],
+          "extraSkills": [],
+          "combatModes": {},
+          "gameText": "队伍中的角色附加【骇破·偏移】后，使队伍中的角色全属性伤害加成提升20%，持续20秒。"
+        },
+        "5": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {},
+          "gameText": "固有技能·幽灵义体中获取的光学欺骗层数上限提升至2层。\n固有技能·幽灵义体获得强化：生命值低于50%时，自身受到攻击后获得1层光学欺骗，该效果有180秒的冷却时间。触发光学欺骗效果时，获得基于露西自身攻击力150%的护盾，持续10秒。"
+        },
+        "6": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [
+            {
+              "category": "typeVulnerability",
+              "name": "6链",
+              "mode": "fixed",
+              "value": 40,
+              "perStack": 0,
+              "maxStacks": 5,
+              "damageType": "重击",
+              "element": "",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "sourceTag": "characterTemplate",
+              "templateKey": "tpl_ms1r3urx_vds4a",
+              "gameText": "拥有【骇破·偏移】效果或处于【骇破·干涉】状态的目标受到露西的重击伤害提升40%。\n拥有【骇破·偏移】效果或处于【骇破·干涉】状态的目标受到露西的骇破伤害提升60%。\n骇破响应·数据崩解触发的停滞效果延长至1.5秒。"
+            }
+          ],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {},
+          "gameText": "拥有【骇破·偏移】效果或处于【骇破·干涉】状态的目标受到露西的重击伤害提升40%。\n拥有【骇破·偏移】效果或处于【骇破·干涉】状态的目标受到露西的骇破伤害提升60%。\n骇破响应·数据崩解触发的停滞效果延长至1.5秒。"
+        }
+      },
+      "combatModes": {}
+    }
+  ]
+}

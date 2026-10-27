@@ -1,0 +1,63 @@
+/* Scoped to the editing shelf; existing card colors and fonts are inherited. */
+#main .axis-palette-panel .axis-skill-library.palette-shelf {
+  display:grid!important; grid-template-columns:112px minmax(0,1fr)!important;
+  grid-template-rows:auto auto minmax(0,auto) auto!important; gap:8px 12px!important; align-items:start!important;
+}
+#main .palette-shelf .skill-library-toolbar {grid-column:1/-1!important; display:flex!important; flex-wrap:wrap; align-items:center; gap:8px 16px!important;}
+#main .palette-shelf .palette-level-controls {grid-column:1/-1; min-width:0;}
+#main .palette-shelf .palette-level-controls:empty {display:none;}
+#main .palette-shelf .palette-compact-toggle {display:inline-flex; align-items:center; gap:6px; margin-left:auto; min-height:36px; font-size:13px; cursor:pointer; white-space:nowrap;}
+#main .palette-shelf .palette-compact-toggle input {accent-color:var(--accent,#d2b874); width:16px; height:16px; margin:0;}
+#main .palette-shelf .skill-type-tabs {grid-column:1!important; grid-row:3!important; flex-direction:column!important; max-height:min(52vh,640px); overflow-y:auto; overflow-x:hidden; padding-right:8px!important;}
+#main .palette-shelf .skill-type-tabs button {min-height:40px; display:flex; align-items:center; justify-content:space-between; gap:4px; white-space:normal;}
+#main .palette-shelf .palette-scroll {grid-column:2; grid-row:3; min-width:0; min-height:200px; max-height:min(52vh,640px); overflow:auto; overscroll-behavior:contain; scrollbar-gutter:stable; padding:0 5px 3px 0;}
+#main .palette-shelf .palette-section {margin:0!important; padding:10px 0 0!important; border-top:1px solid #aaa3!important; scroll-margin-top:0;}
+#main .palette-shelf .palette-section:first-child {padding-top:0!important; border-top:0!important;}
+#main .palette-shelf .palette-section + .palette-section {margin-top:12px!important;}
+#main .palette-shelf .palette-section-title {display:flex; align-items:center; gap:8px; margin:0 0 8px!important; font-size:14px; line-height:1.5; color:inherit;}
+#main .palette-shelf .palette-section-title > span {font-size:11px; font-weight:400; opacity:.6;}
+#main .palette-shelf .palette-form + .palette-form {margin-top:8px;}
+#main .palette-shelf .palette-form-title {font-size:12px; line-height:1.5; margin:0 0 5px; font-weight:600; opacity:.8;}
+#main .palette-shelf .skill-grid {display:grid!important; grid-template-columns:repeat(auto-fill,minmax(min(180px,100%),1fr))!important; gap:7px!important; grid-column:auto!important;}
+#main .palette-shelf .skill-card {min-width:0!important; width:100%!important; box-sizing:border-box;}
+#main .palette-shelf .axis-skill-library-hint {grid-column:1/-1!important; margin:0!important; padding:2px 0!important; font-size:11px!important;}
+#main .palette-shelf.is-compact .skill-grid {grid-template-columns:repeat(auto-fill,minmax(min(108px,100%),1fr))!important; gap:6px!important;}
+#main .palette-shelf.is-compact .palette-form {display:grid; grid-template-columns:78px minmax(0,1fr); align-items:start; column-gap:8px;}
+#main .palette-shelf.is-compact .palette-form + .palette-form {margin-top:4px;}
+#main .palette-shelf.is-compact .palette-row-label {min-width:0; min-height:38px; display:flex; flex-direction:column; justify-content:center; gap:0;}
+#main .palette-shelf.is-compact .palette-section-title {margin:0!important; font-size:13px; line-height:19px; gap:5px; flex-wrap:wrap;}
+#main .palette-shelf.is-compact .palette-form-title {margin:0!important; font-size:12px; line-height:18px; overflow-wrap:anywhere;}
+#main .palette-shelf.is-compact .palette-section {padding-top:7px!important;}
+#main .palette-shelf.is-compact .palette-section + .palette-section {margin-top:7px!important;}
+#main .palette-shelf.is-compact .palette-section:first-child {padding-top:0!important;}
+#main .palette-shelf.is-compact .skill-card {display:flex!important; align-items:center!important; justify-content:center!important; min-height:38px!important; height:auto!important; padding:7px 9px!important; gap:0!important;}
+#main .palette-shelf.is-compact .skill-card-name {display:block!important; margin:0!important; width:100%!important; font-size:13px!important; line-height:1.4!important; text-align:center; overflow-wrap:anywhere;}
+#main .palette-shelf.is-compact .skill-card > :not(.skill-card-name):not(.skill-card-rename),
+#main .palette-shelf.is-compact .skill-level-badge,
+#main .palette-shelf.is-compact .frost-hint-badge,
+#main .palette-shelf.is-compact .skill-card-custom > :not(.skill-card) {display:none!important;}
+#main .palette-shelf.is-compact .skill-card::before,
+#main .palette-shelf.is-compact .skill-card::after,
+#main .palette-shelf.is-compact .skill-card-name::after {display:none!important;}
+#main .palette-shelf :is(button,input,.palette-scroll):focus-visible {outline:2px solid currentColor!important; outline-offset:2px;}
+@media(max-width:700px) {
+  #main .axis-palette-panel .axis-skill-library.palette-shelf {grid-template-columns:minmax(0,1fr)!important; gap:8px!important;}
+  #main .palette-shelf .skill-type-tabs {grid-column:1!important; grid-row:3!important; flex-direction:row!important; overflow-x:auto; overflow-y:hidden; max-height:none; padding:0!important; border-right:0!important;}
+  #main .palette-shelf .skill-type-tabs button {width:auto!important; min-height:44px; flex-shrink:0;}
+  #main .palette-shelf .palette-scroll {grid-column:1; grid-row:4; max-height:58svh;}
+  #main .palette-shelf .skill-grid {grid-template-columns:repeat(auto-fill,minmax(min(150px,100%),1fr))!important;}
+  #main .palette-shelf.is-compact .skill-grid {grid-template-columns:repeat(auto-fill,minmax(min(94px,100%),1fr))!important;}
+  #main .palette-shelf.is-compact .skill-card {min-height:44px!important;}
+  #main .palette-shelf.is-compact .palette-form {grid-template-columns:66px minmax(0,1fr); column-gap:6px;}
+  #main .palette-shelf.is-compact .palette-row-label {min-height:44px;}
+}
+
+/* E/R use content-sized flex bases: wrap naturally when the shelf is narrower. */
+#main .palette-shelf .palette-action-pair {min-width:0; margin-top:12px;}
+#main .palette-shelf .palette-action-pair:first-child {margin-top:0;}
+#main .palette-shelf .palette-action-pair + .palette-section {margin-top:12px!important;}
+#main .palette-shelf .palette-action-pair > .palette-section:first-child {padding-top:10px!important; border-top:1px solid #aaa3!important;}
+#main .palette-shelf.is-compact .palette-action-pair {display:flex; flex-wrap:wrap; gap:7px 12px; margin-top:7px;}
+#main .palette-shelf.is-compact .palette-action-pair:first-child {margin-top:0;}
+#main .palette-shelf.is-compact .palette-action-pair > .palette-section {flex:1 1 var(--palette-pair-width); min-width:min(100%,var(--palette-pair-width)); margin:0!important; padding-top:7px!important; border-top:1px solid #aaa3!important; box-sizing:border-box;}
+#main .palette-shelf.is-compact .palette-action-pair + .palette-section {margin-top:7px!important;}

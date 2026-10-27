@@ -1,0 +1,428 @@
+{
+  "version": 1,
+  "kind": "shard",
+  "characterId": "1209",
+  "characterName": "莫宁",
+  "templates": [
+    {
+      "characterId": "1209",
+      "characterName": "莫宁",
+      "revision": 7,
+      "author": "",
+      "notes": "莫宁：全队【强谐振场】防御比+20%（固定）；全队【偏谐值累积效率】+50%（面板同步）。0链【临界协议·共鸣效率】：共鸣效率>100%时每超过1%→该技能暴击+0.5%（上限80%）、暴伤+1%（上限160%），随面板同步。2链全队【共鸣效率暴伤】：每超过1%→全队暴伤+0.2%（上限32%，随面板同步）；【偏谐值累积效率】再+20%。5链时特殊技能【莫宁·响应震谐】自动挂【5链·响应提升】倍率提升+160%（固定）。",
+      "personalBuffs": [
+        {
+          "templateKey": "moning_critical_protocol_er",
+          "category": "composite",
+          "name": "临界协议·共鸣效率",
+          "mode": "fixed",
+          "value": 0,
+          "effects": [
+            {
+              "zone": "generalCritRate",
+              "valueMode": "fixed",
+              "value": 0,
+              "segments": [
+                {
+                  "upTo": null,
+                  "perStack": 0
+                }
+              ],
+              "skillScope": "names",
+              "skillNames": [
+                "临界协议·技能",
+                "临界协议"
+              ],
+              "librarySkillNames": [
+                "临界协议·技能"
+              ],
+              "catalogIds": [],
+              "damageType": "",
+              "effectType": "",
+              "element": "",
+              "defenseKind": "",
+              "minStacks": 0,
+              "minResonance": 0,
+              "onlyCharacterIds": [],
+              "onlyCombatModes": [],
+              "effectKey": "moning_cp_er_crit_rate"
+            },
+            {
+              "zone": "generalCritDmg",
+              "valueMode": "fixed",
+              "value": 0,
+              "segments": [
+                {
+                  "upTo": null,
+                  "perStack": 0
+                }
+              ],
+              "skillScope": "names",
+              "skillNames": [
+                "临界协议·技能",
+                "临界协议"
+              ],
+              "librarySkillNames": [
+                "临界协议·技能"
+              ],
+              "catalogIds": [],
+              "damageType": "",
+              "effectType": "",
+              "element": "",
+              "defenseKind": "",
+              "minStacks": 0,
+              "minResonance": 0,
+              "onlyCharacterIds": [],
+              "onlyCombatModes": [],
+              "effectKey": "moning_cp_er_crit_dmg"
+            }
+          ],
+          "sourceTag": "characterTemplate",
+          "perStack": 0,
+          "maxStacks": 1,
+          "gameText": "临界协议\n攻击范围内的目标，造成热熔伤害。\n莫宁自身共鸣效率大于100%时，每超过1%的共鸣效率使该技能造成伤害的暴击提升0.5%，上限80%，并使造成的暴击伤害提升1%，上限160%。"
+        }
+      ],
+      "teamBuffs": [
+        {
+          "templateKey": "moning_offset_harmony_eff",
+          "category": "offsetHarmonyEff",
+          "name": "偏谐值累积效率",
+          "mode": "fixed",
+          "value": 50,
+          "damageType": "",
+          "element": "",
+          "defenseKind": "",
+          "sourceTag": "characterTemplate",
+          "perStack": 0,
+          "maxStacks": 5,
+          "gameText": "谐振场\n·谐振场持续25秒。\n·展开谐振场时，造成热熔伤害，此次伤害为共鸣解放伤害。\n·持续回复谐振场生效范围内的附近队伍中登场角色的生命值，每3秒可触发1次。\n·谐振场生效范围内附近队伍中所有角色偏谐值累积效率提升50%。\n·谐振场生效范围内附近队伍中登场角色抗打断提升。"
+        },
+        {
+          "templateKey": "moning_strong_resonance_field_def",
+          "category": "generalDefPct",
+          "name": "强谐振场",
+          "mode": "fixed",
+          "value": 20,
+          "damageType": "",
+          "element": "",
+          "defenseKind": "",
+          "sourceTag": "characterTemplate",
+          "perStack": 0,
+          "maxStacks": 5,
+          "gameText": "强谐振场\n·强谐振场持续25秒。\n·强谐振场生效范围内附近队伍中所有角色防御提升20%。\n·继承谐振场的抗打断提升效果和偏谐值累积效率提升效果。\n·继承谐振场的治疗效果，且治疗倍率提升40%。"
+        },
+        {
+          "category": "generalBonus",
+          "name": "干涉标记",
+          "mode": "fixed",
+          "value": 40,
+          "perStack": 0,
+          "maxStacks": 5,
+          "damageType": "",
+          "element": "",
+          "defenseKind": "",
+          "convergenceVuln": "",
+          "sourceTag": "characterTemplate",
+          "templateKey": "tpl_mryv4mqi_pdcbl",
+          "gameText": "干涉标记\n若目标处于【震谐·干涉】或【集谐·干涉】状态，则附近队伍中所有角色对其造成的伤害提升：莫宁自身共鸣效率大于100%时，每超过1%的共鸣效率计算为0.25%的伤害提升，上限40%"
+        },
+        {
+          "category": "generalDeep",
+          "name": "延奏·莫宁",
+          "mode": "fixed",
+          "value": 25,
+          "perStack": 0,
+          "maxStacks": 5,
+          "damageType": "",
+          "element": "",
+          "defenseKind": "",
+          "convergenceVuln": "",
+          "sourceTag": "characterTemplate",
+          "templateKey": "tpl_mryv559o_zog1r",
+          "gameText": "队伍中的角色全伤害加深25%，持续30秒。"
+        }
+      ],
+      "extraSkills": [],
+      "resonanceChains": {
+        "1": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {
+            "convergenceResponse": {
+              "notes": "",
+              "personalBuffs": [],
+              "teamBuffs": [],
+              "extraSkills": []
+            },
+            "shockResponse": {
+              "notes": "",
+              "personalBuffs": [],
+              "teamBuffs": [],
+              "extraSkills": []
+            }
+          },
+          "gameText": "普攻·广域观测模式免疫打断。\n莫宁为目标附加的干涉标记的持续时间延长150%，且干涉标记的伤害提升效果不再需要目标处于【震谐·干涉】或【集谐·干涉】状态。莫宁为目标附加观测标记时，将同时附加干涉标记。"
+        },
+        "2": {
+          "enabledByDefault": false,
+          "notes": "内置：全队【2链·莫宁·共鸣效率暴伤】—共鸣效率>100%时每超过1%→全队暴伤+0.2%（上限32%，随莫宁面板同步）；全队【偏谐值累积效率】+20%。",
+          "personalBuffs": [],
+          "teamBuffs": [
+            {
+              "templateKey": "moning_c2_offset_harmony_eff",
+              "category": "offsetHarmonyEff",
+              "name": "偏谐值累积效率·2链",
+              "mode": "fixed",
+              "value": 20,
+              "damageType": "",
+              "element": "",
+              "defenseKind": "",
+              "sourceTag": "characterTemplate",
+              "perStack": 0,
+              "maxStacks": 5,
+              "gameText": "附近队伍中所有角色对拥有干涉标记的目标造成的暴击伤害提升：莫宁自身共鸣效率大于100%时，每超过1%的共鸣效率计算为0.2%的暴击伤害提升，上限32%。\n谐振场、强谐振场还会使生效范围内附近队伍中所有角色偏谐值累积效率额外提升20%。"
+            },
+            {
+              "templateKey": "moning_c2_er_crit_dmg",
+              "category": "generalCritDmg",
+              "name": "2链·莫宁·共鸣效率暴伤",
+              "mode": "fixed",
+              "value": 0,
+              "damageType": "",
+              "element": "",
+              "defenseKind": "",
+              "sourceTag": "characterTemplate",
+              "perStack": 0,
+              "maxStacks": 5,
+              "gameText": "附近队伍中所有角色对拥有干涉标记的目标造成的暴击伤害提升：莫宁自身共鸣效率大于100%时，每超过1%的共鸣效率计算为0.2%的暴击伤害提升，上限32%。\n谐振场、强谐振场还会使生效范围内附近队伍中所有角色偏谐值累积效率额外提升20%。"
+            }
+          ],
+          "extraSkills": [],
+          "combatModes": {
+            "convergenceResponse": {
+              "notes": "",
+              "personalBuffs": [],
+              "teamBuffs": [],
+              "extraSkills": []
+            },
+            "shockResponse": {
+              "notes": "",
+              "personalBuffs": [],
+              "teamBuffs": [],
+              "extraSkills": []
+            }
+          },
+          "gameText": "附近队伍中所有角色对拥有干涉标记的目标造成的暴击伤害提升：莫宁自身共鸣效率大于100%时，每超过1%的共鸣效率计算为0.2%的暴击伤害提升，上限32%。\n谐振场、强谐振场还会使生效范围内附近队伍中所有角色偏谐值累积效率额外提升20%。"
+        },
+        "3": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {
+            "convergenceResponse": {
+              "notes": "",
+              "personalBuffs": [],
+              "teamBuffs": [],
+              "extraSkills": []
+            },
+            "shockResponse": {
+              "notes": "",
+              "personalBuffs": [],
+              "teamBuffs": [],
+              "extraSkills": []
+            }
+          },
+          "gameText": "施放共鸣技能·分布式阵列时，额外回复自身25点协奏能量，并回复100点【相对动能】，每25秒可触发1次。"
+        },
+        "4": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {
+            "convergenceResponse": {
+              "notes": "",
+              "personalBuffs": [],
+              "teamBuffs": [],
+              "extraSkills": []
+            },
+            "shockResponse": {
+              "notes": "",
+              "personalBuffs": [],
+              "teamBuffs": [],
+              "extraSkills": []
+            }
+          },
+          "gameText": "强谐振场的治疗量提升30%。"
+        },
+        "5": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [
+            {
+              "category": "composite",
+              "name": "5链",
+              "mode": "fixed",
+              "value": 0,
+              "perStack": 0,
+              "maxStacks": 99,
+              "damageType": "",
+              "element": "",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "effects": [
+                {
+                  "zone": "multBoost",
+                  "valueMode": "fixed",
+                  "value": 40,
+                  "segments": [
+                    {
+                      "upTo": null,
+                      "perStack": 0
+                    }
+                  ],
+                  "skillScope": "names",
+                  "skillNames": [
+                    "临界协议·技能"
+                  ],
+                  "librarySkillNames": [
+                    "临界协议·技能"
+                  ],
+                  "catalogIds": [],
+                  "damageType": "共鸣解放",
+                  "effectType": "",
+                  "element": "热熔",
+                  "defenseKind": "",
+                  "minStacks": 0,
+                  "minResonance": 0,
+                  "onlyCharacterIds": [
+                    "1209"
+                  ],
+                  "onlyCombatModes": [],
+                  "effectKey": ""
+                }
+              ],
+              "sourceTag": "characterTemplate",
+              "templateKey": "tpl_mryv7kv2_4cv4f",
+              "gameText": "共鸣解放·临界协议伤害倍率提升40%。\n震谐响应·粒子射流伤害倍率提升160%。",
+              "onlyCharacterIds": [
+                "1209"
+              ]
+            }
+          ],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {
+            "convergenceResponse": {
+              "notes": "",
+              "personalBuffs": [],
+              "teamBuffs": [],
+              "extraSkills": []
+            },
+            "shockResponse": {
+              "notes": "",
+              "personalBuffs": [],
+              "teamBuffs": [],
+              "extraSkills": []
+            }
+          },
+          "gameText": "共鸣解放·临界协议伤害倍率提升40%。\n震谐响应·粒子射流伤害倍率提升160%。"
+        },
+        "6": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [
+            {
+              "category": "composite",
+              "name": "6链",
+              "mode": "fixed",
+              "value": 0,
+              "perStack": 0,
+              "maxStacks": 99,
+              "damageType": "",
+              "element": "",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "effects": [
+                {
+                  "zone": "generalBonus",
+                  "valueMode": "fixed",
+                  "value": 400,
+                  "segments": [
+                    {
+                      "upTo": null,
+                      "perStack": 0
+                    }
+                  ],
+                  "skillScope": "names",
+                  "skillNames": [
+                    "临界协议·技能"
+                  ],
+                  "librarySkillNames": [
+                    "临界协议·技能"
+                  ],
+                  "catalogIds": [],
+                  "damageType": "共鸣解放",
+                  "effectType": "",
+                  "element": "热熔",
+                  "defenseKind": "",
+                  "minStacks": 0,
+                  "minResonance": 0,
+                  "onlyCharacterIds": [
+                    "1209"
+                  ],
+                  "onlyCombatModes": [],
+                  "effectKey": ""
+                }
+              ],
+              "sourceTag": "characterTemplate",
+              "templateKey": "tpl_mryv86cz_z6xmn",
+              "gameText": "共鸣解放·临界协议造成的伤害提升400%。\n莫宁处于非战斗状态大于4秒后，每0.2秒回复共鸣能量上限10%的共鸣能量。",
+              "onlyCharacterIds": [
+                "1209"
+              ]
+            }
+          ],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {
+            "convergenceResponse": {
+              "notes": "",
+              "personalBuffs": [],
+              "teamBuffs": [],
+              "extraSkills": []
+            },
+            "shockResponse": {
+              "notes": "",
+              "personalBuffs": [],
+              "teamBuffs": [],
+              "extraSkills": []
+            }
+          },
+          "gameText": "共鸣解放·临界协议造成的伤害提升400%。\n莫宁处于非战斗状态大于4秒后，每0.2秒回复共鸣能量上限10%的共鸣能量。"
+        }
+      },
+      "combatModes": {
+        "convergenceResponse": {
+          "notes": "",
+          "personalBuffs": [],
+          "teamBuffs": [],
+          "extraSkills": []
+        },
+        "shockResponse": {
+          "notes": "",
+          "personalBuffs": [],
+          "teamBuffs": [],
+          "extraSkills": []
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,503 @@
+{
+  "version": 1,
+  "kind": "shard",
+  "characterId": "1507",
+  "characterName": "赞妮",
+  "templates": [
+    {
+      "characterId": "1507",
+      "characterName": "赞妮",
+      "revision": 3,
+      "author": "",
+      "notes": "赞妮：全队【延奏·赞妮】衍射加深+20%（固定；对赞妮本人不生效）。；【焰光】≥3链时追加：指定【终绝将至之刻】倍率增加+8%/层（与本体同一Buff）",
+      "personalBuffs": [
+        {
+          "category": "composite",
+          "name": "重燃状态下",
+          "mode": "fixed",
+          "value": 0,
+          "perStack": 0,
+          "maxStacks": 99,
+          "damageType": "",
+          "element": "",
+          "defenseKind": "",
+          "convergenceVuln": "",
+          "effects": [
+            {
+              "zone": "multBoost",
+              "valueMode": "fixed",
+              "value": 25,
+              "segments": [
+                {
+                  "upTo": null,
+                  "perStack": 0
+                }
+              ],
+              "skillScope": "names",
+              "skillNames": [
+                "例行交涉·第一段",
+                "第一段",
+                "例行交涉·第二段",
+                "第二段",
+                "例行交涉·第三段",
+                "第三段",
+                "例行交涉·第四段",
+                "第四段",
+                "例行交涉·突破性进展",
+                "突破性进展",
+                "例行交涉·空中攻击",
+                "空中攻击",
+                "例行交涉·闪避反击",
+                "闪避反击"
+              ],
+              "librarySkillNames": [
+                "例行交涉·第一段",
+                "例行交涉·第二段",
+                "例行交涉·第三段",
+                "例行交涉·第四段",
+                "例行交涉·突破性进展",
+                "例行交涉·空中攻击",
+                "例行交涉·闪避反击"
+              ],
+              "catalogIds": [],
+              "damageType": "普攻",
+              "effectType": "",
+              "element": "衍射",
+              "defenseKind": "",
+              "minStacks": 0,
+              "minResonance": 0,
+              "onlyCharacterIds": [],
+              "onlyCombatModes": [],
+              "effectKey": ""
+            }
+          ],
+          "sourceTag": "characterTemplate",
+          "templateKey": "tpl_ms1e6nn5_48hih",
+          "gameText": "重燃\n造成衍射伤害并进入灼焰形态，【焰光】上限从100点提升为150点，立即获得50点【焰光】。灼焰形态期间，普攻倍率提升。"
+        },
+        {
+          "category": "typeDeep",
+          "name": "斩棘状态下",
+          "mode": "fixed",
+          "value": 20,
+          "perStack": 0,
+          "maxStacks": 5,
+          "damageType": "效应",
+          "element": "",
+          "defenseKind": "",
+          "convergenceVuln": "",
+          "sourceTag": "characterTemplate",
+          "templateKey": "tpl_ms1eb686_lzbxr",
+          "effectType": "光噪",
+          "gameText": "施放集中压制或破袭反击时，进入斩棘状态，对命中的目标附加1层【烈阳余烬】。最后一段攻击施放后自身获得【焰光】。\n\n斩棘\n自身直接造成的【光噪效应】伤害加深20%。"
+        },
+        {
+          "category": "composite",
+          "name": "焰光",
+          "mode": "stack",
+          "value": 0,
+          "perStack": 0,
+          "maxStacks": 99,
+          "damageType": "",
+          "element": "",
+          "defenseKind": "",
+          "convergenceVuln": "",
+          "effects": [
+            {
+              "zone": "multAdd",
+              "valueMode": "stack",
+              "value": 0,
+              "segments": [
+                {
+                  "upTo": 40,
+                  "perStack": 9.95
+                }
+              ],
+              "skillScope": "names",
+              "skillNames": [
+                "黯夜将明·重斩·终夜",
+                "重斩·终夜"
+              ],
+              "librarySkillNames": [
+                "黯夜将明·重斩·终夜"
+              ],
+              "catalogIds": [],
+              "damageType": "重击",
+              "effectType": "",
+              "element": "衍射",
+              "defenseKind": "",
+              "minStacks": 0,
+              "minResonance": 0,
+              "onlyCharacterIds": [],
+              "onlyCombatModes": [],
+              "effectKey": ""
+            },
+            {
+              "id": "id_18026",
+              "zone": "multAdd",
+              "valueMode": "stack",
+              "value": 0,
+              "segments": [
+                {
+                  "upTo": null,
+                  "perStack": 8
+                }
+              ],
+              "skillScope": "names",
+              "skillNames": [
+                "晨昏交替之时·终绝将至之刻",
+                "终绝将至之刻"
+              ],
+              "librarySkillNames": [
+                "晨昏交替之时·终绝将至之刻",
+                "终绝将至之刻"
+              ],
+              "catalogIds": [],
+              "damageType": "",
+              "effectType": "",
+              "element": "",
+              "defenseKind": "",
+              "minStacks": 0,
+              "minResonance": 3,
+              "onlyCharacterIds": [],
+              "onlyCombatModes": [],
+              "effectKey": "zanni_yanguang_c3_mult_add"
+            }
+          ],
+          "sourceTag": "characterTemplate",
+          "templateKey": "zanni_yanguang",
+          "gameText": "重斩·终夜命中时可以消耗赞妮至多40点【焰光】，每消耗1点【焰光】，使本次重斩·终夜的伤害倍率额外增加。"
+        },
+        {
+          "category": "elementBonus",
+          "name": "固有1·变奏后",
+          "mode": "fixed",
+          "value": 12,
+          "perStack": 0,
+          "maxStacks": 5,
+          "damageType": "",
+          "element": "衍射",
+          "defenseKind": "",
+          "convergenceVuln": "",
+          "sourceTag": "characterTemplate",
+          "templateKey": "tpl_ms1eiupj_zgtpd",
+          "gameText": "施放变奏技能即刻执行时，衍射伤害加成提升12%，持续14秒。"
+        },
+        {
+          "category": "composite",
+          "name": "烈阳余烬·延奏提升",
+          "mode": "stack",
+          "value": 0,
+          "perStack": 0,
+          "maxStacks": 99,
+          "damageType": "",
+          "element": "",
+          "defenseKind": "",
+          "convergenceVuln": "",
+          "effects": [
+            {
+              "zone": "generalVulnerability",
+              "valueMode": "stack",
+              "value": 0,
+              "segments": [
+                {
+                  "upTo": 60,
+                  "perStack": 10
+                }
+              ],
+              "skillScope": "names",
+              "skillNames": [
+                "来日道标"
+              ],
+              "librarySkillNames": [
+                "来日道标"
+              ],
+              "catalogIds": [],
+              "damageType": "延奏",
+              "effectType": "",
+              "element": "衍射",
+              "defenseKind": "",
+              "minStacks": 0,
+              "minResonance": 0,
+              "onlyCharacterIds": [],
+              "onlyCombatModes": [],
+              "effectKey": ""
+            }
+          ],
+          "sourceTag": "characterTemplate",
+          "templateKey": "tpl_ms1ek88q_tfcfu",
+          "gameText": "攻击目标，造成赞妮150%攻击的衍射伤害并清空其拥有的【烈阳余烬】。造成伤害前目标每拥有1层【烈阳余烬】受到该伤害提升10%，此次伤害同时视为【光噪效应】伤害。"
+        }
+      ],
+      "teamBuffs": [
+        {
+          "templateKey": "zanni_outro_diffraction_deep",
+          "category": "elementDeep",
+          "name": "延奏·赞妮",
+          "mode": "fixed",
+          "value": 20,
+          "element": "衍射",
+          "damageType": "",
+          "defenseKind": "",
+          "excludeSource": true,
+          "sourceTag": "characterTemplate",
+          "perStack": 0,
+          "maxStacks": 5,
+          "gameText": "攻击目标，造成赞妮150%攻击的衍射伤害并清空其拥有的【烈阳余烬】。造成伤害前目标每拥有1层【烈阳余烬】受到该伤害提升10%，此次伤害同时视为【光噪效应】伤害。队伍中除赞妮以外的角色对拥有【烈阳余烬】的目标造成的衍射伤害加深20%，持续20秒。"
+        }
+      ],
+      "extraSkills": [],
+      "resonanceChains": {
+        "1": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [
+            {
+              "category": "elementBonus",
+              "name": "1链·施放集中压制/破袭反击时",
+              "mode": "fixed",
+              "value": 50,
+              "perStack": 0,
+              "maxStacks": 5,
+              "damageType": "",
+              "element": "衍射",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "sourceTag": "characterTemplate",
+              "templateKey": "tpl_ms1epj8n_8le0o",
+              "gameText": "施放集中压制或破袭反击时，衍射伤害加成提升50%，持续14秒。\n重斩·终夜免疫打断。"
+            }
+          ],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {}
+        },
+        "2": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [
+            {
+              "category": "generalCritRate",
+              "name": "2链",
+              "mode": "fixed",
+              "value": 20,
+              "perStack": 0,
+              "maxStacks": 5,
+              "damageType": "",
+              "element": "",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "sourceTag": "characterTemplate",
+              "templateKey": "tpl_ms1eq77p_00tpa",
+              "gameText": "暴击提升20%。\n集中压制、破袭反击倍率提升80%。"
+            },
+            {
+              "category": "composite",
+              "name": "2链",
+              "mode": "fixed",
+              "value": 0,
+              "perStack": 0,
+              "maxStacks": 99,
+              "damageType": "",
+              "element": "",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "effects": [
+                {
+                  "zone": "multBoost",
+                  "valueMode": "fixed",
+                  "value": 80,
+                  "segments": [
+                    {
+                      "upTo": null,
+                      "perStack": 0
+                    }
+                  ],
+                  "skillScope": "names",
+                  "skillNames": [
+                    "无眠守望·集中压制",
+                    "集中压制",
+                    "无眠守望·破袭反击",
+                    "破袭反击"
+                  ],
+                  "librarySkillNames": [
+                    "无眠守望·集中压制",
+                    "无眠守望·破袭反击"
+                  ],
+                  "catalogIds": [],
+                  "damageType": "共鸣技能",
+                  "effectType": "",
+                  "element": "衍射",
+                  "defenseKind": "",
+                  "minStacks": 0,
+                  "minResonance": 0,
+                  "onlyCharacterIds": [],
+                  "onlyCombatModes": [],
+                  "effectKey": ""
+                }
+              ],
+              "sourceTag": "characterTemplate",
+              "templateKey": "tpl_ms1eqdr8_ggdtt",
+              "gameText": "暴击提升20%。\n集中压制、破袭反击倍率提升80%。"
+            }
+          ],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {}
+        },
+        "3": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {}
+        },
+        "4": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [],
+          "teamBuffs": [
+            {
+              "category": "generalAttack",
+              "name": "4链·赞妮",
+              "mode": "fixed",
+              "value": 20,
+              "perStack": 0,
+              "maxStacks": 5,
+              "damageType": "",
+              "element": "",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "sourceTag": "characterTemplate",
+              "templateKey": "tpl_ms1f2vr1_61309",
+              "gameText": "施放变奏技能即刻执行时，队伍中的角色攻击提升20%，持续30秒。"
+            }
+          ],
+          "extraSkills": [],
+          "combatModes": {}
+        },
+        "5": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [
+            {
+              "category": "composite",
+              "name": "5链",
+              "mode": "fixed",
+              "value": 0,
+              "perStack": 0,
+              "maxStacks": 99,
+              "damageType": "",
+              "element": "",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "effects": [
+                {
+                  "zone": "multBoost",
+                  "valueMode": "fixed",
+                  "value": 120,
+                  "segments": [
+                    {
+                      "upTo": null,
+                      "perStack": 0
+                    }
+                  ],
+                  "skillScope": "names",
+                  "skillNames": [
+                    "晨昏交替之时·重燃",
+                    "重燃"
+                  ],
+                  "librarySkillNames": [
+                    "晨昏交替之时·重燃"
+                  ],
+                  "catalogIds": [],
+                  "damageType": "共鸣解放",
+                  "effectType": "",
+                  "element": "衍射",
+                  "defenseKind": "",
+                  "minStacks": 0,
+                  "minResonance": 0,
+                  "onlyCharacterIds": [],
+                  "onlyCombatModes": [],
+                  "effectKey": ""
+                }
+              ],
+              "sourceTag": "characterTemplate",
+              "templateKey": "tpl_ms1f34s6_se7vc",
+              "gameText": "共鸣解放重燃倍率提升120%。"
+            }
+          ],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {}
+        },
+        "6": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [
+            {
+              "category": "composite",
+              "name": "6链",
+              "mode": "fixed",
+              "value": 0,
+              "perStack": 0,
+              "maxStacks": 99,
+              "damageType": "",
+              "element": "",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "effects": [
+                {
+                  "zone": "multBoost",
+                  "valueMode": "fixed",
+                  "value": 40,
+                  "segments": [
+                    {
+                      "upTo": null,
+                      "perStack": 0
+                    }
+                  ],
+                  "skillScope": "names",
+                  "skillNames": [
+                    "黯夜将明·重斩·破晓",
+                    "重斩·破晓",
+                    "黯夜将明·重斩·将明",
+                    "重斩·将明",
+                    "黯夜将明·重斩·终夜",
+                    "重斩·终夜",
+                    "黯夜将明·重斩·闪裂",
+                    "重斩·闪裂"
+                  ],
+                  "librarySkillNames": [
+                    "黯夜将明·重斩·破晓",
+                    "黯夜将明·重斩·将明",
+                    "黯夜将明·重斩·终夜",
+                    "黯夜将明·重斩·闪裂"
+                  ],
+                  "catalogIds": [],
+                  "damageType": "重击",
+                  "effectType": "",
+                  "element": "衍射",
+                  "defenseKind": "",
+                  "minStacks": 0,
+                  "minResonance": 0,
+                  "onlyCharacterIds": [],
+                  "onlyCombatModes": [],
+                  "effectKey": ""
+                }
+              ],
+              "sourceTag": "characterTemplate",
+              "templateKey": "tpl_ms1f3hpb_eo1du",
+              "gameText": "重斩·破晓、重斩·将明、重斩·终夜、重斩·闪裂倍率提升40%。重斩·终夜命中时消耗的每点【焰光】额外增加倍率提升40%。\n处于灼焰形态时获得以下效果：\n·【焰光】低于70点时立即回复70点，灼焰形态期间可触发1次。\n·进入灼焰形态 后8秒内受到致死伤害时不会倒下，最少保留1点生命值。"
+            }
+          ],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {}
+        }
+      },
+      "combatModes": {}
+    }
+  ]
+}

@@ -1,0 +1,659 @@
+{
+  "version": 1,
+  "kind": "shard",
+  "characterId": "1506",
+  "characterName": "菲比",
+  "templates": [
+    {
+      "characterId": "1506",
+      "characterName": "菲比",
+      "revision": 9,
+      "author": "",
+      "notes": "菲比：【固有2】衍射增伤+12%（赦罪/告解均生效）。赦罪：【重击·星辉】伤害加深+256%（≥3链倍率+91%）；【启明之誓愿】倍率+255%（≥1链合计480%）、【倾听之心】倍率+255%（≥2链伤害加深+120%）。告解全队【菲比·延奏】衍射抗性降低10% + 光噪效应伤害加深+100%（≥2链合计220%；含本人）；≥1链告解【启明之誓愿】倍率+90%；≥3链告解【重击·星辉】倍率+249%；≥4链全队【菲比·4链】衍射抗性降低10% + 个人【4链】衍射增伤+12%；≥6链个人【6链】攻击+10%。延奏【倾听之心】基础倍率 528.41%。",
+      "personalBuffs": [
+        {
+          "templateKey": "phoebe_innate2_diffraction",
+          "category": "elementBonus",
+          "name": "固有2",
+          "mode": "fixed",
+          "value": 12,
+          "perStack": 0,
+          "maxStacks": 5,
+          "damageType": "",
+          "element": "衍射",
+          "defenseKind": "",
+          "sourceTag": "characterTemplate",
+          "gameText": "处于赦罪状态、告解状态时，衍射伤害加成提升12%。"
+        }
+      ],
+      "teamBuffs": [],
+      "extraSkills": [],
+      "resonanceChains": {
+        "1": {
+          "enabledByDefault": false,
+          "notes": "内置：赦罪下【启明之誓愿】倍率提升 255%→480%（本体同 Buff ≥1链追加）；告解下【启明之誓愿】倍率提升+90%。",
+          "personalBuffs": [],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {
+            "absolution": {
+              "notes": "",
+              "personalBuffs": [],
+              "teamBuffs": [],
+              "extraSkills": []
+            },
+            "confession": {
+              "notes": "",
+              "personalBuffs": [
+                {
+                  "templateKey": "phoebe_c1_confession_dawn_mult",
+                  "category": "composite",
+                  "name": "菲比·1链·告解",
+                  "mode": "fixed",
+                  "value": 0,
+                  "perStack": 0,
+                  "maxStacks": 99,
+                  "damageType": "",
+                  "element": "",
+                  "defenseKind": "",
+                  "sourceTag": "characterTemplate",
+                  "effects": [
+                    {
+                      "zone": "multBoost",
+                      "valueMode": "fixed",
+                      "value": 90,
+                      "segments": [
+                        {
+                          "upTo": null,
+                          "perStack": 0
+                        }
+                      ],
+                      "skillScope": "names",
+                      "skillNames": [
+                        "启明之誓愿·技能",
+                        "启明之誓愿"
+                      ],
+                      "librarySkillNames": [
+                        "启明之誓愿·技能",
+                        "启明之誓愿"
+                      ],
+                      "catalogIds": [],
+                      "damageType": "",
+                      "effectType": "",
+                      "element": "",
+                      "defenseKind": "",
+                      "minStacks": 0,
+                      "minResonance": 0,
+                      "onlyCharacterIds": [],
+                      "onlyCombatModes": [],
+                      "effectKey": "phoebe_c1_confession_dawn_mult"
+                    }
+                  ],
+                  "gameText": "赦罪状态下共鸣解放启明之誓愿伤害倍率提升效果从255%变为480%。\n告解状态下共鸣解放启明之誓愿伤害倍率提升90%，并且附加【光噪效应】层数提升至目标可附加层数的上限。"
+                }
+              ],
+              "teamBuffs": [],
+              "extraSkills": []
+            }
+          }
+        },
+        "2": {
+          "enabledByDefault": false,
+          "notes": "内置：赦罪下【倾听之心】伤害加深+120%；告解【菲比·延奏】光噪加深 100%→220%（同 Buff ≥2链追加）。",
+          "personalBuffs": [],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {
+            "absolution": {
+              "notes": "",
+              "personalBuffs": [
+                {
+                  "templateKey": "phoebe_c2_absolution_listen_deep",
+                  "category": "composite",
+                  "name": "菲比·2链·赦罪",
+                  "mode": "fixed",
+                  "value": 0,
+                  "perStack": 0,
+                  "maxStacks": 99,
+                  "damageType": "",
+                  "element": "",
+                  "defenseKind": "",
+                  "sourceTag": "characterTemplate",
+                  "effects": [
+                    {
+                      "zone": "generalDeep",
+                      "valueMode": "fixed",
+                      "value": 120,
+                      "segments": [
+                        {
+                          "upTo": null,
+                          "perStack": 0
+                        }
+                      ],
+                      "skillScope": "names",
+                      "skillNames": [
+                        "倾听之心"
+                      ],
+                      "librarySkillNames": [
+                        "倾听之心"
+                      ],
+                      "catalogIds": [],
+                      "damageType": "",
+                      "effectType": "",
+                      "element": "",
+                      "defenseKind": "",
+                      "minStacks": 0,
+                      "minResonance": 0,
+                      "onlyCharacterIds": [],
+                      "onlyCombatModes": [],
+                      "effectKey": "phoebe_c2_absolution_listen_deep"
+                    }
+                  ],
+                  "gameText": "赦罪状态下，延奏技能对拥有【光噪效应】的目标伤害加深120%。\n告解状态下，默祷的【光噪效应】伤害加深效果额外提升120%。"
+                }
+              ],
+              "teamBuffs": [],
+              "extraSkills": []
+            },
+            "confession": {
+              "notes": "",
+              "personalBuffs": [],
+              "teamBuffs": [],
+              "extraSkills": []
+            }
+          }
+        },
+        "3": {
+          "enabledByDefault": false,
+          "notes": "内置：赦罪下【重击·星辉】倍率提升+91%；告解下【重击·星辉】倍率提升+249%。",
+          "personalBuffs": [],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {
+            "absolution": {
+              "notes": "",
+              "personalBuffs": [
+                {
+                  "templateKey": "phoebe_c3_absolution_starlight_mult",
+                  "category": "composite",
+                  "name": "菲比·3链·赦罪",
+                  "mode": "fixed",
+                  "value": 0,
+                  "perStack": 0,
+                  "maxStacks": 99,
+                  "damageType": "",
+                  "element": "",
+                  "defenseKind": "",
+                  "sourceTag": "characterTemplate",
+                  "effects": [
+                    {
+                      "zone": "multBoost",
+                      "valueMode": "fixed",
+                      "value": 91,
+                      "segments": [
+                        {
+                          "upTo": null,
+                          "perStack": 0
+                        }
+                      ],
+                      "skillScope": "names",
+                      "skillNames": [
+                        "交错星辉的祝祷·重击·星辉",
+                        "重击·星辉"
+                      ],
+                      "librarySkillNames": [
+                        "交错星辉的祝祷·重击·星辉",
+                        "重击·星辉"
+                      ],
+                      "catalogIds": [],
+                      "damageType": "",
+                      "effectType": "",
+                      "element": "",
+                      "defenseKind": "",
+                      "minStacks": 0,
+                      "minResonance": 0,
+                      "onlyCharacterIds": [],
+                      "onlyCombatModes": [],
+                      "effectKey": "phoebe_c3_absolution_starlight_mult"
+                    }
+                  ],
+                  "gameText": "赦罪状态下，重击星辉伤害倍率提升91%。\n告解状态下，重击星辉伤害倍率提升249%。"
+                }
+              ],
+              "teamBuffs": [],
+              "extraSkills": []
+            },
+            "confession": {
+              "notes": "",
+              "personalBuffs": [
+                {
+                  "templateKey": "phoebe_c3_confession_starlight_mult",
+                  "category": "composite",
+                  "name": "菲比·3链·告解",
+                  "mode": "fixed",
+                  "value": 0,
+                  "perStack": 0,
+                  "maxStacks": 99,
+                  "damageType": "",
+                  "element": "",
+                  "defenseKind": "",
+                  "sourceTag": "characterTemplate",
+                  "effects": [
+                    {
+                      "zone": "multBoost",
+                      "valueMode": "fixed",
+                      "value": 249,
+                      "segments": [
+                        {
+                          "upTo": null,
+                          "perStack": 0
+                        }
+                      ],
+                      "skillScope": "names",
+                      "skillNames": [
+                        "交错星辉的祝祷·重击·星辉",
+                        "重击·星辉"
+                      ],
+                      "librarySkillNames": [
+                        "交错星辉的祝祷·重击·星辉",
+                        "重击·星辉"
+                      ],
+                      "catalogIds": [],
+                      "damageType": "",
+                      "effectType": "",
+                      "element": "",
+                      "defenseKind": "",
+                      "minStacks": 0,
+                      "minResonance": 0,
+                      "onlyCharacterIds": [],
+                      "onlyCombatModes": [],
+                      "effectKey": "phoebe_c3_confession_starlight_mult"
+                    }
+                  ],
+                  "gameText": "赦罪状态下，重击星辉伤害倍率提升91%。\n告解状态下，重击星辉伤害倍率提升249%。"
+                }
+              ],
+              "teamBuffs": [],
+              "extraSkills": []
+            }
+          }
+        },
+        "4": {
+          "enabledByDefault": false,
+          "notes": "内置：全队【菲比·4链】衍射抗性降低10%；个人【4链】衍射增伤+12%。",
+          "personalBuffs": [
+            {
+              "templateKey": "phoebe_c4_personal_diffraction",
+              "category": "elementBonus",
+              "name": "4链",
+              "mode": "fixed",
+              "value": 12,
+              "perStack": 0,
+              "maxStacks": 5,
+              "damageType": "",
+              "element": "衍射",
+              "defenseKind": "",
+              "sourceTag": "characterTemplate",
+              "gameText": "施放变奏技能金色恩典时，菲比的衍射伤害加成提升12%，持续15秒。"
+            }
+          ],
+          "teamBuffs": [
+            {
+              "templateKey": "phoebe_c4_team_res_reduce",
+              "category": "elementResReduce",
+              "name": "菲比·4链",
+              "mode": "fixed",
+              "value": 10,
+              "perStack": 0,
+              "maxStacks": 5,
+              "damageType": "",
+              "element": "衍射",
+              "defenseKind": "",
+              "sourceTag": "characterTemplate",
+              "gameText": "普攻、普攻夏弥尔之星、闪避反击、夏弥尔之星·闪避反击命中目标时，目标衍射伤害抗性降低10%，持续30秒。"
+            }
+          ],
+          "extraSkills": [],
+          "combatModes": {
+            "absolution": {
+              "notes": "",
+              "personalBuffs": [],
+              "teamBuffs": [],
+              "extraSkills": []
+            },
+            "confession": {
+              "notes": "",
+              "personalBuffs": [],
+              "teamBuffs": [],
+              "extraSkills": []
+            }
+          }
+        },
+        "5": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [
+            {
+              "category": "elementBonus",
+              "name": "菲比·5链",
+              "mode": "fixed",
+              "value": 12,
+              "perStack": 0,
+              "maxStacks": 5,
+              "damageType": "",
+              "element": "衍射",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "sourceTag": "characterTemplate",
+              "templateKey": "feibi_c5_element_bonus",
+              "gameText": "施放变奏技能金色恩典时，菲比的衍射伤害加成提升12%，持续15秒。"
+            }
+          ],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {
+            "absolution": {
+              "notes": "",
+              "personalBuffs": [],
+              "teamBuffs": [],
+              "extraSkills": []
+            },
+            "confession": {
+              "notes": "",
+              "personalBuffs": [],
+              "teamBuffs": [],
+              "extraSkills": []
+            }
+          }
+        },
+        "6": {
+          "enabledByDefault": false,
+          "notes": "内置：个人【6链】攻击+10%（赦罪/告解均生效）。",
+          "personalBuffs": [
+            {
+              "templateKey": "phoebe_c6_personal_atk",
+              "category": "generalAttack",
+              "name": "6链",
+              "mode": "fixed",
+              "value": 10,
+              "perStack": 0,
+              "maxStacks": 5,
+              "damageType": "",
+              "element": "",
+              "defenseKind": "",
+              "sourceTag": "characterTemplate",
+              "gameText": "【镜之环】的停滞效果增加2秒。【镜之环】持续期间，对每个进入【镜之环】的目标施加停滞效果；同一个【镜之环】最多可对12个目标施加停滞效果，且对每个目标只能施加一次。\n赦罪状态、告解状态下，菲比施放共鸣技能召唤【镜之环】时，攻击提升10%，持续20秒，同时向【镜之环】位置附带一次重击星辉。此次重击星辉不消耗【福音】，不视为施放重击。"
+            }
+          ],
+          "teamBuffs": [],
+          "extraSkills": [
+            {
+              "templateKey": "extra_feibi_c6_xinghui",
+              "name": "6链·附带重击星辉",
+              "damageType": "重击",
+              "effectType": "聚爆",
+              "effectLayers": 13,
+              "effectBurstLayers": 0,
+              "effectCount": 1,
+              "baseMult": 248.07,
+              "fixedDamage": false,
+              "effectMultMode": "custom"
+            }
+          ],
+          "combatModes": {
+            "absolution": {
+              "notes": "",
+              "personalBuffs": [],
+              "teamBuffs": [],
+              "extraSkills": []
+            },
+            "confession": {
+              "notes": "",
+              "personalBuffs": [],
+              "teamBuffs": [],
+              "extraSkills": []
+            }
+          }
+        }
+      },
+      "combatModes": {
+        "absolution": {
+          "notes": "赦罪：重击·星辉加深 + 启明之誓愿/倾听之心倍率",
+          "personalBuffs": [
+            {
+              "templateKey": "phoebe_absolution_kit",
+              "category": "composite",
+              "name": "赦罪",
+              "mode": "fixed",
+              "value": 0,
+              "perStack": 0,
+              "maxStacks": 99,
+              "damageType": "",
+              "element": "",
+              "defenseKind": "",
+              "sourceTag": "characterTemplate",
+              "effects": [
+                {
+                  "zone": "generalDeep",
+                  "valueMode": "fixed",
+                  "value": 256,
+                  "segments": [
+                    {
+                      "upTo": null,
+                      "perStack": 0
+                    }
+                  ],
+                  "skillScope": "names",
+                  "skillNames": [
+                    "交错星辉的祝祷·重击·星辉",
+                    "重击·星辉"
+                  ],
+                  "librarySkillNames": [
+                    "交错星辉的祝祷·重击·星辉",
+                    "重击·星辉"
+                  ],
+                  "catalogIds": [],
+                  "damageType": "",
+                  "effectType": "",
+                  "element": "",
+                  "defenseKind": "",
+                  "minStacks": 0,
+                  "minResonance": 0,
+                  "onlyCharacterIds": [],
+                  "onlyCombatModes": [],
+                  "effectKey": "phoebe_starlight_heavy_deep"
+                },
+                {
+                  "zone": "multBoost",
+                  "valueMode": "fixed",
+                  "value": 255,
+                  "segments": [
+                    {
+                      "upTo": null,
+                      "perStack": 0
+                    }
+                  ],
+                  "skillScope": "names",
+                  "skillNames": [
+                    "启明之誓愿·技能",
+                    "启明之誓愿"
+                  ],
+                  "librarySkillNames": [
+                    "启明之誓愿·技能",
+                    "启明之誓愿"
+                  ],
+                  "catalogIds": [],
+                  "damageType": "",
+                  "effectType": "",
+                  "element": "",
+                  "defenseKind": "",
+                  "minStacks": 0,
+                  "minResonance": 0,
+                  "onlyCharacterIds": [],
+                  "onlyCombatModes": [],
+                  "effectKey": "phoebe_dawn_oath_mult"
+                },
+                {
+                  "zone": "multBoost",
+                  "valueMode": "fixed",
+                  "value": 225,
+                  "segments": [
+                    {
+                      "upTo": null,
+                      "perStack": 0
+                    }
+                  ],
+                  "skillScope": "names",
+                  "skillNames": [
+                    "启明之誓愿·技能",
+                    "启明之誓愿"
+                  ],
+                  "librarySkillNames": [
+                    "启明之誓愿·技能",
+                    "启明之誓愿"
+                  ],
+                  "catalogIds": [],
+                  "damageType": "",
+                  "effectType": "",
+                  "element": "",
+                  "defenseKind": "",
+                  "minStacks": 0,
+                  "minResonance": 1,
+                  "onlyCharacterIds": [],
+                  "onlyCombatModes": [],
+                  "effectKey": "phoebe_dawn_oath_mult_c1"
+                },
+                {
+                  "zone": "multBoost",
+                  "valueMode": "fixed",
+                  "value": 255,
+                  "segments": [
+                    {
+                      "upTo": null,
+                      "perStack": 0
+                    }
+                  ],
+                  "skillScope": "names",
+                  "skillNames": [
+                    "倾听之心"
+                  ],
+                  "librarySkillNames": [
+                    "倾听之心"
+                  ],
+                  "catalogIds": [],
+                  "damageType": "",
+                  "effectType": "",
+                  "element": "",
+                  "defenseKind": "",
+                  "minStacks": 0,
+                  "minResonance": 0,
+                  "onlyCharacterIds": [],
+                  "onlyCombatModes": [],
+                  "effectKey": "phoebe_listen_heart_mult"
+                }
+              ],
+              "gameText": "菲比将手中的光辉凝聚为启明之镜，用力敲碎，造成衍射伤害。\n·赦罪状态：伤害倍率提升255%。\n·告解状态：为命中的目标附加8层【光噪效应】。\n属性加成"
+            }
+          ],
+          "teamBuffs": [],
+          "extraSkills": []
+        },
+        "confession": {
+          "notes": "告解：全队【菲比·延奏】",
+          "personalBuffs": [],
+          "teamBuffs": [
+            {
+              "templateKey": "phoebe_outro",
+              "category": "composite",
+              "name": "菲比·延奏",
+              "mode": "fixed",
+              "value": 0,
+              "perStack": 0,
+              "maxStacks": 99,
+              "damageType": "",
+              "element": "",
+              "defenseKind": "",
+              "sourceTag": "characterTemplate",
+              "effects": [
+                {
+                  "zone": "elementResReduce",
+                  "valueMode": "fixed",
+                  "value": 10,
+                  "segments": [
+                    {
+                      "upTo": null,
+                      "perStack": 0
+                    }
+                  ],
+                  "skillScope": "all",
+                  "skillNames": [],
+                  "librarySkillNames": [],
+                  "catalogIds": [],
+                  "damageType": "",
+                  "effectType": "",
+                  "element": "衍射",
+                  "defenseKind": "",
+                  "minStacks": 0,
+                  "minResonance": 0,
+                  "onlyCharacterIds": [],
+                  "onlyCombatModes": [],
+                  "effectKey": "phoebe_outro_res_reduce"
+                },
+                {
+                  "zone": "typeDeep",
+                  "valueMode": "fixed",
+                  "value": 100,
+                  "segments": [
+                    {
+                      "upTo": null,
+                      "perStack": 0
+                    }
+                  ],
+                  "skillScope": "all",
+                  "skillNames": [],
+                  "librarySkillNames": [],
+                  "catalogIds": [],
+                  "damageType": "效应",
+                  "effectType": "光噪",
+                  "element": "",
+                  "defenseKind": "",
+                  "minStacks": 0,
+                  "minResonance": 0,
+                  "onlyCharacterIds": [],
+                  "onlyCombatModes": [],
+                  "effectKey": "phoebe_outro_guangzao_deep"
+                },
+                {
+                  "zone": "typeDeep",
+                  "valueMode": "fixed",
+                  "value": 120,
+                  "segments": [
+                    {
+                      "upTo": null,
+                      "perStack": 0
+                    }
+                  ],
+                  "skillScope": "all",
+                  "skillNames": [],
+                  "librarySkillNames": [],
+                  "catalogIds": [],
+                  "damageType": "效应",
+                  "effectType": "光噪",
+                  "element": "",
+                  "defenseKind": "",
+                  "minStacks": 0,
+                  "minResonance": 2,
+                  "onlyCharacterIds": [],
+                  "onlyCombatModes": [],
+                  "effectKey": "phoebe_outro_guangzao_deep_c2"
+                }
+              ],
+              "gameText": "对周围的目标造成总计菲比攻击528.41%的衍射伤害。\n·赦罪状态：伤害倍率提升255%。\n·告解状态：队伍中登场角色获得默祷效果：使一定范围内的目标衍射伤害抗性减少10%，【光噪效应】伤害加深100%。目标身上的【光噪效应】触发伤害后，【光噪效应】下一次造成伤害的周期延长50%。效果持续30秒，若菲比进入赦罪状态则该效果提前结束。"
+            }
+          ],
+          "extraSkills": []
+        }
+      }
+    }
+  ]
+}

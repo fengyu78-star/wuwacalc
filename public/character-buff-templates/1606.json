@@ -1,0 +1,493 @@
+{
+  "version": 1,
+  "kind": "shard",
+  "characterId": "1606",
+  "characterName": "洛可可",
+  "templates": [
+    {
+      "characterId": "1606",
+      "characterName": "洛可可",
+      "revision": 2,
+      "author": "",
+      "notes": "洛可可：全队复合【洛可可·延奏】湮灭加深+20% + 普攻加深+25%（固定；对洛可可本人不生效）。全队【洛可可·大招】：暴击>50%时每满0.1%→固定攻击+1，上限200（按洛可可面板只读同步，写入覆盖角色固定攻；全队覆盖含本人）。",
+      "personalBuffs": [
+        {
+          "category": "generalAttack",
+          "name": "E后大攻",
+          "mode": "fixed",
+          "value": 20,
+          "perStack": 0,
+          "maxStacks": 5,
+          "damageType": "",
+          "element": "",
+          "defenseKind": "",
+          "convergenceVuln": "",
+          "sourceTag": "characterTemplate",
+          "templateKey": "tpl_mrvi6o0n_yyb96",
+          "gameText": "施放共鸣技能或重击时，洛可可攻击提升20%，持续12秒。"
+        }
+      ],
+      "teamBuffs": [
+        {
+          "templateKey": "rococo_outro",
+          "category": "composite",
+          "name": "洛可可·延奏",
+          "mode": "fixed",
+          "excludeSource": true,
+          "effects": [
+            {
+              "zone": "elementDeep",
+              "valueMode": "fixed",
+              "value": 20,
+              "segments": [
+                {
+                  "upTo": null,
+                  "perStack": 0
+                }
+              ],
+              "skillScope": "all",
+              "skillNames": [],
+              "librarySkillNames": [],
+              "catalogIds": [],
+              "damageType": "",
+              "effectType": "",
+              "element": "湮灭",
+              "defenseKind": "",
+              "minStacks": 0,
+              "minResonance": 0,
+              "onlyCharacterIds": [],
+              "onlyCombatModes": [],
+              "effectKey": ""
+            },
+            {
+              "zone": "typeDeep",
+              "valueMode": "fixed",
+              "value": 25,
+              "segments": [
+                {
+                  "upTo": null,
+                  "perStack": 0
+                }
+              ],
+              "skillScope": "all",
+              "skillNames": [],
+              "librarySkillNames": [],
+              "catalogIds": [],
+              "damageType": "普攻",
+              "effectType": "",
+              "element": "",
+              "defenseKind": "",
+              "minStacks": 0,
+              "minResonance": 0,
+              "onlyCharacterIds": [],
+              "onlyCombatModes": [],
+              "effectKey": ""
+            }
+          ],
+          "sourceTag": "characterTemplate",
+          "value": 0,
+          "perStack": 0,
+          "maxStacks": 1,
+          "gameText": "下一位登场角色湮灭伤害加深20%，普攻伤害加深25%，效果持续14秒，若切换至其他角色则该效果提前结束。"
+        },
+        {
+          "category": "flatAtk",
+          "name": "洛可可·大招",
+          "mode": "fixed",
+          "value": 0,
+          "perStack": 0,
+          "maxStacks": 5,
+          "damageType": "",
+          "element": "",
+          "defenseKind": "",
+          "convergenceVuln": "",
+          "excludeSource": true,
+          "sourceTag": "characterTemplate",
+          "templateKey": "rococo_liberation_flat_atk",
+          "gameText": "洛可可的即兴喜剧开场！对目标造成湮灭伤害，此次伤害为重击伤害。洛可可暴击高于50%时，每多出0.1%暴击，施放该技能时，使队伍中的角色攻击提升1点，持续30秒。最高可提升200点。"
+        }
+      ],
+      "extraSkills": [],
+      "resonanceChains": {
+        "1": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {},
+          "gameText": "施放共鸣技能高难度设计时，额外回复100点【想象力】与10点协奏能量。\n普攻幻想照进现实免疫打断。"
+        },
+        "2": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [],
+          "teamBuffs": [
+            {
+              "category": "composite",
+              "name": "2链",
+              "mode": "stack",
+              "value": 0,
+              "perStack": 0,
+              "maxStacks": 3,
+              "damageType": "",
+              "element": "",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "effects": [
+                {
+                  "zone": "elementBonus",
+                  "valueMode": "stack",
+                  "value": 0,
+                  "segments": [
+                    {
+                      "upTo": 3,
+                      "perStack": 10
+                    }
+                  ],
+                  "skillScope": "all",
+                  "skillNames": [],
+                  "librarySkillNames": [],
+                  "catalogIds": [],
+                  "damageType": "",
+                  "effectType": "",
+                  "element": "湮灭",
+                  "defenseKind": "",
+                  "minStacks": 0,
+                  "minResonance": 0,
+                  "onlyCharacterIds": [],
+                  "onlyCombatModes": [],
+                  "effectKey": ""
+                },
+                {
+                  "zone": "elementBonus",
+                  "valueMode": "fixed",
+                  "value": 10,
+                  "segments": [
+                    {
+                      "upTo": null,
+                      "perStack": 0
+                    }
+                  ],
+                  "skillScope": "all",
+                  "skillNames": [],
+                  "librarySkillNames": [],
+                  "catalogIds": [],
+                  "damageType": "",
+                  "effectType": "",
+                  "element": "湮灭",
+                  "defenseKind": "",
+                  "minStacks": 3,
+                  "minResonance": 0,
+                  "onlyCharacterIds": [],
+                  "onlyCombatModes": [],
+                  "effectKey": ""
+                }
+              ],
+              "sourceTag": "characterTemplate",
+              "templateKey": "tpl_mrz5pdyo_lwxpg",
+              "gameText": "施放普攻幻想照进现实时，队伍中的角色湮灭伤害加成提升10%，可叠加3层，持续30秒。满层时，队伍中的角色湮灭伤害加成额外提升10%，持续30秒。",
+              "clampStacks": true
+            }
+          ],
+          "extraSkills": [],
+          "combatModes": {},
+          "gameText": "施放普攻幻想照进现实时，队伍中的角色湮灭伤害加成提升10%，可叠加3层，持续30秒。满层时，队伍中的角色湮灭伤害加成额外提升10%，持续30秒。"
+        },
+        "3": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [
+            {
+              "category": "composite",
+              "name": "三链",
+              "mode": "fixed",
+              "value": 0,
+              "perStack": 0,
+              "maxStacks": 99,
+              "damageType": "",
+              "element": "",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "effects": [
+                {
+                  "zone": "generalCritRate",
+                  "valueMode": "fixed",
+                  "value": 10,
+                  "segments": [
+                    {
+                      "upTo": null,
+                      "perStack": 0
+                    }
+                  ],
+                  "skillScope": "all",
+                  "skillNames": [],
+                  "librarySkillNames": [],
+                  "catalogIds": [],
+                  "damageType": "",
+                  "effectType": "",
+                  "element": "",
+                  "defenseKind": "",
+                  "minStacks": 0,
+                  "minResonance": 0,
+                  "onlyCharacterIds": [],
+                  "onlyCombatModes": [],
+                  "effectKey": ""
+                },
+                {
+                  "zone": "generalCritDmg",
+                  "valueMode": "fixed",
+                  "value": 30,
+                  "segments": [
+                    {
+                      "upTo": null,
+                      "perStack": 0
+                    }
+                  ],
+                  "skillScope": "all",
+                  "skillNames": [
+                    "谱曲终末"
+                  ],
+                  "librarySkillNames": [],
+                  "catalogIds": [],
+                  "damageType": "",
+                  "effectType": "",
+                  "element": "",
+                  "defenseKind": "",
+                  "minStacks": 0,
+                  "minResonance": 0,
+                  "onlyCharacterIds": [],
+                  "onlyCombatModes": [],
+                  "effectKey": ""
+                }
+              ],
+              "sourceTag": "characterTemplate",
+              "templateKey": "tpl_ms0734ae_rv3v5",
+              "gameText": "施放变奏技能佩洛，来帮忙时，洛可可暴击提升10%，暴击伤害提升30%，持续15秒。"
+            }
+          ],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {},
+          "gameText": "施放变奏技能佩洛，来帮忙时，洛可可暴击提升10%，暴击伤害提升30%，持续15秒。"
+        },
+        "4": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [
+            {
+              "category": "composite",
+              "name": "四链",
+              "mode": "fixed",
+              "value": 0,
+              "perStack": 0,
+              "maxStacks": 99,
+              "damageType": "",
+              "element": "",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "effects": [
+                {
+                  "zone": "multBoost",
+                  "valueMode": "fixed",
+                  "value": 60,
+                  "segments": [
+                    {
+                      "upTo": null,
+                      "perStack": 0
+                    }
+                  ],
+                  "skillScope": "names",
+                  "skillNames": [
+                    "道具师的自我修养·第一段",
+                    "道具师的自我修养·第二段",
+                    "道具师的自我修养·第三段"
+                  ],
+                  "librarySkillNames": [
+                    "道具师的自我修养·第一段",
+                    "道具师的自我修养·第二段",
+                    "道具师的自我修养·第三段"
+                  ],
+                  "catalogIds": [],
+                  "damageType": "重击",
+                  "effectType": "",
+                  "element": "湮灭",
+                  "defenseKind": "",
+                  "minStacks": 0,
+                  "minResonance": 0,
+                  "onlyCharacterIds": [],
+                  "onlyCombatModes": [],
+                  "effectKey": ""
+                }
+              ],
+              "sourceTag": "characterTemplate",
+              "templateKey": "tpl_ms074dv2_bua7f",
+              "gameText": "施放共鸣技能高难度设计时，普攻幻想照进现实伤害倍率提升60%，持续12秒。"
+            }
+          ],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {},
+          "gameText": "施放共鸣技能高难度设计时，普攻幻想照进现实伤害倍率提升60%，持续12秒。"
+        },
+        "5": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [
+            {
+              "category": "composite",
+              "name": "5链",
+              "mode": "fixed",
+              "value": 0,
+              "perStack": 0,
+              "maxStacks": 99,
+              "damageType": "",
+              "element": "",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "effects": [
+                {
+                  "zone": "multBoost",
+                  "valueMode": "fixed",
+                  "value": 20,
+                  "segments": [
+                    {
+                      "upTo": null,
+                      "perStack": 0
+                    }
+                  ],
+                  "skillScope": "names",
+                  "skillNames": [
+                    "即兴喜剧，开场·技能"
+                  ],
+                  "librarySkillNames": [
+                    "即兴喜剧，开场·技能"
+                  ],
+                  "catalogIds": [],
+                  "damageType": "重击",
+                  "effectType": "",
+                  "element": "湮灭",
+                  "defenseKind": "",
+                  "minStacks": 0,
+                  "minResonance": 0,
+                  "onlyCharacterIds": [],
+                  "onlyCombatModes": [],
+                  "effectKey": ""
+                },
+                {
+                  "zone": "multBoost",
+                  "valueMode": "fixed",
+                  "value": 80,
+                  "segments": [
+                    {
+                      "upTo": null,
+                      "perStack": 0
+                    }
+                  ],
+                  "skillScope": "names",
+                  "skillNames": [
+                    "佩洛，悠着点·重击",
+                    "重击"
+                  ],
+                  "librarySkillNames": [
+                    "佩洛，悠着点·重击"
+                  ],
+                  "catalogIds": [],
+                  "damageType": "重击",
+                  "effectType": "",
+                  "element": "湮灭",
+                  "defenseKind": "",
+                  "minStacks": 0,
+                  "minResonance": 0,
+                  "onlyCharacterIds": [],
+                  "onlyCombatModes": [],
+                  "effectKey": ""
+                }
+              ],
+              "sourceTag": "characterTemplate",
+              "templateKey": "tpl_mrz5uk1n_8aijx",
+              "gameText": "共鸣解放即兴喜剧，开场伤害倍率提升20%，重击伤害倍率提升80%。"
+            }
+          ],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {},
+          "gameText": "共鸣解放即兴喜剧，开场伤害倍率提升20%，重击伤害倍率提升80%。"
+        },
+        "6": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [
+            {
+              "category": "composite",
+              "name": "六链",
+              "mode": "fixed",
+              "value": 0,
+              "perStack": 0,
+              "maxStacks": 99,
+              "damageType": "",
+              "element": "",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "effects": [
+                {
+                  "zone": "elementDefense",
+                  "valueMode": "fixed",
+                  "value": 60,
+                  "segments": [
+                    {
+                      "upTo": null,
+                      "perStack": 0
+                    }
+                  ],
+                  "skillScope": "names",
+                  "skillNames": [
+                    "道具师的自我修养·第一段",
+                    "道具师的自我修养·第二段",
+                    "道具师的自我修养·第三段"
+                  ],
+                  "librarySkillNames": [
+                    "道具师的自我修养·第一段",
+                    "道具师的自我修养·第二段",
+                    "道具师的自我修养·第三段"
+                  ],
+                  "catalogIds": [],
+                  "damageType": "重击",
+                  "effectType": "",
+                  "element": "湮灭",
+                  "defenseKind": "ignore",
+                  "minStacks": 0,
+                  "minResonance": 0,
+                  "onlyCharacterIds": [],
+                  "onlyCombatModes": [],
+                  "effectKey": ""
+                }
+              ],
+              "sourceTag": "characterTemplate",
+              "templateKey": "tpl_ms075lcu_6znrc",
+              "gameText": "施放共鸣解放即兴喜剧，开场时，获得如下效果，12秒内：\n·普攻幻想照进现实攻击目标时，无视对方60%的防御。\n·普攻幻想照进现实第3段落地后，会将洛可可送上空中，进入飞跃幻想状态，此时短按普攻，将会施放普攻构筑现实，普攻构筑现实免疫打断，造成普攻幻想照进现实第3段100%的伤害，此次伤害为重击伤害。\n·普攻构筑现实落地后，会将洛可可送上空中，进入飞跃幻想状态。普攻构筑现实需要在处于飞跃幻想状态时才可施放。"
+            }
+          ],
+          "teamBuffs": [],
+          "extraSkills": [
+            {
+              "templateKey": "extra_mrz5wh34_w26mw",
+              "name": "6链·构筑现实",
+              "damageType": "重击",
+              "effectType": "聚爆",
+              "effectLayers": 13,
+              "effectBurstLayers": 0,
+              "effectCount": 1,
+              "baseMult": 572.576,
+              "fixedDamage": false,
+              "effectMultMode": "custom"
+            }
+          ],
+          "combatModes": {},
+          "gameText": "施放共鸣解放即兴喜剧，开场时，获得如下效果，12秒内：\n·普攻幻想照进现实攻击目标时，无视对方60%的防御。\n·普攻幻想照进现实第3段落地后，会将洛可可送上空中，进入飞跃幻想状态，此时短按普攻，将会施放普攻构筑现实，普攻构筑现实免疫打断，造成普攻幻想照进现实第3段100%的伤害，此次伤害为重击伤害。\n·普攻构筑现实落地后，会将洛可可送上空中，进入飞跃幻想状态。普攻构筑现实需要在处于飞跃幻想状态时才可施放。"
+        }
+      },
+      "combatModes": {}
+    }
+  ]
+}

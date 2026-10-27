@@ -1,0 +1,52 @@
+/* Calculation check: presentation only; existing table, values and events retained. */
+.phase-check .calc-check-page .check-excel-panel .check-excel-table thead th{background:#253a50!important;color:#bacee0!important;}
+.phase-check .calc-check-page .check-excel-table tbody tr td{background:#192b3d!important;}
+.phase-check .calc-check-page .check-excel-table tbody tr:nth-child(even) td{background:#1d3043!important;}
+.phase-check .calc-check-page .check-excel-table tbody tr:hover td{background:#2b4257!important;}
+.phase-check .calc-check-page .check-excel-panel .check-excel-table tr .check-excel-th-total,.phase-check .calc-check-page .check-excel-table tbody tr td.check-excel-total{background:#343c37!important;color:#e9d7a1!important;}
+.phase-check .calc-check-page .check-excel-panel .check-excel-table tr .check-excel-th-crit,.phase-check .calc-check-page .check-excel-table tbody tr td.check-excel-crit{background:#203d4c!important;color:#a6daeb!important;}
+.phase-check .check-excel-top-scroll{background:#142333;scrollbar-color:#6889a5 #142333;}
+.phase-check .check-excel-top-scroll::-webkit-scrollbar-thumb{background:#6889a5;}
+.phase-check .calc-check-page{display:flex;flex-direction:column;gap:16px;padding:0;min-width:0;}
+.phase-check .check-topbar{order:0;position:static;display:block;padding:0;background:none;border:0;box-shadow:none;min-height:0;}
+.phase-check .check-topbar-left{display:block;width:100%;}
+.phase-check .check-topbar-left>.check-topbar-link,.phase-check .check-topbar-center,.phase-check .check-topbar-right{display:none;}
+.phase-check .check-topbar-tabs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr)) minmax(110px,.65fr);gap:10px;padding:0;background:none;border:0;width:100%;}
+.phase-check .check-topbar-tab{position:relative;min-width:0;min-height:64px;padding:18px 22px;border:1px solid #607c9438;border-radius:10px;background:linear-gradient(115deg,#223348,#182636);color:#bbcede;font-size:17px;font-weight:600;text-align:left;box-shadow:inset 0 1px #cfebff0a;}
+.phase-check .check-topbar-tab:hover{background:#283c51;border-color:#87b9d277;color:#f1f6fa;}
+.phase-check .check-topbar-tab.is-active{background:linear-gradient(110deg,#3b3f3a,#213346 75%);border-color:#cbb67999;color:#e9d9a7;box-shadow:inset 3px 0 #d5bd7b;}
+.phase-check .check-topbar-tab.is-active::after{display:none;}
+.phase-check .check-topbar-tab:focus-visible{outline:2px solid #9bd6e5;outline-offset:3px;}
+.phase-check .check-matrix-section{order:1;margin:0;padding:0;background:none;border:0;box-shadow:none;}
+.phase-check .check-matrix-section>:not(.check-cycle-bar){display:none;}
+.phase-check .check-matrix-section:not(:has(.check-cycle-bar)){display:none;}
+.phase-check .check-cycle-bar{margin:0;padding:8px 12px;background:#172637;border:1px solid #728fa02e;border-radius:8px;}
+.phase-check .check-excel-section{order:2;min-width:0;margin:0;}
+.phase-check .check-excel-panel{padding:0;overflow:hidden;border:1px solid #718cac55;border-radius:12px;background:linear-gradient(125deg,#203247,#172635);box-shadow:inset 0 1px #bdd9f22b,0 10px 26px #0002;}
+.phase-check .check-excel-head{display:flex;align-items:center;flex-wrap:wrap;gap:20px;padding:22px 24px;margin:0;border:0;border-top:2px solid #91aac4;background:linear-gradient(105deg,#25405444,#8175c012);}
+.phase-check .check-excel-head h3{margin:0;margin-right:auto;display:flex;flex-direction:column;gap:7px;font-size:21px;color:#edf3f8;letter-spacing:.04em;}
+.phase-check .check-excel-sub{font-size:11px;color:#94adc3;font-weight:400;letter-spacing:0;}
+.phase-check .check-excel-totals{display:flex;gap:24px;margin:0;padding:0 24px;border-left:1px solid #89a9c033;border-right:1px solid #89a9c033;}
+.phase-check .check-excel-total-item{display:flex;flex-direction:column;gap:4px;align-items:flex-start;}
+.phase-check .check-excel-total-label{color:#a9bed0;font-size:11px;}
+.phase-check .check-excel-total-value{color:#e8d398;font:600 24px ui-monospace,monospace;font-variant-numeric:tabular-nums;}
+.phase-check .check-excel-total-item:last-child .check-excel-total-value{color:#9ad3e7;}
+.phase-check .check-excel-actions{display:flex;gap:8px;}
+.phase-check .check-excel-actions .btn{border:1px solid #69859e66;background:#132333;color:#c7d9e7;border-radius:6px;padding:8px 12px;font-size:12px;}
+.phase-check .check-excel-actions .btn:hover{background:#29435a;border-color:#8fc8dc;}
+.phase-check .check-formula-panel{margin:0 24px 16px;border:1px solid #819eb529;background:#142333;border-radius:6px;}
+.phase-check .check-formula-head{padding:8px 12px;color:#96aec3;font-size:12px;}
+.phase-check .check-formula-body{color:#b3c6d7;line-height:1.7;}
+.phase-check .check-excel-scroll{border:0;border-top:1px solid #87a6bf33;border-radius:0;scrollbar-color:#57738c #142231;}
+.phase-check .check-excel-table{font-size:12px;font-variant-numeric:tabular-nums;background:#172737;}
+.phase-check .check-excel-table th{padding:13px 12px;background:#253a50;color:#bacee0;border-color:#66819c30;font-size:12px;font-weight:600;white-space:nowrap;}
+.phase-check .check-excel-table td{padding:13px 12px;border-color:#6e8aa321;color:#c7d8e7;background:#192b3d;}
+.phase-check .check-excel-table tbody tr:nth-child(even) td{background:#1d3043;}
+.phase-check .check-excel-table tbody tr:hover td{background:#2b4257;}
+.phase-check .check-excel-table td.check-excel-name{color:#e4edf5;font-weight:500;}
+.phase-check .check-excel-table th.check-excel-th-total,.phase-check .check-excel-table td.check-excel-total{background:#343c37;color:#e9d7a1;font-weight:700;}
+.phase-check .check-excel-table th.check-excel-th-crit,.phase-check .check-excel-table td.check-excel-crit{background:#203d4c;color:#a6daeb;font-weight:600;}
+@media(max-width:1000px){.phase-check .check-excel-head{gap:16px;padding:18px;}.phase-check .check-excel-head h3{flex-basis:100%;}.phase-check .check-excel-totals{padding-left:0;border-left:0;margin-right:auto;}.phase-check .check-topbar-tab{padding:14px;font-size:15px;}}
+@media(max-width:600px){.phase-check .check-topbar-tabs{grid-template-columns:repeat(2,minmax(0,1fr));}.phase-check .check-topbar-tab{min-height:48px;}.phase-check .check-excel-totals{border:0;}.phase-check .check-excel-actions{width:100%;}.phase-check .check-formula-panel{margin-left:18px;margin-right:18px;}}
+
+.phase-check .check-topbar-tabs{height:auto;overflow:visible}.phase-check .check-topbar-tab{height:auto}.phase-check .check-excel-section{padding:0;background:none;border:0;box-shadow:none}

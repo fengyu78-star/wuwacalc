@@ -1,0 +1,243 @@
+{
+  "version": 1,
+  "kind": "shard",
+  "characterId": "1105",
+  "characterName": "折枝",
+  "templates": [
+    {
+      "characterId": "1105",
+      "characterName": "折枝",
+      "revision": 2,
+      "author": "",
+      "notes": "折枝：全队复合【折枝·延奏】冷凝加深+20% + 共鸣技能加深+25%（固定；对折枝本人不生效）。",
+      "personalBuffs": [
+        {
+          "category": "typeBonus",
+          "name": "极意",
+          "mode": "fixed",
+          "value": 18,
+          "perStack": 0,
+          "maxStacks": 5,
+          "damageType": "普攻",
+          "element": "",
+          "defenseKind": "",
+          "convergenceVuln": "",
+          "sourceTag": "characterTemplate",
+          "templateKey": "tpl_mryyla7q_rxct8",
+          "gameText": "共鸣技能·极意·神来之笔\n折枝附近存在鹤影，且【极意】层数为2时，神来之笔替换为极意·神来之笔。施放时：\n·移除全部【极意】。\n·移动到鹤影的位置并将它清除，然后召唤白鹤攻击目标，造成更高的冷凝伤害，此次伤害为普攻伤害，并且让折枝的普攻伤害加成提升18%，持续27秒。若移动到处于空中的鹤影，可重置空中闪避次数。"
+        },
+        {
+          "category": "generalAttack",
+          "name": "固有1",
+          "mode": "stack",
+          "value": 0,
+          "perStack": 6,
+          "maxStacks": 3,
+          "damageType": "",
+          "element": "",
+          "defenseKind": "",
+          "convergenceVuln": "",
+          "sourceTag": "characterTemplate",
+          "templateKey": "tpl_mryylxw0_otrei",
+          "gameText": "施放共鸣技能神来之笔或共鸣技能极意·神来之笔时，攻击提升6%，可叠加3层，持续27秒。\n点睛\n点睛"
+        }
+      ],
+      "teamBuffs": [
+        {
+          "templateKey": "zhezhi_outro",
+          "category": "composite",
+          "name": "折枝·延奏",
+          "mode": "fixed",
+          "excludeSource": true,
+          "effects": [
+            {
+              "zone": "elementDeep",
+              "valueMode": "fixed",
+              "value": 20,
+              "segments": [
+                {
+                  "upTo": null,
+                  "perStack": 0
+                }
+              ],
+              "skillScope": "all",
+              "skillNames": [],
+              "librarySkillNames": [],
+              "catalogIds": [],
+              "damageType": "",
+              "effectType": "",
+              "element": "冷凝",
+              "defenseKind": "",
+              "minStacks": 0,
+              "minResonance": 0,
+              "onlyCharacterIds": [],
+              "onlyCombatModes": [],
+              "effectKey": ""
+            },
+            {
+              "zone": "typeDeep",
+              "valueMode": "fixed",
+              "value": 25,
+              "segments": [
+                {
+                  "upTo": null,
+                  "perStack": 0
+                }
+              ],
+              "skillScope": "all",
+              "skillNames": [],
+              "librarySkillNames": [],
+              "catalogIds": [],
+              "damageType": "共鸣技能",
+              "effectType": "",
+              "element": "",
+              "defenseKind": "",
+              "minStacks": 0,
+              "minResonance": 0,
+              "onlyCharacterIds": [],
+              "onlyCombatModes": [],
+              "effectKey": ""
+            }
+          ],
+          "sourceTag": "characterTemplate",
+          "value": 0,
+          "perStack": 0,
+          "maxStacks": 1,
+          "gameText": "下一位登场角色冷凝伤害加深20%，共鸣技能伤害加深25%，效果持续14秒，若切换至其他角色则该效果提前结束。"
+        }
+      ],
+      "extraSkills": [],
+      "resonanceChains": {
+        "1": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [
+            {
+              "category": "generalCritRate",
+              "name": "1链",
+              "mode": "fixed",
+              "value": 10,
+              "perStack": 0,
+              "maxStacks": 5,
+              "damageType": "",
+              "element": "",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "sourceTag": "characterTemplate",
+              "templateKey": "tpl_mrz0aydt_0gj33",
+              "gameText": "折枝施放共鸣技能极意·神来之笔时，回复15点共鸣能量，且自身暴击提升10%，持续27秒。"
+            }
+          ],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {},
+          "gameText": "折枝施放共鸣技能极意·神来之笔时，回复15点共鸣能量，且自身暴击提升10%，持续27秒。"
+        },
+        "2": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {},
+          "gameText": "共鸣解放虚实境趣的墨鹤的最大召唤数增加6只。"
+        },
+        "3": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [
+            {
+              "category": "generalAttack",
+              "name": "3链",
+              "mode": "stack",
+              "value": 0,
+              "perStack": 15,
+              "maxStacks": 3,
+              "damageType": "",
+              "element": "",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "sourceTag": "characterTemplate",
+              "templateKey": "tpl_mrz0byfb_b4oqr",
+              "gameText": "折枝施放共鸣技能以形写神、共鸣技能神来之笔或共鸣技能极意·神来之笔时，攻击提升15%，可叠加3层，持续27秒。"
+            }
+          ],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {},
+          "gameText": "折枝施放共鸣技能以形写神、共鸣技能神来之笔或共鸣技能极意·神来之笔时，攻击提升15%，可叠加3层，持续27秒。"
+        },
+        "4": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [],
+          "teamBuffs": [
+            {
+              "category": "generalAttack",
+              "name": "折枝·4链",
+              "mode": "fixed",
+              "value": 20,
+              "perStack": 0,
+              "maxStacks": 5,
+              "damageType": "",
+              "element": "",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "sourceTag": "characterTemplate",
+              "templateKey": "tpl_mrz0c7c5_i5juh",
+              "gameText": "折枝施放共鸣解放虚实境趣时，队伍中角色攻击提升20%，持续30秒。"
+            }
+          ],
+          "extraSkills": [],
+          "combatModes": {},
+          "gameText": "折枝施放共鸣解放虚实境趣时，队伍中角色攻击提升20%，持续30秒。"
+        },
+        "5": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [],
+          "teamBuffs": [],
+          "extraSkills": [
+            {
+              "templateKey": "extra_mrz0d767_uef2k",
+              "name": "5链额外·墨鹤",
+              "damageType": "普攻",
+              "effectType": "聚爆",
+              "effectLayers": 13,
+              "effectBurstLayers": 0,
+              "effectCount": 1,
+              "baseMult": 91.294,
+              "fixedDamage": false,
+              "effectMultMode": "custom"
+            }
+          ],
+          "combatModes": {},
+          "gameText": "共鸣解放虚实境趣持续期间，每召唤3只墨鹤，会额外召唤1只墨鹤进行协同攻击，能造成等同于墨鹤140%的伤害，此次伤害为普攻伤害，该伤害不会触发召唤墨鹤的效果。"
+        },
+        "6": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [],
+          "teamBuffs": [],
+          "extraSkills": [
+            {
+              "templateKey": "extra_mrz0ern0_3iqr2",
+              "name": "6链额外·白鹤",
+              "damageType": "普攻",
+              "effectType": "聚爆",
+              "effectLayers": 13,
+              "effectBurstLayers": 0,
+              "effectCount": 1,
+              "baseMult": 357.864,
+              "fixedDamage": false,
+              "effectMultMode": "custom"
+            }
+          ],
+          "combatModes": {},
+          "gameText": "施放共鸣技能神来之笔或共鸣技能极意·神来之笔时，会额外召唤一只白鹤，能造成等同于共鸣技能神来之笔120%的伤害，此次伤害为普攻伤害。"
+        }
+      },
+      "combatModes": {}
+    }
+  ]
+}

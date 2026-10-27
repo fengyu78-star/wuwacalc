@@ -1,0 +1,279 @@
+{
+  "version": 1,
+  "kind": "shard",
+  "characterId": "1403",
+  "characterName": "秋水",
+  "templates": [
+    {
+      "characterId": "1403",
+      "characterName": "秋水",
+      "revision": 2,
+      "author": "",
+      "notes": "秋水：全队【秋水·延奏】气动加深+23%（固定；对秋水本人不生效）。",
+      "personalBuffs": [
+        {
+          "category": "generalAttack",
+          "name": "大招·攻击穿过【虚实之门】",
+          "mode": "fixed",
+          "value": 10,
+          "perStack": 0,
+          "maxStacks": 5,
+          "damageType": "",
+          "element": "",
+          "defenseKind": "",
+          "convergenceVuln": "",
+          "sourceTag": "characterTemplate",
+          "templateKey": "tpl_ms1axv4v_7wn7d",
+          "gameText": "雾里观花\n在面前生成【虚实之门】，造成气动伤害且当攻击穿过【虚实之门】时攻击提升，【虚实之门】持续10秒。"
+        }
+      ],
+      "teamBuffs": [
+        {
+          "templateKey": "qiushui_outro_aero_deep",
+          "category": "elementDeep",
+          "name": "秋水·延奏",
+          "mode": "fixed",
+          "value": 23,
+          "element": "气动",
+          "damageType": "",
+          "defenseKind": "",
+          "excludeSource": true,
+          "sourceTag": "characterTemplate",
+          "perStack": 0,
+          "maxStacks": 5,
+          "gameText": "下一位登场角色气动伤害加深23%，效果持续14秒，若切换至其他角色则该效果提前结束。"
+        }
+      ],
+      "extraSkills": [],
+      "resonanceChains": {
+        "1": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {},
+          "gameText": "共鸣技能移位戏法的冷却时间减少4秒。"
+        },
+        "2": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [
+            {
+              "category": "generalAttack",
+              "name": "2链·指定嘲讽目标",
+              "mode": "fixed",
+              "value": 15,
+              "perStack": 0,
+              "maxStacks": 5,
+              "damageType": "",
+              "element": "",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "sourceTag": "characterTemplate",
+              "templateKey": "tpl_ms1aztna_m6yng",
+              "gameText": "【雾化分身】继承的生命值提升100%，秋水攻击被分身嘲讽的目标时，攻击提升15%。"
+            }
+          ],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {},
+          "gameText": "【雾化分身】继承的生命值提升100%，秋水攻击被分身嘲讽的目标时，攻击提升15%。"
+        },
+        "3": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [
+            {
+              "category": "composite",
+              "name": "3链",
+              "mode": "fixed",
+              "value": 0,
+              "perStack": 0,
+              "maxStacks": 99,
+              "damageType": "",
+              "element": "",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "effects": [
+                {
+                  "zone": "multBoost",
+                  "valueMode": "fixed",
+                  "value": 50,
+                  "segments": [
+                    {
+                      "upTo": null,
+                      "perStack": 0
+                    }
+                  ],
+                  "skillScope": "names",
+                  "skillNames": [
+                    "真假参半·第一段",
+                    "第一段",
+                    "真假参半·第二段",
+                    "第二段",
+                    "真假参半·第三段",
+                    "第三段",
+                    "真假参半·第四段",
+                    "第四段",
+                    "真假参半·第五段",
+                    "第五段",
+                    "真假参半·空中攻击",
+                    "空中攻击"
+                  ],
+                  "librarySkillNames": [
+                    "真假参半·第一段",
+                    "真假参半·第二段",
+                    "真假参半·第三段",
+                    "真假参半·第四段",
+                    "真假参半·第五段",
+                    "真假参半·空中攻击"
+                  ],
+                  "catalogIds": [],
+                  "damageType": "普攻",
+                  "effectType": "",
+                  "element": "气动",
+                  "defenseKind": "",
+                  "minStacks": 0,
+                  "minResonance": 0,
+                  "onlyCharacterIds": [],
+                  "onlyCombatModes": [],
+                  "effectKey": ""
+                }
+              ],
+              "sourceTag": "characterTemplate",
+              "templateKey": "tpl_ms1b10n0_1l69u",
+              "gameText": "秋水的普攻或空中攻击穿过【雾气】时，会额外生成2颗子弹，共造成普攻或空中攻击的50%伤害。"
+            }
+          ],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {},
+          "gameText": "秋水的普攻或空中攻击穿过【雾气】时，会额外生成2颗子弹，共造成普攻或空中攻击的50%伤害。"
+        },
+        "4": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [
+            {
+              "category": "composite",
+              "name": "4链",
+              "mode": "fixed",
+              "value": 0,
+              "perStack": 0,
+              "maxStacks": 99,
+              "damageType": "",
+              "element": "",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "effects": [
+                {
+                  "zone": "generalBonus",
+                  "valueMode": "fixed",
+                  "value": 30,
+                  "segments": [
+                    {
+                      "upTo": null,
+                      "perStack": 0
+                    }
+                  ],
+                  "skillScope": "names",
+                  "skillNames": [
+                    "雾色掩护·雾化子弹",
+                    "雾化子弹"
+                  ],
+                  "librarySkillNames": [
+                    "雾色掩护·雾化子弹"
+                  ],
+                  "catalogIds": [],
+                  "damageType": "共鸣技能",
+                  "effectType": "",
+                  "element": "气动",
+                  "defenseKind": "",
+                  "minStacks": 0,
+                  "minResonance": 0,
+                  "onlyCharacterIds": [],
+                  "onlyCombatModes": [],
+                  "effectKey": ""
+                }
+              ],
+              "sourceTag": "characterTemplate",
+              "templateKey": "tpl_ms1b3in1_a4hoc",
+              "gameText": "共鸣技能雾化子弹伤害提升30%，共鸣回路迷雾潜行状态下秋水受到的伤害降低30%。"
+            }
+          ],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {},
+          "gameText": "共鸣技能雾化子弹伤害提升30%，共鸣回路迷雾潜行状态下秋水受到的伤害降低30%。"
+        },
+        "5": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [
+            {
+              "category": "elementBonus",
+              "name": "5链·处于迷雾潜行时",
+              "mode": "fixed",
+              "value": 25,
+              "perStack": 0,
+              "maxStacks": 5,
+              "damageType": "",
+              "element": "气动",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "sourceTag": "characterTemplate",
+              "templateKey": "tpl_ms1b58x3_kyj82",
+              "gameText": "处于共鸣回路迷雾潜行时，秋水的气动伤害加成提升25%，效果持续6秒。"
+            }
+          ],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {},
+          "gameText": "处于共鸣回路迷雾潜行时，秋水的气动伤害加成提升25%，效果持续6秒。"
+        },
+        "6": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [
+            {
+              "category": "generalCritRate",
+              "name": "6链·雾里观花",
+              "mode": "fixed",
+              "value": 8,
+              "perStack": 0,
+              "maxStacks": 5,
+              "damageType": "",
+              "element": "",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "sourceTag": "characterTemplate",
+              "templateKey": "tpl_ms1b6ib0_0wpg1",
+              "gameText": "共鸣解放雾里观花的效果会使暴击额外提升8%，秋水的重击穿过【虚实之门】时，伤害额外提升50%。"
+            },
+            {
+              "category": "typeBonus",
+              "name": "6链·重击穿过【虚实之门】",
+              "mode": "fixed",
+              "value": 50,
+              "perStack": 0,
+              "maxStacks": 5,
+              "damageType": "重击",
+              "element": "",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "sourceTag": "characterTemplate",
+              "templateKey": "tpl_ms1b78m6_rmc2k",
+              "gameText": "共鸣解放雾里观花的效果会使暴击额外提升8%，秋水的重击穿过【虚实之门】时，伤害额外提升50%。"
+            }
+          ],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {},
+          "gameText": "共鸣解放雾里观花的效果会使暴击额外提升8%，秋水的重击穿过【虚实之门】时，伤害额外提升50%。"
+        }
+      },
+      "combatModes": {}
+    }
+  ]
+}

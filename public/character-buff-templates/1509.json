@@ -1,0 +1,525 @@
+{
+  "version": 1,
+  "kind": "shard",
+  "characterId": "1509",
+  "characterName": "琳奈",
+  "templates": [
+    {
+      "characterId": "1509",
+      "characterName": "琳奈",
+      "revision": 4,
+      "author": "",
+      "notes": "琳奈：全队复合【琳奈·延奏】泛用加深+15% + 共鸣解放加深+25%（固定；对琳奈本人不生效）；≥3链时泛用加深提升至40%。",
+      "personalBuffs": [
+        {
+          "category": "elementBonus",
+          "name": "固有2",
+          "mode": "fixed",
+          "value": 25,
+          "perStack": 0,
+          "maxStacks": 5,
+          "damageType": "",
+          "element": "衍射",
+          "defenseKind": "",
+          "convergenceVuln": "",
+          "sourceTag": "characterTemplate",
+          "templateKey": "tpl_ms1oh30g_c3x3p",
+          "gameText": "施放变奏技能·来点儿颜色瞧瞧时，9秒内自身的衍射伤害加成提升25%。"
+        }
+      ],
+      "teamBuffs": [
+        {
+          "templateKey": "linnei_outro",
+          "category": "composite",
+          "name": "琳奈·延奏",
+          "mode": "fixed",
+          "excludeSource": true,
+          "effects": [
+            {
+              "zone": "generalDeep",
+              "valueMode": "fixed",
+              "value": 15,
+              "segments": [
+                {
+                  "upTo": null,
+                  "perStack": 0
+                }
+              ],
+              "skillScope": "all",
+              "skillNames": [],
+              "librarySkillNames": [],
+              "catalogIds": [],
+              "damageType": "",
+              "effectType": "",
+              "element": "",
+              "defenseKind": "",
+              "minStacks": 0,
+              "minResonance": 0,
+              "onlyCharacterIds": [],
+              "onlyCombatModes": [],
+              "effectKey": ""
+            },
+            {
+              "zone": "typeDeep",
+              "valueMode": "fixed",
+              "value": 25,
+              "segments": [
+                {
+                  "upTo": null,
+                  "perStack": 0
+                }
+              ],
+              "skillScope": "all",
+              "skillNames": [],
+              "librarySkillNames": [],
+              "catalogIds": [],
+              "damageType": "共鸣解放",
+              "effectType": "",
+              "element": "",
+              "defenseKind": "",
+              "minStacks": 0,
+              "minResonance": 0,
+              "onlyCharacterIds": [],
+              "onlyCombatModes": [],
+              "effectKey": ""
+            },
+            {
+              "id": "id_19644",
+              "zone": "generalDeep",
+              "valueMode": "fixed",
+              "value": 25,
+              "segments": [
+                {
+                  "upTo": null,
+                  "perStack": 0
+                }
+              ],
+              "skillScope": "all",
+              "skillNames": [],
+              "librarySkillNames": [],
+              "catalogIds": [],
+              "damageType": "",
+              "effectType": "",
+              "element": "",
+              "defenseKind": "",
+              "minStacks": 0,
+              "minResonance": 3,
+              "onlyCharacterIds": [],
+              "onlyCombatModes": [],
+              "effectKey": "linnei_outro_c3_general_deep"
+            }
+          ],
+          "sourceTag": "characterTemplate",
+          "value": 0,
+          "perStack": 0,
+          "maxStacks": 1,
+          "gameText": "造成100%的衍射伤害。下一个登场的角色全伤害加深15%，共鸣解放伤害加深25%，持续14秒，若切换至其他角色则该效果提前结束。"
+        },
+        {
+          "category": "generalBonus",
+          "name": "琳奈",
+          "mode": "fixed",
+          "value": 24,
+          "perStack": 0,
+          "maxStacks": 5,
+          "damageType": "",
+          "element": "",
+          "defenseKind": "",
+          "convergenceVuln": "",
+          "sourceTag": "characterTemplate",
+          "templateKey": "tpl_ms1obyp0_8lja9",
+          "gameText": "爆炸喷涂\n造成衍射伤害。施放时使附近队伍中所有角色造成的伤害提升24%，持续30秒。"
+        },
+        {
+          "category": "harmonyBreakAmp",
+          "name": "琳奈·回路",
+          "mode": "fixed",
+          "value": 40,
+          "perStack": 0,
+          "maxStacks": 5,
+          "damageType": "",
+          "element": "",
+          "defenseKind": "",
+          "convergenceVuln": "",
+          "sourceTag": "characterTemplate",
+          "templateKey": "tpl_ms1oclwc_qbggb",
+          "gameText": "普攻·视觉冲击\n绮彩巡游状态期间，拥有3点【本色】且处于空中时，若该技能不处于冷却，短按普攻或共鸣技能，造成衍射伤害，并为命中的目标附加光致变染。\n施放时消耗3点【本色】，并使附近队伍中所有角色的谐度破坏增幅提升40点，持续30秒"
+        }
+      ],
+      "extraSkills": [],
+      "resonanceChains": {
+        "1": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [
+            {
+              "category": "composite",
+              "name": "1链",
+              "mode": "fixed",
+              "value": 0,
+              "perStack": 0,
+              "maxStacks": 99,
+              "damageType": "",
+              "element": "",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "effects": [
+                {
+                  "zone": "multBoost",
+                  "valueMode": "fixed",
+                  "value": 120,
+                  "segments": [
+                    {
+                      "upTo": null,
+                      "perStack": 0
+                    }
+                  ],
+                  "skillScope": "names",
+                  "skillNames": [
+                    "色光混合律·普攻·幻光折跃·第1段",
+                    "普攻·幻光折跃·第1段",
+                    "色光混合律·普攻·幻光折跃·第2段",
+                    "普攻·幻光折跃·第2段",
+                    "色光混合律·普攻·幻光折跃·第3段",
+                    "普攻·幻光折跃·第3段"
+                  ],
+                  "librarySkillNames": [
+                    "色光混合律·普攻·幻光折跃·第1段",
+                    "色光混合律·普攻·幻光折跃·第2段",
+                    "色光混合律·普攻·幻光折跃·第3段"
+                  ],
+                  "catalogIds": [],
+                  "damageType": "普攻",
+                  "effectType": "",
+                  "element": "衍射",
+                  "defenseKind": "",
+                  "minStacks": 0,
+                  "minResonance": 0,
+                  "onlyCharacterIds": [],
+                  "onlyCombatModes": [],
+                  "effectKey": ""
+                }
+              ],
+              "sourceTag": "characterTemplate",
+              "templateKey": "tpl_ms1omvwy_8bau2",
+              "gameText": "普攻·幻光折跃的伤害倍率提升120%。\n颜料的持续时间提升100%，每6秒将处于颜料范围内的敌人向颜料中心进行一次牵引。\n施放普攻·幻光折跃和普攻·视觉冲击期间免疫打断。\n「光学取样」阶段期间，处于非战斗状态大于2秒时，回复120点【溢彩】，每2秒触发一次。"
+            }
+          ],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {
+            "shock": {
+              "notes": "",
+              "personalBuffs": [],
+              "teamBuffs": [],
+              "extraSkills": []
+            },
+            "convergence": {
+              "notes": "",
+              "personalBuffs": [],
+              "teamBuffs": [],
+              "extraSkills": []
+            }
+          }
+        },
+        "2": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [
+            {
+              "category": "generalDeep",
+              "name": "2链",
+              "mode": "fixed",
+              "value": 25,
+              "perStack": 0,
+              "maxStacks": 5,
+              "damageType": "",
+              "element": "",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "sourceTag": "characterTemplate",
+              "templateKey": "tpl_ms1ont7m_xxa15",
+              "gameText": "全伤害加深25%。\n延奏技能额外获得以下效果：\n施放延奏技能时，使下一个登场的角色全伤害加深25%，持续14秒，若切换至其他角色则该效果提前结束。"
+            }
+          ],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {
+            "shock": {
+              "notes": "",
+              "personalBuffs": [],
+              "teamBuffs": [],
+              "extraSkills": []
+            },
+            "convergence": {
+              "notes": "",
+              "personalBuffs": [],
+              "teamBuffs": [],
+              "extraSkills": []
+            }
+          }
+        },
+        "3": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [
+            {
+              "category": "composite",
+              "name": "3链",
+              "mode": "fixed",
+              "value": 0,
+              "perStack": 0,
+              "maxStacks": 99,
+              "damageType": "",
+              "element": "",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "effects": [
+                {
+                  "zone": "multBoost",
+                  "valueMode": "fixed",
+                  "value": 90,
+                  "segments": [
+                    {
+                      "upTo": null,
+                      "perStack": 0
+                    }
+                  ],
+                  "skillScope": "names",
+                  "skillNames": [
+                    "色光混合律·普攻·视觉冲击",
+                    "普攻·视觉冲击",
+                    "色光混合律·普攻·虹彩飞溅",
+                    "普攻·虹彩飞溅"
+                  ],
+                  "librarySkillNames": [
+                    "色光混合律·普攻·视觉冲击",
+                    "色光混合律·普攻·虹彩飞溅"
+                  ],
+                  "catalogIds": [],
+                  "damageType": "普攻",
+                  "effectType": "",
+                  "element": "衍射",
+                  "defenseKind": "",
+                  "minStacks": 0,
+                  "minResonance": 0,
+                  "onlyCharacterIds": [],
+                  "onlyCombatModes": [],
+                  "effectKey": ""
+                }
+              ],
+              "sourceTag": "characterTemplate",
+              "templateKey": "tpl_ms1oolbr_xbp6t",
+              "gameText": "普攻·视觉冲击和普攻·虹彩飞溅的伤害倍率提升90%。\n战斗状态期间，【流光】大于等于120点时，每1秒获得一层预调色，上限25层。每层预调色使加色混合的衍射伤害加成提升55%。施放加色混合期间不会获得预调色，加色混合结束时，移除所有预调色。【流光】小于120点时，每0.5秒失去一层预调色。\n非战斗状态期间，【流光】大于等于120点时，每0.5秒获取一层预调色，【流光】小于120点时，每1秒失去一层预调色。"
+            }
+          ],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {
+            "shock": {
+              "notes": "",
+              "personalBuffs": [],
+              "teamBuffs": [],
+              "extraSkills": []
+            },
+            "convergence": {
+              "notes": "",
+              "personalBuffs": [],
+              "teamBuffs": [],
+              "extraSkills": []
+            }
+          }
+        },
+        "4": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [
+            {
+              "category": "generalAttack",
+              "name": "4链",
+              "mode": "fixed",
+              "value": 20,
+              "perStack": 0,
+              "maxStacks": 5,
+              "damageType": "",
+              "element": "",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "sourceTag": "characterTemplate",
+              "templateKey": "tpl_ms1opgg2_uiq4u",
+              "gameText": "攻击提升20%。"
+            }
+          ],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {
+            "shock": {
+              "notes": "",
+              "personalBuffs": [],
+              "teamBuffs": [],
+              "extraSkills": []
+            },
+            "convergence": {
+              "notes": "",
+              "personalBuffs": [],
+              "teamBuffs": [],
+              "extraSkills": []
+            }
+          }
+        },
+        "5": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [
+            {
+              "category": "composite",
+              "name": "5链",
+              "mode": "fixed",
+              "value": 0,
+              "perStack": 0,
+              "maxStacks": 99,
+              "damageType": "",
+              "element": "",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "effects": [
+                {
+                  "zone": "multBoost",
+                  "valueMode": "fixed",
+                  "value": 70,
+                  "segments": [
+                    {
+                      "upTo": null,
+                      "perStack": 0
+                    }
+                  ],
+                  "skillScope": "names",
+                  "skillNames": [
+                    "爆炸喷涂"
+                  ],
+                  "librarySkillNames": [
+                    "爆炸喷涂"
+                  ],
+                  "catalogIds": [],
+                  "damageType": "共鸣解放",
+                  "effectType": "",
+                  "element": "衍射",
+                  "defenseKind": "",
+                  "minStacks": 0,
+                  "minResonance": 0,
+                  "onlyCharacterIds": [],
+                  "onlyCombatModes": [],
+                  "effectKey": ""
+                }
+              ],
+              "sourceTag": "characterTemplate",
+              "templateKey": "tpl_ms1oprb8_ae1n1",
+              "gameText": "共鸣解放·爆炸喷涂的伤害倍率提升70%。"
+            }
+          ],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {
+            "shock": {
+              "notes": "",
+              "personalBuffs": [],
+              "teamBuffs": [],
+              "extraSkills": []
+            },
+            "convergence": {
+              "notes": "",
+              "personalBuffs": [],
+              "teamBuffs": [],
+              "extraSkills": []
+            }
+          }
+        },
+        "6": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [
+            {
+              "category": "composite",
+              "name": "6链·心之彩",
+              "mode": "stack",
+              "value": 0,
+              "perStack": 0,
+              "maxStacks": 99,
+              "damageType": "",
+              "element": "",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "effects": [
+                {
+                  "zone": "generalVulnerability",
+                  "valueMode": "stack",
+                  "value": 0,
+                  "segments": [
+                    {
+                      "upTo": 3,
+                      "perStack": 30
+                    }
+                  ],
+                  "skillScope": "names",
+                  "skillNames": [
+                    "色光混合律·普攻·虹彩飞溅",
+                    "普攻·虹彩飞溅",
+                    "色光混合律·普攻·视觉冲击",
+                    "普攻·视觉冲击"
+                  ],
+                  "librarySkillNames": [
+                    "色光混合律·普攻·虹彩飞溅",
+                    "色光混合律·普攻·视觉冲击"
+                  ],
+                  "catalogIds": [],
+                  "damageType": "普攻",
+                  "effectType": "",
+                  "element": "衍射",
+                  "defenseKind": "",
+                  "minStacks": 0,
+                  "minResonance": 0,
+                  "onlyCharacterIds": [],
+                  "onlyCombatModes": [],
+                  "effectKey": ""
+                }
+              ],
+              "sourceTag": "characterTemplate",
+              "templateKey": "tpl_ms1oqkd8_ajhbr",
+              "gameText": "每次施放绮彩巡游·跃动集束或绮彩巡游·空中重击时，为自身叠加1层心之彩，最多叠加3层，每层心之彩使目标受到普攻·虹彩飞溅和普攻·视觉冲击的伤害提升30%。施放普攻·虹彩飞溅或普攻·视觉冲击后，移除所有心之彩。\n施放普攻·幻光折跃时，刷新绮彩巡游·空中重击的可施放次数。\n施放绮彩巡游·空中重击期间免疫打断且受到伤害降低30%。\n施放延奏技能·有空一起兜风！时，琳奈不会退出绮彩巡游状态。\n【流光】上限由120提升至360。且【流光】达到上限时，轮滑速度进一步提升。\n施放变奏技能时，若处于绮彩巡游状态，回复120点【流光】。"
+            }
+          ],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {
+            "shock": {
+              "notes": "",
+              "personalBuffs": [],
+              "teamBuffs": [],
+              "extraSkills": []
+            },
+            "convergence": {
+              "notes": "",
+              "personalBuffs": [],
+              "teamBuffs": [],
+              "extraSkills": []
+            }
+          }
+        }
+      },
+      "combatModes": {
+        "shock": {
+          "notes": "",
+          "personalBuffs": [],
+          "teamBuffs": [],
+          "extraSkills": []
+        },
+        "convergence": {
+          "notes": "",
+          "personalBuffs": [],
+          "teamBuffs": [],
+          "extraSkills": []
+        }
+      }
+    }
+  ]
+}

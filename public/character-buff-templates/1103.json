@@ -1,0 +1,153 @@
+{
+  "version": 1,
+  "kind": "shard",
+  "characterId": "1103",
+  "characterName": "白芷",
+  "templates": [
+    {
+      "characterId": "1103",
+      "characterName": "白芷",
+      "revision": 2,
+      "author": "",
+      "notes": "白芷：3链个人生命比+12%（固定）。",
+      "personalBuffs": [],
+      "teamBuffs": [
+        {
+          "category": "generalDeep",
+          "name": "白芷·延奏",
+          "mode": "fixed",
+          "value": 15,
+          "perStack": 0,
+          "maxStacks": 5,
+          "damageType": "",
+          "element": "",
+          "defenseKind": "",
+          "convergenceVuln": "",
+          "sourceTag": "characterTemplate",
+          "templateKey": "tpl_mryxxgqj_hm5u6",
+          "gameText": "持续为下一位登场角色回复生命值，每3秒回复白芷1.54%生命上限的生命值，持续30秒。受到此治疗效果时，角色全伤害加深15%，持续6秒。"
+        },
+        {
+          "category": "generalAttack",
+          "name": "固有·天籁",
+          "mode": "fixed",
+          "value": 15,
+          "perStack": 0,
+          "maxStacks": 5,
+          "damageType": "",
+          "element": "",
+          "defenseKind": "",
+          "convergenceVuln": "",
+          "sourceTag": "characterTemplate",
+          "templateKey": "tpl_mryxxuk6_ue8pi",
+          "gameText": "施放共鸣技能应急预案时，忧昙会留下一片天籁，存在时间15秒。\n\n天籁\n拾取天籁的角色攻击提升15%，持续20秒。"
+        }
+      ],
+      "extraSkills": [],
+      "resonanceChains": {
+        "1": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {},
+          "gameText": "施放共鸣技能应急预案时，每消耗1点【念意】，白芷额外回复2.5点共鸣能量。"
+        },
+        "2": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [
+            {
+              "category": "elementBonus",
+              "name": "2链",
+              "mode": "fixed",
+              "value": 15,
+              "perStack": 0,
+              "maxStacks": 5,
+              "damageType": "",
+              "element": "冷凝",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "sourceTag": "characterTemplate",
+              "templateKey": "tpl_mryxzenw_b5wds",
+              "gameText": "施放共鸣技能应急预案时，若有4点【念意】，白芷的冷凝伤害加成提升15%，治疗效果加成提升15%，持续12秒。"
+            }
+          ],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {},
+          "gameText": "施放共鸣技能应急预案时，若有4点【念意】，白芷的冷凝伤害加成提升15%，治疗效果加成提升15%，持续12秒。"
+        },
+        "3": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [
+            {
+              "templateKey": "baizhi_c3_hp_percent",
+              "category": "generalHpPct",
+              "name": "白芷·【3链】生命提升",
+              "mode": "fixed",
+              "value": 12,
+              "damageType": "",
+              "element": "",
+              "defenseKind": "",
+              "sourceTag": "characterTemplate",
+              "perStack": 0,
+              "maxStacks": 5,
+              "gameText": "施放变奏技能覆雪流盈时，白芷的生命上限提升12%，持续10秒。"
+            }
+          ],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {},
+          "gameText": "施放变奏技能覆雪流盈时，白芷的生命上限提升12%，持续10秒。"
+        },
+        "4": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {},
+          "gameText": "施放共鸣解放刹那合弥时，共鸣解放频隙回响获得强化：\n·频隙回响增加2段；\n·频隙回响治疗倍率提升20%；\n·频隙回响额外造成白芷1.20%生命值上限的冷凝伤害。"
+        },
+        "5": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {},
+          "gameText": "队伍中的白芷存活时，若队伍中的角色（不包含白芷）失去意识，立刻为该角色恢复意识并回复该角色生命上限100%的生命值，该效果每10分钟可触发1次。"
+        },
+        "6": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [],
+          "teamBuffs": [
+            {
+              "category": "elementBonus",
+              "name": "6链·白芷",
+              "mode": "fixed",
+              "value": 12,
+              "perStack": 0,
+              "maxStacks": 5,
+              "damageType": "",
+              "element": "冷凝",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "sourceTag": "characterTemplate",
+              "templateKey": "tpl_mryy0pqv_f6y5t",
+              "gameText": "角色拾取固有技能天籁时，附近队伍中所有角色的冷凝伤害加成提升12%，持续20秒。"
+            }
+          ],
+          "extraSkills": [],
+          "combatModes": {},
+          "gameText": "角色拾取固有技能天籁时，附近队伍中所有角色的冷凝伤害加成提升12%，持续20秒。"
+        }
+      },
+      "combatModes": {}
+    }
+  ]
+}

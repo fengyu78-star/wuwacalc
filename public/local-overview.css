@@ -1,0 +1,165 @@
+/* Overview presentation only. */
+.overview-page .export-region .export-summary-main{grid-template-columns:minmax(280px,.85fr) minmax(0,1.15fr)!important;}
+.overview-page .export-summary-main .export-summary-pie.panel-inner{width:100%!important;max-width:none!important;box-sizing:border-box;padding:18px!important;}
+.overview-page .export-summary-below>.export-summary-loadout.panel-inner{flex:0 0 auto!important;min-height:0!important;align-content:flex-start;}
+.overview-page .export-summary-loadout .loadout-line{width:auto!important;flex:0 1 auto!important;min-height:0!important;padding:0!important;}
+@media(max-width:800px){.overview-page .export-region .export-summary-main{grid-template-columns:1fr!important;}}
+.overview-page.panel{padding:0!important;background:none!important;border:0!important;box-shadow:none!important;color:#c4d4e3;}
+.overview-page .export-page-header{padding:6px 0 18px;border:0;margin:0;}
+.overview-page .export-page-title{font-size:25px;color:#e5eff6;}
+.overview-page .export-page-header .hint{font-size:12px;color:#94abc0;margin-top:8px;}
+.overview-page .local-overview-tabs{display:flex;gap:8px;padding:0 0 14px;margin-bottom:20px;border-bottom:1px solid #8ea7c32e;}
+.overview-page .local-overview-tabs button{min-height:44px;padding:10px 28px;border-radius:7px;border:1px solid #7794af44;background:#182737;color:#b5c9db;font:600 15px inherit;cursor:pointer;}
+.overview-page .local-overview-tabs button[aria-selected=true]{background:linear-gradient(110deg,#d8c487,#b9a46d);color:#17222e;border-color:#e4d59c;}
+.overview-page button:focus-visible,.overview-page summary:focus-visible{outline:2px solid #9ddce7;outline-offset:3px;}
+.overview-page [data-overview-panel][hidden]{display:none!important;}
+.overview-page .overview-grid.local-overview-content{display:block;margin:0;}
+.overview-page .overview-stack.local-overview-content{display:block;margin:0;}
+.overview-page .local-single-round .ov-members{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));width:100%;max-width:none;}
+.overview-page .export-summary-pie{width:auto;max-width:none;}
+.overview-page .export-page-header-row{width:100%;display:flex;align-items:center;justify-content:space-between;gap:16px;}
+.overview-page .export-page-header-text{flex:1;}
+.overview-page .export-page-header .wr-team-report-btn{margin-left:auto;}
+.overview-page .ov-member{position:relative;overflow:hidden;padding-bottom:18px;}
+.overview-page .ov-member::after{content:'';position:absolute;left:0;bottom:0;height:3px;width:var(--contribution,0%);background:linear-gradient(90deg,#c5b177,#e6d49c);}
+.overview-page .ov-member:nth-child(2)::after{background:linear-gradient(90deg,#638fba,#9fcedc);}
+.overview-page .ov-member:nth-child(3)::after{background:linear-gradient(90deg,#8276b1,#c4b2e4);}
+.overview-page .export-region,.overview-page .overview-cycle-section{padding:22px!important;margin:0 0 20px!important;border:1px solid transparent!important;border-radius:12px;background:radial-gradient(ellipse at 10% 0,#8cbbdf12,transparent 50%),linear-gradient(120deg,#203145,#152332) padding-box,linear-gradient(115deg,#709fb57a,#7e72b633 55%,#9a85c77a) border-box!important;box-shadow:inset 0 1px #d2e8f912!important;}
+.overview-page .export-region::before,.overview-page .export-region::after{display:none!important;}
+.overview-page .export-region-head{padding:0 0 14px;margin:0 0 16px;border-bottom:1px solid #a3bbd223;}
+.overview-page .export-region-title{font-size:19px;color:#e0eaf2;}
+.overview-page .export-data-summary>.export-section-title,.overview-page .echo-sub-sim>.export-section-title,.overview-page .export-cfg-compare>h4{display:none;}
+.overview-page .local-overview-help{margin:0 0 16px;color:#9fb6cb;font-size:12px;}
+.overview-page .local-overview-help summary,.overview-page .local-round-details summary{cursor:pointer;padding:8px 0;color:#b7c9dc;}
+.overview-page .local-overview-help p{line-height:1.8;max-width:1000px;}
+.overview-page .export-summary-tabs{display:flex;gap:8px;margin:0 0 18px;padding:0;border:0;}
+.overview-page .export-summary-tabs button{min-height:42px;padding:8px 24px;background:#142435;border:1px solid #819db43d;border-radius:7px;color:#b8ccdc;}
+.overview-page .export-summary-tabs button.active{background:#304353;border-color:#c9b87999;color:#e8d8a2;}
+.overview-page .export-summary-main{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(260px,.8fr);gap:20px;align-items:stretch;}
+.overview-page .export-summary-below{display:flex;flex-direction:column;gap:16px;min-width:0;}
+.overview-page .panel-inner{background:#142434!important;border:1px solid #7896b12e!important;border-radius:9px;padding:18px;box-shadow:none!important;}
+.overview-page .export-summary-loadout{display:flex;flex-wrap:wrap;gap:10px 18px;}
+.overview-page .export-summary-loadout h4{width:100%;margin:0 0 5px;font-size:13px;color:#9ab3ca;}
+.overview-page .loadout-line{display:flex;gap:10px;align-items:baseline;padding:0;border:0;font-size:13px;}
+.overview-page .export-summary-priority{flex:1;}
+.overview-page .priority-row{padding:12px 0;border-bottom:1px solid #809bb520;}
+.overview-page .priority-rank{color:#8caac3;background:none;}
+.overview-page .priority-pct{color:#e7d095;font-family:ui-monospace,monospace;}
+.overview-page .export-cfg-split{display:flex!important;flex-direction:column;gap:20px;}
+.overview-page .export-cfg-main,.overview-page .export-cfg-chart{min-width:0;width:100%;background:#152535;border:1px solid #8da8c32a;border-radius:8px;}
+.overview-page .export-cfg-live{display:flex;flex-wrap:wrap;gap:10px;align-items:center;padding:14px;}
+.overview-page .export-cfg-live-main{margin-left:auto;gap:14px;}
+.overview-page .export-cfg-table th{background:#263b50;color:#bdd1e1;padding:12px 10px;}
+.overview-page .export-cfg-table td{padding:13px 10px;border-color:#839ab523;}
+.overview-page .export-cfg-live-preview{overflow:auto;}
+.overview-page .btn{border-radius:6px;font-size:13px;}
+.overview-page .export-btn-primary{background:#cbb67e!important;color:#162332!important;border-color:#ddc98d!important;}
+.overview-page .export-btn-secondary{background:#1a2d40!important;color:#bed3e4!important;border-color:#8da7bf44!important;}
+.overview-page .echo-sub-sim-toolbar{display:flex;flex-wrap:wrap;gap:10px;justify-content:flex-end;margin:0 0 18px;}
+.overview-page .echo-sub-sim-metrics{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:0 0 18px;}
+.overview-page .echo-sub-sim-metrics>div{background:#152638;border:1px solid #89a4be33;border-radius:8px;padding:16px;display:flex;flex-direction:column;gap:8px;}
+.overview-page .echo-sub-sim-metrics strong{font:600 25px ui-monospace,monospace;color:#c2e4ee;}
+.overview-page .echo-sub-sim-metrics>div:nth-child(3),.overview-page .echo-sub-sim-metrics>div:nth-child(4){border-color:#cbb77d66;background:linear-gradient(120deg,#343c37,#1d3040);}
+.overview-page .echo-sub-sim-metrics>div:nth-child(3) strong,.overview-page .echo-sub-sim-metrics>div:nth-child(4) strong{color:#e7d297;}
+.overview-page .echo-sub-sim-margins{padding:14px;background:#203649;border:1px solid #7c9eb537;border-radius:8px;line-height:2;}
+.overview-page [data-sim-part=matrix]{margin-top:16px;overflow:auto;padding:12px;background:#132334;border:1px solid #6f8da73d;border-radius:8px;}
+.overview-page [data-sim-part=plans]{margin-top:20px;padding-top:16px;border-top:1px solid #89a8bc33;}
+.overview-page .overview-cycle-table th{background:#23394d;color:#9fb8cd;}
+.overview-page .overview-cycle-table td{background:transparent;border-color:#7895ac2a;}
+.overview-page .ov-member{background:#132538;border:1px solid #89a4bb33;border-radius:8px;padding:12px;}
+.overview-page .ov-member-dmg,.overview-page .ov-team-total{color:#e3cf95;font-family:ui-monospace,monospace;}
+.overview-page .local-single-round .overview-cycle-table thead{display:none;}
+.overview-page .local-single-round .overview-cycle-table,.overview-page .local-single-round .overview-cycle-table tbody{display:block;width:100%;}
+.overview-page .local-single-round .overview-cycle-table tr{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;}
+.overview-page .local-single-round .ov-round{display:none;}
+.overview-page .local-single-round .ov-roster{grid-column:1/-1;order:2;padding:16px 0 0;border-top:1px solid #8ea7c32e;}
+.overview-page .local-single-round .ov-num{display:flex;flex-direction:column;gap:8px;text-align:left;font:600 25px ui-monospace,monospace;padding:0 18px;border:0;border-left:1px solid #91adc12e;color:#c4e3ed;}
+.overview-page .local-single-round .ov-team-total{border:0;padding-left:0;color:#e3cf95;}
+.overview-page .local-single-round .ov-num::before{font:400 12px sans-serif;color:#a2b9cc;content:'轴长';}
+.overview-page .local-single-round .ov-team-total::before{content:'全队总伤';}
+.overview-page .local-single-round .ov-num:nth-child(4)::before{content:'平均 DPS';}
+@media(max-width:1000px){.overview-page .export-summary-main{grid-template-columns:1fr;}.overview-page .export-summary-below{display:grid;grid-template-columns:1fr 1fr;}.overview-page .echo-sub-sim-metrics{grid-template-columns:repeat(2,minmax(0,1fr));}}
+@media(max-width:600px){.overview-page .local-overview-tabs button{padding:10px 14px;flex:1;font-size:13px;}.overview-page .export-region,.overview-page .overview-cycle-section{padding:15px!important;}.overview-page .export-summary-below{grid-template-columns:1fr;}.overview-page .local-single-round .ov-num{font-size:20px;}.overview-page .echo-sub-sim-metrics{gap:8px;}.overview-page .echo-sub-sim-metrics strong{font-size:20px;}}
+/* One horizontal strip per round; existing values and round calculations are unchanged. */
+.overview-page .local-round-details>summary{list-style:none;display:flex;justify-content:space-between;align-items:center;padding:0 0 14px;color:#a9c0d3;font-size:12px;cursor:pointer}
+.overview-page .local-round-details>summary::-webkit-details-marker{display:none}
+.overview-page .local-round-details>summary:after{content:'展开 ＋';color:#bcd6e6}
+.overview-page .local-round-details[open]>summary:after{content:'收起 −'}
+.overview-page .local-round-details .overview-cycle-table-wrap{overflow-x:auto;border:0;background:none;padding:2px 0 5px}
+.overview-page .local-round-details .overview-cycle-table,.overview-page .local-round-details tbody{display:block;width:100%;border:0;background:none}
+.overview-page .local-round-details thead{display:none}
+.overview-page .local-round-details tbody{display:grid;gap:10px;min-width:800px}
+.overview-page .local-round-details tr{position:relative;isolation:isolate;display:grid;grid-template-columns:68px minmax(360px,1fr) minmax(120px,.26fr) minmax(100px,.22fr) 65px;align-items:center;gap:16px;min-height:86px;box-sizing:border-box;padding:14px 18px;border:1px solid transparent;border-radius:9px;background:linear-gradient(110deg,#1b2c3d,#101d2b 65%,#191f32) padding-box,linear-gradient(110deg,#69a4bc88,#65829b30 45%,#9b80cf77) border-box;box-shadow:inset 0 1px #d6edff0e;transition:box-shadow .18s ease}
+.overview-page .local-round-details tr:before{content:'';position:absolute;inset:0;border-radius:inherit;background:repeating-linear-gradient(120deg,transparent 0 32px,#a9ceeb05 33px,transparent 34px 65px);pointer-events:none;z-index:-1}
+.overview-page .local-round-details tr:hover{box-shadow:inset 0 1px #d6edff22,0 0 12px #658ac818}
+.overview-page .local-round-details td{width:auto!important;min-width:0;max-width:none!important;padding:0!important;border:0!important;background:none!important;grid-row:1!important}
+.overview-page .local-round-details .ov-round{position:relative;display:flex;flex-direction:column;align-items:center;gap:2px;font-size:10px;color:#91aabc;white-space:nowrap}
+.overview-page .local-round-details .ov-round:before{content:attr(data-round-number);font:500 26px ui-monospace,monospace;color:#bce6f3;letter-spacing:.03em}
+.overview-page .local-round-details .ov-round:after{content:'';position:absolute;left:-18px;top:6px;bottom:6px;width:2px;background:linear-gradient(#7cceeb,#828fd0);box-shadow:0 0 10px #78bdd34d}
+.overview-page .local-round-details .ov-members{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;width:100%!important;max-width:none!important}
+.overview-page .local-round-details .ov-member{display:grid;grid-template-columns:auto minmax(0,1fr);grid-template-rows:auto auto;align-items:center;column-gap:9px;row-gap:5px;min-width:0;width:auto!important;padding:0!important;border:0!important;border-radius:0;background:none!important;box-shadow:none!important}
+.overview-page .local-round-details .ov-member:after{display:none!important}
+.overview-page .local-round-details .ov-member-top,.overview-page .local-round-details .ov-member-sub{display:contents}
+.overview-page .local-round-details .ov-member-meta,.overview-page .local-round-details .ov-member-weapon{display:none}
+.overview-page .local-round-details .ov-member-name{grid-column:2;grid-row:1;font-size:12px!important;color:#c8d9e6;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.overview-page .local-round-details .ov-member-dmg{grid-column:2;grid-row:2;color:#e1eaf3;font:600 14px ui-monospace,monospace;white-space:nowrap}
+.overview-page .local-round-avatar{grid-column:1;grid-row:1/3;width:34px;height:38px;display:block;overflow:hidden;border-radius:5px}
+.overview-page .local-round-avatar .char-avatar-card,.overview-page .local-round-avatar img{width:100%!important;height:100%!important;object-fit:cover;padding:0!important;border:0!important;background:none!important}
+.overview-page .local-round-details .ov-num{display:flex;flex-direction:column;gap:7px;text-align:left!important;padding-left:16px!important;border-left:1px solid #a0bfd325!important;color:#ddebf4;font:600 18px ui-monospace,monospace;white-space:nowrap}
+.overview-page .local-round-details .ov-team-total{color:#ecd69d;font-size:21px}
+.overview-page .local-round-details .ov-num:before{content:'全队总伤';font:400 10px 'Microsoft YaHei',sans-serif;color:#9eb6c9;letter-spacing:.04em}
+.overview-page .local-round-details .ov-num:nth-child(4):before{content:'DPS'}
+.overview-page .local-round-details .ov-num:nth-child(5):before{content:'轴长'}
+.overview-page .local-round-details .ov-num:nth-child(5){font-size:14px;color:#a6bdcc}
+.overview-page .local-round-details .ov-member-unowned{display:flex;margin-top:5px;gap:10px}
+@media(prefers-reduced-motion:reduce){.overview-page .local-round-details tr{transition:none}}
+.overview-page .local-round-details .ov-member-name,.overview-page .local-round-details .ov-member-dmg{margin:0!important;justify-self:start;text-align:left!important}
+/* Round roster: portrait and three aligned metrics; static engraved geometry. */
+.overview-page .local-round-details tbody{min-width:1180px}
+.overview-page .local-round-details tr{grid-template-columns:48px minmax(810px,1fr) minmax(110px,.12fr) minmax(86px,.1fr) 52px;gap:14px;padding:16px;min-height:100px}
+.overview-page .local-round-details tr:before{background-image:linear-gradient(30deg,transparent 48.8%,#9acbe00b 49%,#9acbe00b 50%,transparent 50.2%),linear-gradient(150deg,transparent 48.8%,#9acbe00b 49%,#9acbe00b 50%,transparent 50.2%),linear-gradient(90deg,transparent 49%,#a5b9dc07 49.5%,#a5b9dc07 50%,transparent 50.5%);background-size:72px 42px;mask-image:linear-gradient(90deg,#000,transparent 46%,#000);opacity:.85}
+.overview-page .local-round-details .ov-members{gap:18px}
+.overview-page .ov-member.local-round-member-rich{position:relative;display:grid;grid-template-columns:52px minmax(0,1fr);grid-template-rows:auto auto;column-gap:12px;row-gap:7px;align-items:center}
+.overview-page .ov-member.local-round-member-rich .ov-member-top,.overview-page .ov-member.local-round-member-rich .ov-member-sub{display:contents}
+.overview-page .ov-member.local-round-member-rich .ov-member-meta,.overview-page .ov-member.local-round-member-rich .ov-member-weapon{display:none}
+.overview-page .ov-member.local-round-member-rich .ov-member-name{grid-column:2;grid-row:1;margin:0!important;justify-self:start;font-size:13px!important;color:#d2e3ee;line-height:1.3}
+.overview-page .ov-member.local-round-member-rich .local-round-avatar{width:52px;height:60px;grid-row:1/3;align-self:center;border-radius:6px;box-shadow:0 0 0 1px #9dcbe238,0 3px 12px #0004}
+.overview-page .local-round-metrics{grid-column:2;grid-row:2;display:grid;grid-template-columns:minmax(0,1.12fr) minmax(0,1fr) minmax(0,.85fr);gap:10px;min-width:0}
+.overview-page .local-round-metric{display:flex;flex-direction:column;align-items:flex-start;gap:5px;min-width:0}
+.overview-page .local-round-metric-label{font:400 10px/1.2 'Microsoft YaHei',sans-serif;color:#9fb8cc;white-space:nowrap}
+.overview-page .local-round-metrics .local-round-metric-value{font:600 13px/1.25 ui-monospace,Consolas,monospace;letter-spacing:-.035em;color:#e1eaf3;white-space:nowrap;margin:0!important}
+.overview-page .local-round-metric[data-metric=dps] .local-round-metric-value{color:#a8dbea}
+.overview-page .local-round-metric[data-metric=energy] .local-round-metric-value{color:#c7bee9}
+.overview-page .local-round-details .ov-num{padding-left:12px!important;font-size:16px}
+.overview-page .local-round-details .ov-team-total{font-size:18px}
+.overview-page .local-single-round .ov-member.local-round-member-rich{background:linear-gradient(30deg,transparent 48%,#9acbe00a 49%,#9acbe00a 50%,transparent 51%) 0 0/64px 38px,#142638}
+@media(min-width:1800px){.overview-page .local-round-details tr{grid-template-columns:52px minmax(870px,1fr) 130px 100px 60px;gap:18px}.overview-page .local-round-metrics .local-round-metric-value{font-size:15px}.overview-page .local-round-metric-label{font-size:11px}.overview-page .ov-member.local-round-member-rich .local-round-avatar{width:58px;height:66px}.overview-page .ov-member.local-round-member-rich{grid-template-columns:58px minmax(0,1fr)}}
+@media(max-width:1000px){.overview-page .local-single-round .ov-members{grid-template-columns:1fr}.overview-page .local-single-round .local-round-metrics{max-width:440px}}
+/* Visible geometric engraving, kept behind the content and static. */
+.overview-page .local-round-details tr:before,
+.overview-page .local-single-round .ov-member.local-round-member-rich:before{
+ content:'';position:absolute;inset:0;border-radius:inherit;pointer-events:none;z-index:0;opacity:1;
+ background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='320' height='120' viewBox='0 0 320 120'%3E%3Cg fill='none' stroke='%237bc8e5' stroke-opacity='.32' stroke-width='1'%3E%3Cpath d='M-60 60 0 0 60 60 0 120ZM0 60 60 0 120 60 60 120ZM60 60 120 0 180 60 120 120ZM120 60 180 0 240 60 180 120ZM180 60 240 0 300 60 240 120Z'/%3E%3Cpath d='M-30 60 30 0 90 60 30 120ZM30 60 90 0 150 60 90 120Z' stroke-opacity='.16'/%3E%3C/g%3E%3Cpath d='M8 34V12h46M10 88v20h44M82 12h28l20 20' fill='none' stroke='%23a0dbf0' stroke-opacity='.6' stroke-width='2'/%3E%3C/svg%3E"),url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='280' height='120'%3E%3Cg fill='none' stroke='%23b59be4' stroke-opacity='.34'%3E%3Cpath d='m0 60 60-60 60 60-60 60Zm60 0 60-60 60 60-60 60Zm60 0 60-60 60 60-60 60Z'/%3E%3Cpath d='M268 34V12h-46m46 76v20h-46m-28-96h-28l-20 20' stroke-opacity='.6' stroke-width='2'/%3E%3C/g%3E%3C/svg%3E");
+ background-position:left center,right center;background-size:320px 100%,280px 100%;background-repeat:no-repeat;
+ mask-image:linear-gradient(90deg,#000,rgba(0,0,0,.55) 12%,transparent 27%,transparent 73%,rgba(0,0,0,.55) 88%,#000);
+}
+.overview-page .local-round-details tr>td,
+.overview-page .local-single-round .ov-member.local-round-member-rich>*{position:relative;z-index:1}
+.overview-page .local-single-round .ov-member.local-round-member-rich{isolation:isolate;overflow:hidden}
+.overview-page .local-single-round .ov-member.local-round-member-rich:before{background-size:190px 100%,170px 100%;mask-image:linear-gradient(90deg,#000,transparent 38%,transparent 65%,#000)}
+/* Larger round metrics for quick scanning. */
+.overview-page .local-round-metric-label{font-size:11px;letter-spacing:.02em;color:#b2c8d8}
+.overview-page .local-round-metrics .local-round-metric-value{font-size:17px;line-height:1.15;letter-spacing:-.025em}
+.overview-page .local-round-metric[data-metric=damage] .local-round-metric-value{font-size:18px;color:#f0e2b0}
+.overview-page .local-round-metric[data-metric=dps] .local-round-metric-value{font-size:17px}
+.overview-page .local-round-metric[data-metric=energy] .local-round-metric-value{font-size:17px}
+@media(min-width:1800px){.overview-page .local-round-metrics .local-round-metric-value{font-size:18px}.overview-page .local-round-metric[data-metric=damage] .local-round-metric-value{font-size:20px}.overview-page .local-round-metric-label{font-size:12px}}
+/* Single-card industrial graphic study. Background paint only: no geometry changes. */
+.overview-page .export-data-summary{
+ background-color:#182a3a!important;
+ background-image:url('local-overview-tactical.svg?v=1'),linear-gradient(120deg,#203244,#162534)!important;
+ background-position:right 12px top 10px,0 0!important;
+ background-size:560px 186px,100% 100%!important;
+ background-repeat:no-repeat!important;
+}
+@media(max-width:760px){.overview-page .export-data-summary{background-size:360px 120px,100% 100%!important;background-position:right -48px top 12px,0 0!important}}

@@ -1,0 +1,615 @@
+{
+  "version": 1,
+  "kind": "shard",
+  "characterId": "1208",
+  "characterName": "嘉贝莉娜",
+  "templates": [
+    {
+      "characterId": "1208",
+      "characterName": "嘉贝莉娜",
+      "revision": 4,
+      "author": "",
+      "notes": "【内燃烧】泛用攻击+20%；【余火】1链指定技能泛用暴伤+2%/层；6链指定技能热熔加深+0.875%/层（与本体同一Buff，分别需≥1/≥6链）；3链【3链·大招倍率提升】炼净倍率+130%",
+      "personalBuffs": [
+        {
+          "templateKey": "jiabeilina_neiranshao_atk",
+          "category": "generalAttack",
+          "name": "内燃烧",
+          "mode": "fixed",
+          "value": 20,
+          "perStack": 0,
+          "maxStacks": 99,
+          "damageType": "",
+          "element": "",
+          "defenseKind": "",
+          "sourceTag": "characterTemplate",
+          "gameText": "内燃烧\n施放变奏技能、地狱穿行、普攻·炽天猎杀第4段、共鸣技能·迫近、共鸣技能·恶翼扬升、共鸣技能·掠袭时，嘉贝莉娜的攻击提升20%，抗打断能力提升，持续4秒。"
+        },
+        {
+          "category": "composite",
+          "name": "余火",
+          "mode": "stack",
+          "value": 0,
+          "perStack": 0,
+          "maxStacks": 99,
+          "damageType": "",
+          "element": "",
+          "defenseKind": "",
+          "convergenceVuln": "",
+          "effects": [
+            {
+              "zone": "generalVulnerability",
+              "valueMode": "stack",
+              "value": 0,
+              "segments": [
+                {
+                  "upTo": 40,
+                  "perStack": 1.5
+                }
+              ],
+              "skillScope": "names",
+              "skillNames": [
+                "超阈限·普攻·炽天猎杀第一段",
+                "普攻·炽天猎杀第一段",
+                "超阈限·普攻·炽天猎杀第二段",
+                "普攻·炽天猎杀第二段",
+                "超阈限·普攻·炽天猎杀第三段",
+                "普攻·炽天猎杀第三段",
+                "超阈限·重击·炼羽裁决第一段",
+                "重击·炼羽裁决第一段",
+                "超阈限·重击·炼羽裁决第二段",
+                "重击·炼羽裁决第二段",
+                "超阈限·闪避反击·罪业当涤",
+                "闪避反击·罪业当涤",
+                "超阈限·空中攻击·火狱暴雨下落攻击",
+                "空中攻击·火狱暴雨下落攻击",
+                "超阈限·空中攻击·火狱暴雨持续扫射",
+                "空中攻击·火狱暴雨持续扫射",
+                "超阈限·共鸣技能·掠袭",
+                "共鸣技能·掠袭",
+                "超阈限·普攻·炽天猎杀第四段",
+                "普攻·炽天猎杀第四段",
+                "超阈限·普攻·炽天猎杀第五段",
+                "普攻·炽天猎杀第五段",
+                "超阈限·重击·炼羽裁决第三段",
+                "重击·炼羽裁决第三段"
+              ],
+              "librarySkillNames": [
+                "超阈限·普攻·炽天猎杀第一段",
+                "超阈限·普攻·炽天猎杀第二段",
+                "超阈限·普攻·炽天猎杀第三段",
+                "超阈限·重击·炼羽裁决第一段",
+                "超阈限·重击·炼羽裁决第二段",
+                "超阈限·闪避反击·罪业当涤",
+                "超阈限·空中攻击·火狱暴雨下落攻击",
+                "超阈限·空中攻击·火狱暴雨持续扫射",
+                "超阈限·共鸣技能·掠袭",
+                "超阈限·普攻·炽天猎杀第四段",
+                "超阈限·普攻·炽天猎杀第五段",
+                "超阈限·重击·炼羽裁决第三段"
+              ],
+              "catalogIds": [],
+              "damageType": "重击",
+              "effectType": "",
+              "element": "热熔",
+              "defenseKind": "",
+              "minStacks": 0,
+              "minResonance": 0,
+              "onlyCharacterIds": [],
+              "onlyCombatModes": [],
+              "effectKey": ""
+            },
+            {
+              "id": "id_2254",
+              "zone": "generalCritDmg",
+              "valueMode": "stack",
+              "value": 0,
+              "segments": [
+                {
+                  "upTo": null,
+                  "perStack": 2
+                }
+              ],
+              "skillScope": "names",
+              "skillNames": [
+                "超阈限·普攻·炽天猎杀第一段",
+                "普攻·炽天猎杀第一段",
+                "超阈限·普攻·炽天猎杀第二段",
+                "普攻·炽天猎杀第二段",
+                "超阈限·普攻·炽天猎杀第三段",
+                "普攻·炽天猎杀第三段",
+                "超阈限·重击·炼羽裁决第一段",
+                "重击·炼羽裁决第一段",
+                "超阈限·重击·炼羽裁决第二段",
+                "重击·炼羽裁决第二段",
+                "超阈限·闪避反击·罪业当涤",
+                "闪避反击·罪业当涤",
+                "超阈限·空中攻击·火狱暴雨下落攻击",
+                "空中攻击·火狱暴雨下落攻击",
+                "超阈限·空中攻击·火狱暴雨持续扫射",
+                "空中攻击·火狱暴雨持续扫射",
+                "超阈限·共鸣技能·掠袭",
+                "共鸣技能·掠袭",
+                "超阈限·普攻·炽天猎杀第四段",
+                "普攻·炽天猎杀第四段",
+                "超阈限·普攻·炽天猎杀第五段",
+                "普攻·炽天猎杀第五段",
+                "超阈限·重击·炼羽裁决第三段",
+                "重击·炼羽裁决第三段"
+              ],
+              "librarySkillNames": [
+                "超阈限·普攻·炽天猎杀第一段",
+                "超阈限·普攻·炽天猎杀第二段",
+                "超阈限·普攻·炽天猎杀第三段",
+                "超阈限·重击·炼羽裁决第一段",
+                "超阈限·重击·炼羽裁决第二段",
+                "超阈限·闪避反击·罪业当涤",
+                "超阈限·空中攻击·火狱暴雨下落攻击",
+                "超阈限·空中攻击·火狱暴雨持续扫射",
+                "超阈限·共鸣技能·掠袭",
+                "超阈限·普攻·炽天猎杀第四段",
+                "超阈限·普攻·炽天猎杀第五段",
+                "超阈限·重击·炼羽裁决第三段"
+              ],
+              "catalogIds": [],
+              "damageType": "",
+              "effectType": "",
+              "element": "",
+              "defenseKind": "",
+              "minStacks": 0,
+              "minResonance": 1,
+              "onlyCharacterIds": [],
+              "onlyCombatModes": [],
+              "effectKey": "jiabeilina_yuhuo_c1_crit_dmg"
+            },
+            {
+              "id": "id_2255",
+              "zone": "elementDeep",
+              "valueMode": "stack",
+              "value": 0,
+              "segments": [
+                {
+                  "upTo": null,
+                  "perStack": 0.875
+                }
+              ],
+              "skillScope": "names",
+              "skillNames": [
+                "超阈限·普攻·炽天猎杀第一段",
+                "普攻·炽天猎杀第一段",
+                "超阈限·普攻·炽天猎杀第二段",
+                "普攻·炽天猎杀第二段",
+                "超阈限·普攻·炽天猎杀第三段",
+                "普攻·炽天猎杀第三段",
+                "超阈限·重击·炼羽裁决第一段",
+                "重击·炼羽裁决第一段",
+                "超阈限·重击·炼羽裁决第二段",
+                "重击·炼羽裁决第二段",
+                "超阈限·闪避反击·罪业当涤",
+                "闪避反击·罪业当涤",
+                "超阈限·空中攻击·火狱暴雨下落攻击",
+                "空中攻击·火狱暴雨下落攻击",
+                "超阈限·空中攻击·火狱暴雨持续扫射",
+                "空中攻击·火狱暴雨持续扫射",
+                "超阈限·共鸣技能·掠袭",
+                "共鸣技能·掠袭",
+                "超阈限·普攻·炽天猎杀第四段",
+                "普攻·炽天猎杀第四段",
+                "超阈限·普攻·炽天猎杀第五段",
+                "普攻·炽天猎杀第五段",
+                "超阈限·重击·炼羽裁决第三段",
+                "重击·炼羽裁决第三段"
+              ],
+              "librarySkillNames": [
+                "超阈限·普攻·炽天猎杀第一段",
+                "超阈限·普攻·炽天猎杀第二段",
+                "超阈限·普攻·炽天猎杀第三段",
+                "超阈限·重击·炼羽裁决第一段",
+                "超阈限·重击·炼羽裁决第二段",
+                "超阈限·闪避反击·罪业当涤",
+                "超阈限·空中攻击·火狱暴雨下落攻击",
+                "超阈限·空中攻击·火狱暴雨持续扫射",
+                "超阈限·共鸣技能·掠袭",
+                "超阈限·普攻·炽天猎杀第四段",
+                "超阈限·普攻·炽天猎杀第五段",
+                "超阈限·重击·炼羽裁决第三段"
+              ],
+              "catalogIds": [],
+              "damageType": "",
+              "effectType": "",
+              "element": "热熔",
+              "defenseKind": "",
+              "minStacks": 0,
+              "minResonance": 6,
+              "onlyCharacterIds": [],
+              "onlyCombatModes": [],
+              "effectKey": "jiabeilina_yuhuo_c6_element_deep"
+            }
+          ],
+          "sourceTag": "characterTemplate",
+          "templateKey": "tpl_mryvllu0_1z05x",
+          "gameText": "【余火】上限40点。\n阈限状态期间，附近队伍中所有角色施放声骸技能时，嘉贝莉娜回复8点【余火】，同名声骸只可触发1次，嘉贝莉娜退出恶魔位格时重置。\n退出恶魔位格时，清除所有【余火】。\n\n恶魔位格期间，每点【余火】会使目标受到嘉贝莉娜的普攻·炽天猎杀、重击·炼羽裁决、空中攻击·火狱暴雨、共鸣技能·掠袭、闪避反击·罪业当涤伤害提升1.5%，至多提升至60%，退出恶魔位格时移除。"
+        },
+        {
+          "category": "composite",
+          "name": "固有1",
+          "mode": "stack",
+          "value": 0,
+          "perStack": 0,
+          "maxStacks": 99,
+          "damageType": "",
+          "element": "",
+          "defenseKind": "",
+          "convergenceVuln": "",
+          "effects": [
+            {
+              "zone": "generalDeep",
+              "valueMode": "stack",
+              "value": 0,
+              "segments": [
+                {
+                  "upTo": 4,
+                  "perStack": 5
+                }
+              ],
+              "skillScope": "all",
+              "skillNames": [],
+              "librarySkillNames": [],
+              "catalogIds": [],
+              "damageType": "",
+              "effectType": "",
+              "element": "",
+              "defenseKind": "",
+              "minStacks": 0,
+              "minResonance": 0,
+              "onlyCharacterIds": [],
+              "onlyCombatModes": [],
+              "effectKey": ""
+            }
+          ],
+          "sourceTag": "characterTemplate",
+          "templateKey": "tpl_mryvq602_clr8g",
+          "gameText": "嘉贝莉娜的变奏技能、普攻、普攻·炽天猎杀、闪避反击、重击·燧发杀戮、重击·炼羽裁决、空中攻击、地狱穿行、共鸣技能·迫近、共鸣技能·恶翼扬升、共鸣技能·掠袭、共鸣解放命中目标时，会为目标叠加一层死运既定，每层使嘉贝莉娜的常态攻击、共鸣技能、共鸣回路、共鸣解放、变奏技能、延奏技能造成的伤害加深5%，可叠加4层，持续5.5秒。同种类型的技能，对同一目标5秒内只能叠加一次。\n共鸣技能·迫近、共鸣技能·掠袭共享技能类型。"
+        },
+        {
+          "category": "composite",
+          "name": "大招强化",
+          "mode": "fixed",
+          "value": 0,
+          "perStack": 0,
+          "maxStacks": 99,
+          "damageType": "",
+          "element": "",
+          "defenseKind": "",
+          "convergenceVuln": "",
+          "effects": [
+            {
+              "zone": "multBoost",
+              "valueMode": "fixed",
+              "value": 85,
+              "segments": [
+                {
+                  "upTo": null,
+                  "perStack": 0
+                }
+              ],
+              "skillScope": "names",
+              "skillNames": [
+                "超阈限·普攻·炽天猎杀第一段",
+                "普攻·炽天猎杀第一段",
+                "超阈限·普攻·炽天猎杀第二段",
+                "普攻·炽天猎杀第二段",
+                "超阈限·普攻·炽天猎杀第三段",
+                "普攻·炽天猎杀第三段",
+                "超阈限·重击·炼羽裁决第一段",
+                "重击·炼羽裁决第一段",
+                "超阈限·重击·炼羽裁决第二段",
+                "重击·炼羽裁决第二段",
+                "超阈限·闪避反击·罪业当涤",
+                "闪避反击·罪业当涤",
+                "超阈限·空中攻击·火狱暴雨下落攻击",
+                "空中攻击·火狱暴雨下落攻击",
+                "超阈限·空中攻击·火狱暴雨持续扫射",
+                "空中攻击·火狱暴雨持续扫射",
+                "超阈限·普攻·炽天猎杀第五段",
+                "普攻·炽天猎杀第五段",
+                "超阈限·普攻·炽天猎杀第四段",
+                "普攻·炽天猎杀第四段",
+                "超阈限·重击·炼羽裁决第三段",
+                "重击·炼羽裁决第三段"
+              ],
+              "librarySkillNames": [
+                "超阈限·普攻·炽天猎杀第一段",
+                "超阈限·普攻·炽天猎杀第二段",
+                "超阈限·普攻·炽天猎杀第三段",
+                "超阈限·重击·炼羽裁决第一段",
+                "超阈限·重击·炼羽裁决第二段",
+                "超阈限·闪避反击·罪业当涤",
+                "超阈限·空中攻击·火狱暴雨下落攻击",
+                "超阈限·空中攻击·火狱暴雨持续扫射",
+                "超阈限·普攻·炽天猎杀第五段",
+                "超阈限·普攻·炽天猎杀第四段",
+                "超阈限·重击·炼羽裁决第三段"
+              ],
+              "catalogIds": [],
+              "damageType": "重击",
+              "effectType": "",
+              "element": "热熔",
+              "defenseKind": "",
+              "minStacks": 0,
+              "minResonance": 0,
+              "onlyCharacterIds": [],
+              "onlyCombatModes": [],
+              "effectKey": ""
+            }
+          ],
+          "sourceTag": "characterTemplate",
+          "templateKey": "tpl_mryvrlrb_e7lq7",
+          "gameText": "攻击目标，造成热熔伤害，此次伤害为声骸技能伤害，并使恶魔位格期间，普攻·炽天猎杀、重击·炼羽裁决、空中攻击·火狱暴雨、闪避反击·罪业当涤的伤害倍率提升85%，持续14秒。"
+        }
+      ],
+      "teamBuffs": [],
+      "extraSkills": [],
+      "resonanceChains": {
+        "1": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {}
+        },
+        "2": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [
+            {
+              "category": "generalAttack",
+              "name": "2链·内燃烧",
+              "mode": "fixed",
+              "value": 70,
+              "perStack": 0,
+              "maxStacks": 5,
+              "damageType": "",
+              "element": "",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "sourceTag": "characterTemplate",
+              "templateKey": "tpl_mryvypvi_0sh9u",
+              "gameText": "内燃烧提供的攻击加成提升350%。"
+            }
+          ],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {}
+        },
+        "3": {
+          "enabledByDefault": false,
+          "notes": "内置：【3链·大招倍率提升】共鸣解放·炼净倍率提升+130%",
+          "personalBuffs": [
+            {
+              "category": "composite",
+              "name": "3链·大招倍率提升",
+              "mode": "fixed",
+              "value": 0,
+              "perStack": 0,
+              "maxStacks": 99,
+              "damageType": "",
+              "element": "",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "effects": [
+                {
+                  "zone": "multBoost",
+                  "valueMode": "fixed",
+                  "value": 130,
+                  "segments": [
+                    {
+                      "upTo": null,
+                      "perStack": 0
+                    }
+                  ],
+                  "skillScope": "names",
+                  "skillNames": [
+                    "炼净·共鸣解放·炼净",
+                    "共鸣解放·炼净"
+                  ],
+                  "librarySkillNames": [
+                    "炼净·共鸣解放·炼净"
+                  ],
+                  "catalogIds": [],
+                  "damageType": "声骸",
+                  "effectType": "",
+                  "element": "热熔",
+                  "defenseKind": "",
+                  "minStacks": 0,
+                  "minResonance": 0,
+                  "onlyCharacterIds": [],
+                  "onlyCombatModes": [],
+                  "effectKey": ""
+                }
+              ],
+              "sourceTag": "characterTemplate",
+              "templateKey": "jiabeilina_c3_ult_mult_boost",
+              "gameText": "共鸣解放的伤害倍率提升130%。"
+            }
+          ],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {}
+        },
+        "4": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [],
+          "teamBuffs": [
+            {
+              "category": "generalBonus",
+              "name": "4链·嘉贝",
+              "mode": "fixed",
+              "value": 20,
+              "perStack": 0,
+              "maxStacks": 5,
+              "damageType": "",
+              "element": "",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "sourceTag": "characterTemplate",
+              "templateKey": "tpl_mryw04tv_7i1v0",
+              "gameText": "队伍中的角色施放声骸技能时，使队伍中所有角色全属性伤害加成提升20%，持续20秒。"
+            }
+          ],
+          "extraSkills": [],
+          "combatModes": {}
+        },
+        "5": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [
+            {
+              "category": "composite",
+              "name": "5链",
+              "mode": "fixed",
+              "value": 0,
+              "perStack": 0,
+              "maxStacks": 99,
+              "damageType": "",
+              "element": "",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "effects": [
+                {
+                  "zone": "multBoost",
+                  "valueMode": "fixed",
+                  "value": 150,
+                  "segments": [
+                    {
+                      "upTo": null,
+                      "perStack": 0
+                    }
+                  ],
+                  "skillScope": "names",
+                  "skillNames": [
+                    "超阈限·共鸣技能·掠袭",
+                    "共鸣技能·掠袭",
+                    "边缘翼动·共鸣技能·迫近",
+                    "共鸣技能·迫近",
+                    "边缘翼动·共鸣技能·恶翼扬升",
+                    "共鸣技能·恶翼扬升"
+                  ],
+                  "librarySkillNames": [
+                    "超阈限·共鸣技能·掠袭",
+                    "边缘翼动·共鸣技能·迫近",
+                    "边缘翼动·共鸣技能·恶翼扬升"
+                  ],
+                  "catalogIds": [],
+                  "damageType": "重击",
+                  "effectType": "",
+                  "element": "热熔",
+                  "defenseKind": "",
+                  "minStacks": 0,
+                  "minResonance": 0,
+                  "onlyCharacterIds": [],
+                  "onlyCombatModes": [],
+                  "effectKey": ""
+                }
+              ],
+              "sourceTag": "characterTemplate",
+              "templateKey": "tpl_mryw0ewy_4p9jz",
+              "gameText": "共鸣技能·迫近，共鸣技能·恶翼扬升，共鸣技能·掠袭的伤害倍率提升150%。"
+            }
+          ],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {}
+        },
+        "6": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [
+            {
+              "category": "composite",
+              "name": "6链·永恒位格",
+              "mode": "fixed",
+              "value": 0,
+              "perStack": 0,
+              "maxStacks": 99,
+              "damageType": "",
+              "element": "",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "effects": [
+                {
+                  "zone": "multBoostExtra",
+                  "valueMode": "fixed",
+                  "value": 60,
+                  "segments": [
+                    {
+                      "upTo": null,
+                      "perStack": 0
+                    }
+                  ],
+                  "skillScope": "names",
+                  "skillNames": [
+                    "超阈限·普攻·炽天猎杀第一段",
+                    "普攻·炽天猎杀第一段",
+                    "超阈限·普攻·炽天猎杀第二段",
+                    "普攻·炽天猎杀第二段",
+                    "超阈限·普攻·炽天猎杀第三段",
+                    "普攻·炽天猎杀第三段",
+                    "超阈限·重击·炼羽裁决第一段",
+                    "重击·炼羽裁决第一段",
+                    "超阈限·重击·炼羽裁决第二段",
+                    "重击·炼羽裁决第二段",
+                    "超阈限·闪避反击·罪业当涤",
+                    "闪避反击·罪业当涤",
+                    "超阈限·空中攻击·火狱暴雨下落攻击",
+                    "空中攻击·火狱暴雨下落攻击",
+                    "超阈限·空中攻击·火狱暴雨持续扫射",
+                    "空中攻击·火狱暴雨持续扫射",
+                    "超阈限·普攻·炽天猎杀第四段",
+                    "普攻·炽天猎杀第四段",
+                    "超阈限·普攻·炽天猎杀第五段",
+                    "普攻·炽天猎杀第五段",
+                    "超阈限·重击·炼羽裁决第三段",
+                    "重击·炼羽裁决第三段"
+                  ],
+                  "librarySkillNames": [
+                    "超阈限·普攻·炽天猎杀第一段",
+                    "超阈限·普攻·炽天猎杀第二段",
+                    "超阈限·普攻·炽天猎杀第三段",
+                    "超阈限·重击·炼羽裁决第一段",
+                    "超阈限·重击·炼羽裁决第二段",
+                    "超阈限·闪避反击·罪业当涤",
+                    "超阈限·空中攻击·火狱暴雨下落攻击",
+                    "超阈限·空中攻击·火狱暴雨持续扫射",
+                    "超阈限·普攻·炽天猎杀第四段",
+                    "超阈限·普攻·炽天猎杀第五段",
+                    "超阈限·重击·炼羽裁决第三段"
+                  ],
+                  "catalogIds": [],
+                  "damageType": "重击",
+                  "effectType": "",
+                  "element": "热熔",
+                  "defenseKind": "",
+                  "minStacks": 0,
+                  "minResonance": 0,
+                  "onlyCharacterIds": [],
+                  "onlyCombatModes": [],
+                  "effectKey": ""
+                }
+              ],
+              "sourceTag": "characterTemplate",
+              "templateKey": "tpl_mryw20mp_2cyxn",
+              "gameText": "恶魔位格升级为永恒位格，永恒位格保留恶魔位格全部原有效果。\n永恒位格期间普攻·炽天猎杀、重击·炼羽裁决、空中攻击·火狱暴雨、闪避反击·罪业当涤的伤害倍率提升60%。\n\n嘉贝莉娜施放共鸣技能·恶翼扬升时，每点【余火】额外为普攻·炽天猎杀、重击·炼羽裁决、空中攻击·火狱暴雨、共鸣技能·掠袭、闪避反击·罪业当涤提升0.875%热熔伤害加深，至多提升35%热熔伤害加深，退出永恒位格时移除。"
+            }
+          ],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {}
+        }
+      },
+      "combatModes": {}
+    }
+  ]
+}

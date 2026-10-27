@@ -1,0 +1,220 @@
+{
+  "version": 1,
+  "kind": "shard",
+  "characterId": "1203",
+  "characterName": "安可",
+  "templates": [
+    {
+      "characterId": "1203",
+      "characterName": "安可",
+      "revision": 2,
+      "author": "",
+      "notes": "安可：0链分支攻击比12%；属性加成·分支热熔伤害加成12%。",
+      "personalBuffs": [
+        {
+          "category": "generalBonus",
+          "name": "固有1·大招期间",
+          "mode": "fixed",
+          "value": 10,
+          "perStack": 0,
+          "maxStacks": 5,
+          "damageType": "",
+          "element": "",
+          "defenseKind": "",
+          "convergenceVuln": "",
+          "sourceTag": "characterTemplate",
+          "templateKey": "tpl_mryxb6sw_h5euy",
+          "gameText": "共鸣解放黑咩大暴走期间，安可的生命高于70%时，伤害提升10%。"
+        },
+        {
+          "category": "elementBonus",
+          "name": "固有2",
+          "mode": "stack",
+          "value": 0,
+          "perStack": 10,
+          "maxStacks": 5,
+          "damageType": "",
+          "element": "热熔",
+          "defenseKind": "",
+          "convergenceVuln": "",
+          "sourceTag": "characterTemplate",
+          "templateKey": "tpl_mryxc8vt_8rdn7",
+          "gameText": "施放共鸣技能热力羊咩或共鸣技能黑咩·狂热时，安可的热熔伤害加成提升10%，效果持续10秒。"
+        }
+      ],
+      "teamBuffs": [],
+      "extraSkills": [],
+      "resonanceChains": {
+        "1": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [
+            {
+              "category": "elementBonus",
+              "name": "1链",
+              "mode": "stack",
+              "value": 0,
+              "perStack": 3,
+              "maxStacks": 4,
+              "damageType": "",
+              "element": "热熔",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "sourceTag": "characterTemplate",
+              "templateKey": "tpl_mryxdbo7_xobu1",
+              "gameText": "普攻命中目标时，热熔伤害加成额外提升3%，可叠加4层，持续6秒。"
+            }
+          ],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {},
+          "gameText": "普攻命中目标时，热熔伤害加成额外提升3%，可叠加4层，持续6秒。"
+        },
+        "2": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {},
+          "gameText": "施放普攻咩咩或共鸣技能热情欢迎式时，额外回复10点共鸣能量，每10秒可触发1次。"
+        },
+        "3": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [
+            {
+              "category": "composite",
+              "name": "3链",
+              "mode": "fixed",
+              "value": 0,
+              "perStack": 0,
+              "maxStacks": 99,
+              "damageType": "",
+              "element": "",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "effects": [
+                {
+                  "zone": "multBoost",
+                  "valueMode": "fixed",
+                  "value": 40,
+                  "segments": [
+                    {
+                      "upTo": null,
+                      "perStack": 0
+                    }
+                  ],
+                  "skillScope": "names",
+                  "skillNames": [
+                    "黑白羊咩·白咩·失控之炎",
+                    "白咩·失控之炎",
+                    "黑白羊咩·黑咩·暴走之炎",
+                    "黑咩·暴走之炎"
+                  ],
+                  "librarySkillNames": [
+                    "黑白羊咩·白咩·失控之炎",
+                    "黑白羊咩·黑咩·暴走之炎"
+                  ],
+                  "catalogIds": [],
+                  "damageType": "共鸣解放",
+                  "effectType": "",
+                  "element": "热熔",
+                  "defenseKind": "",
+                  "minStacks": 0,
+                  "minResonance": 0,
+                  "onlyCharacterIds": [],
+                  "onlyCombatModes": [],
+                  "effectKey": ""
+                }
+              ],
+              "sourceTag": "characterTemplate",
+              "templateKey": "tpl_mryxdpiy_kvho0",
+              "gameText": "重击白咩·失控之炎、重击黑咩·暴走之炎的伤害倍率提升40%。"
+            }
+          ],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {},
+          "gameText": "重击白咩·失控之炎、重击黑咩·暴走之炎的伤害倍率提升40%。"
+        },
+        "4": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [],
+          "teamBuffs": [
+            {
+              "category": "elementBonus",
+              "name": "4链·安可",
+              "mode": "fixed",
+              "value": 20,
+              "perStack": 0,
+              "maxStacks": 5,
+              "damageType": "",
+              "element": "热熔",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "sourceTag": "characterTemplate",
+              "templateKey": "tpl_mryxe8xk_axbex",
+              "gameText": "施放重击黑咩·暴走之炎时，队伍中的角色热熔伤害加成提升20%，效果持续30秒。"
+            }
+          ],
+          "extraSkills": [],
+          "combatModes": {},
+          "gameText": "施放重击黑咩·暴走之炎时，队伍中的角色热熔伤害加成提升20%，效果持续30秒。"
+        },
+        "5": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [
+            {
+              "category": "typeBonus",
+              "name": "5链",
+              "mode": "fixed",
+              "value": 35,
+              "perStack": 0,
+              "maxStacks": 5,
+              "damageType": "共鸣技能",
+              "element": "",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "sourceTag": "characterTemplate",
+              "templateKey": "tpl_mryxeksm_y0w2w",
+              "gameText": "共鸣技能伤害加成提升35%。"
+            }
+          ],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {},
+          "gameText": "共鸣技能伤害加成提升35%。"
+        },
+        "6": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [
+            {
+              "category": "generalAttack",
+              "name": "6链·迷失羔羊",
+              "mode": "stack",
+              "value": 0,
+              "perStack": 5,
+              "maxStacks": 5,
+              "damageType": "",
+              "element": "",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "sourceTag": "characterTemplate",
+              "templateKey": "tpl_mryxf9hx_fylhk",
+              "gameText": "共鸣解放黑咩大暴走期间，每次造成伤害为自身叠加1层【迷失羔羊】，每层使攻击提升5%，效果持续10秒，最多可以叠加5层。"
+            }
+          ],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {},
+          "gameText": "共鸣解放黑咩大暴走期间，每次造成伤害为自身叠加1层【迷失羔羊】，每层使攻击提升5%，效果持续10秒，最多可以叠加5层。"
+        }
+      },
+      "combatModes": {}
+    }
+  ]
+}

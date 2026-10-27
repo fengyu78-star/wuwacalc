@@ -1,0 +1,672 @@
+{
+  "version": 1,
+  "kind": "shard",
+  "characterId": "1603",
+  "characterName": "椿",
+  "templates": [
+    {
+      "characterId": "1603",
+      "characterName": "椿",
+      "revision": 3,
+      "author": "",
+      "notes": "",
+      "personalBuffs": [
+        {
+          "category": "elementBonus",
+          "name": "固有·侵占",
+          "mode": "fixed",
+          "value": 15,
+          "perStack": 0,
+          "maxStacks": 5,
+          "damageType": "",
+          "element": "湮灭",
+          "defenseKind": "",
+          "convergenceVuln": "",
+          "sourceTag": "characterTemplate",
+          "templateKey": "tpl_mruoffd7_0c8a4",
+          "gameText": "普攻伤害加成提升15%，普攻和普攻蔓舞、普攻烬华蔓舞的抗打断能力提升。"
+        },
+        {
+          "category": "typeBonus",
+          "name": "固有·温床",
+          "mode": "fixed",
+          "value": 15,
+          "perStack": 0,
+          "maxStacks": 5,
+          "damageType": "普攻",
+          "element": "",
+          "defenseKind": "",
+          "convergenceVuln": "",
+          "sourceTag": "characterTemplate",
+          "templateKey": "tpl_mrupylfc_9mlil",
+          "gameText": "湮灭伤害加成提升15%，重击修枝伤害视为普攻伤害。"
+        },
+        {
+          "category": "composite",
+          "name": "含苞",
+          "mode": "fixed",
+          "value": 0,
+          "perStack": 0,
+          "maxStacks": 1,
+          "damageType": "",
+          "element": "",
+          "defenseKind": "",
+          "convergenceVuln": "",
+          "effects": [
+            {
+              "zone": "multBoost",
+              "valueMode": "fixed",
+              "value": 50,
+              "segments": [
+                {
+                  "upTo": null,
+                  "perStack": 0
+                }
+              ],
+              "skillScope": "names",
+              "skillNames": [
+                "育种·第一段",
+                "第一段",
+                "育种·第二段",
+                "第二段",
+                "育种·第三段",
+                "第三段",
+                "育种·第四段",
+                "第四段",
+                "育种·第五段",
+                "第五段",
+                "育种·重击",
+                "重击",
+                "育种·空中攻击",
+                "空中攻击",
+                "育种·闪避反击",
+                "闪避反击",
+                "盛放与凋零的轮舞·红椿盛绽",
+                "红椿盛绽",
+                "盛放与凋零的轮舞·蔓舞第一段",
+                "蔓舞第一段",
+                "盛放与凋零的轮舞·蔓舞第二段",
+                "蔓舞第二段",
+                "盛放与凋零的轮舞·蔓舞第三段",
+                "蔓舞第三段",
+                "盛放与凋零的轮舞·蔓舞第四段",
+                "蔓舞第四段",
+                "盛放与凋零的轮舞·烬华蔓舞",
+                "烬华蔓舞",
+                "盛放与凋零的轮舞·黯蕊猎心",
+                "黯蕊猎心",
+                "盛放与凋零的轮舞·旋舞",
+                "旋舞",
+                "盛放与凋零的轮舞·偿赎",
+                "偿赎"
+              ],
+              "librarySkillNames": [
+                "育种·第一段",
+                "育种·第二段",
+                "育种·第三段",
+                "育种·第四段",
+                "育种·第五段",
+                "育种·重击",
+                "育种·空中攻击",
+                "育种·闪避反击",
+                "盛放与凋零的轮舞·红椿盛绽",
+                "盛放与凋零的轮舞·蔓舞第一段",
+                "盛放与凋零的轮舞·蔓舞第二段",
+                "盛放与凋零的轮舞·蔓舞第三段",
+                "盛放与凋零的轮舞·蔓舞第四段",
+                "盛放与凋零的轮舞·烬华蔓舞",
+                "盛放与凋零的轮舞·黯蕊猎心",
+                "盛放与凋零的轮舞·旋舞",
+                "盛放与凋零的轮舞·偿赎"
+              ],
+              "catalogIds": [],
+              "damageType": "普攻",
+              "effectType": "",
+              "element": "湮灭",
+              "defenseKind": "",
+              "minStacks": 0,
+              "minResonance": 0,
+              "onlyCharacterIds": [],
+              "onlyCombatModes": [],
+              "effectKey": ""
+            }
+          ],
+          "sourceTag": "characterTemplate",
+          "templateKey": "tpl_ms055jhi_3a67g",
+          "gameText": "含苞状态\n·酣梦：常态攻击、普攻蔓舞、普攻烬华蔓舞、普攻旋舞、闪避反击偿赎、共鸣技能红椿盛绽、共鸣技能黯蕊猎心的伤害倍率提升50%；"
+        },
+        {
+          "category": "composite",
+          "name": "红椿蕾",
+          "mode": "stack",
+          "value": 0,
+          "perStack": 0,
+          "maxStacks": 10,
+          "damageType": "",
+          "element": "",
+          "defenseKind": "",
+          "convergenceVuln": "",
+          "effects": [
+            {
+              "zone": "multBoost",
+              "valueMode": "stack",
+              "value": 0,
+              "segments": [
+                {
+                  "upTo": 10,
+                  "perStack": 5
+                }
+              ],
+              "skillScope": "names",
+              "skillNames": [
+                "育种·第一段",
+                "第一段",
+                "育种·第二段",
+                "第二段",
+                "育种·第三段",
+                "第三段",
+                "育种·第四段",
+                "第四段",
+                "育种·第五段",
+                "第五段",
+                "育种·重击",
+                "重击",
+                "育种·空中攻击",
+                "空中攻击",
+                "育种·闪避反击",
+                "闪避反击",
+                "盛放与凋零的轮舞·红椿盛绽",
+                "红椿盛绽",
+                "盛放与凋零的轮舞·蔓舞第一段",
+                "蔓舞第一段",
+                "盛放与凋零的轮舞·蔓舞第二段",
+                "蔓舞第二段",
+                "盛放与凋零的轮舞·蔓舞第三段",
+                "蔓舞第三段",
+                "盛放与凋零的轮舞·蔓舞第四段",
+                "蔓舞第四段",
+                "盛放与凋零的轮舞·烬华蔓舞",
+                "烬华蔓舞",
+                "盛放与凋零的轮舞·黯蕊猎心",
+                "黯蕊猎心",
+                "盛放与凋零的轮舞·旋舞",
+                "旋舞",
+                "盛放与凋零的轮舞·偿赎",
+                "偿赎"
+              ],
+              "librarySkillNames": [
+                "育种·第一段",
+                "育种·第二段",
+                "育种·第三段",
+                "育种·第四段",
+                "育种·第五段",
+                "育种·重击",
+                "育种·空中攻击",
+                "育种·闪避反击",
+                "盛放与凋零的轮舞·红椿盛绽",
+                "盛放与凋零的轮舞·蔓舞第一段",
+                "盛放与凋零的轮舞·蔓舞第二段",
+                "盛放与凋零的轮舞·蔓舞第三段",
+                "盛放与凋零的轮舞·蔓舞第四段",
+                "盛放与凋零的轮舞·烬华蔓舞",
+                "盛放与凋零的轮舞·黯蕊猎心",
+                "盛放与凋零的轮舞·旋舞",
+                "盛放与凋零的轮舞·偿赎"
+              ],
+              "catalogIds": [],
+              "damageType": "普攻",
+              "effectType": "",
+              "element": "湮灭",
+              "defenseKind": "",
+              "minStacks": 1,
+              "minResonance": 0,
+              "onlyCharacterIds": [],
+              "onlyCombatModes": [],
+              "effectKey": ""
+            }
+          ],
+          "sourceTag": "characterTemplate",
+          "templateKey": "tpl_ms057huz_d5r15",
+          "gameText": "·施放一日花时，清除所有红椿·蕾，每层红椿·蕾使酣梦的伤害倍率提升效果额外提升5%，最多可额外提升50%；"
+        },
+        {
+          "category": "composite",
+          "name": "延奏·额外",
+          "mode": "fixed",
+          "value": 0,
+          "perStack": 0,
+          "maxStacks": 99,
+          "damageType": "",
+          "element": "",
+          "defenseKind": "",
+          "convergenceVuln": "",
+          "effects": [
+            {
+              "zone": "multAdd",
+              "valueMode": "fixed",
+              "value": 459.02,
+              "segments": [
+                {
+                  "upTo": null,
+                  "perStack": 0
+                }
+              ],
+              "skillScope": "names",
+              "skillNames": [
+                "缠绕"
+              ],
+              "librarySkillNames": [
+                "缠绕"
+              ],
+              "catalogIds": [],
+              "damageType": "延奏",
+              "effectType": "",
+              "element": "湮灭",
+              "defenseKind": "",
+              "minStacks": 0,
+              "minResonance": 0,
+              "onlyCharacterIds": [],
+              "onlyCombatModes": [],
+              "effectKey": ""
+            }
+          ],
+          "sourceTag": "characterTemplate",
+          "templateKey": "tpl_ms06qzf0_1kni9",
+          "gameText": "攻击目标，造成椿329.24%攻击的湮灭伤害。\n施放共鸣回路一日花后，下次延奏技能缠绕额外造成椿459.02%攻击的湮灭伤害。"
+        }
+      ],
+      "teamBuffs": [],
+      "extraSkills": [],
+      "resonanceChains": {
+        "1": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [
+            {
+              "category": "generalCritDmg",
+              "name": "一链",
+              "mode": "fixed",
+              "value": 28,
+              "perStack": 0,
+              "maxStacks": 5,
+              "damageType": "",
+              "element": "",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "sourceTag": "characterTemplate",
+              "templateKey": "tpl_mrupxadv_q0uvn",
+              "gameText": "施放变奏技能八千春秋时，暴击伤害提升28%，持续18秒，每25秒可触发1次。\n共鸣回路一日花免疫打断。"
+            }
+          ],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {}
+        },
+        "2": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [
+            {
+              "category": "composite",
+              "name": "二链",
+              "mode": "fixed",
+              "value": 0,
+              "perStack": 0,
+              "maxStacks": 99,
+              "damageType": "",
+              "element": "",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "effects": [
+                {
+                  "zone": "multBoost",
+                  "valueMode": "fixed",
+                  "value": 120,
+                  "segments": [
+                    {
+                      "upTo": null,
+                      "perStack": 0
+                    }
+                  ],
+                  "skillScope": "names",
+                  "skillNames": [
+                    "植物性宇宙·一日花",
+                    "一日花"
+                  ],
+                  "librarySkillNames": [
+                    "植物性宇宙·一日花"
+                  ],
+                  "catalogIds": [],
+                  "damageType": "普攻",
+                  "effectType": "",
+                  "element": "湮灭",
+                  "defenseKind": "",
+                  "minStacks": 0,
+                  "minResonance": 0,
+                  "onlyCharacterIds": [],
+                  "onlyCombatModes": [],
+                  "effectKey": ""
+                }
+              ],
+              "sourceTag": "characterTemplate",
+              "templateKey": "tpl_ms05efml_yu3if",
+              "gameText": "共鸣回路一日花伤害倍率提升120%。"
+            }
+          ],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {}
+        },
+        "3": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [
+            {
+              "category": "generalAttack",
+              "name": "三链",
+              "mode": "fixed",
+              "value": 58,
+              "perStack": 0,
+              "maxStacks": 5,
+              "damageType": "",
+              "element": "",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "sourceTag": "characterTemplate",
+              "templateKey": "tpl_mruq15m3_whybj",
+              "gameText": "共鸣解放芳华绽烬伤害倍率提升50%；含苞状态期间，椿的攻击提升58%。"
+            },
+            {
+              "category": "composite",
+              "name": "三链",
+              "mode": "fixed",
+              "value": 0,
+              "perStack": 0,
+              "maxStacks": 99,
+              "damageType": "",
+              "element": "",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "effects": [
+                {
+                  "zone": "multBoost",
+                  "valueMode": "fixed",
+                  "value": 50,
+                  "segments": [
+                    {
+                      "upTo": null,
+                      "perStack": 0
+                    }
+                  ],
+                  "skillScope": "names",
+                  "skillNames": [
+                    "芳华绽烬·技能"
+                  ],
+                  "librarySkillNames": [
+                    "芳华绽烬·技能"
+                  ],
+                  "catalogIds": [],
+                  "damageType": "共鸣解放",
+                  "effectType": "",
+                  "element": "湮灭",
+                  "defenseKind": "",
+                  "minStacks": 0,
+                  "minResonance": 0,
+                  "onlyCharacterIds": [],
+                  "onlyCombatModes": [],
+                  "effectKey": ""
+                }
+              ],
+              "sourceTag": "characterTemplate",
+              "templateKey": "tpl_ms05ezxq_c5xh2",
+              "gameText": "共鸣解放芳华绽烬伤害倍率提升50%；含苞状态期间，椿的攻击提升58%。"
+            }
+          ],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {}
+        },
+        "4": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [],
+          "teamBuffs": [
+            {
+              "category": "typeBonus",
+              "name": "四链",
+              "mode": "fixed",
+              "value": 25,
+              "perStack": 0,
+              "maxStacks": 5,
+              "damageType": "普攻",
+              "element": "",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "sourceTag": "characterTemplate",
+              "templateKey": "tpl_mruq3vju_31ld3",
+              "gameText": "施放变奏技能八千春秋后，队伍中的角色普攻伤害加成提升25%，持续30秒。"
+            }
+          ],
+          "extraSkills": [],
+          "combatModes": {}
+        },
+        "5": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [
+            {
+              "category": "composite",
+              "name": "五链变奏",
+              "mode": "fixed",
+              "value": 0,
+              "perStack": 0,
+              "maxStacks": 99,
+              "damageType": "",
+              "element": "",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "effects": [
+                {
+                  "zone": "multBoost",
+                  "valueMode": "fixed",
+                  "value": 303,
+                  "segments": [
+                    {
+                      "upTo": null,
+                      "perStack": 0
+                    }
+                  ],
+                  "skillScope": "names",
+                  "skillNames": [
+                    "八千春秋·技能"
+                  ],
+                  "librarySkillNames": [
+                    "八千春秋·技能"
+                  ],
+                  "catalogIds": [],
+                  "damageType": "变奏",
+                  "effectType": "",
+                  "element": "湮灭",
+                  "defenseKind": "",
+                  "minStacks": 0,
+                  "minResonance": 0,
+                  "onlyCharacterIds": [],
+                  "onlyCombatModes": [],
+                  "effectKey": ""
+                }
+              ],
+              "sourceTag": "characterTemplate",
+              "templateKey": "tpl_ms05heua_8rwdx",
+              "gameText": "变奏技能八千春秋伤害倍率提升303%。\n延奏技能缠绕伤害倍率提升68%。"
+            },
+            {
+              "category": "composite",
+              "name": "五链延奏",
+              "mode": "fixed",
+              "value": 0,
+              "perStack": 0,
+              "maxStacks": 99,
+              "damageType": "",
+              "element": "",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "effects": [
+                {
+                  "zone": "multBoost",
+                  "valueMode": "fixed",
+                  "value": 68,
+                  "segments": [
+                    {
+                      "upTo": null,
+                      "perStack": 0
+                    }
+                  ],
+                  "skillScope": "names",
+                  "skillNames": [
+                    "缠绕"
+                  ],
+                  "librarySkillNames": [
+                    "缠绕"
+                  ],
+                  "catalogIds": [],
+                  "damageType": "延奏",
+                  "effectType": "",
+                  "element": "湮灭",
+                  "defenseKind": "",
+                  "minStacks": 0,
+                  "minResonance": 0,
+                  "onlyCharacterIds": [],
+                  "onlyCombatModes": [],
+                  "effectKey": ""
+                }
+              ],
+              "sourceTag": "characterTemplate",
+              "templateKey": "tpl_ms05htxj_pfitr",
+              "gameText": "变奏技能八千春秋伤害倍率提升303%。\n延奏技能缠绕伤害倍率提升68%。"
+            }
+          ],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {}
+        },
+        "6": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [
+            {
+              "category": "composite",
+              "name": "6链",
+              "mode": "fixed",
+              "value": 0,
+              "perStack": 0,
+              "maxStacks": 99,
+              "damageType": "",
+              "element": "",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "effects": [
+                {
+                  "zone": "multBoost",
+                  "valueMode": "fixed",
+                  "value": 150,
+                  "segments": [
+                    {
+                      "upTo": null,
+                      "perStack": 0
+                    }
+                  ],
+                  "skillScope": "names",
+                  "skillNames": [
+                    "育种·第一段",
+                    "第一段",
+                    "育种·第二段",
+                    "第二段",
+                    "育种·第三段",
+                    "第三段",
+                    "育种·第四段",
+                    "第四段",
+                    "育种·第五段",
+                    "第五段",
+                    "育种·重击",
+                    "重击",
+                    "育种·空中攻击",
+                    "空中攻击",
+                    "育种·闪避反击",
+                    "闪避反击",
+                    "盛放与凋零的轮舞·红椿盛绽",
+                    "红椿盛绽",
+                    "盛放与凋零的轮舞·蔓舞第一段",
+                    "蔓舞第一段",
+                    "盛放与凋零的轮舞·蔓舞第二段",
+                    "蔓舞第二段",
+                    "盛放与凋零的轮舞·蔓舞第三段",
+                    "蔓舞第三段",
+                    "盛放与凋零的轮舞·蔓舞第四段",
+                    "蔓舞第四段",
+                    "盛放与凋零的轮舞·烬华蔓舞",
+                    "烬华蔓舞",
+                    "盛放与凋零的轮舞·黯蕊猎心",
+                    "黯蕊猎心",
+                    "盛放与凋零的轮舞·旋舞",
+                    "旋舞",
+                    "盛放与凋零的轮舞·偿赎",
+                    "偿赎"
+                  ],
+                  "librarySkillNames": [
+                    "育种·第一段",
+                    "育种·第二段",
+                    "育种·第三段",
+                    "育种·第四段",
+                    "育种·第五段",
+                    "育种·重击",
+                    "育种·空中攻击",
+                    "育种·闪避反击",
+                    "盛放与凋零的轮舞·红椿盛绽",
+                    "盛放与凋零的轮舞·蔓舞第一段",
+                    "盛放与凋零的轮舞·蔓舞第二段",
+                    "盛放与凋零的轮舞·蔓舞第三段",
+                    "盛放与凋零的轮舞·蔓舞第四段",
+                    "盛放与凋零的轮舞·烬华蔓舞",
+                    "盛放与凋零的轮舞·黯蕊猎心",
+                    "盛放与凋零的轮舞·旋舞",
+                    "盛放与凋零的轮舞·偿赎"
+                  ],
+                  "catalogIds": [],
+                  "damageType": "普攻",
+                  "effectType": "",
+                  "element": "湮灭",
+                  "defenseKind": "",
+                  "minStacks": 0,
+                  "minResonance": 0,
+                  "onlyCharacterIds": [],
+                  "onlyCombatModes": [],
+                  "effectKey": ""
+                }
+              ],
+              "sourceTag": "characterTemplate",
+              "templateKey": "tpl_ms05lh7h_d8j54",
+              "gameText": "共鸣回路酣梦的伤害倍率提升效果额外提升150%；\n共鸣回路永生花：施放共鸣回路一日花后15秒内，协奏能量充满时，若永生花不处于冷却状态，共鸣技能替换为永生花。\n施放永生花时，消耗50点协奏值，回复50点【红椿·蕊】，造成共鸣回路一日花100%的湮灭伤害，此次伤害为普攻伤害，每25秒可施放1次。\n施放永生花后，进入含苞状态，清除所有红椿·蕾，并将共鸣回路酣梦的伤害倍率提升效果提升至250%。\n共鸣回路永生花免疫打断。"
+            }
+          ],
+          "teamBuffs": [],
+          "extraSkills": [
+            {
+              "templateKey": "extra_chun_c6_yongshenghua",
+              "name": "6链·永生花",
+              "damageType": "普攻",
+              "effectType": "聚爆",
+              "effectLayers": 13,
+              "effectBurstLayers": 0,
+              "effectCount": 1,
+              "baseMult": 1262.45,
+              "fixedDamage": false,
+              "effectMultMode": "custom"
+            }
+          ],
+          "combatModes": {}
+        }
+      },
+      "combatModes": {}
+    }
+  ]
+}

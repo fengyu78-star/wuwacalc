@@ -1,0 +1,573 @@
+{
+  "version": 1,
+  "kind": "shard",
+  "characterId": "1409",
+  "characterName": "卡提希娅",
+  "templates": [
+    {
+      "characterId": "1409",
+      "characterName": "卡提希娅",
+      "revision": 2,
+      "author": "",
+      "notes": "卡提希娅：全队【延奏·卡提】气动加深+17.5%（固定；对卡提希娅本人不生效）；全队【显化+神权】风蚀效应加深+50%（仅卡提个人/特殊库计入，其他角色统计不分配）。",
+      "personalBuffs": [
+        {
+          "category": "composite",
+          "name": "固有2",
+          "mode": "stack",
+          "value": 0,
+          "perStack": 0,
+          "maxStacks": 6,
+          "damageType": "",
+          "element": "",
+          "defenseKind": "",
+          "convergenceVuln": "",
+          "effects": [
+            {
+              "zone": "generalBonus",
+              "valueMode": "fixed",
+              "value": 30,
+              "segments": [
+                {
+                  "upTo": null,
+                  "perStack": 0
+                }
+              ],
+              "skillScope": "all",
+              "skillNames": [],
+              "librarySkillNames": [],
+              "catalogIds": [],
+              "damageType": "",
+              "effectType": "",
+              "element": "",
+              "defenseKind": "",
+              "minStacks": 0,
+              "minResonance": 0,
+              "onlyCharacterIds": [],
+              "onlyCombatModes": [],
+              "effectKey": ""
+            },
+            {
+              "zone": "generalBonus",
+              "valueMode": "stack",
+              "value": 0,
+              "segments": [
+                {
+                  "upTo": 3,
+                  "perStack": 0
+                },
+                {
+                  "upTo": 6,
+                  "perStack": 10
+                }
+              ],
+              "skillScope": "all",
+              "skillNames": [],
+              "librarySkillNames": [],
+              "catalogIds": [],
+              "damageType": "",
+              "effectType": "",
+              "element": "",
+              "defenseKind": "",
+              "minStacks": 3,
+              "minResonance": 0,
+              "onlyCharacterIds": [],
+              "onlyCombatModes": [],
+              "effectKey": ""
+            }
+          ],
+          "sourceTag": "characterTemplate",
+          "templateKey": "tpl_ms0jzgj3_wtvwg",
+          "gameText": "当目标拥有1到3层【风蚀效应】时，【卡提希娅】与【芙露德莉斯】对其造成的伤害提升30%；当目标拥有3层以上【风蚀效应】时，每层【风蚀效应】使【卡提希娅】与【芙露德莉斯】对其造成的伤害额外提升10%，该效果最多可叠加3层。",
+          "clampStacks": true
+        },
+        {
+          "category": "composite",
+          "name": "大招强化",
+          "mode": "stack",
+          "value": 0,
+          "perStack": 0,
+          "maxStacks": 5,
+          "damageType": "",
+          "element": "",
+          "defenseKind": "",
+          "convergenceVuln": "",
+          "effects": [
+            {
+              "zone": "generalDeep",
+              "valueMode": "stack",
+              "value": 0,
+              "segments": [
+                {
+                  "upTo": 5,
+                  "perStack": 20
+                }
+              ],
+              "skillScope": "names",
+              "skillNames": [
+                "听骑士从心祈愿·看潮怒风哮之刃·大卡",
+                "看潮怒风哮之刃·大卡"
+              ],
+              "librarySkillNames": [
+                "听骑士从心祈愿·看潮怒风哮之刃·大卡"
+              ],
+              "catalogIds": [],
+              "damageType": "共鸣解放",
+              "effectType": "",
+              "element": "气动",
+              "defenseKind": "",
+              "minStacks": 0,
+              "minResonance": 0,
+              "onlyCharacterIds": [],
+              "onlyCombatModes": [],
+              "effectKey": ""
+            }
+          ],
+          "sourceTag": "characterTemplate",
+          "templateKey": "cartethyia_ult_boost",
+          "gameText": "造成伤害时目标每拥有1层【风蚀效应】，对目标造成的伤害加深20%，至多5层，命中后会清空目标拥有的【风蚀效应】。",
+          "clampStacks": true
+        }
+      ],
+      "teamBuffs": [
+        {
+          "templateKey": "cartethyia_outro_aero_deep",
+          "category": "elementDeep",
+          "name": "延奏·卡提",
+          "mode": "fixed",
+          "value": 17.5,
+          "element": "气动",
+          "damageType": "",
+          "defenseKind": "",
+          "excludeSource": true,
+          "sourceTag": "characterTemplate",
+          "perStack": 0,
+          "maxStacks": 5,
+          "gameText": "队伍中除【卡提希娅】、【芙露德莉斯】以外的登场角色对拥有【异常效应】的目标造成的气动伤害加深17.5%，持续20秒。"
+        },
+        {
+          "templateKey": "cartethyia_xianhua_shenquan",
+          "category": "typeDeep",
+          "name": "显化+神权",
+          "mode": "fixed",
+          "value": 50,
+          "damageType": "效应",
+          "effectType": "风蚀",
+          "element": "",
+          "defenseKind": "",
+          "onlyCharacterIds": [
+            "1409"
+          ],
+          "sourceTag": "characterTemplate",
+          "perStack": 0,
+          "maxStacks": 5,
+          "gameText": "当【芙露德莉斯】拥有【神权之意】和【显化】状态时获得以下效果：\n【芙露德莉斯】自身一定范围内，目标【风蚀效应】触发的间隔减少50%，并使目标受到的【风蚀效应】伤害加深50%。\n【显化】状态结束时，移除【神权之意】。"
+        }
+      ],
+      "extraSkills": [],
+      "resonanceChains": {
+        "1": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [
+            {
+              "category": "composite",
+              "name": "1链",
+              "mode": "stack",
+              "value": 0,
+              "perStack": 0,
+              "maxStacks": 4,
+              "damageType": "",
+              "element": "",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "effects": [
+                {
+                  "zone": "generalCritDmg",
+                  "valueMode": "stack",
+                  "value": 0,
+                  "segments": [
+                    {
+                      "upTo": 4,
+                      "perStack": 25
+                    }
+                  ],
+                  "skillScope": "names",
+                  "skillNames": [
+                    "听骑士从心祈愿·看潮怒风哮之刃·大卡",
+                    "看潮怒风哮之刃·大卡",
+                    "暴风雨·普攻第一段·大卡",
+                    "普攻第一段·大卡",
+                    "暴风雨·普攻第二段·大卡",
+                    "普攻第二段·大卡",
+                    "暴风雨·普攻第三段·大卡",
+                    "普攻第三段·大卡",
+                    "暴风雨·普攻第四段·大卡",
+                    "普攻第四段·大卡",
+                    "暴风雨·普攻第五段·大卡",
+                    "普攻第五段·大卡",
+                    "暴风雨·闪避反击·大卡",
+                    "暴风雨·上挑攻击·大卡",
+                    "上挑攻击·大卡",
+                    "暴风雨·重击·大卡",
+                    "暴风雨·强化重击·大卡",
+                    "强化重击·大卡",
+                    "暴风雨·空中攻击第一段·大卡",
+                    "空中攻击第一段·大卡",
+                    "暴风雨·空中攻击第二段·大卡",
+                    "空中攻击第二段·大卡",
+                    "暴风雨·空中攻击第三段·大卡",
+                    "空中攻击第三段·大卡",
+                    "暴风雨·共鸣技能·此剑为潮浪之意·大卡",
+                    "共鸣技能·此剑为潮浪之意·大卡",
+                    "暴风雨·共鸣技能·凭风斩浪破敌·大卡",
+                    "共鸣技能·凭风斩浪破敌·大卡",
+                    "此剑，为潮水的过去·此剑，为自由的未来·大卡",
+                    "此剑，为自由的未来·大卡"
+                  ],
+                  "librarySkillNames": [
+                    "听骑士从心祈愿·看潮怒风哮之刃·大卡",
+                    "暴风雨·普攻第一段·大卡",
+                    "暴风雨·普攻第二段·大卡",
+                    "暴风雨·普攻第三段·大卡",
+                    "暴风雨·普攻第四段·大卡",
+                    "暴风雨·普攻第五段·大卡",
+                    "暴风雨·闪避反击·大卡",
+                    "暴风雨·上挑攻击·大卡",
+                    "暴风雨·重击·大卡",
+                    "暴风雨·强化重击·大卡",
+                    "暴风雨·空中攻击第一段·大卡",
+                    "暴风雨·空中攻击第二段·大卡",
+                    "暴风雨·空中攻击第三段·大卡",
+                    "暴风雨·共鸣技能·此剑为潮浪之意·大卡",
+                    "暴风雨·共鸣技能·凭风斩浪破敌·大卡",
+                    "此剑，为潮水的过去·此剑，为自由的未来·大卡"
+                  ],
+                  "catalogIds": [],
+                  "damageType": "共鸣解放",
+                  "effectType": "",
+                  "element": "气动",
+                  "defenseKind": "",
+                  "minStacks": 0,
+                  "minResonance": 0,
+                  "onlyCharacterIds": [],
+                  "onlyCombatModes": [],
+                  "effectKey": ""
+                }
+              ],
+              "sourceTag": "characterTemplate",
+              "templateKey": "cartethyia_c1",
+              "gameText": "【卡提希娅】、【芙露德莉斯】自身技能直接造成的伤害击败被附加【风蚀效应】状态的目标后，获得【集意】状态，持续10秒。\n 【集意】状态下保留击败目标被附加【风蚀效应】的最高层数，自身下一次技能直接造成的伤害立即为命中目标附加该层数，最高可叠加至当前目标的【风蚀效应】层数上限，同时清除【集意】状态，清除【集意】状态后进入冷却时间1秒。\n 【芙露德莉斯】每积攒【决意】达到30、60、90、120时，【芙露德莉斯】的暴击伤害提升25%，持续15秒，最多可叠加4层，每次叠加时不刷新持续时间，施放共鸣解放·看潮怒风哮之刃后会清除该暴击伤害提升效果。",
+              "clampStacks": true
+            }
+          ],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {},
+          "gameText": "【卡提希娅】、【芙露德莉斯】自身技能直接造成的伤害击败被附加【风蚀效应】状态的目标后，获得【集意】状态，持续10秒。\n 【集意】状态下保留击败目标被附加【风蚀效应】的最高层数，自身下一次技能直接造成的伤害立即为命中目标附加该层数，最高可叠加至当前目标的【风蚀效应】层数上限，同时清除【集意】状态，清除【集意】状态后进入冷却时间1秒。\n 【芙露德莉斯】每积攒【决意】达到30、60、90、120时，【芙露德莉斯】的暴击伤害提升25%，持续15秒，最多可叠加4层，每次叠加时不刷新持续时间，施放共鸣解放·看潮怒风哮之刃后会清除该暴击伤害提升效果。"
+        },
+        "2": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [
+            {
+              "category": "composite",
+              "name": "2链",
+              "mode": "fixed",
+              "value": 0,
+              "perStack": 0,
+              "maxStacks": 99,
+              "damageType": "",
+              "element": "",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "effects": [
+                {
+                  "zone": "multBoost",
+                  "valueMode": "fixed",
+                  "value": 50,
+                  "segments": [
+                    {
+                      "upTo": null,
+                      "perStack": 0
+                    }
+                  ],
+                  "skillScope": "names",
+                  "skillNames": [
+                    "以剑奉读此身·第一段·小卡",
+                    "第一段·小卡",
+                    "以剑奉读此身·第二段·小卡",
+                    "第二段·小卡",
+                    "以剑奉读此身·第三段·小卡",
+                    "第三段·小卡",
+                    "以剑奉读此身·第四段·小卡",
+                    "第四段·小卡",
+                    "以剑奉读此身·闪避反击·小卡",
+                    "以剑奉读此身·重击·小卡",
+                    "此剑，为潮水的过去·小卡"
+                  ],
+                  "librarySkillNames": [
+                    "以剑奉读此身·第一段·小卡",
+                    "以剑奉读此身·第二段·小卡",
+                    "以剑奉读此身·第三段·小卡",
+                    "以剑奉读此身·第四段·小卡",
+                    "以剑奉读此身·闪避反击·小卡",
+                    "以剑奉读此身·重击·小卡",
+                    "此剑，为潮水的过去·小卡"
+                  ],
+                  "catalogIds": [],
+                  "damageType": "普攻",
+                  "effectType": "",
+                  "element": "气动",
+                  "defenseKind": "",
+                  "minStacks": 0,
+                  "minResonance": 0,
+                  "onlyCharacterIds": [],
+                  "onlyCombatModes": [],
+                  "effectKey": ""
+                },
+                {
+                  "zone": "multBoost",
+                  "valueMode": "fixed",
+                  "value": 200,
+                  "segments": [
+                    {
+                      "upTo": null,
+                      "perStack": 0
+                    }
+                  ],
+                  "skillScope": "names",
+                  "skillNames": [
+                    "以剑奉读此身·空中攻击",
+                    "空中攻击·小卡",
+                    "以剑奉读此身·空中攻击回收一剑·小卡",
+                    "空中攻击回收一剑·小卡",
+                    "以剑奉读此身·空中攻击回收二剑·小卡",
+                    "空中攻击回收二剑·小卡",
+                    "以剑奉读此身·空中攻击回收三剑·小卡",
+                    "空中攻击回收三剑·小卡"
+                  ],
+                  "librarySkillNames": [
+                    "以剑奉读此身·空中攻击",
+                    "以剑奉读此身·空中攻击回收一剑·小卡",
+                    "以剑奉读此身·空中攻击回收二剑·小卡",
+                    "以剑奉读此身·空中攻击回收三剑·小卡"
+                  ],
+                  "catalogIds": [],
+                  "damageType": "普攻",
+                  "effectType": "",
+                  "element": "气动",
+                  "defenseKind": "",
+                  "minStacks": 0,
+                  "minResonance": 0,
+                  "onlyCharacterIds": [],
+                  "onlyCombatModes": [],
+                  "effectKey": ""
+                }
+              ],
+              "sourceTag": "characterTemplate",
+              "templateKey": "tpl_ms0la6l9_mznnr",
+              "gameText": "施放共鸣解放·听骑士从心祈愿后，使自身一定范围内的目标【风蚀效应】层数上限提升3层，自身技能下一次直接造成伤害后，对自身一定范围内的目标附加3层【风蚀效应】，并立刻结算1次目标身上的【风蚀效应】效果，此次结算不消耗【风蚀效应】层数。\n【卡提希娅】普攻、重击、闪避反击、变奏技能倍率提升50%，空中攻击倍率提升200%。\n施放空中攻击·卡提希娅后，每回收1种【剑之影】使共鸣技能·卡提希娅的冷却时间减少1秒。"
+            }
+          ],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {},
+          "gameText": "施放共鸣解放·听骑士从心祈愿后，使自身一定范围内的目标【风蚀效应】层数上限提升3层，自身技能下一次直接造成伤害后，对自身一定范围内的目标附加3层【风蚀效应】，并立刻结算1次目标身上的【风蚀效应】效果，此次结算不消耗【风蚀效应】层数。\n【卡提希娅】普攻、重击、闪避反击、变奏技能倍率提升50%，空中攻击倍率提升200%。\n施放空中攻击·卡提希娅后，每回收1种【剑之影】使共鸣技能·卡提希娅的冷却时间减少1秒。"
+        },
+        "3": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [
+            {
+              "category": "composite",
+              "name": "3链",
+              "mode": "fixed",
+              "value": 0,
+              "perStack": 0,
+              "maxStacks": 99,
+              "damageType": "",
+              "element": "",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "effects": [
+                {
+                  "zone": "multBoost",
+                  "valueMode": "fixed",
+                  "value": 100,
+                  "segments": [
+                    {
+                      "upTo": null,
+                      "perStack": 0
+                    }
+                  ],
+                  "skillScope": "names",
+                  "skillNames": [
+                    "听骑士从心祈愿·看潮怒风哮之刃·大卡",
+                    "看潮怒风哮之刃·大卡"
+                  ],
+                  "librarySkillNames": [
+                    "听骑士从心祈愿·看潮怒风哮之刃·大卡"
+                  ],
+                  "catalogIds": [],
+                  "damageType": "共鸣解放",
+                  "effectType": "",
+                  "element": "气动",
+                  "defenseKind": "",
+                  "minStacks": 0,
+                  "minResonance": 0,
+                  "onlyCharacterIds": [],
+                  "onlyCombatModes": [],
+                  "effectKey": ""
+                }
+              ],
+              "sourceTag": "characterTemplate",
+              "templateKey": "tpl_ms0lbvrr_nljbw",
+              "gameText": "【芙露德莉斯】的普攻·芙露德莉斯第5段，空中攻击·芙露德莉斯第2段，强化重击·芙露德莉斯，共鸣技能·凭风斩浪破敌会为命中目标附加2层【风蚀效应】。\n共鸣解放·看潮怒风哮之刃的伤害倍率提升100%。"
+            }
+          ],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {},
+          "gameText": "【芙露德莉斯】的普攻·芙露德莉斯第5段，空中攻击·芙露德莉斯第2段，强化重击·芙露德莉斯，共鸣技能·凭风斩浪破敌会为命中目标附加2层【风蚀效应】。\n共鸣解放·看潮怒风哮之刃的伤害倍率提升100%。"
+        },
+        "4": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [],
+          "teamBuffs": [
+            {
+              "category": "generalBonus",
+              "name": "卡提·4链",
+              "mode": "fixed",
+              "value": 20,
+              "perStack": 0,
+              "maxStacks": 5,
+              "damageType": "",
+              "element": "",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "sourceTag": "characterTemplate",
+              "templateKey": "tpl_ms0lcjlk_dbgxb",
+              "gameText": "队伍中的角色为目标附加【虚湮效应】、【聚爆效应】、【光噪效应】、【电磁效应】、【霜渐效应】、【风蚀效应】后，使队伍中所有角色全属性伤害加成提升20%，持续20秒。"
+            }
+          ],
+          "extraSkills": [],
+          "combatModes": {},
+          "gameText": "队伍中的角色为目标附加【虚湮效应】、【聚爆效应】、【光噪效应】、【电磁效应】、【霜渐效应】、【风蚀效应】后，使队伍中所有角色全属性伤害加成提升20%，持续20秒。"
+        },
+        "5": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {},
+          "gameText": "【卡提希娅】或【芙露德莉斯】受到致命伤害时，此次伤害不会使【卡提希娅】或【芙露德莉斯】倒下，并获得【卡提希娅】20%生命上限的护盾，持续10秒，该效果每10分钟可触发1次。\n施放共鸣解放·听骑士从心祈愿消耗的自身生命值降至生命上限的25%。"
+        },
+        "6": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [
+            {
+              "category": "composite",
+              "name": "6链",
+              "mode": "fixed",
+              "value": 0,
+              "perStack": 0,
+              "maxStacks": 99,
+              "damageType": "",
+              "element": "",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "effects": [
+                {
+                  "zone": "generalVulnerability",
+                  "valueMode": "fixed",
+                  "value": 40,
+                  "segments": [
+                    {
+                      "upTo": null,
+                      "perStack": 0
+                    }
+                  ],
+                  "skillScope": "names",
+                  "skillNames": [
+                    "暴风雨·普攻第一段·大卡",
+                    "普攻第一段·大卡",
+                    "暴风雨·普攻第二段·大卡",
+                    "普攻第二段·大卡",
+                    "暴风雨·普攻第三段·大卡",
+                    "普攻第三段·大卡",
+                    "暴风雨·普攻第四段·大卡",
+                    "普攻第四段·大卡",
+                    "暴风雨·普攻第五段·大卡",
+                    "普攻第五段·大卡",
+                    "暴风雨·闪避反击·大卡",
+                    "闪避反击·大卡",
+                    "暴风雨·上挑攻击·大卡",
+                    "上挑攻击·大卡",
+                    "暴风雨·重击·大卡",
+                    "重击·大卡",
+                    "暴风雨·强化重击·大卡",
+                    "强化重击·大卡",
+                    "暴风雨·空中攻击第一段·大卡",
+                    "空中攻击第一段·大卡",
+                    "暴风雨·空中攻击第二段·大卡",
+                    "空中攻击第二段·大卡",
+                    "暴风雨·空中攻击第三段·大卡",
+                    "空中攻击第三段·大卡",
+                    "暴风雨·共鸣技能·此剑为潮浪之意·大卡",
+                    "共鸣技能·此剑为潮浪之意·大卡",
+                    "暴风雨·共鸣技能·凭风斩浪破敌·大卡",
+                    "共鸣技能·凭风斩浪破敌·大卡",
+                    "听骑士从心祈愿·看潮怒风哮之刃·大卡",
+                    "看潮怒风哮之刃·大卡",
+                    "此剑，为潮水的过去·此剑，为自由的未来·大卡",
+                    "此剑，为自由的未来·大卡"
+                  ],
+                  "librarySkillNames": [
+                    "暴风雨·普攻第一段·大卡",
+                    "暴风雨·普攻第二段·大卡",
+                    "暴风雨·普攻第三段·大卡",
+                    "暴风雨·普攻第四段·大卡",
+                    "暴风雨·普攻第五段·大卡",
+                    "暴风雨·闪避反击·大卡",
+                    "暴风雨·上挑攻击·大卡",
+                    "暴风雨·重击·大卡",
+                    "暴风雨·强化重击·大卡",
+                    "暴风雨·空中攻击第一段·大卡",
+                    "暴风雨·空中攻击第二段·大卡",
+                    "暴风雨·空中攻击第三段·大卡",
+                    "暴风雨·共鸣技能·此剑为潮浪之意·大卡",
+                    "暴风雨·共鸣技能·凭风斩浪破敌·大卡",
+                    "听骑士从心祈愿·看潮怒风哮之刃·大卡",
+                    "此剑，为潮水的过去·此剑，为自由的未来·大卡"
+                  ],
+                  "catalogIds": [],
+                  "damageType": "普攻",
+                  "effectType": "",
+                  "element": "气动",
+                  "defenseKind": "",
+                  "minStacks": 0,
+                  "minResonance": 0,
+                  "onlyCharacterIds": [],
+                  "onlyCombatModes": [],
+                  "effectKey": ""
+                }
+              ],
+              "sourceTag": "characterTemplate",
+              "templateKey": "tpl_ms0led4f_wthqy",
+              "gameText": "施放共鸣解放·看潮怒风哮之刃对命中的目标附加【风蚀效应】至层数上限，且施放共鸣解放·看潮怒风哮之刃命中目标后，不再清空目标拥有的【风蚀效应】。\n 施放变奏技能·此剑，为潮水的过去、变奏技能·此剑，为自由的未来、共鸣解放·听骑士从心祈愿、共鸣解放·看潮怒风哮之刃后，30秒内，队伍中的角色对【风蚀效应】层数到达上限的目标再次附加【风蚀效应】时，立即结算一次【风蚀效应】。\n目标受到【芙露德莉斯】的伤害提升40%。"
+            }
+          ],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {},
+          "gameText": "施放共鸣解放·看潮怒风哮之刃对命中的目标附加【风蚀效应】至层数上限，且施放共鸣解放·看潮怒风哮之刃命中目标后，不再清空目标拥有的【风蚀效应】。\n 施放变奏技能·此剑，为潮水的过去、变奏技能·此剑，为自由的未来、共鸣解放·听骑士从心祈愿、共鸣解放·看潮怒风哮之刃后，30秒内，队伍中的角色对【风蚀效应】层数到达上限的目标再次附加【风蚀效应】时，立即结算一次【风蚀效应】。\n目标受到【芙露德莉斯】的伤害提升40%。"
+        }
+      },
+      "combatModes": {}
+    }
+  ]
+}

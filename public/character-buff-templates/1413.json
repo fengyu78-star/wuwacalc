@@ -1,0 +1,772 @@
+{
+  "version": 1,
+  "kind": "shard",
+  "characterId": "1413",
+  "characterName": "清宵",
+  "templates": [
+    {
+      "characterId": "1413",
+      "characterName": "清宵",
+      "revision": 4,
+      "author": "",
+      "notes": "清宵（测试服 3.6.7，仅 CSF）：集谐模态固定（引剑破万法走系统集谐易伤：干涉层数×谐度破坏增幅×0.12%，core.js CHAR_COMBAT_MODE_CONFIG 已接入）。本体【心识锁定】双区：固有5伤害提升每层2%/前7层额外5% + 回路伤害加深同结构，两条同时生效、层数同步（stackSync qingxiao_xinshi）。0链层数上限15，2链起上限25——maxStacks 与 segments upTo 已按 2 链上限统一调至 25（0链实际15层未做链数钳制，见数据复核清单）。回路【昙体仙身解锁前】普攻/闪反倍率+100%（默认开，可关）；【天心空明】天钧荡煞倍率+100%。0链分支：攻击+12%、暴伤+16%（CHAR_BRANCH_PANEL_BY_ID）。1链暴击+16%、巨阙灭迹400%（进战25层清邪剑诀、每移除1层巨阙伤害+4%）；2链重击·弦剑倍率+40%、天心空明附加心识锁定6层；3链解放（限定【共鸣解放·天光云影沧澜兴】）暴伤+100%、万物和鸣每层+3%天钧荡煞倍率；4链全队攻击+20%（文案带「附加集谐·偏移时」条件，当前按无条件建模，见数据复核清单）；5链行罚倍率+100%；6链四技能泛用易伤+40%、巨阙心识加深（每层2%/前7层额外5%）、干涉效果提升20%（convergenceVuln 0.12→0.144，待代码支持）。",
+      "personalBuffs": [
+        {
+          "templateKey": "qingxiao_innate5_xinshi_bonus",
+          "category": "composite",
+          "name": "固有5·心识锁定提升",
+          "mode": "stack",
+          "value": 0,
+          "perStack": 0,
+          "maxStacks": 25,
+          "damageType": "",
+          "element": "",
+          "defenseKind": "",
+          "convergenceVuln": "",
+          "stackSync": "qingxiao_xinshi",
+          "effects": [
+            {
+              "zone": "generalBonus",
+              "valueMode": "stack",
+              "value": 0,
+              "segments": [
+                {
+                  "upTo": 7,
+                  "perStack": 7
+                },
+                {
+                  "upTo": 25,
+                  "perStack": 2
+                }
+              ],
+              "skillScope": "names",
+              "skillNames": [
+                "化弦为剑·重击·弦剑",
+                "无相心剑·普攻·昙体仙身第一段",
+                "无相心剑·普攻·昙体仙身第二段",
+                "无相心剑·普攻·昙体仙身第三段",
+                "无相心剑·普攻·昙体仙身第四段",
+                "无相心剑·闪避反击·昙体仙身",
+                "无相心剑·天钧荡煞·昙体仙身",
+                "天光云影沧澜兴·技能"
+              ],
+              "librarySkillNames": [
+                "化弦为剑·重击·弦剑",
+                "无相心剑·普攻·昙体仙身第一段",
+                "无相心剑·普攻·昙体仙身第二段",
+                "无相心剑·普攻·昙体仙身第三段",
+                "无相心剑·普攻·昙体仙身第四段",
+                "无相心剑·闪避反击·昙体仙身",
+                "无相心剑·天钧荡煞·昙体仙身",
+                "天光云影沧澜兴·技能"
+              ],
+              "catalogIds": [],
+              "damageType": "",
+              "effectType": "",
+              "element": "",
+              "defenseKind": "",
+              "minStacks": 0,
+              "minResonance": 0,
+              "onlyCharacterIds": [],
+              "onlyCombatModes": [],
+              "effectKey": ""
+            }
+          ],
+          "sourceTag": "characterTemplate",
+          "gameText": "清宵以下技能对拥有心识锁定的目标造成伤害提升，每层提升2%，前7层每层额外提升5%。\n·重击·弦剑、普攻·昙体仙身、闪避反击·昙体仙身、重击·天钧荡煞·昙体仙身、共鸣解放·天光云影沧澜兴。\n\n队伍中的角色对怒涛级或海啸级目标附加【集谐·干涉】时，对目标额外附加1层心识锁定。"
+        },
+        {
+          "templateKey": "qingxiao_forte_xinshi_deep",
+          "category": "composite",
+          "name": "回路·心识锁定加深",
+          "mode": "stack",
+          "value": 0,
+          "perStack": 0,
+          "maxStacks": 25,
+          "damageType": "",
+          "element": "",
+          "defenseKind": "",
+          "convergenceVuln": "",
+          "stackSync": "qingxiao_xinshi",
+          "effects": [
+            {
+              "zone": "generalDeep",
+              "valueMode": "stack",
+              "value": 0,
+              "segments": [
+                {
+                  "upTo": 7,
+                  "perStack": 7
+                },
+                {
+                  "upTo": 25,
+                  "perStack": 2
+                }
+              ],
+              "skillScope": "names",
+              "skillNames": [
+                "化弦为剑·重击·弦剑",
+                "无相心剑·普攻·昙体仙身第一段",
+                "无相心剑·普攻·昙体仙身第二段",
+                "无相心剑·普攻·昙体仙身第三段",
+                "无相心剑·普攻·昙体仙身第四段",
+                "无相心剑·闪避反击·昙体仙身",
+                "无相心剑·天钧荡煞·昙体仙身",
+                "天光云影沧澜兴·技能"
+              ],
+              "librarySkillNames": [
+                "化弦为剑·重击·弦剑",
+                "无相心剑·普攻·昙体仙身第一段",
+                "无相心剑·普攻·昙体仙身第二段",
+                "无相心剑·普攻·昙体仙身第三段",
+                "无相心剑·普攻·昙体仙身第四段",
+                "无相心剑·闪避反击·昙体仙身",
+                "无相心剑·天钧荡煞·昙体仙身",
+                "天光云影沧澜兴·技能"
+              ],
+              "catalogIds": [],
+              "damageType": "",
+              "effectType": "",
+              "element": "",
+              "defenseKind": "",
+              "minStacks": 0,
+              "minResonance": 0,
+              "onlyCharacterIds": [],
+              "onlyCombatModes": [],
+              "effectKey": ""
+            }
+          ],
+          "sourceTag": "characterTemplate",
+          "gameText": "心识锁定层数上限为15（2链后提升至25）。\n队伍中的角色对目标附加【集谐·干涉】时，对目标附加1层心识锁定。\n目标每拥有1层心识锁定，受到清宵以下技能伤害加深2%，前7层每层额外加深5%。\n·重击·弦剑、普攻·昙体仙身、闪避反击·昙体仙身、重击·天钧荡煞·昙体仙身、共鸣解放·天光云影沧澜兴。"
+        },
+        {
+          "templateKey": "qingxiao_forte_pretianjun_mult",
+          "category": "composite",
+          "name": "回路·昙体仙身解锁前倍率",
+          "mode": "fixed",
+          "value": 0,
+          "perStack": 0,
+          "maxStacks": 99,
+          "damageType": "",
+          "element": "",
+          "defenseKind": "",
+          "convergenceVuln": "",
+          "effects": [
+            {
+              "zone": "multBoost",
+              "valueMode": "fixed",
+              "value": 100,
+              "segments": [
+                {
+                  "upTo": null,
+                  "perStack": 0
+                }
+              ],
+              "skillScope": "names",
+              "skillNames": [
+                "无相心剑·普攻·昙体仙身第一段",
+                "无相心剑·普攻·昙体仙身第二段",
+                "无相心剑·普攻·昙体仙身第三段",
+                "无相心剑·普攻·昙体仙身第四段",
+                "无相心剑·闪避反击·昙体仙身"
+              ],
+              "librarySkillNames": [
+                "无相心剑·普攻·昙体仙身第一段",
+                "无相心剑·普攻·昙体仙身第二段",
+                "无相心剑·普攻·昙体仙身第三段",
+                "无相心剑·普攻·昙体仙身第四段",
+                "无相心剑·闪避反击·昙体仙身"
+              ],
+              "catalogIds": [],
+              "damageType": "",
+              "effectType": "",
+              "element": "",
+              "defenseKind": "",
+              "minStacks": 0,
+              "minResonance": 0,
+              "onlyCharacterIds": [],
+              "onlyCombatModes": [],
+              "effectKey": ""
+            }
+          ],
+          "sourceTag": "characterTemplate",
+          "gameText": "重击·天钧荡煞·昙体仙身解锁前，普攻·昙体仙身、闪避反击·昙体仙身伤害倍率提升100%。"
+        },
+        {
+          "templateKey": "qingxiao_forte_tianxin_mult",
+          "category": "composite",
+          "name": "回路·天心空明",
+          "mode": "fixed",
+          "value": 0,
+          "perStack": 0,
+          "maxStacks": 99,
+          "damageType": "",
+          "element": "",
+          "defenseKind": "",
+          "convergenceVuln": "",
+          "effects": [
+            {
+              "zone": "multBoost",
+              "valueMode": "fixed",
+              "value": 100,
+              "segments": [
+                {
+                  "upTo": null,
+                  "perStack": 0
+                }
+              ],
+              "skillScope": "names",
+              "skillNames": [
+                "无相心剑·天钧荡煞·昙体仙身"
+              ],
+              "librarySkillNames": [
+                "无相心剑·天钧荡煞·昙体仙身"
+              ],
+              "catalogIds": [],
+              "damageType": "",
+              "effectType": "",
+              "element": "",
+              "defenseKind": "",
+              "minStacks": 0,
+              "minResonance": 0,
+              "onlyCharacterIds": [],
+              "onlyCombatModes": [],
+              "effectKey": ""
+            }
+          ],
+          "sourceTag": "characterTemplate",
+          "gameText": "进入战斗或施放共鸣解放天光云影沧澜兴时，获得天心空明。藏剑式/执剑式造成伤害时，获得【琴心】/【剑韵】效率提升100%。施放重击·弦剑时，对附近的目标附加3层心识锁定（2链后提升至6层），使自身下一次重击·天钧荡煞·昙体仙身获得强化：伤害倍率提升100%，对目标额外累积偏谐值。切换至其他角色提前结束强化效果。施放重击·天钧荡煞·昙体仙身后，移除天心空明。"
+        }
+      ],
+      "teamBuffs": [],
+      "extraSkills": [],
+      "resonanceChains": {
+        "1": {
+          "enabledByDefault": false,
+          "notes": "暴击+16%常驻；护体剑光上限2层、重击·弦剑额外+1层（生存向不建模）；巨阙灭迹：进战获得25层清邪剑诀（资源不建模），普攻·弦剑/空中攻击·弦剑/普攻·昙体仙身造成伤害后移除1层触发巨阙灭迹（清宵攻击400%气动普攻伤害，每秒最多1次），每移除1层使目标受巨阙灭迹伤害提升4%（持续2秒）→ 已建模为叠层易伤 qingxiao_c1_juque_vuln（上限25层，按轴触发手动设层）。",
+          "personalBuffs": [
+            {
+              "category": "generalCritRate",
+              "name": "1链",
+              "mode": "fixed",
+              "value": 16,
+              "perStack": 0,
+              "maxStacks": 5,
+              "damageType": "",
+              "element": "",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "sourceTag": "characterTemplate",
+              "templateKey": "qingxiao_c1_crit_rate",
+              "gameText": "暴击提升16%。\n\n护体剑光层数上限提升至2层，施放重击·弦剑时，可额外获得1层护体剑光。"
+            },
+            {
+              "category": "composite",
+              "name": "1链·巨阙灭迹易伤",
+              "mode": "stack",
+              "value": 0,
+              "perStack": 0,
+              "maxStacks": 25,
+              "damageType": "",
+              "element": "",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "sourceTag": "characterTemplate",
+              "templateKey": "qingxiao_c1_juque_vuln",
+              "effects": [
+                {
+                  "zone": "generalVulnerability",
+                  "valueMode": "stack",
+                  "value": 0,
+                  "segments": [
+                    {
+                      "upTo": null,
+                      "perStack": 4
+                    }
+                  ],
+                  "skillScope": "names",
+                  "skillNames": [
+                    "巨阙灭迹"
+                  ],
+                  "librarySkillNames": [
+                    "巨阙灭迹"
+                  ],
+                  "catalogIds": [],
+                  "damageType": "",
+                  "effectType": "",
+                  "element": "",
+                  "defenseKind": "",
+                  "minStacks": 0,
+                  "minResonance": 0,
+                  "onlyCharacterIds": [],
+                  "onlyCombatModes": [],
+                  "effectKey": ""
+                }
+              ],
+              "gameText": "每移除一层清邪剑诀，使目标受到巨阙灭迹伤害提升4%，持续2秒。（层数上限25；按轴中巨阙灭迹触发时移除的清邪剑诀层数手动设置）"
+            }
+          ],
+          "teamBuffs": [],
+          "extraSkills": [
+            {
+              "templateKey": "qingxiao_c1_juque",
+              "name": "巨阙灭迹",
+              "damageType": "普攻",
+              "effectType": "聚爆",
+              "effectLayers": 13,
+              "effectBurstLayers": 0,
+              "effectCount": 1,
+              "baseMult": 400,
+              "fixedDamage": false,
+              "effectMultMode": "custom"
+            }
+          ],
+          "combatModes": {
+            "convergence": {
+              "notes": "",
+              "personalBuffs": [],
+              "teamBuffs": [],
+              "extraSkills": []
+            }
+          }
+        },
+        "2": {
+          "enabledByDefault": false,
+          "notes": "重击·弦剑倍率+40%；附近敌人心识锁定层数上限提升至25、凝识层数上限提升至25（本体固有5/回路/巨阙加深 maxStacks 已调至25）；天心空明效果强化：施放重击·弦剑时附加心识锁定提升至6层（附加层数机制不建模）。",
+          "personalBuffs": [
+            {
+              "category": "composite",
+              "name": "2链·重击弦剑倍率",
+              "mode": "fixed",
+              "value": 0,
+              "perStack": 0,
+              "maxStacks": 99,
+              "damageType": "",
+              "element": "",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "effects": [
+                {
+                  "zone": "multBoost",
+                  "valueMode": "fixed",
+                  "value": 40,
+                  "segments": [
+                    {
+                      "upTo": null,
+                      "perStack": 0
+                    }
+                  ],
+                  "skillScope": "names",
+                  "skillNames": [
+                    "化弦为剑·重击·弦剑"
+                  ],
+                  "librarySkillNames": [
+                    "化弦为剑·重击·弦剑"
+                  ],
+                  "catalogIds": [],
+                  "damageType": "",
+                  "effectType": "",
+                  "element": "",
+                  "defenseKind": "",
+                  "minStacks": 0,
+                  "minResonance": 0,
+                  "onlyCharacterIds": [],
+                  "onlyCombatModes": [],
+                  "effectKey": ""
+                }
+              ],
+              "sourceTag": "characterTemplate",
+              "templateKey": "qingxiao_c2_heavy_mult",
+              "gameText": "重击·弦剑伤害倍率提升40%。进入战斗状态后，附近敌人的心识锁定层数上限提升至25。固有技能·识海浩渺，尘世万千的【凝识】层数上限提升至25。天心空明效果强化：施放重击·弦剑时，对附近的目标附加的心识锁定层数提升至6层。"
+            }
+          ],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {
+            "convergence": {
+              "notes": "",
+              "personalBuffs": [],
+              "teamBuffs": [],
+              "extraSkills": []
+            }
+          }
+        },
+        "3": {
+          "enabledByDefault": false,
+          "notes": "解放暴伤+100%；万物和鸣：施放重击·弦剑期间按附近敌人最高心识锁定层数获得同等层数，每层天钧荡煞倍率+3%（施放天钧荡煞后移除）；凝识强化为额外附加2层【集谐·干涉】（系统集谐）。",
+          "personalBuffs": [
+            {
+              "category": "composite",
+              "name": "3链",
+              "mode": "fixed",
+              "value": 0,
+              "perStack": 0,
+              "maxStacks": 5,
+              "damageType": "共鸣解放",
+              "element": "",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "sourceTag": "characterTemplate",
+              "templateKey": "qingxiao_c3_lib_critdmg",
+              "effects": [
+                {
+                  "zone": "generalCritDmg",
+                  "valueMode": "fixed",
+                  "value": 100,
+                  "segments": [
+                    {
+                      "upTo": null,
+                      "perStack": 0
+                    }
+                  ],
+                  "skillScope": "names",
+                  "skillNames": [
+                    "天光云影沧澜兴·技能"
+                  ],
+                  "librarySkillNames": [
+                    "天光云影沧澜兴·技能"
+                  ],
+                  "catalogIds": [],
+                  "damageType": "共鸣解放",
+                  "effectType": "",
+                  "element": "",
+                  "defenseKind": "",
+                  "minStacks": 0,
+                  "minResonance": 0,
+                  "onlyCharacterIds": [],
+                  "onlyCombatModes": [],
+                  "effectKey": ""
+                }
+              ],
+              "gameText": "共鸣解放·天光云影沧澜兴暴击伤害提升100%。固有技能·识海浩渺，尘世万千的【凝识】效果附加【集谐·干涉】层数提升至2层。"
+            },
+            {
+              "category": "composite",
+              "name": "3链·万物和鸣",
+              "mode": "stack",
+              "value": 0,
+              "perStack": 0,
+              "maxStacks": 15,
+              "damageType": "",
+              "element": "",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "effects": [
+                {
+                  "zone": "multBoostExtra",
+                  "valueMode": "stack",
+                  "value": 0,
+                  "segments": [
+                    {
+                      "upTo": null,
+                      "perStack": 3
+                    }
+                  ],
+                  "skillScope": "names",
+                  "skillNames": [
+                    "无相心剑·天钧荡煞·昙体仙身"
+                  ],
+                  "librarySkillNames": [
+                    "无相心剑·天钧荡煞·昙体仙身"
+                  ],
+                  "catalogIds": [],
+                  "damageType": "",
+                  "effectType": "",
+                  "element": "",
+                  "defenseKind": "",
+                  "minStacks": 0,
+                  "minResonance": 0,
+                  "onlyCharacterIds": [],
+                  "onlyCombatModes": [],
+                  "effectKey": ""
+                }
+              ],
+              "sourceTag": "characterTemplate",
+              "templateKey": "qingxiao_c3_wanwu_mult",
+              "gameText": "施放重击·弦剑期间，根据附近敌人心识锁定的最高层数，获得同等层数的万物和鸣。\n万物和鸣：每层使重击·天钧荡煞·昙体仙身伤害倍率提升3%。施放重击·天钧荡煞·昙体仙身后移除万物和鸣。"
+            }
+          ],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {
+            "convergence": {
+              "notes": "",
+              "personalBuffs": [],
+              "teamBuffs": [],
+              "extraSkills": []
+            }
+          }
+        },
+        "4": {
+          "enabledByDefault": false,
+          "notes": "队伍角色附加【集谐·偏移】时攻击+20%（8秒）。",
+          "personalBuffs": [],
+          "teamBuffs": [
+            {
+              "category": "generalAttack",
+              "name": "4链·清宵",
+              "mode": "fixed",
+              "value": 20,
+              "perStack": 0,
+              "maxStacks": 5,
+              "damageType": "",
+              "element": "",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "sourceTag": "characterTemplate",
+              "templateKey": "qingxiao_c4_team_atk",
+              "gameText": "队伍中的角色附加【集谐·偏移】时，攻击提升20%，持续8秒。"
+            }
+          ],
+          "extraSkills": [],
+          "combatModes": {
+            "convergence": {
+              "notes": "",
+              "personalBuffs": [],
+              "teamBuffs": [],
+              "extraSkills": []
+            }
+          }
+        },
+        "5": {
+          "enabledByDefault": false,
+          "notes": "行罚倍率+100%；御剑飞行气劲消耗-30%（探索向不建模）。",
+          "personalBuffs": [
+            {
+              "category": "composite",
+              "name": "5链",
+              "mode": "fixed",
+              "value": 0,
+              "perStack": 0,
+              "maxStacks": 99,
+              "damageType": "",
+              "element": "",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "effects": [
+                {
+                  "zone": "multBoost",
+                  "valueMode": "fixed",
+                  "value": 100,
+                  "segments": [
+                    {
+                      "upTo": null,
+                      "perStack": 0
+                    }
+                  ],
+                  "skillScope": "names",
+                  "skillNames": [
+                    "浮声一刹·行罚"
+                  ],
+                  "librarySkillNames": [
+                    "浮声一刹·行罚"
+                  ],
+                  "catalogIds": [],
+                  "damageType": "",
+                  "effectType": "",
+                  "element": "",
+                  "defenseKind": "",
+                  "minStacks": 0,
+                  "minResonance": 0,
+                  "onlyCharacterIds": [],
+                  "onlyCombatModes": [],
+                  "effectKey": ""
+                }
+              ],
+              "sourceTag": "characterTemplate",
+              "templateKey": "qingxiao_c5_xingfa_mult",
+              "gameText": "共鸣技能·浮声一刹·行罚伤害倍率提升100%。\n\n御剑飞行移动时，【御剑气劲】消耗降低30%。"
+            }
+          ],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {
+            "convergence": {
+              "notes": "",
+              "personalBuffs": [],
+              "teamBuffs": [],
+              "extraSkills": []
+            }
+          }
+        },
+        "6": {
+          "enabledByDefault": false,
+          "notes": "目标受到清宵的重击·弦剑、天钧荡煞·昙体仙身、解放·天光云影沧澜兴、巨阙灭迹伤害提升40%；目标每拥有1层心识锁定，受到巨阙灭迹伤害加深2%（前7层每层额外加深5%，与心识锁定同步叠层）；清宵响应【集谐·干涉】效果提升20%（系统集谐 convergenceVuln 0.12→0.144，待代码支持）；施放重击·弦剑期间按附近敌人最高心识锁定层数获得同等层数清邪剑诀。",
+          "personalBuffs": [
+            {
+              "category": "composite",
+              "name": "6链·清宵易伤",
+              "mode": "fixed",
+              "value": 0,
+              "perStack": 0,
+              "maxStacks": 99,
+              "damageType": "",
+              "element": "",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "effects": [
+                {
+                  "zone": "generalVulnerability",
+                  "valueMode": "fixed",
+                  "value": 40,
+                  "segments": [
+                    {
+                      "upTo": null,
+                      "perStack": 0
+                    }
+                  ],
+                  "skillScope": "names",
+                  "skillNames": [
+                    "化弦为剑·重击·弦剑",
+                    "无相心剑·天钧荡煞·昙体仙身",
+                    "天光云影沧澜兴·技能",
+                    "巨阙灭迹"
+                  ],
+                  "librarySkillNames": [
+                    "化弦为剑·重击·弦剑",
+                    "无相心剑·天钧荡煞·昙体仙身",
+                    "天光云影沧澜兴·技能",
+                    "巨阙灭迹"
+                  ],
+                  "catalogIds": [],
+                  "damageType": "",
+                  "effectType": "",
+                  "element": "",
+                  "defenseKind": "",
+                  "minStacks": 0,
+                  "minResonance": 0,
+                  "onlyCharacterIds": [],
+                  "onlyCombatModes": [],
+                  "effectKey": ""
+                }
+              ],
+              "sourceTag": "characterTemplate",
+              "templateKey": "qingxiao_c6_vuln",
+              "gameText": "目标受到清宵的重击·弦剑、重击·天钧荡煞·昙体仙身、共鸣解放·天光云影沧澜兴、巨阙灭迹伤害提升40%。\n\n清宵响应【集谐·干涉】效果提升20%。"
+            },
+            {
+              "templateKey": "qingxiao_c6_juque_xinshi_deep",
+              "category": "composite",
+              "name": "6链·巨阙心识加深",
+              "mode": "stack",
+              "value": 0,
+              "perStack": 0,
+              "maxStacks": 25,
+              "clampStacks": true,
+              "damageType": "",
+              "element": "",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "stackSync": "qingxiao_xinshi",
+              "effects": [
+                {
+                  "zone": "generalDeep",
+                  "valueMode": "stack",
+                  "value": 0,
+                  "segments": [
+                    {
+                      "upTo": 7,
+                      "perStack": 7
+                    },
+                    {
+                      "upTo": 25,
+                      "perStack": 2
+                    }
+                  ],
+                  "skillScope": "names",
+                  "skillNames": [
+                    "巨阙灭迹"
+                  ],
+                  "librarySkillNames": [
+                    "巨阙灭迹"
+                  ],
+                  "catalogIds": [],
+                  "damageType": "",
+                  "effectType": "",
+                  "element": "",
+                  "defenseKind": "",
+                  "minStacks": 0,
+                  "minResonance": 0,
+                  "onlyCharacterIds": [],
+                  "onlyCombatModes": [],
+                  "effectKey": ""
+                }
+              ],
+              "sourceTag": "characterTemplate",
+              "gameText": "目标每拥有1层心识锁定，受到巨阙灭迹伤害加深2%，前7层每层额外加深5%（层数与心识锁定同步）。"
+            },
+            {
+              "templateKey": "qingxiao_c6_juque_xinshi_bonus",
+              "category": "composite",
+              "name": "6链·巨阙心识增伤",
+              "mode": "stack",
+              "value": 0,
+              "perStack": 0,
+              "maxStacks": 25,
+              "clampStacks": true,
+              "damageType": "",
+              "element": "",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "stackSync": "qingxiao_xinshi",
+              "effects": [
+                {
+                  "zone": "generalBonus",
+                  "valueMode": "stack",
+                  "value": 0,
+                  "segments": [
+                    {
+                      "upTo": 7,
+                      "perStack": 7
+                    },
+                    {
+                      "upTo": 25,
+                      "perStack": 2
+                    }
+                  ],
+                  "skillScope": "names",
+                  "skillNames": [
+                    "巨阙灭迹"
+                  ],
+                  "librarySkillNames": [
+                    "巨阙灭迹"
+                  ],
+                  "catalogIds": [],
+                  "damageType": "",
+                  "effectType": "",
+                  "element": "",
+                  "defenseKind": "",
+                  "minStacks": 0,
+                  "minResonance": 0,
+                  "onlyCharacterIds": [],
+                  "onlyCombatModes": [],
+                  "effectKey": ""
+                }
+              ],
+              "sourceTag": "characterTemplate",
+              "gameText": "巨阙灭迹对拥有心识锁定的目标造成伤害提升，每层提升2%，前7层每层额外提升5%（层数与心识锁定同步）。"
+            }
+          ],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {
+            "convergence": {
+              "notes": "",
+              "personalBuffs": [],
+              "teamBuffs": [],
+              "extraSkills": []
+            }
+          }
+        }
+      },
+      "combatModes": {
+        "convergence": {
+          "notes": "",
+          "personalBuffs": [],
+          "teamBuffs": [],
+          "extraSkills": []
+        }
+      }
+    }
+  ]
+}

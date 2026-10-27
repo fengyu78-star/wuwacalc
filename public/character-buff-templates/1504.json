@@ -1,0 +1,267 @@
+{
+  "version": 1,
+  "kind": "shard",
+  "characterId": "1504",
+  "characterName": "灯灯",
+  "templates": [
+    {
+      "characterId": "1504",
+      "characterName": "灯灯",
+      "revision": 2,
+      "author": "",
+      "notes": "灯灯：全队【灯灯·延奏】共鸣技能加深+38%（固定；对灯灯本人不生效）。",
+      "personalBuffs": [
+        {
+          "category": "elementBonus",
+          "name": "固有1·红灯期间",
+          "mode": "fixed",
+          "value": 10,
+          "perStack": 0,
+          "maxStacks": 5,
+          "damageType": "",
+          "element": "导电",
+          "defenseKind": "",
+          "convergenceVuln": "",
+          "sourceTag": "characterTemplate",
+          "templateKey": "tpl_ms273gfb_tn6hf",
+          "gameText": "红灯模式期间，灯灯导电伤害加成提升10%。"
+        },
+        {
+          "category": "generalAttack",
+          "name": "固有2·奔赴",
+          "mode": "fixed",
+          "value": 10,
+          "perStack": 0,
+          "maxStacks": 5,
+          "damageType": "",
+          "element": "",
+          "defenseKind": "",
+          "convergenceVuln": "",
+          "sourceTag": "characterTemplate",
+          "templateKey": "tpl_ms27420x_f4muk",
+          "gameText": "施放强化·前扑或强化·后撤时，5秒内灯灯攻击力提升10%。"
+        }
+      ],
+      "teamBuffs": [
+        {
+          "templateKey": "lumi_outro_skill_deep",
+          "category": "typeDeep",
+          "name": "灯灯·延奏",
+          "mode": "fixed",
+          "value": 38,
+          "damageType": "共鸣技能",
+          "element": "",
+          "defenseKind": "",
+          "excludeSource": true,
+          "sourceTag": "characterTemplate",
+          "perStack": 0,
+          "maxStacks": 5,
+          "gameText": "下一位登场角色共鸣技能伤害加深38%，效果持续10秒，若切换至其他角色则该效果提前结束。"
+        }
+      ],
+      "extraSkills": [],
+      "resonanceChains": {
+        "1": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {},
+          "gameText": "施放强化·后撤后3秒内，逐渐回复60点耐力。"
+        },
+        "2": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [
+            {
+              "category": "composite",
+              "name": "2链",
+              "mode": "fixed",
+              "value": 0,
+              "perStack": 0,
+              "maxStacks": 99,
+              "damageType": "",
+              "element": "",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "effects": [
+                {
+                  "zone": "generalDefense",
+                  "valueMode": "fixed",
+                  "value": 0,
+                  "segments": [
+                    {
+                      "upTo": null,
+                      "perStack": 0
+                    }
+                  ],
+                  "skillScope": "names",
+                  "skillNames": [
+                    "信号闪耀·强化前扑",
+                    "强化前扑",
+                    "信号闪耀·强化后撤",
+                    "强化后撤"
+                  ],
+                  "librarySkillNames": [
+                    "信号闪耀·强化前扑",
+                    "信号闪耀·强化后撤"
+                  ],
+                  "catalogIds": [],
+                  "damageType": "普攻",
+                  "effectType": "",
+                  "element": "导电",
+                  "defenseKind": "pen",
+                  "minStacks": 0,
+                  "minResonance": 0,
+                  "onlyCharacterIds": [],
+                  "onlyCombatModes": [],
+                  "effectKey": ""
+                }
+              ],
+              "sourceTag": "characterTemplate",
+              "templateKey": "tpl_ms277b3h_mdxix",
+              "gameText": "强化·前扑和强化·后撤攻击敌人时，无视对方20%的防御。"
+            }
+          ],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {},
+          "gameText": "强化·前扑和强化·后撤攻击敌人时，无视对方20%的防御。"
+        },
+        "3": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [
+            {
+              "category": "typeBonus",
+              "name": "3链",
+              "mode": "fixed",
+              "value": 30,
+              "perStack": 0,
+              "maxStacks": 5,
+              "damageType": "共鸣解放",
+              "element": "",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "sourceTag": "characterTemplate",
+              "templateKey": "tpl_ms279jc5_0ltfp",
+              "gameText": "共鸣解放啾啾专送造成的伤害提升30%。"
+            }
+          ],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {},
+          "gameText": "共鸣解放啾啾专送造成的伤害提升30%。"
+        },
+        "4": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [
+            {
+              "category": "typeBonus",
+              "name": "4链",
+              "mode": "fixed",
+              "value": 30,
+              "perStack": 0,
+              "maxStacks": 5,
+              "damageType": "普攻",
+              "element": "",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "sourceTag": "characterTemplate",
+              "templateKey": "tpl_ms279tdt_0kva4",
+              "gameText": "灯灯普攻伤害加成提升30%。"
+            }
+          ],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {},
+          "gameText": "灯灯普攻伤害加成提升30%。"
+        },
+        "5": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [
+            {
+              "category": "composite",
+              "name": "5链",
+              "mode": "fixed",
+              "value": 0,
+              "perStack": 0,
+              "maxStacks": 99,
+              "damageType": "",
+              "element": "",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "effects": [
+                {
+                  "zone": "multBoost",
+                  "valueMode": "fixed",
+                  "value": 100,
+                  "segments": [
+                    {
+                      "upTo": null,
+                      "perStack": 0
+                    }
+                  ],
+                  "skillScope": "names",
+                  "skillNames": [
+                    "信号闪耀·强光穿射每段",
+                    "强光穿射每段"
+                  ],
+                  "librarySkillNames": [
+                    "信号闪耀·强光穿射每段"
+                  ],
+                  "catalogIds": [],
+                  "damageType": "普攻",
+                  "effectType": "",
+                  "element": "导电",
+                  "defenseKind": "",
+                  "minStacks": 0,
+                  "minResonance": 0,
+                  "onlyCharacterIds": [],
+                  "onlyCombatModes": [],
+                  "effectKey": ""
+                }
+              ],
+              "sourceTag": "characterTemplate",
+              "templateKey": "tpl_ms27a8oi_x45wr",
+              "gameText": "【光能】充满时，强光穿射造成的伤害倍率提升100%。"
+            }
+          ],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {},
+          "gameText": "【光能】充满时，强光穿射造成的伤害倍率提升100%。"
+        },
+        "6": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [],
+          "teamBuffs": [
+            {
+              "category": "generalAttack",
+              "name": "灯灯·6链",
+              "mode": "fixed",
+              "value": 20,
+              "perStack": 0,
+              "maxStacks": 5,
+              "damageType": "",
+              "element": "",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "sourceTag": "characterTemplate",
+              "templateKey": "tpl_ms27ay7n_1zq6o",
+              "gameText": "施放共鸣解放啾啾专送时，队伍中的角色的攻击提升20%，持续20秒。"
+            }
+          ],
+          "extraSkills": [],
+          "combatModes": {},
+          "gameText": "施放共鸣解放啾啾专送时，队伍中的角色的攻击提升20%，持续20秒。"
+        }
+      },
+      "combatModes": {}
+    }
+  ]
+}

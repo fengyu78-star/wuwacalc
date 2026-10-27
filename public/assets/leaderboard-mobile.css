@@ -1,0 +1,107 @@
+/* Phone layout shares the desktop palette and ranking data. */
+.ranking-page .rk-mobile-jump{display:none}
+@media(max-width:750px){
+  .ranking-page.ranking-standalone .wrap>.app-topbar{min-height:48px;max-height:48px;height:48px;padding:0 16px;box-sizing:border-box}
+  .ranking-page .app-brand-logo{width:30px;height:30px}
+  .ranking-page .app-brand-cn{font-size:18px}
+  .ranking-page .app-brand-en{font-size:8px}
+  .ranking-page .rk-head-back{display:flex;align-items:center;min-height:44px;font-size:12px}
+  .ranking-page .wr-rank{padding:12px 16px 24px;max-width:100%;box-sizing:border-box}
+  .ranking-page .rk-crumb,.ranking-page .rk-subtitle{display:none}
+  .ranking-page .rk-intro{display:flex;gap:8px;margin:0 0 8px}
+  .ranking-page .rk-title-block{gap:12px;align-items:center}
+  .ranking-page .rk-config{font-size:32px;line-height:1;padding-right:12px}
+  .ranking-page h1{font-size:22px;letter-spacing:.5px;margin:0}
+  .ranking-page .rk-header-actions{gap:8px;align-items:center}
+  .ranking-page .rk-excel-submit{min-height:44px;padding:6px 10px;gap:8px;box-sizing:border-box}
+  .ranking-page .rk-excel-icon{width:19px;height:22px}
+  .ranking-page .rk-excel-label b{font-size:12px}
+  .ranking-page .rk-excel-label small,.ranking-page .rk-eligibility>div{display:none}
+  .ranking-page .rk-header-actions .rk-eligibility{flex:none}
+  .ranking-page .rk-header-actions .rk-rule{min-height:44px;font-size:12px;padding:0 4px}
+  .ranking-page .rk-browse-controls{display:grid;grid-template-columns:1fr auto;gap:6px 8px;padding:6px 0;margin:0}
+  .ranking-page .rk-difficulty-tabs{grid-column:1/-1;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:4px}
+  .ranking-page .rk-difficulty-tabs button{padding:6px 2px;min-height:44px;gap:3px;font-size:12px}
+  .ranking-page .rk-difficulty-tabs button small{font-size:10px}
+  .ranking-page .rk-team-switch{margin:0;justify-self:start;min-height:44px;padding:6px 8px;font-size:12px;border-color:transparent;background:transparent}
+  .ranking-page .rk-mobile-jump{display:flex;align-items:center;justify-content:center;min-height:44px;padding:0 8px;color:var(--rk-accent);font-size:13px;text-decoration:none;font-weight:600}
+  .ranking-page .rk-mobile-jump:focus-visible{outline:2px solid var(--rk-accent);outline-offset:2px}
+  .ranking-page .rk-board-heading{grid-template-columns:minmax(0,1fr) auto;gap:6px 8px;padding:6px 0 0;margin:0 0 12px}
+  .ranking-page .rk-board-heading>[data-count]{grid-row:1;line-height:1.5;font-size:10px}
+  .ranking-page .rk-board-heading>.rk-filters{grid-row:1;gap:4px}
+  .ranking-page .rk-refresh{min-height:44px;font-size:11px;padding:4px}
+  .ranking-page .rk-filters input{width:96px;height:36px;font-size:16px;padding:4px 7px}
+  .ranking-page .rk-board-caption{grid-row:2}
+  .ranking-page .rk-board-caption h2{font-size:20px;letter-spacing:0;line-height:1.4}
+  .ranking-page .rk-board-caption p{font-size:11px;margin-top:4px}
+  .ranking-standalone .cn-dossier{display:grid;grid-template-columns:minmax(0,1fr);gap:12px}
+  .ranking-standalone .cn-file{height:176px;min-height:0}
+  .ranking-standalone .cn-slide-window{height:132px}
+  .ranking-standalone .cn-file-slide:before{background:linear-gradient(90deg,#171b23e8,#171b2399 55%,#171b2333),linear-gradient(0deg,#171b23b0,transparent 75%)}
+  .ranking-standalone .cn-file-image{object-position:50% 32%}
+  .ranking-standalone .cn-file-top{padding:10px 12px;font-size:9px;letter-spacing:1px}
+  .ranking-standalone .cn-file-id,.ranking-standalone .cn-file-en,.ranking-standalone .cn-file-attribute,.ranking-standalone .cn-file .cn-file-stats{display:none}
+  .ranking-standalone .cn-file-rank{top:34px;left:10px;font-size:58px;letter-spacing:-3px}
+  .ranking-standalone .cn-file-copy{width:100%;padding:0 12px 4px 82px;box-sizing:border-box}
+  .ranking-standalone .cn-file-copy h2{font-size:25px;letter-spacing:2px;margin:0 0 4px;line-height:1.2}
+  .ranking-standalone .cn-feature-flow{margin:0;padding:0}
+  .ranking-standalone .cn-feature-flow h3{font-size:12px;line-height:1.4;margin:0;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+  .ranking-standalone .cn-file-bottom{margin:4px 0 0;padding:0;border:0;justify-content:flex-start;gap:12px}
+  .ranking-standalone .cn-file-bottom>.cn-team{display:none}
+  .ranking-standalone .cn-file-bottom .cn-button{min-height:30px;padding:3px 8px;font-size:11px}
+  .ranking-standalone .cn-carousel-controls{height:44px;padding:0 8px;gap:0;justify-content:center;box-sizing:border-box}
+  .ranking-standalone .cn-carousel-caption{display:none}
+  .ranking-standalone .cn-slide-dots{display:flex;justify-content:space-between;width:100%;gap:0}
+  .ranking-standalone .cn-slide-dots button{flex:1;min-width:0;height:44px;font-size:12px}
+  .ranking-standalone .cn-hover-arrow{display:none}
+  .ranking-standalone .cn-dossier-rail{height:auto;display:flex;flex-direction:column;scroll-margin-top:12px}
+  .ranking-standalone .cn-rail-head{min-height:48px;padding:0;gap:6px}
+  .ranking-standalone .cn-rail-title{gap:12px;min-width:0}
+  .ranking-standalone .cn-rail-head strong{font-size:13px;letter-spacing:0;white-space:nowrap}
+  .ranking-standalone .cn-category-tabs{gap:2px}
+  .ranking-standalone .cn-category-tabs button{min-width:40px;min-height:44px;font-size:12px;padding:0 5px}
+  .ranking-standalone .cn-rail-head>span{font-size:10px;white-space:nowrap}
+  .ranking-standalone .cn-select{grid-template-columns:30px 86px minmax(0,1fr) 80px;grid-template-rows:auto auto;gap:9px 6px;min-height:104px;height:auto;padding:13px 4px;align-items:center;box-sizing:border-box;min-width:0;width:100%}
+  .ranking-standalone .cn-select .cn-pos{grid-column:1;grid-row:1/3;align-self:center;padding:0}
+  .ranking-standalone .cn-select>.cn-team{grid-column:2;grid-row:1;gap:3px}
+  .ranking-standalone .cn-select .cn-team img{width:26px;height:32px}
+  .ranking-standalone .cn-entry-info{grid-column:3/5;grid-row:1;display:block;min-width:0}
+  .ranking-standalone .cn-entry-info>.cn-plan-name{font-size:13px;line-height:1.5;white-space:normal;letter-spacing:0}
+  .ranking-standalone .cn-select>.cn-tags{grid-column:2/4;grid-row:2;flex-direction:row;justify-content:flex-start;align-items:center;gap:14px}
+  .ranking-standalone .cn-select .cn-tag{display:flex;flex-direction:row;align-items:baseline;gap:5px;min-width:0;padding:0;border:0}
+  .ranking-standalone .cn-select .cn-tag small{font-size:11px;line-height:1.3}
+  .ranking-standalone .cn-select .cn-tag b{font-size:20px;line-height:1}
+  .ranking-standalone .cn-select .cn-tag b em{font-size:10px;margin-left:2px}
+  .ranking-standalone .cn-select .cn-rating-name{display:none}
+  .ranking-standalone .cn-entry-score{grid-column:4;grid-row:2}
+  .ranking-standalone .cn-entry-score b{font-size:25px;line-height:1}
+  .ranking-standalone .cn-entry-score small{font-size:10px;margin-top:4px;white-space:nowrap}
+  .ranking-standalone .cn-page-spacer{display:none}
+  .ranking-standalone .cn-ranking-pager{flex-wrap:wrap;gap:6px;padding:12px 0;font-size:12px}
+  .ranking-standalone .cn-ranking-pager>span{display:flex;align-items:center;gap:12px}
+  .ranking-standalone .cn-ranking-pager small{font-size:11px}
+  .ranking-standalone .cn-ranking-pager>div{width:100%;justify-content:space-between;gap:0}
+  .ranking-standalone .cn-ranking-pager button{height:44px;min-width:0;flex:1;font-size:15px}
+  .ranking-standalone dialog{width:calc(100% - 20px);max-width:540px;max-height:calc(100dvh - 24px);margin:auto;border-radius:10px;overflow:auto}
+  .ranking-standalone .rk-dialog-top{position:sticky;top:0;z-index:2;background:var(--rk-panel);padding:10px 14px;gap:12px}
+  .ranking-standalone .rk-dialog-top h2{font-size:16px;line-height:1.5}
+  .ranking-standalone .rk-close{width:44px;height:44px;flex:none}
+  .ranking-standalone .rk-dialog-body{padding:0 14px 20px}
+  .ranking-standalone .rk-dialog-body p,.ranking-standalone .cn-detail-description p{font-size:13px;line-height:1.8}
+  .ranking-standalone .cn-detail-cover{margin:0 -14px;height:130px}
+  .ranking-standalone .cn-scheme-code button,.ranking-standalone .cn-detail-video a{min-height:44px;box-sizing:border-box;display:inline-flex;align-items:center;font-size:12px}
+  .ranking-page .rk-statistics{margin-top:16px}
+  .ranking-page .rk-statistics summary span{font-size:11px}
+  .ranking-page .rk-statistics h3{font-size:14px}
+  .ranking-page .rk-statistics p{font-size:13px}
+}
+@media(max-width:360px){
+  .ranking-page .wr-rank{padding-left:12px;padding-right:12px}
+  .ranking-page h1{font-size:20px}
+  .ranking-standalone .cn-select{grid-template-columns:26px 77px minmax(0,1fr) 72px;gap:8px 4px}
+  .ranking-standalone .cn-select .cn-team img{width:23px;height:29px}
+  .ranking-standalone .cn-select>.cn-tags{gap:8px}
+  .ranking-standalone .cn-rail-title{gap:4px}
+  .ranking-standalone .cn-rail-head>span{display:none}
+}
+@media(prefers-reduced-motion:reduce){.ranking-standalone .cn-slide-track{transition:none}}

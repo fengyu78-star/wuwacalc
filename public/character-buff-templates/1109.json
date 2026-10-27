@@ -1,0 +1,478 @@
+{
+  "version": 1,
+  "kind": "shard",
+  "characterId": "1109",
+  "characterName": "洛瑟菈",
+  "templates": [
+    {
+      "characterId": "1109",
+      "characterName": "洛瑟菈",
+      "revision": 4,
+      "author": "",
+      "notes": "",
+      "personalBuffs": [],
+      "teamBuffs": [],
+      "extraSkills": [],
+      "resonanceChains": {
+        "1": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [
+            {
+              "category": "generalCritRate",
+              "name": "1链",
+              "mode": "fixed",
+              "value": 20,
+              "perStack": 0,
+              "maxStacks": 5,
+              "damageType": "",
+              "element": "",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "sourceTag": "characterTemplate",
+              "templateKey": "tpl_mrz91s99_qcecf",
+              "gameText": "施放共鸣技能·幻象定帧展开聚焦环期间，指针首次进入完美焦距时将立即使完美焦距充满聚焦环。\n施放共鸣技能·追光时，洛瑟菈的暴击提升20%，持续10秒。\n共鸣技能·幻象定帧、普攻·溯念留形第3段免疫打断。"
+            }
+          ],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {
+            "frost": {
+              "notes": "",
+              "personalBuffs": [],
+              "teamBuffs": [],
+              "extraSkills": []
+            },
+            "echo": {
+              "notes": "",
+              "personalBuffs": [],
+              "teamBuffs": [],
+              "extraSkills": []
+            }
+          },
+          "gameText": "施放共鸣技能·幻象定帧展开聚焦环期间，指针首次进入完美焦距时将立即使完美焦距充满聚焦环。\n施放共鸣技能·追光时，洛瑟菈的暴击提升20%，持续10秒。\n共鸣技能·幻象定帧、普攻·溯念留形第3段免疫打断。"
+        },
+        "2": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {
+            "frost": {
+              "notes": "",
+              "personalBuffs": [],
+              "teamBuffs": [
+                {
+                  "category": "typeDeep",
+                  "name": "2链",
+                  "mode": "fixed",
+                  "value": 80,
+                  "perStack": 0,
+                  "maxStacks": 5,
+                  "damageType": "效应",
+                  "element": "",
+                  "defenseKind": "",
+                  "convergenceVuln": "",
+                  "sourceTag": "characterTemplate",
+                  "templateKey": "tpl_mrz9sz4p_wrfef",
+                  "effectType": "霜渐",
+                  "gameText": "施放共鸣解放·历历在目时，洛瑟菈将根据共鸣模态提供额外的强化效果：\n·处于共鸣模态·霜渐时，队伍中登场角色一定范围内的目标受到【霜渐效应】的伤害加深80%。\n·处于共鸣模态·声骸时，队伍中角色的声骸技能伤害加成提升40%。\n追忆状态持续期间，上述效果持续存在。退出追忆状态后，上述效果保留30秒。\n洛瑟菈切换模态时，上述效果提前结束。"
+                }
+              ],
+              "extraSkills": []
+            },
+            "echo": {
+              "notes": "",
+              "personalBuffs": [],
+              "teamBuffs": [
+                {
+                  "category": "typeBonus",
+                  "name": "2链",
+                  "mode": "fixed",
+                  "value": 40,
+                  "perStack": 0,
+                  "maxStacks": 5,
+                  "damageType": "声骸",
+                  "element": "",
+                  "defenseKind": "",
+                  "convergenceVuln": "",
+                  "sourceTag": "characterTemplate",
+                  "templateKey": "tpl_mrz9th1p_b9xt0",
+                  "gameText": "施放共鸣解放·历历在目时，洛瑟菈将根据共鸣模态提供额外的强化效果：\n·处于共鸣模态·霜渐时，队伍中登场角色一定范围内的目标受到【霜渐效应】的伤害加深80%。\n·处于共鸣模态·声骸时，队伍中角色的声骸技能伤害加成提升40%。\n追忆状态持续期间，上述效果持续存在。退出追忆状态后，上述效果保留30秒。\n洛瑟菈切换模态时，上述效果提前结束。"
+                }
+              ],
+              "extraSkills": []
+            }
+          },
+          "gameText": "施放共鸣解放·历历在目时，洛瑟菈将根据共鸣模态提供额外的强化效果：\n·处于共鸣模态·霜渐时，队伍中登场角色一定范围内的目标受到【霜渐效应】的伤害加深80%。\n·处于共鸣模态·声骸时，队伍中角色的声骸技能伤害加成提升40%。\n追忆状态持续期间，上述效果持续存在。退出追忆状态后，上述效果保留30秒。\n洛瑟菈切换模态时，上述效果提前结束。"
+        },
+        "3": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [
+            {
+              "category": "composite",
+              "name": "3链",
+              "mode": "fixed",
+              "value": 0,
+              "perStack": 0,
+              "maxStacks": 99,
+              "damageType": "",
+              "element": "",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "effects": [
+                {
+                  "zone": "multBoost",
+                  "valueMode": "fixed",
+                  "value": 100,
+                  "segments": [
+                    {
+                      "upTo": null,
+                      "perStack": 0
+                    }
+                  ],
+                  "skillScope": "names",
+                  "skillNames": [
+                    "历历在目·断舍离",
+                    "断舍离"
+                  ],
+                  "librarySkillNames": [
+                    "历历在目·断舍离"
+                  ],
+                  "catalogIds": [],
+                  "damageType": "声骸",
+                  "effectType": "",
+                  "element": "冷凝",
+                  "defenseKind": "",
+                  "minStacks": 0,
+                  "minResonance": 0,
+                  "onlyCharacterIds": [],
+                  "onlyCombatModes": [],
+                  "effectKey": ""
+                }
+              ],
+              "sourceTag": "characterTemplate",
+              "templateKey": "tpl_mrz96888_5ux57",
+              "gameText": "断舍离的伤害倍率提升100%。"
+            }
+          ],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {
+            "frost": {
+              "notes": "",
+              "personalBuffs": [],
+              "teamBuffs": [],
+              "extraSkills": []
+            },
+            "echo": {
+              "notes": "",
+              "personalBuffs": [],
+              "teamBuffs": [],
+              "extraSkills": []
+            }
+          },
+          "gameText": "断舍离的伤害倍率提升100%。"
+        },
+        "4": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [
+            {
+              "category": "generalAttack",
+              "name": "4链·释放遗忘时",
+              "mode": "stack",
+              "value": 0,
+              "perStack": 10,
+              "maxStacks": 3,
+              "damageType": "",
+              "element": "",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "sourceTag": "characterTemplate",
+              "templateKey": "tpl_mrz96y9w_1ua62",
+              "gameText": "遗忘命中将牵引周围的目标。施放遗忘时，洛瑟菈的攻击提升10%，可叠加3层，持续6秒，持续时间结束清除全部层数。\n施放普攻·溯念留形第3段时，洛瑟菈受到的伤害降低30%。"
+            }
+          ],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {
+            "frost": {
+              "notes": "",
+              "personalBuffs": [],
+              "teamBuffs": [],
+              "extraSkills": []
+            },
+            "echo": {
+              "notes": "",
+              "personalBuffs": [],
+              "teamBuffs": [],
+              "extraSkills": []
+            }
+          },
+          "gameText": "遗忘命中将牵引周围的目标。施放遗忘时，洛瑟菈的攻击提升10%，可叠加3层，持续6秒，持续时间结束清除全部层数。\n施放普攻·溯念留形第3段时，洛瑟菈受到的伤害降低30%。"
+        },
+        "5": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [
+            {
+              "category": "composite",
+              "name": "5链",
+              "mode": "fixed",
+              "value": 0,
+              "perStack": 0,
+              "maxStacks": 99,
+              "damageType": "",
+              "element": "",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "effects": [
+                {
+                  "zone": "multBoost",
+                  "valueMode": "fixed",
+                  "value": 50,
+                  "segments": [
+                    {
+                      "upTo": null,
+                      "perStack": 0
+                    }
+                  ],
+                  "skillScope": "names",
+                  "skillNames": [
+                    "记忆宫殿·遗忘",
+                    "遗忘"
+                  ],
+                  "librarySkillNames": [
+                    "记忆宫殿·遗忘"
+                  ],
+                  "catalogIds": [],
+                  "damageType": "声骸",
+                  "effectType": "",
+                  "element": "冷凝",
+                  "defenseKind": "",
+                  "minStacks": 0,
+                  "minResonance": 0,
+                  "onlyCharacterIds": [],
+                  "onlyCombatModes": [],
+                  "effectKey": ""
+                }
+              ],
+              "sourceTag": "characterTemplate",
+              "templateKey": "tpl_mrz98zli_czg5u",
+              "gameText": "遗忘的伤害倍率提升50%。"
+            }
+          ],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {
+            "frost": {
+              "notes": "",
+              "personalBuffs": [],
+              "teamBuffs": [],
+              "extraSkills": []
+            },
+            "echo": {
+              "notes": "",
+              "personalBuffs": [],
+              "teamBuffs": [],
+              "extraSkills": []
+            }
+          },
+          "gameText": "遗忘的伤害倍率提升50%。"
+        },
+        "6": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [
+            {
+              "category": "composite",
+              "name": "6链·铭记",
+              "mode": "stack",
+              "value": 0,
+              "perStack": 0,
+              "maxStacks": 3,
+              "damageType": "",
+              "element": "",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "effects": [
+                {
+                  "zone": "generalBonus",
+                  "valueMode": "stack",
+                  "value": 0,
+                  "segments": [
+                    {
+                      "upTo": 3,
+                      "perStack": 200
+                    }
+                  ],
+                  "skillScope": "all",
+                  "skillNames": [],
+                  "librarySkillNames": [],
+                  "catalogIds": [],
+                  "damageType": "",
+                  "effectType": "",
+                  "element": "",
+                  "defenseKind": "",
+                  "minStacks": 0,
+                  "minResonance": 0,
+                  "onlyCharacterIds": [],
+                  "onlyCombatModes": [],
+                  "effectKey": ""
+                }
+              ],
+              "sourceTag": "characterTemplate",
+              "templateKey": "tpl_mrz9cpri_doy0h",
+              "gameText": "追忆状态持续期间，洛瑟菈每次消耗【照片】将获得1层铭记，可叠加3层。每层铭记使断舍离造成的伤害提升200%，至多提升600%。施放断舍离后清除全部的铭记层数。\n若洛瑟菈在追忆状态持续期间击败了任意目标，将获得怀恋：退出追忆状态且处于非战斗状态时，消耗怀恋，洛瑟菈回复150点【印象】。",
+              "clampStacks": true
+            }
+          ],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {
+            "frost": {
+              "notes": "",
+              "personalBuffs": [],
+              "teamBuffs": [],
+              "extraSkills": []
+            },
+            "echo": {
+              "notes": "",
+              "personalBuffs": [],
+              "teamBuffs": [],
+              "extraSkills": []
+            }
+          },
+          "gameText": "追忆状态持续期间，洛瑟菈每次消耗【照片】将获得1层铭记，可叠加3层。每层铭记使断舍离造成的伤害提升200%，至多提升600%。施放断舍离后清除全部的铭记层数。\n若洛瑟菈在追忆状态持续期间击败了任意目标，将获得怀恋：退出追忆状态且处于非战斗状态时，消耗怀恋，洛瑟菈回复150点【印象】。"
+        }
+      },
+      "combatModes": {
+        "frost": {
+          "notes": "",
+          "personalBuffs": [
+            {
+              "category": "typeBonus",
+              "name": "追忆状态",
+              "mode": "fixed",
+              "value": 30,
+              "perStack": 0,
+              "maxStacks": 5,
+              "damageType": "普攻",
+              "element": "",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "sourceTag": "characterTemplate",
+              "templateKey": "tpl_mrz8lbh2_uqxd8",
+              "gameText": "造成冷凝伤害并进入追忆状态：\n·处于共鸣模态·霜渐时，此次伤害为普攻伤害。施放该技能时洛瑟菈的普攻伤害加成提升30%，持续10秒。"
+            }
+          ],
+          "teamBuffs": [
+            {
+              "templateKey": "losera_team_res_reduce",
+              "category": "elementResReduce",
+              "name": "洛瑟菈·全队·霜渐",
+              "mode": "fixed",
+              "value": 8,
+              "damageType": "",
+              "element": "冷凝",
+              "defenseKind": "",
+              "gameText": "处于共鸣模态·霜渐时，队伍中登场角色一定范围内的目标冷凝抗性降低8%，持续30秒。",
+              "sourceTag": "characterTemplate",
+              "perStack": 0,
+              "maxStacks": 5
+            },
+            {
+              "category": "typeDeep",
+              "name": "洛瑟拉·延奏",
+              "mode": "fixed",
+              "value": 60,
+              "perStack": 0,
+              "maxStacks": 5,
+              "damageType": "效应",
+              "element": "",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "sourceTag": "characterTemplate",
+              "templateKey": "tpl_mrz8t8iz_b7ayc",
+              "effectType": "霜渐",
+              "gameText": "处于共鸣模态·霜渐时，队伍中登场角色一定范围内的目标受到【霜渐效应】的伤害加深60%，持续30秒。\n洛瑟菈切换模态时，该效果提前结束。"
+            }
+          ],
+          "extraSkills": []
+        },
+        "echo": {
+          "notes": "",
+          "personalBuffs": [
+            {
+              "category": "typeBonus",
+              "name": "追忆状态",
+              "mode": "fixed",
+              "value": 30,
+              "perStack": 0,
+              "maxStacks": 5,
+              "damageType": "声骸",
+              "element": "",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "sourceTag": "characterTemplate",
+              "templateKey": "tpl_mrz8kn03_qgp2q",
+              "gameText": "历历在目\n造成冷凝伤害并进入追忆状态：\n·处于共鸣模态·声骸时，此次伤害为声骸技能伤害。施放该技能时洛瑟菈的声骸技能伤害加成提升30%，持续10秒。"
+            }
+          ],
+          "teamBuffs": [
+            {
+              "category": "typeBonus",
+              "name": "固有1·声骸",
+              "mode": "fixed",
+              "value": 25,
+              "perStack": 0,
+              "maxStacks": 5,
+              "damageType": "声骸",
+              "element": "",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "sourceTag": "characterTemplate",
+              "templateKey": "tpl_mrz8nqlw_4qp47",
+              "gameText": "处于共鸣模态·声骸时，队伍中的角色声骸技能伤害加成提升25%，持续30秒。\n洛瑟菈切换模态时，上述效果提前结束。"
+            },
+            {
+              "category": "typeDeep",
+              "name": "洛瑟拉·延奏",
+              "mode": "fixed",
+              "value": 50,
+              "perStack": 0,
+              "maxStacks": 5,
+              "damageType": "声骸",
+              "element": "",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "sourceTag": "characterTemplate",
+              "templateKey": "tpl_mrz8p6dr_484b3",
+              "gameText": "处于共鸣模态·声骸时，下一个登场角色声骸技能伤害加深50%，持续14秒。\n切换至其他角色或洛瑟菈切换模态时，该效果提前结束。"
+            },
+            {
+              "category": "typeCritDmg",
+              "name": "变焦",
+              "mode": "stack",
+              "value": 0,
+              "perStack": 10,
+              "maxStacks": 4,
+              "damageType": "声骸",
+              "element": "",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "sourceTag": "characterTemplate",
+              "templateKey": "tpl_mrz8jcir_pzd3o",
+              "gameText": "胶卷的可叠加层数上限增加至10层，变焦的可叠加层数上限增加至4层。\n洛瑟菈每次消耗【照片】时，若处于共鸣模态·霜渐/共鸣模态·声骸，获得2层胶卷/1层变焦。\n每层变焦使队伍中登场角色造成声骸技能伤害的暴击伤害提升10%，最多40%。",
+              "clampStacks": true
+            }
+          ],
+          "extraSkills": []
+        }
+      }
+    }
+  ]
+}

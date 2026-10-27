@@ -1,0 +1,353 @@
+/* Dark-only preview. Ivory assets remain available for a later return. */
+#themeSwitcher{display:none!important}
+.buff-check-page{--surface:#111b29;--surface-2:#192638;--text-primary:#e1e9f1;--text:#e1e9f1;--text-muted:#98a9bb;--muted:#98a9bb;--border:#9bb2ce28;--accent:#d0b77a;font-family:'Microsoft YaHei UI','Microsoft YaHei',sans-serif!important;display:flex;flex-direction:column;gap:22px;padding:22px!important;min-width:0;color:#dce5ef}
+.buff-check-page .buff-check-team-card.team-shared-buff-section{background:linear-gradient(130deg,#172435ed,#101a27f2)!important;border:1px solid #93a9c432!important;border-radius:12px!important;padding:18px!important;box-shadow:inset 0 1px #e5efff0b,0 12px 28px #0002!important;margin:0!important}
+.buff-check-page .buff-check-team-card-head{padding:0 0 14px!important;margin-bottom:14px;border-bottom:1px solid #a8bfd124!important;display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.buff-check-page .buff-check-team-title{font-size:19px!important;font-weight:600;color:#e5edf5!important}
+.buff-check-page :is(.hint,.buff-check-team-hint,.buff-check-source-hint,.buff-check-muted-hint){color:#98a9bb!important;font-size:12px!important;line-height:1.65}
+.buff-check-page .buff-check-matrix-wrap{padding:0!important;background:transparent!important;border:0!important;box-shadow:none!important}
+.buff-check-page .weapon-team-buff-matrix{background:transparent!important;border:0!important;padding:0!important}
+.buff-check-page .weapon-team-buff-matrix-title{display:none}
+.buff-check-page .buff-source-board{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;align-items:start!important;gap:14px!important}
+.buff-check-page .buff-source-card{background:#101a28e6!important;border:1px solid #91abc332!important;border-radius:9px!important;box-shadow:none!important;min-width:0;align-self:start}
+.buff-check-page .buff-source-card.is-empty{min-height:58px!important;height:auto!important;opacity:.65}
+.buff-check-page .buff-source-card>.card-header{background:#a8c9ef08!important;border-color:#91abc326!important;padding:12px!important}
+.buff-check-page :is(.card-header__title,.buff-check-member-name){color:#e3ebf4!important;font-weight:600}
+.buff-check-page .buff-source-card :is(.fixed-label-col,.scrollable-buff-area,.label-header,.label){background:#111c2b!important;border-color:#91abc326!important;box-shadow:none!important}
+.buff-check-page .buff-grid__buff-head{color:#b9cce1!important;font-size:12px!important}
+.buff-check-page .buff-grid__cell{border-color:#8ca5c01c!important}
+.buff-check-page .buff-check-source-block{margin-top:16px;padding-top:12px;border-top:1px solid #a8bfd124}
+.buff-check-page .buff-check-personal-section{margin:0!important;padding:0!important;gap:12px}
+.buff-check-page .buff-check-personal-section::before{display:none!important}
+.buff-check-page .buff-check-personal-grid{gap:14px!important;align-items:start}
+.buff-check-page .buff-check-member-col{background:linear-gradient(145deg,#182538ed,#111b28f5)!important;border:1px solid #91abc332!important;border-radius:12px!important;padding:16px!important;box-shadow:inset 0 1px #e5efff08!important}
+.buff-check-page .buff-check-member-head{padding-bottom:12px!important;border-color:#91abc332!important}
+.buff-check-page .buff-check-subpanel{background:transparent!important;box-shadow:none!important;border:0!important}
+.buff-check-page .setup-sec-title{color:#c7d7e7!important;font-size:14px!important}
+.buff-check-page .buff-check-group-tabs.buff-group-tabs{flex-wrap:wrap!important;overflow:visible!important;gap:4px!important;padding-bottom:10px!important}
+.buff-check-page :is(.buff-group-tab,.buff-sub-tab){font-size:12px!important;padding:6px 9px!important;color:#a9b9cb!important}
+.buff-check-page :is(.buff-group-tab.active,.buff-sub-tab.active){background:#d0b77a16!important;color:#dcc58f!important;border-color:#cbb77b!important}
+.buff-check-page :is(.buff-entry,.buff-zone,.stats-overview-bar){background:#0b152266!important;border-color:#91abc32b!important;border-radius:7px}
+.buff-check-page :is(.buff-zone-title,.stats-overview-label){color:#b1c3d5!important}
+.buff-check-page :is(.stats-overview-value,.stats-overview-main){color:#c8e5f5!important;font-family:Consolas,monospace}
+.buff-check-page :is(button,input,select){font-family:inherit}
+.buff-check-page .buff-check-source-toggle,.buff-check-page .buff-check-add-btn{background:#a5c0df0b!important;border:1px solid #a5c0df32!important;border-radius:6px;color:#d0dce8!important}
+@media(max-width:1350px){.buff-check-page .buff-source-board{grid-template-columns:repeat(2,minmax(0,1fr))!important}}
+/* Sparse teams use the full table width, with empty sources as compact rows below. */
+.buff-check-page .buff-source-board:has(>.is-empty):not(:has(>.buff-source-card:not(.is-empty)~.buff-source-card:not(.is-empty)))>.buff-source-card:not(.is-empty){grid-column:1/-1}
+.buff-check-page .buff-check-team-card.team-shared-buff-section{background:linear-gradient(130deg,#172435fa,#101a27fc)!important}
+.buff-check-page .buff-check-member-col{background:linear-gradient(145deg,#182538fa,#111b28fc)!important}
+.buff-check-page .buff-check-personal-section>.setup-sec-title{font-size:17px!important}
+/* Member workspace: wide editor paired with its own live statistics. */
+.buff-check-page .local-buff-member-tabs{display:flex;gap:10px;margin:14px 0 16px;border-bottom:1px solid #a8bfd124;padding-bottom:14px}
+.buff-check-page .local-buff-member-tab{display:flex;align-items:center;gap:12px;flex:1;min-width:0;max-width:320px;text-align:left;padding:12px 16px;border:1px solid #8fa7c22a;border-radius:9px;background:#111c2be8;color:#c2d0df;cursor:pointer;transition:background .18s,border-color .18s}
+.buff-check-page .local-buff-member-tab img{height:42px;width:42px;object-fit:cover;border-radius:7px}
+.buff-check-page .local-buff-member-tab span{display:grid;gap:5px}
+.buff-check-page .local-buff-member-tab small{font-size:11px;color:#93a5b9;letter-spacing:.08em}
+.buff-check-page .local-buff-member-tab strong{font-size:15px;font-weight:600}
+.buff-check-page .local-buff-member-tab[aria-selected="true"]{border-color:#c9af7080;background:linear-gradient(110deg,#36372f,#18283c);box-shadow:inset 3px 0 #cfb577;color:#ecd9a8}
+.buff-check-page .local-buff-member-tab:hover{border-color:#b0c6df80}
+.buff-check-page .local-buff-member-tab:focus-visible{outline:2px solid #c9b27b;outline-offset:3px}
+.buff-check-page .local-buff-tabbed .buff-check-personal-grid{display:block!important}
+.buff-check-page .local-buff-tabbed .buff-check-member-col{display:grid!important;grid-template-columns:minmax(0,1fr) minmax(260px,32%);gap:24px!important;padding:22px!important;overflow:visible!important}
+.buff-check-page .local-buff-tabbed .buff-check-member-col[hidden]{display:none!important}
+.buff-check-page .local-buff-tabbed .buff-check-member-head{display:none!important}
+.buff-check-page .local-buff-tabbed .setup-panel-buff{min-width:0;padding:0!important;margin:0!important}
+.buff-check-page .local-buff-tabbed .setup-panel-buff-stats{min-width:0;margin:0!important;padding:18px!important;border:1px solid #91abc326!important;border-radius:10px!important;background:#0c1623e8!important;align-self:start;position:sticky;top:82px;max-height:calc(100vh - 105px);overflow:auto}
+.buff-check-page .local-buff-tabbed .setup-sec-title{font-size:16px!important;margin-bottom:14px}
+.buff-check-page .local-buff-tabbed .buff-check-group-tabs{gap:6px!important;padding:0 0 14px!important;border-bottom:1px solid #a8bfd11c}
+.buff-check-page .local-buff-tabbed .buff-group-tab{padding:8px 12px!important;font-size:13px!important}
+.buff-check-page .local-buff-tabbed .buff-list{min-height:140px}
+.buff-check-page .local-buff-tabbed .buff-entry{padding:12px!important;margin-bottom:8px!important}
+.buff-check-page .local-buff-tabbed .buff-check-add-btn{padding:8px 13px!important;font-size:13px!important}
+/* Character subpages share the original source editor, never duplicate live controls. */
+.buff-check-page.local-buff-subpages{gap:16px;background:#0e1722e8;border-radius:14px}
+.local-buff-subpages .local-buff-member-tabs{margin:0!important;padding:0 0 16px;position:sticky;top:66px;z-index:10;background:#101925}
+.local-buff-subpages .local-buff-workspace{display:grid;gap:18px}
+.local-buff-subpages [hidden]{display:none!important}
+.local-buff-subpages .local-buff-identity{display:flex;gap:20px;align-items:center;min-height:120px;padding:18px 24px;border-left:3px solid #c9b077;background:linear-gradient(110deg,#213248,#131d2c 75%);position:relative;overflow:hidden;border-radius:4px 12px 12px 4px}
+.local-buff-subpages .local-buff-identity::after{content:'BUFF';position:absolute;right:20px;bottom:-18px;font:700 110px/1 Consolas,monospace;letter-spacing:.1em;color:#94b9df08;pointer-events:none}
+.local-buff-subpages .local-buff-identity img{height:80px;width:80px;object-fit:cover;border-radius:10px;border:1px solid #bdcddd45}
+.local-buff-subpages .local-buff-identity small{color:#baa77b;font-size:11px;letter-spacing:.1em}
+.local-buff-subpages .local-buff-identity h2{margin:7px 0;font-size:25px;color:#e6edf4;font-weight:600}
+.local-buff-subpages .local-buff-identity p{margin:0;color:#9eafc0;font-size:12px}
+.local-buff-subpages .buff-source-board{grid-template-columns:minmax(0,1fr)!important}
+.local-buff-subpages .buff-source-card{grid-column:1/-1}
+.local-buff-subpages .buff-check-personal-section>.setup-sec-title{display:none!important}
+.local-buff-subpages .buff-check-matrix-wrap .weapon-team-buff-matrix>p{font-size:12px;color:#98a9bb;line-height:1.7}
+.local-buff-subpages .team-shared-buff-body>.buff-check-block:first-child>.setup-sec-title{display:none!important}
+.local-buff-subpages .buff-check-source-hint{max-width:520px}
+.local-buff-subpages .local-buff-tabbed .buff-check-member-col{grid-template-columns:minmax(0,1fr) minmax(290px,34%);gap:20px!important}
+.local-buff-subpages .local-buff-tabbed .setup-panel-buff-stats{top:174px;max-height:calc(100vh - 195px)}
+.local-buff-environment{padding:32px;border:1px solid #98aec22c;border-radius:12px;background:linear-gradient(145deg,#1e2c40,#101925);min-height:470px}
+.local-env-label{font-size:12px;letter-spacing:.12em;color:#c8b683}
+.local-buff-environment h2{font-size:28px;color:#e2eaf2;margin:10px 0}
+.local-env-intro{font-size:13px;color:#9eafc0}
+.local-env-empty{margin-top:36px;padding:35px;text-align:center;border:1px dashed #a5bbce30;border-radius:10px;background:#0b152255}
+.local-env-empty>span{font-size:38px;color:#99bce1}
+.local-env-empty h3{font-size:18px;font-weight:500;color:#d5e1ec}
+.local-env-empty p{font-size:13px;color:#a3b5c9}
+.local-env-empty small{display:inline-block;margin-top:16px;border-radius:20px;padding:7px 14px;background:#b4c9df0b;color:#8fa5ba}
+/* Compact two-column Buff workspace. Keep member ancestry for delegated events. */
+body:has(.local-buff-subpages) #local-aero-background{opacity:.16}
+.buff-check-page.local-buff-subpages{background:#101720f5;gap:12px;padding:18px!important}
+.local-buff-subpages .local-buff-member-tabs{position:relative;top:auto;background:transparent;padding-bottom:12px;gap:6px}
+.local-buff-subpages .local-buff-member-tab{padding:9px 12px;border-radius:6px;background:#131d29;max-width:none}
+.local-buff-subpages .local-buff-member-tab img{width:34px;height:34px}
+.local-buff-subpages .local-buff-member-tab strong{font-size:14px}
+.local-buff-subpages .local-buff-workspace{grid-template-columns:minmax(0,3fr) minmax(320px,2fr);grid-template-rows:auto auto 1fr;gap:16px;align-items:start}
+.local-buff-subpages .local-buff-identity{grid-column:1/-1;min-height:0;padding:3px 0 9px;border:0;background:none;border-radius:0}
+.local-buff-subpages .local-buff-identity :is(img,small,p),.local-buff-subpages .local-buff-identity::after{display:none}
+.local-buff-subpages .local-buff-identity h2{margin:0;font-size:18px;letter-spacing:.02em}
+.local-buff-subpages .local-buff-identity h2::after{content:' / Buff 配置';font-size:13px;font-weight:400;color:#8296aa}
+.local-buff-subpages .buff-check-team-card.team-shared-buff-section{grid-column:1;grid-row:2;padding:16px!important;background:#17222f!important;border-radius:8px!important;box-shadow:none!important}
+.local-buff-subpages .buff-check-team-card-head{gap:8px;margin-bottom:10px;padding-bottom:10px!important}
+.local-buff-subpages .buff-check-team-title{font-size:16px!important}
+.local-buff-subpages .buff-check-team-hint{margin-left:0;font-size:11px!important}
+.local-buff-subpages .buff-check-matrix-wrap .weapon-team-buff-matrix>p{display:none}
+.local-buff-subpages .buff-source-card:not(.is-empty)>.card-header{display:none!important}
+.local-buff-subpages .buff-source-card{border:0!important;border-radius:0!important;background:transparent!important}
+.local-buff-subpages .buff-check-source-block{margin-top:10px;padding-top:10px}
+.local-buff-subpages .buff-check-source-hint{display:none}
+.local-buff-subpages .buff-check-personal-section.local-buff-tabbed,.local-buff-subpages .local-buff-tabbed .buff-check-personal-grid,.local-buff-subpages .local-buff-tabbed .buff-check-member-col:not([hidden]){display:contents!important}
+.local-buff-subpages .local-buff-tabbed .setup-panel-buff{grid-column:1;grid-row:3;display:grid!important;grid-template-columns:95px minmax(0,1fr);grid-template-rows:auto auto auto 1fr auto;gap:12px 16px;padding:16px!important;border:1px solid #91abc326!important;border-radius:8px!important;background:#17222f!important;align-items:start}
+.local-buff-subpages .local-buff-tabbed .setup-panel-buff>.setup-sec-title{grid-column:1/-1;margin:0 0 4px!important}
+.local-buff-subpages .local-buff-tabbed .setup-panel-buff>.buff-check-group-tabs{grid-column:1;grid-row:2/6;display:flex!important;flex-direction:column;gap:2px!important;border:0;border-right:1px solid #91abc326;padding:0 12px 0 0!important;align-items:stretch}
+.local-buff-subpages .local-buff-tabbed .buff-group-tab{padding:7px 8px!important;text-align:left;border-radius:4px;font-size:13px!important}
+.local-buff-subpages .local-buff-tabbed .setup-panel-buff>:is(.buff-sub-tabs,.buff-list,.buff-add-row,p){grid-column:2;margin:0!important}
+.local-buff-subpages .local-buff-tabbed .buff-list{min-height:0!important;padding:10px 0!important}
+.local-buff-subpages .local-buff-tabbed .setup-panel-buff-stats{grid-column:2;grid-row:2/4;position:static;max-height:none!important;height:auto!important;overflow:visible!important;padding:18px!important;background:#101b27!important;border-radius:8px!important;box-shadow:none!important}
+.local-buff-subpages .setup-panel-buff-stats .buff-zone{background:transparent!important;border:0!important;border-top:1px solid #91abc326!important;border-radius:0!important;box-shadow:none!important;padding:14px 0!important;margin:12px 0 0!important}
+.local-buff-subpages .setup-panel-buff-stats :is(.stat-item,.stat-chip){white-space:normal!important;max-width:100%;height:auto!important}
+.local-buff-subpages .setup-panel-buff-stats [data-buff-game-text-id]{white-space:normal!important;text-overflow:clip!important;overflow:visible!important;max-width:none!important;line-height:1.5}
+.local-buff-subpages .setup-panel-buff-stats .stat-card{background:none!important;border:0!important;border-top:1px solid #8aa4bd30!important;border-radius:0!important;box-shadow:none!important;margin:0!important;padding:15px 0!important}
+.local-buff-subpages .setup-panel-buff-stats .stat-card-header{padding:0 0 10px!important;border:0!important}
+.local-buff-subpages .setup-panel-buff-stats .stat-card-body{padding:0!important}
+.local-buff-subpages .setup-panel-buff-stats .stat-card-list{gap:0!important}
+.local-buff-subpages .setup-panel-buff-stats .stat-card::before{display:none!important}
+.local-buff-subpages .local-buff-tabbed .setup-panel-buff{grid-template-rows:auto auto auto auto 1fr}
+.local-buff-subpages .local-buff-tabbed .buff-list:has(>.buff-check-empty){align-self:start}
+/* Single-character worksheet: one reading direction and one row per Buff. */
+.local-buff-subpages .local-buff-workspace{grid-template-columns:minmax(0,1fr);grid-template-rows:auto auto auto auto auto;gap:12px}
+.local-buff-subpages .local-buff-identity{grid-column:1;grid-row:1}
+.local-buff-subpages .local-buff-overview{grid-column:1;grid-row:2;display:flex!important;justify-content:flex-start;gap:24px;background:none!important;border:0!important;padding:0 0 10px!important;margin:0!important;border-bottom:1px solid #8aa4bd30!important}
+.local-buff-subpages .buff-check-team-card.team-shared-buff-section{grid-column:1;grid-row:3}
+.local-buff-subpages .local-buff-tabbed .setup-panel-buff{grid-column:1;grid-row:4;display:flex!important;flex-direction:column;gap:12px;min-height:0!important}
+.local-buff-subpages .local-buff-tabbed .setup-panel-buff>.buff-check-group-tabs{display:flex!important;flex-direction:row;flex-wrap:wrap!important;border:0;border-bottom:1px solid #91abc326;padding:0 0 8px!important;width:100%;gap:4px!important}
+.local-buff-subpages .local-buff-tabbed .buff-group-tab{padding:7px 11px!important}
+.local-buff-subpages .local-buff-tabbed .buff-list{width:100%;min-height:0!important;padding:0!important}
+.local-buff-subpages .buff-check-empty{padding:12px 0!important;min-height:0!important;text-align:left!important}
+.local-buff-subpages .local-buff-tabbed .setup-panel-buff-stats{grid-column:1;grid-row:5;padding:14px 16px!important}
+.local-buff-details>summary{cursor:pointer;color:#dce5ef;font-size:15px;font-weight:600;padding:4px 0}
+.local-buff-details[open]>summary{margin-bottom:16px}
+.local-buff-details .setup-sec-title{display:none}
+.local-buff-subpages .buff-source-card .card-body{display:block!important;padding:0!important;overflow-x:auto}
+.local-buff-subpages .buff-source-card{transform:none!important}
+.local-buff-table{width:100%;border-collapse:collapse;table-layout:fixed;font-size:13px}
+.local-buff-table th:first-child{width:55%;text-align:left}
+.local-buff-table th,.local-buff-table td{padding:12px;border-bottom:1px solid #91abc326;text-align:center;vertical-align:middle}
+.local-buff-table thead th{font-size:12px;color:#9caec0;font-weight:400;background:#101a25}
+.local-buff-table thead th:not(:first-child)>*{display:inline-flex;vertical-align:middle;margin:0 4px}
+.local-buff-table thead .char-avatar-card{width:28px!important;height:28px!important}
+.local-buff-table tbody th{font-weight:400}
+.local-buff-table .buff-grid__buff-head{display:block!important;height:auto!important;min-height:0!important;white-space:normal!important;text-align:left!important;padding:0!important;background:none!important;border:0!important;font-size:14px!important;color:#dce5ef!important}
+.local-buff-table .buff-grid__cell{display:flex!important;align-items:center;justify-content:center;height:auto!important;min-height:30px!important;padding:0!important;background:none!important;border:0!important}
+.local-buff-table small{display:block;margin-top:5px;font-size:12px;line-height:1.6;color:#8ea3b8}
+.local-buff-table tbody tr:hover{background:#afc7df06}
+.local-buff-subpages .local-buff-overview>*{flex:0 0 auto!important;width:auto!important;min-width:100px!important;padding:4px 14px!important;border:0!important;display:flex!important;gap:8px;align-items:center}
+.local-buff-subpages .local-buff-overview{min-height:0!important;justify-content:flex-start!important;gap:8px!important}
+.local-buff-subpages .local-buff-overview::before{content:'生效汇总';color:#8ea3b8;font-size:12px;align-self:center;margin-right:8px}
+.local-buff-subpages .buff-check-source-block{display:none!important}
+.local-buff-effect-dialog{position:fixed;inset:0;margin:auto;width:min(560px,calc(100vw - 48px));max-height:75vh;box-sizing:border-box;overflow:auto;padding:24px;border:1px solid #8da6bf55;border-radius:12px;background:linear-gradient(135deg,#1c2a3b,#101925);color:#dce5ef;box-shadow:0 24px 80px #0009;font-family:'Microsoft YaHei UI','Microsoft YaHei',sans-serif}
+.local-buff-effect-dialog::backdrop{background:#050910aa;backdrop-filter:blur(4px)}
+.local-buff-effect-dialog header{display:flex;align-items:start;gap:18px;justify-content:space-between;border-bottom:1px solid #9db4cb25;padding-bottom:14px;margin-bottom:18px}
+.local-buff-effect-dialog h2{font-size:18px;line-height:1.5;margin:0;color:#e4d2a3}
+.local-buff-effect-dialog button{flex:none;background:#afc5de0d;border:1px solid #9db4cb40;color:#dce5ef;border-radius:6px;width:32px;height:32px;font-size:22px;cursor:pointer}
+.local-buff-effect-copy{font-size:14px;line-height:1.9;white-space:pre-wrap;overflow-wrap:anywhere}
+.local-buff-value-row{display:grid;grid-template-columns:1fr auto;gap:8px 20px;padding:16px 0;border-bottom:1px solid #9db4cb25}
+.local-buff-value-row:first-child{padding-top:0}.local-buff-value-row:last-child{border:0;padding-bottom:0}
+.local-buff-value-row h3{margin:0;font-size:15px;font-weight:500;color:#dce5ef}
+.local-buff-value-row strong{font:600 17px/1.6 Consolas,monospace;color:#d7bc79;max-width:300px;white-space:normal;text-align:right}
+.local-buff-value-row p{grid-column:1/-1;margin:0;color:#96aabd;font-size:12px;line-height:1.7}
+/* Member cards with the same portrait assets as configuration; two inner views. */
+.local-buff-subpages .local-buff-member-tab{position:relative;isolation:isolate;overflow:hidden;min-height:82px;padding:14px 18px;border-radius:7px}
+.local-buff-subpages .local-buff-member-tab>img:not(.local-team-portrait){width:48px;height:48px;border:1px solid #c7dceb36;border-radius:6px}
+.local-buff-subpages .local-buff-member-tab>.local-team-portrait{position:absolute;width:62%;height:100%;inset:0 0 0 auto;max-width:none;border:0;border-radius:0;opacity:.24}
+.local-buff-subpages .local-buff-member-tab[aria-selected=true]>.local-team-portrait{opacity:.42}
+.local-buff-subpages .local-buff-member-tab>span{display:flex;flex-direction:column-reverse;gap:7px}
+.local-buff-subpages .local-buff-member-tab strong{font-size:15px}
+.local-buff-view-nav{display:flex;align-items:center;gap:8px;border-bottom:1px solid #91abc330;padding:0 0 12px}
+.local-buff-view-nav button{padding:9px 16px;border:1px solid transparent;border-radius:6px;background:transparent;color:#9fb1c4;cursor:pointer;font-size:14px}
+.local-buff-view-nav button[aria-pressed=true]{color:#e4cb88;background:#d2b66d14;border-color:#d2b66d55}
+.local-buff-view-nav [data-buff-view-choice=environment]{margin-left:auto;font-size:12px;padding:7px 12px;border-color:#8aa4bd40}
+.local-buff-subpages .local-buff-identity,.local-buff-subpages .local-buff-overview,.local-buff-subpages .local-buff-tabbed .setup-panel-buff{display:none!important}
+.local-buff-subpages[data-buff-view=team] .setup-panel-buff-stats{display:none!important}
+.local-buff-subpages[data-buff-view=stats] .buff-check-team-card{display:none!important}
+.local-buff-subpages .local-buff-workspace{display:block}
+.local-buff-subpages .local-buff-tabbed .setup-panel-buff-stats{background:transparent!important;border:0!important;padding:0!important}
+.local-buff-details>summary{display:none}
+.local-buff-subpages .setup-panel-buff-stats .stat-card-list{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px!important;align-items:start}
+.local-buff-subpages .setup-panel-buff-stats .stat-card{background:linear-gradient(135deg,#1c2a39,#121d29)!important;border:1px solid #91abc330!important;border-top:2px solid var(--stat-accent,#cbb57d)!important;border-radius:9px!important;padding:16px!important;margin:0!important;min-width:0;overflow:hidden}
+.local-buff-subpages .setup-panel-buff-stats .stat-card-sources{min-width:0}
+.local-buff-subpages .setup-panel-buff-stats .stat-item{flex-wrap:wrap}
+@media(max-width:1250px){.local-buff-subpages .setup-panel-buff-stats .stat-card-list{grid-template-columns:repeat(2,minmax(0,1fr))}}
+#workspaceLayout.phase-buff .local-buff-subpages .local-team-copy small{font-size:11px!important}
+#workspaceLayout.phase-buff .local-buff-subpages .local-team-card{position:relative;isolation:isolate;overflow:hidden;min-height:82px;padding:14px 18px;border:1px solid #b7ccdf20;border-radius:7px;background:#101720;color:#cad5df;transform:none!important;box-shadow:inset 0 1px #e0eeff09}
+#workspaceLayout.phase-buff .local-buff-subpages .local-team-card.active{background:#151e28;color:#f1e7cb;border-color:#d8ba6d68;box-shadow:inset 3px 0 #d8ba6d,inset 0 1px #e8d69919}
+#workspaceLayout.phase-buff .local-buff-subpages .local-team-card:hover{border-color:#bdd9eb66;background:#18212d}
+#workspaceLayout.phase-buff .local-buff-subpages .local-team-avatar{width:48px;height:48px;border:1px solid #c7dceb36;border-radius:6px;background:#131e2b;box-shadow:0 3px 10px #0004}
+#workspaceLayout.phase-buff .local-buff-subpages .local-team-copy{gap:7px}
+#workspaceLayout.phase-buff .local-buff-subpages .local-team-copy strong{font-size:15px;font-weight:600;letter-spacing:.03em}
+#workspaceLayout.phase-buff .local-buff-subpages .local-team-copy small{color:#9caabc;font-size:11px!important}
+#workspaceLayout.phase-buff .buff-check-page.local-buff-subpages{width:100%!important;max-width:none!important;box-sizing:border-box;padding:22px 18px 18px!important}
+#workspaceLayout.phase-buff .local-buff-member-tabs{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px!important;padding:0!important;border:0!important;margin:0 0 12px!important}
+#workspaceLayout.phase-buff .local-buff-member-tab{width:100%;box-sizing:border-box;height:82px;display:flex;align-items:center;text-align:left;gap:12px}
+#workspaceLayout.phase-buff .local-buff-member-tab>.local-team-avatar{display:flex;align-items:center;justify-content:center;flex:none;overflow:hidden}
+#workspaceLayout.phase-buff .local-team-avatar img{width:100%;height:100%;object-fit:cover}
+#workspaceLayout.phase-buff .local-buff-member-tab>.local-team-copy{display:flex;flex-direction:column;align-items:flex-start}
+#workspaceLayout.phase-buff .local-buff-member-tab>.local-team-index{display:block}
+/* Identical inner typography to the configuration member strip. */
+#workspaceLayout.phase-buff .local-buff-member-tab{gap:10px}
+#workspaceLayout.phase-buff .local-buff-member-tab>.local-team-avatar{display:grid;place-items:center;gap:normal}
+#workspaceLayout.phase-buff .local-buff-member-tab>.local-team-copy{display:grid;align-items:normal;gap:7px}
+#workspaceLayout.phase-buff .local-team-copy small{letter-spacing:normal;line-height:normal}
+#workspaceLayout.phase-buff .local-team-copy strong{line-height:normal}
+/* Share the configuration page's unattenuated ambient background. */
+body:has(.local-buff-subpages) #local-aero-background{opacity:1}
+#workspaceLayout.phase-buff .buff-check-page.local-buff-subpages{background:transparent!important;border-radius:0}
+/* Show each source once, with its original live controls. */
+.local-buff-subpages .stat-card>.stat-card-body,.local-buff-subpages .stat-card>.expand-toggle,.local-buff-subpages .stat-detail__hint{display:none!important}
+.local-buff-subpages .stat-card>.stat-detail{display:block!important;max-height:none!important;height:auto!important;opacity:1!important;visibility:visible!important;overflow:visible!important;padding:0!important;margin:0!important;border:0!important}
+.local-buff-subpages .setup-panel-buff-stats .stat-card{position:relative;isolation:isolate;background:linear-gradient(135deg,#203043dd,#111d2aef)!important;border:1px solid #adc4df30!important;border-top:1px solid #b8cce65c!important;box-shadow:inset 0 1px #eff7ff0a,0 8px 22px #0002!important;transition:border-color .2s,background .2s}
+.local-buff-subpages .setup-panel-buff-stats .stat-card:hover{border-color:#afcfe869!important}
+.local-buff-subpages .stat-card::after{content:attr(data-stat-cat);position:absolute;right:-5px;top:8px;transform:rotate(-13deg);font:700 42px Consolas,monospace;text-transform:uppercase;opacity:.045;pointer-events:none;z-index:-1}
+.local-buff-subpages .stat-card-header{min-height:42px;align-items:center}
+.local-buff-subpages .stat-card-total{font:600 23px/1.3 Consolas,monospace;color:#d9c38d!important}
+.local-buff-subpages .stat-card-title{font-size:16px!important;letter-spacing:.04em}
+.local-buff-subpages .stat-detail .stat-item{display:grid!important;grid-template-columns:minmax(0,1fr);gap:7px;padding:12px 0!important;border-bottom:1px solid #a4bbd321!important;background:transparent!important}
+.local-buff-subpages .stat-detail .stat-item:last-child{border-bottom:0}
+.local-buff-subpages .stat-item-left{display:flex!important;flex-wrap:wrap;align-items:center;gap:6px;min-width:0;width:100%}
+.local-buff-subpages .stat-item-name{flex:1 1 100%;white-space:normal!important;overflow:visible!important;text-overflow:clip!important;line-height:1.6!important;font-size:13px!important;color:#d7e3ee;margin-left:22px}
+.local-buff-subpages .source-tag{font-size:11px!important;max-width:none!important;color:#b4cbdf!important;background:#799cbb17!important;padding:3px 6px;border-radius:3px}
+.local-buff-subpages .stat-item-right{display:flex;justify-content:flex-end;align-items:center;gap:10px;max-width:100%;flex-wrap:wrap}
+.local-buff-subpages .stat-item-check input{accent-color:#d2b66d;width:14px;height:14px}
+.local-buff-subpages .stat-item.is-off{opacity:.5}
+.local-buff-subpages .local-stat-stack{background:#b2cce810;border:1px solid #a4bbd338;color:#bfd9ed;border-radius:5px;padding:4px 9px;font-size:12px;cursor:pointer}
+.local-buff-subpages .setup-panel-buff-stats .stat-card{background:linear-gradient(135deg,#203043,#111d2a)!important}
+.local-buff-subpages .stat-detail .stack-input{width:64px!important;padding:5px 7px;border:1px solid #a4bbd338;border-radius:5px;background:#17283a;color:#bfd9ed}
+/* Compact source rows: name, stacks and value share a line. */
+.local-buff-subpages .stat-detail .stat-item{grid-template-columns:minmax(0,1fr) auto!important;gap:8px!important;padding:9px 0!important;align-items:center}
+.local-buff-subpages .stat-item-left{display:flex!important;flex-wrap:wrap;gap:4px 6px}
+.local-buff-subpages .stat-item-name{flex:1 1 90px!important;margin-left:0!important;font-size:12px!important;line-height:1.45!important;border:0!important}
+.local-buff-subpages .stat-item-right{flex-wrap:nowrap!important;gap:6px!important;white-space:nowrap;align-self:center}
+.local-buff-subpages .source-tag{font-size:10px!important;padding:2px 4px}
+.local-buff-subpages .stat-item-left .stat-item-check{flex:none}
+.local-buff-subpages .local-stat-stack{padding:3px 6px;font-size:11px;white-space:nowrap}
+.local-buff-subpages .stat-detail .stack-input[hidden]{display:none!important}
+.local-buff-effect-dialog>input{margin:18px 12px 18px 0;padding:8px;width:100px;color:#dce5ef;background:#17283a;border:1px solid #a4bbd338;border-radius:5px}
+
+.local-stack-editor {position:fixed;inset:auto;margin:0;padding:10px;width:max-content;border:1px solid #829cb86b;border-radius:10px;background:#182635;color:#deebf6;box-shadow:0 8px 24px #0006;font:13px "Microsoft YaHei UI",sans-serif;}
+.local-stack-editor:popover-open {display:flex;align-items:center;gap:10px;}
+.local-stack-editor::backdrop {background:transparent;backdrop-filter:none;}
+.local-stack-editor label {display:flex;align-items:center;gap:8px;}
+.local-stack-editor input {box-sizing:border-box;width:65px;height:32px;padding:4px 7px;border:1px solid #8ea8c166;border-radius:6px;background:#0d1825;color:#e8f2fa;font:14px monospace;}
+.local-stack-editor button {width:auto;padding:6px 10px;border:1px solid #d9bd7077;border-radius:6px;background:#d9bd701c;color:#ead291;font:13px "Microsoft YaHei UI",sans-serif;cursor:pointer;}
+.local-buff-subpages .local-stat-stack {border:1px solid #93bbd78c;background:#91bcdd14;color:#cbe7fa;font-size:12px;}
+.local-buff-subpages .local-stat-stack:hover {border-color:#d8bc70;color:#f0d58e;}
+body:has(.local-buff-subpages) #tbaStackPopover {padding:10px;min-height:0;border:1px solid #829cb86b;border-radius:10px;background:#182635;box-shadow:0 8px 24px #0006;}
+body:has(.local-buff-subpages) #tbaStackPopover .tba-stack-popover__progress,body:has(.local-buff-subpages) #tbaStackPopover .tba-stack-popover__slider,body:has(.local-buff-subpages) #tbaStackPopover .tba-stack-popover__hint,body:has(.local-buff-subpages) #tbaStackPopover .tba-stack-popover__btn {display:none!important;}
+body:has(.local-buff-subpages) #tbaStackPopover .tba-stack-popover__title {font-size:12px;margin:0 0 6px;}
+body:has(.local-buff-subpages) #tbaStackPopover .tba-stack-popover__stepper {display:inline-flex;width:96px;margin:0;}
+body:has(.local-buff-subpages) #tbaStackPopover .tba-stack-popover__value {width:90px;height:32px;font-size:14px;}
+body:has(.local-buff-subpages) #tbaStackPopover .tba-stack-popover__apply {display:inline-block;width:70px;height:32px;margin:0 0 0 8px;padding:4px 8px;font-size:13px;vertical-align:top;}
+
+/* Raised zone headings, static aurora edge and repeating technical grain. */
+.local-buff-subpages .setup-panel-buff-stats .stat-card-list {row-gap:38px!important;padding-top:18px!important;}
+.local-buff-subpages .setup-panel-buff-stats .stat-card {
+ --aurora:93,205,230;--aurora-alt:125,119,235;
+ overflow:visible!important;
+ background:radial-gradient(ellipse 85% 115px at 12% 0,rgba(var(--aurora),.19),transparent 85%),radial-gradient(ellipse 65% 95px at 90% 0,rgba(var(--aurora-alt),.16),transparent 90%),linear-gradient(135deg,#1c2b3c,#111d2a)!important;
+ border-top-color:rgba(var(--aurora),.65)!important;
+}
+.local-buff-subpages .stat-card[data-stat-cat=bonus] {--aurora:104,222,214;--aurora-alt:92,151,242;}
+.local-buff-subpages .stat-card[data-stat-cat=deep] {--aurora:170,142,247;--aurora-alt:100,185,250;}
+.local-buff-subpages .stat-card[data-stat-cat=atk] {--aurora:246,169,105;--aurora-alt:224,115,153;}
+.local-buff-subpages .stat-card[data-stat-cat=hp] {--aurora:108,220,179;--aurora-alt:98,175,210;}
+.local-buff-subpages .stat-card[data-stat-cat=def] {--aurora:115,169,250;--aurora-alt:153,137,245;}
+.local-buff-subpages .stat-card[data-stat-cat=crit] {--aurora:242,183,110;--aurora-alt:224,144,108;}
+.local-buff-subpages .stat-card[data-stat-cat=critDmg] {--aurora:239,132,187;--aurora-alt:180,137,240;}
+.local-buff-subpages .stat-card[data-stat-cat=mult] {--aurora:193,152,248;--aurora-alt:121,192,243;}
+.local-buff-subpages .stat-card[data-stat-cat=er] {--aurora:119,216,234;--aurora-alt:118,155,244;}
+.local-buff-subpages .setup-panel-buff-stats .stat-card::before {
+ display:block!important;content:'';position:absolute;inset:0;z-index:-1;border-radius:inherit;pointer-events:none;
+ background:repeating-linear-gradient(125deg,transparent 0 47px,#a9c9e506 48px 49px,transparent 50px 96px),radial-gradient(circle,#b6d5ef13 .7px,transparent 1px);
+ background-size:auto,18px 18px;mask-image:linear-gradient(90deg,transparent 10%,#0008 65%,#000);
+}
+.local-buff-subpages .stat-card::after {right:14px;top:58px;font-size:35px;opacity:.04;}
+.local-buff-subpages .setup-panel-buff-stats .stat-card-header {position:relative;min-height:30px;align-items:flex-start;padding:0 0 9px!important;}
+.local-buff-subpages .stat-card-title {
+ position:relative;top:-32px;margin-bottom:-26px;display:inline-block;z-index:1;
+ font-family:'Microsoft YaHei UI','Microsoft YaHei',sans-serif;font-size:25px!important;font-weight:900!important;line-height:1.25;letter-spacing:.035em;
+ color:rgb(var(--aurora))!important;-webkit-text-stroke:6px #101925;paint-order:stroke fill;
+ text-shadow:0 3px 0 #080e18,0 5px 8px #0009;
+}
+.local-buff-subpages .stat-card-total {font-size:22px;}
+
+.local-buff-subpages .stat-card[data-stat-cat=defPct] {--aurora:126,190,247;--aurora-alt:112,143,225;}
+.local-buff-subpages .stat-card[data-stat-cat=res] {--aurora:196,159,236;--aurora-alt:107,161,228;}
+.local-buff-subpages .stat-card[data-stat-cat=vuln] {--aurora:236,142,156;--aurora-alt:190,134,226;}
+.local-buff-subpages .stat-card[data-stat-cat=harmony] {--aurora:134,215,209;--aurora-alt:159,146,244;}
+.local-buff-subpages .stat-card[data-stat-cat=energy] {--aurora:126,220,239;--aurora-alt:118,155,244;}
+.local-buff-subpages .stat-card[data-stat-cat=composite] {--aurora:187,181,247;--aurora-alt:111,206,220;}
+
+/* Unified stack control panel: stable native inputs, static aurora finish. */
+.local-buff-subpages .setup-panel-buff-stats [data-buff-zone="stack-hub"] {position:relative;isolation:isolate;width:min(100%,980px);box-sizing:border-box;margin:16px 0 24px!important;padding:8px 10px!important;border:1px solid #8ab6d73d!important;border-top-color:#9eccea99!important;border-radius:10px!important;background:radial-gradient(ellipse at 0 0,#618ad329,transparent 65%),linear-gradient(125deg,#1b2939,#121d2a)!important;box-shadow:inset 0 1px #cbdfff12;}
+.local-buff-subpages .setup-panel-buff-stats [data-buff-zone="stack-hub"]::before {content:'';position:absolute;inset:0;z-index:-1;pointer-events:none;border-radius:inherit;background:repeating-linear-gradient(125deg,transparent 0 45px,#b6cdeb06 46px 47px,transparent 48px 90px);}
+.local-buff-subpages .setup-panel-buff-stats [data-buff-zone="stack-hub"] .buff-zone-title {display:flex;align-items:center;gap:12px;margin:0 0 9px!important;padding:0 0 8px!important;border-bottom:1px solid #98b5d426;color:#e3edf6;font:700 16px/1.4 'Microsoft YaHei UI',sans-serif;}
+.local-buff-subpages .stack-hub-heading-note {font-size:11px;font-weight:500;letter-spacing:.1em;color:#a9c8e3;border-left:1px solid #a9c8e34d;padding-left:12px;}
+.local-buff-subpages .setup-panel-buff-stats [data-buff-zone="stack-hub"] .buff-cat-row {display:block!important;margin:0!important;padding:0!important;}
+.local-buff-subpages .setup-panel-buff-stats [data-buff-zone="stack-hub"] .buff-cat-label {display:none!important;}
+.local-buff-subpages .setup-panel-buff-stats [data-buff-zone="stack-hub"] .buff-cat-chips {display:grid!important;gap:8px!important;width:100%;}
+.local-buff-subpages [data-stack-hub-buff] {display:grid!important;grid-template-columns:minmax(200px,340px) auto minmax(0,1fr);gap:14px;align-items:center;width:100%;box-sizing:border-box;padding:12px 14px!important;border:1px solid #aec6e023!important;border-radius:7px!important;background:#9abce909!important;color:#d7e4ef;}
+.local-buff-subpages [data-stack-hub-buff] .chip-check-label {display:flex;flex-wrap:wrap;align-items:center;gap:7px;min-width:0;font-size:13px;}
+.local-buff-subpages [data-stack-hub-buff] input[type=checkbox] {accent-color:#d4bc7a;}
+.local-buff-subpages .stack-hub-control {display:flex;gap:10px;align-items:center;}
+.local-buff-subpages .stack-hub-input-label {font-size:12px;color:#9fb3c7;}
+.local-buff-subpages [data-stack-hub-buff] .stack-input {width:74px!important;height:34px;box-sizing:border-box;padding:5px 8px!important;background:#0d1927!important;border:1px solid #9fc5e65c!important;border-radius:6px;color:#eed398!important;font:600 16px/1.2 Consolas,monospace;}
+.local-buff-subpages [data-stack-hub-buff] .stack-input:focus {outline:2px solid #8fc2eb55;outline-offset:2px;border-color:#a6d4f7!important;}
+.local-buff-subpages .stack-hub-zones {display:flex;flex-wrap:wrap;gap:6px;justify-content:flex-start;}
+.local-buff-subpages .stack-hub-zone-tag {padding:4px 8px;border-radius:4px;background:#88abdc10;border:1px solid #88abdc2b;color:#b9d3ed;font-size:12px;}
+.local-buff-subpages [data-stack-hub-buff]>.stack-result {display:none!important;}
+.local-buff-subpages .setup-panel-buff-stats [data-buff-zone="stack-hub"] .hint {font-size:12px!important;line-height:1.6;color:#8ea4b9!important;margin:8px 0 0!important;}
+
+/* Raven-black team panel, with restrained static iridescence. */
+.local-buff-subpages .buff-check-team-card.team-shared-buff-section {background:radial-gradient(ellipse at 8% 0,#25404640,transparent 55%),radial-gradient(ellipse at 85% 0,#40315238,transparent 55%),linear-gradient(135deg,#050608,#08090c 65%,#030405)!important;border:1px solid #a2afc22c!important;box-shadow:inset 0 1px #d7c6ff18!important;}
+.local-buff-subpages .buff-check-team-card .buff-source-card {background:transparent!important;}
+.local-buff-table thead th {background:#080b10!important;}
+.local-buff-table thead th:not(:first-child)>:not(.buff-grid__recv){display:none!important;}
+.local-buff-table thead .char-avatar-card {width:48px!important;height:48px!important;border-radius:9px!important;overflow:hidden;border:1px solid #b9cde34d;box-shadow:0 3px 12px #0008;}
+.local-buff-table thead .char-avatar-card img {width:100%;height:100%;object-fit:cover;}
+.local-buff-table .local-spring-original {display:none!important;}
+.local-spring-host {display:inline-flex;align-items:center;justify-content:center;}
+.local-buff-table .spring-check {padding:0!important;background:none!important;border:0!important;box-shadow:none!important;min-width:0!important;justify-content:center;}
+.local-buff-table .spring-check__label {display:none;}
+
+/* Contour-following rim: no rectangular plaque or blurred glyph shadows. */
+.local-buff-subpages .stat-card-title {
+ padding:0;
+ border:0;
+ border-radius:0;
+ background:none;
+ box-shadow:none;
+ filter:drop-shadow(1px 2px 0 #687889) drop-shadow(0 2px 0 #101825);
+ -webkit-text-stroke:2px #e3e8ee;
+ paint-order:stroke fill;
+ text-shadow:none;
+ color:color-mix(in srgb,rgb(var(--aurora)) 65%,#25344d)!important;
+ font-size:25px!important;
+ font-weight:900!important;
+ line-height:1.25;
+ letter-spacing:.04em;
+ top:-32px;
+ margin-bottom:-26px;
+}

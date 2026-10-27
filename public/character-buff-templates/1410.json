@@ -1,0 +1,304 @@
+{
+  "version": 1,
+  "kind": "shard",
+  "characterId": "1410",
+  "characterName": "尤诺",
+  "templates": [
+    {
+      "characterId": "1410",
+      "characterName": "尤诺",
+      "revision": 3,
+      "author": "",
+      "notes": "尤诺：全队【尤诺·延奏】重击加深+50%（固定；对尤诺本人不生效）。全队叠层【苍白死光的祝颂】每层泛用加深+4%（上限10层）；2链且层数≥10时额外泛用加深+40%。",
+      "personalBuffs": [],
+      "teamBuffs": [
+        {
+          "templateKey": "yuno_outro_heavy_deep",
+          "category": "typeDeep",
+          "name": "尤诺·延奏",
+          "mode": "fixed",
+          "value": 50,
+          "damageType": "重击",
+          "element": "",
+          "defenseKind": "",
+          "excludeSource": true,
+          "sourceTag": "characterTemplate",
+          "perStack": 0,
+          "maxStacks": 5,
+          "gameText": "攻击目标造成100%的气动伤害，下一个登场角色重击伤害加深50%，持续14秒，若切换至其他角色则该效果提前结束。"
+        },
+        {
+          "category": "composite",
+          "name": "苍白死光的祝颂",
+          "mode": "stack",
+          "value": 0,
+          "perStack": 0,
+          "maxStacks": 10,
+          "damageType": "",
+          "element": "",
+          "defenseKind": "",
+          "convergenceVuln": "",
+          "sourceTag": "characterTemplate",
+          "templateKey": "yuno_pale_deadlight_blessing",
+          "effects": [
+            {
+              "zone": "generalDeep",
+              "valueMode": "stack",
+              "value": 0,
+              "segments": [
+                {
+                  "upTo": null,
+                  "perStack": 4
+                }
+              ],
+              "skillScope": "all",
+              "skillNames": [],
+              "librarySkillNames": [],
+              "catalogIds": [],
+              "damageType": "",
+              "effectType": "",
+              "element": "",
+              "defenseKind": "",
+              "minStacks": 0,
+              "minResonance": 0,
+              "onlyCharacterIds": [],
+              "onlyCombatModes": [],
+              "effectKey": "yuno_blessing_stack_deep"
+            },
+            {
+              "id": "id_11791",
+              "zone": "generalDeep",
+              "valueMode": "fixed",
+              "value": 40,
+              "segments": [
+                {
+                  "upTo": null,
+                  "perStack": 0
+                }
+              ],
+              "skillScope": "all",
+              "skillNames": [],
+              "librarySkillNames": [],
+              "catalogIds": [],
+              "damageType": "",
+              "effectType": "",
+              "element": "",
+              "defenseKind": "",
+              "minStacks": 10,
+              "minResonance": 2,
+              "onlyCharacterIds": [],
+              "onlyCombatModes": [],
+              "effectKey": "yuno_blessing_c2_general_deep"
+            }
+          ],
+          "gameText": "苍白死光的祝颂\n角色全伤害加深4%，持续10秒，可叠加10层，重复添加时刷新持续时间。若切换至其他角色则该效果提前结束。"
+        }
+      ],
+      "extraSkills": [],
+      "resonanceChains": {
+        "1": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [
+            {
+              "category": "generalAttack",
+              "name": "1链·月相流转时",
+              "mode": "fixed",
+              "value": 40,
+              "perStack": 0,
+              "maxStacks": 5,
+              "damageType": "",
+              "element": "",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "sourceTag": "characterTemplate",
+              "templateKey": "tpl_ms0t36kl_z4z94",
+              "gameText": "尤诺处于月相流转状态时，攻击提升40%。\n尤诺处于满月领域中时，自身每秒额外回复1点共鸣能量。\n共鸣技能·越限的弦引和重击·至臻的完满免疫打断。"
+            }
+          ],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {}
+        },
+        "2": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {}
+        },
+        "3": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [
+            {
+              "category": "composite",
+              "name": "3链",
+              "mode": "fixed",
+              "value": 0,
+              "perStack": 0,
+              "maxStacks": 99,
+              "damageType": "",
+              "element": "",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "effects": [
+                {
+                  "zone": "generalDeep",
+                  "valueMode": "fixed",
+                  "value": 65,
+                  "segments": [
+                    {
+                      "upTo": null,
+                      "perStack": 0
+                    }
+                  ],
+                  "skillScope": "names",
+                  "skillNames": [
+                    "祭者独步·月弓·普攻第一段",
+                    "月弓·普攻第一段",
+                    "祭者独步·月弓·普攻第二段",
+                    "月弓·普攻第二段",
+                    "祭者独步·月弓·普攻第三段",
+                    "月弓·普攻第三段",
+                    "祭者独步·月弓·闪避反击",
+                    "月弓·闪避反击",
+                    "先觉赋格·越限的弦引",
+                    "越限的弦引",
+                    "于盈亏间涨落·月弓·普攻第一段强化",
+                    "月弓·普攻第一段强化",
+                    "于盈亏间涨落·月弓·普攻第二段强化",
+                    "月弓·普攻第二段强化",
+                    "于盈亏间涨落·月弓·普攻第三段强化",
+                    "月弓·普攻第三段强化",
+                    "于盈亏间涨落·月弓·闪避反击强化",
+                    "月弓·闪避反击强化",
+                    "于盈亏间涨落·越限的弦引强化",
+                    "越限的弦引强化"
+                  ],
+                  "librarySkillNames": [
+                    "祭者独步·月弓·普攻第一段",
+                    "祭者独步·月弓·普攻第二段",
+                    "祭者独步·月弓·普攻第三段",
+                    "祭者独步·月弓·闪避反击",
+                    "先觉赋格·越限的弦引",
+                    "于盈亏间涨落·月弓·普攻第一段强化",
+                    "于盈亏间涨落·月弓·普攻第二段强化",
+                    "于盈亏间涨落·月弓·普攻第三段强化",
+                    "于盈亏间涨落·月弓·闪避反击强化",
+                    "于盈亏间涨落·越限的弦引强化"
+                  ],
+                  "catalogIds": [],
+                  "damageType": "共鸣解放",
+                  "effectType": "",
+                  "element": "气动",
+                  "defenseKind": "",
+                  "minStacks": 0,
+                  "minResonance": 0,
+                  "onlyCharacterIds": [],
+                  "onlyCombatModes": [],
+                  "effectKey": ""
+                }
+              ],
+              "sourceTag": "characterTemplate",
+              "templateKey": "tpl_ms0tw8rc_aeifa",
+              "gameText": "尤诺处于月相流转状态时，月弓·普攻、共鸣技能·越限的弦引、月弓·闪避反击造成的伤害加深65%。\n施放月弓·普攻或月弓·闪避反击后一定时间内，施放共鸣技能·越限的弦引将不会重置月弓·普攻的连段。"
+            }
+          ],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {}
+        },
+        "4": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {}
+        },
+        "5": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [
+            {
+              "category": "typeBonus",
+              "name": "5链",
+              "mode": "fixed",
+              "value": 20,
+              "perStack": 0,
+              "maxStacks": 5,
+              "damageType": "共鸣解放",
+              "element": "",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "sourceTag": "characterTemplate",
+              "templateKey": "tpl_ms0txtqw_zzaz8",
+              "gameText": "共鸣解放伤害加成提升20%。"
+            }
+          ],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {}
+        },
+        "6": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [
+            {
+              "category": "composite",
+              "name": "6链",
+              "mode": "fixed",
+              "value": 0,
+              "perStack": 0,
+              "maxStacks": 99,
+              "damageType": "",
+              "element": "",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "effects": [
+                {
+                  "zone": "multAdd",
+                  "valueMode": "fixed",
+                  "value": 1600,
+                  "segments": [
+                    {
+                      "upTo": null,
+                      "perStack": 0
+                    }
+                  ],
+                  "skillScope": "names",
+                  "skillNames": [
+                    "于盈亏间涨落·至臻的完满",
+                    "至臻的完满"
+                  ],
+                  "librarySkillNames": [
+                    "于盈亏间涨落·至臻的完满"
+                  ],
+                  "catalogIds": [],
+                  "damageType": "共鸣解放",
+                  "effectType": "",
+                  "element": "气动",
+                  "defenseKind": "",
+                  "minStacks": 0,
+                  "minResonance": 0,
+                  "onlyCharacterIds": [],
+                  "onlyCombatModes": [],
+                  "effectKey": ""
+                }
+              ],
+              "sourceTag": "characterTemplate",
+              "templateKey": "tpl_ms0tyand_rrjle",
+              "gameText": "重击·至臻的完满伤害倍率增加1600%。\n尤诺施放重击·至臻的完满时，会再次进入月相流转·新月状态，获得100点【灵性】并重置共鸣技能·越限的弦引的全部冷却。"
+            }
+          ],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {}
+        }
+      },
+      "combatModes": {}
+    }
+  ]
+}

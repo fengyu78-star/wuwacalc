@@ -1,0 +1,488 @@
+{
+  "version": 1,
+  "kind": "shard",
+  "characterId": "1206",
+  "characterName": "布兰特",
+  "templates": [
+    {
+      "characterId": "1206",
+      "characterName": "布兰特",
+      "revision": 2,
+      "author": "",
+      "notes": "布兰特专属：共鸣效率＞150%时转化为固定攻击（戏中人生12点/1%、上限1560；大招后·我的人生20点/1%、上限2600）；全队复合【延奏·布兰特】热熔加深+20% + 共鸣技能加深+25%（对布兰特本人不生效）。角色默认形态 + 编轴技能可单独切换。",
+      "personalBuffs": [
+        {
+          "category": "composite",
+          "name": "固有2",
+          "mode": "fixed",
+          "value": 0,
+          "perStack": 0,
+          "maxStacks": 99,
+          "damageType": "",
+          "element": "",
+          "defenseKind": "",
+          "convergenceVuln": "",
+          "effects": [
+            {
+              "zone": "elementBonus",
+              "valueMode": "fixed",
+              "value": 15,
+              "segments": [
+                {
+                  "upTo": null,
+                  "perStack": 0
+                }
+              ],
+              "skillScope": "names",
+              "skillNames": [
+                "船长的狂想演出·空中攻击第一段",
+                "空中攻击第一段",
+                "船长的狂想演出·空中攻击第一段长按",
+                "空中攻击第一段长按",
+                "船长的狂想演出·空中攻击第一段空翻",
+                "空中攻击第一段空翻",
+                "船长的狂想演出·空中攻击第一段斩击",
+                "空中攻击第一段斩击",
+                "船长的狂想演出·空中攻击第二段",
+                "空中攻击第二段",
+                "船长的狂想演出·空中攻击第二段长按",
+                "空中攻击第二段长按",
+                "船长的狂想演出·空中攻击第二段空翻",
+                "空中攻击第二段空翻",
+                "船长的狂想演出·空中攻击第三段",
+                "空中攻击第三段",
+                "船长的狂想演出·空中攻击第三段空翻",
+                "空中攻击第三段空翻",
+                "船长的狂想演出·空中攻击第四段",
+                "空中攻击第四段"
+              ],
+              "librarySkillNames": [
+                "船长的狂想演出·空中攻击第一段",
+                "船长的狂想演出·空中攻击第一段长按",
+                "船长的狂想演出·空中攻击第一段空翻",
+                "船长的狂想演出·空中攻击第一段斩击",
+                "船长的狂想演出·空中攻击第二段",
+                "船长的狂想演出·空中攻击第二段长按",
+                "船长的狂想演出·空中攻击第二段空翻",
+                "船长的狂想演出·空中攻击第三段",
+                "船长的狂想演出·空中攻击第三段空翻",
+                "船长的狂想演出·空中攻击第四段"
+              ],
+              "catalogIds": [],
+              "damageType": "普攻",
+              "effectType": "",
+              "element": "热熔",
+              "defenseKind": "",
+              "minStacks": 0,
+              "minResonance": 0,
+              "onlyCharacterIds": [],
+              "onlyCombatModes": [],
+              "effectKey": ""
+            }
+          ],
+          "sourceTag": "characterTemplate",
+          "templateKey": "tpl_mryx1x55_4si6f",
+          "gameText": "布兰特空中攻击抗打断提升，热熔伤害加成提升15%。"
+        }
+      ],
+      "teamBuffs": [
+        {
+          "templateKey": "brant_outro",
+          "category": "composite",
+          "name": "延奏·布兰特",
+          "mode": "fixed",
+          "excludeSource": true,
+          "effects": [
+            {
+              "zone": "elementDeep",
+              "valueMode": "fixed",
+              "value": 20,
+              "segments": [
+                {
+                  "upTo": null,
+                  "perStack": 0
+                }
+              ],
+              "skillScope": "all",
+              "skillNames": [],
+              "librarySkillNames": [],
+              "catalogIds": [],
+              "damageType": "",
+              "effectType": "",
+              "element": "热熔",
+              "defenseKind": "",
+              "minStacks": 0,
+              "minResonance": 0,
+              "onlyCharacterIds": [],
+              "onlyCombatModes": [],
+              "effectKey": ""
+            },
+            {
+              "zone": "typeDeep",
+              "valueMode": "fixed",
+              "value": 25,
+              "segments": [
+                {
+                  "upTo": null,
+                  "perStack": 0
+                }
+              ],
+              "skillScope": "all",
+              "skillNames": [],
+              "librarySkillNames": [],
+              "catalogIds": [],
+              "damageType": "共鸣技能",
+              "effectType": "",
+              "element": "",
+              "defenseKind": "",
+              "minStacks": 0,
+              "minResonance": 0,
+              "onlyCharacterIds": [],
+              "onlyCombatModes": [],
+              "effectKey": ""
+            }
+          ],
+          "sourceTag": "characterTemplate",
+          "value": 0,
+          "perStack": 0,
+          "maxStacks": 1,
+          "gameText": "下一位登场角色热熔伤害加深20%，共鸣技能伤害加深25%，效果持续14秒，若切换至其他角色则该效果提前结束。"
+        }
+      ],
+      "extraSkills": [],
+      "resonanceChains": {
+        "1": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [
+            {
+              "category": "generalBonus",
+              "name": "1链",
+              "mode": "stack",
+              "value": 0,
+              "perStack": 20,
+              "maxStacks": 3,
+              "damageType": "",
+              "element": "",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "sourceTag": "characterTemplate",
+              "templateKey": "tpl_mryx4cxm_rfs7e",
+              "gameText": "火焰归亡曲施放期间会短暂停滞周围的目标，若在此期间切换至其他角色则提前结束停滞效果。\n施放变奏技能为我！后或每次空中攻击空翻时，布兰特造成伤害提升20%，持续5秒，可叠加3层。"
+            }
+          ],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {},
+          "gameText": "火焰归亡曲施放期间会短暂停滞周围的目标，若在此期间切换至其他角色则提前结束停滞效果。\n施放变奏技能为我！后或每次空中攻击空翻时，布兰特造成伤害提升20%，持续5秒，可叠加3层。"
+        },
+        "2": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [
+            {
+              "category": "composite",
+              "name": "2链",
+              "mode": "fixed",
+              "value": 0,
+              "perStack": 0,
+              "maxStacks": 99,
+              "damageType": "",
+              "element": "",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "effects": [
+                {
+                  "zone": "generalCritRate",
+                  "valueMode": "fixed",
+                  "value": 30,
+                  "segments": [
+                    {
+                      "upTo": null,
+                      "perStack": 0
+                    }
+                  ],
+                  "skillScope": "names",
+                  "skillNames": [
+                    "船长的狂想演出·空中攻击第一段",
+                    "空中攻击第一段",
+                    "船长的狂想演出·空中攻击第一段长按",
+                    "空中攻击第一段长按",
+                    "船长的狂想演出·空中攻击第一段空翻",
+                    "空中攻击第一段空翻",
+                    "船长的狂想演出·空中攻击第一段斩击",
+                    "空中攻击第一段斩击",
+                    "船长的狂想演出·空中攻击第二段",
+                    "空中攻击第二段",
+                    "船长的狂想演出·空中攻击第二段长按",
+                    "空中攻击第二段长按",
+                    "船长的狂想演出·空中攻击第二段空翻",
+                    "空中攻击第二段空翻",
+                    "船长的狂想演出·空中攻击第三段",
+                    "空中攻击第三段",
+                    "船长的狂想演出·空中攻击第三段空翻",
+                    "空中攻击第三段空翻",
+                    "船长的狂想演出·空中攻击第四段",
+                    "空中攻击第四段",
+                    "海中戏剧·火焰归亡曲",
+                    "火焰归亡曲"
+                  ],
+                  "librarySkillNames": [
+                    "船长的狂想演出·空中攻击第一段",
+                    "船长的狂想演出·空中攻击第一段长按",
+                    "船长的狂想演出·空中攻击第一段空翻",
+                    "船长的狂想演出·空中攻击第一段斩击",
+                    "船长的狂想演出·空中攻击第二段",
+                    "船长的狂想演出·空中攻击第二段长按",
+                    "船长的狂想演出·空中攻击第二段空翻",
+                    "船长的狂想演出·空中攻击第三段",
+                    "船长的狂想演出·空中攻击第三段空翻",
+                    "船长的狂想演出·空中攻击第四段",
+                    "海中戏剧·火焰归亡曲"
+                  ],
+                  "catalogIds": [],
+                  "damageType": "普攻",
+                  "effectType": "",
+                  "element": "热熔",
+                  "defenseKind": "",
+                  "minStacks": 0,
+                  "minResonance": 0,
+                  "onlyCharacterIds": [],
+                  "onlyCombatModes": [],
+                  "effectKey": ""
+                }
+              ],
+              "sourceTag": "characterTemplate",
+              "templateKey": "tpl_mryx4t5v_8k6no",
+              "gameText": "施放空中攻击和火焰归亡曲时暴击提升30%。\n布兰特延奏技能航向确定！获得额外效果，20秒内：\n下一位登场角色或附近队伍中激活布兰特延奏技能的角色施放共鸣技能命中目标时，布兰特将攻击目标，会产生一次爆炸，造成布兰特攻击440%的热熔伤害，此次伤害为普攻伤害。爆炸每秒可触发1次，最多可触发2次爆炸。\n·切换至其他角色会保留该额外效果。"
+            }
+          ],
+          "teamBuffs": [],
+          "extraSkills": [
+            {
+              "templateKey": "extra_mryx5use_cg12v",
+              "name": "2链延奏·额外",
+              "damageType": "普攻",
+              "effectType": "聚爆",
+              "effectLayers": 13,
+              "effectBurstLayers": 0,
+              "effectCount": 1,
+              "baseMult": 440,
+              "fixedDamage": false,
+              "effectMultMode": "custom"
+            }
+          ],
+          "combatModes": {},
+          "gameText": "施放空中攻击和火焰归亡曲时暴击提升30%。\n布兰特延奏技能航向确定！获得额外效果，20秒内：\n下一位登场角色或附近队伍中激活布兰特延奏技能的角色施放共鸣技能命中目标时，布兰特将攻击目标，会产生一次爆炸，造成布兰特攻击440%的热熔伤害，此次伤害为普攻伤害。爆炸每秒可触发1次，最多可触发2次爆炸。\n·切换至其他角色会保留该额外效果。"
+        },
+        "3": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [
+            {
+              "category": "composite",
+              "name": "3链",
+              "mode": "fixed",
+              "value": 0,
+              "perStack": 0,
+              "maxStacks": 99,
+              "damageType": "",
+              "element": "",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "effects": [
+                {
+                  "zone": "multBoost",
+                  "valueMode": "fixed",
+                  "value": 42,
+                  "segments": [
+                    {
+                      "upTo": null,
+                      "perStack": 0
+                    }
+                  ],
+                  "skillScope": "names",
+                  "skillNames": [
+                    "海中戏剧·火焰归亡曲",
+                    "火焰归亡曲"
+                  ],
+                  "librarySkillNames": [
+                    "海中戏剧·火焰归亡曲"
+                  ],
+                  "catalogIds": [],
+                  "damageType": "普攻",
+                  "effectType": "",
+                  "element": "热熔",
+                  "defenseKind": "",
+                  "minStacks": 0,
+                  "minResonance": 0,
+                  "onlyCharacterIds": [],
+                  "onlyCombatModes": [],
+                  "effectKey": ""
+                }
+              ],
+              "sourceTag": "characterTemplate",
+              "templateKey": "tpl_mryx6gpx_6bg6w",
+              "gameText": "火焰归亡曲伤害倍率提升42%。"
+            }
+          ],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {},
+          "gameText": "火焰归亡曲伤害倍率提升42%。"
+        },
+        "4": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {},
+          "gameText": "火焰归亡曲获得的护盾量提升20%，布兰特施放火焰归亡曲时，会回复附近队伍所有角色的生命值（每1%的共鸣效率回复6.60点生命值）。"
+        },
+        "5": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [
+            {
+              "category": "typeBonus",
+              "name": "5链",
+              "mode": "fixed",
+              "value": 15,
+              "perStack": 0,
+              "maxStacks": 5,
+              "damageType": "普攻",
+              "element": "",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "sourceTag": "characterTemplate",
+              "templateKey": "tpl_mryx6ze3_7knt0",
+              "gameText": "造成普攻伤害时，普攻伤害加成提升15%，持续10秒。"
+            }
+          ],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {},
+          "gameText": "造成普攻伤害时，普攻伤害加成提升15%，持续10秒。"
+        },
+        "6": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [
+            {
+              "category": "composite",
+              "name": "6链",
+              "mode": "fixed",
+              "value": 0,
+              "perStack": 0,
+              "maxStacks": 99,
+              "damageType": "",
+              "element": "",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "effects": [
+                {
+                  "zone": "multBoost",
+                  "valueMode": "fixed",
+                  "value": 30,
+                  "segments": [
+                    {
+                      "upTo": null,
+                      "perStack": 0
+                    }
+                  ],
+                  "skillScope": "names",
+                  "skillNames": [
+                    "船长的狂想演出·空中攻击第一段",
+                    "空中攻击第一段",
+                    "船长的狂想演出·空中攻击第一段长按",
+                    "空中攻击第一段长按",
+                    "船长的狂想演出·空中攻击第一段空翻",
+                    "空中攻击第一段空翻",
+                    "船长的狂想演出·空中攻击第一段斩击",
+                    "空中攻击第一段斩击",
+                    "船长的狂想演出·空中攻击第二段",
+                    "空中攻击第二段",
+                    "船长的狂想演出·空中攻击第二段长按",
+                    "空中攻击第二段长按",
+                    "船长的狂想演出·空中攻击第二段空翻",
+                    "空中攻击第二段空翻",
+                    "船长的狂想演出·空中攻击第三段",
+                    "空中攻击第三段",
+                    "船长的狂想演出·空中攻击第三段空翻",
+                    "空中攻击第三段空翻",
+                    "船长的狂想演出·空中攻击第四段",
+                    "空中攻击第四段"
+                  ],
+                  "librarySkillNames": [
+                    "船长的狂想演出·空中攻击第一段",
+                    "船长的狂想演出·空中攻击第一段长按",
+                    "船长的狂想演出·空中攻击第一段空翻",
+                    "船长的狂想演出·空中攻击第一段斩击",
+                    "船长的狂想演出·空中攻击第二段",
+                    "船长的狂想演出·空中攻击第二段长按",
+                    "船长的狂想演出·空中攻击第二段空翻",
+                    "船长的狂想演出·空中攻击第三段",
+                    "船长的狂想演出·空中攻击第三段空翻",
+                    "船长的狂想演出·空中攻击第四段"
+                  ],
+                  "catalogIds": [],
+                  "damageType": "普攻",
+                  "effectType": "",
+                  "element": "热熔",
+                  "defenseKind": "",
+                  "minStacks": 0,
+                  "minResonance": 0,
+                  "onlyCharacterIds": [],
+                  "onlyCombatModes": [],
+                  "effectKey": ""
+                }
+              ],
+              "sourceTag": "characterTemplate",
+              "templateKey": "tpl_mryx7cz5_qs227",
+              "gameText": "空中攻击的倍率提升30%。\n施放火焰归亡曲后，会在原地产生一次再燃，造成等同于火焰归亡曲30%的热熔伤害，此次伤害为普攻伤害。"
+            }
+          ],
+          "teamBuffs": [],
+          "extraSkills": [
+            {
+              "templateKey": "extra_mryx80t3_rpb00",
+              "name": "6链·额外",
+              "damageType": "普攻",
+              "effectType": "聚爆",
+              "effectLayers": 13,
+              "effectBurstLayers": 0,
+              "effectCount": 1,
+              "baseMult": 566.613,
+              "fixedDamage": false,
+              "effectMultMode": "custom"
+            }
+          ],
+          "combatModes": {},
+          "gameText": "空中攻击的倍率提升30%。\n施放火焰归亡曲后，会在原地产生一次再燃，造成等同于火焰归亡曲30%的热熔伤害，此次伤害为普攻伤害。"
+        }
+      },
+      "combatModes": {},
+      "specialMechanics": {
+        "kind": "erToFlatAtk",
+        "thresholdPct": 150,
+        "flatAtkSourceId": "char_kit_panel_brant_er_atk",
+        "defaultVariant": "playLife",
+        "variants": {
+          "playLife": {
+            "id": "playLife",
+            "label": "戏中人生",
+            "atkPerPct": 12,
+            "cap": 1560
+          },
+          "myLife": {
+            "id": "myLife",
+            "label": "我的人生",
+            "atkPerPct": 20,
+            "cap": 2600
+          }
+        }
+      }
+    }
+  ]
+}

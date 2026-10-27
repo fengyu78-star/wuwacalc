@@ -1,0 +1,15 @@
+{
+  "name": "wuwacalc-source",
+  "version": "0.1.0",
+  "private": true,
+  "description": "鸣算屋计算器：非商业源码公开版",
+  "license": "PolyForm-Noncommercial-1.0.0",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "start": "node scripts/serve.mjs",
+    "setup": "node scripts/setup-resources.mjs",
+    "check": "node scripts/check-release.mjs"
+  }
+}

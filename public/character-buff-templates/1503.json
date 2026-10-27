@@ -1,0 +1,178 @@
+{
+  "version": 1,
+  "kind": "shard",
+  "characterId": "1503",
+  "characterName": "维里奈",
+  "templates": [
+    {
+      "characterId": "1503",
+      "characterName": "维里奈",
+      "revision": 2,
+      "author": "",
+      "notes": "",
+      "personalBuffs": [],
+      "teamBuffs": [
+        {
+          "category": "generalAttack",
+          "name": "固有1",
+          "mode": "fixed",
+          "value": 20,
+          "perStack": 0,
+          "maxStacks": 5,
+          "damageType": "",
+          "element": "",
+          "defenseKind": "",
+          "convergenceVuln": "",
+          "sourceTag": "characterTemplate",
+          "templateKey": "tpl_ms1pjyiy_b6woo",
+          "gameText": "施放重击星星花绽放、空中攻击星星花绽放、共鸣解放草木生长或延奏技能盛放时，队伍中的角色攻击提升20%，持续20秒。"
+        },
+        {
+          "category": "generalDeep",
+          "name": "维里奈·延奏",
+          "mode": "fixed",
+          "value": 15,
+          "perStack": 0,
+          "maxStacks": 5,
+          "damageType": "",
+          "element": "",
+          "defenseKind": "",
+          "convergenceVuln": "",
+          "sourceTag": "characterTemplate",
+          "templateKey": "tpl_ms1pkjlh_i9ez7",
+          "gameText": "持续为下一位登场角色回复生命值，每秒回复维里奈19%攻击的生命值，持续6秒。附近队伍中所有角色全伤害加深15%，持续30秒。"
+        }
+      ],
+      "extraSkills": [],
+      "resonanceChains": {
+        "1": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {},
+          "gameText": "施放延奏技能盛放时，队伍中登场角色额外获得持续回复生命效果，每5秒回复维里奈20%攻击的生命值，持续30秒。"
+        },
+        "2": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {},
+          "gameText": "施放共鸣技能扩繁试验时，额外获得1点【光合能量】和10点协奏能量。"
+        },
+        "3": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {},
+          "gameText": "共鸣解放光合标记的治疗效果加成提升12%。"
+        },
+        "4": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [],
+          "teamBuffs": [
+            {
+              "category": "elementBonus",
+              "name": "维里奈·4链",
+              "mode": "fixed",
+              "value": 15,
+              "perStack": 0,
+              "maxStacks": 5,
+              "damageType": "",
+              "element": "衍射",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "sourceTag": "characterTemplate",
+              "templateKey": "tpl_ms1pmadv_ga9ad",
+              "gameText": "施放重击星星花绽放、空中攻击星星花绽放、共鸣解放草木生长或延奏技能盛放时，队伍中的角色衍射伤害加成提升15%，持续24秒。"
+            }
+          ],
+          "extraSkills": [],
+          "combatModes": {},
+          "gameText": "施放重击星星花绽放、空中攻击星星花绽放、共鸣解放草木生长或延奏技能盛放时，队伍中的角色衍射伤害加成提升15%，持续24秒。"
+        },
+        "5": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {},
+          "gameText": "治疗生命值低于50%的角色时，维里奈的治疗效果加成提升20%。"
+        },
+        "6": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [
+            {
+              "category": "composite",
+              "name": "6链",
+              "mode": "fixed",
+              "value": 0,
+              "perStack": 0,
+              "maxStacks": 99,
+              "damageType": "",
+              "element": "",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "effects": [
+                {
+                  "zone": "generalBonus",
+                  "valueMode": "fixed",
+                  "value": 20,
+                  "segments": [
+                    {
+                      "upTo": null,
+                      "perStack": 0
+                    }
+                  ],
+                  "skillScope": "names",
+                  "skillNames": [
+                    "星星花绽放·重击·星星花绽放",
+                    "重击·星星花绽放",
+                    "星星花绽放·空中攻击·星星花绽放第一段",
+                    "空中攻击·星星花绽放第一段",
+                    "星星花绽放·空中攻击·星星花绽放第二段",
+                    "空中攻击·星星花绽放第二段",
+                    "星星花绽放·空中攻击·星星花绽放第三段",
+                    "空中攻击·星星花绽放第三段"
+                  ],
+                  "librarySkillNames": [
+                    "星星花绽放·重击·星星花绽放",
+                    "星星花绽放·空中攻击·星星花绽放第一段",
+                    "星星花绽放·空中攻击·星星花绽放第二段",
+                    "星星花绽放·空中攻击·星星花绽放第三段"
+                  ],
+                  "catalogIds": [],
+                  "damageType": "重击",
+                  "effectType": "",
+                  "element": "衍射",
+                  "defenseKind": "",
+                  "minStacks": 0,
+                  "minResonance": 0,
+                  "onlyCharacterIds": [],
+                  "onlyCombatModes": [],
+                  "effectKey": ""
+                }
+              ],
+              "sourceTag": "characterTemplate",
+              "templateKey": "tpl_ms1pmzw2_oq6ux",
+              "gameText": "重击星星花绽放及空中攻击星星花绽放的伤害提升20%，命中目标时触发1次协同攻击，并为附近队伍中所有角色回复生命值，此次协同攻击伤害和回复生命值等同于共鸣解放光合标记。"
+            }
+          ],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {},
+          "gameText": "重击星星花绽放及空中攻击星星花绽放的伤害提升20%，命中目标时触发1次协同攻击，并为附近队伍中所有角色回复生命值，此次协同攻击伤害和回复生命值等同于共鸣解放光合标记。"
+        }
+      },
+      "combatModes": {}
+    }
+  ]
+}

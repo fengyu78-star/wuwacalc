@@ -1,0 +1,8 @@
+.round-sync-bar{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin:10px 0}
+.round-sync-dialog{position:fixed;inset:0;margin:auto;box-sizing:border-box;width:min(560px,calc(100vw - 32px));max-height:calc(100vh - 32px);overflow:auto;background:var(--panel-bg,#18202a);color:var(--text,#e8edf2);border:1px solid var(--border,#52606e);border-radius:14px;padding:22px}
+.round-sync-dialog::backdrop{background:#0009}
+.round-sync-dialog h3{margin:0 0 12px}.round-sync-dialog fieldset{border:1px solid var(--border,#52606e);border-radius:8px;margin:14px 0;padding:12px}
+.round-sync-options{display:flex;flex-wrap:wrap;gap:8px 16px}.round-sync-options label{display:flex;gap:8px;align-items:center;min-height:44px;cursor:pointer}
+.round-sync-options input{width:18px;height:18px}.round-sync-actions{position:sticky;bottom:-22px;background:var(--panel-bg,#18202a);display:flex;justify-content:flex-end;gap:12px;margin-top:16px;padding:10px 0}.round-sync-actions button{min-height:44px}
+.round-sync-dialog [data-round-sync-error]{color:var(--accent,#e8bb72);min-height:1.5em}
+.round-sync-default{font-size:11px;line-height:1.3;padding:2px 4px;margin-left:4px;color:inherit;background:transparent;border:1px solid var(--border,#52606e);border-radius:4px;cursor:pointer;flex-shrink:0}

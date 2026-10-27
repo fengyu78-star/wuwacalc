@@ -1,0 +1,285 @@
+{
+  "version": 1,
+  "kind": "shard",
+  "characterId": "1202",
+  "characterName": "炽霞",
+  "templates": [
+    {
+      "characterId": "1202",
+      "characterName": "炽霞",
+      "revision": 2,
+      "author": "",
+      "notes": "炽霞：0链分支攻击比12%、热熔伤害加成12%；1链指定技能【轰轰】暴击率固定为100%。",
+      "personalBuffs": [
+        {
+          "category": "composite",
+          "name": "固有1·轰轰",
+          "mode": "fixed",
+          "value": 0,
+          "perStack": 0,
+          "maxStacks": 99,
+          "damageType": "",
+          "element": "",
+          "defenseKind": "",
+          "convergenceVuln": "",
+          "effects": [
+            {
+              "zone": "generalBonus",
+              "valueMode": "fixed",
+              "value": 50,
+              "segments": [
+                {
+                  "upTo": null,
+                  "perStack": 0
+                }
+              ],
+              "skillScope": "names",
+              "skillNames": [
+                "英魂炽火流·轰轰",
+                "轰轰"
+              ],
+              "librarySkillNames": [
+                "英魂炽火流·轰轰"
+              ],
+              "catalogIds": [],
+              "damageType": "共鸣技能",
+              "effectType": "",
+              "element": "热熔",
+              "defenseKind": "",
+              "minStacks": 0,
+              "minResonance": 0,
+              "onlyCharacterIds": [],
+              "onlyCombatModes": [],
+              "effectKey": ""
+            }
+          ],
+          "sourceTag": "characterTemplate",
+          "templateKey": "tpl_mryuxdke_7koe5",
+          "gameText": "【热压弹】容量上限扩充10发，共鸣技能轰轰伤害提升50%。"
+        },
+        {
+          "category": "composite",
+          "name": "固有2·加麻加辣",
+          "mode": "stack",
+          "value": 0,
+          "perStack": 0,
+          "maxStacks": 30,
+          "damageType": "",
+          "element": "",
+          "defenseKind": "",
+          "convergenceVuln": "",
+          "effects": [
+            {
+              "zone": "generalAttack",
+              "valueMode": "stack",
+              "value": 0,
+              "segments": [
+                {
+                  "upTo": 30,
+                  "perStack": 1
+                }
+              ],
+              "skillScope": "all",
+              "skillNames": [],
+              "librarySkillNames": [],
+              "catalogIds": [],
+              "damageType": "",
+              "effectType": "",
+              "element": "",
+              "defenseKind": "",
+              "minStacks": 0,
+              "minResonance": 0,
+              "onlyCharacterIds": [],
+              "onlyCombatModes": [],
+              "effectKey": ""
+            }
+          ],
+          "sourceTag": "characterTemplate",
+          "templateKey": "tpl_mryuxv6h_b7lv2",
+          "gameText": "共鸣技能咔咔压制持续期间，每发【热压弹】命中可使攻击提升1%，持续10秒，可叠加30层。",
+          "clampStacks": true
+        }
+      ],
+      "teamBuffs": [],
+      "extraSkills": [],
+      "resonanceChains": {
+        "1": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [
+            {
+              "templateKey": "chixia_c1_honghong_crit_set",
+              "category": "composite",
+              "name": "炽霞·【1链】轰轰暴击",
+              "mode": "fixed",
+              "value": 0,
+              "effects": [
+                {
+                  "zone": "critRateSet",
+                  "valueMode": "fixed",
+                  "value": 100,
+                  "segments": [
+                    {
+                      "upTo": null,
+                      "perStack": 0
+                    }
+                  ],
+                  "skillScope": "names",
+                  "skillNames": [
+                    "轰轰",
+                    "英魂炽火流·轰轰"
+                  ],
+                  "librarySkillNames": [
+                    "英魂炽火流·轰轰"
+                  ],
+                  "catalogIds": [],
+                  "damageType": "",
+                  "effectType": "",
+                  "element": "",
+                  "defenseKind": "",
+                  "minStacks": 0,
+                  "minResonance": 0,
+                  "onlyCharacterIds": [],
+                  "onlyCombatModes": [],
+                  "effectKey": ""
+                }
+              ],
+              "sourceTag": "characterTemplate",
+              "perStack": 0,
+              "maxStacks": 1,
+              "gameText": "施放共鸣技能轰轰时，必定暴击。"
+            }
+          ],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {},
+          "gameText": "施放共鸣技能轰轰时，必定暴击。"
+        },
+        "2": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {},
+          "gameText": "施放共鸣解放炽烈焰火期间，每击败1个目标，回复5点共鸣能量，每次最多可回复20点。"
+        },
+        "3": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [
+            {
+              "category": "composite",
+              "name": "3链·生命值低于50%",
+              "mode": "fixed",
+              "value": 0,
+              "perStack": 0,
+              "maxStacks": 99,
+              "damageType": "",
+              "element": "",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "effects": [
+                {
+                  "zone": "generalBonus",
+                  "valueMode": "fixed",
+                  "value": 40,
+                  "segments": [
+                    {
+                      "upTo": null,
+                      "perStack": 0
+                    }
+                  ],
+                  "skillScope": "names",
+                  "skillNames": [
+                    "炽烈焰火·技能"
+                  ],
+                  "librarySkillNames": [
+                    "炽烈焰火·技能"
+                  ],
+                  "catalogIds": [],
+                  "damageType": "共鸣解放",
+                  "effectType": "",
+                  "element": "热熔",
+                  "defenseKind": "",
+                  "minStacks": 0,
+                  "minResonance": 0,
+                  "onlyCharacterIds": [],
+                  "onlyCombatModes": [],
+                  "effectKey": ""
+                }
+              ],
+              "sourceTag": "characterTemplate",
+              "templateKey": "tpl_mryuzb0s_8esvb",
+              "gameText": "共鸣解放炽烈焰火对生命值低于50%的目标，伤害提升40%。"
+            }
+          ],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {},
+          "gameText": "共鸣解放炽烈焰火对生命值低于50%的目标，伤害提升40%。"
+        },
+        "4": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {},
+          "gameText": "施放共鸣解放炽烈焰火时，炽霞获得60发【热压弹】，并立即重置一次共鸣技能咻咻斗意的冷却时间。"
+        },
+        "5": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [
+            {
+              "category": "generalAttack",
+              "name": "5链·加麻加辣叠至满层时",
+              "mode": "fixed",
+              "value": 30,
+              "perStack": 0,
+              "maxStacks": 5,
+              "damageType": "",
+              "element": "",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "sourceTag": "characterTemplate",
+              "templateKey": "tpl_mryv0xbv_fsyhx",
+              "gameText": "固有技能加麻加辣叠加至满层时，攻击额外提升30%。"
+            }
+          ],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {},
+          "gameText": "固有技能加麻加辣叠加至满层时，攻击额外提升30%。"
+        },
+        "6": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [],
+          "teamBuffs": [
+            {
+              "category": "typeBonus",
+              "name": "6链·炽霞",
+              "mode": "fixed",
+              "value": 25,
+              "perStack": 0,
+              "maxStacks": 5,
+              "damageType": "普攻",
+              "element": "",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "sourceTag": "characterTemplate",
+              "templateKey": "tpl_mryv1j8n_pskb3",
+              "gameText": "触发共鸣技能轰轰后，队伍中的角色普攻伤害加成提升25%，持续15秒。"
+            }
+          ],
+          "extraSkills": [],
+          "combatModes": {},
+          "gameText": "触发共鸣技能轰轰后，队伍中的角色普攻伤害加成提升25%，持续15秒。"
+        }
+      },
+      "combatModes": {}
+    }
+  ]
+}

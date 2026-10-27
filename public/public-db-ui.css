@@ -1,0 +1,1185 @@
+/* Page-scoped public library design from the local workbench. */
+@layer localPalette {
+  /* PulseHeart-inspired vanilla button for the real public DB action rail. */
+  html[data-theme] body.public-db-open .public-db-page .pdb-pulse-heart {
+    position:relative;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    min-height:34px!important;
+    height:34px!important;
+    padding:0!important;
+    border:0!important;
+    background:transparent!important;
+    color:var(--ui-text);
+    cursor:pointer;
+    transform:scale(1);
+    transition:transform 160ms cubic-bezier(.23,1,.32,1);
+  }
+  html[data-theme] body.public-db-open .public-db-page .pdb-pulse-heart:active { transform:scale(.97); }
+  html[data-theme] body.public-db-open .public-db-page .pdb-pulse-heart:focus-visible { outline:2px solid var(--ui-title); outline-offset:3px; }
+  html[data-theme] body.public-db-open .public-db-page .pdb-pulse-heart__pill {
+    display:inline-flex;
+    align-items:center;
+    gap:6px;
+    height:100%;
+    padding:0 10px;
+    border:1px solid var(--ui-title);
+    border-radius:18px;
+    background:var(--ui-soft);
+    transform-origin:center;
+  }
+  html[data-theme] body.public-db-open .public-db-page .pdb-pulse-heart__heart {
+    display:block;
+    width:18px;
+    height:18px;
+    color:var(--ui-title);
+    transform-origin:center;
+    transition:color 160ms ease;
+  }
+  html[data-theme] body.public-db-open .public-db-page .pdb-pulse-heart__heart svg { display:block; width:100%; height:100%; overflow:visible; fill:none; stroke:currentColor; stroke-width:1.8; stroke-linecap:round; stroke-linejoin:round; }
+  html[data-theme] body.public-db-open .public-db-page .pdb-pulse-heart[data-liked='true'] .pdb-pulse-heart__heart svg { fill:currentColor; }
+    html[data-theme] body.public-db-open .public-db-page .pdb-pulse-heart__count {
+      display:inline-flex;
+      min-width:1ch;
+      font-size:11px;
+      font-weight:800;
+      line-height:1;
+      font-variant-numeric:tabular-nums;
+      color:var(--ui-text);
+    }
+    html[data-theme] body.public-db-open .public-db-page .pdb-pulse-heart[data-liked='true'] .pdb-pulse-heart__count { color:var(--ui-title); }
+  html[data-theme] body.public-db-open .public-db-page .pdb-pulse-heart[data-running] .pdb-pulse-heart__heart { animation:pdbPulseHeart 560ms cubic-bezier(.23,1,.32,1); }
+  html[data-theme] body.public-db-open .public-db-page .pdb-pulse-heart[data-running] .pdb-pulse-heart__pill { animation:pdbPulsePill 560ms cubic-bezier(.23,1,.32,1); }
+  @keyframes pdbPulseHeart { 0%,100%{transform:scale(1)} 40%{transform:scale(.3)} 70%{transform:scale(1.22)} }
+  @keyframes pdbPulsePill { 0%,100%{transform:scale(1)} 40%{transform:scale(.97)} 70%{transform:scale(1.02)} }
+  @media (prefers-reduced-motion:reduce) {
+    html[data-theme] body.public-db-open .public-db-page .pdb-pulse-heart,
+    html[data-theme] body.public-db-open .public-db-page .pdb-pulse-heart__heart,
+    html[data-theme] body.public-db-open .public-db-page .pdb-pulse-heart__pill { animation:none!important; transition:none; }
+  }
+  @media (max-width:640px) {
+    html[data-theme] body.public-db-open .public-db-page .pdb-pulse-heart { min-height:32px!important; height:32px!important; }
+    html[data-theme] body.public-db-open .public-db-page .pdb-pulse-heart__pill { padding:0 7px; gap:4px; }
+    html[data-theme] body.public-db-open .public-db-page .pdb-pulse-heart__heart { width:16px; height:16px; }
+  }
+}
+@layer localPalette {
+  /* Public DB cards: first-slot character wallpaper as a quiet background layer. */
+  html[data-theme] body.public-db-open .public-db-page .data-card {
+    position:relative;
+    isolation:isolate;
+    overflow:hidden;
+    background:linear-gradient(90deg,var(--ui-panel) 0%,color-mix(in srgb,var(--ui-panel) 78%,transparent) 44%,var(--ui-panel) 100%)!important;
+  }
+  html[data-theme] body.public-db-open .public-db-page .data-card > :not(.pdb-card-wallpaper) {
+    position:relative;
+    z-index:1;
+  }
+  html[data-theme] body.public-db-open .public-db-page .pdb-card-wallpaper {
+    position:absolute;
+    inset:0;
+    z-index:0;
+    pointer-events:none;
+    background-position:center 28%;
+    background-repeat:no-repeat;
+    background-size:cover;
+    opacity:.30;
+    filter:saturate(.84) contrast(1.08) brightness(.54);
+    mix-blend-mode:screen;
+  }
+  html[data-theme] body.public-db-open .public-db-page .pdb-card-wallpaper::after {
+    content:'';
+    position:absolute;
+    inset:0;
+    background:linear-gradient(90deg,var(--ui-panel) 0%,transparent 40%,var(--ui-panel) 100%),linear-gradient(180deg,var(--ui-panel) 0%,transparent 48%,var(--ui-panel) 100%);
+    opacity:.72;
+  }
+  html[data-theme='ivory-prism'] body.public-db-open .public-db-page .data-card {
+    background:linear-gradient(90deg,rgba(242,239,233,.92) 0%,rgba(242,239,233,.70) 46%,rgba(242,239,233,.88) 100%)!important;
+  }
+  html[data-theme='ivory-prism'] body.public-db-open .public-db-page .pdb-card-wallpaper {
+    opacity:.48;
+    filter:saturate(.78) contrast(1.12) brightness(.88);
+    mix-blend-mode:multiply;
+  }
+  html[data-theme='ivory-prism'] body.public-db-open .public-db-page .pdb-card-wallpaper::after {
+    background:linear-gradient(90deg,rgba(242,239,233,.82) 0%,rgba(242,239,233,.30) 43%,rgba(242,239,233,.82) 100%),linear-gradient(180deg,rgba(242,239,233,.48) 0%,transparent 48%,rgba(242,239,233,.72) 100%);
+    opacity:.72;
+  }
+  @media (max-width:640px) {
+    html[data-theme] body.public-db-open .public-db-page .pdb-card-wallpaper { opacity:.24; }
+    html[data-theme='ivory-prism'] body.public-db-open .public-db-page .pdb-card-wallpaper { opacity:.38; }
+  }
+}
+@layer localPalette {
+  /* Keep the real public DB close to the reviewed Demo hierarchy. */
+  html[data-theme] body.public-db-open .public-db-page .pdb-list { gap:12px; }
+  html[data-theme] body.public-db-open .public-db-page .pdb-card-user .pdb-author-avatar { width:52px; height:52px; }
+  html[data-theme] body.public-db-open .public-db-page .pdb-card-btn { min-height:34px; height:34px; padding:0 12px; font-size:var(--ui-type-base); font-weight:700; }
+  @media (max-width:640px) {
+    html[data-theme] body.public-db-open .public-db-page .pdb-list { gap:9px; }
+    html[data-theme] body.public-db-open .public-db-page .pdb-card-user .pdb-author-avatar { width:48px; height:48px; }
+    html[data-theme] body.public-db-open .public-db-page .pdb-card-btn { min-height:32px; height:32px; padding:0 9px; font-size:var(--ui-type-small); }
+  }
+}
+@layer localPalette {
+  /* Public DB card layout sync: mirror the reviewed Demo while keeping data attributes intact. */
+  html[data-theme] body.public-db-open .public-db-page .data-card {
+    display:block!important;
+    padding:16px 18px 14px!important;
+    border-radius:11px;
+    box-sizing:border-box;
+  }
+  html[data-theme] body.public-db-open .public-db-page .card-heading {
+    display:flex;
+    align-items:flex-start;
+    justify-content:space-between;
+    gap:14px;
+    min-width:0;
+    padding-bottom:9px;
+    border-bottom:1px solid var(--ui-line);
+  }
+  html[data-theme] body.public-db-open .public-db-page .card-heading-copy { min-width:0; }
+  html[data-theme] body.public-db-open .public-db-page .card-kind {
+    display:block;
+    margin-bottom:5px;
+    color:var(--ui-title);
+    font-size:10px;
+    font-weight:800;
+    letter-spacing:.08em;
+  }
+  html[data-theme] body.public-db-open .public-db-page .card-name {
+    margin:0;
+    color:var(--ui-text);
+    font-size:17px;
+    line-height:1.25;
+    font-weight:850;
+  }
+  html[data-theme] body.public-db-open .public-db-page .card-heading-tools,
+  html[data-theme] body.public-db-open .public-db-page .card-heading-actions,
+  html[data-theme] body.public-db-open .public-db-page .card-quick-actions {
+    display:flex;
+    align-items:center;
+    gap:6px;
+  }
+  html[data-theme] body.public-db-open .public-db-page .card-heading-tools { flex:0 0 auto; }
+  html[data-theme] body.public-db-open .public-db-page .card-main {
+    display:grid;
+    grid-template-columns:minmax(0,1fr) 168px;
+    gap:16px;
+    align-items:stretch;
+    min-width:0;
+    margin-top:8px;
+  }
+  html[data-theme] body.public-db-open .public-db-page .card-left {
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+    min-width:0;
+    min-height:154px;
+  }
+  html[data-theme] body.public-db-open .public-db-page .card-left > .team {
+    display:block!important;
+    min-width:0;
+    margin:0;
+    padding:9px 0 13px!important;
+    border-top:0;
+    border-bottom:1px solid var(--ui-line);
+  }
+  html[data-theme] body.public-db-open .public-db-page .card-left .avatar-group {
+    display:flex;
+    align-items:center;
+    gap:16px;
+    width:auto;
+  }
+  html[data-theme] body.public-db-open .public-db-page .card-left .pdb-team-slot {
+    width:auto;
+    min-width:0;
+    padding-right:15px;
+    gap:8px;
+    border-right:1px solid var(--ui-line);
+  }
+  html[data-theme] body.public-db-open .public-db-page .card-left .pdb-team-slot:last-child { border-right:0; }
+  html[data-theme] body.public-db-open .public-db-page .card-left .avatar-group .avatar {
+    width:72px;
+    height:72px;
+    border-radius:8px;
+    border-color:var(--ui-line);
+  }
+  html[data-theme] body.public-db-open .public-db-page .card-left .slot-weapon-wrap {
+    width:52px;
+    height:52px;
+    border-color:var(--ui-line);
+    background:var(--ui-inner);
+  }
+  html[data-theme] body.public-db-open .public-db-page .card-left .slot-badge { font-size:10px; padding:2px 5px; }
+  html[data-theme] body.public-db-open .public-db-page .card-tags.team-tags {
+    display:grid!important;
+    grid-template-columns:repeat(3,minmax(0,1fr));
+    gap:6px;
+    margin:8px 0 0;
+    padding:0;
+    border:0;
+    background:transparent;
+  }
+  html[data-theme] body.public-db-open .public-db-page .team-tags .tag {
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    min-width:0;
+    min-height:31px;
+    padding:5px 7px;
+    border:1px solid var(--ui-line);
+    border-left:2px solid var(--ui-title);
+    border-radius:5px;
+    background:linear-gradient(105deg,var(--ui-inner),transparent);
+    color:var(--ui-text);
+    font-size:11px;
+    font-weight:850;
+    text-align:center;
+  }
+  html[data-theme] body.public-db-open .public-db-page .team-tags .tag-value {
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+  }
+  html[data-theme] body.public-db-open .public-db-page .team-tags .tag-easiest,
+  html[data-theme] body.public-db-open .public-db-page .team-tags .tag-adapt { border-left-color:#3e9c76; color:#176b4b; }
+  html[data-theme] body.public-db-open .public-db-page .team-tags .tag-extreme,
+  html[data-theme] body.public-db-open .public-db-page .team-tags .tag-picky { border-left-color:#ba5261; color:#9e3546; }
+  html[data-theme] body.public-db-open .public-db-page .card-left-foot { display:flex; flex-direction:column; gap:5px; padding-top:9px; }
+  html[data-theme] body.public-db-open .public-db-page .card-metrics { display:flex; align-items:baseline; gap:15px; flex-wrap:wrap; color:var(--ui-muted); font-size:10px; }
+  html[data-theme] body.public-db-open .public-db-page .card-metric { display:flex; align-items:baseline; gap:4px; }
+  html[data-theme] body.public-db-open .public-db-page .card-metric strong { color:var(--ui-text); font:800 16px/1 ui-monospace,Consolas,monospace; }
+  html[data-theme] body.public-db-open .public-db-page .card-metric.dps strong { color:var(--ui-title); font-size:20px; }
+  html[data-theme] body.public-db-open .public-db-page .publish-date { color:var(--ui-muted); font:600 9px ui-monospace,Consolas,monospace; }
+  html[data-theme] body.public-db-open .public-db-page .card-right { display:flex; flex-direction:column; align-items:flex-end; justify-content:space-between; gap:12px; min-width:0; }
+  html[data-theme] body.public-db-open .public-db-page .card-quick-actions { justify-content:flex-end; flex-wrap:wrap; }
+  html[data-theme] body.public-db-open .public-db-page .card-right .pdb-card-user { align-self:flex-end; display:flex; align-items:center; gap:10px; min-width:0; padding:0; border:0; background:transparent; }
+  html[data-theme] body.public-db-open .public-db-page .card-right .pdb-card-user:hover { background:transparent; border-color:transparent; }
+  html[data-theme] body.public-db-open .public-db-page .author-info b { color:var(--ui-text); font-size:12px; white-space:nowrap; }
+  html[data-theme] body.public-db-open .public-db-page .card-right .pdb-card-btn { min-height:34px!important; height:34px!important; padding:0 10px!important; font-size:11px!important; font-weight:800; }
+  html[data-theme] body.public-db-open .public-db-page .card-heading .pdb-card-btn { min-height:30px; height:30px; padding:0 9px; font-size:10px; }
+  html[data-theme='ivory-prism'] body.public-db-open .public-db-page .team-tags .tag { background:linear-gradient(100deg,#f0f3f6,#ffffff); }
+  html[data-theme='classic'] body.public-db-open .public-db-page .team-tags .tag { color:var(--ui-text); }
+  @media (max-width:960px) {
+    html[data-theme] body.public-db-open .public-db-page .card-main { grid-template-columns:minmax(0,1fr) 142px; gap:11px; }
+    html[data-theme] body.public-db-open .public-db-page .card-left .avatar-group { gap:9px; }
+    html[data-theme] body.public-db-open .public-db-page .card-left .pdb-team-slot { padding-right:8px; gap:5px; }
+    html[data-theme] body.public-db-open .public-db-page .card-left .avatar-group .avatar { width:58px; height:58px; }
+    html[data-theme] body.public-db-open .public-db-page .card-left .slot-weapon-wrap { width:43px; height:43px; }
+  }
+  @media (max-width:640px) {
+    html[data-theme] body.public-db-open .public-db-page .data-card { padding:13px 12px 12px!important; }
+    html[data-theme] body.public-db-open .public-db-page .card-heading { gap:8px; }
+    html[data-theme] body.public-db-open .public-db-page .card-name { font-size:15px; }
+    html[data-theme] body.public-db-open .public-db-page .card-main { grid-template-columns:minmax(0,1fr); gap:10px; }
+    html[data-theme] body.public-db-open .public-db-page .card-left { min-height:0; }
+    html[data-theme] body.public-db-open .public-db-page .card-left .avatar-group { gap:6px; }
+    html[data-theme] body.public-db-open .public-db-page .card-left .pdb-team-slot { padding-right:5px; gap:3px; }
+    html[data-theme] body.public-db-open .public-db-page .card-left .avatar-group .avatar { width:48px; height:48px; }
+    html[data-theme] body.public-db-open .public-db-page .card-left .slot-weapon-wrap { width:35px; height:35px; }
+    html[data-theme] body.public-db-open .public-db-page .card-right { flex-direction:row; align-items:center; }
+    html[data-theme] body.public-db-open .public-db-page .card-quick-actions { justify-content:flex-start; }
+    html[data-theme] body.public-db-open .public-db-page .card-right .pdb-card-user { margin-left:auto; }
+    html[data-theme] body.public-db-open .public-db-page .card-right .pdb-card-btn { min-height:32px; height:32px; padding:0 7px; font-size:10px; }
+  }
+}
+@layer localPalette {
+  /* Match Demo card controls: actions and usage count share the heading rail. */
+  html[data-theme] body.public-db-open .public-db-page .card-heading-tools {
+    display:flex;
+    align-items:center;
+    justify-content:flex-end;
+    gap:8px;
+    flex-wrap:wrap;
+    max-width:360px;
+  }
+  html[data-theme] body.public-db-open .public-db-page .card-heading-actions { gap:4px; flex-wrap:wrap; justify-content:flex-end; }
+  html[data-theme] body.public-db-open .public-db-page .card-use-count {
+    display:inline-flex;
+    align-items:center;
+    gap:3px;
+    min-height:29px;
+    padding:5px 8px;
+    border:1px solid var(--ui-line);
+    border-radius:5px;
+    color:var(--ui-muted);
+    font-size:10px;
+    white-space:nowrap;
+  }
+  html[data-theme] body.public-db-open .public-db-page .card-use-count strong { color:var(--ui-title); font:800 12px ui-monospace,Consolas,monospace; }
+  html[data-theme] body.public-db-open .public-db-page .card-quick-actions .pdb-card-btn.like { color:var(--ui-title); border-color:var(--ui-title); background:var(--ui-soft); }
+  @media (max-width:640px) {
+    html[data-theme] body.public-db-open .public-db-page .card-heading-tools { max-width:250px; gap:4px; }
+    html[data-theme] body.public-db-open .public-db-page .card-use-count { min-height:27px; padding:4px 6px; font-size:9px; }
+  }
+}
+@layer localPalette {
+  /* Main public library uses the same two-card rhythm as the reviewed Demo. */
+  html[data-theme] body.public-db-open .public-db-page .pdb-list {
+    display:grid!important;
+    grid-template-columns:repeat(2,minmax(0,1fr))!important;
+    align-items:stretch;
+    gap:14px;
+  }
+  html[data-theme] body.public-db-open .public-db-page .pdb-list .data-card { width:100%; max-width:none; min-width:0; }
+  html[data-theme] body.public-db-open .public-db-page .card-main { grid-template-columns:minmax(0,1fr) 136px; gap:12px; }
+  html[data-theme] body.public-db-open .public-db-page .card-left .avatar-group { gap:10px; }
+  html[data-theme] body.public-db-open .public-db-page .card-left .pdb-team-slot { padding-right:9px; gap:6px; }
+  html[data-theme] body.public-db-open .public-db-page .card-left .avatar-group .avatar { width:64px; height:64px; }
+  html[data-theme] body.public-db-open .public-db-page .card-left .slot-weapon-wrap { width:47px; height:47px; }
+  html[data-theme] body.public-db-open .public-db-page .card-tags.team-tags { gap:5px; }
+  html[data-theme] body.public-db-open .public-db-page .team-tags .tag { min-height:34px; padding:6px 5px; font-size:10px; }
+  html[data-theme] body.public-db-open .public-db-page .card-right .pdb-card-btn { padding:0 8px!important; font-size:10px!important; }
+  @media (max-width:760px) {
+    html[data-theme] body.public-db-open .public-db-page .pdb-list { grid-template-columns:1fr!important; }
+  }
+  @media (max-width:640px) {
+    html[data-theme] body.public-db-open .public-db-page .pdb-list { gap:9px; }
+  }
+}
+@layer localPalette {
+  /* Three-column compact cards: keep the data hierarchy visible without wasting width. */
+  html[data-theme] body.public-db-open .public-db-page .pdb-list {
+    grid-template-columns:repeat(3,minmax(0,1fr))!important;
+    gap:12px;
+  }
+  html[data-theme] body.public-db-open .public-db-page .pdb-list .data-card {
+    padding:12px 13px 11px!important;
+  }
+  html[data-theme] body.public-db-open .public-db-page .card-heading {
+    justify-content:flex-start;
+    gap:9px;
+    padding-bottom:7px;
+  }
+  html[data-theme] body.public-db-open .public-db-page .card-heading-copy {
+    flex:0 1 auto;
+  }
+  html[data-theme] body.public-db-open .public-db-page .card-name {
+    font-size:15px;
+    line-height:1.2;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+  }
+  html[data-theme] body.public-db-open .public-db-page .card-heading-tools {
+    max-width:none;
+    margin-left:0;
+    flex:0 0 auto;
+  }
+  html[data-theme] body.public-db-open .public-db-page .card-heading-actions {
+    gap:3px;
+    flex-wrap:nowrap;
+    justify-content:flex-start;
+  }
+  html[data-theme] body.public-db-open .public-db-page .card-heading .pdb-card-btn {
+    min-height:28px;
+    height:28px;
+    padding:0 7px;
+    font-size:9px;
+    white-space:nowrap;
+  }
+  html[data-theme] body.public-db-open .public-db-page .card-main {
+    grid-template-columns:minmax(0,1fr) 94px;
+    gap:8px;
+    margin-top:6px;
+  }
+  html[data-theme] body.public-db-open .public-db-page .card-left {
+    min-height:145px;
+  }
+  html[data-theme] body.public-db-open .public-db-page .card-left > .team {
+    padding:6px 0 9px!important;
+  }
+  html[data-theme] body.public-db-open .public-db-page .card-left .avatar-group {
+    gap:6px;
+  }
+  html[data-theme] body.public-db-open .public-db-page .card-left .pdb-team-slot {
+    padding-right:7px;
+    gap:5px;
+  }
+  html[data-theme] body.public-db-open .public-db-page .card-left .avatar-group .avatar {
+    width:54px;
+    height:54px;
+  }
+  html[data-theme] body.public-db-open .public-db-page .card-left .slot-weapon-wrap {
+    width:38px;
+    height:38px;
+  }
+  html[data-theme] body.public-db-open .public-db-page .card-tag-row {
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:6px;
+    min-width:0;
+    margin-top:7px;
+  }
+  html[data-theme] body.public-db-open .public-db-page .card-tags.team-tags {
+    display:block!important;
+    flex:1 1 auto;
+    min-width:0;
+    margin:0;
+  }
+  html[data-theme] body.public-db-open .public-db-page .team-tags .tag {
+    justify-content:flex-start;
+    min-height:28px;
+    padding:4px 7px;
+    font-size:10px;
+  }
+  html[data-theme] body.public-db-open .public-db-page .card-signal-actions {
+    display:inline-flex;
+    align-items:center;
+    gap:4px;
+    flex:0 0 auto;
+  }
+  html[data-theme] body.public-db-open .public-db-page .card-signal-actions .pdb-pulse-heart {
+    min-height:28px!important;
+    height:28px!important;
+  }
+  html[data-theme] body.public-db-open .public-db-page .card-signal-actions .pdb-pulse-heart__pill {
+    gap:4px;
+    padding:0 6px;
+    border-radius:14px;
+  }
+  html[data-theme] body.public-db-open .public-db-page .card-signal-actions .pdb-pulse-heart__heart {
+    width:14px;
+    height:14px;
+  }
+  html[data-theme] body.public-db-open .public-db-page .card-signal-actions .pdb-pulse-heart__count {
+    font-size:10px;
+  }
+  html[data-theme] body.public-db-open .public-db-page .card-signal-actions .card-use-count {
+    min-height:28px;
+    padding:4px 6px;
+    font-size:9px;
+  }
+  html[data-theme] body.public-db-open .public-db-page .card-signal-actions .card-use-count strong {
+    font-size:11px;
+  }
+  html[data-theme] body.public-db-open .public-db-page .card-right {
+    gap:8px;
+  }
+  html[data-theme] body.public-db-open .public-db-page .card-quick-actions {
+    justify-content:flex-start;
+    flex-wrap:nowrap;
+    gap:4px;
+  }
+  html[data-theme] body.public-db-open .public-db-page .card-right .pdb-card-btn {
+    min-height:28px!important;
+    height:28px!important;
+    min-width:0;
+    padding:0 6px!important;
+    font-size:9px!important;
+  }
+  html[data-theme] body.public-db-open .public-db-page .card-right .card-quick-actions .pdb-card-btn {
+    flex:1 1 0;
+  }
+  html[data-theme] body.public-db-open .public-db-page .card-right .pdb-card-user {
+    margin-top:auto;
+    gap:6px;
+  }
+  html[data-theme] body.public-db-open .public-db-page .card-right .pdb-card-user .pdb-author-avatar {
+    width:38px;
+    height:38px;
+  }
+  html[data-theme] body.public-db-open .public-db-page .author-info b {
+    font-size:10px;
+  }
+  html[data-theme] body.public-db-open .public-db-page .card-metrics {
+    gap:8px;
+    font-size:9px;
+  }
+  html[data-theme] body.public-db-open .public-db-page .card-metric strong {
+    font-size:13px;
+  }
+  html[data-theme] body.public-db-open .public-db-page .card-metric.dps strong {
+    font-size:16px;
+  }
+  html[data-theme] body.public-db-open .public-db-page .publish-date {
+    font-size:8px;
+  }
+  @media (max-width:1180px) {
+    html[data-theme] body.public-db-open .public-db-page .pdb-list {
+      grid-template-columns:repeat(2,minmax(0,1fr))!important;
+    }
+  }
+  @media (max-width:760px) {
+    html[data-theme] body.public-db-open .public-db-page .pdb-list {
+      grid-template-columns:1fr!important;
+    }
+    html[data-theme] body.public-db-open .public-db-page .card-heading {
+      justify-content:space-between;
+    }
+  }
+}
+@layer localPalette {
+  /* Let the public library use the full content rail; the old 1280/1360px cap left a wide blank strip. */
+  html[data-theme] body.public-db-open .public-db-page {
+    width:100%;
+    max-width:none!important;
+    margin-left:0;
+    margin-right:0;
+    padding-left:clamp(20px,2.2vw,48px);
+    padding-right:clamp(20px,2.2vw,48px);
+  }
+  @media (max-width:640px) {
+    html[data-theme] body.public-db-open .public-db-page {
+      padding-left:12px;
+      padding-right:12px;
+    }
+  }
+}
+@layer localPalette {
+  /* Keep the full-width page clear of the fixed left navigation rail. */
+  html[data-theme] body.public-db-open.has-phase-rail .wrap {
+    padding-left:calc(var(--phase-rail-width) + 12px)!important;
+    padding-right:16px!important;
+  }
+  html[data-theme] body.public-db-open .public-db-page .card-heading {
+    justify-content:space-between;
+  }
+  html[data-theme] body.public-db-open .public-db-page .card-heading-copy {
+    flex:1 1 auto;
+    min-width:0;
+  }
+  html[data-theme] body.public-db-open .public-db-page .card-heading-tools {
+    margin-left:auto;
+  }
+  html[data-theme] body.public-db-open .public-db-page .card-heading-actions {
+    justify-content:flex-end;
+    flex-wrap:nowrap;
+  }
+  html[data-theme] body.public-db-open .public-db-page .card-main {
+    display:block;
+    margin-top:4px;
+    min-height:0;
+  }
+  html[data-theme] body.public-db-open .public-db-page .card-left {
+    display:grid;
+    grid-template-rows:auto auto minmax(0,1fr);
+    align-content:start;
+    gap:5px;
+    min-height:0;
+    justify-content:stretch;
+  }
+  html[data-theme] body.public-db-open .public-db-page .pdb-list .data-card {
+    height:auto!important;
+    min-height:0!important;
+  }
+  html[data-theme] body.public-db-open .public-db-page .card-left > .team {
+    padding:4px 0 5px!important;
+  }
+  html[data-theme] body.public-db-open .public-db-page .card-tag-row {
+    margin-top:0;
+    justify-content:flex-start;
+    gap:8px;
+  }
+  html[data-theme] body.public-db-open .public-db-page .card-left-foot {
+    display:flex;
+    flex-direction:row!important;
+    align-items:flex-end;
+    justify-content:space-between;
+    flex-wrap:nowrap;
+    gap:10px;
+    min-width:0;
+    margin-top:0;
+    padding-top:3px;
+    align-self:end;
+    width:100%;
+  }
+  html[data-theme] body.public-db-open .public-db-page .card-footer-stats {
+    display:flex;
+    flex:0 1 auto;
+    min-width:0;
+    flex-direction:column;
+    gap:3px;
+    align-self:flex-end;
+  }
+  html[data-theme] body.public-db-open .public-db-page .card-footer-stats .card-metrics {
+    flex-wrap:nowrap;
+  }
+  html[data-theme] body.public-db-open .public-db-page .card-left-foot .pdb-card-user {
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    align-self:flex-end;
+    position:relative;
+    top:-28px;
+    flex:0 1 auto;
+    gap:6px;
+    min-width:0;
+    width:auto;
+    max-width:40%;
+    padding:0;
+    border:0;
+    background:transparent;
+  }
+  html[data-theme] body.public-db-open .public-db-page .card-left-foot .pdb-card-user:hover {
+    border-color:transparent;
+    background:transparent;
+  }
+  html[data-theme] body.public-db-open .public-db-page .card-left-foot .pdb-author-avatar {
+    width:38px;
+    height:38px;
+  }
+  html[data-theme] body.public-db-open .public-db-page .card-left-foot .author-info b {
+    color:var(--ui-text);
+    font-size:10px;
+    white-space:nowrap;
+  }
+  html[data-theme] body.public-db-open .public-db-page .card-left-foot .author-info {
+    min-width:0;
+    overflow:hidden;
+    text-overflow:ellipsis;
+  }
+  html[data-theme] body.public-db-open .public-db-page .card-signal-actions .card-use-count {
+    min-height:0;
+    padding:0!important;
+    border:0!important;
+    background:transparent!important;
+    border-radius:0;
+  }
+  @media (max-width:760px) {
+    html[data-theme] body.public-db-open.has-phase-rail .wrap {
+      padding-left:12px!important;
+      padding-right:12px!important;
+    }
+    html[data-theme] body.public-db-open .public-db-page .card-heading-actions {
+      flex-wrap:wrap;
+    }
+  }
+}
+@layer localPalette {
+  /* Keep the signal pair beside the entry label on the left; lift the author toward the team row. */
+  html[data-theme] body.public-db-open .public-db-page .card-tags.team-tags {
+    flex:0 1 auto;
+    width:auto;
+  }
+  html[data-theme] body.public-db-open .public-db-page .card-signal-actions {
+    margin-left:0;
+    justify-content:flex-start;
+  }
+}
+@layer localPalette {
+  html[data-theme] body.public-db-open .public-db-page .card-signal-actions {
+    padding-left:24px;
+  }
+}
+@layer localPalette {
+  html[data-theme] body.public-db-open .public-db-page .card-signal-actions {
+    position:relative;
+    left:24px;
+  }
+}
+@layer localPalette {
+  /* Keep the footer in normal flow so the card edge follows the publish date. */
+  html[data-theme] body.public-db-open .public-db-page .card-footer-stats {
+    position:static;
+    top:auto;
+  }
+  html[data-theme] body.public-db-open .public-db-page .card-left-foot .pdb-card-user {
+    flex-direction:row!important;
+    align-items:center!important;
+    flex-basis:auto!important;
+    width:auto!important;
+    padding:0!important;
+    position:static;
+    top:auto;
+  }
+  html[data-theme] body.public-db-open .public-db-page .card-left-foot .pdb-author-avatar {
+    width:48px!important;
+    height:48px!important;
+  }
+  html[data-theme] body.public-db-open .public-db-page .pdb-list {
+    align-items:stretch;
+  }
+  html[data-theme] body.public-db-open .public-db-page .pdb-list .data-card {
+    align-self:stretch;
+  }
+}
+@layer localPalette {
+  /* Public DB card: readable metrics, room for long author names, and a quiet hover pulse. */
+  html[data-theme] body.public-db-open .public-db-page .card-left-foot .pdb-card-user {
+    max-width:44%;
+    margin-right:12px;
+  }
+  html[data-theme] body.public-db-open .public-db-page .card-left-foot .author-info {
+    white-space:nowrap;
+  }
+  html[data-theme] body.public-db-open .public-db-page .card-left-foot .author-info b {
+    display:block;
+    overflow:hidden;
+    text-overflow:ellipsis;
+  }
+  html[data-theme] body.public-db-open .public-db-page .card-metrics {
+    gap:10px;
+    font-size:11px;
+  }
+  html[data-theme] body.public-db-open .public-db-page .card-metric strong {
+    font-size:17px;
+  }
+  html[data-theme] body.public-db-open .public-db-page .card-metric.dps strong {
+    font-size:21px;
+  }
+  html[data-theme] body.public-db-open .public-db-page .publish-date {
+    font-size:10px;
+  }
+  html[data-theme] body.public-db-open .public-db-page .pdb-list .data-card:hover {
+    border-color:color-mix(in srgb,var(--ui-title) 55%,var(--ui-line));
+    animation:pdb-card-breathe 2.5s ease-in-out infinite;
+  }
+  @keyframes pdb-card-breathe {
+    0%,100% { transform:translateY(-2px) scale(1.002); box-shadow:0 8px 20px rgba(0,0,0,.16),0 0 0 1px color-mix(in srgb,var(--ui-title) 15%,transparent); }
+    50% { transform:translateY(-3px) scale(1.006); box-shadow:0 13px 29px rgba(0,0,0,.21),0 0 0 1px color-mix(in srgb,var(--ui-title) 32%,transparent); }
+  }
+  @media (prefers-reduced-motion:reduce) {
+    html[data-theme] body.public-db-open .public-db-page .pdb-list .data-card:hover {
+      animation:none;
+      transform:none;
+    }
+  }
+}
+@layer localPalette {
+  /* Keep the author avatar/name clear of the card edge when IDs run long. */
+  html[data-theme] body.public-db-open .public-db-page .card-left-foot .pdb-card-user {
+    position:relative;
+    left:-12px;
+  }
+}
+@layer localPalette {
+  /* Stack social signals above the author area and give the like control an unmistakable oval pill. */
+  html[data-theme] body.public-db-open .public-db-page .card-left {
+    position:relative;
+  }
+  html[data-theme] body.public-db-open .public-db-page .card-signal-actions {
+    position:absolute;
+    left:auto;
+    right:12px;
+    bottom:56px;
+    z-index:3;
+    display:inline-flex;
+    align-items:center;
+    justify-content:flex-end;
+    gap:14px;
+    padding-left:0;
+    margin-left:0;
+  }
+  html[data-theme] body.public-db-open .public-db-page .card-signal-actions .pdb-pulse-heart {
+    min-width:50px!important;
+    width:auto!important;
+    height:28px!important;
+    min-height:28px!important;
+    padding:0!important;
+    border-radius:999px!important;
+  }
+  html[data-theme] body.public-db-open .public-db-page .card-signal-actions .pdb-pulse-heart__pill {
+    min-width:50px;
+    width:auto;
+    height:28px;
+    padding:0 10px!important;
+    gap:6px;
+    justify-content:center;
+    border-radius:999px!important;
+  }
+  html[data-theme] body.public-db-open .public-db-page .card-signal-actions .card-use-count {
+    margin-left:0;
+    white-space:nowrap;
+  }
+}
+@layer localPalette {
+  /* Public DB axis-kind language: green for global axes, blue-purple for loop axes. */
+  html[data-theme] body.public-db-open .public-db-page .pdb-tab[data-pdb-kind="global"] {
+    color:#7ee2a5;
+  }
+  html[data-theme] body.public-db-open .public-db-page .pdb-tab[data-pdb-kind="global"].is-on {
+    color:#b9f5ca;
+    background:linear-gradient(180deg,rgba(67,192,125,.18),transparent);
+  }
+  html[data-theme] body.public-db-open .public-db-page .pdb-tab[data-pdb-kind="global"].is-on::after {
+    background:#55d98f;
+    box-shadow:0 0 12px rgba(85,217,143,.62);
+  }
+  html[data-theme] body.public-db-open .public-db-page .pdb-tab[data-pdb-kind="loop"] {
+    color:#aeb9ff;
+  }
+  html[data-theme] body.public-db-open .public-db-page .pdb-tab[data-pdb-kind="loop"].is-on {
+    color:#d7d5ff;
+    background:linear-gradient(180deg,rgba(122,111,229,.2),transparent);
+  }
+  html[data-theme] body.public-db-open .public-db-page .pdb-tab[data-pdb-kind="loop"].is-on::after {
+    background:#9b8cff;
+    box-shadow:0 0 12px rgba(139,126,255,.66);
+  }
+  html[data-theme] body.public-db-open .public-db-page .pdb-list .data-card.pdb-kind-global {
+    border-color:rgba(78,214,141,.58)!important;
+    box-shadow:0 0 0 1px rgba(78,214,141,.2),0 0 20px rgba(44,180,110,.14);
+  }
+  html[data-theme] body.public-db-open .public-db-page .pdb-list .data-card.pdb-kind-global:hover {
+    border-color:rgba(118,238,169,.85)!important;
+  }
+  html[data-theme] body.public-db-open .public-db-page .pdb-list .data-card.pdb-kind-loop {
+    border-color:rgba(145,133,255,.62)!important;
+    box-shadow:0 0 0 1px rgba(145,133,255,.22),0 0 20px rgba(103,91,223,.17);
+  }
+  html[data-theme] body.public-db-open .public-db-page .pdb-list .data-card.pdb-kind-loop:hover {
+    border-color:rgba(184,176,255,.9)!important;
+  }
+  html[data-theme] body.public-db-open .public-db-page .card-tags.team-tags {
+    display:flex!important;
+    align-items:center;
+    gap:6px;
+    flex-wrap:nowrap;
+  }
+  html[data-theme] body.public-db-open .public-db-page .card-tags.team-tags .tag-entry {
+    flex:0 1 auto;
+    min-width:0;
+  }
+  html[data-theme] body.public-db-open .public-db-page .pdb-video-badge {
+    display:inline-flex;
+    align-items:center;
+    flex:0 0 auto;
+    min-height:24px;
+    padding:3px 7px;
+    border:1px solid rgba(91,220,143,.62);
+    border-radius:999px;
+    background:rgba(46,150,91,.17);
+    color:#89e9ae;
+    font-size:9px;
+    font-weight:850;
+    line-height:1;
+    white-space:nowrap;
+  }
+}
+@layer localPalette {
+  /* Layered palette rules need importance to outrank the base unlayered tab/card rules. */
+  html[data-theme] body.public-db-open .public-db-page .pdb-tab[data-pdb-kind="global"] {
+    color:#7ee2a5!important;
+  }
+  html[data-theme] body.public-db-open .public-db-page .pdb-tab[data-pdb-kind="global"].is-on {
+    color:#b9f5ca!important;
+    background:linear-gradient(180deg,rgba(67,192,125,.18),transparent)!important;
+  }
+  html[data-theme] body.public-db-open .public-db-page .pdb-tab[data-pdb-kind="global"].is-on::after {
+    background:#55d98f!important;
+    box-shadow:0 0 12px rgba(85,217,143,.62)!important;
+  }
+  html[data-theme] body.public-db-open .public-db-page .pdb-tab[data-pdb-kind="loop"] {
+    color:#aeb9ff!important;
+  }
+  html[data-theme] body.public-db-open .public-db-page .pdb-tab[data-pdb-kind="loop"].is-on {
+    color:#d7d5ff!important;
+    background:linear-gradient(180deg,rgba(122,111,229,.2),transparent)!important;
+  }
+  html[data-theme] body.public-db-open .public-db-page .pdb-tab[data-pdb-kind="loop"].is-on::after {
+    background:#9b8cff!important;
+    box-shadow:0 0 12px rgba(139,126,255,.66)!important;
+  }
+  html[data-theme] body.public-db-open .public-db-page .pdb-list .data-card.pdb-kind-global {
+    box-shadow:0 0 0 1px rgba(78,214,141,.2),0 0 20px rgba(44,180,110,.14)!important;
+  }
+  html[data-theme] body.public-db-open .public-db-page .pdb-list .data-card.pdb-kind-loop {
+    box-shadow:0 0 0 1px rgba(145,133,255,.22),0 0 20px rgba(103,91,223,.17)!important;
+  }
+}
+@layer localPalette {
+  /* Ivory public DB: bring the retrieval surface into the same blue-white system. */
+  html[data-theme='ivory-prism'] body.public-db-open .public-db-page .pdb-toolbar {
+    background:linear-gradient(135deg,#f7f5f0 0%,#eef3fb 100%)!important;
+    border:1px solid #c6cfdb!important;
+    box-shadow:0 10px 24px rgba(37,55,86,.12),inset 0 1px rgba(255,255,255,.86)!important;
+    color:var(--ui-text)!important;
+  }
+  html[data-theme='ivory-prism'] body.public-db-open .public-db-page .pdb-toolbar :is(.pdb-team-cfg-slot,.pdb-sel-slot-box) {
+    background:rgba(255,255,255,.42)!important;
+    border-color:#c5ceda!important;
+  }
+  html[data-theme='ivory-prism'] body.public-db-open .public-db-page .pdb-toolbar .pdb-sel-slot-box {
+    border-style:dashed!important;
+    color:#52647f!important;
+  }
+  html[data-theme='ivory-prism'] body.public-db-open .public-db-page .pdb-toolbar :is(.pdb-search-input,.pdb-select) {
+    background:#fffdfa!important;
+    border-color:#c4cdd9!important;
+    color:#202d43!important;
+  }
+  html[data-theme='ivory-prism'] body.public-db-open .public-db-page .pdb-toolbar .pdb-select:focus,
+  html[data-theme='ivory-prism'] body.public-db-open .public-db-page .pdb-toolbar .pdb-search-input:focus {
+    border-color:#365aa8!important;
+    box-shadow:0 0 0 3px rgba(54,90,168,.15)!important;
+  }
+  html[data-theme='ivory-prism'] body.public-db-open .public-db-page .pdb-toolbar .pdb-el-tile {
+    background:#e9f2f7!important;
+    border-color:#a9c4d4!important;
+    color:#31577d!important;
+  }
+  html[data-theme='ivory-prism'] body.public-db-open .public-db-page .pdb-toolbar .pdb-el-tile.is-on {
+    background:#dceaf5!important;
+    border-color:#2f6ba4!important;
+    color:#123f70!important;
+    box-shadow:inset 0 0 0 1px rgba(47,107,164,.16)!important;
+  }
+  html[data-theme='ivory-prism'] body.public-db-open .public-db-page .pdb-toolbar .pdb-chip-btn {
+    background:#eef3fb!important;
+    border-color:#b8c6dc!important;
+    color:#284e96!important;
+  }
+  html[data-theme='ivory-prism'] body.public-db-open .public-db-page .pdb-toolbar .pdb-chip-btn.is-active {
+    background:#dfe9fb!important;
+    border-color:#2d55a4!important;
+    color:#163b82!important;
+  }
+  /* Ivory weapon refinement badge: dark-blue fill and white text stay legible over bright art. */
+  html[data-theme='ivory-prism'] body.public-db-open .public-db-page .slot-weapon-wrap {
+    background:linear-gradient(180deg,#ffffff 0%,#e9eef5 100%)!important;
+    border-color:#b8c3d2!important;
+    box-shadow:0 2px 8px rgba(38,57,89,.18)!important;
+  }
+  html[data-theme='ivory-prism'] body.public-db-open .public-db-page .slot-badge-refine {
+    right:3px!important;
+    bottom:3px!important;
+    min-width:24px;
+    padding:2px 5px!important;
+    border:1px solid rgba(255,255,255,.92)!important;
+    border-radius:4px!important;
+    background:#122e8a!important;
+    color:#fffdfa!important;
+    font-weight:850!important;
+    text-shadow:0 1px 1px rgba(0,0,0,.35);
+    box-shadow:0 1px 4px rgba(18,46,138,.35)!important;
+  }
+}
+@layer localPalette {
+  /* Classic dark public DB: give the category/search header a solid reading surface. */
+  html[data-theme='classic'] body.public-db-open .public-db-page .pdb-tabs {
+    padding: 4px 8px 0;
+    border: 1px solid rgba(122, 137, 170, .28)!important;
+    border-bottom-color: rgba(151, 166, 201, .42)!important;
+    border-radius: 12px 12px 0 0;
+    background: linear-gradient(180deg, rgba(14, 19, 32, .985), rgba(18, 23, 37, .965))!important;
+    box-shadow: inset 0 1px rgba(255,255,255,.06), 0 8px 18px rgba(0,0,0,.2)!important;
+  }
+  html[data-theme='classic'] body.public-db-open .public-db-page .pdb-tab {
+    color: #c3cbe0!important;
+    text-shadow: 0 1px 2px rgba(0,0,0,.6);
+  }
+  html[data-theme='classic'] body.public-db-open .public-db-page .pdb-tab:hover {
+    color: #f5f7ff!important;
+  }
+  html[data-theme='classic'] body.public-db-open .public-db-page .pdb-tab.is-on {
+    color: #ff8fc1!important;
+  }
+  html[data-theme='classic'] body.public-db-open .public-db-page .pdb-searchbar {
+    margin: 0!important;
+    padding: 10px 12px 12px;
+    border: 1px solid rgba(122, 137, 170, .28)!important;
+    border-top: 0!important;
+    border-radius: 0 0 12px 12px;
+    background: rgba(18, 23, 37, .96)!important;
+    box-shadow: inset 0 -1px rgba(255,255,255,.04), 0 8px 18px rgba(0,0,0,.18)!important;
+  }
+  html[data-theme='classic'] body.public-db-open .public-db-page .pdb-search-input {
+    background: #242a3b!important;
+    border-color: #5a6682!important;
+    color: #f3f5ff!important;
+    box-shadow: inset 0 1px rgba(255,255,255,.06)!important;
+  }
+  html[data-theme='classic'] body.public-db-open .public-db-page .pdb-search-input::placeholder {
+    color: #aeb8d0!important;
+    opacity: 1;
+  }
+  html[data-theme='classic'] body.public-db-open .public-db-page .pdb-search-input:focus {
+    border-color: #ff4f9a!important;
+    box-shadow: 0 0 0 3px rgba(255,79,154,.18), inset 0 1px rgba(255,255,255,.08)!important;
+  }
+}
+@layer localPalette {
+  /* Public DB filters: put difficulty, performance, sort and share-code search on one row. */
+  body.public-db-open .public-db-page .pdb-filter-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr))!important;
+    gap: var(--ui-space-3)!important;
+    align-items: end;
+  }
+  body.public-db-open .public-db-page .pdb-filter-search {
+    min-width: 0;
+    margin: 0!important;
+    align-self: end;
+    display: flex;
+    gap: var(--ui-space-2);
+    width: 100%;
+  }
+  body.public-db-open .public-db-page .pdb-filter-search .pdb-search-input {
+    min-width: 0;
+    flex: 1 1 auto;
+    height: 36px;
+  }
+  body.public-db-open .public-db-page .pdb-filter-search .pdb-search-go,
+  body.public-db-open .public-db-page .pdb-filter-search .pdb-search-clear {
+    flex: 0 0 auto;
+    height: 36px;
+    white-space: nowrap;
+  }
+}
+@layer localPalette {
+  /* Public DB tag alignment: video provenance uses the same outline geometry as the entry tag. */
+  html[data-theme] body.public-db-open .public-db-page .card-tags.team-tags .pdb-video-badge {
+    height: 28px!important;
+    min-height: 28px!important;
+    padding: 0 12px!important;
+    border-radius: 6px!important;
+    box-sizing: border-box!important;
+    font-size: var(--ui-type-small)!important;
+    font-weight: 600!important;
+    letter-spacing: .5px!important;
+    line-height: 1!important;
+  }
+}
+@layer localPalette {
+  /* Keep the default entry type unchanged; distinguish the other two types. */
+  html[data-theme] body.public-db-open .public-db-page .card-tags.team-tags .tag-entry-other {
+    background:rgba(27,111,164,.25)!important;
+    border-color:#4baddb!important;
+    color:#bfeaff!important;
+  }
+  html[data-theme] body.public-db-open .public-db-page .card-tags.team-tags .tag-entry-custom {
+    background:rgba(129,77,173,.26)!important;
+    border-color:#ae78d5!important;
+    color:#edceff!important;
+  }
+  html[data-theme] body.public-db-open .public-db-page .card-tags.team-tags :is(.tag-entry-other,.tag-entry-custom) .tag-value {
+    color:inherit!important;
+  }
+  html[data-config-theme='ivory-prism'] body.public-db-open .public-db-page .card-tags.team-tags .tag-entry-other {
+    background:#dceefa!important;
+    border-color:#548eb6!important;
+    color:#174e75!important;
+  }
+  html[data-config-theme='ivory-prism'] body.public-db-open .public-db-page .card-tags.team-tags .tag-entry-custom {
+    background:#eee2f8!important;
+    border-color:#9c70bb!important;
+    color:#60377a!important;
+  }
+  /* A saturated fill keeps video provenance legible on bright cards. */
+  html[data-config-theme='ivory-prism'] body.public-db-open .public-db-page .card-tags.team-tags .pdb-video-badge {
+    background:#075c3a!important;
+    border-color:#064a30!important;
+    color:#fff!important;
+    font-size:12px!important;
+    font-weight:800!important;
+    box-shadow:none!important;
+    text-shadow:none!important;
+  }
+}
+
+/* 2026-10-07: compact zones and a draft-based filter dialog. Scoped to public DB. */
+#publicDbPage .pdb-shell { gap:12px; }
+#publicDbPage .pdb-shell > .pdb-compact-bar { margin-bottom:0; }
+#publicDbPage .pdb-compact-bar { display:flex; align-items:center; flex-wrap:wrap; gap:10px; padding:10px 12px; margin:0 0 12px; border:1px solid var(--ui-line,#c8d2e2); border-radius:10px; background:var(--ui-panel,#f8faff); color:var(--ui-text,#233451); }
+#publicDbPage .pdb-zone-nav { display:flex; flex:1; flex-wrap:wrap; gap:4px; min-width:0; }
+#publicDbPage .pdb-zone-btn { background:transparent; border:1px solid transparent; border-radius:6px; padding:8px 13px; min-height:40px; color:var(--ui-text,#233451); font-family:inherit; font-size:14px; font-weight:600; line-height:1.4; white-space:nowrap; cursor:pointer; }
+#publicDbPage .pdb-zone-btn:hover { background:var(--ui-soft,#eaf0ff); }
+#publicDbPage .pdb-zone-btn.is-on { background:var(--ui-soft,#eaf0ff); border-color:var(--ui-title,#2047a0); color:var(--ui-title,#2047a0); }
+#publicDbPage .pdb-compact-actions { display:flex; align-items:center; gap:8px; }
+#publicDbPage .pdb-compact-actions .pdb-select { width:auto; min-width:128px; max-width:160px; height:40px; }
+#publicDbPage .pdb-compact-actions .pdb-btn { min-height:40px; white-space:nowrap; }
+#publicDbPage .pdb-compact-actions .pdb-icon-btn { width:40px; height:40px; }
+#publicDbPage .pdb-filter-summary { display:flex; align-items:center; gap:10px; padding:0 4px 12px; color:var(--ui-muted,#596b84); font-size:12px; }
+#publicDbPage .pdb-filter-summary span { flex:1; overflow-wrap:anywhere; }
+#publicDbPage .pdb-filter-summary button { flex-shrink:0; }
+#publicDbPage .pdb-results { margin-top:0; }
+#publicDbPage .pdb-filter-dialog { box-sizing:border-box; width:min(880px,calc(100vw - 32px)); max-width:calc(100vw - 32px); max-height:calc(100dvh - 48px); padding:0; border:1px solid var(--ui-line,#c8d2e2); border-radius:14px; background:var(--ui-panel,#f8faff); color:var(--ui-text,#233451); box-shadow:0 24px 80px #0006; overflow:hidden; }
+#publicDbPage .pdb-filter-dialog[open] { display:flex; flex-direction:column; }
+#publicDbPage .pdb-filter-dialog { margin:auto; inset:0; }
+#publicDbPage .pdb-filter-dialog::backdrop { background:rgba(9,16,30,.62); }
+#publicDbPage .pdb-filter-dialog-head { display:flex; align-items:center; justify-content:space-between; gap:12px; padding:16px 20px; border-bottom:1px solid var(--ui-line,#c8d2e2); flex-shrink:0; }
+#publicDbPage .pdb-filter-dialog-head h2 { margin:0; font-size:18px; color:inherit; }
+#publicDbPage .pdb-filter-dialog .pdb-filter-dialog-body { display:flex!important; flex-direction:column!important; gap:18px; min-height:0; overflow-y:auto; overscroll-behavior:contain; padding:20px!important; margin:0!important; border:0!important; border-radius:0!important; box-shadow:none!important; background:var(--ui-panel,#f8faff)!important; }
+#publicDbPage .pdb-filter-dialog .pdb-search-input { width:100%; min-height:42px; box-sizing:border-box; }
+#publicDbPage .pdb-kind-choices { display:flex; flex-wrap:wrap; gap:8px; margin-top:6px; }
+#publicDbPage .pdb-filter-pair { display:grid; grid-template-columns:1fr 1fr; gap:16px; }
+#publicDbPage .pdb-filter-dialog .pdb-select { width:100%; min-width:0; }
+#publicDbPage .pdb-filter-dialog .pdb-toolbar-block { margin:0; padding:0; border:0; min-width:0; }
+#publicDbPage .pdb-filter-dialog .pdb-sel-slot-box { min-height:60px; height:auto; }
+#publicDbPage .pdb-filter-dialog .pdb-exact-config { border-top:1px solid var(--ui-line,#c8d2e2); padding-top:14px; }
+#publicDbPage .pdb-exact-config summary { cursor:pointer; font-weight:600; }
+#publicDbPage .pdb-exact-config .pdb-team-cfg { margin-top:14px; }
+#publicDbPage .pdb-filter-dialog .pdb-team-cfg-slots { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:10px; }
+#publicDbPage .pdb-filter-dialog .pdb-match-select { width:130px; }
+#publicDbPage .pdb-filter-dialog-foot { display:flex; gap:10px; align-items:center; padding:14px 20px; border-top:1px solid var(--ui-line,#c8d2e2); flex-shrink:0; }
+#publicDbPage .pdb-filter-dialog-foot span { flex:1; }
+#publicDbPage .pdb-filter-dialog-foot button { min-height:40px; white-space:nowrap; }
+@media(max-width:760px) {
+  #publicDbPage .pdb-compact-actions { margin-left:auto; }
+  #publicDbPage .pdb-zone-nav { flex-basis:100%; }
+  #publicDbPage .pdb-zone-btn { padding:8px 10px; }
+  #publicDbPage .pdb-filter-dialog .pdb-filter-dialog-body { padding:14px!important; }
+  #publicDbPage .pdb-filter-dialog-head,#publicDbPage .pdb-filter-dialog-foot { padding:12px 14px; }
+}
+@media(max-width:480px) {
+  #publicDbPage .pdb-filter-dialog { width:calc(100vw - 16px); max-width:calc(100vw - 16px); max-height:calc(100dvh - 24px); }
+  #publicDbPage .pdb-filter-dialog .pdb-team-cfg-slots { grid-template-columns:1fr; }
+  #publicDbPage .pdb-filter-dialog input,#publicDbPage .pdb-filter-dialog select { font-size:16px; }
+  #publicDbPage .pdb-filter-pair { gap:8px; }
+  #publicDbPage .pdb-filter-dialog-foot { gap:6px; }
+}
+@media(pointer:coarse) { #publicDbPage .pdb-zone-btn,#publicDbPage .pdb-compact-actions button,#publicDbPage .pdb-filter-dialog button { min-height:44px; } }
+
+
+/* Phone cards use one flow for controls, team slots, metrics and attribution. */
+@layer localPalette {
+ @media (max-width:760px), (max-width:960px) and (pointer:coarse) {
+  html[data-theme] body.public-db-open #publicDbPage { --ui-text:var(--text-primary,#eee); --ui-muted:var(--text-muted,#a9a9ad); --ui-title:var(--accent-primary,#c5a766); --ui-panel:var(--bg-surface,#191919); --ui-inner:var(--bg-elevated,#242424); --ui-line:var(--border,#555); --ui-soft:rgba(197,167,102,.16); }
+  html[data-theme='ivory-prism'] body.public-db-open #publicDbPage { --ui-text:#202d43; --ui-muted:#52647f; --ui-title:#284e96; --ui-panel:#f4f2ed; --ui-inner:#fffdfa; --ui-line:#bac4d1; --ui-soft:#e1e9f5; }
+  html[data-theme='ivory-prism'] body.public-db-open #publicDbPage .card-heading .pdb-card-btn:is(.is-outline,.is-ghost) { color:var(--ui-title)!important; background:rgba(255,255,255,.6)!important; border-color:#7d91ad!important; }
+  html[data-theme='ivory-prism'] body.public-db-open #publicDbPage .card-tags .tag-entry:not(.tag-entry-other):not(.tag-entry-custom) { color:#415271!important; background:#e8e9e5!important; border-color:#9ba6b5!important; }
+  html[data-theme='ivory-prism'] body.public-db-open #publicDbPage .card-tags .tag-entry:not(.tag-entry-other):not(.tag-entry-custom) .tag-value { color:inherit!important; }
+  html[data-theme] body.public-db-open #publicDbPage .pdb-list { grid-template-columns:1fr!important; }
+  html[data-theme] body.public-db-open #publicDbPage .pdb-list .data-card { padding:14px 12px!important; }
+  html[data-theme] body.public-db-open #publicDbPage .card-heading { display:flex; flex-direction:column; align-items:stretch; gap:10px; padding-bottom:8px; }
+  html[data-theme] body.public-db-open #publicDbPage .card-heading-copy { flex:none; min-width:0; width:100%; }
+  html[data-theme] body.public-db-open #publicDbPage .card-name { white-space:normal; overflow-wrap:anywhere; font-size:16px; line-height:1.4; }
+  html[data-theme] body.public-db-open #publicDbPage .card-heading-tools { flex:none; width:100%; max-width:none; }
+  html[data-theme] body.public-db-open #publicDbPage .card-heading-actions { display:grid; grid-template-columns:1fr 1.6fr 1fr 1fr; gap:6px; width:100%; }
+  html[data-theme] body.public-db-open #publicDbPage .card-heading .pdb-card-btn { width:100%; min-width:0; min-height:44px; height:auto; padding:6px 4px; font-size:12px; line-height:1.3; }
+  html[data-theme] body.public-db-open #publicDbPage .card-heading .review-count { position:static; margin-left:3px; }
+  html[data-theme] body.public-db-open #publicDbPage .card-main { display:block; margin-top:0; }
+  html[data-theme] body.public-db-open #publicDbPage .card-left { display:flex; flex-direction:column; min-width:0; min-height:0; }
+  html[data-theme] body.public-db-open #publicDbPage .card-left > .team { width:100%; min-width:0; padding:5px 0 10px!important; }
+  html[data-theme] body.public-db-open #publicDbPage .avatar-group { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); width:100%!important; min-width:0; gap:8px!important; }
+  html[data-theme] body.public-db-open #publicDbPage .pdb-team-slot { display:flex; align-items:flex-end; width:auto!important; min-width:0!important; padding:0!important; gap:4px!important; border:0; }
+  html[data-theme] body.public-db-open #publicDbPage .slot-avatar-wrap { display:block; flex:1 1 0; min-width:0; max-width:64px; }
+  html[data-theme] body.public-db-open #publicDbPage .avatar-group .avatar { width:100%!important; max-width:none; height:auto!important; aspect-ratio:1; }
+  html[data-theme] body.public-db-open #publicDbPage .slot-weapon-wrap { flex:0 0 30%; width:30%; min-width:0; max-width:34px; height:auto; aspect-ratio:1; }
+  html[data-theme] body.public-db-open #publicDbPage .slot-weapon { width:100%; height:100%; object-fit:contain; }
+  html[data-theme] body.public-db-open #publicDbPage .slot-badge { font-size:10px; line-height:1.2; padding:2px 4px; }
+  html[data-theme] body.public-db-open #publicDbPage .slot-badge-refine { min-width:0; right:0; bottom:0; padding:1px 3px!important; }
+  html[data-theme] body.public-db-open #publicDbPage .card-tag-row { display:flex; flex-wrap:wrap; align-items:center; gap:6px; margin:0; }
+  html[data-theme] body.public-db-open #publicDbPage .card-tags.team-tags { display:flex!important; flex-wrap:wrap; flex:1 1 auto; min-width:0; gap:6px; }
+  html[data-theme] body.public-db-open #publicDbPage .card-tags.team-tags :is(.tag,.pdb-video-badge) { min-height:28px!important; height:auto!important; padding:4px 7px!important; font-size:11px!important; line-height:1.3!important; letter-spacing:0!important; }
+  html[data-theme] body.public-db-open #publicDbPage .card-signal-actions { position:static!important; flex-wrap:wrap; max-width:100%; margin-left:auto!important; padding:0; gap:8px!important; }
+  html[data-theme] body.public-db-open #publicDbPage .card-signal-actions .card-use-count { font-size:10px; }
+  html[data-theme] body.public-db-open #publicDbPage .card-left-foot { display:flex; flex-direction:column!important; align-items:stretch; gap:10px; padding-top:12px; }
+  html[data-theme] body.public-db-open #publicDbPage .card-footer-stats { width:100%; max-width:100%; min-width:0; align-self:stretch; gap:8px; }
+  html[data-theme] body.public-db-open #publicDbPage .card-metrics { display:grid; grid-template-columns:minmax(0,1.45fr) minmax(0,1fr) minmax(0,.65fr); gap:8px; width:100%; }
+  html[data-theme] body.public-db-open #publicDbPage .card-metric { display:flex; flex-direction:column; align-items:flex-start; gap:5px; min-width:0; white-space:normal; }
+  html[data-theme] body.public-db-open #publicDbPage .card-metric small { font-size:11px; line-height:1.3; }
+  html[data-theme] body.public-db-open #publicDbPage .card-metric strong { max-width:100%; font-size:17px; line-height:1.2; letter-spacing:-.5px; overflow-wrap:anywhere; }
+  html[data-theme] body.public-db-open #publicDbPage .card-metric.dps strong { font-size:21px; }
+  html[data-theme] body.public-db-open #publicDbPage .publish-date { font-size:10px; line-height:1.5; letter-spacing:0; overflow-wrap:anywhere; }
+  html[data-theme] body.public-db-open #publicDbPage .card-left-foot .pdb-card-user { position:static!important; align-self:flex-start; max-width:100%!important; margin:0!important; gap:7px; }
+  html[data-theme] body.public-db-open #publicDbPage .card-left-foot .pdb-author-avatar { flex:0 0 28px; width:28px!important; height:28px!important; }
+  html[data-theme] body.public-db-open #publicDbPage .card-left-foot .author-info b { font-size:11px; }
+  html[data-theme] body.public-db-open #publicDbPage .data-card:hover { animation:none!important; transform:none!important; }
+ }
+}
+/* Keep the compact retrieval bar readable before the filter dialog is opened. */
+@media (max-width:760px), (max-width:960px) and (pointer:coarse) {
+ #publicDbPage .pdb-compact-bar { background:var(--ui-panel,var(--bg-surface,#191919)); color:var(--ui-text,var(--text-primary,#eee)); gap:8px; padding:10px; }
+ #publicDbPage .pdb-zone-nav { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); flex-basis:100%; gap:4px; }
+ #publicDbPage .pdb-zone-btn { color:inherit; min-width:0; padding:8px 2px; font-size:12px; }
+ #publicDbPage .pdb-zone-btn.is-on { background:var(--ui-soft,rgba(197,167,102,.16)); border-color:var(--ui-title,#c5a766); color:var(--ui-title,#c5a766); }
+ #publicDbPage .pdb-compact-actions { display:grid; grid-template-columns:minmax(0,1fr) auto 44px; width:100%; min-width:0; margin:0; gap:6px; }
+ #publicDbPage .pdb-compact-actions .pdb-select { display:block!important; visibility:visible!important; opacity:1!important; flex:1 1 120px; min-width:0; max-width:none; color:var(--ui-text,var(--text-primary,#eee)); background:var(--ui-inner,var(--bg-elevated,#242424)); font-size:12px; }
+ #publicDbPage .pdb-compact-actions .pdb-btn { flex:0 0 auto; padding:0 10px; font-size:12px; }
+ #publicDbPage .pdb-compact-actions .pdb-icon-btn { flex:0 0 44px; width:44px; height:44px; }
+}

@@ -1,0 +1,410 @@
+{
+  "version": 1,
+  "kind": "shard",
+  "characterId": "1212",
+  "characterName": "景燃",
+  "templates": [
+    {
+      "characterId": "1212",
+      "characterName": "景燃",
+      "revision": 1,
+      "author": "",
+      "notes": "景燃（测试服 3.6.7 数据，仅 CSF 层加载）：生命坦克型热熔长刃。本体硬编码同步：阳变阴合（每1000生命+36固定攻击，上限1800，写入面板；3链无前置替换为阴阳相生 每1000生命+50攻击、上限2500，按链数直接切换）、命火（生命>25000部分每1000生命劫魄+21.10%/踏罡+21.65%倍率，上限25000=25段，随最终生命自动同步；命火仅在【荧惑形态】下生效，成员级默认荧惑、编轴技能可单独覆盖为常态，仿布兰特双形态）、幽而复明（每1000生命+1.5%热熔伤害加成，上限75%，自动同步）、祸兮福兮（叠层热熔增伤：每层每1000生命+0.05%，单层上限2.5%，上限50层，随最终生命自动同步）。技能库已剔除两条「每1000最大生命增加重击」面板行（由命火 Buff 动态建模，避免双重计算）。命座建模：1链共鸣技能倍率+80%；2链劫魄/踏罡最终倍率（基础+命火）整体+46%（一条 multBoost 46% 覆盖两部分）及通幽重击加深180%（数值待实测确认）；4链全队全属性伤害加成+20%；6链重击易伤+40%、魑魅魍魉倍率+80%。2链炁+300、3链重击获5鬼护、5链护盾为游戏内资源/生存机制不建模；6链万鬼同行召唤次数轴上手动添加。",
+      "personalBuffs": [
+        {
+          "templateKey": "jingran_minghuo",
+          "category": "composite",
+          "name": "命火",
+          "mode": "fixed",
+          "value": 0,
+          "perStack": 0,
+          "maxStacks": 99,
+          "damageType": "",
+          "element": "",
+          "defenseKind": "",
+          "convergenceVuln": "",
+          "effects": [
+            {
+              "segments": [
+                {
+                  "upTo": null,
+                  "perStack": 0
+                }
+              ],
+              "skillScope": "names",
+              "skillNames": [
+                "逆渡三途·重击·劫魄"
+              ],
+              "librarySkillNames": [
+                "逆渡三途·重击·劫魄"
+              ],
+              "catalogIds": [],
+              "damageType": "",
+              "effectType": "",
+              "element": "",
+              "defenseKind": "",
+              "minStacks": 0,
+              "minResonance": 0,
+              "effectKey": "jingran_minghuo_jiepo",
+              "zone": "multAdd",
+              "valueMode": "fixed",
+              "value": 21.1
+            },
+            {
+              "segments": [
+                {
+                  "upTo": null,
+                  "perStack": 0
+                }
+              ],
+              "skillScope": "names",
+              "skillNames": [
+                "逆渡三途·重击·踏罡"
+              ],
+              "librarySkillNames": [
+                "逆渡三途·重击·踏罡"
+              ],
+              "catalogIds": [],
+              "damageType": "",
+              "effectType": "",
+              "element": "",
+              "defenseKind": "",
+              "minStacks": 0,
+              "minResonance": 0,
+              "effectKey": "jingran_minghuo_tagang",
+              "zone": "multAdd",
+              "valueMode": "fixed",
+              "value": 21.65
+            }
+          ],
+          "sourceTag": "characterTemplate",
+          "gameText": "荧惑状态下，施放重击·劫魄或重击·踏罡时消耗25点命火，并使本次伤害倍率基于生命上限增加：生命上限大于25000点时，每超过1000点生命上限增加重击·劫魄/踏罡伤害倍率，最多计入25000点生命上限（每段劫魄+21.10%、踏罡+21.65%，随最终生命自动同步）。命火上限100点，施放共鸣解放·万鬼同葬时获得100点；荧惑状态结束时清空。命火仅在荧惑形态下生效（成员级【荧惑形态】默认荧惑，编轴技能可单独覆盖为常态）。"
+        },
+        {
+          "templateKey": "jingran_huoxi_fuxi",
+          "category": "elementBonus",
+          "name": "祸兮福兮",
+          "mode": "stack",
+          "value": 0,
+          "perStack": 0,
+          "maxStacks": 50,
+          "clampStacks": true,
+          "damageType": "",
+          "element": "热熔",
+          "defenseKind": "",
+          "convergenceVuln": "",
+          "sourceTag": "characterTemplate",
+          "gameText": "变奏技能·挑灯问冢消耗全部【鬼护】并转化为相同层数的祸兮福兮。祸兮福兮上限50层，每层使景燃基于生命上限获得额外热熔伤害加成提升：每1000生命上限获得0.05%热熔伤害加成提升，每层最多以此方式获得2.5%热熔伤害加成提升，持续15秒；切换至其他角色时提前结束（每层数值随最终生命自动同步）。"
+        },
+        {
+          "templateKey": "jingran_youfu_fuming",
+          "category": "elementBonus",
+          "name": "幽而复明",
+          "mode": "fixed",
+          "value": 0,
+          "perStack": 0,
+          "maxStacks": 99,
+          "damageType": "",
+          "element": "热熔",
+          "defenseKind": "",
+          "convergenceVuln": "",
+          "sourceTag": "characterTemplate",
+          "gameText": "景燃的防御始终为0；基于生命上限提升受到的治疗效果（每1000点生命上限提升6.2%，上限310%）；基于生命上限获得热熔伤害加成提升：每1000点生命上限获得1.5%热熔伤害加成提升，上限75%（随最终生命自动同步）。"
+        }
+      ],
+      "teamBuffs": [],
+      "extraSkills": [],
+      "resonanceChains": {
+        "1": {
+          "enabledByDefault": false,
+          "notes": "共鸣技能·阴蚀骨/黄泉渡/阳焚身/往生送伤害倍率提升80%；施放共鸣技能期间免疫打断。",
+          "personalBuffs": [
+            {
+              "category": "composite",
+              "name": "1链",
+              "mode": "fixed",
+              "value": 0,
+              "perStack": 0,
+              "maxStacks": 99,
+              "damageType": "",
+              "element": "",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "effects": [
+                {
+                  "segments": [
+                    {
+                      "upTo": null,
+                      "perStack": 0
+                    }
+                  ],
+                  "skillScope": "names",
+                  "skillNames": [
+                    "撞煞·阴蚀骨",
+                    "撞煞·阳焚身",
+                    "撞煞·黄泉渡",
+                    "撞煞·往生送"
+                  ],
+                  "librarySkillNames": [
+                    "撞煞·阴蚀骨",
+                    "撞煞·阳焚身",
+                    "撞煞·黄泉渡",
+                    "撞煞·往生送"
+                  ],
+                  "catalogIds": [],
+                  "damageType": "",
+                  "effectType": "",
+                  "element": "",
+                  "defenseKind": "",
+                  "minStacks": 0,
+                  "minResonance": 0,
+                  "effectKey": "",
+                  "zone": "multBoost",
+                  "valueMode": "fixed",
+                  "value": 80
+                }
+              ],
+              "sourceTag": "characterTemplate",
+              "templateKey": "jingran_c1_reso_mult",
+              "gameText": "共鸣技能·阴蚀骨，共鸣技能·黄泉渡，共鸣技能·阳焚身，共鸣技能·往生送伤害倍率提升80%。共鸣技能施放期间免疫打断。"
+            }
+          ],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {}
+        },
+        "2": {
+          "enabledByDefault": false,
+          "notes": "重击·劫魄/踏罡最终倍率（基础+命火）整体+46%：原文「伤害倍率提升46%」+「命火对劫魄/踏罡的倍率增加效果提升46%」，计算器公式 最终倍率=(基础+命火增加)×(1+提升)，一条 multBoost 46% 同时覆盖两部分；每次进战可触发1次（每4秒）：炁+300、获得通幽。通幽：施放劫魄/踏罡时回复共鸣能量上限25%（资源类不建模）+ 劫魄/踏罡伤害加深180%（数值待实测确认），持续4秒。",
+          "personalBuffs": [
+            {
+              "category": "composite",
+              "name": "2链·重击倍率",
+              "mode": "fixed",
+              "value": 0,
+              "perStack": 0,
+              "maxStacks": 99,
+              "damageType": "",
+              "element": "",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "effects": [
+                {
+                  "segments": [
+                    {
+                      "upTo": null,
+                      "perStack": 0
+                    }
+                  ],
+                  "skillScope": "names",
+                  "skillNames": [
+                    "逆渡三途·重击·劫魄",
+                    "逆渡三途·重击·踏罡"
+                  ],
+                  "librarySkillNames": [
+                    "逆渡三途·重击·劫魄",
+                    "逆渡三途·重击·踏罡"
+                  ],
+                  "catalogIds": [],
+                  "damageType": "",
+                  "effectType": "",
+                  "element": "",
+                  "defenseKind": "",
+                  "minStacks": 0,
+                  "minResonance": 0,
+                  "effectKey": "",
+                  "zone": "multBoost",
+                  "valueMode": "fixed",
+                  "value": 46
+                }
+              ],
+              "sourceTag": "characterTemplate",
+              "templateKey": "jingran_c2_zhongji_mult",
+              "gameText": "重击·劫魄或重击·踏罡伤害倍率提升46%；荧惑状态下【命火】对重击·劫魄或重击·踏罡的倍率增加效果提升46%（即最终倍率=基础+命火，整体×1.46）。"
+            },
+            {
+              "category": "composite",
+              "name": "2链·通幽",
+              "mode": "fixed",
+              "value": 0,
+              "perStack": 0,
+              "maxStacks": 99,
+              "damageType": "",
+              "element": "",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "effects": [
+                {
+                  "segments": [
+                    {
+                      "upTo": null,
+                      "perStack": 0
+                    }
+                  ],
+                  "skillScope": "names",
+                  "skillNames": [
+                    "逆渡三途·重击·劫魄",
+                    "逆渡三途·重击·踏罡"
+                  ],
+                  "librarySkillNames": [
+                    "逆渡三途·重击·劫魄",
+                    "逆渡三途·重击·踏罡"
+                  ],
+                  "catalogIds": [],
+                  "damageType": "",
+                  "effectType": "",
+                  "element": "",
+                  "defenseKind": "",
+                  "minStacks": 0,
+                  "minResonance": 0,
+                  "effectKey": "",
+                  "zone": "generalDeep",
+                  "valueMode": "fixed",
+                  "value": 180
+                }
+              ],
+              "sourceTag": "characterTemplate",
+              "templateKey": "jingran_c2_tongyou_deep",
+              "gameText": "通幽：重击·劫魄或重击·踏罡造成的伤害加深180%，持续4秒。"
+            }
+          ],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {}
+        },
+        "3": {
+          "enabledByDefault": false,
+          "notes": "施放重击·劫魄/踏罡获得5点鬼护（游戏内资源机制，不建模）；施放共鸣解放·万鬼同葬后【阳变阴合】无前置条件替换为【阴阳相生】：每1000点生命上限获得50点攻击，上限2500（已建模：按链数直接替换面板攻击来源 36/1800→50/2500，不做局内切换）。",
+          "personalBuffs": [],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {}
+        },
+        "4": {
+          "enabledByDefault": false,
+          "notes": "队伍中的角色获得护盾时，队伍中角色全属性伤害加成+20%，持续30秒。",
+          "personalBuffs": [],
+          "teamBuffs": [
+            {
+              "category": "generalBonus",
+              "name": "4链·景燃",
+              "mode": "fixed",
+              "value": 20,
+              "perStack": 0,
+              "maxStacks": 99,
+              "damageType": "",
+              "element": "",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "sourceTag": "characterTemplate",
+              "templateKey": "jingran_c4_team_bonus",
+              "gameText": "队伍中的角色获得护盾时，使队伍中的角色全属性伤害加成提升20%，持续30秒。"
+            }
+          ],
+          "extraSkills": [],
+          "combatModes": {}
+        },
+        "5": {
+          "enabledByDefault": false,
+          "notes": "受到致死伤害时不倒下，并获得基于生命上限50%的护盾，持续15秒，每10分钟可触发一次（生存向，不建模）。",
+          "personalBuffs": [],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {}
+        },
+        "6": {
+          "enabledByDefault": false,
+          "notes": "目标受到景燃的重击伤害+40%；魑魅魍魉伤害倍率+80%；进入荧惑后获得【万鬼同行】持续15秒，期间景燃造成伤害时召唤魑魅魍魉（间隔1秒，最多8次；持续召唤次数需在轴上自行添加）。本体荧惑（每次劫魄/踏罡命中召唤1次魑魅魍魉）与万鬼同行召唤均仅在荧惑形态下发生，与命火共用【荧惑形态】判定。",
+          "personalBuffs": [
+            {
+              "category": "composite",
+              "name": "6链·重击易伤",
+              "mode": "fixed",
+              "value": 0,
+              "perStack": 0,
+              "maxStacks": 99,
+              "damageType": "",
+              "element": "",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "effects": [
+                {
+                  "segments": [
+                    {
+                      "upTo": null,
+                      "perStack": 0
+                    }
+                  ],
+                  "skillScope": "all",
+                  "skillNames": [],
+                  "librarySkillNames": [],
+                  "catalogIds": [],
+                  "damageType": "重击",
+                  "effectType": "",
+                  "element": "",
+                  "defenseKind": "",
+                  "minStacks": 0,
+                  "minResonance": 0,
+                  "effectKey": "",
+                  "zone": "typeVulnerability",
+                  "valueMode": "fixed",
+                  "value": 40
+                }
+              ],
+              "sourceTag": "characterTemplate",
+              "templateKey": "jingran_c6_zhongji_vuln",
+              "gameText": "目标受到景燃的重击伤害提升40%。"
+            },
+            {
+              "category": "composite",
+              "name": "6链·魑魅魍魉倍率",
+              "mode": "fixed",
+              "value": 0,
+              "perStack": 0,
+              "maxStacks": 99,
+              "damageType": "",
+              "element": "",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "effects": [
+                {
+                  "segments": [
+                    {
+                      "upTo": null,
+                      "perStack": 0
+                    }
+                  ],
+                  "skillScope": "names",
+                  "skillNames": [
+                    "万鬼同葬·魑魅魍魉"
+                  ],
+                  "librarySkillNames": [
+                    "万鬼同葬·魑魅魍魉"
+                  ],
+                  "catalogIds": [],
+                  "damageType": "",
+                  "effectType": "",
+                  "element": "",
+                  "defenseKind": "",
+                  "minStacks": 0,
+                  "minResonance": 0,
+                  "effectKey": "",
+                  "zone": "multBoost",
+                  "valueMode": "fixed",
+                  "value": 80
+                }
+              ],
+              "sourceTag": "characterTemplate",
+              "templateKey": "jingran_c6_qimei_mult",
+              "gameText": "魑魅魍魉伤害倍率提升80%。"
+            }
+          ],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {}
+        }
+      },
+      "combatModes": {}
+    }
+  ]
+}

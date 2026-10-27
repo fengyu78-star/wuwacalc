@@ -1,0 +1,204 @@
+{
+  "version": 1,
+  "kind": "shard",
+  "characterId": "1405",
+  "characterName": "鉴心",
+  "templates": [
+    {
+      "characterId": "1405",
+      "characterName": "鉴心",
+      "revision": 2,
+      "author": "",
+      "notes": "鉴心：全队【鉴心·延奏】共鸣解放加深+38%（固定；对鉴心本人不生效）。",
+      "personalBuffs": [
+        {
+          "category": "composite",
+          "name": "固有1",
+          "mode": "fixed",
+          "value": 0,
+          "perStack": 0,
+          "maxStacks": 99,
+          "damageType": "",
+          "element": "",
+          "defenseKind": "",
+          "convergenceVuln": "",
+          "effects": [
+            {
+              "zone": "generalBonus",
+              "valueMode": "fixed",
+              "value": 20,
+              "segments": [
+                {
+                  "upTo": null,
+                  "perStack": 0
+                }
+              ],
+              "skillScope": "names",
+              "skillNames": [
+                "涤净力场·共鸣解放持续",
+                "共鸣解放持续",
+                "涤净力场·共鸣解放炸裂",
+                "共鸣解放炸裂"
+              ],
+              "librarySkillNames": [
+                "涤净力场·共鸣解放持续",
+                "涤净力场·共鸣解放炸裂"
+              ],
+              "catalogIds": [],
+              "damageType": "共鸣解放",
+              "effectType": "",
+              "element": "气动",
+              "defenseKind": "",
+              "minStacks": 0,
+              "minResonance": 0,
+              "onlyCharacterIds": [],
+              "onlyCombatModes": [],
+              "effectKey": ""
+            }
+          ],
+          "sourceTag": "characterTemplate",
+          "templateKey": "tpl_ms0r0oll_1krqa",
+          "gameText": "共鸣解放涤净力场伤害提升20%。"
+        }
+      ],
+      "teamBuffs": [
+        {
+          "templateKey": "jianxin_outro_liberation_deep",
+          "category": "typeDeep",
+          "name": "鉴心·延奏",
+          "mode": "fixed",
+          "value": 38,
+          "damageType": "共鸣解放",
+          "element": "",
+          "defenseKind": "",
+          "excludeSource": true,
+          "sourceTag": "characterTemplate",
+          "perStack": 0,
+          "maxStacks": 5,
+          "gameText": "下一位登场角色共鸣解放伤害加深38%，效果持续14秒，若切换至其他角色则该效果提前结束。"
+        }
+      ],
+      "extraSkills": [],
+      "resonanceChains": {
+        "1": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {},
+          "gameText": "施放变奏技能掌息之要后，普攻获得的【气】额外增加100%，持续10秒。"
+        },
+        "2": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {},
+          "gameText": "共鸣技能静气循行的使用次数额外增加1次。"
+        },
+        "3": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {},
+          "gameText": "共鸣技能静气循行进入架势姿态持续2.5秒后，可以直接打出共鸣技能行气反击。"
+        },
+        "4": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [
+            {
+              "category": "composite",
+              "name": "4链",
+              "mode": "fixed",
+              "value": 0,
+              "perStack": 0,
+              "maxStacks": 99,
+              "damageType": "",
+              "element": "",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "effects": [
+                {
+                  "zone": "generalBonus",
+                  "valueMode": "fixed",
+                  "value": 80,
+                  "segments": [
+                    {
+                      "upTo": null,
+                      "perStack": 0
+                    }
+                  ],
+                  "skillScope": "names",
+                  "skillNames": [
+                    "涤净力场·共鸣解放持续",
+                    "共鸣解放持续",
+                    "涤净力场·共鸣解放炸裂",
+                    "共鸣解放炸裂"
+                  ],
+                  "librarySkillNames": [
+                    "涤净力场·共鸣解放持续",
+                    "涤净力场·共鸣解放炸裂"
+                  ],
+                  "catalogIds": [],
+                  "damageType": "共鸣解放",
+                  "effectType": "",
+                  "element": "气动",
+                  "defenseKind": "",
+                  "minStacks": 0,
+                  "minResonance": 0,
+                  "onlyCharacterIds": [],
+                  "onlyCombatModes": [],
+                  "effectKey": ""
+                }
+              ],
+              "sourceTag": "characterTemplate",
+              "templateKey": "tpl_ms0r2zyy_tcd9v",
+              "gameText": "施放共鸣回路重击·混元气旋时，鉴心共鸣解放涤净力场伤害提升80%，持续14秒。"
+            }
+          ],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {},
+          "gameText": "施放共鸣回路重击·混元气旋时，鉴心共鸣解放涤净力场伤害提升80%，持续14秒。"
+        },
+        "5": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {},
+          "gameText": "共鸣解放涤净力场范围增加33%。"
+        },
+        "6": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [],
+          "teamBuffs": [],
+          "extraSkills": [
+            {
+              "templateKey": "extra_ms0r4x5n_cpau8",
+              "name": "特殊行气反击",
+              "damageType": "重击",
+              "effectType": "聚爆",
+              "effectLayers": 13,
+              "effectBurstLayers": 0,
+              "effectCount": 1,
+              "baseMult": 556.67,
+              "fixedDamage": false,
+              "effectMultMode": "custom"
+            }
+          ],
+          "combatModes": {},
+          "gameText": "共鸣回路重击·混元气旋期间施展冲拳，获得强化共鸣技能特殊行气反击，5秒内可施放1次。特殊行气反击：造成鉴心556.67%攻击的气动伤害，此次伤害为重击伤害，同时获得达到大周天·外阶段的护盾（受固有技能覆映吾身的加成影响）。"
+        }
+      },
+      "combatModes": {}
+    }
+  ]
+}

@@ -1,0 +1,302 @@
+{
+  "version": 1,
+  "kind": "shard",
+  "characterId": "1204",
+  "characterName": "莫特斐",
+  "templates": [
+    {
+      "characterId": "1204",
+      "characterName": "莫特斐",
+      "revision": 4,
+      "author": "",
+      "notes": "莫特斐：0链分支攻击比12%、热熔伤害加成12%；全队【莫特斐·延奏】重击加深+38%（对莫特斐本人不生效）。",
+      "personalBuffs": [
+        {
+          "category": "composite",
+          "name": "加强音",
+          "mode": "stack",
+          "value": 0,
+          "perStack": 0,
+          "maxStacks": 99,
+          "damageType": "",
+          "element": "",
+          "defenseKind": "",
+          "convergenceVuln": "",
+          "effects": [
+            {
+              "zone": "generalBonus",
+              "valueMode": "stack",
+              "value": 0,
+              "segments": [
+                {
+                  "upTo": 50,
+                  "perStack": 1.5
+                }
+              ],
+              "skillScope": "names",
+              "skillNames": [
+                "暴烈终曲·加强音",
+                "加强音"
+              ],
+              "librarySkillNames": [
+                "暴烈终曲·加强音"
+              ],
+              "catalogIds": [],
+              "damageType": "共鸣解放",
+              "effectType": "",
+              "element": "热熔",
+              "defenseKind": "",
+              "minStacks": 0,
+              "minResonance": 0,
+              "onlyCharacterIds": [],
+              "onlyCombatModes": [],
+              "effectKey": ""
+            }
+          ],
+          "sourceTag": "characterTemplate",
+          "templateKey": "tpl_mryuol28_8l3sa",
+          "gameText": "共鸣解放浮翼狂想持续期间，每次共鸣解放加强音命中后，都会使下次的共鸣解放加强音伤害提升1.5%，每0.35秒可触发1次，上限50层。\n共鸣解放浮翼狂想结束后重置效果层数。"
+        },
+        {
+          "category": "composite",
+          "name": "固有1·怒火赋格",
+          "mode": "fixed",
+          "value": 0,
+          "perStack": 0,
+          "maxStacks": 99,
+          "damageType": "",
+          "element": "",
+          "defenseKind": "",
+          "convergenceVuln": "",
+          "effects": [
+            {
+              "zone": "generalBonus",
+              "valueMode": "fixed",
+              "value": 50,
+              "segments": [
+                {
+                  "upTo": null,
+                  "perStack": 0
+                }
+              ],
+              "skillScope": "names",
+              "skillNames": [
+                "怒火赋格"
+              ],
+              "librarySkillNames": [
+                "怒火赋格"
+              ],
+              "catalogIds": [],
+              "damageType": "共鸣技能",
+              "effectType": "",
+              "element": "热熔",
+              "defenseKind": "",
+              "minStacks": 0,
+              "minResonance": 0,
+              "onlyCharacterIds": [],
+              "onlyCombatModes": [],
+              "effectKey": ""
+            }
+          ],
+          "sourceTag": "characterTemplate",
+          "templateKey": "tpl_mryuqblp_uzoy0",
+          "gameText": "施放共鸣技能激昂变奏后8秒内，共鸣技能怒火赋格的伤害提升25%。"
+        }
+      ],
+      "teamBuffs": [
+        {
+          "templateKey": "mortefi_outro_heavy_deep",
+          "category": "typeDeep",
+          "name": "莫特斐·延奏",
+          "mode": "fixed",
+          "value": 38,
+          "damageType": "重击",
+          "element": "",
+          "defenseKind": "",
+          "excludeSource": true,
+          "sourceTag": "characterTemplate",
+          "perStack": 0,
+          "maxStacks": 5,
+          "gameText": "下一位登场角色重击伤害加深38%，效果持续14秒，若切换至其他角色则该效果提前结束。"
+        }
+      ],
+      "extraSkills": [],
+      "resonanceChains": {
+        "1": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [],
+          "teamBuffs": [],
+          "extraSkills": [
+            {
+              "templateKey": "extra_motefei_c1_jiaqiangyin",
+              "name": "1链·协同加强音",
+              "damageType": "共鸣解放",
+              "effectType": "聚爆",
+              "effectLayers": 13,
+              "effectBurstLayers": 0,
+              "effectCount": 2,
+              "baseMult": 31.81,
+              "fixedDamage": false,
+              "effectMultMode": "custom"
+            }
+          ],
+          "combatModes": {}
+        },
+        "2": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {}
+        },
+        "3": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [
+            {
+              "category": "composite",
+              "name": "3链",
+              "mode": "fixed",
+              "value": 0,
+              "perStack": 0,
+              "maxStacks": 99,
+              "damageType": "",
+              "element": "",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "effects": [
+                {
+                  "zone": "generalCritDmg",
+                  "valueMode": "fixed",
+                  "value": 30,
+                  "segments": [
+                    {
+                      "upTo": null,
+                      "perStack": 0
+                    }
+                  ],
+                  "skillScope": "names",
+                  "skillNames": [
+                    "暴烈终曲·加强音",
+                    "加强音",
+                    "1链·协同加强音"
+                  ],
+                  "librarySkillNames": [
+                    "暴烈终曲·加强音",
+                    "1链·协同加强音"
+                  ],
+                  "catalogIds": [],
+                  "damageType": "共鸣解放",
+                  "effectType": "",
+                  "element": "热熔",
+                  "defenseKind": "",
+                  "minStacks": 0,
+                  "minResonance": 0,
+                  "onlyCharacterIds": [],
+                  "onlyCombatModes": [],
+                  "effectKey": ""
+                }
+              ],
+              "sourceTag": "characterTemplate",
+              "templateKey": "tpl_mryuso3u_xcsci",
+              "gameText": "共鸣解放浮翼狂想持续期间，共鸣解放加强音的暴击伤害提升30%。"
+            }
+          ],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {}
+        },
+        "4": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {}
+        },
+        "5": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [
+            {
+              "category": "composite",
+              "name": "5链·协同加强音降伤",
+              "mode": "fixed",
+              "value": 0,
+              "perStack": 0,
+              "maxStacks": 99,
+              "damageType": "",
+              "element": "",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "effects": [
+                {
+                  "zone": "generalBonus",
+                  "valueMode": "fixed",
+                  "value": -50,
+                  "segments": [
+                    {
+                      "upTo": null,
+                      "perStack": 0
+                    }
+                  ],
+                  "skillScope": "names",
+                  "skillNames": [
+                    "暴烈终曲·加强音",
+                    "加强音"
+                  ],
+                  "librarySkillNames": [
+                    "暴烈终曲·加强音"
+                  ],
+                  "catalogIds": [],
+                  "damageType": "共鸣解放",
+                  "effectType": "",
+                  "element": "热熔",
+                  "defenseKind": "",
+                  "minStacks": 0,
+                  "minResonance": 0,
+                  "onlyCharacterIds": [],
+                  "onlyCombatModes": [],
+                  "effectKey": ""
+                }
+              ],
+              "sourceTag": "characterTemplate",
+              "templateKey": "tpl_mryutds1_51gvr",
+              "gameText": "共鸣技能激昂变奏和共鸣技能怒火赋格命中目标时，进行协同攻击，打出4发共鸣解放加强音，造成热熔伤害，此次共鸣解放加强音伤害降低50%。"
+            }
+          ],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {}
+        },
+        "6": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [],
+          "teamBuffs": [
+            {
+              "category": "generalAttack",
+              "name": "6链·莫特斐",
+              "mode": "fixed",
+              "value": 20,
+              "perStack": 0,
+              "maxStacks": 5,
+              "damageType": "",
+              "element": "",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "sourceTag": "characterTemplate",
+              "templateKey": "tpl_mryuv4nx_vcsss",
+              "gameText": "施放共鸣解放暴烈终曲时，队伍中的角色攻击提升20%，持续20秒。"
+            }
+          ],
+          "extraSkills": [],
+          "combatModes": {}
+        }
+      },
+      "combatModes": {}
+    }
+  ]
+}

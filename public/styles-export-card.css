@@ -1,0 +1,1423 @@
+/* Art Deco 输出数据卡面 — 由 export-card-artdeco.html 抽取，作用域 .card-export */
+.card-export {
+  --gold: var(--card-primary);
+  --gold-bright: var(--card-highlight);
+  --gold-dim: var(--card-shadow-2);
+  --ink: var(--card-bg);
+  --ink-soft: var(--card-bg-2);
+  --deco-enabled: 1;
+  --deco-grid-opacity: 0.055;
+  --deco-glow-opacity: 0.045;
+  --deco-cut: 10px;
+  --metal-stroke: linear-gradient(
+    135deg,
+    var(--card-highlight-2) 0%,
+    var(--card-primary) 22%,
+    var(--card-shadow) 48%,
+    var(--card-primary) 72%,
+    var(--card-highlight-2) 100%
+  );
+  width: 900px;
+  height: 870px;
+  flex-shrink: 0;
+  background: var(--ink);
+  border-radius: 4px;
+  overflow: hidden;
+  position: relative;
+  color: var(--card-text);
+  font-family: 'Noto Serif SC', 'Cinzel', serif;
+  box-shadow:
+    0 0 0 1px color-mix(in srgb, var(--card-primary) 14.000000000000002%, transparent),
+    0 40px 80px rgba(0, 0, 0, 0.55),
+    0 0 120px color-mix(in srgb, var(--card-primary) 4%, transparent);
+}
+
+.export-card-maker-preview .card-export .tag-plaque {
+  pointer-events: none;
+}
+
+
+/* 页面几何暗纹：菱形网格 + 中部径向光晕 */
+/* ====== 卡面 900x870（含底部二维码区） ====== */
+
+
+/* ---------- 装饰层 ---------- */
+.card-export .bg-carbon{
+  position: absolute; inset: 0; pointer-events: none; z-index: 0;
+  opacity: calc(var(--deco-grid-opacity) * 0.85 * var(--deco-enabled));
+  background-image:
+    linear-gradient(45deg, color-mix(in srgb, var(--card-primary) 70%, transparent) 1px, transparent 1px),
+    linear-gradient(-45deg, color-mix(in srgb, var(--card-primary) 70%, transparent) 1px, transparent 1px);
+  background-size: 18px 18px;
+}
+
+.card-export .bg-rays{
+  position: absolute; inset: 0; pointer-events: none; z-index: 0;
+  opacity: 0.6;
+}
+
+.card-export .bg-rays svg{
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.card-export .bg-glow{
+  position: absolute; inset: 0; pointer-events: none; z-index: 0;
+  background:
+    radial-gradient(ellipse 52% 42% at 50% 48%, rgba(201, 168, 76, calc(0.07 * var(--deco-enabled))), transparent 68%),
+    radial-gradient(ellipse 480px 320px at 50% 100%, color-mix(in srgb, var(--card-primary) 4%, transparent) 0%, transparent 70%),
+    radial-gradient(ellipse 300px 280px at 8% 40%, color-mix(in srgb, var(--card-primary) 2.5%, transparent) 0%, transparent 60%),
+    radial-gradient(ellipse 260px 240px at 92% 18%, color-mix(in srgb, var(--card-primary) 2%, transparent) 0%, transparent 60%);
+}
+
+.card-export .bg-noise{
+  position: absolute; inset: 0; pointer-events: none; z-index: 1;
+  opacity: 0.04;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+.card-export .bg-vignette{
+  position: absolute; inset: 0; pointer-events: none; z-index: 1;
+  background: radial-gradient(ellipse 70% 65% at 50% 50%, transparent 40%, rgba(0, 0, 0, 0.03) 100%);
+}
+
+/* 全局柔光：上下聚光 */
+.card-export .soft-light-top{
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 200px;
+  background: radial-gradient(ellipse 60% 100px at 50% 0%, color-mix(in srgb, var(--card-primary) 3%, transparent), transparent);
+  z-index: 15;
+  pointer-events: none;
+}
+
+.card-export .soft-light-bottom{
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 150px;
+  background: radial-gradient(ellipse 60% 80px at 50% 100%, color-mix(in srgb, var(--card-primary) 2%, transparent), transparent);
+  z-index: 15;
+  pointer-events: none;
+}
+
+/* ---------- 边框装饰 ---------- */
+.card-export .frame-outer{
+  position: absolute; inset: 5px;
+  border: 1px solid color-mix(in srgb, var(--card-primary) 12%, transparent);
+  pointer-events: none; z-index: 10;
+}
+
+.card-export .frame-inner{
+  position: absolute; inset: 8px;
+  border: 1px solid color-mix(in srgb, var(--card-primary) 4%, transparent);
+  pointer-events: none; z-index: 10;
+}
+
+.card-export .corner-ornament{
+  position: absolute;
+  width: 80px; height: 80px;
+  pointer-events: none; z-index: 11;
+  opacity: 0.22;
+}
+
+.card-export .corner-ornament.tl{ top: 5px; left: 5px; }
+.card-export .corner-ornament.tr{ top: 5px; right: 5px; transform: scaleX(-1); }
+.card-export .corner-ornament.bl{ bottom: 5px; left: 5px; transform: scaleY(-1); }
+.card-export .corner-ornament.br{ bottom: 5px; right: 5px; transform: scale(-1); }
+
+.card-export .corner-ornament .l-outer-h, .card-export .corner-ornament .l-outer-v, .card-export .corner-ornament .l-inner-h, .card-export .corner-ornament .l-inner-v{
+  position: absolute;
+  background: linear-gradient(90deg, var(--card-highlight-2), var(--card-primary) 40%, var(--card-shadow-2) 100%);
+}
+
+.card-export .corner-ornament .l-outer-h{
+  top: 0; left: 0;
+  width: 40px; height: 2px;
+  background: linear-gradient(90deg, var(--card-highlight-2), var(--card-primary) 50%, var(--card-shadow));
+}
+
+.card-export .corner-ornament .l-outer-v{
+  top: 0; left: 0;
+  width: 2px; height: 40px;
+  background: linear-gradient(180deg, var(--card-highlight-2), var(--card-primary) 50%, var(--card-shadow));
+}
+
+.card-export .corner-ornament .l-inner-h{
+  top: 5px; left: 5px;
+  width: 26px; height: 1px;
+  opacity: 0.55;
+  background: linear-gradient(90deg, var(--card-primary), var(--card-shadow-2) 70%, transparent);
+}
+
+.card-export .corner-ornament .l-inner-v{
+  top: 5px; left: 5px;
+  width: 1px; height: 26px;
+  opacity: 0.55;
+  background: linear-gradient(180deg, var(--card-primary), var(--card-shadow-2) 70%, transparent);
+}
+
+.card-export .corner-ornament .diamond{
+  position: absolute;
+  top: 1px; left: 1px;
+  width: 5px; height: 5px;
+  background: var(--card-highlight-2);
+  transform: rotate(45deg);
+  box-shadow: 0 0 4px color-mix(in srgb, var(--card-highlight-2) 35%, transparent);
+}
+
+.card-export .corner-ornament .dot-h, .card-export .corner-ornament .dot-v{
+  position: absolute;
+  width: 2px; height: 2px;
+  border-radius: 50%;
+  background: var(--card-primary);
+}
+
+.card-export .corner-ornament .dot-h{ top: -0.25px; left: 38px; }
+.card-export .corner-ornament .dot-v{ top: 38px; left: -0.25px; }
+
+.card-export .mid-diamond{
+  position: absolute;
+  width: 4px; height: 4px;
+  background: var(--card-primary);
+  transform: rotate(45deg);
+  opacity: 0.12;
+  pointer-events: none; z-index: 11;
+}
+
+.card-export .mid-diamond.top{ top: 6px; left: 50%; margin-left: -2px; }
+.card-export .mid-diamond.bottom{ bottom: 6px; left: 50%; margin-left: -2px; }
+.card-export .mid-diamond.left{ left: 6px; top: 50%; margin-top: -2px; }
+.card-export .mid-diamond.right{ right: 6px; top: 50%; margin-top: -2px; }
+
+.card-export .top-accent{
+  position: absolute;
+  top: 10px; left: 35%; right: 35%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, color-mix(in srgb, var(--card-primary) 20%, transparent), transparent);
+  pointer-events: none; z-index: 11;
+}
+
+/* ---------- 内容 ---------- */
+.card-export .card-content{
+  position: relative; z-index: 5;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 22px 28px 14px;
+}
+
+/* Header：左 logo | 中 轴名 | 右 标签 */
+.card-export .header{
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 14px;
+  padding-bottom: 14px;
+  position: relative;
+}
+
+.card-export .header::after{
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1px;
+  height: 18px;
+  margin-bottom: -9px;
+  background:
+    linear-gradient(color-mix(in srgb, var(--card-primary) 12%, transparent), color-mix(in srgb, var(--card-primary) 12%, transparent)) center 0 / 1px 6px no-repeat,
+    linear-gradient(color-mix(in srgb, var(--card-primary) 12%, transparent), color-mix(in srgb, var(--card-primary) 12%, transparent)) center 100% / 1px 6px no-repeat;
+  z-index: 1;
+}
+
+.card-export .header::before{
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: 50%;
+  width: 6px;
+  height: 6px;
+  margin-left: -3px;
+  background: color-mix(in srgb, var(--card-primary) 22%, transparent);
+  transform: rotate(45deg);
+  z-index: 2;
+}
+
+.card-export .header-left{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 230px; /* 与 header-right 等宽，保证中轴标题居中 */
+}
+
+.card-export .brand-lockup{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+}
+
+.card-export .brand-logo{
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  display: block;
+  flex-shrink: 0;
+  /* 白图黑底 PNG：去掉黑底 */
+  mix-blend-mode: screen;
+  filter: drop-shadow(0 0 8px color-mix(in srgb, var(--card-primary) 15%, transparent));
+}
+
+.card-export .brand-text{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
+  line-height: 1.05;
+  min-width: 0;
+}
+
+.card-export .brand-cn{
+  font-family: 'Noto Serif SC', serif;
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--card-primary);
+  letter-spacing: 0.12em;
+  white-space: nowrap;
+  text-shadow: 0 0 20px color-mix(in srgb, var(--card-primary) 15%, transparent);
+}
+
+.card-export .brand-rule{
+  width: 24px;
+  height: 1px;
+  margin: 3px 0 2px;
+  background: linear-gradient(90deg, transparent, var(--card-primary), transparent);
+  opacity: 0.2;
+}
+
+.card-export .brand-en{
+  font-family: 'Playfair Display', serif;
+  font-size: 9px;
+  font-weight: 400;
+  color: color-mix(in srgb, var(--card-text) 72%, transparent);
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  padding-left: 1px;
+}
+
+.card-export .brand-domain{
+  font-family: 'Cinzel', 'Noto Serif SC', serif;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  color: color-mix(in srgb, var(--card-primary) 62%, transparent);
+  white-space: nowrap;
+  padding-left: 1px;
+}
+
+.card-export .header-center{
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-export .axis-ornament-top{
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 8px;
+}
+
+.card-export .axis-ornament-top .orn-line{
+  width: 15px;
+  height: 1px;
+  background: var(--card-primary);
+  opacity: 0.1;
+}
+
+.card-export .axis-ornament-top .orn-diamond{
+  width: 8px;
+  height: 8px;
+  background: var(--card-primary);
+  opacity: 0.2;
+  transform: rotate(45deg);
+  flex-shrink: 0;
+}
+
+.card-export .axis-row{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+}
+
+.card-export .axis-line{
+  flex: 1 1 0;
+  max-width: 72px;
+  min-width: 28px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, color-mix(in srgb, var(--card-primary) 50%, transparent), color-mix(in srgb, var(--card-primary) 50%, transparent));
+}
+
+.card-export .axis-line.right{
+  background: linear-gradient(90deg, color-mix(in srgb, var(--card-primary) 50%, transparent), color-mix(in srgb, var(--card-primary) 50%, transparent), transparent);
+}
+
+.card-export .axis-name{
+  flex: 0 1 auto;
+  font-size: 22px;
+  font-weight: 900;
+  letter-spacing: 6px;
+  color: var(--card-text);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 100%;
+  line-height: 1.1;
+  text-align: center;
+}
+
+.card-export .axis-underline{
+  width: 24px;
+  height: 1px;
+  background: var(--card-primary);
+  opacity: 0.15;
+  margin-top: 6px;
+}
+
+.card-export .header-right{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 4px;
+  flex-shrink: 0;
+  width: 230px;
+}
+
+.card-export .plaque-row{
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.card-export .plaque-code{
+  font-family: 'Cinzel', 'Noto Serif SC', serif;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: color-mix(in srgb, var(--card-primary) 75%, transparent);
+  white-space: nowrap;
+}
+
+/* Art Deco 标签按钮：未选中 / 悬停 / 选中 */
+.card-export .tag-plaque{
+  position: relative;
+  height: 30px;
+  padding: 0 10px;
+  border-radius: 3px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  font-family: 'Noto Serif SC', serif;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  white-space: nowrap;
+  box-sizing: border-box;
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  /* 未选中：深色底 + 金色描边 + 金色文字 */
+  color: var(--card-primary);
+  background: color-mix(in srgb, var(--card-bg) 92%, transparent);
+  border: 1px solid color-mix(in srgb, var(--card-primary) 42%, transparent);
+  outline: 1px solid color-mix(in srgb, var(--card-primary) 12%, transparent);
+  outline-offset: 3px;
+  box-shadow: none;
+  transition: color 0.2s, background 0.2s, border-color 0.2s, outline-color 0.2s, box-shadow 0.2s;
+}
+
+.card-export .tag-plaque .tag-diamond{
+  width: 6px;
+  height: 6px;
+  transform: rotate(45deg);
+  flex-shrink: 0;
+  background: var(--card-primary);
+  transition: background 0.2s, box-shadow 0.2s;
+}
+
+/* 悬停（未选中）：描边与文字提亮 */
+.card-export .tag-plaque:hover:not(.is-active){
+  color: var(--card-highlight-2);
+  border-color: color-mix(in srgb, var(--card-highlight-2) 85%, transparent);
+  outline-color: color-mix(in srgb, var(--card-primary) 35%, transparent);
+  background: color-mix(in srgb, var(--card-bg) 95%, transparent);
+}
+
+.card-export .tag-plaque:hover:not(.is-active) .tag-diamond{
+  background: var(--card-highlight-2);
+  box-shadow: 0 0 8px color-mix(in srgb, var(--card-primary) 50%, transparent);
+}
+
+/* 选中：金色填充 + 黑色文字（与未选中明确区分） */
+.card-export .tag-plaque.is-active{
+  color: var(--card-bg);
+  background: linear-gradient(180deg, var(--card-highlight) 0%, var(--card-primary) 42%, var(--card-shadow-2) 100%);
+  border-color: var(--card-highlight-2);
+  outline-color: color-mix(in srgb, var(--card-primary) 45%, transparent);
+  box-shadow:
+    0 0 14px color-mix(in srgb, var(--card-primary) 32%, transparent),
+    inset 0 1px 0 color-mix(in srgb, var(--card-highlight) 45%, transparent);
+}
+
+.card-export .tag-plaque.is-active .tag-diamond{
+  background: var(--card-bg);
+  box-shadow: none;
+}
+
+.card-export .tag-plaque.is-active:hover{
+  color: var(--card-bg);
+  filter: brightness(1.06);
+}
+
+.card-export .tag-plaque:focus-visible{
+  outline: 2px solid var(--card-primary);
+  outline-offset: 3px;
+}
+
+/* Characters */
+.card-export .characters{
+  flex: 1;
+  display: flex;
+  align-items: stretch;
+  gap: 0;
+  margin-bottom: 6px;
+  min-height: 0;
+  padding: 16px 4px 14px;
+  overflow: visible;
+}
+
+.card-export .char-wrapper{
+  flex: 1;
+  min-width: 0;
+  position: relative;
+  z-index: 2;
+  transition: transform 0.25s ease;
+}
+
+.card-export .char-wrapper.is-selected{
+  z-index: 4;
+}
+
+.card-export .char-slot{
+  height: 100%;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.32);
+  border: none;
+  border-radius: 0;
+  position: relative;
+  z-index: 5;
+  cursor: pointer;
+  /* 45° 切角 */
+  clip-path: polygon(
+    var(--deco-cut) 0,
+    calc(100% - var(--deco-cut)) 0,
+    100% var(--deco-cut),
+    100% calc(100% - var(--deco-cut)),
+    calc(100% - var(--deco-cut)) 100%,
+    var(--deco-cut) 100%,
+    0 calc(100% - var(--deco-cut)),
+    0 var(--deco-cut)
+  );
+  box-shadow:
+    inset 0 0 0 1px rgba(0, 0, 0, 0.55),
+    inset 0 1px 0 color-mix(in srgb, var(--card-primary) 8%, transparent),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.35),
+    0 4px 16px rgba(0, 0, 0, 0.3);
+  transition: box-shadow 0.25s ease, transform 0.25s ease;
+}
+
+.card-export .char-wrapper:hover .char-slot, .card-export .char-slot:hover{
+  transform: translateY(-4px);
+  box-shadow:
+    inset 0 0 0 1px rgba(0, 0, 0, 0.55),
+    inset 0 1px 0 color-mix(in srgb, var(--card-highlight-2) 14.000000000000002%, transparent),
+    0 10px 28px rgba(0, 0, 0, 0.45),
+    0 0 24px color-mix(in srgb, var(--card-primary) 12%, transparent);
+}
+
+.card-export .char-wrapper:hover .char-frame{
+  filter: brightness(1.1);
+}
+
+.card-export .char-wrapper.is-selected .char-slot{
+  transform: translateY(-4px);
+  box-shadow:
+    inset 0 0 0 1px rgba(0, 0, 0, 0.5),
+    inset 0 1px 0 color-mix(in srgb, var(--card-highlight-2) 18%, transparent),
+    0 12px 32px rgba(0, 0, 0, 0.5),
+    0 0 28px color-mix(in srgb, var(--card-primary) 18%, transparent);
+}
+
+.card-export .char-wrapper.is-selected .char-frame{
+  filter: brightness(1.14);
+}
+
+.card-export .char-slot:focus-visible{
+  outline: 2px solid var(--card-primary);
+  outline-offset: 4px;
+}
+
+.card-export .char-outer-deco{
+  position: absolute;
+  inset: -18px;
+  z-index: 3;
+  pointer-events: none;
+}
+
+/* 四角外侧延伸 */
+.card-export .outer-corner{
+  position: absolute;
+  width: 20px;
+  height: 20px;
+}
+
+.card-export .outer-corner .oh{
+  position: absolute;
+  width: 15px;
+  height: 2px;
+  background: color-mix(in srgb, var(--card-primary) 15%, transparent);
+}
+
+.card-export .outer-corner .ov{
+  position: absolute;
+  width: 2px;
+  height: 15px;
+  background: color-mix(in srgb, var(--card-primary) 15%, transparent);
+}
+
+.card-export .outer-corner .od{
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: color-mix(in srgb, var(--card-primary) 20%, transparent);
+  transform: rotate(45deg);
+}
+
+.card-export .outer-corner.tl{ top: 0; left: 0; }
+.card-export .outer-corner.tl .oh{ top: 15px; left: 0; }
+.card-export .outer-corner.tl .ov{ top: 0; left: 15px; }
+.card-export .outer-corner.tl .od{ top: -1px; left: -1px; }
+
+.card-export .outer-corner.tr{ top: 0; right: 0; }
+.card-export .outer-corner.tr .oh{ top: 15px; right: 0; }
+.card-export .outer-corner.tr .ov{ top: 0; right: 15px; }
+.card-export .outer-corner.tr .od{ top: -1px; right: -1px; }
+
+.card-export .outer-corner.bl{ bottom: 0; left: 0; }
+.card-export .outer-corner.bl .oh{ bottom: 15px; left: 0; }
+.card-export .outer-corner.bl .ov{ bottom: 0; left: 15px; }
+.card-export .outer-corner.bl .od{ bottom: -1px; left: -1px; }
+
+.card-export .outer-corner.br{ bottom: 0; right: 0; }
+.card-export .outer-corner.br .oh{ bottom: 15px; right: 0; }
+.card-export .outer-corner.br .ov{ bottom: 0; right: 15px; }
+.card-export .outer-corner.br .od{ bottom: -1px; right: -1px; }
+
+.card-export .outer-top-line{
+  position: absolute;
+  top: 12px;
+  left: 20%;
+  right: 20%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, color-mix(in srgb, var(--card-primary) 10%, transparent), transparent);
+}
+
+.card-export .outer-top-line::after{
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 3px;
+  height: 3px;
+  margin: -1.5px 0 0 -1.5px;
+  background: color-mix(in srgb, var(--card-primary) 15%, transparent);
+  transform: rotate(45deg);
+}
+
+.card-export .outer-bottom-line{
+  position: absolute;
+  bottom: 12px;
+  left: 30%;
+  right: 30%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, color-mix(in srgb, var(--card-primary) 8%, transparent), transparent);
+}
+
+.card-export .outer-dot-left, .card-export .outer-dot-right{
+  position: absolute;
+  top: 50%;
+  width: 3px;
+  height: 3px;
+  margin-top: -1.5px;
+  border-radius: 50%;
+  background: color-mix(in srgb, var(--card-primary) 12%, transparent);
+}
+
+.card-export .outer-dot-left{ left: 10px; }
+.card-export .outer-dot-right{ right: 10px; }
+
+.card-export .char-sep{
+  width: 22px;
+  flex-shrink: 0;
+  position: relative;
+  align-self: center;
+  height: 36px;
+  z-index: 50;
+  pointer-events: none;
+}
+
+.card-export .char-sep::before{
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  width: 6px;
+  height: 6px;
+  background: color-mix(in srgb, var(--card-primary) 25%, transparent);
+  z-index: 2;
+}
+
+.card-export .char-sep::after{
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 1.5px;
+  height: 34px;
+  background:
+    linear-gradient(color-mix(in srgb, var(--card-primary) 12%, transparent), color-mix(in srgb, var(--card-primary) 12%, transparent)) center 0 / 1.5px 10px no-repeat,
+    linear-gradient(color-mix(in srgb, var(--card-primary) 12%, transparent), color-mix(in srgb, var(--card-primary) 12%, transparent)) center 100% / 1.5px 10px no-repeat;
+}
+
+/* 装饰总层：仅空心金属边框（html2canvas 不支持 mask-composite，禁止用渐变铺满） */
+.card-export .char-frame{
+  position: absolute;
+  inset: 0;
+  z-index: 50;
+  pointer-events: none;
+  border: 2px solid var(--card-primary);
+  border-image: none;
+  border-radius: 0;
+  background: transparent !important;
+  clip-path: polygon(
+    var(--deco-cut) 0,
+    calc(100% - var(--deco-cut)) 0,
+    100% var(--deco-cut),
+    100% calc(100% - var(--deco-cut)),
+    calc(100% - var(--deco-cut)) 100%,
+    var(--deco-cut) 100%,
+    0 calc(100% - var(--deco-cut)),
+    0 var(--deco-cut)
+  );
+  box-shadow:
+    inset 0 0 0 1px rgba(0, 0, 0, 0.65),
+    inset 0 1px 0 color-mix(in srgb, var(--card-highlight-2) 22%, transparent),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.35),
+    0 0 0 1px color-mix(in srgb, var(--card-shadow) 35%, transparent);
+  outline: none;
+  transition: filter 0.25s ease;
+}
+
+/* 外层金属高光：改为细线描边，避免导出时整块金底 */
+.card-export .char-frame::before{
+  content: '';
+  position: absolute;
+  inset: 0;
+  border: 1px solid color-mix(in srgb, var(--card-highlight-2) 35%, transparent);
+  box-sizing: border-box;
+  background: transparent !important;
+  -webkit-mask: none;
+  mask: none;
+  pointer-events: none;
+  clip-path: inherit;
+}
+
+/* 内侧暗色压边 */
+.card-export .char-frame::after{
+  content: '';
+  position: absolute;
+  inset: 3px;
+  border: 1px solid color-mix(in srgb, var(--card-primary) 28.000000000000004%, transparent);
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.4);
+  background: transparent !important;
+  pointer-events: none;
+  clip-path: polygon(
+    calc(var(--deco-cut) - 4px) 0,
+    calc(100% - var(--deco-cut) + 4px) 0,
+    100% calc(var(--deco-cut) - 4px),
+    100% calc(100% - var(--deco-cut) + 4px),
+    calc(100% - var(--deco-cut) + 4px) 100%,
+    calc(var(--deco-cut) - 4px) 100%,
+    0 calc(100% - var(--deco-cut) + 4px),
+    0 calc(var(--deco-cut) - 4px)
+  );
+}
+
+.card-export .char-wrapper:hover .char-frame, .card-export .char-wrapper.is-selected .char-frame{
+  filter: brightness(1.08);
+}
+
+.card-export .char-slot:has(.placeholder) .char-frame{
+  filter: none;
+}
+
+.card-export .char-frame-inset{
+  position: absolute;
+  inset: 5px;
+  border: 1px solid color-mix(in srgb, var(--card-primary) 42%, transparent);
+  border-radius: 0;
+  background: transparent;
+  clip-path: polygon(
+    calc(var(--deco-cut) - 3px) 0,
+    calc(100% - var(--deco-cut) + 3px) 0,
+    100% calc(var(--deco-cut) - 3px),
+    100% calc(100% - var(--deco-cut) + 3px),
+    calc(100% - var(--deco-cut) + 3px) 100%,
+    calc(var(--deco-cut) - 3px) 100%,
+    0 calc(100% - var(--deco-cut) + 3px),
+    0 calc(var(--deco-cut) - 3px)
+  );
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.28);
+  pointer-events: none;
+}
+
+.card-export .char-frame-inner{
+  display: none;
+}
+
+.card-export .char-frame-top, .card-export .char-frame-bottom{
+  display: none;
+}
+
+/* 暗纹只贴边，中心完全透明，避免盖住立绘 */
+.card-export .char-frame-pattern{
+  position: absolute;
+  inset: 0;
+  opacity: 0.1;
+  pointer-events: none;
+  background-image:
+    linear-gradient(45deg, color-mix(in srgb, var(--card-primary) 55.00000000000001%, transparent) 1px, transparent 1px),
+    linear-gradient(-45deg, color-mix(in srgb, var(--card-primary) 55.00000000000001%, transparent) 1px, transparent 1px);
+  background-size: 16px 16px;
+  -webkit-mask-image: radial-gradient(ellipse 55% 55% at center, transparent 62%, black 100%);
+  mask-image: radial-gradient(ellipse 55% 55% at center, transparent 62%, black 100%);
+}
+
+/* 四角菱形铆钉 */
+.card-export .corner-orn{
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  z-index: 60;
+}
+
+.card-export .corner-orn .ch, .card-export .corner-orn .cv{
+  display: none;
+}
+
+.card-export .corner-orn .cd{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 9px;
+  height: 9px;
+  margin: -4.5px 0 0 -4.5px;
+  background: linear-gradient(135deg, var(--card-highlight-2) 0%, var(--card-primary) 40%, var(--card-shadow) 100%);
+  transform: rotate(45deg);
+  box-shadow:
+    0 0 0 1px color-mix(in srgb, var(--card-bg) 85%, transparent),
+    0 0 0 2px color-mix(in srgb, var(--card-primary) 25%, transparent),
+    inset 0 1px 0 color-mix(in srgb, var(--card-highlight) 45%, transparent),
+    0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.card-export .corner-orn.corner-tl{ top: 6px; left: 6px; }
+.card-export .corner-orn.corner-tr{ top: 6px; right: 6px; }
+.card-export .corner-orn.corner-bl{ bottom: 6px; left: 6px; }
+.card-export .corner-orn.corner-br{ bottom: 6px; right: 6px; }
+
+/* 序号：菱形盾底 */
+.card-export .char-frame .char-index{
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  width: 34px;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Cinzel', 'Playfair Display', serif;
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 0.5px;
+  color: var(--card-bg);
+  -webkit-text-fill-color: var(--card-bg);
+  background: linear-gradient(160deg, var(--card-highlight-2) 0%, var(--card-primary) 45%, var(--card-shadow-2) 100%);
+  clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+  -webkit-text-stroke: 0;
+  text-shadow: none;
+  filter: none;
+  box-shadow:
+    0 0 0 1px color-mix(in srgb, var(--card-bg) 70%, transparent),
+    0 2px 6px rgba(0, 0, 0, 0.45);
+  z-index: 55;
+  pointer-events: none;
+}
+
+.card-export .char-index-rail{
+  display: none;
+}
+
+.card-export .char-art{
+  flex: 1;
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
+  min-height: 0;
+  border-radius: 0;
+  cursor: pointer;
+  display: block;
+  background: var(--card-bg-2);
+}
+
+.card-export .char-art img, .card-export .char-art .placeholder{
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 18%;
+  display: block;
+}
+
+/* 无立绘：统一占位 — 深色底 + 虚线框 + 上传图标 + 居中文案 */
+.card-export .char-art .placeholder{
+  background:
+    radial-gradient(ellipse 70% 55% at 50% 42%, color-mix(in srgb, var(--card-primary) 6%, transparent), transparent 70%),
+    linear-gradient(165deg, var(--card-bg-3) 0%, var(--card-bg) 55%, var(--card-bg-2) 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  color: color-mix(in srgb, var(--card-text) 55.00000000000001%, transparent);
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  border: 1.5px dashed color-mix(in srgb, var(--card-primary) 32%, transparent);
+  box-sizing: border-box;
+  outline: none;
+}
+
+.card-export .char-art .placeholder .ph-icon{
+  width: 36px;
+  height: 36px;
+  color: color-mix(in srgb, var(--card-primary) 55.00000000000001%, transparent);
+  display: block;
+  flex-shrink: 0;
+}
+
+.card-export .char-art .placeholder .ph-text{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  max-width: none;
+  text-align: center;
+  line-height: 1.25;
+  letter-spacing: 1px;
+  font-size: 12px;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
+  white-space: normal;
+}
+
+.card-export .char-art .placeholder .ph-line{
+  display: block;
+  white-space: nowrap;
+}
+
+/* 宽槽时尽量单行；窄槽保持主动两行 */
+.card-export .char-art .placeholder .ph-text-single{
+  display: none;
+  white-space: nowrap;
+}
+
+.card-export .char-art:has(.placeholder)::after, .card-export .char-art:has(.placeholder)::before{
+  opacity: 0;
+}
+
+.card-export .char-art::after{
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 55%;
+  background: linear-gradient(
+    transparent 0%,
+    rgba(10, 10, 10, 0.35) 35%,
+    rgba(10, 10, 10, 0.88) 70%,
+    color-mix(in srgb, var(--card-bg) 95%, transparent) 100%
+  );
+  pointer-events: none;
+  z-index: 5;
+}
+
+.card-export .char-art::before{
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 20%;
+  background: linear-gradient(180deg, color-mix(in srgb, var(--card-primary) 4%, transparent), transparent);
+  pointer-events: none;
+  z-index: 5;
+}
+
+/* 信息区：两行左右对称撑满 */
+.card-export .char-info{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 12px 16px 14px;
+  background: transparent;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-end;
+  gap: 2px;
+  text-align: left;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.card-export .char-info::before{
+  display: none;
+}
+
+.card-export .char-row{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  gap: 12px;
+}
+
+.card-export .char-row-main{
+  margin-bottom: 2px;
+}
+
+.card-export .char-name{
+  font-size: 26px;
+  font-weight: 900;
+  color: var(--card-text);
+  letter-spacing: 6px;
+  line-height: 1.15;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  text-shadow:
+    0 2px 4px rgba(0, 0, 0, 0.8),
+    0 0 16px rgba(0, 0, 0, 0.6);
+}
+
+.card-export .char-dmg-num{
+  font-size: 26px;
+  letter-spacing: 1px;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.card-export .char-config{
+  display: inline-flex;
+  align-items: center;
+  gap: 0;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: color-mix(in srgb, var(--card-text) 70%, transparent);
+  flex-shrink: 0;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
+}
+
+.card-export .char-config .cfg-icon{
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background: var(--card-primary);
+  transform: rotate(45deg);
+  margin: 0 4px 0 0;
+  box-shadow: 0 0 6px color-mix(in srgb, var(--card-primary) 50%, transparent);
+  flex-shrink: 0;
+}
+
+.card-export .char-config .cfg-icon.cfg-icon-mid{
+  margin: 0 4px 0 8px;
+}
+
+.card-export .char-config .cfg-text{
+  line-height: 1;
+}
+
+.card-export .char-dmg-tag{
+  font-size: 12px;
+  font-weight: 700;
+  font-family: 'Noto Serif SC', serif;
+  color: color-mix(in srgb, var(--card-highlight-2) 88%, transparent);
+  letter-spacing: 1px;
+  line-height: 1;
+  flex-shrink: 0;
+  white-space: nowrap;
+  text-shadow:
+    0 1px 3px rgba(0, 0, 0, 0.85),
+    0 0 8px rgba(0, 0, 0, 0.5);
+}
+
+.card-export .metal-num{
+  font-family: 'Cinzel', 'Noto Serif SC', serif;
+  font-weight: 900;
+  line-height: 1;
+  /* html2canvas 不支持 background-clip:text，会导出成金条；改用实色金属字 */
+  background: none;
+  -webkit-background-clip: border-box;
+  background-clip: border-box;
+  color: var(--card-highlight-2);
+  -webkit-text-fill-color: var(--card-highlight-2);
+  filter: none;
+  text-shadow:
+    0 1px 0 color-mix(in srgb, var(--card-shadow) 95%, transparent),
+    0 2px 6px rgba(0, 0, 0, 0.7),
+    0 0 14px color-mix(in srgb, var(--card-primary) 22%, transparent);
+}
+
+/* Footer 统一区：统计双栏 + 金属饰条 + 二维码入口 */
+.card-export .footer-block{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  width: 100%;
+  padding-top: 12px;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.card-export .footer-block::before{
+  display: none;
+}
+
+.card-export .footer-metal-bar{
+  width: min(72%, 520px);
+  height: 2px;
+  position: relative;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    var(--gold-dim) 12%,
+    var(--gold-bright) 50%,
+    var(--gold-dim) 88%,
+    transparent 100%
+  );
+  box-shadow: 0 0 8px color-mix(in srgb, var(--card-primary) 20%, transparent);
+  flex-shrink: 0;
+}
+
+.card-export .footer-metal-bar::before, .card-export .footer-metal-bar::after{
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 8px;
+  height: 8px;
+  margin-top: -4px;
+  background: linear-gradient(135deg, var(--card-highlight-2), var(--card-shadow-2));
+  transform: rotate(45deg);
+  box-shadow: 0 0 0 1px color-mix(in srgb, var(--card-bg) 70%, transparent);
+}
+
+.card-export .footer-metal-bar::before{ left: 0; }
+.card-export .footer-metal-bar::after{ right: 0; }
+
+.card-export .footer{
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  gap: 12px;
+  padding-top: 0;
+  position: relative;
+  width: 100%;
+}
+
+.card-export .footer::after, .card-export .footer::before{
+  display: none;
+}
+
+.card-export .stat{
+  flex: 1 1 0;
+  min-width: 0;
+  text-align: center;
+  padding: 12px 20px 14px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  /* 实色底 + 实线金边：避免 background-clip / 透明边在导出时变成金块 */
+  background: var(--card-bg-3);
+  border: 1.5px solid color-mix(in srgb, var(--card-primary) 55.00000000000001%, transparent);
+  clip-path: polygon(
+    8px 0, calc(100% - 8px) 0, 100% 8px,
+    100% calc(100% - 8px), calc(100% - 8px) 100%,
+    8px 100%, 0 calc(100% - 8px), 0 8px
+  );
+  box-shadow:
+    inset 0 0 0 1px rgba(0, 0, 0, 0.45),
+    inset 0 1px 0 color-mix(in srgb, var(--card-highlight-2) 10%, transparent),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.35);
+}
+
+.card-export .stat::before{
+  display: none;
+}
+
+.card-export .stat-eyebrow{
+  font-size: 13px;
+  font-family: 'Cinzel', serif;
+  font-weight: 700;
+  color: color-mix(in srgb, var(--card-primary) 72%, transparent);
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+  line-height: 1;
+  position: relative;
+  z-index: 1;
+}
+
+.card-export .stat-val{
+  font-size: 30px;
+  letter-spacing: 2px;
+  margin-bottom: 8px;
+  line-height: 1;
+  position: relative;
+  z-index: 1;
+}
+
+.card-export .stat-lbl{
+  font-size: 14px;
+  font-family: 'Noto Serif SC', 'Cinzel', serif;
+  font-weight: 600;
+  color: color-mix(in srgb, var(--card-primary) 65%, transparent);
+  letter-spacing: 3px;
+  margin-bottom: 0;
+  line-height: 1;
+  position: relative;
+  z-index: 1;
+}
+
+.card-export .stat-rule{
+  display: none; /* 左右结构统一：仅 eyebrow / 数值 / 说明 */
+}
+
+.card-export .stat-div{
+  width: 20px;
+  height: 36px;
+  flex-shrink: 0;
+  align-self: center;
+  position: relative;
+}
+
+.card-export .stat-div::before{
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  width: 10px;
+  height: 10px;
+  background: color-mix(in srgb, var(--card-primary) 25%, transparent);
+  z-index: 2;
+}
+
+.card-export .stat-div::after{
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 1px;
+  height: 34px;
+  background:
+    linear-gradient(color-mix(in srgb, var(--card-primary) 10%, transparent), color-mix(in srgb, var(--card-primary) 10%, transparent)) center 0 / 1px 12px no-repeat,
+    linear-gradient(color-mix(in srgb, var(--card-primary) 10%, transparent), color-mix(in srgb, var(--card-primary) 10%, transparent)) center 100% / 1px 12px no-repeat;
+}
+
+.card-export .footer-brand{
+  position: absolute;
+  right: 8px;
+  bottom: 2px;
+  font-size: 9px;
+  font-family: 'Cinzel', serif;
+  color: color-mix(in srgb, var(--card-primary) 18%, transparent);
+  letter-spacing: 6px;
+  pointer-events: none;
+}
+
+/* header 与角色区之间的全局锚点 */
+.card-export .section-anchor{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin: 2px 0 8px;
+  pointer-events: none;
+}
+
+.card-export .section-anchor .sa-line{
+  flex: 1;
+  max-width: 36%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, color-mix(in srgb, var(--card-primary) 10%, transparent));
+}
+
+.card-export .section-anchor .sa-line.right{
+  background: linear-gradient(90deg, color-mix(in srgb, var(--card-primary) 10%, transparent), transparent);
+}
+
+.card-export .section-anchor .sa-mark{
+  position: relative;
+  width: 8px;
+  height: 8px;
+  transform: rotate(45deg);
+  border: 1px solid color-mix(in srgb, var(--card-primary) 12%, transparent);
+  flex-shrink: 0;
+}
+
+.card-export .section-anchor .sa-mark::after{
+  content: '';
+  position: absolute;
+  inset: 1.5px;
+  background: color-mix(in srgb, var(--card-primary) 10%, transparent);
+}
+
+/* —— 应用内上传按钮兼容 —— */
+.card-export button.char-art {
+  appearance: none;
+  -webkit-appearance: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  color: inherit;
+  text-align: inherit;
+  cursor: pointer;
+  background: var(--card-bg-2);
+}
+.card-export .char-art.is-uploadable:focus-visible {
+  outline: 2px solid color-mix(in srgb, var(--card-primary) 65%, transparent);
+  outline-offset: -4px;
+}
+.card-export .char-art-edit {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  z-index: 20;
+  padding: 3px 8px;
+  font-size: 11px;
+  letter-spacing: 1px;
+  color: var(--card-bg);
+  background: linear-gradient(180deg, var(--card-highlight), var(--card-primary));
+  border: 1px solid color-mix(in srgb, var(--card-bg) 35%, transparent);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.15s ease;
+}
+.card-export .char-art.is-uploadable:hover .char-art-edit,
+.card-export .char-art.is-uploadable:focus-visible .char-art-edit {
+  opacity: 1;
+}
+.card-export .header-right .tag-plaque {
+  display: inline-flex;
+  align-items: center;
+}
+
+/* ========== html2canvas 导出专用：去掉会导出变形的叠层/混合模式 ========== */
+.card-export.is-export-capture .bg-noise,
+.card-export.is-export-capture .bg-carbon,
+.card-export.is-export-capture .bg-rays,
+.card-export.is-export-capture .soft-light-top,
+.card-export.is-export-capture .soft-light-bottom,
+.card-export.is-export-capture .bg-vignette,
+.card-export.is-export-capture .char-frame-pattern,
+.card-export.is-export-capture .char-art::before,
+.card-export.is-export-capture .char-art::after,
+.card-export.is-export-capture .stat::before {
+  display: none !important;
+}
+
+.card-export.is-export-capture .brand-logo {
+  mix-blend-mode: normal !important;
+  filter: none !important;
+}
+
+.card-export.is-export-capture .stat {
+  background: var(--card-bg-3) !important;
+  border: 1.5px solid var(--card-primary) !important;
+  background-clip: border-box !important;
+  -webkit-background-clip: border-box !important;
+  box-shadow:
+    inset 0 0 0 1px rgba(0, 0, 0, 0.45),
+    inset 0 1px 0 color-mix(in srgb, var(--card-highlight-2) 10%, transparent) !important;
+}
+
+.card-export.is-export-capture .metal-num,
+.card-export.is-export-capture .stat-val {
+  background: none !important;
+  color: var(--card-highlight-2) !important;
+  -webkit-text-fill-color: var(--card-highlight-2) !important;
+  filter: none !important;
+}
+
+.card-export.is-export-capture .stat-eyebrow,
+.card-export.is-export-capture .stat-lbl {
+  color: color-mix(in srgb, var(--card-primary) 72%, transparent) !important;
+}
+
+.card-export.is-export-capture .char-frame {
+  background: transparent !important;
+  filter: none !important;
+}
+
+.card-export.is-export-capture .char-frame::before,
+.card-export.is-export-capture .char-frame::after {
+  background: transparent !important;
+}

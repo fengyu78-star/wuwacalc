@@ -1,0 +1,326 @@
+{
+  "version": 1,
+  "kind": "shard",
+  "characterId": "1601",
+  "characterName": "桃祈",
+  "templates": [
+    {
+      "characterId": "1601",
+      "characterName": "桃祈",
+      "revision": 2,
+      "author": "",
+      "notes": "",
+      "personalBuffs": [],
+      "teamBuffs": [
+        {
+          "category": "typeDeep",
+          "name": "桃延技伤",
+          "mode": "fixed",
+          "value": 38,
+          "perStack": 0,
+          "maxStacks": 5,
+          "damageType": "共鸣技能",
+          "element": "",
+          "defenseKind": "",
+          "convergenceVuln": "",
+          "sourceTag": "characterTemplate",
+          "templateKey": "tpl_mrxdyymr_atfi7",
+          "gameText": "下一位登场角色共鸣技能伤害加深38%，效果持续14秒，若切换至其他角色则该效果提前结束。"
+        },
+        {
+          "category": "generalDefPct",
+          "name": "E后防御",
+          "mode": "fixed",
+          "value": 15,
+          "perStack": 0,
+          "maxStacks": 5,
+          "damageType": "",
+          "element": "",
+          "defenseKind": "",
+          "convergenceVuln": "",
+          "sourceTag": "characterTemplate",
+          "templateKey": "tpl_ms07y5fb_r38ek",
+          "gameText": "共鸣技能磐岩护壁持续期间，角色的防御提升15%。"
+        }
+      ],
+      "extraSkills": [],
+      "resonanceChains": {
+        "1": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {},
+          "gameText": "共鸣回路攻防转换获得的护盾量提升40%。"
+        },
+        "2": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [
+            {
+              "category": "composite",
+              "name": "二链",
+              "mode": "fixed",
+              "value": 0,
+              "perStack": 0,
+              "maxStacks": 99,
+              "damageType": "",
+              "element": "",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "effects": [
+                {
+                  "zone": "typeCritRate",
+                  "valueMode": "fixed",
+                  "value": 20,
+                  "segments": [
+                    {
+                      "upTo": null,
+                      "perStack": 0
+                    }
+                  ],
+                  "skillScope": "names",
+                  "skillNames": [
+                    "不动如山·技能"
+                  ],
+                  "librarySkillNames": [
+                    "不动如山·技能"
+                  ],
+                  "catalogIds": [],
+                  "damageType": "共鸣解放",
+                  "effectType": "",
+                  "element": "湮灭",
+                  "defenseKind": "",
+                  "minStacks": 0,
+                  "minResonance": 0,
+                  "onlyCharacterIds": [],
+                  "onlyCombatModes": [],
+                  "effectKey": ""
+                },
+                {
+                  "zone": "typeCritDmg",
+                  "valueMode": "fixed",
+                  "value": 20,
+                  "segments": [
+                    {
+                      "upTo": null,
+                      "perStack": 0
+                    }
+                  ],
+                  "skillScope": "names",
+                  "skillNames": [
+                    "不动如山·技能"
+                  ],
+                  "librarySkillNames": [
+                    "不动如山·技能"
+                  ],
+                  "catalogIds": [],
+                  "damageType": "共鸣解放",
+                  "effectType": "",
+                  "element": "湮灭",
+                  "defenseKind": "",
+                  "minStacks": 0,
+                  "minResonance": 0,
+                  "onlyCharacterIds": [],
+                  "onlyCombatModes": [],
+                  "effectKey": ""
+                }
+              ],
+              "sourceTag": "characterTemplate",
+              "templateKey": "tpl_ms080mu8_no54e",
+              "gameText": "共鸣解放不动如山的暴击提升20%，暴击伤害提升20%。"
+            }
+          ],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {},
+          "gameText": "共鸣解放不动如山的暴击提升20%，暴击伤害提升20%。"
+        },
+        "3": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {},
+          "gameText": "共鸣技能磐岩护壁的持续时间延长至30秒。"
+        },
+        "4": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [
+            {
+              "category": "generalDefPct",
+              "name": "后发制人加防",
+              "mode": "fixed",
+              "value": 50,
+              "perStack": 0,
+              "maxStacks": 5,
+              "damageType": "",
+              "element": "",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "sourceTag": "characterTemplate",
+              "templateKey": "tpl_ms082e7p_6lwa6",
+              "gameText": "成功触发重击后发制人时，回复桃祈25%生命值，同时防御提升50%，持续5秒，每15秒可触发1次。"
+            }
+          ],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {},
+          "gameText": "成功触发重击后发制人时，回复桃祈25%生命值，同时防御提升50%，持续5秒，每15秒可触发1次。"
+        },
+        "5": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [
+            {
+              "category": "composite",
+              "name": "五链",
+              "mode": "fixed",
+              "value": 0,
+              "perStack": 0,
+              "maxStacks": 99,
+              "damageType": "",
+              "element": "",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "effects": [
+                {
+                  "zone": "elementBonus",
+                  "valueMode": "fixed",
+                  "value": 50,
+                  "segments": [
+                    {
+                      "upTo": null,
+                      "perStack": 0
+                    }
+                  ],
+                  "skillScope": "names",
+                  "skillNames": [
+                    "攻防转换·御反之隙第一段",
+                    "御反之隙第一段",
+                    "攻防转换·御反之隙第二段",
+                    "御反之隙第二段",
+                    "攻防转换·御反之隙第三段",
+                    "御反之隙第三段"
+                  ],
+                  "librarySkillNames": [
+                    "攻防转换·御反之隙第一段",
+                    "攻防转换·御反之隙第二段",
+                    "攻防转换·御反之隙第三段"
+                  ],
+                  "catalogIds": [],
+                  "damageType": "普攻",
+                  "effectType": "",
+                  "element": "湮灭",
+                  "defenseKind": "",
+                  "minStacks": 0,
+                  "minResonance": 0,
+                  "onlyCharacterIds": [],
+                  "onlyCombatModes": [],
+                  "effectKey": ""
+                }
+              ],
+              "sourceTag": "characterTemplate",
+              "templateKey": "tpl_ms0832ly_l6bkn",
+              "gameText": "共鸣回路攻防转换的伤害提升50%，共鸣回路攻防转换命中目标时，回复20点共鸣能量。"
+            }
+          ],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {},
+          "gameText": "共鸣回路攻防转换的伤害提升50%，共鸣回路攻防转换命中目标时，回复20点共鸣能量。"
+        },
+        "6": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [
+            {
+              "category": "composite",
+              "name": "六链",
+              "mode": "fixed",
+              "value": 0,
+              "perStack": 0,
+              "maxStacks": 99,
+              "damageType": "",
+              "element": "",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "effects": [
+                {
+                  "zone": "elementBonus",
+                  "valueMode": "fixed",
+                  "value": 40,
+                  "segments": [
+                    {
+                      "upTo": null,
+                      "perStack": 0
+                    }
+                  ],
+                  "skillScope": "names",
+                  "skillNames": [
+                    "重器藏锋·第一段",
+                    "第一段",
+                    "重器藏锋·第二段",
+                    "第二段",
+                    "重器藏锋·第三段",
+                    "第三段",
+                    "重器藏锋·第四段",
+                    "第四段",
+                    "重器藏锋·后发制人",
+                    "后发制人",
+                    "重器藏锋·空中攻击",
+                    "空中攻击",
+                    "重器藏锋·闪避反击",
+                    "闪避反击",
+                    "攻防转换·御反之隙第一段",
+                    "御反之隙第一段",
+                    "攻防转换·御反之隙第二段",
+                    "御反之隙第二段",
+                    "攻防转换·御反之隙第三段",
+                    "御反之隙第三段",
+                    "重器藏锋·重击攻击",
+                    "重击攻击"
+                  ],
+                  "librarySkillNames": [
+                    "重器藏锋·第一段",
+                    "重器藏锋·第二段",
+                    "重器藏锋·第三段",
+                    "重器藏锋·第四段",
+                    "重器藏锋·后发制人",
+                    "重器藏锋·空中攻击",
+                    "重器藏锋·闪避反击",
+                    "攻防转换·御反之隙第一段",
+                    "攻防转换·御反之隙第二段",
+                    "攻防转换·御反之隙第三段",
+                    "重器藏锋·重击攻击"
+                  ],
+                  "catalogIds": [],
+                  "damageType": "普攻",
+                  "effectType": "",
+                  "element": "湮灭",
+                  "defenseKind": "",
+                  "minStacks": 0,
+                  "minResonance": 0,
+                  "onlyCharacterIds": [],
+                  "onlyCombatModes": [],
+                  "effectKey": ""
+                }
+              ],
+              "sourceTag": "characterTemplate",
+              "templateKey": "tpl_ms084b7i_4mgjh",
+              "gameText": "共鸣技能磐岩护壁获得的护盾持续期间，桃祈普攻和重击的伤害提升40%。"
+            }
+          ],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {},
+          "gameText": "共鸣技能磐岩护壁获得的护盾持续期间，桃祈普攻和重击的伤害提升40%。"
+        }
+      },
+      "combatModes": {}
+    }
+  ]
+}

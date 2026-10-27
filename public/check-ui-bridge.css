@@ -1,0 +1,28 @@
+.phase-check .check-topbar-tab{display:flex;align-items:center;gap:10px;min-height:76px;padding:10px 12px!important;font-size:13px;text-align:left}
+.phase-check .local-check-avatar{display:grid;place-items:center;flex:0 0 48px;width:48px;height:48px;border:1px solid #51757875;border-radius:6px;background:#111a20;color:#e9a0c1;font:700 12px ui-monospace,monospace}
+.phase-check .check-topbar-tab:last-child .local-check-avatar{background:#2a2941;border-color:#776f9a;color:#c4abea;font-size:24px}
+.phase-check .local-check-copy{display:flex;flex-direction:column;gap:5px;min-width:0}
+.phase-check .local-check-copy strong{font-size:14px;color:#f4f0f4;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.phase-check .local-check-copy small{font-size:11px;font-weight:400;color:#b6b4bf;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.phase-check .check-topbar-tab.is-active{border-color:#e6a0c2;box-shadow:inset 3px 0 #e6a0c2}
+.phase-check .local-check-avatar{overflow:hidden}
+.phase-check .local-check-avatar .char-avatar-card,.phase-check .local-check-avatar .char-avatar-card img{width:100%;height:100%;border:0;border-radius:inherit}
+.phase-check .local-check-avatar .char-avatar-card img{object-fit:cover}
+
+/* Match the four member cards in Detailed Calculation. Its right member dock
+   reserves 132px, so keep the same card track width in Calculation Check. */
+.phase-check .check-topbar{width:calc(100% - 132px)}
+.phase-check .check-topbar-tabs{grid-template-columns:repeat(3,minmax(0,1fr)) minmax(140px,.65fr)}
+.phase-check .check-topbar-tab{height:76px;min-height:76px;border-radius:7px!important}
+.phase-check .local-check-avatar{border-color:#c7dceb36}
+.phase-check .local-check-copy{gap:7px!important}
+.phase-check .local-check-copy strong{font-size:15px!important;font-weight:600;letter-spacing:.03em}
+.phase-check .local-check-copy small{color:#9caabc!important}
+.phase-check .check-topbar-tab:last-child .local-check-avatar{background:linear-gradient(145deg,#393453,#172335);border-color:#aa91e54d;color:#b9a4ef;font-size:25px}
+@media(max-width:1050px){
+  .phase-check .check-topbar-tabs{grid-template-columns:repeat(3,minmax(0,1fr)) 140px}
+  .phase-check .local-check-avatar{width:34px;height:34px;flex-basis:34px}
+  .phase-check .check-topbar-tab{gap:7px}
+  .phase-check .local-check-copy strong{font-size:13px}
+}
+@media(max-width:1000px){.phase-check .check-topbar{width:100%}}

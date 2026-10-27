@@ -1,0 +1,49 @@
+/* ===== 卡面/详情弹窗 4 主题（暗金/冰蓝/赤焰/翡翠） ===== */
+:root,
+[data-card-theme="gold"] {
+  --card-bg: #0e0c08;
+  --card-bg-2: #12100c;
+  --card-bg-3: #1a1610;
+  --card-primary: #c9a84c;
+  --card-highlight: #f0e0b0;
+  --card-highlight-2: #f5e8c8;
+  --card-shadow: #6a5520;
+  --card-shadow-2: #8a7030;
+  --card-text: #f0e8d8;
+}
+
+[data-card-theme="ice"] {
+  --card-bg: #060a10;
+  --card-bg-2: #081018;
+  --card-bg-3: #0c1822;
+  --card-primary: #4ab8e0;
+  --card-highlight: #a0e0ff;
+  --card-highlight-2: #c8f0ff;
+  --card-shadow: #1a5070;
+  --card-shadow-2: #2a70a0;
+  --card-text: #e0f0ff;
+}
+
+[data-card-theme="flame"] {
+  --card-bg: #100808;
+  --card-bg-2: #160c0a;
+  --card-bg-3: #1e100c;
+  --card-primary: #d85030;
+  --card-highlight: #f0a060;
+  --card-highlight-2: #f8c8a0;
+  --card-shadow: #702020;
+  --card-shadow-2: #a04028;
+  --card-text: #f0e0d8;
+}
+
+[data-card-theme="jade"] {
+  --card-bg: #080e08;
+  --card-bg-2: #0a140c;
+  --card-bg-3: #101c14;
+  --card-primary: #50b070;
+  --card-highlight: #a0f0c0;
+  --card-highlight-2: #c8f8d8;
+  --card-shadow: #205030;
+  --card-shadow-2: #308050;
+  --card-text: #e0f5e8;
+}

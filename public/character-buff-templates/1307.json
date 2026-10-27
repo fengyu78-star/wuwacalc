@@ -1,0 +1,219 @@
+{
+  "version": 1,
+  "kind": "shard",
+  "characterId": "1307",
+  "characterName": "卜灵",
+  "templates": [
+    {
+      "characterId": "1307",
+      "characterName": "卜灵",
+      "revision": 2,
+      "author": "",
+      "notes": "卜灵：全队【雷法·三才合一】共鸣技能增伤+25%；≥6链提升至+50%（同 Buff 追加）。",
+      "personalBuffs": [],
+      "teamBuffs": [
+        {
+          "category": "generalDeep",
+          "name": "卜灵·延奏",
+          "mode": "fixed",
+          "value": 15,
+          "perStack": 0,
+          "maxStacks": 5,
+          "damageType": "",
+          "element": "",
+          "defenseKind": "",
+          "convergenceVuln": "",
+          "sourceTag": "characterTemplate",
+          "templateKey": "tpl_ms28rh7f_tby2n",
+          "gameText": "持续为队伍中登场角色回复生命值，每秒回复卜灵18%攻击的生命值，持续16秒。附近队伍中所有角色全伤害加深15%，持续30秒。"
+        },
+        {
+          "category": "typeBonus",
+          "name": "雷法·两仪交泰",
+          "mode": "fixed",
+          "value": 10,
+          "perStack": 0,
+          "maxStacks": 5,
+          "damageType": "共鸣技能",
+          "element": "",
+          "defenseKind": "",
+          "convergenceVuln": "",
+          "sourceTag": "characterTemplate",
+          "templateKey": "tpl_ms28s30e_e408i",
+          "gameText": "【雷法·两仪交泰】状态持续期间，使队伍中登场的角色共鸣技能伤害加成提升10%。队伍中的角色施放变奏技能后，【雷法·两仪交泰】替换为【雷法·三才合一】。"
+        },
+        {
+          "category": "composite",
+          "name": "雷法·三才合一",
+          "mode": "fixed",
+          "value": 0,
+          "perStack": 0,
+          "maxStacks": 5,
+          "damageType": "共鸣技能",
+          "element": "",
+          "defenseKind": "",
+          "convergenceVuln": "",
+          "sourceTag": "characterTemplate",
+          "templateKey": "buling_sancai_heyi",
+          "effects": [
+            {
+              "id": "id_6434",
+              "zone": "typeBonus",
+              "valueMode": "fixed",
+              "value": 25,
+              "segments": [
+                {
+                  "upTo": null,
+                  "perStack": 0
+                }
+              ],
+              "skillScope": "all",
+              "skillNames": [],
+              "librarySkillNames": [],
+              "catalogIds": [],
+              "damageType": "共鸣技能",
+              "effectType": "",
+              "element": "",
+              "defenseKind": "",
+              "minStacks": 0,
+              "minResonance": 0,
+              "onlyCharacterIds": [],
+              "onlyCombatModes": [],
+              "effectKey": "buling_sancai_skill_bonus_base"
+            },
+            {
+              "id": "id_6435",
+              "zone": "typeBonus",
+              "valueMode": "fixed",
+              "value": 25,
+              "segments": [
+                {
+                  "upTo": null,
+                  "perStack": 0
+                }
+              ],
+              "skillScope": "all",
+              "skillNames": [],
+              "librarySkillNames": [],
+              "catalogIds": [],
+              "damageType": "共鸣技能",
+              "effectType": "",
+              "element": "",
+              "defenseKind": "",
+              "minStacks": 0,
+              "minResonance": 6,
+              "onlyCharacterIds": [],
+              "onlyCombatModes": [],
+              "effectKey": "buling_sancai_skill_bonus_c6"
+            }
+          ],
+          "gameText": "【雷法·三才合一】状态持续期间，使队伍中登场的角色共鸣技能伤害加成提升25%。"
+        }
+      ],
+      "extraSkills": [],
+      "resonanceChains": {
+        "1": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [
+            {
+              "category": "composite",
+              "name": "1链",
+              "mode": "fixed",
+              "value": 0,
+              "perStack": 0,
+              "maxStacks": 99,
+              "damageType": "",
+              "element": "",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "effects": [
+                {
+                  "zone": "generalCritRate",
+                  "valueMode": "fixed",
+                  "value": 20,
+                  "segments": [
+                    {
+                      "upTo": null,
+                      "perStack": 0
+                    }
+                  ],
+                  "skillScope": "names",
+                  "skillNames": [
+                    "飞雷诀"
+                  ],
+                  "librarySkillNames": [
+                    "飞雷诀"
+                  ],
+                  "catalogIds": [],
+                  "damageType": "共鸣解放",
+                  "effectType": "",
+                  "element": "导电",
+                  "defenseKind": "",
+                  "minStacks": 0,
+                  "minResonance": 0,
+                  "onlyCharacterIds": [],
+                  "onlyCombatModes": [],
+                  "effectKey": ""
+                }
+              ],
+              "sourceTag": "characterTemplate",
+              "templateKey": "tpl_ms28u9nq_sg08n",
+              "gameText": "共鸣解放·飞雷诀·归一造成伤害时，此次伤害的暴击提升20%。"
+            }
+          ],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {},
+          "gameText": "共鸣解放·飞雷诀·归一造成伤害时，此次伤害的暴击提升20%。"
+        },
+        "2": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {},
+          "gameText": "卜灵进入【阴阳相生】状态时，回复25点共鸣能量，该效果每24秒可生效1次。"
+        },
+        "3": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {},
+          "gameText": "【五雷荡煞阵】持续期间，队伍中的角色生命值低于50%时，立即回复350+150%卜灵攻击的生命值，该效果每24秒可生效1次。"
+        },
+        "4": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {},
+          "gameText": "卜灵的治疗效果加成提升20%。"
+        },
+        "5": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {},
+          "gameText": "【五雷荡煞阵】生成时，立即对范围内所有目标附加6层【电磁效应】。"
+        },
+        "6": {
+          "enabledByDefault": false,
+          "notes": "内置：【雷法·三才合一】共鸣技能增伤 25%→50%（同 Buff ≥6链追加+25%）。",
+          "personalBuffs": [],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {},
+          "gameText": "【雷法·三才合一】状态持续期间，队伍中登场的角色获得的共鸣技能伤害加成效果提升至50%。"
+        }
+      },
+      "combatModes": {}
+    }
+  ]
+}

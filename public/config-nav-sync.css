@@ -1,0 +1,11 @@
+#workspacePhaseBar .app-sidenav-item.local-pill{position:relative;overflow:hidden!important;border-radius:999px!important;background:#17202b!important;isolation:isolate}
+#workspacePhaseBar .local-pill-circle{position:absolute;left:50%;border-radius:50%;background:#cbb77b;z-index:0;pointer-events:none;display:block}
+#workspacePhaseBar .local-pill-stack{position:relative;display:inline-block;line-height:1.2;z-index:2}
+#workspacePhaseBar .local-pill .app-sidenav-label{position:relative;display:inline-block}
+#workspacePhaseBar .local-pill-copy{position:absolute;left:0;top:0;white-space:nowrap;color:#18202a;pointer-events:none}
+#workspacePhaseBar .local-pill .app-sidenav-icon{position:relative;z-index:2;transition:color .2s}
+#workspacePhaseBar .local-pill:is(:hover,:focus-visible) .app-sidenav-icon{color:#18202a}
+#workspacePhaseBar .local-pill.active{box-shadow:inset 0 0 0 1px #cbb77b99!important}
+html[data-theme='ivory-prism'] #workspacePhaseBar .app-sidenav-item.local-pill{background:#ebe8e0!important}
+html[data-theme='ivory-prism'] #workspacePhaseBar .local-pill-circle{background:#34455f}
+html[data-theme='ivory-prism'] #workspacePhaseBar .local-pill-copy,html[data-theme='ivory-prism'] #workspacePhaseBar .local-pill:is(:hover,:focus-visible) .app-sidenav-icon{color:#fffdf4}

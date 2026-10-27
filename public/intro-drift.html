@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="zh-CN" data-theme="classic">
+<head>
+<script src="/source-edition.js" defer></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>鸣算屋 · 探索每一种轴的可能</title>
+  <style>
+    *{box-sizing:border-box}
+    html,body{width:100%;min-height:100%;margin:0}
+    body.public-db-open{overflow:hidden;padding:0!important;background:#101116;color:#f5edf1;font-family:"Microsoft YaHei","PingFang SC",sans-serif}
+    button,a{font:inherit}
+    button:focus-visible,a:focus-visible{outline:3px solid #f5a7c2;outline-offset:4px}
+    .intro-demo{position:relative;isolation:isolate;width:100%;height:100svh;min-height:570px;overflow:hidden;background:radial-gradient(ellipse at 75% 45%,#28212b 0%,#16161c 57%,#101116 100%)}
+    .intro-demo::before{content:"";position:absolute;inset:0;z-index:-1;opacity:.45;background:repeating-linear-gradient(150deg,transparent 0 71px,#e995b308 72px,transparent 73px 144px)}
+    .intro-wallpaper{position:absolute;inset:-2%;z-index:0;background:url('assets/brand/intro-wallpaper-lantern-enhanced.webp') center 38%/cover no-repeat;opacity:.9;filter:saturate(.9) brightness(.82);pointer-events:none}
+    .intro-wallpaper::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#1011169c,transparent 42%,#10111694),linear-gradient(0deg,#101116cf,transparent 42%,#1011165c)}
+    .wall{position:absolute;inset:0;z-index:1;overflow:hidden;perspective:900px;perspective-origin:50% 50%;-webkit-mask-image:radial-gradient(ellipse 78% 82% at 50% 46%,#000 40%,transparent 100%),linear-gradient(to top,#000 40%,transparent 100%);-webkit-mask-composite:source-in;mask-image:radial-gradient(ellipse 78% 82% at 50% 46%,#000 40%,transparent 100%),linear-gradient(to top,#000 40%,transparent 100%);mask-composite:intersect}
+    .wall-plane{position:absolute;left:50%;top:50%;display:flex;gap:var(--gap);width:max-content;transform-style:preserve-3d;transform-origin:50% 50%;will-change:transform}
+    .wall-col{width:var(--tile-width);height:calc(var(--unit)*var(--items-per-col));flex:none;overflow:visible;transform-style:preserve-3d}
+    .wall-track{display:flex;flex-direction:column;gap:var(--gap);width:100%;will-change:transform;transform-style:preserve-3d}
+    .wall-tile{width:var(--tile-width);height:var(--tile-height);flex:none;position:relative;transform-style:preserve-3d;background:rgba(0,0,0,.001)}
+    .wall-tile-inner{position:absolute;inset:0;display:block;overflow:hidden;border-radius:14px;background:#0b0b12;opacity:.84;transform:translateZ(0);pointer-events:none;filter:saturate(.92);transition:transform .42s cubic-bezier(.22,1,.36,1),opacity .42s cubic-bezier(.22,1,.36,1),box-shadow .42s cubic-bezier(.22,1,.36,1),filter .42s}
+    .intro-card-shot{display:block;width:100%;height:100%;object-fit:cover}
+    .wall-tile:focus-visible{outline:3px solid #f5a7c2;outline-offset:4px}
+    .wall-tile-inner::after{content:"";position:absolute;inset:0;background:#060010;opacity:.14;pointer-events:none;transition:opacity .42s cubic-bezier(.22,1,.36,1)}
+    .wall-tile.is-active{z-index:5}
+    .wall-tile.is-active .wall-tile-inner{opacity:1;transform:translateZ(76px);box-shadow:0 24px 60px -18px #000b;filter:saturate(1.05)}
+    .wall-tile.is-active .wall-tile-inner::after{opacity:0}
+    .card-frame{width:var(--base-width);height:var(--base-height);transform:scale(var(--tile-scale));transform-origin:top left}
+    .wall-tile .public-db-page{width:100%!important;max-width:none!important;height:100%;padding:0!important;margin:0!important}
+    .wall-tile .pdb-list{display:block!important;height:100%;width:100%}
+    .wall-tile .data-card{width:100%;height:100%!important;min-height:0!important;margin:0!important;overflow:hidden}
+    .wall-tile .card-heading .pdb-card-btn{pointer-events:none}
+    @layer localPalette {
+      html[data-theme] body.public-db-open .wall-tile .public-db-page{width:100%!important;max-width:none!important;height:100%!important;padding:0!important;margin:0!important}
+      html[data-theme] body.public-db-open .wall-tile .pdb-list{display:block!important;grid-template-columns:none!important;width:100%!important;height:100%!important}
+      html[data-theme] body.public-db-open .wall-tile .pdb-list .data-card{display:block!important;width:100%!important;height:100%!important;min-height:0!important;margin:0!important}
+      @media(max-width:520px){
+        html[data-theme] body.public-db-open .wall-tile .card-left-foot{flex-direction:column!important;align-items:stretch!important;gap:3px!important}
+        html[data-theme] body.public-db-open .wall-tile .card-footer-stats{width:100%!important}
+        html[data-theme] body.public-db-open .wall-tile .card-metrics{width:100%!important;flex-wrap:nowrap!important}
+        html[data-theme] body.public-db-open .wall-tile .card-signal-actions{position:static!important;left:auto!important;right:auto!important;bottom:auto!important;margin-left:auto!important;gap:5px!important}
+        html[data-theme] body.public-db-open .wall-tile .card-left-foot .pdb-card-user{align-self:flex-end!important;margin-right:0!important;left:0!important}
+        html[data-theme] body.public-db-open .wall-tile .card-left-foot .pdb-author-avatar{width:36px!important;height:36px!important}
+      }
+    }
+    .intro-vignette{position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse 260px 125px at 100% 0%,#101116 0%,#101116f0 30%,transparent 100%),linear-gradient(0deg,rgba(12,12,17,.66),transparent 27%,transparent 80%,rgba(12,12,17,.38));z-index:2}
+    .intro-top{position:absolute;z-index:3;top:0;left:0;right:0;display:flex;align-items:center;justify-content:space-between;gap:20px;padding:28px clamp(22px,4.4vw,78px)}
+    .brand{display:flex;align-items:center;gap:12px;color:#f2a8c1;text-decoration:none}
+    .brand-logo{display:block;width:40px;height:40px;flex:none;object-fit:contain}
+    .brand-mark span{transform:rotate(-45deg)}
+    .brand-name{font-size:21px;font-weight:900;letter-spacing:.1em;line-height:1}
+    .brand-name small{display:block;margin-top:6px;color:#e4bdca;font-size:9px;letter-spacing:.31em}
+    .top-actions{display:flex;align-items:center;gap:12px}
+    .login-btn{display:inline-flex;align-items:center;justify-content:center;min-width:112px;min-height:46px;padding:0 23px;border:1px solid #ffc5d8;border-radius:10px;background:#f291b4;color:#27131c;text-decoration:none;font-size:17px;font-weight:900;letter-spacing:.12em;box-shadow:0 0 0 3px #f291b433,0 10px 28px #f291b44b;transition:transform .2s,box-shadow .2s}
+    .login-btn:hover{transform:translateY(-2px);box-shadow:0 0 0 5px #f291b444,0 15px 35px #f291b466}
+    .guest-btn{display:inline-flex;align-items:center;justify-content:center;min-width:112px;min-height:46px;padding:0 18px;border:1px solid #f2a8c188;border-radius:10px;background:#241f29dc;color:#ffe2ec;text-decoration:none;font-size:16px;font-weight:800;letter-spacing:.06em;transition:transform .2s,background .2s,border-color .2s}
+    .guest-btn:hover{transform:translateY(-2px);background:#392a37;border-color:#f2a8c1}
+    .intro-copy{position:absolute;z-index:3;left:clamp(25px,4.4vw,78px);bottom:clamp(45px,7vh,78px);max-width:420px;pointer-events:none;text-shadow:0 2px 18px #000}
+    .eyebrow{display:block;margin-bottom:9px;color:#f4adc6;font-size:10px;font-weight:800;letter-spacing:.32em}
+    .intro-copy h1{margin:0;color:#fff7fa;font-size:clamp(25px,3vw,38px);line-height:1.2;letter-spacing:.06em}
+    .intro-copy p{margin:8px 0 0;color:#f0d7e0;font-size:13px;line-height:1.6}
+    .intro-note{position:absolute;z-index:3;right:clamp(22px,4.4vw,78px);bottom:23px;color:#d5b8c3;font-size:11px;letter-spacing:.06em;text-shadow:0 1px 6px #000}
+    .intro-note a{color:#fac1d6;text-decoration:none}
+    /* The demo uses the same public-library card DOM and theme CSS. Motion only changes its container. */
+    html[data-theme="classic"] .wall-tile .pdb-card{box-shadow:0 18px 40px #0008,0 0 0 1px #ed98b11b}
+    .wall-tile .pdb-author-avatar{background:linear-gradient(145deg,#ba638b,#583e73)!important;border-color:#df8cac!important}
+    .wall-tile .pdb-author-avatar-fb{display:flex!important;color:#fff!important}
+    @media(max-width:700px){.intro-top{padding:18px}.brand-name{font-size:15px}.brand-mark{width:27px;height:27px;font-size:15px}.login-btn{min-height:42px;min-width:82px;padding:0 13px;font-size:15px}.intro-copy{left:24px;bottom:78px;max-width:calc(100vw - 48px)}.intro-copy h1{font-size:26px}.intro-copy p{font-size:12px}.intro-vignette{background:radial-gradient(ellipse 155px 90px at 100% 0%,#101116 0%,#101116eb 32%,transparent 100%),linear-gradient(0deg,#101116 0%,#101116ca 24%,transparent 70%,#101116a0)}.intro-wallpaper{background-position:center 44%;opacity:.8}.intro-note{left:24px;right:24px;text-align:left}}
+    @media(prefers-reduced-motion:reduce){.wall-plane,.wall-track{will-change:auto}.wall-tile-inner,.login-btn{transition:none}}
+    @media(max-width:700px){.top-actions{gap:8px}.brand-logo{width:36px;height:36px}.login-btn,.guest-btn{min-width:80px;min-height:44px;padding:0 10px;font-size:14px}}
+    @media(max-width:380px){.intro-top{padding:14px 10px}.brand{gap:6px}.brand-name{font-size:13px}.brand-name small{font-size:7px}.login-btn,.guest-btn{min-width:68px;padding:0 7px;font-size:12px}}
+  </style>
+</head>
+<body class="public-db-open">
+  <main class="intro-demo">
+    <div class="intro-wallpaper" aria-hidden="true"></div>
+    <section class="wall" id="wall" aria-label="公开方案卡墙"><div class="wall-plane" id="wallPlane"></div></section>
+    <div class="intro-vignette" aria-hidden="true"></div>
+    <header class="intro-top">
+      <a class="brand" href="/" aria-label="鸣算屋主页"><img class="brand-logo" src="assets/brand/logo.png" alt="" width="40" height="40" decoding="async"><span class="brand-name">鳴算屋<small>WAVECALC</small></span></a>
+      <div class="top-actions"><a class="login-btn" href="/" title="登录或注册">登录</a><a class="guest-btn" href="/" title="无需账号进入计算器">游客登录</a></div>
+    </header>
+    <div class="intro-copy"><span class="eyebrow">WAVECALC · COMMUNITY</span><h1>探索每一种轴的可能</h1><p>椰果从今日开始</p></div>
+    <p class="intro-note">真实公开方案 · 点击卡片查看详情 · <a href="/">进入计算器</a></p>
+  </main>
+  <script>
+    (()=>{
+      const embedded=new URLSearchParams(location.search).get('embedded')==='1';
+      const sendIntroAction=(action,shareCode)=>parent.postMessage({wavecalcIntroAction:action,shareCode:shareCode||''},location.origin);
+      if(embedded){
+        document.querySelector('.intro-note').innerHTML='真实公开方案 · 点击卡片查看详情 · <a href="/" data-intro-public-db>公开方案库</a> · <a href="/" data-intro-guest>进入计算器</a>';
+        document.querySelector('.login-btn').addEventListener('click',e=>{e.preventDefault();sendIntroAction('login')});
+        document.querySelector('.guest-btn').addEventListener('click',e=>{e.preventDefault();sendIntroAction('guest')});
+        document.querySelector('.brand').addEventListener('click',e=>{e.preventDefault();sendIntroAction('guest')});
+        document.querySelector('[data-intro-public-db]').addEventListener('click',e=>{e.preventDefault();sendIntroAction('public-db')});
+        document.querySelector('[data-intro-guest]').addEventListener('click',e=>{e.preventDefault();sendIntroAction('guest')});
+      }
+      const cards=[{"code":"MC-PZN9GY","title":"我流爱达千全局","src":"assets/brand/intro-cards-20260926/MC-PZN9GY.webp"},{"code":"MC-6LWVY4","title":"31清无转火全局dps","src":"assets/brand/intro-cards-20260926/MC-6LWVY4.webp"},{"code":"MC-K4F4MQ","title":"椿洛守含苞3E轴 全局","src":"assets/brand/intro-cards-20260926/MC-K4F4MQ.webp"},{"code":"MC-PCPC96","title":"爱达千_i茶1爱3达启动轴","src":"assets/brand/intro-cards-20260926/MC-PCPC96.webp"},{"code":"MC-PLPMH5","title":"景燃小弟2","src":"assets/brand/intro-cards-20260926/MC-PLPMH5.webp"},{"code":"MC-G25N8W","title":"5日灵全局 复读重击*6","src":"assets/brand/intro-cards-20260926/MC-G25N8W.webp"},{"code":"MC-JVL35Q","title":"01长露\"莫\"","src":"assets/brand/intro-cards-20260926/MC-JVL35Q.webp"},{"code":"MC-CRE39A","title":"震諧愛琳莫. 單處決輪椅軸","src":"assets/brand/intro-cards-20260926/MC-CRE39A.webp"},{"code":"MC-3N9NBT","title":"陆达莫","src":"assets/brand/intro-cards-20260926/MC-3N9NBT.webp"},{"code":"MC-RGS8VM","title":"卡夏千25秒循环轴（5r9满延）-65卡","src":"assets/brand/intro-cards-20260926/MC-RGS8VM.webp"},{"code":"MC-4AMPF6","title":"清离月2轮3处决25秒轴","src":"assets/brand/intro-cards-20260926/MC-4AMPF6.webp"},{"code":"MC-GLMT6L","title":"刚轴景莫守","src":"assets/brand/intro-cards-20260926/MC-GLMT6L.webp"},{"code":"MC-D3KY4A","title":"卡夏风25秒双下落","src":"assets/brand/intro-cards-20260926/MC-D3KY4A.webp"},{"code":"MC-PP9QYW","title":"25有效顶配暗散维16s","src":"assets/brand/intro-cards-20260926/MC-PP9QYW.webp"},{"code":"MC-9DTQL7","title":"31绯散维4r30居","src":"assets/brand/intro-cards-20260926/MC-9DTQL7.webp"},{"code":"MC-FFLUH7","title":"6R11Z循环","src":"assets/brand/intro-cards-20260926/MC-FFLUH7.webp"},{"code":"MC-M64CEC","title":"达琳莫互延（4集）","src":"assets/brand/intro-cards-20260926/MC-M64CEC.webp"},{"code":"MC-Q9QB7B","title":"清宵（不转火）参考模板","src":"assets/brand/intro-cards-20260926/MC-Q9QB7B.webp"},{"code":"MC-P66YJV","title":"01弗坎10莫3a8赫循环(24余响)","src":"assets/brand/intro-cards-20260926/MC-P66YJV.webp"},{"code":"MC-HD8362","title":"01绯琳穗6居合","src":"assets/brand/intro-cards-20260926/MC-HD8362.webp"}];
+      const plane=document.getElementById('wallPlane'), wall=document.getElementById('wall');
+      if(embedded)wall.addEventListener('click',e=>sendIntroAction('public-db',e.target.closest('.wall-tile')?.dataset.code));
+      const motionQuery=matchMedia('(prefers-reduced-motion: reduce)');
+      let tracks=[],offset=[],velocity=[],baseSpeed=[],repeatHeight=0,last=0,raf=0,hover=-1;
+      let tilt=-18,turn=-14,depth=120;
+      const pointer={x:0,y:0},damped={x:0,y:0};
+      function placePlane(px,py){plane.style.transform=`translate(-50%,-50%) scale(1.18) rotateX(${tilt+py}deg) rotateY(${turn+px}deg) translateZ(${-depth}px)`}
+      function build(){
+        cancelAnimationFrame(raf);const w=innerWidth;
+        const columns=w<520?2:w<1100?4:5;
+        const baseWidth=456,baseHeight=218;
+        const tileWidth=w<520?Math.min(250,Math.max(210,w*.62)):w<1100?Math.min(280,Math.max(230,w*.35)):Math.min(360,Math.max(280,w*.245));
+        const tileHeight=Math.round(baseHeight*tileWidth/baseWidth),gap=w<520?14:18,unit=tileHeight+gap;
+        const perCol=4,repeat=3;repeatHeight=perCol*unit;
+        tilt=w<520?-12:-18;turn=w<520?-10:-14;depth=w<520?75:120;
+        wall.style.setProperty('--tile-width',`${tileWidth}px`);wall.style.setProperty('--tile-height',`${tileHeight}px`);wall.style.setProperty('--base-width',`${baseWidth}px`);wall.style.setProperty('--base-height',`${baseHeight}px`);wall.style.setProperty('--tile-scale',String(tileWidth/baseWidth));wall.style.setProperty('--gap',`${gap}px`);wall.style.setProperty('--unit',`${unit}px`);wall.style.setProperty('--items-per-col',`${perCol}`);
+        plane.replaceChildren();tracks=[];offset=[];velocity=[];baseSpeed=[];
+        for(let c=0;c<columns;c++){
+          const col=document.createElement('div');col.className='wall-col';const track=document.createElement('div');track.className='wall-track';
+          for(let copy=0;copy<repeat;copy++)for(let row=0;row<perCol;row++){
+            const item=cards[(c*perCol+row)%cards.length],tile=document.createElement('div');
+            tile.className='wall-tile';tile.dataset.code=item.code;tile.title=item.title;tile.tabIndex=0;tile.setAttribute('role','link');tile.setAttribute('aria-label','查看公开方案 '+item.title);
+            tile.innerHTML='<div class="wall-tile-inner"><img class="intro-card-shot" loading="eager" decoding="async" alt=""></div>';
+            const shot=tile.querySelector('img');shot.src=item.src;shot.alt=item.title+'，公开方案 '+item.code;
+            tile.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();sendIntroAction('public-db',item.code)}});
+            tile.addEventListener('pointerenter',()=>{hover=c;tile.classList.add('is-active')});tile.addEventListener('pointerleave',()=>{hover=-1;tile.classList.remove('is-active')});
+            
+            track.append(tile);
+          }
+          col.append(track);plane.append(col);tracks.push(track);offset.push(((c*.37)%1)*repeatHeight);velocity.push(0);
+          const factor=1+.45*((((c*.6180339887+.35)%1)*2)-1);
+          baseSpeed.push((c%2?-1:1)*42*factor);
+        }
+        placePlane(0,0);last=0;raf=requestAnimationFrame(frame);
+      }
+      function frame(ts){
+        raf=0;
+        if(document.hidden){last=0;return}
+        const dt=last?Math.min(.05,Math.max(0,(ts-last)/1000)):0;last=ts;
+        if(motionQuery.matches){tracks.forEach((track,c)=>track.style.transform=`translate3d(0,${-offset[c]}px,0)`);placePlane(0,0);return}
+        const ease=1-Math.exp(-dt/.12);damped.x+=(pointer.x-damped.x)*ease;damped.y+=(pointer.y-damped.y)*ease;placePlane(damped.x,damped.y);
+        tracks.forEach((track,c)=>{const target=c===hover?0:baseSpeed[c];velocity[c]+=(target-velocity[c])*(1-Math.exp(-dt/(target===0?.16:.28)));offset[c]=((offset[c]+velocity[c]*dt)%repeatHeight+repeatHeight)%repeatHeight;track.style.transform=`translate3d(0,${-offset[c]}px,0)`});
+        raf=requestAnimationFrame(frame);
+      }
+      wall.addEventListener('pointermove',e=>{if(motionQuery.matches)return;const r=wall.getBoundingClientRect();pointer.x=((e.clientX-r.left)/r.width-.5)*4.8;pointer.y=-((e.clientY-r.top)/r.height-.5)*4.8});
+      wall.addEventListener('pointerleave',()=>{pointer.x=0;pointer.y=0;hover=-1;wall.querySelectorAll('.wall-tile.is-active').forEach(el=>el.classList.remove('is-active'))});
+      function resumeMotion(){cancelAnimationFrame(raf);raf=0;last=0;if(!document.hidden)raf=requestAnimationFrame(frame)}
+      motionQuery.addEventListener('change',resumeMotion);
+      document.addEventListener('visibilitychange',resumeMotion);
+      let resizeTimer;addEventListener('resize',()=>{clearTimeout(resizeTimer);resizeTimer=setTimeout(build,160)});build();
+    })();
+  </script>
+<script src="/js-overlay/wavecalc-overlay.js?v=12"></script></body>
+</html>

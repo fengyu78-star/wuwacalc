@@ -1,0 +1,186 @@
+{
+  "version": 1,
+  "kind": "shard",
+  "characterId": "1604",
+  "characterName": "漂泊者·湮灭",
+  "templates": [
+    {
+      "characterId": "1604",
+      "characterName": "漂泊者·湮灭",
+      "revision": 3,
+      "author": "OrangeSun",
+      "notes": "",
+      "personalBuffs": [
+        {
+          "category": "elementBonus",
+          "name": "固有·变格（暗涌）",
+          "mode": "fixed",
+          "value": 20,
+          "perStack": 0,
+          "maxStacks": 5,
+          "damageType": "",
+          "element": "湮灭",
+          "defenseKind": "",
+          "convergenceVuln": "",
+          "sourceTag": "characterTemplate",
+          "templateKey": "tpl_mrzwpi3x_mvsvc",
+          "gameText": "处于暗涌状态时，湮灭伤害加成提升20%。"
+        }
+      ],
+      "teamBuffs": [],
+      "extraSkills": [],
+      "resonanceChains": {
+        "1": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [
+            {
+              "category": "typeBonus",
+              "name": "1链·技伤",
+              "mode": "fixed",
+              "value": 30,
+              "perStack": 0,
+              "maxStacks": 5,
+              "damageType": "共鸣技能",
+              "element": "",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "sourceTag": "characterTemplate",
+              "templateKey": "tpl_mrzws86e_8wbbc",
+              "gameText": "共鸣技能伤害加成提升30%。"
+            }
+          ],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {},
+          "gameText": "共鸣技能伤害加成提升30%。"
+        },
+        "2": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {},
+          "gameText": "施放重击灭音进入暗涌状态时，重置共鸣技能的冷却时间。"
+        },
+        "3": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {},
+          "gameText": "处于暗涌状态时，第5段普攻命中敌人时，可回复已损失生命值10%的生命值。"
+        },
+        "4": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [],
+          "teamBuffs": [
+            {
+              "category": "elementResReduce",
+              "name": "暗主4链",
+              "mode": "fixed",
+              "value": 10,
+              "perStack": 0,
+              "maxStacks": 5,
+              "damageType": "",
+              "element": "湮灭",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "sourceTag": "characterTemplate",
+              "templateKey": "tpl_mrzwwplf_gnsff",
+              "gameText": "重击灭音、共鸣解放临渊死寂命中目标时，目标的湮灭抗性降低10%，持续20秒。"
+            }
+          ],
+          "extraSkills": [],
+          "combatModes": {},
+          "gameText": "重击灭音、共鸣解放临渊死寂命中目标时，目标的湮灭抗性降低10%，持续20秒。"
+        },
+        "5": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [
+            {
+              "category": "composite",
+              "name": "5链·暗涌第五段普攻",
+              "mode": "fixed",
+              "value": 0,
+              "perStack": 0,
+              "maxStacks": 1,
+              "damageType": "",
+              "element": "",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "effects": [
+                {
+                  "zone": "multBoost",
+                  "valueMode": "fixed",
+                  "value": 50,
+                  "segments": [
+                    {
+                      "upTo": null,
+                      "perStack": 0
+                    }
+                  ],
+                  "skillScope": "names",
+                  "skillNames": [
+                    "永夜开明·暗流·普攻第五段",
+                    "暗流·普攻第五段"
+                  ],
+                  "librarySkillNames": [
+                    "永夜开明·暗流·普攻第五段"
+                  ],
+                  "catalogIds": [],
+                  "damageType": "普攻",
+                  "effectType": "",
+                  "element": "湮灭",
+                  "defenseKind": "",
+                  "minStacks": 0,
+                  "minResonance": 5,
+                  "onlyCharacterIds": [],
+                  "onlyCombatModes": [],
+                  "effectKey": ""
+                }
+              ],
+              "sourceTag": "characterTemplate",
+              "templateKey": "tpl_mrzwxirn_v4nbj",
+              "gameText": "处于暗涌状态时第5段普攻可额外造成一次湮灭伤害，此次伤害为第5段普攻伤害的50%。"
+            }
+          ],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {},
+          "gameText": "处于暗涌状态时第5段普攻可额外造成一次湮灭伤害，此次伤害为第5段普攻伤害的50%。"
+        },
+        "6": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [
+            {
+              "category": "generalCritRate",
+              "name": "6链·暴击（暗涌）",
+              "mode": "fixed",
+              "value": 25,
+              "perStack": 0,
+              "maxStacks": 5,
+              "damageType": "",
+              "element": "",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "sourceTag": "characterTemplate",
+              "templateKey": "tpl_mrzx38d2_p6w2f",
+              "gameText": "处于暗涌状态时，漂泊者的暴击提升25%。"
+            }
+          ],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {},
+          "gameText": "处于暗涌状态时，漂泊者的暴击提升25%。"
+        }
+      },
+      "combatModes": {}
+    }
+  ]
+}

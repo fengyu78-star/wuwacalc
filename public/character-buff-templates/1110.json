@@ -1,0 +1,392 @@
+{
+  "version": 1,
+  "kind": "shard",
+  "characterId": "1110",
+  "characterName": "穗穗",
+  "templates": [
+    {
+      "characterId": "1110",
+      "characterName": "穗穗",
+      "revision": 3,
+      "author": "",
+      "notes": "穗穗：全队复合【穗穗·消耗虚湮效应】湮灭伤害无视防御+6%、降低湮灭抗性+12%（固定；仅秧秧·玄翎生效，穗穗本人不生效）。全队【穗穗延奏2】：共鸣效率>200%时每满1%→增伤+0.2%（不足1%不转化，上限12%，含本人，随面板同步）。全队【穗穗·延奏3·烟岚】：共鸣效率>200%时每满0.12%→攻击+0.1%（不足不转化，上限50%，对穗穗本人不生效，随面板同步）。",
+      "personalBuffs": [
+        {
+          "category": "composite",
+          "name": "固有1",
+          "mode": "fixed",
+          "value": 0,
+          "perStack": 0,
+          "maxStacks": 99,
+          "damageType": "",
+          "element": "",
+          "defenseKind": "",
+          "convergenceVuln": "",
+          "effects": [
+            {
+              "zone": "generalCritRate",
+              "valueMode": "fixed",
+              "value": 80,
+              "segments": [
+                {
+                  "upTo": null,
+                  "perStack": 0
+                }
+              ],
+              "skillScope": "names",
+              "skillNames": [
+                "泠泠漱玉声·技能",
+                "技能",
+                "翠落画屏·醒春潮",
+                "醒春潮"
+              ],
+              "librarySkillNames": [
+                "泠泠漱玉声·技能",
+                "翠落画屏·醒春潮"
+              ],
+              "catalogIds": [],
+              "damageType": "变奏",
+              "effectType": "",
+              "element": "冷凝",
+              "defenseKind": "",
+              "minStacks": 0,
+              "minResonance": 0,
+              "onlyCharacterIds": [],
+              "onlyCombatModes": [],
+              "effectKey": ""
+            },
+            {
+              "zone": "elementBonus",
+              "valueMode": "fixed",
+              "value": 240,
+              "segments": [
+                {
+                  "upTo": null,
+                  "perStack": 0
+                }
+              ],
+              "skillScope": "names",
+              "skillNames": [
+                "泠泠漱玉声·技能",
+                "技能",
+                "翠落画屏·醒春潮",
+                "醒春潮"
+              ],
+              "librarySkillNames": [
+                "泠泠漱玉声·技能",
+                "翠落画屏·醒春潮"
+              ],
+              "catalogIds": [],
+              "damageType": "变奏",
+              "effectType": "",
+              "element": "冷凝",
+              "defenseKind": "",
+              "minStacks": 0,
+              "minResonance": 0,
+              "onlyCharacterIds": [],
+              "onlyCombatModes": [],
+              "effectKey": ""
+            }
+          ],
+          "sourceTag": "characterTemplate",
+          "templateKey": "tpl_mrza0hnw_ev33j",
+          "gameText": "共鸣技能·醒春潮和变奏技能·泠泠漱玉声命中目标时，额外回复18点协奏和13点共鸣能量，并使该次攻击的暴击率提升80%，造成的冷凝伤害提升240%。每25秒最多触发1次。"
+        }
+      ],
+      "teamBuffs": [
+        {
+          "templateKey": "suisui_consume_xuyan",
+          "category": "composite",
+          "name": "穗穗·消耗虚湮效应",
+          "mode": "fixed",
+          "excludeSource": true,
+          "onlyCharacterIds": [
+            "1610"
+          ],
+          "effects": [
+            {
+              "zone": "elementDefense",
+              "valueMode": "fixed",
+              "value": 6,
+              "segments": [
+                {
+                  "upTo": null,
+                  "perStack": 0
+                }
+              ],
+              "skillScope": "all",
+              "skillNames": [],
+              "librarySkillNames": [],
+              "catalogIds": [],
+              "damageType": "",
+              "effectType": "",
+              "element": "湮灭",
+              "defenseKind": "ignore",
+              "minStacks": 0,
+              "minResonance": 0,
+              "onlyCharacterIds": [],
+              "onlyCombatModes": [],
+              "effectKey": ""
+            },
+            {
+              "zone": "elementResReduce",
+              "valueMode": "fixed",
+              "value": 12,
+              "segments": [
+                {
+                  "upTo": null,
+                  "perStack": 0
+                }
+              ],
+              "skillScope": "all",
+              "skillNames": [],
+              "librarySkillNames": [],
+              "catalogIds": [],
+              "damageType": "",
+              "effectType": "",
+              "element": "湮灭",
+              "defenseKind": "",
+              "minStacks": 0,
+              "minResonance": 0,
+              "onlyCharacterIds": [],
+              "onlyCombatModes": [],
+              "effectKey": ""
+            }
+          ],
+          "sourceTag": "characterTemplate",
+          "value": 0,
+          "perStack": 0,
+          "maxStacks": 1,
+          "gameText": "消耗目标【虚湮效应】层数后，使自身造成的湮灭伤害无视目标6%防御，且无视目标12%湮灭抗性，持续30秒，该效果无法叠加。"
+        },
+        {
+          "category": "generalDeep",
+          "name": "穗穗·延奏1",
+          "mode": "fixed",
+          "value": 25,
+          "perStack": 0,
+          "maxStacks": 5,
+          "damageType": "",
+          "element": "",
+          "defenseKind": "",
+          "convergenceVuln": "",
+          "sourceTag": "characterTemplate",
+          "templateKey": "tpl_mrza9vhh_pq1lx",
+          "gameText": "队伍中的角色全伤害加深25%，持续30秒。"
+        },
+        {
+          "templateKey": "suisui_outro2_er_bonus",
+          "category": "generalBonus",
+          "name": "穗穗延奏2",
+          "mode": "fixed",
+          "value": 0,
+          "damageType": "",
+          "element": "",
+          "defenseKind": "",
+          "sourceTag": "characterTemplate",
+          "perStack": 0,
+          "maxStacks": 5,
+          "gameText": "消耗至少400点【芳菲信】：\n·本次仙游碧落状态期间，山河水境内登场角色获得额外效果：若持有重明照影，则造成的伤害提升：穗穗自身共鸣效率大于200%时，每超过1%的共鸣效率计算为0.2%的伤害提升，上限12%。"
+        },
+        {
+          "templateKey": "suisui_outro3_er_atk",
+          "category": "generalAttack",
+          "name": "穗穗·延奏3·烟岚",
+          "mode": "fixed",
+          "value": 0,
+          "damageType": "",
+          "element": "",
+          "defenseKind": "",
+          "excludeSource": true,
+          "sourceTag": "characterTemplate",
+          "perStack": 0,
+          "maxStacks": 5,
+          "gameText": "消耗至少600点【芳菲信】：\n·第1次翾舞时，山河水境内附近队伍中登场角色在穗穗本次仙游碧落期间获得额外效果：下一次施放延奏技能时，穗穗使下一个登场角色获得烟岚，持续14秒。持有烟岚的角色消耗目标【异常效应】或【电磁爆发】层数后，攻击提升：穗穗自身共鸣效率大于200%时，每超过0.12%的共鸣效率计算为0.1%的攻击提升，上限50%，持续6秒，烟岚被移除时移除攻击提升效果，若切换至其他角色则提前移除烟岚。"
+        }
+      ],
+      "extraSkills": [],
+      "resonanceChains": {
+        "1": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {},
+          "gameText": "持有烟岚的角色为目标附加【异常效应】或造成异常效应伤害后，也可以触发攻击提升效果。\n第3次翾舞的时候获得的重明照影的时间提升100%。\n普攻·濯雨时、重击·濯雨时、下落攻击·重明枕露和下落攻击·飞燕裁风免疫打断。"
+        },
+        "2": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [],
+          "teamBuffs": [
+            {
+              "category": "generalCritDmg",
+              "name": "2链·穗穗",
+              "mode": "fixed",
+              "value": 50,
+              "perStack": 0,
+              "maxStacks": 5,
+              "damageType": "",
+              "element": "",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "sourceTag": "characterTemplate",
+              "templateKey": "tpl_mrzapi2x_0chpz",
+              "gameText": "山河水境内附近队伍中所有角色触发以下效果后，使触发效果的角色暴击伤害提升50%，持续30秒：\n·为目标附加【光噪效应】、【聚爆效应】、【霜渐效应】、【风蚀效应】、【电磁效应】，或造成对应异常效应伤害。\n·消耗目标【虚湮效应】层数。\n队伍中登场角色不处于山河水境内时，该暴击伤害提升效果暂时失效。"
+            }
+          ],
+          "extraSkills": [],
+          "combatModes": {},
+          "gameText": "山河水境内附近队伍中所有角色触发以下效果后，使触发效果的角色暴击伤害提升50%，持续30秒：\n·为目标附加【光噪效应】、【聚爆效应】、【霜渐效应】、【风蚀效应】、【电磁效应】，或造成对应异常效应伤害。\n·消耗目标【虚湮效应】层数。\n队伍中登场角色不处于山河水境内时，该暴击伤害提升效果暂时失效。"
+        },
+        "3": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {},
+          "gameText": "施放共鸣技能·濯雨时后的一定时间内，短按普攻，将会施放普攻·濯雨时第4段。\n\n施放共鸣技能·濯雨时时，获得点翠，切换至其他角色时移除。施放普攻·濯雨时第4段时，会消耗点翠，回复自身20点协奏，并回复350点【芳菲信】。每25秒最多消耗1次点翠。"
+        },
+        "4": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {},
+          "gameText": "润物和春生造成的治疗量提升50%。"
+        },
+        "5": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [
+            {
+              "category": "composite",
+              "name": "5链",
+              "mode": "fixed",
+              "value": 0,
+              "perStack": 0,
+              "maxStacks": 99,
+              "damageType": "",
+              "element": "",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "effects": [
+                {
+                  "zone": "multBoost",
+                  "valueMode": "fixed",
+                  "value": 100,
+                  "segments": [
+                    {
+                      "upTo": null,
+                      "perStack": 0
+                    }
+                  ],
+                  "skillScope": "names",
+                  "skillNames": [
+                    "穗摇金·重击·濯雨时",
+                    "重击·濯雨时",
+                    "穗摇金·普攻·濯雨时第一段",
+                    "普攻·濯雨时第一段",
+                    "穗摇金·普攻·濯雨时第二段",
+                    "普攻·濯雨时第二段",
+                    "穗摇金·普攻·濯雨时第三段",
+                    "普攻·濯雨时第三段",
+                    "穗摇金·普攻·濯雨时第四段",
+                    "普攻·濯雨时第四段"
+                  ],
+                  "librarySkillNames": [
+                    "穗摇金·重击·濯雨时",
+                    "穗摇金·普攻·濯雨时第一段",
+                    "穗摇金·普攻·濯雨时第二段",
+                    "穗摇金·普攻·濯雨时第三段",
+                    "穗摇金·普攻·濯雨时第四段"
+                  ],
+                  "catalogIds": [],
+                  "damageType": "重击",
+                  "effectType": "",
+                  "element": "冷凝",
+                  "defenseKind": "",
+                  "minStacks": 0,
+                  "minResonance": 0,
+                  "onlyCharacterIds": [],
+                  "onlyCombatModes": [],
+                  "effectKey": ""
+                }
+              ],
+              "sourceTag": "characterTemplate",
+              "templateKey": "tpl_mrzapue7_52nvm",
+              "gameText": "普攻·濯雨时和重击·濯雨时的伤害倍率提升100%。"
+            }
+          ],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {},
+          "gameText": "普攻·濯雨时和重击·濯雨时的伤害倍率提升100%。"
+        },
+        "6": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [
+            {
+              "category": "composite",
+              "name": "6链",
+              "mode": "fixed",
+              "value": 0,
+              "perStack": 0,
+              "maxStacks": 99,
+              "damageType": "",
+              "element": "",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "effects": [
+                {
+                  "zone": "generalCritDmg",
+                  "valueMode": "fixed",
+                  "value": 500,
+                  "segments": [
+                    {
+                      "upTo": null,
+                      "perStack": 0
+                    }
+                  ],
+                  "skillScope": "names",
+                  "skillNames": [
+                    "泠泠漱玉声·技能",
+                    "技能",
+                    "翠落画屏·醒春潮",
+                    "醒春潮"
+                  ],
+                  "librarySkillNames": [
+                    "泠泠漱玉声·技能",
+                    "翠落画屏·醒春潮"
+                  ],
+                  "catalogIds": [],
+                  "damageType": "变奏",
+                  "effectType": "",
+                  "element": "冷凝",
+                  "defenseKind": "",
+                  "minStacks": 0,
+                  "minResonance": 0,
+                  "onlyCharacterIds": [],
+                  "onlyCombatModes": [],
+                  "effectKey": ""
+                }
+              ],
+              "sourceTag": "characterTemplate",
+              "templateKey": "tpl_mrzaqjtq_kkoxp",
+              "gameText": "变奏技能·泠泠漱玉声和共鸣技能·醒春潮的暴击伤害提升500%。"
+            }
+          ],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {},
+          "gameText": "变奏技能·泠泠漱玉声和共鸣技能·醒春潮的暴击伤害提升500%。"
+        }
+      },
+      "combatModes": {}
+    }
+  ]
+}

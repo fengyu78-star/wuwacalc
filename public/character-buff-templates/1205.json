@@ -1,0 +1,500 @@
+{
+  "version": 1,
+  "kind": "shard",
+  "characterId": "1205",
+  "characterName": "长离",
+  "templates": [
+    {
+      "characterId": "1205",
+      "characterName": "长离",
+      "revision": 2,
+      "author": "",
+      "notes": "长离：0链分支攻击比12%、暴击率8%；固有1·离火热熔增伤叠层+5%/层；固有2拆为两个独立开关——热熔+20%与穿防+15%（无条件，作用于离火照丹心/焚身以火）、焰羽攻击+25%（独立勾选，作用于焚身以火）；全队【长离·延奏】热熔加深+20% + 共鸣解放加深+25%（对长离本人不生效）；1链共鸣技能类型增伤+10%；2链泛用暴击+25%；3链指定【离火照丹心】增伤+80%；4链全队泛用攻击+20%；5链指定【焚身以火】倍率提升+50%/泛用增伤+50%；6链共鸣技能穿防+40%/指定【离火照丹心】穿防+40%（均为固定）。",
+      "personalBuffs": [
+        {
+          "templateKey": "changli_innate2",
+          "category": "composite",
+          "name": "长离·固有2",
+          "mode": "fixed",
+          "value": 0,
+          "effects": [
+            {
+              "zone": "elementBonus",
+              "valueMode": "fixed",
+              "value": 20,
+              "segments": [
+                {
+                  "upTo": null,
+                  "perStack": 0
+                }
+              ],
+              "skillScope": "names",
+              "skillNames": [
+                "离火照丹心·技能",
+                "焚身以火",
+                "离火照丹心·技能",
+                "焚身以火"
+              ],
+              "librarySkillNames": [
+                "离火照丹心·技能",
+                "焚身以火"
+              ],
+              "catalogIds": [],
+              "damageType": "",
+              "effectType": "",
+              "element": "热熔",
+              "defenseKind": "",
+              "minStacks": 0,
+              "minResonance": 0,
+              "onlyCharacterIds": [],
+              "onlyCombatModes": [],
+              "effectKey": ""
+            },
+            {
+              "zone": "generalDefense",
+              "valueMode": "fixed",
+              "value": 15,
+              "segments": [
+                {
+                  "upTo": null,
+                  "perStack": 0
+                }
+              ],
+              "skillScope": "names",
+              "skillNames": [
+                "离火照丹心·技能",
+                "焚身以火",
+                "离火照丹心·技能",
+                "焚身以火"
+              ],
+              "librarySkillNames": [
+                "离火照丹心·技能",
+                "焚身以火"
+              ],
+              "catalogIds": [],
+              "damageType": "",
+              "effectType": "",
+              "element": "",
+              "defenseKind": "pen",
+              "minStacks": 0,
+              "minResonance": 0,
+              "onlyCharacterIds": [],
+              "onlyCombatModes": [],
+              "effectKey": ""
+            }
+          ],
+          "sourceTag": "characterTemplate",
+          "perStack": 0,
+          "maxStacks": 1,
+          "gameText": "施放重击焚身以火或共鸣解放离火照丹心时，长离的热熔伤害加成提升20%，攻击造成伤害时忽视目标15%防御。"
+        },
+        {
+          "templateKey": "changli_innate2_attack",
+          "category": "composite",
+          "name": "长离·固有2·焰羽攻击",
+          "mode": "fixed",
+          "value": 0,
+          "effects": [
+            {
+              "zone": "generalAttack",
+              "valueMode": "fixed",
+              "value": 25,
+              "segments": [
+                {
+                  "upTo": null,
+                  "perStack": 0
+                }
+              ],
+              "skillScope": "names",
+              "skillNames": [
+                "焚身以火",
+                "焚身以火"
+              ],
+              "librarySkillNames": [
+                "焚身以火"
+              ],
+              "catalogIds": [],
+              "damageType": "",
+              "effectType": "",
+              "element": "",
+              "defenseKind": "",
+              "minStacks": 0,
+              "minResonance": 0,
+              "onlyCharacterIds": [],
+              "onlyCombatModes": [],
+              "effectKey": ""
+            }
+          ],
+          "sourceTag": "characterTemplate",
+          "perStack": 0,
+          "maxStacks": 1,
+          "gameText": "离火照丹心\n对周围目标造成热熔伤害，获得4层【离火】，并进入焰羽状态。10秒内施放重击焚身以火时攻击提升25%，施放后效果提前结束。"
+        },
+        {
+          "templateKey": "changli_innate1_lihuo_element",
+          "category": "elementBonus",
+          "name": "长离·固有1·离火",
+          "mode": "stack",
+          "value": 0,
+          "perStack": 5,
+          "maxStacks": 4,
+          "element": "热熔",
+          "damageType": "",
+          "defenseKind": "",
+          "sourceTag": "characterTemplate",
+          "gameText": "施放普攻心眼·征或普攻心眼·冲时，每拥有1层【离火】，长离的热熔伤害加成提升5%。",
+          "clampStacks": true
+        }
+      ],
+      "teamBuffs": [
+        {
+          "templateKey": "changli_outro",
+          "category": "composite",
+          "name": "长离·延奏",
+          "mode": "fixed",
+          "excludeSource": true,
+          "effects": [
+            {
+              "zone": "elementDeep",
+              "valueMode": "fixed",
+              "value": 20,
+              "segments": [
+                {
+                  "upTo": null,
+                  "perStack": 0
+                }
+              ],
+              "skillScope": "all",
+              "skillNames": [],
+              "librarySkillNames": [],
+              "catalogIds": [],
+              "damageType": "",
+              "effectType": "",
+              "element": "热熔",
+              "defenseKind": "",
+              "minStacks": 0,
+              "minResonance": 0,
+              "onlyCharacterIds": [],
+              "onlyCombatModes": [],
+              "effectKey": ""
+            },
+            {
+              "zone": "typeDeep",
+              "valueMode": "fixed",
+              "value": 25,
+              "segments": [
+                {
+                  "upTo": null,
+                  "perStack": 0
+                }
+              ],
+              "skillScope": "all",
+              "skillNames": [],
+              "librarySkillNames": [],
+              "catalogIds": [],
+              "damageType": "共鸣解放",
+              "effectType": "",
+              "element": "",
+              "defenseKind": "",
+              "minStacks": 0,
+              "minResonance": 0,
+              "onlyCharacterIds": [],
+              "onlyCombatModes": [],
+              "effectKey": ""
+            }
+          ],
+          "sourceTag": "characterTemplate",
+          "value": 0,
+          "perStack": 0,
+          "maxStacks": 1,
+          "gameText": "下一位登场角色热熔伤害加深20%，共鸣解放伤害加深25%，效果持续10秒，若切换至其他角色则该效果提前结束。"
+        }
+      ],
+      "extraSkills": [],
+      "resonanceChains": {
+        "1": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [
+            {
+              "templateKey": "changli_c1_skill_type_bonus",
+              "category": "typeBonus",
+              "name": "长离·【1链】共鸣技能增伤",
+              "mode": "fixed",
+              "value": 10,
+              "damageType": "共鸣技能",
+              "element": "",
+              "defenseKind": "",
+              "sourceTag": "characterTemplate",
+              "perStack": 0,
+              "maxStacks": 5,
+              "gameText": "施放共鸣技能赫羽三相或重击焚身以火时，长离的抗打断能力提升，且造成的伤害提升10%。"
+            }
+          ],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {},
+          "gameText": "施放共鸣技能赫羽三相或重击焚身以火时，长离的抗打断能力提升，且造成的伤害提升10%。"
+        },
+        "2": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [
+            {
+              "templateKey": "changli_c2_general_crit_rate",
+              "category": "generalCritRate",
+              "name": "长离·【2链】泛用暴击",
+              "mode": "fixed",
+              "value": 25,
+              "damageType": "",
+              "element": "",
+              "defenseKind": "",
+              "sourceTag": "characterTemplate",
+              "perStack": 0,
+              "maxStacks": 5,
+              "gameText": "获得【离火】时，长离的暴击提升25%，持续8秒。"
+            }
+          ],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {},
+          "gameText": "获得【离火】时，长离的暴击提升25%，持续8秒。"
+        },
+        "3": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [
+            {
+              "templateKey": "changli_c3_lihuo_bonus",
+              "category": "composite",
+              "name": "长离·【3链】离火照丹心增伤",
+              "mode": "fixed",
+              "value": 0,
+              "effects": [
+                {
+                  "zone": "generalBonus",
+                  "valueMode": "fixed",
+                  "value": 80,
+                  "segments": [
+                    {
+                      "upTo": null,
+                      "perStack": 0
+                    }
+                  ],
+                  "skillScope": "names",
+                  "skillNames": [
+                    "离火照丹心·技能",
+                    "离火照丹心·技能"
+                  ],
+                  "librarySkillNames": [
+                    "离火照丹心·技能"
+                  ],
+                  "catalogIds": [],
+                  "damageType": "",
+                  "effectType": "",
+                  "element": "",
+                  "defenseKind": "",
+                  "minStacks": 0,
+                  "minResonance": 0,
+                  "onlyCharacterIds": [],
+                  "onlyCombatModes": [],
+                  "effectKey": ""
+                }
+              ],
+              "sourceTag": "characterTemplate",
+              "perStack": 0,
+              "maxStacks": 1,
+              "gameText": "共鸣解放离火照丹心造成的伤害提升80%。"
+            }
+          ],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {},
+          "gameText": "共鸣解放离火照丹心造成的伤害提升80%。"
+        },
+        "4": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [],
+          "teamBuffs": [
+            {
+              "templateKey": "changli_c4_team_general_attack",
+              "category": "generalAttack",
+              "name": "【4链·长离】",
+              "mode": "fixed",
+              "value": 20,
+              "damageType": "",
+              "element": "",
+              "defenseKind": "",
+              "sourceTag": "characterTemplate",
+              "perStack": 0,
+              "maxStacks": 5,
+              "gameText": "施放变奏技能后，队伍中的角色攻击提升20%，持续30秒。"
+            }
+          ],
+          "extraSkills": [],
+          "combatModes": {},
+          "gameText": "施放变奏技能后，队伍中的角色攻击提升20%，持续30秒。"
+        },
+        "5": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [
+            {
+              "templateKey": "changli_c5_fenshen",
+              "category": "composite",
+              "name": "【5链】",
+              "mode": "fixed",
+              "value": 0,
+              "effects": [
+                {
+                  "zone": "multBoost",
+                  "valueMode": "fixed",
+                  "value": 50,
+                  "segments": [
+                    {
+                      "upTo": null,
+                      "perStack": 0
+                    }
+                  ],
+                  "skillScope": "names",
+                  "skillNames": [
+                    "焚身以火",
+                    "焚身以火"
+                  ],
+                  "librarySkillNames": [
+                    "焚身以火"
+                  ],
+                  "catalogIds": [],
+                  "damageType": "",
+                  "effectType": "",
+                  "element": "",
+                  "defenseKind": "",
+                  "minStacks": 0,
+                  "minResonance": 0,
+                  "onlyCharacterIds": [],
+                  "onlyCombatModes": [],
+                  "effectKey": ""
+                },
+                {
+                  "zone": "generalBonus",
+                  "valueMode": "fixed",
+                  "value": 50,
+                  "segments": [
+                    {
+                      "upTo": null,
+                      "perStack": 0
+                    }
+                  ],
+                  "skillScope": "names",
+                  "skillNames": [
+                    "焚身以火",
+                    "焚身以火"
+                  ],
+                  "librarySkillNames": [
+                    "焚身以火"
+                  ],
+                  "catalogIds": [],
+                  "damageType": "",
+                  "effectType": "",
+                  "element": "",
+                  "defenseKind": "",
+                  "minStacks": 0,
+                  "minResonance": 0,
+                  "onlyCharacterIds": [],
+                  "onlyCombatModes": [],
+                  "effectKey": ""
+                }
+              ],
+              "sourceTag": "characterTemplate",
+              "perStack": 0,
+              "maxStacks": 1,
+              "gameText": "重击焚身以火倍率提升50%，造成的伤害提升50%。"
+            }
+          ],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {},
+          "gameText": "重击焚身以火倍率提升50%，造成的伤害提升50%。"
+        },
+        "6": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [
+            {
+              "templateKey": "changli_c6_defense_pen",
+              "category": "composite",
+              "name": "【6链】",
+              "mode": "fixed",
+              "value": 0,
+              "effects": [
+                {
+                  "zone": "typeDefense",
+                  "valueMode": "fixed",
+                  "value": 40,
+                  "segments": [
+                    {
+                      "upTo": null,
+                      "perStack": 0
+                    }
+                  ],
+                  "skillScope": "all",
+                  "skillNames": [],
+                  "librarySkillNames": [],
+                  "catalogIds": [],
+                  "damageType": "共鸣技能",
+                  "effectType": "",
+                  "element": "",
+                  "defenseKind": "pen",
+                  "minStacks": 0,
+                  "minResonance": 0,
+                  "onlyCharacterIds": [],
+                  "onlyCombatModes": [],
+                  "effectKey": ""
+                },
+                {
+                  "zone": "generalDefense",
+                  "valueMode": "fixed",
+                  "value": 40,
+                  "segments": [
+                    {
+                      "upTo": null,
+                      "perStack": 0
+                    }
+                  ],
+                  "skillScope": "names",
+                  "skillNames": [
+                    "离火照丹心·技能",
+                    "离火照丹心·技能"
+                  ],
+                  "librarySkillNames": [
+                    "离火照丹心·技能"
+                  ],
+                  "catalogIds": [],
+                  "damageType": "",
+                  "effectType": "",
+                  "element": "",
+                  "defenseKind": "pen",
+                  "minStacks": 0,
+                  "minResonance": 0,
+                  "onlyCharacterIds": [],
+                  "onlyCombatModes": [],
+                  "effectKey": ""
+                }
+              ],
+              "sourceTag": "characterTemplate",
+              "perStack": 0,
+              "maxStacks": 1,
+              "gameText": "共鸣技能赫羽三相、重击焚身以火和共鸣解放离火照丹心攻击造成伤害时额外忽视目标40%防御。"
+            }
+          ],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {},
+          "gameText": "共鸣技能赫羽三相、重击焚身以火和共鸣解放离火照丹心攻击造成伤害时额外忽视目标40%防御。"
+        }
+      },
+      "combatModes": {}
+    }
+  ]
+}

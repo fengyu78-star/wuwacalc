@@ -1,0 +1,38 @@
+/* Excel adapter for the workbench's card / filter / preview / confirm picker pattern.
+ * Catalog IDs remain authoritative; this module only changes existing form selects. */
+(()=>{'use strict';
+const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const elements={1:'冷凝',2:'热熔',3:'导电',4:'气动',5:'衍射',6:'湮灭'},types={1:'长刃',2:'迅刀',3:'佩枪',4:'臂铠',5:'音感仪'};
+function mount(form,catalog){
+ if(form.dataset.pickerReady)return;form.dataset.pickerReady='true';
+ const dialog=document.createElement('dialog');dialog.className='xp-dialog';dialog.setAttribute('aria-labelledby','xp-title');
+ dialog.innerHTML='<div class="xp-head"><div><h2 id="xp-title"></h2><p data-xp-hint></p></div><button type="button" data-xp-close aria-label="关闭选择">×</button></div><div class="xp-tools"><input type="search" data-xp-search aria-label="搜索角色或武器" placeholder="输入名称搜索" autocomplete="off"><div class="xp-filters" data-xp-filters role="group" aria-label="分类"></div><div class="xp-stars" role="group" aria-label="星级"><button type="button" data-xp-rank="all" aria-pressed="true">全部星级</button><button type="button" data-xp-rank="5" aria-pressed="false">五星</button><button type="button" data-xp-rank="4" aria-pressed="false">四星</button><button type="button" data-xp-rank="other" aria-pressed="false">其他</button></div></div><div class="xp-grid" data-xp-grid></div><div class="xp-foot"><span data-xp-selected role="status">请选择</span><button type="button" data-xp-confirm disabled>确认选择</button></div>';
+ document.body.appendChild(dialog);
+ const $=s=>dialog.querySelector(s),field=n=>form.elements.namedItem(n),pool=k=>k==='character'?catalog.characters:catalog.weapons;
+ let kind='character',slot=0,category='all',rank='all',preview='',origin=null,metadata=null,metadataReady=false;
+ const extras={character:new Map(),weapon:new Map()};
+ const meta=(k,id)=>extras[k].get(String(id))||{};
+ const image=(k,id)=>'assets/'+(k==='character'?'characters':'weapons')+'/'+encodeURIComponent(id)+'.webp';
+ function sync(){for(const button of form.querySelectorAll('[data-xp-open]')){const k=button.dataset.xpOpen,i=Number(button.dataset.slot),value=field(k+i).value,item=pool(k).find(x=>x.id===value);button.innerHTML=(item?'<img src="'+image(k,value)+'" alt="">':'<span class="xp-placeholder" aria-hidden="true">＋</span>')+'<span>'+esc(item?.name||(k==='character'?'选择角色':'选择武器'))+'</span><span class="xp-chevron" aria-hidden="true">›</span>';button.setAttribute('aria-label',(k==='character'?'角色':'武器')+' '+(i+1)+'：'+(item?.name||'未选择'));button.disabled=k==='weapon'&&!field('character'+i).value;}}
+ function options(){const allowed=new Set([...field(kind+slot).options].map(x=>x.value).filter(Boolean));return pool(kind).filter(x=>allowed.has(x.id));}
+ function render(){
+  const q=$('[data-xp-search]').value.trim().toLocaleLowerCase();
+  const items=options().filter(x=>{const m=meta(kind,x.id),r=Number(m.rank??m.rarity);return (category==='all'||String(kind==='character'?m.element:x.type)===category)&&(rank==='all'||(rank==='other'?![4,5].includes(r):r===Number(rank)))&&x.name.toLocaleLowerCase().includes(q)});
+  $('[data-xp-grid]').innerHTML=items.map(x=>{const m=meta(kind,x.id),r=Number(m.rank??m.rarity);return '<button type="button" class="xp-card '+(kind==='character'?'char-pick-card':'weapon-pick-card')+'" data-xp-id="'+esc(x.id)+'" aria-pressed="'+(preview===x.id)+'"><span class="xp-art"><img loading="lazy" src="'+image(kind,x.id)+'" alt="">'+(r?'<small>★'+r+'</small>':'')+'</span><strong>'+esc(x.name)+'</strong><span>'+esc(kind==='character'?(elements[m.element]||''):types[x.type]||'')+'</span></button>'}).join('')||'<p class="xp-empty">没有匹配的结果，请调整分类或搜索名称。</p>';
+  const chosen=options().find(x=>x.id===preview);$('[data-xp-selected]').textContent=chosen?'待确认：'+chosen.name:'请选择'+(kind==='character'?'角色':'武器');$('[data-xp-confirm]').disabled=!chosen;
+  dialog.querySelectorAll('[data-xp-category]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.xpCategory===category)));
+  dialog.querySelectorAll('[data-xp-rank]').forEach(b=>{b.setAttribute('aria-pressed',String(b.dataset.xpRank===rank));b.disabled=!metadataReady&&b.dataset.xpRank!=='all'});
+ }
+ function filters(){const labels=kind==='character'?elements:types;const available=kind==='character'?Object.keys(elements):[...new Set(options().map(x=>String(x.type)))];$('[data-xp-filters]').innerHTML='<button type="button" data-xp-category="all" aria-pressed="true">全部</button>'+available.map(id=>'<button type="button" data-xp-category="'+id+'" aria-pressed="false" '+(!metadataReady&&kind==='character'?'disabled':'')+'>'+labels[id]+'</button>').join('');}
+ async function enrich(){if(metadata)return metadata;metadata=Promise.all([fetch('character-skills.json',{cache:'no-cache'}),fetch('weapons.json',{cache:'no-cache'})]).then(async responses=>{if(responses.some(r=>!r.ok))throw Error();const [c,w]=await Promise.all(responses.map(r=>r.json()));if(!Array.isArray(c.characters)||!Array.isArray(w.weapons))throw Error();extras.character=new Map(c.characters.map(x=>[String(x.id),x]));extras.weapon=new Map(w.weapons.map(x=>[String(x.id),x]));metadataReady=true;}).catch(()=>{metadata=null;});return metadata;}
+ async function open(button){origin=button;kind=button.dataset.xpOpen;slot=Number(button.dataset.slot);category='all';rank='all';preview=field(kind+slot).value;$('[data-xp-search]').value='';$('#xp-title').textContent='选择'+(kind==='character'?'角色':'武器')+' · 队员 '+(slot+1);$('[data-xp-hint]').textContent=kind==='character'?'按属性、星级或名称查找':'仅显示当前角色可用武器，可按星级和名称查找';filters();render();dialog.showModal();$('[data-xp-search]').focus();await enrich();if(!dialog.open)return;filters();render();if(!metadataReady)$('[data-xp-hint]').textContent='分类信息暂未加载，可先按名称选择；重新打开可重试。';}
+ for(let i=0;i<3;i++)for(const k of ['character','weapon']){const select=field(k+i);select.classList.add('xp-native');select.tabIndex=-1;const button=document.createElement('button');button.type='button';button.className='xp-open';button.dataset.xpOpen=k;button.dataset.slot=i;select.insertAdjacentElement('afterend',button);button.addEventListener('click',()=>open(button));select.addEventListener('invalid',e=>{e.preventDefault();button.focus();document.getElementById('status').textContent='请完整选择三名角色及其武器。'});}
+ form.addEventListener('change',sync);form.addEventListener('reset',()=>requestAnimationFrame(sync));
+ $('[data-xp-search]').addEventListener('input',render);
+ dialog.addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;if(b.hasAttribute('data-xp-close'))dialog.close();if(b.dataset.xpCategory){category=b.dataset.xpCategory;render()}if(b.dataset.xpRank){rank=b.dataset.xpRank;render()}if(b.dataset.xpId){preview=b.dataset.xpId;dialog.querySelectorAll('[data-xp-id]').forEach(x=>x.setAttribute('aria-pressed',String(x.dataset.xpId===preview)));const chosen=options().find(x=>x.id===preview);$('[data-xp-selected]').textContent='待确认：'+chosen.name;$('[data-xp-confirm]').disabled=false;}if(b.hasAttribute('data-xp-confirm')){const select=field(kind+slot);if(!options().some(x=>x.id===preview))return;if(select.value!==preview){select.value=preview;select.dispatchEvent(new Event('change',{bubbles:true}));select.dispatchEvent(new Event('input',{bubbles:true}));}sync();dialog.close();}});
+ dialog.addEventListener('close',()=>origin?.focus());
+ document.addEventListener('error',e=>{if(e.target.tagName==='IMG'&&(dialog.contains(e.target)||e.target.closest('.xp-open')))e.target.style.visibility='hidden'},true);
+ sync();
+}
+window.__WC=window.__WC||{};window.__WC.ExcelPicker={mount};
+})();

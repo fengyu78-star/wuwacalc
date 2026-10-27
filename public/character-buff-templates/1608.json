@@ -1,0 +1,573 @@
+{
+  "version": 1,
+  "kind": "shard",
+  "characterId": "1608",
+  "characterName": "弗洛洛",
+  "templates": [
+    {
+      "characterId": "1608",
+      "characterName": "弗洛洛",
+      "revision": 2,
+      "author": "",
+      "notes": "弗洛洛：全队复合【弗洛洛·延奏】湮灭加深+20% + 重击加深+25%（固定；对弗洛洛本人不生效）。其余为协作填写。",
+      "personalBuffs": [
+        {
+          "category": "composite",
+          "name": "余响",
+          "mode": "stack",
+          "value": 0,
+          "perStack": 0,
+          "maxStacks": 124,
+          "damageType": "",
+          "element": "",
+          "defenseKind": "",
+          "convergenceVuln": "",
+          "effects": [
+            {
+              "zone": "generalCritDmg",
+              "valueMode": "stack",
+              "value": 0,
+              "segments": [
+                {
+                  "upTo": 24,
+                  "perStack": 2.5
+                },
+                {
+                  "upTo": 124,
+                  "perStack": 1
+                }
+              ],
+              "skillScope": "all",
+              "skillNames": [],
+              "librarySkillNames": [],
+              "catalogIds": [],
+              "damageType": "",
+              "effectType": "",
+              "element": "",
+              "defenseKind": "",
+              "minStacks": 0,
+              "minResonance": 0,
+              "onlyCharacterIds": [],
+              "onlyCombatModes": [],
+              "effectKey": ""
+            },
+            {
+              "zone": "multAdd",
+              "valueMode": "stack",
+              "value": 0,
+              "segments": [
+                {
+                  "upTo": 24,
+                  "perStack": 82.55
+                }
+              ],
+              "skillScope": "names",
+              "skillNames": [
+                "生与死的乐章·谱曲终末",
+                "谱曲终末"
+              ],
+              "librarySkillNames": [
+                "生与死的乐章·谱曲终末"
+              ],
+              "catalogIds": [],
+              "damageType": "共鸣技能",
+              "effectType": "",
+              "element": "湮灭",
+              "defenseKind": "",
+              "minStacks": 0,
+              "minResonance": 0,
+              "onlyCharacterIds": [],
+              "onlyCombatModes": [],
+              "effectKey": ""
+            }
+          ],
+          "sourceTag": "characterTemplate",
+          "templateKey": "tpl_ms2abhvo_qrh3g",
+          "gameText": "进入战斗状态获得10层余响，退出战斗状态4秒内无法触发该效果。\n每拥有1层余响，暴击伤害提升2.5%。\n余响层数达上限时，再次获得余响，每溢出1层余响，弗洛洛暴击伤害提升1%，最多通过该方式提升100%，余响层数清除时，同时清除该方式提供的暴击伤害提升效果。\n施放谱曲终末，消耗耐力，停滞并牵引附近目标，造成湮灭伤害，本次伤害为共鸣技能伤害。\n每层余响可使本次伤害倍率额外增加。",
+          "clampStacks": true
+        },
+        {
+          "category": "composite",
+          "name": "后台·指挥状态",
+          "mode": "fixed",
+          "value": 0,
+          "perStack": 0,
+          "maxStacks": 99,
+          "damageType": "",
+          "element": "",
+          "defenseKind": "",
+          "convergenceVuln": "",
+          "effects": [
+            {
+              "zone": "generalAttack",
+              "valueMode": "fixed",
+              "value": 120,
+              "segments": [
+                {
+                  "upTo": null,
+                  "perStack": 0
+                }
+              ],
+              "skillScope": "names",
+              "skillNames": [
+                "往日深渊的圆舞曲·普攻·赫卡忒第一段",
+                "普攻·赫卡忒第一段",
+                "往日深渊的圆舞曲·普攻·赫卡忒第二段",
+                "普攻·赫卡忒第二段",
+                "往日深渊的圆舞曲·强化攻击·弦乐·赫卡忒",
+                "强化攻击·弦乐·赫卡忒",
+                "往日深渊的圆舞曲·强化攻击·管乐·赫卡忒",
+                "强化攻击·管乐·赫卡忒",
+                "往日深渊的圆舞曲·强化攻击·彩乐·赫卡忒",
+                "强化攻击·彩乐·赫卡忒"
+              ],
+              "librarySkillNames": [
+                "往日深渊的圆舞曲·普攻·赫卡忒第一段",
+                "往日深渊的圆舞曲·普攻·赫卡忒第二段",
+                "往日深渊的圆舞曲·强化攻击·弦乐·赫卡忒",
+                "往日深渊的圆舞曲·强化攻击·管乐·赫卡忒",
+                "往日深渊的圆舞曲·强化攻击·彩乐·赫卡忒"
+              ],
+              "catalogIds": [],
+              "damageType": "声骸",
+              "effectType": "",
+              "element": "湮灭",
+              "defenseKind": "",
+              "minStacks": 0,
+              "minResonance": 0,
+              "onlyCharacterIds": [],
+              "onlyCombatModes": [],
+              "effectKey": ""
+            }
+          ],
+          "sourceTag": "characterTemplate",
+          "templateKey": "tpl_ms2acky1_bp9dl",
+          "gameText": "往日深渊的圆舞曲\n弗洛洛共鸣能量上限为0，往日深渊的圆舞曲不消耗共鸣能量。\n处于【定音】状态时，解锁往日深渊的圆舞曲。\n施放后退出【定音】状态，进入指挥状态，持续24秒。\n\n指挥状态\n攻击提升120%。\n弗洛洛漂浮于空中，指挥赫卡忒进行战斗，赫卡忒将继承弗洛洛的属性。赫卡忒造成的伤害不会清除目标的迷梦状态。"
+        }
+      ],
+      "teamBuffs": [
+        {
+          "templateKey": "floro_outro",
+          "category": "composite",
+          "name": "弗洛洛·延奏",
+          "mode": "fixed",
+          "value": 0,
+          "perStack": 0,
+          "maxStacks": 99,
+          "damageType": "",
+          "element": "",
+          "defenseKind": "",
+          "excludeSource": true,
+          "sourceTag": "characterTemplate",
+          "effects": [
+            {
+              "zone": "elementDeep",
+              "valueMode": "fixed",
+              "value": 20,
+              "segments": [
+                {
+                  "upTo": null,
+                  "perStack": 0
+                }
+              ],
+              "skillScope": "all",
+              "skillNames": [],
+              "librarySkillNames": [],
+              "catalogIds": [],
+              "damageType": "",
+              "effectType": "",
+              "element": "湮灭",
+              "defenseKind": "",
+              "minStacks": 0,
+              "minResonance": 0,
+              "onlyCharacterIds": [],
+              "onlyCombatModes": [],
+              "effectKey": ""
+            },
+            {
+              "zone": "typeDeep",
+              "valueMode": "fixed",
+              "value": 25,
+              "segments": [
+                {
+                  "upTo": null,
+                  "perStack": 0
+                }
+              ],
+              "skillScope": "all",
+              "skillNames": [],
+              "librarySkillNames": [],
+              "catalogIds": [],
+              "damageType": "重击",
+              "effectType": "",
+              "element": "",
+              "defenseKind": "",
+              "minStacks": 0,
+              "minResonance": 0,
+              "onlyCharacterIds": [],
+              "onlyCombatModes": [],
+              "effectKey": ""
+            }
+          ],
+          "gameText": "下一位登场角色湮灭伤害加深20%，重击伤害加深25%，效果持续14秒，若切换至其他角色则该效果提前结束。"
+        }
+      ],
+      "extraSkills": [],
+      "resonanceChains": {
+        "1": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [
+            {
+              "category": "composite",
+              "name": "1链",
+              "mode": "fixed",
+              "value": 0,
+              "perStack": 0,
+              "maxStacks": 99,
+              "damageType": "",
+              "element": "",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "effects": [
+                {
+                  "zone": "multBoost",
+                  "valueMode": "fixed",
+                  "value": 80,
+                  "segments": [
+                    {
+                      "upTo": null,
+                      "perStack": 0
+                    }
+                  ],
+                  "skillScope": "names",
+                  "skillNames": [
+                    "新世界狂想曲·亡与死的乐章",
+                    "亡与死的乐章",
+                    "新世界狂想曲·永不消逝的梦呓",
+                    "永不消逝的梦呓"
+                  ],
+                  "librarySkillNames": [
+                    "新世界狂想曲·亡与死的乐章",
+                    "新世界狂想曲·永不消逝的梦呓"
+                  ],
+                  "catalogIds": [],
+                  "damageType": "共鸣技能",
+                  "effectType": "",
+                  "element": "湮灭",
+                  "defenseKind": "",
+                  "minStacks": 0,
+                  "minResonance": 0,
+                  "onlyCharacterIds": [],
+                  "onlyCombatModes": [],
+                  "effectKey": ""
+                }
+              ],
+              "sourceTag": "characterTemplate",
+              "templateKey": "tpl_ms2ahdt0_7v3gj",
+              "gameText": "亡与死的乐章伤害倍率提升80%。\n永不消逝的梦呓伤害倍率提升80%。\n弗洛洛不处于指挥状态且不处于战斗状态4秒后，若【乐声】少于2枚，获得【乐声·彩乐】，直至【乐声】不少于2枚。"
+            }
+          ],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {},
+          "gameText": "亡与死的乐章伤害倍率提升80%。\n永不消逝的梦呓伤害倍率提升80%。\n弗洛洛不处于指挥状态且不处于战斗状态4秒后，若【乐声】少于2枚，获得【乐声·彩乐】，直至【乐声】不少于2枚。"
+        },
+        "2": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [
+            {
+              "category": "composite",
+              "name": "2链",
+              "mode": "fixed",
+              "value": 0,
+              "perStack": 0,
+              "maxStacks": 99,
+              "damageType": "",
+              "element": "",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "effects": [
+                {
+                  "zone": "multBoost",
+                  "valueMode": "fixed",
+                  "value": 75,
+                  "segments": [
+                    {
+                      "upTo": null,
+                      "perStack": 0
+                    }
+                  ],
+                  "skillScope": "names",
+                  "skillNames": [
+                    "生与死的乐章·谱曲终末",
+                    "谱曲终末"
+                  ],
+                  "librarySkillNames": [
+                    "生与死的乐章·谱曲终末"
+                  ],
+                  "catalogIds": [],
+                  "damageType": "共鸣技能",
+                  "effectType": "",
+                  "element": "湮灭",
+                  "defenseKind": "",
+                  "minStacks": 0,
+                  "minResonance": 0,
+                  "onlyCharacterIds": [],
+                  "onlyCombatModes": [],
+                  "effectKey": ""
+                }
+              ],
+              "sourceTag": "characterTemplate",
+              "templateKey": "tpl_ms2ahuwu_8uonj",
+              "gameText": "谱曲终末伤害倍率提升75%，余响对谱曲终末的倍率增加效果提升75%。\n施放谱曲终末时可获得14层余响。"
+            }
+          ],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {},
+          "gameText": "谱曲终末伤害倍率提升75%，余响对谱曲终末的倍率增加效果提升75%。\n施放谱曲终末时可获得14层余响。"
+        },
+        "3": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [
+            {
+              "category": "typeDeep",
+              "name": "3链",
+              "mode": "fixed",
+              "value": 80,
+              "perStack": 0,
+              "maxStacks": 5,
+              "damageType": "声骸",
+              "element": "",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "sourceTag": "characterTemplate",
+              "templateKey": "tpl_ms2aib22_wcu2l",
+              "gameText": "声骸技能伤害加深80%。\n施放谱曲终末期间，所有【乐声】将依次转化为【乐声·彩乐】。\n被强化攻击·彩乐·赫卡忒命中的目标，攻击降低20%，持续15秒。"
+            }
+          ],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {},
+          "gameText": "声骸技能伤害加深80%。\n施放谱曲终末期间，所有【乐声】将依次转化为【乐声·彩乐】。\n被强化攻击·彩乐·赫卡忒命中的目标，攻击降低20%，持续15秒。"
+        },
+        "4": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [],
+          "teamBuffs": [
+            {
+              "category": "generalBonus",
+              "name": "弗洛洛·4链",
+              "mode": "fixed",
+              "value": 20,
+              "perStack": 0,
+              "maxStacks": 5,
+              "damageType": "",
+              "element": "",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "sourceTag": "characterTemplate",
+              "templateKey": "tpl_ms2air4j_9fibs",
+              "gameText": "施放声骸技能时，队伍中的角色全属性伤害加成提升20%，持续30秒。"
+            }
+          ],
+          "extraSkills": [],
+          "combatModes": {},
+          "gameText": "施放声骸技能时，队伍中的角色全属性伤害加成提升20%，持续30秒。"
+        },
+        "5": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {},
+          "gameText": "进入指挥状态时，生成领域停滞周围的目标，领域持续4秒。结束指挥状态或切换至其他角色时，将提前清除停滞效果。\n处于指挥状态时，受到伤害降低30%。"
+        },
+        "6": {
+          "enabledByDefault": false,
+          "notes": "细则待定",
+          "personalBuffs": [
+            {
+              "category": "composite",
+              "name": "6链",
+              "mode": "fixed",
+              "value": 0,
+              "perStack": 0,
+              "maxStacks": 99,
+              "damageType": "",
+              "element": "",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "effects": [
+                {
+                  "zone": "multBoost",
+                  "valueMode": "fixed",
+                  "value": 24,
+                  "segments": [
+                    {
+                      "upTo": null,
+                      "perStack": 0
+                    }
+                  ],
+                  "skillScope": "names",
+                  "skillNames": [
+                    "往日深渊的圆舞曲·强化攻击·弦乐·赫卡忒",
+                    "强化攻击·弦乐·赫卡忒",
+                    "往日深渊的圆舞曲·强化攻击·管乐·赫卡忒",
+                    "强化攻击·管乐·赫卡忒",
+                    "往日深渊的圆舞曲·强化攻击·彩乐·赫卡忒",
+                    "强化攻击·彩乐·赫卡忒"
+                  ],
+                  "librarySkillNames": [
+                    "往日深渊的圆舞曲·强化攻击·弦乐·赫卡忒",
+                    "往日深渊的圆舞曲·强化攻击·管乐·赫卡忒",
+                    "往日深渊的圆舞曲·强化攻击·彩乐·赫卡忒"
+                  ],
+                  "catalogIds": [],
+                  "damageType": "声骸",
+                  "effectType": "",
+                  "element": "湮灭",
+                  "defenseKind": "",
+                  "minStacks": 0,
+                  "minResonance": 0,
+                  "onlyCharacterIds": [],
+                  "onlyCombatModes": [],
+                  "effectKey": ""
+                }
+              ],
+              "sourceTag": "characterTemplate",
+              "templateKey": "tpl_ms2aj427_r5vj3",
+              "gameText": "强化攻击·赫卡忒伤害倍率提升24%。\n\n施放亡与死的乐章、永不消逝的梦呓期间，将召唤赫卡忒施放1次重世幻象·赫卡忒，造成弗洛洛攻击216.42%的湮灭伤害，命中目标时获得8层余响。本次伤害为声骸技能伤害。\n\n处于指挥状态时，若弗洛洛不为队伍中登场角色，目标受到赫卡忒和弗洛洛的伤害提升40%。\n处于指挥状态时，若弗洛洛为队伍中登场角色，湮灭伤害加成提升60%。"
+            },
+            {
+              "category": "composite",
+              "name": "6链·处于后台时",
+              "mode": "fixed",
+              "value": 0,
+              "perStack": 0,
+              "maxStacks": 99,
+              "damageType": "",
+              "element": "",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "effects": [
+                {
+                  "zone": "generalVulnerability",
+                  "valueMode": "fixed",
+                  "value": 40,
+                  "segments": [
+                    {
+                      "upTo": null,
+                      "perStack": 0
+                    }
+                  ],
+                  "skillScope": "names",
+                  "skillNames": [
+                    "往日深渊的圆舞曲·普攻·赫卡忒第一段",
+                    "普攻·赫卡忒第一段",
+                    "往日深渊的圆舞曲·普攻·赫卡忒第二段",
+                    "普攻·赫卡忒第二段",
+                    "往日深渊的圆舞曲·强化攻击·弦乐·赫卡忒",
+                    "强化攻击·弦乐·赫卡忒",
+                    "往日深渊的圆舞曲·强化攻击·管乐·赫卡忒",
+                    "强化攻击·管乐·赫卡忒",
+                    "往日深渊的圆舞曲·强化攻击·彩乐·赫卡忒",
+                    "强化攻击·彩乐·赫卡忒"
+                  ],
+                  "librarySkillNames": [
+                    "往日深渊的圆舞曲·普攻·赫卡忒第一段",
+                    "往日深渊的圆舞曲·普攻·赫卡忒第二段",
+                    "往日深渊的圆舞曲·强化攻击·弦乐·赫卡忒",
+                    "往日深渊的圆舞曲·强化攻击·管乐·赫卡忒",
+                    "往日深渊的圆舞曲·强化攻击·彩乐·赫卡忒"
+                  ],
+                  "catalogIds": [],
+                  "damageType": "声骸",
+                  "effectType": "",
+                  "element": "湮灭",
+                  "defenseKind": "",
+                  "minStacks": 0,
+                  "minResonance": 0,
+                  "onlyCharacterIds": [],
+                  "onlyCombatModes": [],
+                  "effectKey": ""
+                }
+              ],
+              "sourceTag": "characterTemplate",
+              "templateKey": "tpl_ms2ajvck_xxetd",
+              "gameText": "强化攻击·赫卡忒伤害倍率提升24%。\n\n施放亡与死的乐章、永不消逝的梦呓期间，将召唤赫卡忒施放1次重世幻象·赫卡忒，造成弗洛洛攻击216.42%的湮灭伤害，命中目标时获得8层余响。本次伤害为声骸技能伤害。\n\n处于指挥状态时，若弗洛洛不为队伍中登场角色，目标受到赫卡忒和弗洛洛的伤害提升40%。\n处于指挥状态时，若弗洛洛为队伍中登场角色，湮灭伤害加成提升60%。"
+            },
+            {
+              "category": "composite",
+              "name": "6链·处于前台时",
+              "mode": "fixed",
+              "value": 0,
+              "perStack": 0,
+              "maxStacks": 99,
+              "damageType": "",
+              "element": "",
+              "defenseKind": "",
+              "convergenceVuln": "",
+              "effects": [
+                {
+                  "zone": "elementBonus",
+                  "valueMode": "fixed",
+                  "value": 60,
+                  "segments": [
+                    {
+                      "upTo": null,
+                      "perStack": 0
+                    }
+                  ],
+                  "skillScope": "names",
+                  "skillNames": [
+                    "往日深渊的圆舞曲·普攻·赫卡忒第一段",
+                    "普攻·赫卡忒第一段",
+                    "往日深渊的圆舞曲·普攻·赫卡忒第二段",
+                    "普攻·赫卡忒第二段",
+                    "往日深渊的圆舞曲·强化攻击·弦乐·赫卡忒",
+                    "强化攻击·弦乐·赫卡忒",
+                    "往日深渊的圆舞曲·强化攻击·管乐·赫卡忒",
+                    "强化攻击·管乐·赫卡忒",
+                    "往日深渊的圆舞曲·强化攻击·彩乐·赫卡忒",
+                    "强化攻击·彩乐·赫卡忒"
+                  ],
+                  "librarySkillNames": [
+                    "往日深渊的圆舞曲·普攻·赫卡忒第一段",
+                    "往日深渊的圆舞曲·普攻·赫卡忒第二段",
+                    "往日深渊的圆舞曲·强化攻击·弦乐·赫卡忒",
+                    "往日深渊的圆舞曲·强化攻击·管乐·赫卡忒",
+                    "往日深渊的圆舞曲·强化攻击·彩乐·赫卡忒"
+                  ],
+                  "catalogIds": [],
+                  "damageType": "声骸",
+                  "effectType": "",
+                  "element": "湮灭",
+                  "defenseKind": "",
+                  "minStacks": 0,
+                  "minResonance": 0,
+                  "onlyCharacterIds": [],
+                  "onlyCombatModes": [],
+                  "effectKey": ""
+                }
+              ],
+              "sourceTag": "characterTemplate",
+              "templateKey": "tpl_ms2alku7_sscto",
+              "gameText": "强化攻击·赫卡忒伤害倍率提升24%。\n\n施放亡与死的乐章、永不消逝的梦呓期间，将召唤赫卡忒施放1次重世幻象·赫卡忒，造成弗洛洛攻击216.42%的湮灭伤害，命中目标时获得8层余响。本次伤害为声骸技能伤害。\n\n处于指挥状态时，若弗洛洛不为队伍中登场角色，目标受到赫卡忒和弗洛洛的伤害提升40%。\n处于指挥状态时，若弗洛洛为队伍中登场角色，湮灭伤害加成提升60%。"
+            }
+          ],
+          "teamBuffs": [],
+          "extraSkills": [],
+          "combatModes": {},
+          "gameText": "强化攻击·赫卡忒伤害倍率提升24%。\n\n施放亡与死的乐章、永不消逝的梦呓期间，将召唤赫卡忒施放1次重世幻象·赫卡忒，造成弗洛洛攻击216.42%的湮灭伤害，命中目标时获得8层余响。本次伤害为声骸技能伤害。\n\n处于指挥状态时，若弗洛洛不为队伍中登场角色，目标受到赫卡忒和弗洛洛的伤害提升40%。\n处于指挥状态时，若弗洛洛为队伍中登场角色，湮灭伤害加成提升60%。"
+        }
+      },
+      "combatModes": {}
+    }
+  ]
+}

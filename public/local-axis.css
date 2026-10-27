@@ -1,0 +1,146 @@
+
+/* Desktop axis workspace: opaque editing surfaces and clear control hierarchy. */
+.team-axis-board.panel {background:#0c131e!important;border:1px solid #9cb8d42e!important;border-radius:12px!important;box-shadow:0 12px 32px #0004!important;color:#cbd9e7;overflow:visible!important;font-family:'Microsoft YaHei UI',sans-serif;}
+.team-axis-board .axis-board-toolbar {display:flex;flex-wrap:wrap;gap:10px;padding:14px 16px!important;background:linear-gradient(115deg,#192839,#141b2a)!important;border-bottom:1px solid #b4c9df26;}
+.team-axis-board .toolbar-left,.team-axis-board .toolbar-right {display:flex;align-items:center;gap:7px;flex-wrap:wrap;}
+.team-axis-board .toolbar-right {margin-left:auto;}
+.team-axis-board .toolbar-title {font-size:18px!important;font-weight:700;color:#e5edf5;margin-right:12px;}
+.team-axis-board :is(.toolbar-btn,.btn) {font:12px/1.4 'Microsoft YaHei UI',sans-serif!important;padding:7px 10px!important;border:1px solid #9fbad536!important;border-radius:5px!important;background:#9ab9dc09!important;color:#bdd0e3!important;box-shadow:none!important;}
+.team-axis-board :is(.toolbar-btn,.btn):hover:not(:disabled) {background:#a5c8ea18!important;border-color:#afcfee80!important;color:#eef6ff!important;}
+.team-axis-board :is(.toolbar-btn,.btn):disabled {opacity:.35;}
+.team-axis-board .toolbar-btn.primary {background:#d3bb78!important;color:#171d26!important;border-color:#dbc88e!important;}
+.team-axis-board .axis-cycle-bar {margin:0!important;padding:10px 16px!important;background:#101a27;border-bottom:1px solid #9cb8d41b;min-height:38px;box-sizing:border-box;}
+.team-axis-board .axis-lanes-panel {background:#0c131e!important;padding:14px!important;}
+.team-axis-board .axis-lanes {gap:10px!important;}
+.team-axis-board .axis-lane {background:#121d2a!important;border:1px solid #96b1cd24!important;border-radius:8px!important;padding:7px!important;box-shadow:none!important;}
+.team-axis-board .axis-lane.is-active {border-color:#d1b57085!important;box-shadow:inset 3px 0 #d1b570!important;background:#172333!important;}
+.team-axis-board .axis-lane-avatar {border:1px solid #9db6ce38!important;border-radius:7px!important;background:#0e1825!important;box-shadow:none!important;}
+.team-axis-board .axis-lane-avatar.active {border-color:#cdb77c8c!important;}
+.team-axis-board .axis-lane-track {background-color:#111b28!important;background-image:linear-gradient(#9ab7d209 1px,transparent 1px),linear-gradient(90deg,#9ab7d209 1px,transparent 1px)!important;background-size:24px 24px!important;border:1px solid #9db8d31c!important;border-radius:6px!important;}
+.team-axis-board .axis-skill-chip {background:linear-gradient(150deg,#293c50,#1b293b)!important;color:#e0ebf5!important;border:1px solid #9fc0dc55!important;border-left:3px solid #83adc9!important;border-radius:5px!important;box-shadow:0 2px 5px #0003!important;}
+.team-axis-board .axis-skill-chip.is-special {border-left-color:#b49ade!important;}
+.team-axis-board .axis-skill-chip:is(.is-batch-selected,.is-merge-selected) {border-color:#e1c373!important;background:#49422b!important;}
+.team-axis-board .axis-skill-label {font-size:13px!important;font-weight:500!important;}
+.team-axis-board .panel-divider {background:#162335!important;border-block:1px solid #9cb9d422;height:9px!important;cursor:row-resize;}
+.team-axis-board .panel-divider:hover {background:#30465e!important;}
+.team-axis-board .axis-palette-panel {background:#101925!important;}
+.team-axis-board .axis-palette-title {display:flex;flex-wrap:wrap;align-items:center;gap:8px;padding:13px 16px!important;background:#182434!important;border-bottom:1px solid #a3bdd426;color:#deebf6;font-size:15px;font-weight:600;}
+.team-axis-board .axis-palette-strip {padding:12px 16px!important;background:#101925!important;border:0!important;}
+.team-axis-board .skill-card {background:linear-gradient(145deg,#203045,#182333)!important;border:1px solid #98b8d43d!important;border-radius:7px!important;box-shadow:inset 0 1px #d9ebff08!important;padding:10px 12px!important;min-width:155px;}
+.team-axis-board .skill-card:hover {border-color:#9dcce9a3!important;background:#263b50!important;}
+.team-axis-board .skill-card-name {font-size:13px!important;line-height:1.45!important;color:#dbe8f3!important;white-space:normal!important;}
+.team-axis-board .hint {color:#8198ae!important;font-size:12px!important;}
+.local-axis-more {position:relative;}
+.local-axis-more summary {list-style:none;cursor:pointer;padding:7px 10px;border:1px solid #9fbad536;border-radius:5px;font-size:12px;color:#bdd0e3;}
+.local-axis-more[open]>div {position:absolute;right:0;top:36px;z-index:40;padding:8px;background:#142132;border:1px solid #93adca55;border-radius:7px;min-width:160px;box-shadow:0 10px 24px #0008;}
+.local-axis-more [data-axis-clear-active] {width:100%;color:#e9aba8!important;}
+.local-axis-help {font-size:11px;color:#8ba4bc;margin-left:auto;}
+
+.team-axis-board .axis-board-toolbar{align-items:center;}
+.team-axis-board .toolbar-left{flex:1 1 auto;}
+.team-axis-board .toolbar-right{justify-content:flex-end;}
+
+/* Second pass: task-based toolbar and a category rail beside the skill shelf. */
+.team-axis-board .axis-board-toolbar {display:grid!important;grid-template-columns:minmax(0,1fr) auto;align-items:start;padding:16px 18px 0!important;gap:8px 14px;}
+.team-axis-board .toolbar-left {display:flex;flex-wrap:wrap;gap:8px;width:100%;min-width:0;}
+.team-axis-board .toolbar-title {flex:0 0 100%;font-size:22px!important;margin:0 0 4px!important;letter-spacing:.05em;}
+.team-axis-board .toolbar-right {padding-top:42px;}
+.local-axis-advanced {display:flex;align-items:center;gap:8px;flex:0 0 100%;padding:12px 0;margin-top:5px;border-top:1px solid #9cb8d425;}
+.local-axis-advanced>span {font-size:11px;letter-spacing:.08em;color:#849eb8;margin-right:7px;}
+.team-axis-board .axis-cycle-bar {display:flex;align-items:center;gap:12px;padding:9px 18px!important;}
+.team-axis-board .axis-skill-library {display:grid!important;grid-template-columns:138px minmax(0,1fr);gap:12px 16px;align-items:start;}
+.team-axis-board .skill-library-toolbar {grid-column:1/-1;display:flex;justify-content:flex-start!important;margin:0!important;padding:0!important;}
+.team-axis-board .skill-type-tabs {grid-column:1;display:flex!important;flex-direction:column;gap:5px;padding:0 12px 0 0!important;margin:0!important;border:0!important;border-right:1px solid #9cb8d42b!important;}
+.team-axis-board .skill-type-tabs button {width:100%;text-align:left;padding:9px 10px!important;font-size:13px!important;border-radius:5px!important;}
+.team-axis-board .skill-type-tabs button.active {background:#d2b8741a!important;color:#edd597!important;box-shadow:inset 2px 0 #d2b874;}
+.team-axis-board .skill-grid {grid-column:2;display:grid!important;grid-template-columns:repeat(auto-fill,minmax(205px,1fr));gap:10px!important;align-content:start;}
+.team-axis-board .skill-card {width:100%;box-sizing:border-box;min-height:66px;display:flex;align-items:center;justify-content:space-between;gap:10px;padding:12px 14px!important;border-left:2px solid #7c9bbc!important;}
+.team-axis-board .skill-card-name {flex:1;min-width:0;font-size:14px!important;}
+.team-axis-board .axis-skill-library-hint {grid-column:2;margin:0!important;padding:8px 0!important;font-size:12px;color:#8ca5bc;}
+.team-axis-board .axis-palette-title {padding:14px 18px!important;gap:10px;border-top:1px solid #afcbea26;}
+.team-axis-board .axis-palette-title::before {content:'';width:3px;height:18px;background:#91b3d5;border-radius:2px;}
+.team-axis-board .axis-palette-strip {padding:14px 18px 18px!important;}
+.team-axis-board .axis-lanes-panel {padding:16px 18px!important;}
+
+.team-axis-board .toolbar-title{flex:0 0 auto;margin:0 14px 0 0!important;font-size:20px!important;font-family:"Microsoft YaHei UI",sans-serif!important;}
+.team-axis-board .toolbar-right{padding-top:0;}
+
+/* Material pass: cool metal, restrained iridescence and precise skill tiles. */
+.team-axis-board.panel {border-color:#91aac33d!important;box-shadow:0 16px 40px #0005,inset 0 1px #bddaff14!important;}
+.team-axis-board .axis-board-toolbar {background:radial-gradient(ellipse at 5% 0,#347d9133,transparent 60%),radial-gradient(ellipse at 95% 0,#72508b26,transparent 60%),linear-gradient(120deg,#172333,#111925)!important;}
+.team-axis-board .toolbar-title {color:#e8edf2;letter-spacing:.09em;border-left:3px solid #d1bb80;padding-left:10px;}
+.team-axis-board .local-axis-advanced {border-top-color:#acc8e21c;}
+.team-axis-board .axis-lanes-panel {background:radial-gradient(ellipse at 100% 100%,#212b4129,transparent 60%),#0b121c!important;}
+.team-axis-board .axis-lane {--lane-accent:#83b8ce;position:relative;border-color:#a4bed330!important;background:linear-gradient(100deg,#192839,#121b28)!important;}
+.team-axis-board .axis-lane[data-axis-lane="1"] {--lane-accent:#a99ac9;}
+.team-axis-board .axis-lane[data-axis-lane="2"] {--lane-accent:#7db6ab;}
+.team-axis-board .axis-lane.is-active {background:linear-gradient(100deg,#29313b,#162131 55%)!important;border-color:#d3bb776b!important;box-shadow:inset 3px 0 #d3bb77,0 5px 14px #0003!important;}
+.team-axis-board .axis-lane-avatar {box-shadow:0 4px 10px #0004!important;border-color:var(--lane-accent)!important;}
+.team-axis-board .axis-lane-track {background-image:linear-gradient(#a4c4de06 1px,transparent 1px),linear-gradient(90deg,#a4c4de0a 1px,transparent 1px),linear-gradient(180deg,#1d2b3e66,#0c162255)!important;}
+.team-axis-board .axis-skill-chip {border-left-color:var(--lane-accent)!important;background:linear-gradient(155deg,#30475c,#1a293a)!important;box-shadow:inset 0 1px #d6edff17,0 3px 6px #0004!important;}
+.team-axis-board .axis-skill-chip:hover {border-top-color:#cce6fa!important;}
+.team-axis-board .axis-palette-title {background:linear-gradient(100deg,#1d2d40,#141e2c)!important;letter-spacing:.03em;}
+.team-axis-board .axis-palette-strip {background:radial-gradient(ellipse at 100% 0,#53678e13,transparent 60%),repeating-linear-gradient(125deg,transparent 0 68px,#a7c5df04 69px 70px,transparent 71px 138px),#101925!important;}
+.team-axis-board .skill-type-tabs button {border:1px solid transparent!important;color:#95adc3;transition:background .15s,border-color .15s;}
+.team-axis-board .skill-type-tabs button:hover {background:#acc8e410!important;}
+.team-axis-board .skill-type-tabs button.active {background:linear-gradient(90deg,#d2b87424,#d2b87406)!important;border-color:#d2b87438!important;}
+.team-axis-board .skill-card {position:relative;overflow:hidden;isolation:isolate;background:radial-gradient(ellipse at 100% 0,#719dcc1b,transparent 70%),linear-gradient(135deg,#223247,#152233)!important;border:1px solid #9abbd342!important;border-left:2px solid #91b4d2!important;border-radius:8px!important;box-shadow:inset 0 1px #e0efff12,0 4px 9px #0002!important;transition:background .15s,border-color .15s,box-shadow .15s;}
+.team-axis-board .skill-card::before {content:'';position:absolute;right:5px;bottom:5px;width:28px;height:10px;background:repeating-linear-gradient(115deg,#a9c9e31c 0 1px,transparent 1px 5px);pointer-events:none;z-index:-1;}
+.team-axis-board .skill-card:hover {background:linear-gradient(135deg,#2d425a,#1a2b3e)!important;box-shadow:inset 0 1px #e0efff22,0 5px 14px #0004!important;}
+.team-axis-board .skill-card-rate {flex:none;font:600 14px/1.3 Consolas,monospace!important;white-space:nowrap;color:#e2cb91!important;background:#dac28a0b;padding:5px 7px;border:1px solid #dac28a22;border-radius:4px;}
+.team-axis-board .panel-divider {position:relative;}
+.team-axis-board .panel-divider::after {content:'';position:absolute;left:calc(50% - 22px);top:3px;width:44px;height:2px;border-radius:2px;background:#7693af88;pointer-events:none;}
+@media(prefers-reduced-motion:reduce){.team-axis-board .skill-card,.team-axis-board .skill-type-tabs button{transition:none;}}
+
+
+/* Match configuration weapon/echo material and its exact aurora palette. */
+.team-axis-board.panel {background:transparent!important;border:0!important;box-shadow:none!important;}
+.team-axis-board .axis-board-toolbar,.team-axis-board .axis-cycle-bar,.team-axis-board .axis-lanes-panel,.team-axis-board .axis-palette-panel {border:1px solid transparent!important;background:radial-gradient(ellipse at 12% 35%,#a4bded18,transparent 42%),linear-gradient(115deg,#172334,#101824) padding-box,linear-gradient(125deg,#6ea9ef88,#9f8ee833 40%,#b79deca6) border-box!important;box-shadow:inset 0 1px #edf4ff12,0 8px 24px #07102022!important;}
+.team-axis-board .axis-board-toolbar {border-radius:11px 11px 0 0!important;border-bottom:0!important;}
+.team-axis-board .axis-cycle-bar {border-top:0!important;border-bottom:0!important;}
+.team-axis-board .axis-lanes-panel {border-top:0!important;border-radius:0 0 11px 11px!important;}
+.team-axis-board .axis-palette-panel {margin-top:22px!important;border-radius:11px!important;overflow:hidden;}
+.team-axis-board .axis-palette-title,.team-axis-board .axis-palette-strip {background:transparent!important;}
+.team-axis-board .axis-split-body {background:transparent!important;}
+.team-axis-board .axis-lane-track {background-color:#101a28!important;background-image:linear-gradient(#9dbdd414 1px,transparent 1px),linear-gradient(90deg,#9dbdd414 1px,transparent 1px)!important;background-size:24px 24px!important;}
+.team-axis-board .axis-lane-avatar,.team-axis-board .axis-lane-avatar.active {padding:0!important;border:0!important;background:none!important;box-shadow:none!important;outline-offset:3px;}
+.team-axis-board .axis-lane-avatar .char-avatar-card {border:0!important;box-shadow:none!important;background:transparent!important;}
+.team-axis-board .axis-lane-avatar img {border-radius:8px;}
+
+/* Match the shared theme layer so its important panel rules cannot hide selection. */
+@layer localPalette {
+html[data-config-theme] body #workspaceLayout.phase-axis .team-axis-board .axis-lane.is-active {
+  background:color-mix(in srgb,var(--ui-active,#d3bb77) 14%,var(--ui-inner,#172333))!important;
+  border-color:var(--ui-active,#d3bb77)!important;
+  box-shadow:inset 4px 0 var(--ui-active,#d3bb77)!important;
+}
+html[data-config-theme] body #workspaceLayout.phase-axis .team-axis-board .axis-lane.is-active .axis-lane-track {
+  border-color:color-mix(in srgb,var(--ui-active,#d3bb77) 65%,transparent)!important;
+  background-color:color-mix(in srgb,var(--ui-active,#d3bb77) 9%,var(--ui-panel,#172333))!important;
+}
+}
+
+/* 附着提示卡片：名称独占首行，统计、倍率与入轴标记使用下一行。 */
+.team-axis-board .axis-palette-panel .skill-card.has-frost-hint {
+  display:grid;grid-template-columns:minmax(0,1fr) auto auto;
+  column-gap:8px;row-gap:4px;align-content:center;
+}
+.team-axis-board .axis-palette-panel .skill-card.has-frost-hint > .skill-card-name {
+  grid-column:1 / -1;grid-row:1;min-width:0;overflow-wrap:anywhere;
+}
+.team-axis-board .axis-palette-panel .skill-card.has-frost-hint > .frost-hint-badge {
+  grid-column:1;grid-row:2;min-width:0;text-align:left;
+}
+.team-axis-board .axis-palette-panel .skill-card.has-frost-hint > .skill-card-rate {
+  grid-column:2;grid-row:2;margin-left:0;
+}
+.team-axis-board .axis-palette-panel .skill-card.has-frost-hint.in-axis::after {
+  grid-column:3;grid-row:2;margin-left:0;
+}
+.team-axis-board .axis-palette-panel .skill-card.has-frost-hint > .skill-chain-unlock-badge {
+  grid-column:1 / -1;grid-row:3;justify-self:start;margin-right:0;
+}
+
+.team-axis-board .axis-palette-panel .skill-card.has-frost-hint > .skill-card-rename {
+  max-width:100%;box-sizing:border-box;
+}
